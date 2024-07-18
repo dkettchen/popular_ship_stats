@@ -21,7 +21,7 @@ def split_raw_data_2020_to_2023(filepath: str):
     data_list = []
     read_data[-1] += "\n" # adding the missing last newline character
     for string in read_data:
-        split_list = split(r"\t", string[:-1]) # splitting at the tabs
+        split_list = split(r" \t", string[:-1]) # splitting at the tabs
         data_list.append(split_list) # nesting list
 
     return data_list
@@ -44,14 +44,14 @@ def separate_pairings(data_list):
 
         #figure out pairing index 
             # "Relationship" (2021 onward) or "Pairing" (2014-2020) or "Ship" (2013 only)
-        if data_list[0][index] == "Relationship " \
-            or data_list[0][index] == "Pairing " \
-            or data_list[0][index] == "Ship ":
+        if data_list[0][index] == "Relationship" \
+            or data_list[0][index] == "Pairing" \
+            or data_list[0][index] == "Ship":
             pairing_index = index
 
         #figure out pairing tag index if any 
             # "Type"
-        elif data_list[0][index] == "Type ":
+        elif data_list[0][index] == "Type":
             type_index = index
 
     for row in data_list[1:]:
@@ -64,7 +64,7 @@ def separate_pairings(data_list):
         temp_list.append(pairing_list)
 
         #if pairing tag has a /
-        if "Type " in data_list[0] and "/" in row[type_index]:
+        if "Type" in data_list[0] and "/" in row[type_index]:
             #append middle values to temp list
             for value in row[pairing_index + 1 : type_index]:
                 temp_list.append(value)
@@ -87,14 +87,20 @@ def separate_pairings(data_list):
 
     return output_nested_list
 
-# a function that takes output_nested_list spit out by separate_pairings func & removes trailing whitespaces
-    # find all values that end in " " and remove last whitespace character
-
-
+# a function that takes cleaned data, formats it (eg json or csv) 
+# and prints it into a new file for reading
+    # should take desired file name & cleaned data nested list as arguments
 
 
 #finally:
-        # this seems to be the format since 2020, so we can reuse this specific code for 
-        # all of those files! 2023 filepath = "data/raw_data/ao3_2023/raw_ao3_2023_data.txt"
-        # cycle through a list of file path strings, to insert into our open() context manager
-# print cleaned data into a new file for reading (csv?)
+    #run all the functions in order, clean, format & extract data into new files for each filepath
+        # format evolved over years, so we need to run correct functions for correct filepaths
+            # eg separated by tabs is the format since 2020
+            # 2023 filepath = "data/raw_data/ao3_2023/raw_ao3_2023_data.txt"
+            # sets before 2020 will need a different split function
+        #create list of all file paths
+        #cycle through file path strings, to insert into relevant split function
+        #put split function output into separate function
+        #put separate func output into white space remover func
+        #put remover func output into format/file writer function
+

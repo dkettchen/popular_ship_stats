@@ -37,30 +37,25 @@ class TestSplitRecentDataSets:
         for item in data_list[1:]:
             assert type(int(item[4])) == int
             assert type(int(item[5])) == int
-            if item[0][-2] == "=": 
-                # apparently our rankings end in " " and the ones that tied have a "="
-                assert type(int(item[0][0:-2])) == int
+            if item[0][-1] == "=": 
+                assert type(int(item[0][0:-1])) == int
             else: assert type(int(item[0])) == int
 
     def test_pairing_labels_are_expected_format(self):
         path2023 = "data/raw_data/ao3_2023/raw_ao3_2023_data.txt"
         data_list = split_raw_data_2020_to_2023(path2023)
-        pairing_tags = ["M/M ", "F/F ", "F/M ", "Gen ", "Other "] 
-                        # ok everything has a " " after it so far smh
+        pairing_tags = ["M/M", "F/F", "F/M", "Gen", "Other"] 
         for item in data_list[1:]:
             assert item[6] in pairing_tags
     
     def test_race_labels_are_expected_format(self):
         path2023 = "data/raw_data/ao3_2023/raw_ao3_2023_data.txt"
         data_list = split_raw_data_2020_to_2023(path2023)
-        race_tags_with_space = [
-            "White ", "MENA ", "Asian ", "Indig ", "Latino ", "Ambig ", "Af Lat ", "Black ", "N.H. "
-            ]
         race_tags = [
             "White", "MENA", "Asian", "Indig", "Latino", "Ambig", "Af Lat", "Black", "N.H."
             ]
         for item in data_list[1:]:
-            assert item[7] in race_tags_with_space
+            assert item[7] in race_tags
             assert item[8] in race_tags
 
     def test_pairings_contain_slash_or_ampercent(self):
@@ -73,8 +68,8 @@ class TestSplitRecentDataSets:
         path2023 = "data/raw_data/ao3_2023/raw_ao3_2023_data.txt"
         data_list = split_raw_data_2020_to_2023(path2023)
         for item in data_list[1:]:
-            assert item[1] == "New " or item[1][0] == "+" or item[1][0] == "-"
-            if item[1] != "New ":
+            assert item[1] == "New" or item[1][0] == "+" or item[1][0] == "-"
+            if item[1] != "New":
                 assert type(int(item[1][1:])) == int
 
 class TestSeparatePairings:
