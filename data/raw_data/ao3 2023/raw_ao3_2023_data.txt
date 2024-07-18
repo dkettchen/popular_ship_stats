@@ -1,0 +1,101 @@
+Rank 	Change 	Relationship 	Fandom 	New Works 	Total 	Type 	Race
+1 	+9 	Steve Harrington/Eddie Munson 	Stranger Things (TV 2016) 	13273 	19870 	M/M 	White 	White
+2 	+2 	Sirius Black/Remus Lupin 	Harry Potter - J. K. Rowling 	8453 	40881 	M/M 	White 	White
+3 	New 	Alhaitham/Kaveh (Genshin Impact) 	原神 | Genshin Impact (Video Game) 	6837 	6837 	M/M 	MENA 	MENA
+4 	+15 	Dazai Osamu/Nakahara Chuuya (Bungou Stray Dogs) 	文豪ストレイドッグス | Bungou Stray Dogs 	6329 	24005 	M/M 	Asian 	Asian
+5 	New 	John "Soap" MacTavish/Simon "Ghost" Riley 	Call of Duty (Video Games) 	6321 	6321 	M/M 	White 	White
+6 	+55 	Regulus Black/James Potter 	Harry Potter - J. K. Rowling 	6047 	9178 	M/M 	White 	White
+7 	-2 	Blackbeard | Edward Teach/Stede Bonnet 	Our Flag Means Death (TV) 	6021 	13595 	M/M 	Indig 	White
+8 	-2 	Bakugou Katsuki/Midoriya Izuku 	Boku no Hero Academia | My Hero Academia 	5801 	38415 	M/M 	Asian 	Asian
+9 	-8 	Wilbur Soot & TommyInnit 	Minecraft (Video Game) 	5041 	20602 	Gen 	White 	White
+10 	+29 	Will Byers/Mike Wheeler 	Stranger Things (TV 2016) 	4921 	9846 	M/M 	White 	White
+11 	New 	Wednesday Addams/Enid Sinclair 	Wednesday (TV 2022) 	4808 	4808 	F/F 	Latino 	White
+12 	+6 	Hermione Granger/Draco Malfoy 	Harry Potter - J. K. Rowling 	4710 	24827 	F/M 	Ambig 	White
+13 	-11 	Wilbur Soot & Technoblade & TommyInnit & Phil Watson 	Minecraft (Video Game) 	3961 	19889 	Gen 	White 	White
+14 	+36 	Han Jisung | Han/Lee Minho | Lee Know 	Stray Kids (Band) 	3880 	11772 	M/M 	Asian 	Asian
+15 	+44 	Robin Buckley/Nancy Wheeler 	Stranger Things (TV 2016) 	3767 	6195 	F/F 	White 	White
+16 	New 	Dream of the Endless/Hob Gadling 	The Sandman (TV 2022) 	3562 	3562 	M/M 	White 	Asian
+17 	New 	Daemon Targaryen/Rhaenyra Targaryen 	House of the Dragon (TV) 	3488 	3488 	F/M 	White 	White
+18 	+15 	Amity Blight/Luz Noceda 	The Owl House (Cartoon) 	3396 	10722 	F/F 	White 	Af Lat
+19 	-5 	Aziraphale/Crowley (Good Omens) 	Good Omens (TV) 	3296 	45362 	Other 	White 	White
+20 	+63 	Robin Buckley & Steve Harrington 	Stranger Things (TV 2016) 	3248 	5815 	Gen 	White 	White
+21 	+2 	James Potter/Lily Evans Potter 	Harry Potter - J. K. Rowling 	3148 	22759 	F/M 	White 	White
+22 	New 	Marlene McKinnon/Dorcas Meadowes 	Harry Potter - J. K. Rowling 	3109 	6243 	F/F 	White 	Black
+23 	-8 	Tartaglia | Childe/Zhongli (Genshin Impact) 	原神 | Genshin Impact (Video Game) 	3037 	12678 	M/M 	White 	Asian
+24 	New 	Vash the Stampede/Nicholas D. Wolfwood 	Trigun Stampede (Anime 2023) 	3007 	3007 	M/M 	Ambig 	Asian
+25 	New 	Aemond "One-Eye" Targaryen/Lucerys Velaryon (Son of Rhaenyra) 	House of the Dragon (TV) 	2914 	2914 	M/M 	White 	White
+26 	-23 	Lán Zhàn | Lán Wàngjī/Wèi Yīng | Wèi Wúxiàn 	Módào Zǔshī - Mòxiāng Tóngxiù 	2855 	34632 	M/M 	Asian 	Asian
+27 	New 	Donatello & Leonardo & Michelangelo & Raphael (TMNT) 	Rise of the Teenage Mutant Ninja Turtles 	2769 	3367 	Gen 	N.H. 	N.H.
+28 	-6 	Aizawa Shouta | Eraserhead/Yamada Hizashi | Present Mic 	Boku no Hero Academia | My Hero Academia 	2753 	20071 	M/M 	Asian 	Asian
+29 	New 	Cyno/Tighnari (Genshin Impact) 	原神 | Genshin Impact (Video Game) 	2705 	2705 	M/M 	MENA 	MENA
+30 	New 	Pete Phongsakorn Saengtham/Vegas Kornwit Theerapanyakun 	KinnPorsche: The Series (TV) 	2677 	3833 	M/M 	Asian 	Asian
+31 	-20 	Evan "Buck" Buckley/Eddie Diaz (9-1-1 TV) 	9-1-1 (TV) 	2645 	17540 	M/M 	White 	Latino
+32 	-2 	Bakugou Katsuki & Midoriya Izuku 	Boku no Hero Academia | My Hero Academia 	2618 	15709 	Gen 	Asian 	Asian
+33 	-17 	Technoblade & TommyInnit (Video Blogging RPF) 	Minecraft (Video Game) 	2552 	12452 	Gen 	White 	White
+34 	-27 	Draco Malfoy/Harry Potter 	Harry Potter - J. K. Rowling 	2542 	59048 	M/M 	White 	White
+35 	New 	Barty Crouch Jr./Evan Rosier 	Harry Potter - J. K. Rowling 	2456 	2456 	M/M 	White 	Ambig
+36 	-9 	Jeon Jungkook/Kim Taehyung | V 	Bangtan Boys | BTS 	2396 	35024 	M/M 	Asian 	Asian
+37 	-3 	Aizawa Shouta | Eraserhead & Midoriya Izuku 	Boku no Hero Academia | My Hero Academia 	2347 	11220 	Gen 	Asian 	Asian
+38 	New 	Craig Tucker/Tweek Tweak 	South Park 	2256 	7542 	M/M 	White 	White
+39 	New 	Porsche Pachara Kittisawat/Kinn Anakinn Theerapanyakun 	KinnPorsche: The Series (TV) 	2255 	3633 	M/M 	Asian 	Asian
+40 	New 	Nicholas "Nick" Nelson/Charles "Charlie" Spring 	Heartstopper (TV) 	2249 	3904 	M/M 	White 	White
+41 	New 	Kamishiro Rui/Tenma Tsukasa 	Project SEKAI COLORFUL STAGE! 	2229 	3010 	M/M 	Asian 	Asian
+42 	New 	Porchay Pichaya Kittisawat/Kim Khimhant Theerapanyakun 	KinnPorsche: The Series (TV) 	2175 	2881 	M/M 	Asian 	Asian
+43= 	New 	Dazai Osamu & Nakahara Chuuya (Bungou Stray Dogs) 	文豪ストレイドッグス | Bungou Stray Dogs 	2111 	5642 	Gen 	Asian 	Asian
+43= 	New 	Tom "Iceman" Kazansky/Pete "Maverick" Mitchell 	Top Gun (Movies) 	2111 	2813 	M/M 	White 	White
+45 	-37 	Clay | Dream/GeorgeNotFound (Video Blogging RPF) 	Video Blogging RPF 	2069 	22989 	M/M 	White 	White
+46 	+2 	Olivia Benson/Elliot Stabler 	Law & Order: SVU 	2036 	5650 	F/M 	White 	White
+47 	New 	Sister Beatrice/Ava Silva 	Warrior Nun (TV) 	2007 	2640 	F/F 	Asian 	Latino
+48 	-2 	Getou Suguru/Gojo Satoru 	呪術廻戦 | Jujutsu Kaisen (Manga) 	2003 	7482 	M/M 	Asian 	Asian
+49 	New 	Bradley "Rooster" Bradshaw/Jake "Hangman" Seresin 	Top Gun (Movies) 	1991 	2535 	M/M 	White 	White
+50 	+7 	Huā Chéng/Xiè Lián (Tiān Guān Cì Fú) 	Tiān Guān Cì Fú - Mòxiāng Tóngxiù 	1980 	7673 	M/M 	Asian 	Asian
+51 	New 	Kyle Broflovski/Stan Marsh 	South Park 	1962 	4689 	M/M 	White 	White
+52 	New 	Hunter | The Golden Guard/Willow Park 	The Owl House (Cartoon) 	1958 	2647 	F/M 	White 	Asian
+53 	+14 	Diluc & Kaeya (Genshin Impact) 	原神 | Genshin Impact (Video Game) 	1953 	5353 	Gen 	White 	Ambig
+54 	New 	Alhaitham & Kaveh (Genshin Impact) 	原神 | Genshin Impact (Video Game) 	1939 	1939 	Gen 	MENA 	MENA
+55 	New 	Ellie & Joel (The Last of Us) 	The Last of Us (Video Games) 	1937 	2561 	Gen 	White 	Ambig
+56 	-43 	Adrien Agreste | Chat Noir/Marinette Dupain-Cheng | Ladybug 	Miraculous Ladybug 	1912 	33169 	F/M 	White 	Asian
+57 	New 	Mikage Reo/Nagi Seishirou 	Blue Lock (Manga) 	1893 	1893 	M/M 	Asian 	Asian
+58 	New 	Kim Dokja/Yoo Joonghyuk 	Omniscient Reader – Sing-Shong 	1872 	4401 	M/M 	Asian 	Asian
+59 	New 	Simon "Ghost" Riley/Reader 	Call of Duty (Video Games) 	1831 	1831 	Other 	White 	Ambig
+60 	-40 	Bakugou Katsuki/Kirishima Eijirou 	Boku no Hero Academia | My Hero Academia 	1827 	29317 	M/M 	Asian 	Asian
+61 	New 	Kaedehara Kazuha/Scaramouche 	原神 | Genshin Impact (Video Game) 	1816 	2874 	M/M 	Asian 	Asian
+62 	-11 	Dabi | Todoroki Touya/Takami Keigo | Hawks 	Boku no Hero Academia | My Hero Academia 	1808 	10449 	M/M 	Asian 	Asian
+63 	New 	James T. Kirk/Spock 	Star Trek: Alternate Original Series (Movies) 	1773 	16286 	M/M 	White 	White
+64 	New 	Donatello & Leonardo (TMNT) 	Rise of the Teenage Mutant Ninja Turtles 	1763 	1763 	Gen 	N.H. 	N.H.
+65 	+26 	Eda Clawthorne/Raine Whispers 	The Owl House (Cartoon) 	1751 	3589 	Other 	White 	Ambig
+66 	New 	Regulus Black & Sirius Black 	Harry Potter - J. K. Rowling 	1747 	3833 	Gen 	White 	White
+67 	New 	Roronoa Zoro/Vinsmoke Sanji 	One Piece (Anime & Manga) 	1723 	7773 	M/M 	Asian 	White
+68 	New 	Obi-Wan Kenobi/Anakin Skywalker | Darth Vader 	Star Wars - All Media Types 	1717 	7584 	M/M 	White 	White
+69= 	+16 	Harry Styles/Louis Tomlinson 	One Direction (Band) 	1712 	39028 	M/M 	White 	White
+69= 	-57 	Toby Smith | Tubbo & TommyInnit 	Minecraft (Video Game) 	1712 	14609 	Gen 	White 	White
+71 	New 	Mary Macdonald/Lily Evans Potter 	Harry Potter - J. K. Rowling 	1709 	2115 	F/F 	Ambig 	White
+72 	New 	Hwang Hyunjin/Lee Felix 	Stray Kids (Band) 	1706 	4015 	M/M 	Asian 	Asian
+73 	New 	Lucy Carlyle/Anthony Lockwood 	Lockwood & Co. - Jonathan Stroud 	1697 	1697 	F/M 	White 	White
+74 	New 	Aoyagi Touya/Shinonome Akito 	Project SEKAI COLORFUL STAGE! 	1683 	2345 	M/M 	Asian 	Asian
+75 	New 	Jesper Fahey/Wylan Van Eck 	Six of Crows Series - Leigh Bardugo 	1670 	3663 	M/M 	Black 	White
+76 	-48 	Caitlyn/Vi (League of Legends) 	Arcane: League of Legends (Cartoon 2021) 	1662 	5671 	F/F 	Asian 	White
+77 	New 	Liu Chenxiang/Yang Jian | Erlang Shen 	新神榜 | New Gods (Movies) 	1647 	1647 	M/M 	Asian 	Asian
+78 	-29 	Will Graham/Hannibal Lecter 	Hannibal (TV) 	1646 	25643 	M/M 	White 	White
+79 	-48 	Technoblade & Phil Watson | Philza 	Minecraft (Video Game) 	1622 	8310 	Gen 	White 	White
+80 	New 	Dean Winchester/Reader 	Supernatural (TV 2005) 	1613 	6147 	Other 	White 	Ambig
+81 	-44 	Wilbur Soot & Technoblade 	Minecraft (Video Game) 	1608 	7482 	Gen 	White 	White
+82 	New 	Choi Soobin/Choi Yeonjun 	TOMORROW X TOGETHER | TXT 	1601 	5418 	M/M 	Asian 	Asian
+83 	New 	Tim Bradford/Lucy Chen 	The Rookie (TV 2018) 	1580 	3382 	F/M 	White 	Asian
+84= 	New 	Akutagawa Ryuunosuke/Nakajima Atsushi (Bungou Stray Dogs) 	文豪ストレイドッグス | Bungou Stray Dogs 	1575 	6031 	M/M 	Asian 	Asian
+84= 	New 	Maxine "Max" Mayfield/Lucas Sinclair 	Stranger Things (TV 2016) 	1575 	4438 	F/M 	White 	Black
+86 	-51 	TommyInnit & Phil Watson (Video Blogging RPF) 	Minecraft (Video Game) 	1565 	7356 	Gen 	White 	White
+87 	-1 	Uchiha Sasuke/Uzumaki Naruto 	Naruto 	1561 	13062 	M/M 	Asian 	Asian
+88 	+7 	Eddie Munson/Reader 	Stranger Things (TV 2016) 	1558 	3330 	Other 	White 	Ambig
+89 	-21 	Carlos Reyes/TK Strand 	9-1-1: Lone Star (TV 2020) 	1545 	6870 	M/M 	Latino 	White
+90 	New 	Simon Eriksson/Wilhelm 	Young Royals (TV 2021) 	1543 	3100 	M/M 	Latino 	White
+91 	New 	Blackbeard | Edward Teach/Israel Hands 	Our Flag Means Death (TV) 	1519 	2655 	M/M 	Indig 	White
+92 	New 	Charles | Grian/Ryan | GoodTimesWithScar 	Hermitcraft SMP 	1512 	2297 	M/M 	White 	White
+93 	New 	Chrissy Cunningham/Eddie Munson 	Stranger Things (TV 2016) 	1510 	2393 	F/M 	White 	White
+94 	New 	Alicent Hightower/Rhaenyra Targaryen 	House of the Dragon (TV) 	1506 	1506 	F/F 	White 	White
+95 	-2 	Bakugou Katsuki/Todoroki Shouto 	Boku no Hero Academia | My Hero Academia 	1485 	10774 	M/M 	Asian 	Asian
+96 	New 	Tim Drake & Jason Todd 	Batman - All Media Types 	1475 	5487 	Gen 	White 	White
+97= 	New 	Liu Er Mihou | Six-eared Macaque/Sun Wukong | Monkey King 	LEGO Monkie Kid 	1470 	1959 	M/M 	N.H. 	N.H.
+97= 	-68 	Miya Atsumu/Sakusa Kiyoomi 	Haikyuu!! 	1470 	11253 	M/M 	Asian 	Asian
+99 	-34 	Min Yoongi | Suga/Park Jimin 	Bangtan Boys | BTS 	1459 	26124 	M/M 	Asian 	Asian
+100 	New 	Joyce Byers/Jim "Chief" Hopper 	Stranger Things (TV 2016) 	1447 	4090 	F/M 	White 	White

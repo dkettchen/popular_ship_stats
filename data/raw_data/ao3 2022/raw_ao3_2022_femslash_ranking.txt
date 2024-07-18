@@ -1,0 +1,101 @@
+Rank   Change   Relationship   Fandom   Works   Race   
+1   0   Kara Danvers/Lena Luthor   Supergirl (TV 2015)   19062   White   White
+2   0   Evil Queen | Regina Mills/Emma Swan   Once Upon a Time (TV)   14536   Latino   White
+3   0   Clarke Griffin/Lexa   The 100 (TV)   12765   White   White
+4   0   Adora/Catra (She-Ra)   She-Ra and the Princesses of Power (2018)   10063   White   Ambig
+5   10   Amity Blight/Luz Noceda   The Owl House (Cartoon)   7326   White   Af Lat
+6   1   Blake Belladonna/Yang Xiao Long   RWBY   6494   Asian   Asian
+7   -1   Korra/Asami Sato   Avatar: Legend of Korra   6491   Indig   Asian
+8   -3   Alex Danvers/Maggie Sawyer   Supergirl (TV 2015)   6204   White   Latino
+9   -1   Waverly Earp/Nicole Haught   Wynonna Earp (TV)   5841   White   White
+10   1   Jirou Kyouka/Yaoyorozu Momo   Boku no Hero Academia | My Hero Academia   5562   Asian   Asian
+11   -2   Laura Hollis/Carmilla Karnstein   Carmilla (Web Series)   5099   White   White
+12   -2   Rose Lalonde/Kanaya Maryam   Homestuck   5048   Ambig   N.H.
+13   1   Ruby Rose/Weiss Schnee   RWBY   4635   Asian   White
+14   -2   Chloe Beale/Beca Mitchell   Pitch Perfect (Movies)   4581   White   White
+15   -2   Alphys/Undyne (Undertale)   Undertale (Video Game)   4321   N.H.   N.H.
+16   0   Krista Lenz | Historia Reiss/Ymir   Shingeki no Kyojin | Attack on Titan   4289   White   White
+17   N   Caitlyn/Vi (League of Legends)   Arcane: League of Legends (Cartoon 2021)   4009   Asian   White
+18   10   Eve Polastri/Villanelle | Oksana Astankova   Killing Eve (TV 2018)   3427   Asian   White
+19   10   Thirteenth Doctor/Yasmin Khan   Doctor Who (2005)   3322   White   Asian
+20   -1   Santana Lopez/Brittany S. Pierce   Glee   3293   Af Lat   White
+21   -3   Kara Danvers/Cat Grant   Supergirl (TV 2015)   3261   White   White
+22   -5   Root | Samantha Groves/Sameen Shaw   Person of Interest (TV)   3203   White   MENA
+23=   N*   Marlene McKinnon/Dorcas Meadowes   Harry Potter - J. K. Rowling   3134   Ambig   Ambig
+23=   -2   Luna Lovegood/Ginny Weasley   Harry Potter - J. K. Rowling   3134   White   White
+25   0   Sara Lance/Ava Sharpe   DC's Legends of Tomorrow (TV)   3084   White   White
+26   -6   Asui Tsuyu/Uraraka Ochako   Boku no Hero Academia | My Hero Academia   3055   Asian   Asian
+27   -3   Maxine "Max" Caulfield/Chloe Price   Life Is Strange (Video Game)   3031   White   White
+28   -2   Rachel Berry/Quinn Fabray   Glee   2773   White   White
+29   -7   Serena Campbell/Bernie Wolfe   Holby City   2705   White   White
+30   -3   Miranda Priestly/Andrea Sachs   The Devil Wears Prada (2006)   2687   White   White
+31   -8   Fareeha "Pharah" Amari/Angela "Mercy" Ziegler   Overwatch (Video Game)   2672   MENA   White
+32   N   Robin Buckley/Nancy Wheeler   Stranger Things (TV 2016)   2428   White   White
+33   0   Anna/Elsa (Disney)   Frozen (Disney Movies)   2413   Indig   Indig
+34   0   Pamela Isley/Harleen Quinzel   Batman - All Media Types   2352   N.H.   White
+35   -4   Peggy Carter/Angie Martinelli   Agent Carter (TV)   2331   White   White
+36   7   Hope Mikaelson/Josie Saltzman   Legacies (TV 2018)   2291   White   White
+37   -7   Lapis Lazuli/Peridot (Steven Universe)   Steven Universe (Cartoon)   2289   N.H.   N.H.
+38   -6   Cheryl Blossom/Toni Topaz   Riverdale (TV 2017)   2278   White   Black
+39   -3   Beauregard Lionett/Yasha   Critical Role (Web Series)   2253   Ambig   White
+40   8   Maria Hill/Natasha Romanov   Marvel Cinematic Universe   2117   White   White
+41   N   Beidou/Ningguang (Genshin Impact)   原神 | Genshin Impact (Video Game)   2046   Asian   Asian
+42   -1   Jennifer "JJ" Jareau/Emily Prentiss   Criminal Minds (US TV)   1985   White   White
+43   23   Wanda Maximoff/Natasha Romanov   Marvel Cinematic Universe   1982   Ambig   White
+44   3   Hermione Granger/Pansy Parkinson   Harry Potter - J. K. Rowling   1934   Ambig   White
+45   -10   Allison Argent/Lydia Martin   Teen Wolf (TV)   1915   White   White
+46   N   Jean/Lisa (Genshin Impact)   原神 | Genshin Impact (Video Game)   1858   White   White
+47   -10   Jemma Simmons/Skye | Daisy Johnson   Agents of S.H.I.E.L.D. (TV)   1843   White   Asian
+48   -9   Mikasa Ackerman/Annie Leonhart   Shingeki no Kyojin | Attack on Titan   1818   Asian   White
+49   -5   Diana Cavendish/Atsuko "Akko" Kagari   Little Witch Academia   1810   White   Asian
+50   -12   Shimizu Kiyoko/Yachi Hitoka   Haikyuu!!   1805   Asian   Asian
+51   N   Juleka Couffaine/Rose Lavillant   Miraculous Ladybug   1766   White   White
+52=   0   Female Shepard/Liara T'Soni   Mass Effect Trilogy   1726   Ambig   N.H.
+52=   -2   Gwen/Morgana (Merlin)   Merlin (TV)   1726   Black   White
+54   -14   Clary Fray/Isabelle Lightwood   Shadowhunters (TV)   1685   White   ME Lat
+55   -6   Maura Isles/Jane Rizzoli   Rizzoli & Isles   1681   White   White
+56   -11   Myka Bering/Helena "H. G." Wells   Warehouse 13   1680   White   White
+57   -15   Delphine Cormier/Cosima Niehaus   Orphan Black (TV)   1612   White   White
+58   -12   Sansa Stark/Margaery Tyrell   Game of Thrones (TV)   1595   White   White
+59   N   Maya Bishop/Carina DeLuca   Station 19 (TV)   1576   White   White
+60   N   Raiden Ei | Baal/Yae Miko   原神 | Genshin Impact (Video Game)   1572   Asian   Asian
+61   -6   Tara Maclay/Willow Rosenberg   Buffy the Vampire Slayer (TV)   1560   White   White
+62   5   Hermione Granger/Bellatrix Black Lestrange   Harry Potter - J. K. Rowling   1513   Ambig   White
+63   -12   Ruby/Sapphire (Steven Universe)   Steven Universe (Cartoon)   1486   N.H.   N.H.
+64   17   Alex Danvers/Kelly Olsen   Supergirl (TV 2015)   1484   White   Black
+65   -3   Dani Clayton/Jamie Taylor   The Haunting of Bly Manor (TV)   1477   White   White
+66   N   Anne Boonchuy/Sasha Waybright/Marcy Wu   Amphibia (Cartoon)   1467   Asian   White
+67   -14   Kimberly Hart/Trini   Power Rangers (2017)   1428   Asian   Latino
+68   -11   Tobin Heath/Christen Press   Women's Association Football | Women's Soccer RPF   1410   White   Black
+69   -9   Alex Danvers/Kara Danvers   Supergirl (TV 2015)   1398   White   White
+70   5   Kathryn Janeway/Seven of Nine   Star Trek: Voyager   1374   White   White
+71   -15   Erin Gilbert/Jillian Holtzmann   Ghostbusters (2016)   1366   White   White
+72   6   Charlie Magne/Vaggie   Hazbin Hotel (Web Series)   1355   N.H.   N.H.
+73   -8   Faith Lehane/Buffy Summers   Buffy the Vampire Slayer (TV)   1352   White   White
+74   -16   Anya/Raven Reyes (The 100)   The 100 (TV)   1348   Asian   Latino
+75   N   Anne Boonchuy/Marcy Wu   Amphibia (Cartoon)   1347   Asian   Asian
+76   -12   Carol Aird/Therese Belivet   Carol (2015)   1336   White   White
+77   -23   Lena "Tracer" Oxton/Widowmaker | Amélie Lacroix   Overwatch (Video Game)   1332   White   White
+78   -9   Azula/Ty Lee (Avatar)   Avatar: The Last Airbender   1322   Asian   Asian
+79   -16   Astra/Alex Danvers   Supergirl (TV 2015)   1310   White   White
+80   -21   Pepper Potts/Natasha Romanov   Marvel Cinematic Universe   1309   White   White
+81   N   Meredith Grey/Addison Montgomery   Grey's Anatomy   1270   White   White
+82   -2   Lin Beifong/Kya II   Avatar: Legend of Korra   1244   Asian   As Ind
+83=   10   Andy | Andromache of Scythia/Quynh | Noriko   The Old Guard (Movie 2020)   1234   White   Asian
+83=   -14   Penelope Park/Josie Saltzman   Legacies (TV 2018)   1234   Asian   White
+85   N   Shelby Goodkind/Toni Shalifoe   The Wilds (TV 2020)   1232   White   Indig
+86   -12   Rachel Amber/Chloe Price   Life Is Strange (Video Game)   1231   White   White
+87=   N   Eleven | Jane Hopper/Maxine "Max" Mayfield   Stranger Things (TV 2016)   1213   White   White
+87=   -26   Pearl/Rose Quartz (Steven Universe)   Steven Universe (Cartoon)   1213   N.H.   N.H.
+89   -21   Terezi Pyrope/Vriska Serket   Homestuck   1201   N.H.   N.H.
+90   N   Yelena Belova/Kate Bishop   Hawkeye (TV 2021)   1192   White   White
+91=   -4   Dina/Ellie (The Last of Us)   The Last of Us (Video Games)   1177   White   White
+91=   -14   Princess Bubblegum/Marceline   Adventure Time   1177   N.H.   N.H.
+93   N   Ganyu/Keqing (Genshin Impact)   原神 | Genshin Impact (Video Game)   1166   Asian   Asian
+94   -22   Nyssa al Ghul/Sara Lance   Arrow (TV 2012)   1163   MENA   White
+95   -10   Haruno Sakura/Yamanaka Ino   Naruto   1161   Asian   Asian
+96   -23   Pacifica Northwest/Mabel Pines   Gravity Falls   1151   White   White
+97=   N   Anne Boonchuy/Sasha Waybright   Amphibia (Cartoon)   1149   Asian   White
+97=   N   Gideon Nav/Harrowhark Nonagesimus   The Locked Tomb Series | Gideon the Ninth Series - Tamsyn Muir   1149   Ambig   Ambig
+99   -23   Adora/Glimmer (She-Ra)   She-Ra and the Princesses of Power (2018)   1142   White   Asian
+100   -2   Perfuma/Scorpia (She-Ra)   She-Ra and the Princesses of Power (2018)   1109   Latino   Asian

@@ -1,0 +1,101 @@
+Rank   Change   Pairing   Fandom   New Works   Total   Type   Race
+1   15   Aziraphale/Crowley (Good Omens)   Good Omens (TV)   20298   28726   M/M   White
+2   72   Lán Zhàn | Lán Wàngjī/Wèi Yīng | Wèi Wúxiàn   魔道祖师 - 墨香铜臭 | Módào Zǔshī - Mòxiāng Tóngxiù   10671   13130   M/M   POC
+3   8   Rey/Ben Solo | Kylo Ren   Star Wars Sequel Trilogy   9076   21306   F/M   White
+4   28   Eddie Kaspbrak/Richie Tozier   IT (Movies – Muschietti)   8441   12227   M/M   White
+5   N   Geralt z Rivii | Geralt of Rivia/Jaskier | Dandelion   The Witcher (TV)   7573   7573   M/M   White
+6   1   Draco Malfoy/Harry Potter   Harry Potter - J. K. Rowling   7239   40312   M/M   White
+7   5   Bakugou Katsuki/Midoriya Izuku   Boku no Hero Academia | My Hero Academia   7070   16824   M/M   POC
+8   0   Peter Parker & Tony Stark   Marvel Cinematic Universe   6807   17366   Gen   White
+9   -7   James "Bucky" Barnes/Steve Rogers   Captain America (Movies)   6262   49659   M/M   White
+10   4   Bakugou Katsuki/Kirishima Eijirou   Boku no Hero Academia | My Hero Academia   6141   15375   M/M   POC
+11   -5   Steve Rogers/Tony Stark   The Avengers (Marvel Movies)   5613   36264   M/M   White
+12   68   Aziraphale & Crowley (Good Omens)   Good Omens (TV)   5503   7928   Gen   White
+13   -8   Jeon Jungkook/Kim Taehyung | V   Bangtan Boys | BTS   5254   23339   M/M   POC
+14   5   Adrien Agreste | Chat Noir/Marinette Dupain-Cheng | Ladybug   Miraculous Ladybug   5183   19631   F/M   Whi/POC
+15   5   Midoriya Izuku/Todoroki Shouto   Boku no Hero Academia | My Hero Academia   5001   14073   M/M   POC
+16   -13   Castiel/Dean Winchester   Supernatural   4927   84563   M/M   White
+17   1   Jeon Jungkook/Park Jimin   Bangtan Boys | BTS   4596   17867   M/M   POC
+18   N   Evan "Buck" Buckley/Eddie Diaz (9-1-1 TV)   9-1-1 (TV)   3716   3716   M/M   Whi/POC
+19   5   Kara Danvers/Lena Luthor   Supergirl (TV 2015)   3614   13048   F/F   White
+20   -16   Magnus Bane/Alec Lightwood   Shadowhunters (TV)   3599   24787   M/M   Whi/POC
+21   2   Pepper Potts/Tony Stark   Marvel Cinematic Universe   3569   17384   F/M   White
+22   14   Aizawa Shouta | Eraserhead/Yamada Hizashi | Present Mic   Boku no Hero Academia | My Hero Academia   3565   7325   M/M   POC
+23   N   Adora/Catra (She-Ra)   She-Ra and the Princesses of Power (2018)   3538   4919   F/F   Whi/POC
+24   15   Dazai Osamu/Nakahara Chuuya (Bungou Stray Dogs)   文豪ストレイドッグス | Bungou Stray Dogs   3512   8768   M/M   POC
+25   N   Wang Yi Bo/Xiao Zhan   陈情令 | The Untamed (TV) RPF   3446   3446   M/M   POC
+26   -12   Derek Hale/Stiles Stilinski   Teen Wolf (TV)   3249   59286   M/M   White
+27   10   Merlin/Arthur Pendragon (Merlin)   Merlin (TV)   3157   18688   M/M   White
+28   -11   Kim Namjoon | RM/Kim Seokjin | Jin   Bangtan Boys | BTS   3155   16682   M/M   POC
+29   66   Ayanga/Zhèng Yúnlóng   声入人心 | Super-Vocal (TV)   3111   5285   M/M   POC
+30   -21   Min Yoongi | Suga/Park Jimin   Bangtan Boys | BTS   3026   19851   M/M   POC
+31   -3   Sirius Black/Remus Lupin   Harry Potter - J. K. Rowling   2958   17686   M/M   White
+32   N   Martin Blackwood/Jonathan "Jon" Sims | The Archivist   The Magnus Archives (Podcast)   2917   3367   M/M   Ambig
+33   60   Bakugou Katsuki & Midoriya Izuku   Boku no Hero Academia | My Hero Academia   2672   5023   Gen   POC
+34   12   Peter Parker/Tony Stark   Marvel Cinematic Universe   2623   6160   M/M   White
+35   N   Hinata Shouyou/Kageyama Tobio   Haikyuu!!   2601   10485   M/M   POC
+36   22   Hermione Granger/Draco Malfoy   Harry Potter - J. K. Rowling   2583   10171   F/M   Whi/Amb
+37   -8   Kim Taehyung | V/Park Jimin   Bangtan Boys | BTS   2507   9891   M/M   POC
+38   -37   Keith/Lance (Voltron)   Voltron: Legendary Defender   2480   30317   M/M   Amb/POC
+39   20   Billy Hargrove/Steve Harrington   Stranger Things (TV 2016)   2438   5338   M/M   White
+40   N   Akaashi Keiji/Bokuto Koutarou   Haikyuu!!   2387   7629   M/M   POC
+41   N   Patrick Brewer/David Rose   Schitt's Creek   2363   3150   M/M   White
+42   5   Lee Donghyuck | Haechan/Mark Lee   NCT (Band)   2331   5854   M/M   POC
+43   8   Rey & Ben Solo | Kylo Ren   Star Wars Sequel Trilogy   2304   6506   Gen   White
+44   N   Dabi/Takami Keigo | Hawks   Boku no Hero Academia | My Hero Academia   2294   2930   M/M   POC
+45   N   Iwaizumi Hajime/Oikawa Tooru   Haikyuu!!   2272   11155   M/M   POC
+46   -24   Jung Hoseok | J-Hope/Min Yoongi | Suga   Bangtan Boys | BTS   2259   12668   M/M   POC
+47   N   Felix Hugo Fraldarius/Sylvain Jose Gautier   Fire Emblem: Three Houses   2218   2218   M/M   White
+48   28   Jaime Lannister/Brienne of Tarth   Game of Thrones (TV)   2186   7063   F/M   White
+49   19   Bakugou Katsuki/Todoroki Shouto   Boku no Hero Academia | My Hero Academia   2169   4991   M/M   POC
+50   N   Ben Hanscom/Beverly Marsh   IT (Movies – Muschietti)   2163   3116   F/M   White
+51   3   Hermione Granger/Ron Weasley   Harry Potter - J. K. Rowling   2128   11699   F/M   Whi/Amb
+52   -31   Sherlock Holmes/John Watson   Sherlock (TV)   2121   61544   M/M   White
+53   -5   James Potter/Lily Evans Potter   Harry Potter - J. K. Rowling   2110   10125   F/M   White
+54   -28   Jeon Jungkook/Min Yoongi | Suga   Bangtan Boys | BTS   2074   9498   M/M   POC
+55   N   Jiāng Chéng | Jiāng Wǎnyín/Lán Huàn | Lán Xīchén   魔道祖师 - 墨香铜臭 | Módào Zǔshī - Mòxiāng Tóngxiù   2073   2494   M/M   POC
+56   -25   Will Graham/Hannibal Lecter   Hannibal (TV)   2064   17257   M/M   White
+57   N   Kakyoin Noriaki/Kujo Jotaro   JoJo no Kimyou na Bouken | JoJo's Bizarre Adventure   1964   3580   M/M   POC
+58   N   Midoriya Izuku/Uraraka Ochako   Boku no Hero Academia | My Hero Academia   1896   3983   F/M   POC
+59   -46   Katsuki Yuuri/Victor Nikiforov   Yuri!!! on Ice (Anime)   1843   24332   M/M   Whi/POC
+60   15   Harry Potter/Ginny Weasley   Harry Potter - J. K. Rowling   1838   9269   F/M   White
+61   N   Poe Dameron/Finn   Star Wars Sequel Trilogy   1806   7238   M/M   POC
+62   N   Kaminari Denki/Shinsou Hitoshi   Boku no Hero Academia | My Hero Academia   1791   2732   M/M   POC
+63   -38   Dan Howell/Phil Lester   Phandom/The Fantastic Foursome (YouTube RPF)   1782   17316   M/M   White
+64   -54   Keith/Shiro (Voltron)   Voltron: Legendary Defender   1764   13925   M/M   Amb/POC
+65   31   Anxiety | Virgil Sanders/Creativity | Roman "Princey" Sanders   Sanders Sides (Web Series)   1720   3917   M/M   White
+66   N   Tyrannus Basilton "Baz" Pitch/Simon Snow   Carry On Series - Rainbow Rowell   1707   4803   M/M   Whi/POC
+67=   -33   Kim Taehyung | V/Min Yoongi | Suga   Bangtan Boys | BTS   1651   7176   M/M   POC
+67=   N   Dimitri Alexandre Blaiddyd/My Unit | Byleth   Fire Emblem: Three Houses   1651   1651   Other   White
+69   N   Michelle Jones/Peter Parker   Spider-Man (Tom Holland Movies)   1639   3692   F/M   Whi/POC
+70   N   Michael Guerin/Alex Manes   Roswell New Mexico (TV 2019)   1635   2746   M/M   Whi/POC
+71   28   Uchiha Sasuke/Uzumaki Naruto   Naruto   1625   7705   M/M   POC
+72   N   Bakugou Katsuki/Uraraka Ochako   Boku no Hero Academia | My Hero Academia   1617   3776   F/M   POC
+73   -30   James "Bucky" Barnes/Tony Stark   Marvel Cinematic Universe   1559   7456   M/M   White
+74   -39   James "Bucky" Barnes/Reader   Marvel Cinematic Universe   1544   7724   Other   Whi/Amb
+75   9   Upgraded Connor | RK900/Gavin Reed   Detroit: Become Human (Video Game)   1534   3921   M/M   White
+76   N   Harry Potter/Tom Riddle | Voldemort   Harry Potter - J. K. Rowling   1511   6308   M/M   White
+77   N   Jeon Jungkook/Kim Namjoon | RM   Bangtan Boys | BTS   1505   3911   M/M   POC
+78   N   Annabeth Chase/Percy Jackson   Percy Jackson and the Olympians - Rick Riordan   1501   6017   F/M   White
+79   N   Edelgard von Hresvelg/My Unit | Byleth   Fire Emblem: Three Houses   1495   1495   Other   White
+80   N   Dean Winchester & Sam Winchester   Supernatural   1493   8791   Gen   White
+81   N   Aizawa Shouta | Eraserhead & Midoriya Izuku   Boku no Hero Academia | My Hero Academia   1487   2200   Gen   POC
+82   -37   Tony Stark/Stephen Strange   Marvel Cinematic Universe   1460   4912   M/M   White
+83   N   Akechi Goro/Persona 5 Protagonist   Persona 5   1447   3285   M/M   POC
+84   N   Kozume Kenma/Kuroo Tetsurou   Haikyuu!!   1444   4932   M/M   POC
+85   N   Han Jisung | Han/Lee Minho | Lee Know   Stray Kids (Band)   1440   3091   M/M   POC
+86   -33   Byun Baekhyun/Park Chanyeol   EXO (Band)   1431   6629   M/M   POC
+87   -45   Dean Winchester/Sam Winchester   Supernatural   1416   27696   M/M   White
+88   N   Leone Abbacchio/Bruno Buccellati   JoJo no Kimyou na Bouken | JoJo's Bizarre Adventure   1415   2237   M/M   White
+89   N   Chloe Decker/Lucifer Morningstar   Lucifer (TV)   1413   4165   F/M   White
+90   N   Eddie Kaspbrak & Richie Tozier   IT - Stephen King   1396   2268   Gen   White
+91   N   Neil Josten/Andrew Minyard   All For The Game - Nora Sakavic   1392   4681   M/M   White
+92   N   Blake Belladonna/Yang Xiao Long   RWBY   1390   4358   F/F   POC
+93   N   Midoriya Izuku & Todoroki Shouto   Boku no Hero Academia | My Hero Academia   1378   2887   Gen   POC
+94   N   Padmé Amidala/Anakin Skywalker | Darth Vader   Star Wars - All Media Types   1369   4112   F/M   White
+95=   -8   Kim Namjoon | RM/Park Jimin   Bangtan Boys | BTS   1365   4728   M/M   POC
+95=   N   Sokka/Zuko (Avatar)   Avatar: The Last Airbender   1365   1828   M/M   POC
+97   N   Lee Jeno/Na Jaemin   NCT (Band)   1360   3266   M/M   POC
+98   N   Erik Lehnsherr/Charles Xavier   X-Men (Alternate Timeline Movies)   1333   14736   M/M   White
+99   -72   Loki/Thor (Marvel)   Thor (Movies)   1330   12863   M/M   White
+100   N   Logic | Logan Sanders/Morality | Patton Sanders   Sanders Sides (Web Series)   1327   3132   M/M   White
