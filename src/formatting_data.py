@@ -33,8 +33,11 @@ def split_raw_data_2020_to_2023(filepath: str):
 def separate_pairings(data_list):
     """
     takes a list of row lists containing values at the relationship/pairing/ship \
-        and type index positions that are separated by "/" or "&" characters
-    separates those values into a list at same index position and returns new list of row lists
+        and type index positions that are separated by "/" or "&" characters, \
+            and ending in two race values
+    separates each of the former values into a list at same index position, \
+        gathers the latter two into one list in original order at last index position \
+            and returns new list of row lists
     """
     output_nested_list = [data_list[0]]
     pairing_index = 0
@@ -74,14 +77,14 @@ def separate_pairings(data_list):
 
             #append to temp list
             temp_list.append(type_list)
-            #append remaining values
-            for value in row[type_index + 1 :]:
-                temp_list.append(value)
 
         else:
             #append remaining list
-            for value in row[pairing_index + 1 :]:
+            for value in row[pairing_index + 1 : -2]:
                 temp_list.append(value)
+        
+        #append both race values as a list
+        temp_list.append(row[-2 :])
 
         output_nested_list.append(temp_list)
 
