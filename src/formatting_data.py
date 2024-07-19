@@ -1,6 +1,22 @@
 from re import split
+from os import listdir
+from csv import writer
 
 # function to extract file paths into a list we can cycle through
+def find_paths(folder_in_cwd: str):
+    """
+    takes a string specifying the folder path in the current working directory one wants \
+    to extract file paths from the subfolders of
+
+        -folder must have only one level of sub folders containing the files
+
+        -string must end with a "/"
+
+    returns a list of file paths leading to all files in the sub folders
+    """
+    folder_list = [folder_in_cwd + item for item in listdir(folder_in_cwd)]
+    file_list = [folder + "/" + file  for folder in folder_list for file in listdir(folder)]
+    return file_list
 
 # function that splits rows into individual values
 def split_raw_data_2020_to_2023(filepath: str):
@@ -93,7 +109,24 @@ def separate_pairings(data_list):
 # a function that takes cleaned data, formats it (eg json or csv) 
 # and prints it into a new file for reading
     # should take desired file name & cleaned data nested list as arguments
+def make_csv_file(clean_data: list, file_name: str):
+    """
+    takes a list of lists of values and a string with the desired \
+    name/filepath for the output file (must end in .csv)
 
+    creates a csv file where the rows are the nested lists of values
+        the values are comma separated and any values that contained commas \
+        (including say lists) will be escaped with double quotation marks (")
+    """
+    strings_list = []
+    for item in clean_data:
+        temp_list = [str(value) for value in item]
+        strings_list.append(temp_list)
+
+    with open(file_name, "w", newline="") as csv_file:
+        clean_writer = writer(csv_file)
+        clean_writer.writerows(strings_list)
+#I'm not testing for this one, I've visually checked it with a test_run, it's formatting it correctly
 
 #finally:
     #run all the functions in order, clean, format & extract data into new files for each filepath
@@ -107,3 +140,10 @@ def separate_pairings(data_list):
         #put separate func output into white space remover func
         #put remover func output into format/file writer function
 
+if __name__ == "__main__":
+    make_csv_file(
+        separate_pairings(
+            split_raw_data_2020_to_2023("data/raw_data/ao3_2023/raw_ao3_2023_data.txt")
+        ),
+        "data/clean_data_test.csv"
+     )

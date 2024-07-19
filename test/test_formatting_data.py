@@ -1,4 +1,4 @@
-from src.formatting_data import split_raw_data_2020_to_2023, separate_pairings
+from src.formatting_data import split_raw_data_2020_to_2023, separate_pairings, find_paths
 
 class TestSplitRecentDataSets:
     def test_does_not_mutate_input_string(self):
@@ -243,3 +243,24 @@ class TestSeparatePairings:
             assert new_list[i][-1][0] == list2023[i][7]
             assert new_list[i][-1][1] == list2023[i][8]
 
+class TestFindPaths:
+    def test_returns_list(self):
+        assert type(find_paths("data/raw_data/")) == list
+
+    def test_returns_non_empty_list(self):
+        assert len(find_paths("data/raw_data/")) > 0
+
+    def test_returns_list_of_strings(self):
+        for item in find_paths("data/raw_data/"):
+            assert type(item) == str
+    
+    def test_returns_data_folder_file_paths(self):
+        for item in find_paths("data/raw_data/"):
+            assert "data/" in item
+
+    def test_returns_expected_file_paths(self):
+        assert "data/raw_data/ao3_2023/raw_ao3_2023_data.txt" in find_paths("data/raw_data/")
+        assert "data/raw_data/ao3_2013/raw_ao3_2013_fandoms.txt" in find_paths("data/raw_data/")
+        assert "data/raw_data/ao3_2016/raw_ao3_2016_femslash_ranking.txt" in find_paths("data/raw_data/")
+
+    
