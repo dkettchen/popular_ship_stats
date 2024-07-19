@@ -18,10 +18,11 @@ def find_paths(folder_in_cwd: str):
     file_list = [folder + "/" + file  for folder in folder_list for file in listdir(folder)]
     return file_list
 
+
 # function that splits rows into individual values
-def split_raw_data_2020_to_2023(filepath: str):
+def split_raw_data_2013_2014_and_2020_to_2023(filepath: str):
     """
-    takes the filepath to a .txt file of lines of rows with values separated by \\t characters
+    takes the filepath to a .txt file of lines of rows with values separated by "\\t"  or " - "
     returns a list of row lists of separated value strings
     """
     # how to access txt files?
@@ -37,12 +38,109 @@ def split_raw_data_2020_to_2023(filepath: str):
     data_list = []
     read_data[-1] += "\n" # adding the missing last newline character
     for string in read_data:
-        split_list = split(r" \t", string[:-1]) # splitting at the tabs
+        #we could add the regex for 2013 & 2014 here 👀 
+            # we'd just need to "change all instances" on our tests etc to adjust the func name
+        if "2013" in filepath or "2014" in filepath:
+            split_list = split(r" - ", string[:-1]) # splitting at the " - " separators
+        else:
+            split_list = split(r" \t", string[:-1]) # splitting at the tabs
         data_list.append(split_list) # nesting list
 
     return data_list
 
-# a variant of the above function that works for the remaining data sets' formatting
+# variants of the above function that works for the remaining data sets' formatting:
+#   -2015-2019 is just separated by white spaces which is inconvenient 
+#   & will require extra steps to separate the pairings from the fandoms
+def split_raw_data_2015_to_2019(filepath: str):
+    """
+    takes the filepath to a .txt file of lines of rows with values separated by single whitespaces
+
+    returns a list of row lists of separated value strings except for pairing & fandom values \
+    (as they contain whitespaces)
+    """
+    with open(filepath, "r", encoding="utf-8") as raw_data:
+        read_data = raw_data.readlines()
+    #each line string ends in \n, but the values are separated by a single whitespace ToT
+
+    data_list = []
+    read_data[-1] += "\n" # adding the missing last newline character
+    for string in read_data:
+        split_list = split(r"\s", string[:-1]) # splitting at the white spaces (all of em)
+        data_list.append(split_list) # nesting list
+    
+    new_list = [] # separating out columns & everything other than pairing & fandom values
+    if "data.txt" in filepath and "2016" not in filepath: 
+        #2016 was the first year of yearly data, so it doesn't have a "change" column yet
+
+        column_list = []
+        column_list.extend(data_list[0][:3])
+
+        new_works = ""
+        for item in data_list[0][4:6]:
+            new_works += " " + item
+        column_list.append(new_works[1:])
+
+        column_list.extend(data_list[0][-3:])
+        new_list.append(column_list)
+
+        for row in data_list[1:]:
+            temp_list = []
+            temp_list.extend(row[:2])
+
+            pairings_and_fandoms = ""
+            for item in row[2:-4]:
+                pairings_and_fandoms += " " + item
+            temp_list.append(pairings_and_fandoms[1:])
+
+            temp_list.extend(row[-4:])
+            new_list.append(temp_list)
+    elif "femslash" in filepath:
+        new_list.append(data_list[0])
+        for row in data_list[1:]:
+            temp_list = []
+            temp_list.extend(row[:2])
+
+            pairings_and_fandoms = ""
+            for item in row[2:-2]:
+                pairings_and_fandoms += " " + item
+            temp_list.append(pairings_and_fandoms[1:])
+
+            temp_list.extend(row[-2:])
+            new_list.append(temp_list)
+    elif "overall" in filepath:
+        new_list.append(data_list[0])
+        for row in data_list[1:]:
+            temp_list = []
+            temp_list.extend(row[:2])
+
+            pairings_and_fandoms = ""
+            for item in row[2:-3]:
+                pairings_and_fandoms += " " + item
+            temp_list.append(pairings_and_fandoms[1:])
+
+            temp_list.extend(row[-3:])
+            new_list.append(temp_list)
+
+    print(new_list)
+    return new_list
+
+#   -2013 overall & both 2014 sets have " - " separators, so should be easier to deal with!
+#       (the other 2013 ones are 1 value per row, so don't need value separating)
+
+#these should be correct for 2014-2019
+tag_info = {
+    "race_combo_tags": ["White", "Whi/POC", "POC", "Whi/Amb", "Ambig", "Amb/POC"],
+        #the interracial ones seem to not always align with the order of characters they refer to
+        #2013 overall and 2014-2015 femslash sets weren't tracking this yet
+    "type_tags": ["M/M", "F/F", "F/M", "Other", "Gen"]
+        #THE STRAIGHT ONES DON'T ALIGN W ORDER EITHER OMFG 
+        # (update: they don't in the other sets either fuck)
+            # -> ok we'll have to actually check all of these before assigning them smh
+            # -> a job for fandom wiki scraping and then fine tuning the results of that
+                # we're ignoring order for now!
+}
+
+
 
 # a function that takes the data_list format_raw_data func spits out and separates the pairings
     # find the values that contain slashes & ampercents -> split at those items
@@ -106,6 +204,7 @@ def separate_pairings(data_list):
 
     return output_nested_list
 
+
 # a function that takes cleaned data, formats it (eg json or csv) 
 # and prints it into a new file for reading
     # should take desired file name & cleaned data nested list as arguments
@@ -128,6 +227,7 @@ def make_csv_file(clean_data: list, file_name: str):
         clean_writer.writerows(strings_list)
 #I'm not testing for this one, I've visually checked it with a test_run, it's formatting it correctly
 
+
 #finally:
     #run all the functions in order, clean, format & extract data into new files for each filepath
         # format evolved over years, so we need to run correct functions for correct filepaths
@@ -140,10 +240,13 @@ def make_csv_file(clean_data: list, file_name: str):
         #put separate func output into white space remover func
         #put remover func output into format/file writer function
 
+
 if __name__ == "__main__":
-    make_csv_file(
-        separate_pairings(
-            split_raw_data_2020_to_2023("data/raw_data/ao3_2023/raw_ao3_2023_data.txt")
-        ),
-        "data/clean_data_test.csv"
-     )
+    split_raw_data_2015_to_2019("data/raw_data/ao3_2017/raw_ao3_2017_overall_ranking.txt")
+
+    # make_csv_file(
+    #     separate_pairings(
+    #         split_raw_data_2013_2014_and_2020_to_2023("data/raw_data/ao3_2023/raw_ao3_2023_data.txt")
+    #     ),
+    #     "data/clean_data_test.csv"
+    #  )
