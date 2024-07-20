@@ -8,6 +8,8 @@ def find_paths(folder_in_cwd: str):
 
         -folder must have only one level of sub folders containing the files
 
+        -there must not be un-foldered files present
+
         -string must end with a "/"
 
     returns a list of file paths leading to all files in the sub folders
@@ -15,3 +17,6 @@ def find_paths(folder_in_cwd: str):
     folder_list = [folder_in_cwd + item for item in listdir(folder_in_cwd)]
     file_list = [folder + "/" + file  for folder in folder_list for file in listdir(folder)]
     return file_list
+
+if __name__ == "__main__":
+    print(find_paths("data/raw_data/"))

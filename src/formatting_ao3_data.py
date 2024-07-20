@@ -62,8 +62,12 @@ def split_raw_data_2013_2014_and_2020_to_2023(filepath: str):
                 temp_list.extend(split_list[4:])
                 split_list = temp_list
 
-        else:
+        elif "2023" in filepath:
             split_list = split(r" \t", string[:-1]) # splitting at the tabs
+
+        else:       
+            split_list = split(r"\s{3}", string[:-1])
+
         data_list.append(split_list) # nesting list
 
     return data_list

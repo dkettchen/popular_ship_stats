@@ -1,7 +1,8 @@
 from re import split
 from csv import writer
-from json import dump
+from json import dump, load
 from formatting_ao3_data import separate_pairings, split_raw_data_2013_2014_and_2020_to_2023
+from get_file_paths import find_paths
 
 #I'm not testing for file writing ones 
 # if I've visually checked it with a test_run and it's formatting it correctly
@@ -56,6 +57,10 @@ def get_2020_to_2023_raw_fandom_data(filepath):
             # getting rid of property type & year info
             split_value_1 = split(r" \(", fandom)
             fandom = split_value_1[0]
+        if " | " in fandom:
+            # getting rid of as many foreign language characters as possible
+            split_value_4 = split(r" \| ", fandom) 
+            fandom = split_value_4[-1]
         if " - " in fandom:
             # getting rid of author names & "all media types"
             split_value_2 = split(r" - ", fandom)
@@ -64,18 +69,54 @@ def get_2020_to_2023_raw_fandom_data(filepath):
             # getting rid of sub titles
             split_value_3 = split(r":", fandom)
             fandom = split_value_3[0]
-        if " | " in fandom:
-            # getting rid of as many foreign language characters as possible
-            split_value_4 = split(r" \| ", fandom) 
-            fandom = split_value_4[-1]
+
         new_list.append(fandom)
 
     file_name = filepath[27:-4]
 
     output_dict = {"fandoms": sorted(list(set(new_list)))}
 
-    with open(f"data/fandom_list_{file_name}.json", "w") as json_file:
+    with open(f"data/raw_fandom_lists/fandom_list_{file_name}.json", "w") as json_file:
         dump(output_dict, json_file, indent=4)
+
+# a function to compile those into one master list!
+def get_all_2020_to_2023_fandoms():
+    """
+    writes a json file containing a dict with the key "2020-2023_fandoms" 
+    and a list value containing all unique fandom names contained in those data sets, 
+    formatted according to get_2020_to_2023_raw_fandom_data function
+    """
+
+    all_data_filepaths = find_paths("data/")
+    fandom_list_paths = [path for path in all_data_filepaths if "raw_fandom_lists" in path]
+
+    list_of_data = []
+    for file in fandom_list_paths:
+        with open(file, "r") as json_file:
+            content = load(json_file)
+        list_of_data.append(content["fandoms"])
+
+    complete_data_list = []
+    for data_set in list_of_data:
+        complete_data_list.extend(data_set)
+    complete_data_list = sorted(list(set(complete_data_list)))
+
+    output_dict = {"2020-2023_fandoms": complete_data_list}
+
+    with open("data/reference_and_test_files/all_fandoms_2020_to_2023.json", "w") as new_file:
+        dump(output_dict, new_file, indent=4)
+
+def run_functions_to_get_all_recent_fandoms():
+    """
+    runs the code necessary to get the complete list of 
+    unique fandom names in the ranking between 2020 and 2023
+    output as a dictionary into a json file
+    """
+    file_paths = find_paths("data/raw_data/")
+    for path in file_paths:
+        if "202" in path:
+            get_2020_to_2023_raw_fandom_data(path)
+    get_all_2020_to_2023_fandoms()
 
 
 
@@ -93,4 +134,4 @@ def get_2020_to_2023_raw_fandom_data(filepath):
 
 
 if __name__ == "__main__":
-    get_2020_to_2023_raw_fandom_data("data/raw_data/ao3_2023/raw_ao3_2023_data.txt")
+    pass
