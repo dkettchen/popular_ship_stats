@@ -53,3 +53,22 @@ property_types = [
     "book",
     "real life"
 ]
+
+
+
+#data used in raw sets to reference:
+
+#these should be correct for 2014-2019
+tag_info = {
+    "race_combo_tags": [
+            "White", "Whi/POC", "POC", "Whi/Amb", "Ambig", "Amb/POC", "Amb/Whi", "POC/Whi", "POC/Amb"
+            ],
+        #the interracial ones seem to not always align with the order of characters they refer to
+        #2013 overall and 2014-2015 femslash sets weren't tracking this yet
+    "type_tags": ["M/M", "F/F", "F/M", "Other", "Gen"]
+        #THE STRAIGHT ONES DON'T ALIGN W ORDER EITHER OMFG 
+        # (update: they don't in the other sets either fuck)
+            # -> ok we'll have to actually check all of these before assigning them smh
+            # -> a job for fandom wiki scraping and then fine tuning the results of that
+                # we're ignoring order for now!
+}

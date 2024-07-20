@@ -1,24 +1,4 @@
 from re import split
-from os import listdir
-from csv import writer
-from json import dump
-
-# function to extract file paths into a list we can cycle through
-def find_paths(folder_in_cwd: str):
-    """
-    takes a string specifying the folder path in the current working directory one wants \
-    to extract file paths from the subfolders of
-
-        -folder must have only one level of sub folders containing the files
-
-        -string must end with a "/"
-
-    returns a list of file paths leading to all files in the sub folders
-    """
-    folder_list = [folder_in_cwd + item for item in listdir(folder_in_cwd)]
-    file_list = [folder + "/" + file  for folder in folder_list for file in listdir(folder)]
-    return file_list
-
 
 # function that splits rows into individual values
 def split_raw_data_2013_2014_and_2020_to_2023(filepath: str):
@@ -88,7 +68,7 @@ def split_raw_data_2013_2014_and_2020_to_2023(filepath: str):
 
     return data_list
 
-# variants of the above function that works for the remaining data sets' formatting:
+# a variant of the above function that works for the remaining data sets' formatting:
 #   -2015-2019 is just separated by white spaces which is inconvenient 
 #   & will require extra steps to separate the pairings from the fandoms
 def split_raw_data_2015_to_2019(filepath: str):
@@ -199,28 +179,13 @@ def split_raw_data_2015_to_2019(filepath: str):
     return new_list
 
 
-#these should be correct for 2014-2019
-tag_info = {
-    "race_combo_tags": [
-            "White", "Whi/POC", "POC", "Whi/Amb", "Ambig", "Amb/POC", "Amb/Whi", "POC/Whi", "POC/Amb"
-            ],
-        #the interracial ones seem to not always align with the order of characters they refer to
-        #2013 overall and 2014-2015 femslash sets weren't tracking this yet
-    "type_tags": ["M/M", "F/F", "F/M", "Other", "Gen"]
-        #THE STRAIGHT ONES DON'T ALIGN W ORDER EITHER OMFG 
-        # (update: they don't in the other sets either fuck)
-            # -> ok we'll have to actually check all of these before assigning them smh
-            # -> a job for fandom wiki scraping and then fine tuning the results of that
-                # we're ignoring order for now!
-}
-
-
+#TODO: implement splitting pairings from their fandoms!
 # a function to comb through the pairing-fandom values and split them apart appropriately
     #I'm seeing a highly unfortunate scenario where we have to manually copy out all the fandoms 
     # and put em in a variable to check against rip
 def split_pairings_from_fandoms(data_list):
     # make fandom list
-        #we made a function for it!
+        #we made a function for it! so we can access the files we get out of that!
 
     # make new list
     # append first row to new list
@@ -317,78 +282,8 @@ def separate_pairings(data_list):
     return output_nested_list
 
 
-# a function that takes cleaned data, formats it (eg json or csv) 
-# and prints it into a new file for reading
-    # should take desired file name & cleaned data nested list as arguments
-def make_csv_file(clean_data: list, file_name: str):
-    """
-    takes a list of lists of values and a string with the desired \
-    name/filepath for the output file (must end in .csv)
-
-    creates a csv file where the rows are the nested lists of values
-        the values are comma separated and any values that contained commas \
-        (including say lists) will be escaped with double quotation marks (")
-    """
-    strings_list = []
-    for item in clean_data:
-        temp_list = [str(value) for value in item]
-        strings_list.append(temp_list)
-
-    with open(file_name, "w", newline="") as csv_file:
-        clean_writer = writer(csv_file)
-        clean_writer.writerows(strings_list)
-#I'm not testing for file writing ones 
-# if I've visually checked it with a test_run and it's formatting it correctly
-
-def get_2020_to_2023_raw_fandom_data(filepath):
-    data_list = separate_pairings(
-        split_raw_data_2013_2014_and_2020_to_2023(filepath)
-    )
-    
-    property_list = list(set([row[3] for row in data_list[1:]]))
-
-    new_list = []
-    for fandom in property_list:
-        if "(" in fandom:
-            # getting rid of property type & year info
-            split_value_1 = split(r" \(", fandom)
-            fandom = split_value_1[0]
-        if " - " in fandom:
-            # getting rid of author names & "all media types"
-            split_value_2 = split(r" - ", fandom)
-            fandom = split_value_2[0]
-        if ":" in fandom:
-            # getting rid of sub titles
-            split_value_3 = split(r":", fandom)
-            fandom = split_value_3[0]
-        if " | " in fandom:
-            # getting rid of as many foreign language characters as possible
-            split_value_4 = split(r" \| ", fandom) 
-            fandom = split_value_4[-1]
-        new_list.append(fandom)
-
-    file_name = filepath[27:-4]
-
-    output_dict = {"fandoms": sorted(list(set(new_list)))}
-
-    with open(f"data/fandom_list_{file_name}.json", "w") as json_file:
-        dump(output_dict, json_file, indent=4)
-
-#finally:
-    #run all the functions in order, clean, format & extract data into new files for each filepath
-        # format evolved over years, so we need to run correct functions for correct filepaths
-            # eg separated by tabs is the format since 2020
-            # 2023 filepath = "data/raw_data/ao3_2023/raw_ao3_2023_data.txt"
-            # sets before 2020 will need a different split function
-        #create list of all file paths
-        #cycle through file path strings, to insert into relevant split function
-        #put split function output into separate function
-        #put separate func output into white space remover func
-        #put remover func output into format/file writer function
-
-
 if __name__ == "__main__":
-    get_2020_to_2023_raw_fandom_data("data/raw_data/ao3_2023/raw_ao3_2023_data.txt")
+    pass
 
     # make_csv_file(
     #     separate_pairings(
