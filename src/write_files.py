@@ -1,7 +1,7 @@
 from re import split
 from csv import writer
 from json import dump
-from formatting_data import separate_pairings, split_raw_data_2013_2014_and_2020_to_2023
+from formatting_ao3_data import separate_pairings, split_raw_data_2013_2014_and_2020_to_2023
 
 #I'm not testing for file writing ones 
 # if I've visually checked it with a test_run and it's formatting it correctly

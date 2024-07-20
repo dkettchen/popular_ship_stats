@@ -1,4 +1,4 @@
-from src.formatting_data import split_raw_data_2013_2014_and_2020_to_2023, separate_pairings, split_raw_data_2015_to_2019
+from formatting_ao3_data import split_raw_data_2013_2014_and_2020_to_2023, separate_pairings, split_raw_data_2015_to_2019
 
 
 class TestSplitRecentAndOldDataSets:

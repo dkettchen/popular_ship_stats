@@ -1,4 +1,4 @@
-from src.formatting_data import find_paths
+from formatting_ao3_data import find_paths
 
 
 class TestFindPaths:
