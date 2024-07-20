@@ -1,6 +1,7 @@
 from re import split
 from os import listdir
 from csv import writer
+from json import dump
 
 # function to extract file paths into a list we can cycle through
 def find_paths(folder_in_cwd: str):
@@ -214,6 +215,37 @@ tag_info = {
 }
 
 
+# a function to comb through the pairing-fandom values and split them apart appropriately
+    #I'm seeing a highly unfortunate scenario where we have to manually copy out all the fandoms 
+    # and put em in a variable to check against rip
+def split_pairings_from_fandoms(data_list):
+    # make fandom list
+        #we made a function for it!
+
+    # make new list
+    # append first row to new list
+
+    # for each row (except first)
+        # make new row list
+
+        # append first x values until pairing/fandom value to new row list
+
+        # separate & append pairing & fandom value
+            # iterate through fandom list
+            # if fandom in value, split it at relevant spot
+            # otherwise print row so I can see which fandom is missing or misspellt & fix
+                #this means we'll have to check through ALL the relevant data sets until 
+                # we've got the full list smh
+                #-> get starting values from newer data sets & add & change as needed
+            # append correctly split values to new row list
+        
+        # append remaining values to new row list
+
+        # append new row list to new list
+
+
+    pass
+
 
 # a function that takes the data_list format_raw_data func spits out and separates the pairings
     # find the values that contain slashes & ampercents -> split at those items
@@ -305,8 +337,42 @@ def make_csv_file(clean_data: list, file_name: str):
     with open(file_name, "w", newline="") as csv_file:
         clean_writer = writer(csv_file)
         clean_writer.writerows(strings_list)
-#I'm not testing for this one, I've visually checked it with a test_run, it's formatting it correctly
+#I'm not testing for file writing ones 
+# if I've visually checked it with a test_run and it's formatting it correctly
 
+def get_2020_to_2023_raw_fandom_data(filepath):
+    data_list = separate_pairings(
+        split_raw_data_2013_2014_and_2020_to_2023(filepath)
+    )
+    
+    property_list = list(set([row[3] for row in data_list[1:]]))
+
+    new_list = []
+    for fandom in property_list:
+        if "(" in fandom:
+            # getting rid of property type & year info
+            split_value_1 = split(r" \(", fandom)
+            fandom = split_value_1[0]
+        if " - " in fandom:
+            # getting rid of author names & "all media types"
+            split_value_2 = split(r" - ", fandom)
+            fandom = split_value_2[0]
+        if ":" in fandom:
+            # getting rid of sub titles
+            split_value_3 = split(r":", fandom)
+            fandom = split_value_3[0]
+        if " | " in fandom:
+            # getting rid of as many foreign language characters as possible
+            split_value_4 = split(r" \| ", fandom) 
+            fandom = split_value_4[-1]
+        new_list.append(fandom)
+
+    file_name = filepath[27:-4]
+
+    output_dict = {"fandoms": sorted(list(set(new_list)))}
+
+    with open(f"data/fandom_list_{file_name}.json", "w") as json_file:
+        dump(output_dict, json_file, indent=4)
 
 #finally:
     #run all the functions in order, clean, format & extract data into new files for each filepath
@@ -322,7 +388,7 @@ def make_csv_file(clean_data: list, file_name: str):
 
 
 if __name__ == "__main__":
-    split_raw_data_2015_to_2019("data/raw_data/ao3_2017/raw_ao3_2017_overall_ranking.txt")
+    get_2020_to_2023_raw_fandom_data("data/raw_data/ao3_2023/raw_ao3_2023_data.txt")
 
     # make_csv_file(
     #     separate_pairings(
