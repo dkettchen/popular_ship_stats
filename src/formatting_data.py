@@ -37,11 +37,50 @@ def split_raw_data_2013_2014_and_2020_to_2023(filepath: str):
         # & ends on the latter (with exception of last entry))
     data_list = []
     read_data[-1] += "\n" # adding the missing last newline character
+    books = [
+        "Harry Potter", 
+        "Les Misérables", 
+        "The Hobbit", 
+        "Hunger Games Trilogy", 
+        "Dragon Age", 
+        "Twilight Series",
+        "The Lord of the Rings", 
+        "A Song of Ice and Fire",
+        "Good Omens"
+        ] # the books have authors that are " - " separated so we need to re-assemble those for 2013-2014 data
     for string in read_data:
         #we could add the regex for 2013 & 2014 here 👀 
             # we'd just need to "change all instances" on our tests etc to adjust the func name
-        if "2013" in filepath or "2014" in filepath:
+        if "2013" in filepath:
+            if "2013" in filepath and string == read_data[0]:
+                split_list = split(r"\s", string[:-1])
+            else:
+                split_list = split(r" - ", string[:-1]) # splitting at the " - " separators
+            if  "2013" in filepath and split_list[2] in books:
+                book = split_list[2] + split_list[3]
+                temp_list = []
+                temp_list.extend(split_list[:2])
+                temp_list.append(book)
+                temp_list.extend(split_list[4:])
+                split_list = temp_list
+
+        elif "2014" in filepath:
             split_list = split(r" - ", string[:-1]) # splitting at the " - " separators
+            if "2014_overall" in filepath and split_list[3] in books:
+                book = split_list[3] + split_list[4]
+                temp_list = []
+                temp_list.extend(split_list[:3])
+                temp_list.append(book)
+                temp_list.extend(split_list[5:])
+                split_list = temp_list
+            elif "2014_femslash" in filepath and split_list[2] in books:
+                book = split_list[2] + split_list[3]
+                temp_list = []
+                temp_list.extend(split_list[:2])
+                temp_list.append(book)
+                temp_list.extend(split_list[4:])
+                split_list = temp_list
+
         else:
             split_list = split(r" \t", string[:-1]) # splitting at the tabs
         data_list.append(split_list) # nesting list
@@ -180,25 +219,32 @@ def separate_pairings(data_list):
         #append to temp list
         temp_list.append(pairing_list)
 
-        #if pairing tag has a /
+        up_to_pairing = True
+
+        #if type tag has a /
         if "Type" in data_list[0] and "/" in row[type_index]:
             #append middle values to temp list
-            for value in row[pairing_index + 1 : type_index]:
-                temp_list.append(value)
+            temp_list.extend(row[pairing_index + 1 : type_index])
 
-            #split pairing tag item at /
+            #split type tag item at /
             type_list = split(r"\/", row[type_index])
 
             #append to temp list
             temp_list.append(type_list)
-
-        else:
-            #append remaining list
-            for value in row[pairing_index + 1 : -2]:
-                temp_list.append(value)
         
-        #append both race values as a list
-        temp_list.append(row[-2 :])
+            up_to_pairing = False
+        
+        if data_list[0][-2] == "Race" or "Race" not in data_list[0]: #append remaining values
+            if up_to_pairing:
+                temp_list.extend(row[pairing_index + 1 :])
+            else: # if up to type
+                temp_list.extend(row[type_index + 1 :])
+        else: #gather race values into a list
+            if up_to_pairing:
+                temp_list.extend(row[pairing_index + 1 : -2])
+                temp_list.append(row[-2 :])
+            else: # if up to type            
+                temp_list.append(row[-2 :])
 
         output_nested_list.append(temp_list)
 
