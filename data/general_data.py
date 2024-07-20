@@ -50,5 +50,6 @@ property_types = [
     "TV series", 
     "online series", 
     "video game", 
+    "book",
     "real life"
 ]
