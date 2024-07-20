@@ -1,28 +1,28 @@
-from src.formatting_data import split_raw_data_2013_2014_and_2020_to_2023, separate_pairings, find_paths
+from src.formatting_data import split_raw_data_2013_2014_and_2020_to_2023, separate_pairings, find_paths, split_raw_data_2015_to_2019
 
 class TestFindPaths:
-    def test_returns_list(self):
+    def test_find_returns_list(self):
         assert type(find_paths("data/raw_data/")) == list
 
-    def test_returns_non_empty_list(self):
+    def test_find_returns_non_empty_list(self):
         assert len(find_paths("data/raw_data/")) > 0
 
-    def test_returns_list_of_strings(self):
+    def test_find_returns_list_of_strings(self):
         for item in find_paths("data/raw_data/"):
             assert type(item) == str
     
-    def test_returns_data_folder_file_paths(self):
+    def test_find_returns_data_folder_file_paths(self):
         for item in find_paths("data/raw_data/"):
             assert "data/" in item
 
-    def test_returns_expected_file_paths(self):
+    def test_find_returns_expected_file_paths(self):
         assert "data/raw_data/ao3_2023/raw_ao3_2023_data.txt" in find_paths("data/raw_data/")
         assert "data/raw_data/ao3_2013/raw_ao3_2013_fandoms.txt" in find_paths("data/raw_data/")
         assert "data/raw_data/ao3_2016/raw_ao3_2016_femslash_ranking.txt" in find_paths("data/raw_data/")
 
 
 class TestSplitRecentAndOldDataSets:
-    def test_does_not_mutate_input_string(self):
+    def test_split_does_not_mutate_input_string(self):
         path2023 = "data/raw_data/ao3_2023/raw_ao3_2023_data.txt"
         split_raw_data_2013_2014_and_2020_to_2023(path2023)
         assert path2023 == "data/raw_data/ao3_2023/raw_ao3_2023_data.txt"
@@ -36,16 +36,16 @@ class TestSplitRecentAndOldDataSets:
         assert oldpath == "data/raw_data/ao3_2014/raw_ao3_2014_overall_ranking.txt"
 
     #testing list is in correct format
-    def test_returns_list(self):
+    def test_split_returns_list(self):
         path2023 = "data/raw_data/ao3_2023/raw_ao3_2023_data.txt"
         assert type(split_raw_data_2013_2014_and_2020_to_2023(path2023)) == list
     
-    def test_returns_list_of_lists(self):
+    def test_split_returns_list_of_lists(self):
         path2023 = "data/raw_data/ao3_2023/raw_ao3_2023_data.txt"
         for a_list in split_raw_data_2013_2014_and_2020_to_2023(path2023):
             assert type(a_list) == list
 
-    def test_returns_list_of_column_length(self):
+    def test_split_returns_list_of_column_length(self):
         path2023 = "data/raw_data/ao3_2023/raw_ao3_2023_data.txt"
         data_list = split_raw_data_2013_2014_and_2020_to_2023(path2023)
         for item in data_list[1:]:
@@ -72,7 +72,7 @@ class TestSplitRecentAndOldDataSets:
         for item in og_data[1:]:
             assert len(item) == len(og_data[0])
     
-    def test_returns_nested_list_of_strings(self):
+    def test_split_returns_nested_list_of_strings(self):
         path2023 = "data/raw_data/ao3_2023/raw_ao3_2023_data.txt"
         data_list = split_raw_data_2013_2014_and_2020_to_2023(path2023)
         for item in data_list:
@@ -80,7 +80,7 @@ class TestSplitRecentAndOldDataSets:
                 assert type(value) == str
     
     #testing values were separated correctly
-    def test_expected_number_values_are_number_strings(self):
+    def test_split_expected_number_values_are_number_strings(self):
         path2023 = "data/raw_data/ao3_2023/raw_ao3_2023_data.txt"
         data_list = split_raw_data_2013_2014_and_2020_to_2023(path2023)
         for item in data_list[1:]:
@@ -120,21 +120,25 @@ class TestSplitRecentAndOldDataSets:
             assert type(int(item[0])) == int
             assert type(int(item[-1])) == int
 
-    def test_pairing_labels_are_expected_format(self):
+    def test_split_pairing_labels_are_expected_format(self):
         path2023 = "data/raw_data/ao3_2023/raw_ao3_2023_data.txt"
         data_list = split_raw_data_2013_2014_and_2020_to_2023(path2023)
         pairing_tags = ["M/M", "F/F", "F/M", "Gen", "Other"] 
         for item in data_list[1:]:
             assert item[6] in pairing_tags
     
-    def test_race_labels_are_expected_format(self):
-        path2023 = "data/raw_data/ao3_2023/raw_ao3_2023_data.txt"
-        data_list = split_raw_data_2013_2014_and_2020_to_2023(path2023)
+    def test_split_race_labels_are_expected_format(self):
         race_tags = [
             "White", "MENA", "Asian", "Indig", "Latino", 
             "Ambig", "Af Lat", "Black", "N.H.", "ME Lat",
             "As Ind"
             ]
+        old_race_tags = [
+            "White", "Whi/POC", "POC", "Whi/Amb", "Ambig", "Amb/POC", "Amb/Whi", "POC/Whi", "POC/Amb"
+            ]
+
+        path2023 = "data/raw_data/ao3_2023/raw_ao3_2023_data.txt"
+        data_list = split_raw_data_2013_2014_and_2020_to_2023(path2023)
         for item in data_list[1:]:
             assert item[7] in race_tags
             assert item[8] in race_tags
@@ -145,15 +149,12 @@ class TestSplitRecentAndOldDataSets:
             assert item[5] in race_tags
             assert item[6] in race_tags
 
-        old_race_tags = [
-            "White", "Whi/POC", "POC", "Whi/Amb", "Ambig", "Amb/POC", "Amb/Whi", "POC/Whi", "POC/Amb"
-            ]
         old2014path = "data/raw_data/ao3_2014/raw_ao3_2014_overall_ranking.txt"
         old_data = split_raw_data_2013_2014_and_2020_to_2023(old2014path)
         for item in old_data[1:]:
             assert item[-2] in old_race_tags
 
-    def test_pairings_contain_slash_or_ampercent(self):
+    def test_split_pairings_contain_slash_or_ampercent(self):
         path2023 = "data/raw_data/ao3_2023/raw_ao3_2023_data.txt"
         data_list = split_raw_data_2013_2014_and_2020_to_2023(path2023)
         for item in data_list[1:]:
@@ -179,7 +180,7 @@ class TestSplitRecentAndOldDataSets:
         for item in og_data[1:]:
             assert "/" in item[1] or "&" in item[1]
 
-    def test_change_contains_number_with_plus_or_minus_OR_is_new(self):
+    def test_split_change_contains_number_with_plus_or_minus_OR_is_new(self):
         path2023 = "data/raw_data/ao3_2023/raw_ao3_2023_data.txt"
         data_list = split_raw_data_2013_2014_and_2020_to_2023(path2023)
         for item in data_list[1:]:
@@ -194,7 +195,7 @@ class TestSplitRecentAndOldDataSets:
             if item[1] != "New":
                 assert type(int(item[1][1:])) == int
         
-    def test_change_contains_asterixes_or_is_empty_for_2014(self):
+    def test_split_change_contains_asterixes_or_is_empty_for_2014(self):
         old2014path = "data/raw_data/ao3_2014/raw_ao3_2014_overall_ranking.txt"
         old_data = split_raw_data_2013_2014_and_2020_to_2023(old2014path)
         for item in old_data[1:]:
@@ -203,22 +204,22 @@ class TestSplitRecentAndOldDataSets:
 
 class TestSeparatePairings:
     #testing output list is in correct format and we didn't lose any data
-    def test_returns_list(self):
+    def test_separate_returns_list(self):
         path2023 = "data/raw_data/ao3_2023/raw_ao3_2023_data.txt"
         list2023 = split_raw_data_2013_2014_and_2020_to_2023(path2023)
         assert type(separate_pairings(list2023)) == list
 
-    def test_returns_new_list(self):
+    def test_separate_returns_new_list(self):
         path2023 = "data/raw_data/ao3_2023/raw_ao3_2023_data.txt"
         list2023 = split_raw_data_2013_2014_and_2020_to_2023(path2023)
         assert separate_pairings(list2023) is not list2023
 
-    def test_returns_different_list(self):
+    def test_separate_returns_different_list(self):
         path2023 = "data/raw_data/ao3_2023/raw_ao3_2023_data.txt"
         list2023 = split_raw_data_2013_2014_and_2020_to_2023(path2023)
         assert separate_pairings(list2023) != list2023
 
-    def test_does_not_mutate_input_list(self):
+    def test_separate_does_not_mutate_input_list(self):
         path2023 = "data/raw_data/ao3_2023/raw_ao3_2023_data.txt"
         list2023 = split_raw_data_2013_2014_and_2020_to_2023(path2023)
         separate_pairings(list2023)
@@ -244,20 +245,20 @@ class TestSeparatePairings:
         separate_pairings(og_data)
         assert og_data == split_raw_data_2013_2014_and_2020_to_2023(old2013path)
 
-    def test_returns_list_of_lists(self):
+    def test_separate_returns_list_of_lists(self):
         path2023 = "data/raw_data/ao3_2023/raw_ao3_2023_data.txt"
         list2023 = split_raw_data_2013_2014_and_2020_to_2023(path2023)
         for a_list in separate_pairings(list2023):
             assert type(a_list) == list
 
-    def test_returns_lists_of_same_length(self):
+    def test_separate_returns_lists_of_same_length(self):
         path2023 = "data/raw_data/ao3_2023/raw_ao3_2023_data.txt"
         list2023 = split_raw_data_2013_2014_and_2020_to_2023(path2023)
         new_list = separate_pairings(list2023)
         for i in range(len(new_list), 8):
             assert len(new_list[i]) == len(list2023[i])
 
-    def test_returns_row_lists_of_uniform_length(self):
+    def test_separate_returns_row_lists_of_uniform_length(self):
         path2023 = "data/raw_data/ao3_2023/raw_ao3_2023_data.txt"
         list2023 = split_raw_data_2013_2014_and_2020_to_2023(path2023)
         new_list = separate_pairings(list2023)
@@ -288,7 +289,7 @@ class TestSeparatePairings:
         for i in range(1, len(new_og_data)):
             assert len(new_og_data[i]) == len(new_og_data[0])
 
-    def test_returns_items_that_did_not_contain_relevant_characters_unchanged(self):
+    def test_separate_returns_items_that_did_not_contain_relevant_characters_unchanged(self):
         path2023 = "data/raw_data/ao3_2023/raw_ao3_2023_data.txt"
         list2023 = split_raw_data_2013_2014_and_2020_to_2023(path2023)
         new_list = separate_pairings(list2023)
@@ -330,7 +331,7 @@ class TestSeparatePairings:
                 assert new_og_data[row][i] == og_data[row][i]
     
     #testing item modification was successful
-    def test_returns_separated_items_as_lists(self):
+    def test_separate_returns_separated_items_as_lists(self):
         path2023 = "data/raw_data/ao3_2023/raw_ao3_2023_data.txt"
         list2023 = split_raw_data_2013_2014_and_2020_to_2023(path2023)
         new_list = separate_pairings(list2023)
@@ -372,7 +373,7 @@ class TestSeparatePairings:
             if "/" in og_data[i][-2]:
                 assert type(new_og_data[i][-2]) == list
             
-    def test_separates_item_into_expected_amount_of_new_items(self):
+    def test_separate_separates_item_into_expected_amount_of_new_items(self):
         path2023 = "data/raw_data/ao3_2023/raw_ao3_2023_data.txt"
         list2023 = split_raw_data_2013_2014_and_2020_to_2023(path2023)
         new_list = separate_pairings(list2023)
@@ -415,7 +416,7 @@ class TestSeparatePairings:
         assert len(new_og_data[2][1]) == 2
         assert len(new_og_data[115][1]) == 3
 
-    def test_last_item_is_a_list_after_2020(self):
+    def test_separate_last_item_is_a_list_after_2020(self):
         path2023 = "data/raw_data/ao3_2023/raw_ao3_2023_data.txt"
         list2023 = split_raw_data_2013_2014_and_2020_to_2023(path2023)
         new_list = separate_pairings(list2023)
@@ -428,7 +429,7 @@ class TestSeparatePairings:
         for row in new_fem[1:]:
             assert type(row[-1]) == list
 
-    def test_last_item_contains_two_strings_after_2020(self):
+    def test_separate_last_item_contains_two_strings_after_2020(self):
         path2023 = "data/raw_data/ao3_2023/raw_ao3_2023_data.txt"
         list2023 = split_raw_data_2013_2014_and_2020_to_2023(path2023)
         new_list = separate_pairings(list2023)
@@ -436,7 +437,7 @@ class TestSeparatePairings:
             assert len(row[-1]) == 2
             assert type(row[-1][0]) == str and type(row[-1][1]) == str
 
-    def test_race_values_stay_in_correct_order_after_2020(self):
+    def test_separate_race_values_stay_in_correct_order_after_2020(self):
         path2023 = "data/raw_data/ao3_2023/raw_ao3_2023_data.txt"
         list2023 = split_raw_data_2013_2014_and_2020_to_2023(path2023)
         new_list = separate_pairings(list2023)
@@ -444,4 +445,170 @@ class TestSeparatePairings:
             assert new_list[i][-1][0] == list2023[i][7]
             assert new_list[i][-1][1] == list2023[i][8]
 
-#need to test new split for 2015-2019
+
+class TestSplitMiddleDataSets:
+    def test_middle_does_not_mutate_input_string(self):
+        path2016 = "data/raw_data/ao3_2016/raw_ao3_2016_data.txt"
+        split_raw_data_2015_to_2019(path2016)
+        assert path2016 == "data/raw_data/ao3_2016/raw_ao3_2016_data.txt"
+
+    #testing list is in correct format
+    def test_middle_returns_list(self):
+        path2016 = "data/raw_data/ao3_2016/raw_ao3_2016_data.txt"
+        assert type(split_raw_data_2015_to_2019(path2016)) == list
+
+    def test_middle_returns_list_of_lists(self):
+        path2016 = "data/raw_data/ao3_2016/raw_ao3_2016_data.txt"
+        data_2016 = split_raw_data_2015_to_2019(path2016)
+        for row in data_2016:
+            assert type(row) == list
+
+    def test_middle_returns_rows_of_strings(self):
+        path2016 = "data/raw_data/ao3_2016/raw_ao3_2016_data.txt"
+        data_2016 = split_raw_data_2015_to_2019(path2016)
+        for row in data_2016:
+            for value in row:
+                assert type(value) == str
+
+    def test_middle_returns_rows_of_column_length_minus_one(self):
+        path2016 = "data/raw_data/ao3_2016/raw_ao3_2016_data.txt"
+        data_2016 = split_raw_data_2015_to_2019(path2016)
+        for row in data_2016[1:]:
+            assert len(row) == len(data_2016[0]) -1
+
+        fempath2019 = "data/raw_data/ao3_2019/raw_ao3_2019_femslash_ranking.txt"
+        data_2019 = split_raw_data_2015_to_2019(fempath2019)
+        for row in data_2019[1:]:
+            assert len(row) == len(data_2019[0]) -1
+
+        overallpath2015 = "data/raw_data/ao3_2015/raw_ao3_2015_overall_ranking.txt"
+        overall_data_2015 = split_raw_data_2015_to_2019(overallpath2015)
+        for row in overall_data_2015[1:]:
+            assert len(row) == len(overall_data_2015[0]) -1
+        
+        path2017 = "data/raw_data/ao3_2017/raw_ao3_2017_data.txt"
+        data_2017 = split_raw_data_2015_to_2019(path2017)
+        for row in data_2017[1:]:
+            assert len(row) == len(data_2017[0]) -1
+
+    #testing values were separated correctly
+    def test_middle_expected_numbers_are_number_strings(self):
+        path2016 = "data/raw_data/ao3_2016/raw_ao3_2016_data.txt"
+        data_2016 = split_raw_data_2015_to_2019(path2016)
+        for item in data_2016[1:]:
+            assert type(int(item[-3][-3:])) == int
+            assert type(int(item[-4][-3:])) == int
+            if item[0][-1] == "=": 
+                assert type(int(item[0][:-1])) == int
+            else: assert type(int(item[0])) == int
+
+        fempath2019 = "data/raw_data/ao3_2019/raw_ao3_2019_femslash_ranking.txt"
+        data_2019 = split_raw_data_2015_to_2019(fempath2019)
+        for item in data_2019[1:]:
+            assert type(int(item[-2][-3:])) == int
+            if item[0][-1] == "=": 
+                assert type(int(item[0][:-1])) == int
+            else: assert type(int(item[0])) == int
+
+        overallpath2015 = "data/raw_data/ao3_2015/raw_ao3_2015_overall_ranking.txt"
+        overall_data_2015 = split_raw_data_2015_to_2019(overallpath2015)
+        for item in overall_data_2015[1:]:
+            assert type(int(item[0])) == int
+            assert type(int(item[-3][-3:])) == int
+        
+        path2017 = "data/raw_data/ao3_2017/raw_ao3_2017_data.txt"
+        data_2017 = split_raw_data_2015_to_2019(path2017)
+        for item in data_2017[1:]:
+            assert type(int(item[-3][-3:])) == int
+            assert type(int(item[-4][-3:])) == int
+            if item[0][-1] == "=": 
+                assert type(int(item[0][:-1])) == int
+            else: assert type(int(item[0])) == int
+
+    def test_middle_pairing_labels_are_expected_format(self):
+        pairing_tags = ["M/M", "F/F", "F/M", "Gen", "Other"] 
+
+        path2016 = "data/raw_data/ao3_2016/raw_ao3_2016_data.txt"
+        data_2016 = split_raw_data_2015_to_2019(path2016)
+        for item in data_2016[1:]:
+            assert item[4] in pairing_tags
+
+        overallpath2015 = "data/raw_data/ao3_2015/raw_ao3_2015_overall_ranking.txt"
+        overall_data_2015 = split_raw_data_2015_to_2019(overallpath2015)
+        for item in overall_data_2015[1:]:
+            assert item[4] in pairing_tags
+        
+        path2017 = "data/raw_data/ao3_2017/raw_ao3_2017_data.txt"
+        data_2017 = split_raw_data_2015_to_2019(path2017)
+        for item in data_2017[1:]:
+            assert item[-2] in pairing_tags
+
+    def test_middle_race_labels_are_expected_format(self):
+        old_race_tags = [
+            "White", "Whi/POC", "POC", "Whi/Amb", "Ambig", "Amb/POC", "Amb/Whi", "POC/Whi", "POC/Amb"
+            ]
+        
+        path2016 = "data/raw_data/ao3_2016/raw_ao3_2016_data.txt"
+        data_2016 = split_raw_data_2015_to_2019(path2016)
+        for item in data_2016[1:]:
+            assert item[-1] in old_race_tags
+
+        fempath2019 = "data/raw_data/ao3_2019/raw_ao3_2019_femslash_ranking.txt"
+        data_2019 = split_raw_data_2015_to_2019(fempath2019)
+        for item in data_2019[1:]:
+            assert item[-1] in old_race_tags
+
+        overallpath2015 = "data/raw_data/ao3_2015/raw_ao3_2015_overall_ranking.txt"
+        overall_data_2015 = split_raw_data_2015_to_2019(overallpath2015)
+        for item in overall_data_2015[1:]:
+            assert item[-1] in old_race_tags
+
+        path2017 = "data/raw_data/ao3_2017/raw_ao3_2017_data.txt"
+        data_2017 = split_raw_data_2015_to_2019(path2017)
+        for item in data_2017[1:]:
+            assert item[-1] in old_race_tags
+
+    def test_middle_pairings_contain_slash_or_ampercent(self):
+        path2016 = "data/raw_data/ao3_2016/raw_ao3_2016_data.txt"
+        data_2016 = split_raw_data_2015_to_2019(path2016)
+        for item in data_2016[1:]:
+            assert "/" in item[1] or "&" in item[1]
+
+        fempath2019 = "data/raw_data/ao3_2019/raw_ao3_2019_femslash_ranking.txt"
+        data_2019 = split_raw_data_2015_to_2019(fempath2019)
+        for item in data_2019[1:]:
+            assert "/" in item[2] or "&" in item[2]
+
+        overallpath2015 = "data/raw_data/ao3_2015/raw_ao3_2015_overall_ranking.txt"
+        overall_data_2015 = split_raw_data_2015_to_2019(overallpath2015)
+        for item in overall_data_2015[1:]:
+            assert "/" in item[2] or "&" in item[2]
+
+        path2017 = "data/raw_data/ao3_2017/raw_ao3_2017_data.txt"
+        data_2017 = split_raw_data_2015_to_2019(path2017)
+        for item in data_2017[1:]:
+            assert "/" in item[2] or "&" in item[2]
+
+    def test_middle_change_contains_number_with_plus_or_minus_is_number_OR_is_N(self):
+        fempath2019 = "data/raw_data/ao3_2019/raw_ao3_2019_femslash_ranking.txt"
+        data_2019 = split_raw_data_2015_to_2019(fempath2019)
+        for item in data_2019[1:]:
+            assert item[1] == "N" or item[1][0] == "+" or item[1][0] == "-" or type(int(item[1])) == int 
+            if item[1][0] == "+" or item[1][0] == "-":
+                assert type(int(item[1][1:])) == int
+
+        overallpath2015 = "data/raw_data/ao3_2015/raw_ao3_2015_overall_ranking.txt"
+        overall_data_2015 = split_raw_data_2015_to_2019(overallpath2015)
+        for item in overall_data_2015[1:]:
+            assert item[1] == "N" or item[1][0] == "+" or item[1][0] == "-" or type(int(item[1])) == int 
+            if item[1][0] == "+" or item[1][0] == "-":
+                assert type(int(item[1][1:])) == int
+
+        path2017 = "data/raw_data/ao3_2017/raw_ao3_2017_data.txt"
+        data_2017 = split_raw_data_2015_to_2019(path2017)
+        for item in data_2017[1:]:
+            assert item[1] == "N" or item[1][0] == "+" or item[1][0] == "-" or type(int(item[1])) == int 
+            if item[1][0] == "+" or item[1][0] == "-":
+                assert type(int(item[1][1:])) == int
+
+    

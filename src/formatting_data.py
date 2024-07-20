@@ -112,7 +112,7 @@ def split_raw_data_2015_to_2019(filepath: str):
         #2016 was the first year of yearly data, so it doesn't have a "change" column yet
 
         column_list = []
-        column_list.extend(data_list[0][:3])
+        column_list.extend(data_list[0][:4])
 
         new_works = ""
         for item in data_list[0][4:6]:
@@ -133,6 +133,30 @@ def split_raw_data_2015_to_2019(filepath: str):
 
             temp_list.extend(row[-4:])
             new_list.append(temp_list)
+    elif "data.txt" in filepath and "2016" in filepath:
+        #doesn't have a change column yet
+        column_list = []
+        column_list.extend(data_list[0][:3])
+
+        new_works = ""
+        for item in data_list[0][3:5]:
+            new_works += " " + item
+        column_list.append(new_works[1:])
+
+        column_list.extend(data_list[0][-3:])
+        new_list.append(column_list)
+
+        for row in data_list[1:]:
+            temp_list = []
+            temp_list.append(row[0])
+
+            pairings_and_fandoms = ""
+            for item in row[1:-4]:
+                pairings_and_fandoms += " " + item
+            temp_list.append(pairings_and_fandoms[1:])
+
+            temp_list.extend(row[-4:])
+            new_list.append(temp_list)
     elif "femslash" in filepath:
         new_list.append(data_list[0])
         for row in data_list[1:]:
@@ -147,7 +171,18 @@ def split_raw_data_2015_to_2019(filepath: str):
             temp_list.extend(row[-2:])
             new_list.append(temp_list)
     elif "overall" in filepath:
-        new_list.append(data_list[0])
+
+        column_list = []
+        column_list.extend(data_list[0][:2])
+
+        pairing_tag = ""
+        for item in data_list[0][2:4]:
+            pairing_tag += " " + item
+        column_list.append(pairing_tag[1:])
+
+        column_list.extend(data_list[0][-4:])
+        new_list.append(column_list)
+
         for row in data_list[1:]:
             temp_list = []
             temp_list.extend(row[:2])
@@ -160,15 +195,14 @@ def split_raw_data_2015_to_2019(filepath: str):
             temp_list.extend(row[-3:])
             new_list.append(temp_list)
 
-    print(new_list)
     return new_list
 
-#   -2013 overall & both 2014 sets have " - " separators, so should be easier to deal with!
-#       (the other 2013 ones are 1 value per row, so don't need value separating)
 
 #these should be correct for 2014-2019
 tag_info = {
-    "race_combo_tags": ["White", "Whi/POC", "POC", "Whi/Amb", "Ambig", "Amb/POC"],
+    "race_combo_tags": [
+            "White", "Whi/POC", "POC", "Whi/Amb", "Ambig", "Amb/POC", "Amb/Whi", "POC/Whi", "POC/Amb"
+            ],
         #the interracial ones seem to not always align with the order of characters they refer to
         #2013 overall and 2014-2015 femslash sets weren't tracking this yet
     "type_tags": ["M/M", "F/F", "F/M", "Other", "Gen"]
