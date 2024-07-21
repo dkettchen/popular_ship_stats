@@ -1,4 +1,5 @@
 from re import split
+from json import load
 
 # function that splits rows into individual values
 def split_raw_data_2013_2014_and_2020_to_2023(filepath: str):
@@ -182,38 +183,88 @@ def split_raw_data_2015_to_2019(filepath: str):
 
     return new_list
 
-
-#TODO: implement splitting pairings from their fandoms!
 # a function to comb through the pairing-fandom values and split them apart appropriately
     #I'm seeing a highly unfortunate scenario where we have to manually copy out all the fandoms 
     # and put em in a variable to check against rip
+        # update: it was fine
 def split_pairings_from_fandoms(data_list):
+    """
+    takes output list of split_raw_data_2015_to_2019 and splits the pairing-fandom value into
+    a pairing & a fandom value 
+
+    returns a list that matches the split_raw_data_2013_2014_and_2020_to_2023 output format
+    """
+
     # make fandom list
         #we made a function for it! so we can access the files we get out of that!
+    with open("data/reference_and_test_files/all_fandoms_list.json", "r") as json_file:
+        fandom_dict = load(json_file)
+
+    fandom_list = fandom_dict["all_fandoms"]
 
     # make new list
+    separated_list = []
     # append first row to new list
+    separated_list.append(data_list[0])
+
+    for i in range(len(data_list[1])):
+        if " " in data_list[1][i]:
+            combo_index = i
 
     # for each row (except first)
+    for row in data_list[1:]:
         # make new row list
+        new_row = []
 
         # append first x values until pairing/fandom value to new row list
+        new_row.extend(row[:combo_index])
 
         # separate & append pairing & fandom value
+        found_fandom = False
+        value_to_be_separated = row[combo_index]
             # iterate through fandom list
+        for fandom in fandom_list:
             # if fandom in value, split it at relevant spot
+            if fandom in value_to_be_separated:
+                if fandom == "Thor (Movies)":
+                    split_values = split(r" Thor \(Movies\)", value_to_be_separated)
+                elif fandom == "Loki (TV 2021)":
+                    split_values = split(r" Loki \(TV 2021\)", value_to_be_separated)
+                elif fandom == "Venom (Movie 2018)":
+                    split_values = split(r" Venom \(Movie 2018\)", value_to_be_separated)
+                elif fandom == "Maleficent (2014)":
+                    split_values = split(r" Maleficent \(2014\)", value_to_be_separated)
+                elif fandom == "Kim Possible (Cartoon)":
+                    split_values = split(r" Kim Possible \(Cartoon\)", value_to_be_separated)
+                elif fandom == "James Bond (Craig movies)":
+                    split_values = split(r" James Bond \(Craig movies\)", value_to_be_separated)
+                elif fandom == "Adam Lambert (Musician)":
+                    split_values = split(r" Adam Lambert \(Musician\)", value_to_be_separated)
+                else: split_values = split(r" " + fandom, value_to_be_separated)
+                white_space_index = len(split_values[0])
+                separated_values = [
+                    value_to_be_separated[:white_space_index], 
+                    value_to_be_separated[white_space_index + 1:]
+                    ]
+                # append correctly split values to new row list
+                new_row.extend(separated_values)
+                found_fandom = fandom
+
             # otherwise print row so I can see which fandom is missing or misspellt & fix
+        if not found_fandom:
+            new_row.extend([" ", " "])
+            print(value_to_be_separated)
                 #this means we'll have to check through ALL the relevant data sets until 
                 # we've got the full list smh
                 #-> get starting values from newer data sets & add & change as needed
-            # append correctly split values to new row list
-        
+
         # append remaining values to new row list
+        new_row.extend(row[combo_index + 1:])
 
         # append new row list to new list
+        separated_list.append(new_row)
 
-
-    pass
+    return separated_list
 
 
 # a function that takes the data_list format_raw_data func spits out and separates the pairings

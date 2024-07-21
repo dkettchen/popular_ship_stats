@@ -40,10 +40,8 @@ def get_2020_to_2023_raw_fandom_data(filepath):
     (eg 'Law & Order' and 'Law & Order: SVU' will be listed as a single 'Law & Order' value)
 
     it also removes any indicated property type 
-    (eg 'Call of Duty (Video Games)' will be listed as 'Call of Duty'),
-    author name(s) (eg 'Lockwood & Co. - Jonathan Stroud' will be listed as 'Lockwood & Co'),
-    and original language version where a translation is given 
-    (eg '文豪ストレイドッグス | Bungou Stray Dogs' will be listed as 'Bungou Stray Dogs')
+    (eg 'Call of Duty (Video Games)' will be listed as 'Call of Duty'), and
+    author name(s) (eg 'Lockwood & Co. - Jonathan Stroud' will be listed as 'Lockwood & Co')
     """
     data_list = separate_pairings(
         split_raw_data_2013_2014_and_2020_to_2023(filepath)
@@ -57,10 +55,10 @@ def get_2020_to_2023_raw_fandom_data(filepath):
             # getting rid of property type & year info
             split_value_1 = split(r" \(", fandom)
             fandom = split_value_1[0]
-        if " | " in fandom:
-            # getting rid of as many foreign language characters as possible
-            split_value_4 = split(r" \| ", fandom) 
-            fandom = split_value_4[-1]
+        # if " | " in fandom:
+        #     # getting rid of as many foreign language characters as possible
+        #     split_value_4 = split(r" \| ", fandom) 
+        #     fandom = split_value_4[-1]
         if " - " in fandom:
             # getting rid of author names & "all media types"
             split_value_2 = split(r" - ", fandom)
@@ -69,6 +67,14 @@ def get_2020_to_2023_raw_fandom_data(filepath):
             # getting rid of sub titles
             split_value_3 = split(r":", fandom)
             fandom = split_value_3[0]
+        if fandom == "Supernatural RPF":
+            fandom = "Supernatural"
+        if fandom == "Thor":
+            fandom = "Thor (Movies)"
+        if fandom == "Loki":
+            fandom = "Loki (TV 2021)"
+        if fandom == "James Bond":
+            fandom = "James Bond (Craig movies)"
 
         new_list.append(fandom)
 
@@ -118,7 +124,26 @@ def run_functions_to_get_all_recent_fandoms():
             get_2020_to_2023_raw_fandom_data(path)
     get_all_2020_to_2023_fandoms()
 
+def update_fandom_list_with_missing_fandoms():
 
+    with open("data/reference_and_test_files/all_fandoms_2020_to_2023.json", "r") as recent_fandoms:
+        recent_fandoms_dict = load(recent_fandoms)
+    with open("data/reference_and_test_files/missing_fandoms.json", "r") as missing_fandoms:
+        missing_fandoms_dict = load(missing_fandoms)
+
+    new_list = []
+    new_list.extend(recent_fandoms_dict["2020-2023_fandoms"])
+    new_list.extend(missing_fandoms_dict["missing_fandoms"])
+    #this currently only appends the values as I've put them in, 
+    # do I wanna manually format them or write a func?
+        #as soon as I typed that I was like fuck writing another function it's fine x'D
+        #update: I have manually formatted the ones that were in there so far
+
+    new_list = sorted(list(set(new_list)))
+    output_dict = {"all_fandoms": new_list}
+
+    with open("data/reference_and_test_files/all_fandoms_list.json", "w") as new_json_file:
+        dump(output_dict, new_json_file, indent=4)
 
 #finally:
     #run all the functions in order, clean, format & extract data into new files for each filepath
@@ -134,4 +159,6 @@ def run_functions_to_get_all_recent_fandoms():
 
 
 if __name__ == "__main__":
+    #run_functions_to_get_all_recent_fandoms()
+    update_fandom_list_with_missing_fandoms()
     pass

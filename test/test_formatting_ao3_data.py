@@ -1,4 +1,8 @@
-from formatting_ao3_data import split_raw_data_2013_2014_and_2020_to_2023, separate_pairings, split_raw_data_2015_to_2019
+from src.formatting_ao3_data import split_raw_data_2013_2014_and_2020_to_2023, \
+                                separate_pairings, \
+                                split_raw_data_2015_to_2019, \
+                                split_pairings_from_fandoms
+from src.get_file_paths import find_paths
 
 
 class TestSplitRecentAndOldDataSets:
@@ -593,3 +597,74 @@ class TestSplitMiddleDataSets:
 
 
 #gotta test separate pairings from fandoms func
+class TestSplitPairingsFandoms:
+    def test_fandoms_does_not_mutate_input(self):
+        input_list = split_raw_data_2015_to_2019("data/raw_data/ao3_2017/raw_ao3_2017_data.txt")
+        split_pairings_from_fandoms(input_list)
+        assert input_list == split_raw_data_2015_to_2019("data/raw_data/ao3_2017/raw_ao3_2017_data.txt")
+
+    def test_fandoms_returns_list(self):
+        input_list = split_raw_data_2015_to_2019("data/raw_data/ao3_2017/raw_ao3_2017_data.txt")
+        assert type(split_pairings_from_fandoms(input_list)) == list
+
+    def test_fandoms_returns_nested_list(self):
+        input_list = split_raw_data_2015_to_2019("data/raw_data/ao3_2017/raw_ao3_2017_data.txt")
+        new_list = split_pairings_from_fandoms(input_list)
+        assert len(new_list) > 0
+        for item in new_list:
+            assert type(item) == list
+        
+    def test_fandoms_returns_list_of_same_length_as_input(self):
+        input_list = split_raw_data_2015_to_2019("data/raw_data/ao3_2017/raw_ao3_2017_data.txt")
+        new_list = split_pairings_from_fandoms(input_list)
+        assert len(new_list) == len(input_list)
+
+    def test_fandoms_returns_rows_of_number_of_columns(self):
+        input_list = split_raw_data_2015_to_2019("data/raw_data/ao3_2017/raw_ao3_2017_data.txt")
+        new_list = split_pairings_from_fandoms(input_list)
+        for row in new_list:
+            assert len(row) == len(new_list[0])
+
+    def test_fandom_returns_non_pairing_non_fandom_values_unchanged(self):
+        input_list = split_raw_data_2015_to_2019("data/raw_data/ao3_2017/raw_ao3_2017_data.txt")
+        new_list = split_pairings_from_fandoms(input_list)
+        index_list = [0, 1, -4, -3, -2, -1]
+        for row in range(1, len(new_list)):
+            for i in index_list:
+                assert new_list[row][i] == input_list[row][i]
+    
+    def test_fandom_returns_separated_pairing_and_fandom_values(self):
+        all_raw_data = find_paths("data/raw_data/")
+        relevant_paths = [
+            path for path in all_raw_data \
+            if "2016_data" not in path \
+            and ("2015" in path \
+            or "2016" in path \
+            or "2017" in path \
+            or "2019" in path) \
+                ]
+        for path in relevant_paths: # ones with two preceding values
+            
+            input_list1 = split_raw_data_2015_to_2019(path)
+            new_list1 = split_pairings_from_fandoms(input_list1)
+            for row in range(1, len(new_list1)):
+                assert new_list1[row][2] in input_list1[row][2]
+                assert new_list1[row][3] in input_list1[row][2]
+                # print(">>>" + str(input_list1[row]) + " " + path)
+                assert new_list1[row][2] + " " + new_list1[row][3] == input_list1[row][2]
+        
+        # the only one with only one preceding value
+        input_list3 = split_raw_data_2015_to_2019("data/raw_data/ao3_2016/raw_ao3_2016_data.txt")
+        new_list3 = split_pairings_from_fandoms(input_list3)
+        for row in range(1, len(new_list3)):
+            assert new_list3[row][1] in input_list3[row][1]
+            assert new_list3[row][2] in input_list3[row][1]
+            assert new_list3[row][1] + " " + new_list3[row][2] == input_list3[row][1]
+
+#TODO:       
+    #some femslash ranking is showing up as not having separated out number values after the pairing-fandom value
+        # ex Aurora/Maleficent Maleficent (2014) 199 2014
+        # -> figure out which & why
+    #continue testing this function & adding robustness w some of the other data sets to some of the tests
+    #figure out if separate pairings will now work on the 2015-2019 data sets & add robustness to that test suite
+    #separate tests out by function? one file each? idk
