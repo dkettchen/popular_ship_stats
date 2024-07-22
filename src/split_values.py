@@ -180,17 +180,19 @@ def split_raw_data_2015_to_2019(filepath: str):
 
             new_list.append(temp_list)
     elif "overall" in filepath:
+        if "2016" in filepath or "2015" in filepath:
+            column_list = []
+            column_list.extend(data_list[0][:2])
 
-        column_list = []
-        column_list.extend(data_list[0][:2])
+            pairing_tag = ""
+            for item in data_list[0][2:4]:
+                pairing_tag += " " + item
+            column_list.append(pairing_tag[1:])
 
-        pairing_tag = ""
-        for item in data_list[0][2:4]:
-            pairing_tag += " " + item
-        column_list.append(pairing_tag[1:])
+            column_list.extend(data_list[0][-4:])
+            new_list.append(column_list)
 
-        column_list.extend(data_list[0][-4:])
-        new_list.append(column_list)
+        else: new_list.append(data_list[0])
 
         for row in data_list[1:]:
             temp_list = []

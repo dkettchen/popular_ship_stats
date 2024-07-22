@@ -1,5 +1,6 @@
 from src.separate_values import separate_pairings
-from src.split_values import split_raw_data_2013_2014_and_2020_to_2023
+from src.split_values import split_raw_data_2013_2014_and_2020_to_2023, split_raw_data_2015_to_2019, split_pairings_from_fandoms
+from src.get_file_paths import find_paths
 
 class TestSeparatePairings:
     #testing output list is in correct format and we didn't lose any data
@@ -58,76 +59,81 @@ class TestSeparatePairings:
             assert len(new_list[i]) == len(list2023[i])
 
     def test_separate_returns_row_lists_of_uniform_length(self):
-        path2023 = "data/raw_data/ao3_2023/raw_ao3_2023_data.txt"
-        list2023 = split_raw_data_2013_2014_and_2020_to_2023(path2023)
-        new_list = separate_pairings(list2023)
-        for i in range(1, len(new_list)):
-            assert len(new_list[i]) == len(new_list[0])
+        all_raw_data = find_paths("data/raw_data/")
+        early_paths = [
+            path for path in all_raw_data \
+            if "2013_overall" in path \
+            or "2014" in path
+                ]
+        middle_paths = [
+            path for path in all_raw_data \
+            if "2015" in path \
+            or "2016" in path \
+            or "2017" in path \
+            or "2019" in path
+                ]
+        recent_paths = [path for path in all_raw_data if "202" in path]
 
-        femslashpath = "data/raw_data/ao3_2023/raw_ao3_2023_femslash_ranking.txt"
-        fem_data = split_raw_data_2013_2014_and_2020_to_2023(femslashpath)
-        new_fem = separate_pairings(fem_data)
-        for i in range(1, len(new_fem)):
-            assert len(new_fem[i]) == len(new_fem[0])
+        for path in recent_paths:
+            old_list = split_raw_data_2013_2014_and_2020_to_2023(path)
+            new_list = separate_pairings(old_list)
+            for row in new_list:
+                assert len(row) == len(new_list[0])
 
-        old2014path = "data/raw_data/ao3_2014/raw_ao3_2014_overall_ranking.txt"
-        old_data = split_raw_data_2013_2014_and_2020_to_2023(old2014path)
-        new_old = separate_pairings(old_data)
-        for i in range(1, len(new_old)):
-            assert len(new_old[i]) == len(new_old[0])
+        for path in early_paths:
+            old_list1 = split_raw_data_2013_2014_and_2020_to_2023(path)
+            new_list1 = separate_pairings(old_list1)
+            for row in new_list1:
+                assert len(row) == len(new_list1[0])
 
-        old2014fempath = "data/raw_data/ao3_2014/raw_ao3_2014_femslash_ranking.txt"
-        old_fem_data = split_raw_data_2013_2014_and_2020_to_2023(old2014fempath)
-        new_old_fem = separate_pairings(old_fem_data)
-        for i in range(1, len(new_old_fem)):
-            assert len(new_old_fem[i]) == len(new_old_fem[0])
-
-        old2013path = "data/raw_data/ao3_2013/raw_ao3_2013_overall_ranking.txt"
-        og_data = split_raw_data_2013_2014_and_2020_to_2023(old2013path)
-        new_og_data = separate_pairings(og_data)
-        for i in range(1, len(new_og_data)):
-            assert len(new_og_data[i]) == len(new_og_data[0])
+        for path in middle_paths:
+            old_list_unseparated = split_raw_data_2015_to_2019(path)
+            old_list2 = split_pairings_from_fandoms(old_list_unseparated)
+            new_list2 = separate_pairings(old_list2)
+            for row in new_list2:
+                assert len(row) == len(new_list2[0])
 
     def test_separate_returns_items_that_did_not_contain_relevant_characters_unchanged(self):
-        path2023 = "data/raw_data/ao3_2023/raw_ao3_2023_data.txt"
-        list2023 = split_raw_data_2013_2014_and_2020_to_2023(path2023)
-        new_list = separate_pairings(list2023)
-        index_list = [0,1,3,4,5]
-        for row in range(1, len(new_list)):
-            for i in index_list:
-                assert new_list[row][i] == list2023[row][i]
+        all_raw_data = find_paths("data/raw_data/")
+        early_paths = [
+            path for path in all_raw_data \
+            if "2013_overall" in path \
+            or "2014" in path
+                ]
+        middle_paths = [
+            path for path in all_raw_data \
+            if "2015" in path \
+            or "2016" in path \
+            or "2017" in path \
+            or "2019" in path
+                ]
+        recent_paths = [path for path in all_raw_data if "202" in path]
+        columns_to_exclude = ["Ship", "Pairing", "Relationship", "Type", "Race"]
 
-        femslashpath = "data/raw_data/ao3_2023/raw_ao3_2023_femslash_ranking.txt"
-        fem_data = split_raw_data_2013_2014_and_2020_to_2023(femslashpath)
-        new_fem = separate_pairings(fem_data)
-        fem_index_list = [0,1,3,4]
-        for row in range(1, len(new_fem)):
-            for i in fem_index_list:
-                assert new_fem[row][i] == fem_data[row][i]
+        for path in recent_paths:
+            old_list = split_raw_data_2013_2014_and_2020_to_2023(path)
+            new_list = separate_pairings(old_list)
+            for row in range(1, len(new_list)):
+                for i in range(len(path[0])):
+                    if path[0][i] not in columns_to_exclude:
+                        assert new_list[row][i] == old_list[row][i]
 
-        old2014path = "data/raw_data/ao3_2014/raw_ao3_2014_overall_ranking.txt"
-        old_data = split_raw_data_2013_2014_and_2020_to_2023(old2014path)
-        new_old = separate_pairings(old_data)
-        index_list_2014 = [0,1,3,5,6]
-        for row in range(1, len(new_old)):
-            for i in index_list_2014:
-                assert new_old[row][i] == old_data[row][i]
+        for path in early_paths:
+            old_list1 = split_raw_data_2013_2014_and_2020_to_2023(path)
+            new_list1 = separate_pairings(old_list1)
+            for row in range(1, len(new_list1)):
+                for i in range(len(path[0])):
+                    if path[0][i] not in columns_to_exclude:
+                        assert new_list1[row][i] == old_list1[row][i]
 
-        old2014fempath = "data/raw_data/ao3_2014/raw_ao3_2014_femslash_ranking.txt"
-        old_fem_data = split_raw_data_2013_2014_and_2020_to_2023(old2014fempath)
-        new_old_fem = separate_pairings(old_fem_data)
-        fem_index_list_2014 = [0,2,3]
-        for row in range(1, len(new_old_fem)):
-            for i in fem_index_list_2014:
-                assert new_old_fem[row][i] == old_fem_data[row][i]
-
-        old2013path = "data/raw_data/ao3_2013/raw_ao3_2013_overall_ranking.txt"
-        og_data = split_raw_data_2013_2014_and_2020_to_2023(old2013path)
-        new_og_data = separate_pairings(og_data)
-        index_list_2013 = [0,2,4]
-        for row in range(1, len(new_og_data)):
-            for i in index_list_2013:
-                assert new_og_data[row][i] == og_data[row][i]
+        for path in middle_paths:
+            old_list_unseparated = split_raw_data_2015_to_2019(path)
+            old_list2 = split_pairings_from_fandoms(old_list_unseparated)
+            new_list2 = separate_pairings(old_list2)
+            for row in range(1, len(new_list2)):
+                for i in range(len(path[0])):
+                    if path[0][i] not in columns_to_exclude:
+                        assert new_list2[row][i] == old_list2[row][i]
     
     #testing item modification was successful
     def test_separate_returns_separated_items_as_lists(self):
@@ -245,4 +251,5 @@ class TestSeparatePairings:
             assert new_list[i][-1][1] == list2023[i][8]
 
 #TODO:       
-    #figure out if separate pairings will now work on the 2015-2019 data sets & add robustness to that test suite
+    #figure out if separate pairings will now work on the 2015-2019 data sets 
+    # & add robustness to that test suite

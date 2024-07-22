@@ -21,6 +21,7 @@ def separate_pairings(data_list):
             # "Relationship" (2021 onward) or "Pairing" (2014-2020) or "Ship" (2013 only)
         if data_list[0][index] == "Relationship" \
             or data_list[0][index] == "Pairing" \
+            or data_list[0][index] == "Pairing Tag" \
             or data_list[0][index] == "Ship":
             pairing_index = index
 
@@ -53,7 +54,9 @@ def separate_pairings(data_list):
         
             up_to_pairing = False
         
-        if data_list[0][-2] == "Race" or "Race" not in data_list[0]: #append remaining values
+        if data_list[0][-2] == "Race" \
+        or "Race" not in data_list[0] \
+        or len(data_list[0]) == len(row): #append remaining values
             if up_to_pairing:
                 temp_list.extend(row[pairing_index + 1 :])
             else: # if up to type
