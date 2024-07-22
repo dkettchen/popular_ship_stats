@@ -1,5 +1,4 @@
-from formatting_ao3_data import find_paths
-
+from src.get_file_paths import find_paths
 
 class TestFindPaths:
     def test_find_returns_list(self):

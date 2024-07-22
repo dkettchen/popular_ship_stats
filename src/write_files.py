@@ -1,7 +1,8 @@
 from re import split
 from csv import writer
 from json import dump, load
-from formatting_ao3_data import separate_pairings, split_raw_data_2013_2014_and_2020_to_2023
+from split_values import split_raw_data_2013_2014_and_2020_to_2023
+from separate_values import separate_pairings
 from get_file_paths import find_paths
 
 #I'm not testing for file writing ones 
