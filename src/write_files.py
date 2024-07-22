@@ -1,7 +1,7 @@
 from re import split
 from csv import writer
 from json import dump, load
-from split_values import split_raw_data_2013_2014_and_2020_to_2023
+from split_values import split_raw_data_2013_2014_and_2020_to_2023, split_raw_data_2015_to_2019
 from separate_values import separate_pairings
 from get_file_paths import find_paths
 
@@ -76,6 +76,29 @@ def get_2020_to_2023_raw_fandom_data(filepath):
             fandom = "Loki (TV 2021)"
         if fandom == "James Bond":
             fandom = "James Bond (Craig movies)"
+        if fandom == "Mass Effect Trilogy":
+            fandom = "Mass Effect"
+        if fandom == "Dragon Age II":
+            fandom = "Dragon Age"
+        if fandom == "Star Wars Sequel Trilogy":
+            fandom = "Star Wars"
+        if fandom == "RuPaul's Drag Race RPF":
+            fandom = "RuPaul's Drag Race"
+        if fandom == "Carol":
+            fandom = "Carol (2015)"
+        if fandom == "魔道祖师" or fandom == "Módào Zǔshī":
+            fandom = "魔道祖师"
+
+        # the untamed boys are giving me trouble of all ppl smh
+        #           "M\u00f3d\u00e0o Z\u01d4sh\u012b",
+        #           "\u9648\u60c5\u4ee4 | The Untamed",
+        #           "\u9b54\u9053\u7956\u5e08" <- this is the correct one for the book title
+        # 魔道祖师 - 墨香铜臭 |', 'Módào Zǔshī - Mòxiāng Tóngxiù
+
+        # 魔道祖师 - 墨香铜臭 | Módào Zǔshī - Mòxiāng Tóngxiù
+        # 陈情令 | The Untamed 
+        # WHY IS IT DIFFERENT SYMBOLS AAAAAH -> these are from the same data set also
+
 
         new_list.append(fandom)
 
@@ -146,20 +169,58 @@ def update_fandom_list_with_missing_fandoms():
     with open("data/reference_and_test_files/all_fandoms_list.json", "w") as new_json_file:
         dump(output_dict, new_json_file, indent=4)
 
+
+def get_all_column_names():
+    """
+    extracts column names from all raw_data sets
+
+    returns a dict with keys named after the data set and a list of the corresponding column names
+    """
+    #get file paths
+    all_paths = find_paths("data/raw_data/")
+
+    output_dict = {}
+
+    for path in all_paths:
+    #run split functions on all data sets
+        if "2013_overall_ranking" in path \
+        or "2014" in path \
+        or "202" in path: # all relevant 2013, 2014, and 2020-2023 data sets
+            split_list = split_raw_data_2013_2014_and_2020_to_2023(path)
+        elif "2015" in path \
+        or "2016" in path \
+        or "2017" in path \
+        or "2019" in path: # all 2015-2019 data sets
+            split_list = split_raw_data_2015_to_2019(path)
+        else: continue #pesky 2013 non-ranking files need to be stopped smh
+
+    #copy first row into a dict w data set names as keys
+        if not split_list[0][-1] == "":
+            output_dict[path[27:-4]] = split_list[0]
+        else: output_dict[path[27:-4]] = split_list[0][:-1]
+
+    keys = list(output_dict.keys())
+    keys.sort()
+    sorted_dict = {i: output_dict[i] for i in keys}
+
+    with open("data/reference_and_test_files/all_data_set_column_names.json", "w") as column_file:
+        dump(sorted_dict, column_file, indent=4)
+
+
+
 #finally:
     #run all the functions in order, clean, format & extract data into new files for each filepath
         # format evolved over years, so we need to run correct functions for correct filepaths
-            # eg separated by tabs is the format since 2020
-            # 2023 filepath = "data/raw_data/ao3_2023/raw_ao3_2023_data.txt"
-            # sets before 2020 will need a different split function
+            # 2013, 2014, 2020-2023 have regex-able spacer characters
+            # 2015-2019 sets will need a different split function
         #create list of all file paths
         #cycle through file path strings, to insert into relevant split function
         #put split function output into separate function
-        #put separate func output into white space remover func
-        #put remover func output into format/file writer function
+        #put separate func output into format/file writer function
 
 
 if __name__ == "__main__":
-    #run_functions_to_get_all_recent_fandoms()
+    run_functions_to_get_all_recent_fandoms()
     update_fandom_list_with_missing_fandoms()
+    
     pass

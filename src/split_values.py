@@ -144,17 +144,40 @@ def split_raw_data_2015_to_2019(filepath: str):
             temp_list.extend(row[-4:])
             new_list.append(temp_list)
     elif "femslash" in filepath:
-        new_list.append(data_list[0])
+        if "2015" in filepath:
+            new_list.append(data_list[0][:2])
+
+            pairing_tag_column = data_list[0][2] + " " + data_list[0][3]
+            new_list[0].append(pairing_tag_column)
+
+            new_list[0].extend(data_list[0][4:-2])
+
+            release_date_column = data_list[0][-2] + " " + data_list[0][-1]
+            new_list[0].append(release_date_column)
+            
+        else: new_list.append(data_list[0])
+
         for row in data_list[1:]:
             temp_list = []
             temp_list.extend(row[:2])
 
             pairings_and_fandoms = ""
-            for item in row[2:-2]:
-                pairings_and_fandoms += " " + item
-            temp_list.append(pairings_and_fandoms[1:])
+            if "2015" in filepath:
+                for item in row[2:-4]:
+                    pairings_and_fandoms += " " + item
 
-            temp_list.extend(row[-2:])
+                temp_list.append(pairings_and_fandoms[1:])
+                temp_list.append(row[-4])
+                
+                release_date = row[-3] + " " + row[-2] + " " + row[-1]
+                temp_list.append(release_date)
+
+            else:
+                for item in row[2:-2]:
+                    pairings_and_fandoms += " " + item
+                temp_list.append(pairings_and_fandoms[1:])
+                temp_list.extend(row[-2:])
+
             new_list.append(temp_list)
     elif "overall" in filepath:
 
@@ -208,7 +231,8 @@ def split_pairings_from_fandoms(data_list):
     separated_list.append(data_list[0])
 
     for i in range(len(data_list[1])):
-        if " " in data_list[1][i]:
+        if "Release Date" in data_list[0]: combo_index = 2
+        elif " " in data_list[2][i]:
             combo_index = i
 
     # for each row (except first)
@@ -240,6 +264,8 @@ def split_pairings_from_fandoms(data_list):
                     split_values = split(r" James Bond \(Craig movies\)", value_to_be_separated)
                 elif fandom == "Adam Lambert (Musician)":
                     split_values = split(r" Adam Lambert \(Musician\)", value_to_be_separated)
+                elif fandom == "Carol (2015)":
+                    split_values = split(r" Carol \(2015\)", value_to_be_separated)
                 else: split_values = split(r" " + fandom, value_to_be_separated)
                 white_space_index = len(split_values[0])
                 separated_values = [

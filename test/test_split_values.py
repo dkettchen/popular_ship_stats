@@ -375,18 +375,37 @@ class TestSplitPairingsFandoms:
         assert len(new_list) == len(input_list)
 
     def test_fandoms_returns_rows_of_number_of_columns(self):
-        input_list = split_raw_data_2015_to_2019("data/raw_data/ao3_2017/raw_ao3_2017_data.txt")
-        new_list = split_pairings_from_fandoms(input_list)
-        for row in new_list:
-            assert len(row) == len(new_list[0])
+        all_raw_data = find_paths("data/raw_data/")
+        relevant_paths = [
+            path for path in all_raw_data \
+            if "2015" in path \
+            or "2016" in path \
+            or "2017" in path \
+            or "2019" in path \
+                ]
+        for path in relevant_paths:
+            input_list = split_raw_data_2015_to_2019(path)
+            new_list = split_pairings_from_fandoms(input_list)
+            for row in new_list:
+                assert len(row) == len(new_list[0])
 
     def test_fandom_returns_non_pairing_non_fandom_values_unchanged(self):
-        input_list = split_raw_data_2015_to_2019("data/raw_data/ao3_2017/raw_ao3_2017_data.txt")
-        new_list = split_pairings_from_fandoms(input_list)
-        index_list = [0, 1, -4, -3, -2, -1]
-        for row in range(1, len(new_list)):
-            for i in index_list:
-                assert new_list[row][i] == input_list[row][i]
+        all_raw_data = find_paths("data/raw_data/")
+        relevant_paths = [
+            path for path in all_raw_data \
+            if "2015" in path \
+            or "2016" in path \
+            or "2017" in path \
+            or "2019" in path \
+                ]
+        columns_to_exclude = ["Fandom", "Ship", "Pairing", "Relationship"]
+        for path in relevant_paths:
+            input_list = split_raw_data_2015_to_2019(path)
+            new_list = split_pairings_from_fandoms(input_list)
+            for row in range(1, len(new_list)):
+                for i in range(len(path[0])):
+                    if path[0][i] not in columns_to_exclude:
+                        assert new_list[row][i] == input_list[row][i]
     
     def test_fandom_returns_separated_pairing_and_fandom_values(self):
         all_raw_data = find_paths("data/raw_data/")
@@ -398,6 +417,7 @@ class TestSplitPairingsFandoms:
             or "2017" in path \
             or "2019" in path) \
                 ]
+
         for path in relevant_paths: # ones with two preceding values
             
             input_list1 = split_raw_data_2015_to_2019(path)
@@ -416,8 +436,3 @@ class TestSplitPairingsFandoms:
             assert new_list3[row][2] in input_list3[row][1]
             assert new_list3[row][1] + " " + new_list3[row][2] == input_list3[row][1]
 
-#TODO:       
-    #some femslash ranking is showing up as not having separated out number values after the pairing-fandom value
-        # ex Aurora/Maleficent Maleficent (2014) 199 2014
-        # -> figure out which & why
-    #continue testing this function & adding robustness w some of the other data sets to some of the tests
