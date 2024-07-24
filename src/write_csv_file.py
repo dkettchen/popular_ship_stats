@@ -22,5 +22,5 @@ def make_csv_file(clean_data: list, file_name: str):
         clean_writer.writerows(strings_list)
 
 if __name__ == "__main__":
-    make_csv_file()
+
     pass
