@@ -70,7 +70,8 @@ def split_raw_data_2013_2014_and_2020_to_2023(filepath: str):
             split_list = split(r"\s{3}", string[:-1])
 
         data_list.append(split_list) # nesting list
-
+    if data_list[0][-1] == "":
+        data_list[0] = data_list[0][:-1]
     return data_list
 
 # a variant of the above function that works for the remaining data sets' formatting:

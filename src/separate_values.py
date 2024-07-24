@@ -35,7 +35,10 @@ def separate_pairings(data_list):
         temp_list = row[:pairing_index]
 
         #split pairing item at relevant character
-        pairing_list = split(r"[\/&]", row[pairing_index])
+        if " & " in row[pairing_index]:
+            pairing_list = split(r" & ", row[pairing_index])
+        else:
+            pairing_list = split(r"[\/&]", row[pairing_index])
         #append to temp list
         temp_list.append(pairing_list)
 
