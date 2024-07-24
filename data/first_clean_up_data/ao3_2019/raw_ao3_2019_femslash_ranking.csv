@@ -1,0 +1,101 @@
+Rank,Change,Pairing,Fandom,Works,Race
+1,0,"['Evil Queen | Regina Mills', 'Emma Swan']",Once Upon a Time (TV),11388,Whi/POC
+2,0,"['Clarke Griffin', 'Lexa']",The 100 (TV),10838,White
+3,1,"['Kara Danvers', 'Lena Luthor']",Supergirl (TV 2015),9460,White
+4,3,"['Alex Danvers', 'Maggie Sawyer']",Supergirl (TV 2015),5231,Whi/POC
+5,-2,"['Laura Hollis', 'Carmilla Karnstein']",Carmilla (Web Series),5094,White
+6,-1,"['Rose Lalonde', 'Kanaya Maryam']",Homestuck,4174,Ambig
+7,-1,"['Korra', 'Asami Sato']",Avatar: Legend of Korra,4106,POC
+8,15,"['Waverly Earp', 'Nicole Haught']",Wynonna Earp (TV),3685,White
+9,-1,"['Alphys', 'Undyne (Undertale)']",Undertale (Video Game),3334,Ambig
+10,11,"['Blake Belladonna', 'Yang Xiao Long']",RWBY,2987,POC
+11,5,"['Chloe Beale', 'Beca Mitchell']",Pitch Perfect (Movies),2985,White
+12,-3,"['Root | Samantha Groves', 'Sameen Shaw']",Person of Interest (TV),2817,Whi/POC
+13,-1,"['Kara Danvers', 'Cat Grant']",Supergirl (TV 2015),2734,White
+14,-4,"['Krista Lenz | Historia Reiss', 'Ymir']",Shingeki no Kyojin | Attack on Titan,2645,White
+15,10,"['Ruby Rose', 'Weiss Schnee']",RWBY,2422,Whi/POC
+16,2,"['Fareeha ""Pharah"" Amari', 'Angela ""Mercy"" Ziegler']",Overwatch (Video Game),2376,Whi/POC
+17,-6,"['Santana Lopez', 'Brittany S. Pierce']",Glee,2369,Whi/POC
+18,-5,"['Peggy Carter', 'Angie Martinelli']",Agent Carter (TV),2106,White
+19,8,"['Serena Campbell', 'Bernie Wolfe']",Holby City,2032,White
+20,2,"['Maxine ""Max"" Caulfield', 'Chloe Price']",Life Is Strange (Video Game),2030,White
+21,-7,"['Rachel Berry', 'Quinn Fabray']",Glee,1948,White
+22,N,"['Jirou Kyouka', 'Yaoyorozu Momo']",Boku no Hero Academia | My Hero Academia,1932,POC
+23,-8,"['Allison Argent', 'Lydia Martin']",Teen Wolf (TV),1818,White
+24,5,"['Lapis Lazuli', 'Peridot (Steven Universe)']",Steven Universe (Cartoon),1791,Ambig
+25,12,"['Miranda Priestly', 'Andrea Sachs']",The Devil Wears Prada (2006),1644,White
+26,N,"['Cheryl Blossom', 'Toni Topaz']",Riverdale (TV 2017),1640,Whi/POC
+27,-7,"['Jemma Simmons', 'Skye | Daisy Johnson']",Agents of S.H.I.E.L.D. (TV),1570,Whi/POC
+28,-11,"['Delphine Cormier', 'Cosima Niehaus']",Orphan Black (TV),1568,White
+29,N,"['Sara Lance', 'Ava Sharpe']",DC's Legends of Tomorrow (TV),1499,White
+30,-11,"['Myka Bering', 'Helena ""H. G."" Wells']",Warehouse 13,1490,White
+31,N,"['Asui Tsuyu', 'Uraraka Ochako']",Boku no Hero Academia | My Hero Academia,1440,POC
+32,16,"['Luna Lovegood', 'Ginny Weasley']",Harry Potter - J. K. Rowling,1412,White
+33,N,"['Adora', 'Catra (She-Ra)']",She-Ra and the Princesses of Power (2018),1382,Whi/POC
+34,-10,"['Erin Gilbert', 'Jillian Holtzmann']",Ghostbusters (2016),1343,White
+35,-9,"['Mikasa Ackerman', 'Annie Leonhart']",Shingeki no Kyojin | Attack on Titan,1322,Whi/POC
+36,-6,"['Anna', 'Elsa (Disney)']",Frozen (2013),1318,White
+37,3,"['Clary Fray', 'Isabelle Lightwood']",Shadowhunters (TV),1315,Whi/POC
+38,-10,"['Maura Isles', 'Jane Rizzoli']",Rizzoli & Isles,1259,White
+39,N,"['Lena ""Tracer"" Oxton', 'Widowmaker | Amélie Lacroix']",Overwatch (Video Game),1257,White
+40,43,"['Kimberly Hart', 'Trini']",Power Rangers (2017),1237,POC
+41,-9,"['Sansa Stark', 'Margaery Tyrell']",Game of Thrones (TV),1224,White
+42,-4,"['Female Shepard', ""Liara T'Soni""]",Mass Effect Trilogy,1164,Ambig
+43,N,"['Thirteenth Doctor', 'Yasmin Khan']",Doctor Who (2005),1072,Whi/POC
+44,-2,"['Maria Reynolds', 'Elizabeth ""Eliza"" Schuyler']",Hamilton – Miranda,1061,POC
+45,6,"['Anya', 'Raven Reyes']",The 100 (TV),1050,POC
+46,-15,"['Tara Maclay', 'Willow Rosenberg']",Buffy the Vampire Slayer (TV),1048,White
+47,-3,"['Pearl', 'Rose Quartz | Pink Diamond']",Steven Universe (Cartoon),1046,Ambig
+48,-12,"['Pepper Potts', 'Natasha Romanov']",The Avengers (Marvel Movies),1044,White
+49,-6,"['Maria Hill', 'Natasha Romanov']",Marvel Cinematic Universe,1038,White
+50,-16,"['Gwen', 'Morgana (Merlin)']",Merlin (TV),1016,Whi/POC
+51,1,"['Pamela Isley', 'Harleen Quinzel']",Batman - All Media Types,1013,White
+52,1,"['Alex Danvers', 'Kara Danvers']",Supergirl (TV 2015),993,White
+53,-7,"['Nyssa al Ghul', 'Sara Lance']",Arrow (TV 2012),977,Whi/POC
+54,-13,"['Pacifica Northwest', 'Mabel Pines']",Gravity Falls,972,White
+55,-10,"['Faith Lehane', 'Buffy Summers']",Buffy the Vampire Slayer (TV),970,White
+56,-17,"['Terezi Pyrope', 'Vriska Serket']",Homestuck,962,Ambig
+57,-10,"['Shimizu Kiyoko', 'Yachi Hitoka']",Haikyuu!!,945,POC
+58,-2,"['Astra', 'Alex Danvers']",Supergirl (TV 2015),934,White
+59,3,"['Betty Cooper', 'Veronica Lodge']",Riverdale (TV 2017),925,Whi/POC
+60,-27,"['Ashlyn Harris', 'Ali Krieger']",Women's Soccer RPF,924,White
+61,-26,"['Ruby', 'Sapphire (Steven Universe)']",Steven Universe (Cartoon),854,Ambig
+62,6,"['Mila Babicheva', 'Sara Crispino']",Yuri!!! on Ice (Anime),839,White
+63,2,"['Princess Bubblegum', 'Marceline']",Adventure Time,795,Ambig
+64,25,"['Carol Aird', 'Therese Belivet']",Carol (2015),788,White
+65,-1,"['Gabrielle', 'Xena']",Xena: Warrior Princess,781,White
+66=,-16,"['Amethyst', 'Pearl (Steven Universe)']",Steven Universe (Cartoon),773,Ambig
+66=,-17,"['Malia Tate', 'Kira Yukimura']",Teen Wolf (TV),773,Whi/POC
+68,N,"['Hermione Granger', 'Pansy Parkinson']",Harry Potter - J. K. Rowling,761,Whi/Amb
+69,-14,"['Female Hawke', 'Isabela']",Dragon Age II,750,Amb/POC
+70,N,"['Misty Day', 'Cordelia Foxx | Cordelia Goode']",American Horror Story,725,White
+71,-10,"['Maya Hart', 'Riley Matthews']",Girl Meets World,723,White
+72,-13,"['Charlie Bradbury', 'Jo Harvelle']",Supernatural,720,White
+73,N,"['Diana Cavendish', 'Atsuko ""Akko"" Kagari']",Little Witch Academia,711,Whi/POC
+74,N,"['Rachel Amber', 'Chloe Price']",Life Is Strange (Video Game),702,White
+75,-21,"['Leliana', 'Female Warden']",Dragon Age: Origins,697,Whi/Amb
+76,4,"['Ayase Eli', 'Toujou Nozomi']",Love Live! School Idol Project,692,POC
+77,-10,"['Kaiou Michiru', 'Tenoh Haruka']",Bishoujo Senshi Sailor Moon | Pretty Guardian Sailor Moon,688,POC
+78,-3,"['Camila Cabello', 'Lauren Jauregui']",Fifth Harmony (Band),673,POC
+79,-10,"['Jennifer ""JJ"" Jareau', 'Emily Prentiss']",Criminal Minds (US TV),658,White
+80,-17,"['Cosette Fauchelevent', 'Éponine Thénardier']",Les Misérables - All Media Types,657,Whi/Amb
+81,N,"['Emily', 'Lena ""Tracer"" Oxton']",Overwatch (Video Game),656,White
+82=,-25,"['Jane Crocker', 'Roxy Lalonde']",Homestuck,654,Ambig
+82=,-7,"['Tobin Heath', 'Christen Press']",Women's Soccer RPF,654,Whi/POC
+84,-2,"['Amethyst', 'Peridot (Steven Universe)']",Steven Universe (Cartoon),652,Ambig
+85,-27,"['Octavia Blake', 'Raven Reyes']",The 100 (TV),649,Whi/POC
+86,N,"['Trixie Mattel', 'Katya Zamolodchikova']",RuPaul's Drag Race RPF,648,Whi/POC
+87,N,"['Evie', 'Mal (Disney)']",Descendants (Disney Movies),647,Whi/POC
+88,N,"['Eve Polastri', 'Villanelle | Oksana Astankova']",Killing Eve (TV 2018),645,Whi/POC
+89,N,"['Kathryn Janeway', 'Seven of Nine']",Star Trek: Voyager,642,White
+90,N,"['Haruno Sakura', 'Yamanaka Ino']",Naruto,639,POC
+91,4,"['Nishikino Maki', 'Yazawa Nico']",Love Live! School Idol Project,628,POC
+92,N,"[""Moira O'Deorain"", 'Angela ""Mercy"" Ziegler']",Overwatch (Video Game),612,White
+93,-21,"['Female Inquisitor', 'Sera']",Dragon Age: Inquisition,591,Whi/Amb
+94,-34,"['Tobin Heath', 'Alex Morgan']",Women's Soccer RPF,589,White
+95,N,"['Charity Dingle', 'Vanessa Woodfield']",Emmerdale,584,White
+96,N,"['Carol Danvers', 'Maria Rambeau']",Captain Marvel (2019),582,Whi/POC
+97,-19,"['Dorothy Baum', 'Charlie Bradbury']",Supernatural,570,White
+98,N,"['Samantha ""Sam"" Arias', 'Alex Danvers']",Supergirl (TV 2015),568,Whi/POC
+99,N,"['Beauregard', 'Yasha (Critical Role)']",Critical Role (Web Series),565,Whi/POC
+100,N,"['Weiss Schnee', 'Yang Xiao Long']",RWBY,564,Whi/POC
