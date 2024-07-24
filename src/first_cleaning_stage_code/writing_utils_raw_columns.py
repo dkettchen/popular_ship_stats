@@ -1,6 +1,6 @@
 from json import dump
 from split_values import split_raw_data_2013_2014_and_2020_to_2023, split_raw_data_2015_to_2019
-from get_file_paths import find_paths
+from util_functions.get_file_paths import find_paths
 
 def get_all_column_names():
     """

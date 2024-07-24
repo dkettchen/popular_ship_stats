@@ -1,4 +1,4 @@
-from src.get_file_paths import find_paths
+from src.util_functions.get_file_paths import find_paths
 
 class TestFindPaths:
     def test_find_returns_list(self):

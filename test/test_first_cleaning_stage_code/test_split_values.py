@@ -1,8 +1,8 @@
-from src.split_values import split_raw_data_2013_2014_and_2020_to_2023, \
+from src.first_cleaning_stage_code.split_values import split_raw_data_2013_2014_and_2020_to_2023, \
                                 split_raw_data_2015_to_2019, \
                                 split_pairings_from_fandoms
 
-from src.get_file_paths import find_paths
+from src.util_functions.get_file_paths import find_paths
 
 
 class TestSplitRecentAndOldDataSets:

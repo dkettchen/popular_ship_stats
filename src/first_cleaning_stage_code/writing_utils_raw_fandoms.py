@@ -2,7 +2,7 @@ from re import split
 from json import dump, load
 from split_values import split_raw_data_2013_2014_and_2020_to_2023
 from separate_values import separate_pairings
-from get_file_paths import find_paths
+from util_functions.get_file_paths import find_paths
 
 # a function that retrieves lists of fandoms & makes them into json files for easier reference access
 def get_2020_to_2023_raw_fandom_data(filepath):

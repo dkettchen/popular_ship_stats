@@ -1,9 +1,15 @@
-from get_file_paths import find_paths
+from util_functions.get_file_paths import find_paths
 from split_values import split_raw_data_2013_2014_and_2020_to_2023, split_raw_data_2015_to_2019, split_pairings_from_fandoms
 from separate_values import separate_pairings
-from write_csv_file import make_csv_file
+from util_functions.write_csv_file import make_csv_file
 
 def run_cleaning_stage_1():
+    """
+    runs all code necessary to 
+    clean raw ao3 txt files in data/raw_data/, 
+    and write the cleaned data into csv files in data/first_clean_up_data/
+    """
+
     all_raw_data = find_paths("data/raw_data/")
     early_paths = [
         path for path in all_raw_data \

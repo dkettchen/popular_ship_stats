@@ -1,6 +1,6 @@
-from src.separate_values import separate_pairings
-from src.split_values import split_raw_data_2013_2014_and_2020_to_2023, split_raw_data_2015_to_2019, split_pairings_from_fandoms
-from src.get_file_paths import find_paths
+from src.first_cleaning_stage_code.separate_values import separate_pairings
+from src.first_cleaning_stage_code.split_values import split_raw_data_2013_2014_and_2020_to_2023, split_raw_data_2015_to_2019, split_pairings_from_fandoms
+from src.util_functions.get_file_paths import find_paths
 from string import whitespace
 
 #testing everything is correct after running functions, ready for first csv filing
