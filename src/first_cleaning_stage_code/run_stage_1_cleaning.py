@@ -1,7 +1,7 @@
-from util_functions.get_file_paths import find_paths
-from split_values import split_raw_data_2013_2014_and_2020_to_2023, split_raw_data_2015_to_2019, split_pairings_from_fandoms
-from separate_values import separate_pairings
-from util_functions.write_csv_file import make_csv_file
+from src.util_functions.get_file_paths import find_paths
+from src.first_cleaning_stage_code.split_values import split_raw_data_2013_2014_and_2020_to_2023, split_raw_data_2015_to_2019, split_pairings_from_fandoms
+from src.first_cleaning_stage_code.separate_values import separate_pairings
+from src.util_functions.write_csv_file import make_csv_file
 
 def run_cleaning_stage_1():
     """

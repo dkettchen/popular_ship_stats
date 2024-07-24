@@ -62,6 +62,11 @@ def split_raw_data_2013_2014_and_2020_to_2023(filepath: str):
                 temp_list.append(book)
                 temp_list.extend(split_list[4:])
                 split_list = temp_list
+            if "2014_overall" in filepath and len(split_list[0]) == 0: 
+                # if the first value is empty, due to not being new
+                new_list = ["None"]
+                new_list.extend(split_list[1:])
+                split_list = new_list
 
         elif "2023" in filepath:
             split_list = split(r" \t", string[:-1]) # splitting at the tabs
