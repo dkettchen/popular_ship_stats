@@ -39,13 +39,18 @@ class TestFinalTests:
             new_list1 = separate_pairings(old_list1)
             for row in new_list1:
                 for item in row:
-                    if "2014_overall" in path:
-                        if item != "":
+                    if type(item) == list:
+                        for value in item:
+                            assert value[-1] not in whitespace
+                            assert value[0] not in whitespace
+                    else:
+                        if "2014_overall" in path:
+                            if item != "":
+                                assert item[-1] not in whitespace
+                                assert item[0] not in whitespace
+                        else: 
                             assert item[-1] not in whitespace
                             assert item[0] not in whitespace
-                    else: 
-                        assert item[-1] not in whitespace
-                        assert item[0] not in whitespace
 
         for path in middle_paths:
             old_list_unseparated = split_raw_data_2015_to_2019(path)
@@ -53,7 +58,12 @@ class TestFinalTests:
             new_list2 = separate_pairings(old_list2)
             for row in new_list2:
                 for item in row:
-                    assert item[-1] not in whitespace
-                    assert item[0] not in whitespace
+                    if type(item) == list:
+                        for value in item:
+                            assert value[-1] not in whitespace
+                            assert value[0] not in whitespace
+                    else:
+                        assert item[-1] not in whitespace
+                        assert item[0] not in whitespace
 
 

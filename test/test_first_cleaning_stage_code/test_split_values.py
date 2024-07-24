@@ -179,11 +179,11 @@ class TestSplitRecentAndOldDataSets:
             if item[1] != "New":
                 assert type(int(item[1][1:])) == int
         
-    def test_split_change_contains_asterixes_or_is_empty_for_2014(self):
+    def test_split_change_contains_asterixes_or_is_none_for_2014(self):
         old2014path = "data/raw_data/ao3_2014/raw_ao3_2014_overall_ranking.txt"
         old_data = split_raw_data_2013_2014_and_2020_to_2023(old2014path)
         for item in old_data[1:]:
-            assert item[0] == "***" or item[0] == ""
+            assert item[0] == "***" or item[0] == "None"
 
 class TestSplitMiddleDataSets:
     def test_middle_does_not_mutate_input_string(self):

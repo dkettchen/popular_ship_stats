@@ -45,6 +45,13 @@ def split_raw_data_2013_2014_and_2020_to_2023(filepath: str):
                 temp_list.append(book)
                 temp_list.extend(split_list[4:])
                 split_list = temp_list
+                
+            #fixing the trailing white space:
+            if split_list[1] != "Ship":
+                new_list = [split_list[0]]
+                new_list.append(split_list[1][0:-1])
+                new_list.extend(split_list[2:])
+                split_list = new_list
 
         elif "2014" in filepath:
             split_list = split(r" - ", string[:-1]) # splitting at the " - " separators

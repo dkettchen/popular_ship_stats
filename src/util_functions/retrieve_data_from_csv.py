@@ -19,7 +19,6 @@ def read_data_from_csv(filepath: str):
     for row in data_list:
         new_row = []
         for item in row:
-            print(item, filepath)
             if item[0] == "[": # if it's supposed to be a list
                 split_item = split(r"'", item)
                 new_item = [bit for bit in split_item if bit not in ["[", "]", ", "]]
