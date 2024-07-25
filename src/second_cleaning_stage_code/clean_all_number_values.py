@@ -15,26 +15,39 @@ def remove_commas_from_2015_2016_fics_tallies(data_list : list):
     else: 
         works_index = -4
     
-    output_list = []
+    output_list = [data_list[0]] #appending column names row
 
-    if works_index >= -3:
-        output_list.extend(data_list[:works_index])
+    for row in data_list[1:]: #iterating through remaining rows
+        new_row = [] # temp row
 
-        for row in data_list[1:]:
-            if type(row[works_index]) == str:
-                new_number = row[works_index][0:-4] + row[works_index][-3:]
-    else:
-        output_list.extend(data_list[:works_index + 1])
+        if works_index >= -3: # if the index is -2 or -3, aka is an overall or femslash set
+            new_row.extend(row[:works_index]) # copy values until works excluded
+            
+            if type(row[works_index]) == str: # if works is not already an int
+                new_number = row[works_index][0:-4] + row[works_index][-3:] # remove comma
+            else: new_number = row[works_index] # if it's already an int, append that
 
-        for row in data_list[1:]:
-            if type(row[works_index]) == str:
-                total_works = row[works_index][0:-4] + row[works_index][-3:]
-                new_works = row[works_index + 1][0:-4] + row[works_index + 1][-3:]
-                new_number = total_works
-        
-        output_list.append(new_works)
+            new_row.append(int(new_number)) # convert & append works/total works numbers
+            new_row.extend(row[works_index + 1:]) # copy remaining values, excluding works index 
 
-    output_list.append(new_number)
+        else: # if index is smaller than -3 (cause they're negative numbers!) 
+                # aka is -4, aka is 'data' set
+            new_row.extend(row[:works_index]) # copy values until new_works excluded
+
+            if type(row[works_index]) == str: # if new works is not already an int
+                new_works = row[works_index][0:-4] + row[works_index][-3:]
+            else: new_works = row[works_index] # if it's already an int, append that
+            new_row.append(int(new_works)) #convert & append it
+
+            if type(row[works_index + 1]) == str: # if total works is not already an int
+                total_works = row[works_index + 1][0:-4] + row[works_index + 1][-3:]
+                new_number = total_works # remove comma
+            else: new_number = row[works_index + 1] # if it's already an int, append that
+
+            new_row.append(int(new_number)) # convert & append works/total works numbers
+            new_row.extend(row[works_index + 2:]) # copy remaining values, excluding works index 
+
+        output_list.append(new_row) # append temp row
 
     return output_list
 
