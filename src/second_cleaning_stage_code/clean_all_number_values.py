@@ -136,7 +136,6 @@ def separate_change_symbols(data_list : list):
                     new_value = ["+", row[1]]
             elif type(row[1]) == str and len(row[1]) > 0:
                 if "+" in row[1]: #if it gained ranks
-                    print(row[1])
                     plus_value = row[1]
                     subbed_string = sub(r"\+", "", plus_value)
                     num = int(subbed_string)

@@ -152,7 +152,6 @@ class TestSeparateRankingChange:
             input_list = read_data_from_csv(path)
             updated_list = separate_change_symbols(input_list)
             for row in updated_list[1:]:
-                print(row)
                 change = row[1]
                 assert change[0] in ["+", "-", "New"] or change[0] == None
                 assert type(change[1]) == int or change[1] == None

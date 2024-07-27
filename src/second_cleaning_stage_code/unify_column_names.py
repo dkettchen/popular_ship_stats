@@ -1,5 +1,3 @@
-from copy import deepcopy
-
 def unify_column_names(data_list : list):
     """
     takes a nested list of data (taken from data/first_clean_up_data/ao3_* folders)
