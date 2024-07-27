@@ -1,4 +1,5 @@
 from src.util_functions.retrieve_data_from_csv import read_data_from_csv
+from re import sub
 
 def remove_commas_from_2015_2016_fics_tallies(data_list : list):
     """
@@ -51,9 +52,39 @@ def remove_commas_from_2015_2016_fics_tallies(data_list : list):
 
     return output_list
 
+def separate_ranking_equals(data_list : list):
+    new_list = [data_list[0]]
+
+    for row in data_list[1:]:
+        new_row = []
+
+        if type(row[0]) == str:
+            equal_value = row[0]
+            num_string = sub("=", "", equal_value)
+            num = int(num_string)
+            new_row.append([num, "="])
+
+        else: 
+            new_value = [row[0], None] # to have a consistent format! AND then we can say 
+                                    # is_equal = row[0][1] \ if is_equal: 
+                                    # -> will be true if it's a "=", and false if it's none
+            new_row.append(new_value)
+
+        new_row.extend(row[1:])
+        new_list.append(new_row)
+
+    return new_list
+
+def separate_change_symbols(data_list : list):
+    pass
+
+
+
 
 if __name__ == "__main__":
-    remove_commas_from_2015_2016_fics_tallies(
-        read_data_from_csv("data/first_clean_up_data/ao3_2016/raw_ao3_2016_data.csv")
+    print(
+        separate_ranking_equals(
+            read_data_from_csv("data/first_clean_up_data/ao3_2016/raw_ao3_2016_data.csv")
+        )
     )
     pass
