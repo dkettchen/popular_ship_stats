@@ -17,5 +17,13 @@ def run_cleaning_stage_2():
         separated_rankings = separate_ranking_equals(input_list)
         if "2013" not in path and "2014_femslash" not in path and "2016_data" not in path:
             separated_change = separate_change_symbols(separated_rankings)
-        final_list = unify_column_names(separated_change)
-        # make_csv_file(final_list, "data/second_clean_up_data/")
+            final_list = unify_column_names(separated_change)
+        else:
+            final_list = unify_column_names(separated_rankings)
+        file_path = "data/second_clean_up_data/" + path[25:-4] + ".csv"
+
+        make_csv_file(final_list, file_path)
+
+if __name__ == "__main__":
+    run_cleaning_stage_2()
+    pass

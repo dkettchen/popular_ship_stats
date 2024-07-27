@@ -27,7 +27,9 @@ def all_formatted_data(all_file_paths):
         separated_rankings = separate_ranking_equals(input_list)
         if "2013" not in path and "2014_femslash" not in path and "2016_data" not in path:
             separated_change = separate_change_symbols(separated_rankings)
-        final_list = unify_column_names(separated_change)
+            final_list = unify_column_names(separated_change)
+        else:
+            final_list = unify_column_names(separated_rankings)
         all_data_sets.append({"path": path, "data": final_list})
     return all_data_sets
 
@@ -102,3 +104,45 @@ class TestFinalTests:
                 for row in final_list[1:]:
                     assert type(row[index]) == int # assert all values in it are ints
     
+    def test_returns_row_and_list_length_unchanged(self, all_formatted_data):
+        for data_dict in all_formatted_data:
+            final_list = data_dict["data"]
+            path = data_dict["path"]
+            input_list = read_data_from_csv(path)
+
+            assert len(final_list) == len(input_list)
+            for i in range(len(final_list)):
+                assert len(final_list[i]) == len(input_list[i])
+
+    def test_returns_remaining_values_unchanged(self, all_formatted_data):
+        for data_dict in all_formatted_data:
+            final_list = data_dict["data"]
+            path = data_dict["path"]
+            input_list = read_data_from_csv(path)
+
+            rank_index = 0
+            change_index = None
+            new_works_index = None
+            if "2013" not in path and "2014_femslash" not in path and "2016_data" not in path: 
+                change_index = 1
+            for column in range(len(final_list[0])):
+                if final_list[0][column] == "Total Works":
+                    total_index = column
+            if "data.csv" in path:
+                for column1 in range(len(final_list[0])):
+                    if final_list[0][column1] == "New Works":
+                        new_works_index = column1
+
+            formatted_indexes = [rank_index, change_index, total_index, new_works_index]
+
+            for i in range(len(final_list[0])):
+                if i not in formatted_indexes: # if it's a non-formatted column
+                    for row in range(1, len(final_list)):
+                        print(total_index, path)
+                        assert final_list[row][i] == input_list[row][i]
+
+            
+            
+
+
+            #we've formatted the first column, the change column, the 
