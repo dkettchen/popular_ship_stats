@@ -8,15 +8,18 @@ genders = [
 # mlm labelling despite canon genderfluidity since literally 2013
 
 racial_groups = [
-    "white", 
-    "asian", 
-    "latino", 
+    "White", 
+    "Asian", 
+    "Latino", 
     "MENA", 
-    "black", 
-    "afro-latino",
-    "indigenous", 
-    "ambiguous", 
-    "non-human"
+    "Black", 
+    "Af Lat",
+    "Indig", 
+    "Ambig", 
+    "N.H.",
+    "M.E.",
+    "ME Lat",
+    "As Ind"
 ] 
 #from terms used in ao3 stats
     #short forms from table
@@ -65,7 +68,7 @@ tag_info = {
             ],
         #the interracial ones seem to not always align with the order of characters they refer to
         #2013 overall and 2014-2015 femslash sets weren't tracking this yet
-    "type_tags": ["M/M", "F/F", "F/M", "Other", "Gen"]
+    "type_tags": ["M/M", "F/F", "F/M", "Other", "Gen", "Poly"]
         #THE STRAIGHT ONES DON'T ALIGN W ORDER EITHER OMFG 
         # (update: they don't in the other sets either fuck)
             # -> ok we'll have to actually check all of these before assigning them smh
