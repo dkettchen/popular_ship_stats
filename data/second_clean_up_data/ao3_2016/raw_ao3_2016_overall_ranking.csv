@@ -1,101 +1,101 @@
 Rank,Change,Relationship,Fandom,Total Works,Type,Race
-"[1, None]","[None, 0]","['Castiel', 'Dean Winchester']",Supernatural,56390,"['M', 'M']",White
-"[2, None]","[None, 0]","['Sherlock Holmes', 'John Watson']",Sherlock (TV),46048,"['M', 'M']",White
-"[3, None]","[None, 0]","['Derek Hale', 'Stiles Stilinski']",Teen Wolf (TV),42539,"['M', 'M']",White
-"[4, None]","[None, 0]","['Harry Styles', 'Louis Tomlinson']",One Direction (Band),27354,"['M', 'M']",White
-"[5, None]","['+', 2]","['James “Bucky” Barnes', 'Steve Rogers']",Captain America (Movies),21639,"['M', 'M']",White
-"[6, None]","['-', 1]","['Dean Winchester', 'Sam Winchester']",Supernatural,18976,"['M', 'M']",White
-"[7, None]","['+', 1]","['Steve Rogers', 'Tony Stark']",The Avengers (Marvel Movies),16414,"['M', 'M']",White
-"[8, None]","['-', 2]","['Merlin', 'Arthur Pendragon']",Merlin (TV),15778,"['M', 'M']",White
-"[9, None]","[None, 0]","['Draco Malfoy', 'Harry Potter']",Harry Potter - J. K. Rowling,15190,"['M', 'M']",White
-"[10, None]","[None, 0]","['Blaine Anderson', 'Kurt Hummel']",Glee,12943,"['M', 'M']",Whi/POC
-"[11, None]","['-', 11]","['Sherlock Holmes', 'John Watson']",Sherlock (TV),12484,Gen,White
-"[12, None]","['+', 1]","['Erik Lehnsherr', 'Charles Xavier']",X-Men (Alternate Timeline Movies),10365,"['M', 'M']",White
-"[13, None]","['+', 3]","['Levi', 'Eren Yeager']",Shingeki no Kyojin | Attack on Titan,10116,"['M', 'M']",White
-"[14, None]","['-', 2]","['Rodney McKay', 'John Sheppard']",Stargate Atlantis,9745,"['M', 'M']",White
-"[15, None]","['-', 1]","['Jensen Ackles', 'Jared Padalecki']",Supernatural RPF,9636,"['M', 'M']",White
-"[16, None]","['-', 1]","['Clint Barton', 'Phil Coulson']",The Avengers (Marvel Movies),8894,"['M', 'M']",White
-"[17, None]","['+', 1]","['Clint Barton', 'Natasha Romanov']",The Avengers (Marvel Movies),8812,"['F', 'M']",White
-"[18, None]","['+', 3]","['Gabriel', 'Sam Winchester']",Supernatural,8513,"['M', 'M']",White
-"[19, None]","['+', 20]","['Will Graham', 'Hannibal Lecter']",Hannibal (TV),8488,"['M', 'M']",White
-"[20, None]","['-', 1]","['Zayn Malik', 'Liam Payne']",One Direction (Band),8060,"['M', 'M']",Whi/POC
-"[21, None]","['+', 9]","['Sirius Black', 'Remus Lupin']",Harry Potter - J. K. Rowling,8006,"['M', 'M']",White
-"[22, None]","['-', 5]","['Enjolras', 'Grantaire']",Les Misérables - All Media Types,7907,"['M', 'M']",White
-"[23, None]","['+', 1]","['Bilbo Baggins', 'Thorin Oakenshield']",The Hobbit - All Media Types,7719,"['M', 'M']",White
-"[24, None]","['+', 13]","['Oliver Queen', 'Felicity Smoak']",Arrow (TV 2012),7665,"['F', 'M']",White
-"[25, None]","['-', 3]","['James T. Kirk', 'Spock']",Star Trek: Alternate Original Series (Movies),7501,"['M', 'M']",White
-"[26, None]","['-', 6]","['Steve McGarrett', 'Danny “Danno” Williams']",Hawaii Five-0 (2010),7484,"['M', 'M']",White
-"[27, None]","['+', 13]","['Evil Queen | Regina Mills', 'Emma Swan']",Once Upon a Time (TV),7239,"['F', 'F']",Whi/POC
-"[28, None]","['-', 3]","['Ian Gallagher', 'Mickey Milkovich']",Shameless (US),6885,"['M', 'M']",White
-"[29, None]","['+', 2]","['Pepper Potts', 'Tony Stark']",The Avengers (Marvel Movies),6869,"['F', 'M']",White
-"[30, None]","['+', 15]","['Bellamy Blake', 'Clarke Griffin']",The 100 (TV),6756,"['F', 'M']",Whi/POC
-"[31, None]","['-', 5]","['Harry Potter', 'Severus Snape']",Harry Potter - J. K. Rowling,6751,"['M', 'M']",White
-"[32, None]","['+', 4]","['Frank Iero', 'Gerard Way']",My Chemical Romance,6667,"['M', 'M']",White
-"[33, None]","['-', 6]","['Jack Harkness', 'Ianto Jones']",Torchwood,6666,"['M', 'M']",White
-"[34, None]","['-', 6]","['Loki', 'Thor']",Thor (Movies),6506,"['M', 'M']",White
-"[35, None]","['-', 6]","['Allison Argent', 'Scott McCall']",Teen Wolf (TV),6471,"['F', 'M']",Whi/POC
-"[36, None]","['+', 45]","['Dan Howell', 'Phil Lester']",Phandom/The Fantastic Foursome (YouTube RPF),6465,"['M', 'M']",White
-"[37, None]","['+', 7]","['Captain Hook | Killian Jones', 'Emma Swan']",Once Upon a Time (TV),6406,"['F', 'M']",White
-"[38, None]","['-', 15]","['Jim Ellison', 'Blair Sandburg']",The Sentinel,6250,"['M', 'M']",White
-"[39, None]","['New', None]","['Clarke Griffin', 'Lexa']",The 100 (TV),6049,"['F', 'F']",White
-"[40, None]","['-', 6]","['Mycroft Holmes', 'Lestrade']",Sherlock (TV),6028,"['M', 'M']",White
-"[41, None]","['-', 9]","['James T. Kirk', 'Leonard McCoy']",Star Trek: Alternate Original Series (Movies),5678,"['M', 'M']",White
-"[42, None]","['-', 7]","['Loki', 'Tony Stark']",The Avengers (Marvel Movies),5639,"['M', 'M']",White
-"[43, None]","['-', 1]","['Belle', 'Rumplestiltskin | Mr. Gold']",Once Upon a Time (TV),5530,"['F', 'M']",White
-"[44, None]","['-', 11]","['Clark Kent', 'Lex Luthor']",Smallville,5511,"['M', 'M']",White
-"[45, None]","['-', 7]","['Arthur', 'Eames (Inception)']",Inception (2010),5490,"['M', 'M']",White
-"[46, None]","['+', 17]","['Inquisitor', 'Cullen Rutherford']",Dragon Age: Inquisition,5400,Other,Whi/Amb
-"[47, None]","['-', 6]","['Marco Bott', 'Jean Kirstein']",Shingeki no Kyojin | Attack on Titan,5304,"['M', 'M']",White
-"[48, None]","['-', 5]","['Sherlock Holmes', 'Molly Hooper']",Sherlock (TV),5172,"['F', 'M']",White
-"[49, None]","['+', 5]","['Castiel', 'Dean Winchester']",Supernatural,4945,Gen,White
-"[50, None]","['-', 3]","['Hermione Granger', 'Ron Weasley']",Harry Potter - J. K. Rowling,4792,"['F', 'M']",Whi/Amb
-"[51, None]","['+', 33]","['Hinata Shouyou', 'Kageyama Tobio']",Haikyuu!!,4734,"['M', 'M']",POC
-"[52, None]","['-', 3]","['Tenth Doctor', 'Rose Tyler']",Doctor Who (2005),4709,"['F', 'M']",White
-"[53, None]","['+', 4]","['James Bond', 'Q']",James Bond (Craig movies),4483,"['M', 'M']",White
-"[54, None]","['New', None]","['Magnus Bane', 'Alec Lightwood']",Mortal Instruments Series - Cassandra Clare,4346,"['M', 'M']",Whi/POC
-"[55, None]","['New', None]","['Iwaizumi Hajime', 'Oikawa Tooru']",Haikyuu!!,4281,"['M', 'M']",POC
-"[56, None]","['-', 8]","['Mary Morstan', 'John Watson']",Sherlock (TV),4275,"['F', 'M']",White
-"[57, None]","['New', None]","['Armitage Hux', 'Kylo Ren']",Star Wars Episode VII: The Force Awakens (2015),4256,"['M', 'M']",White
-"[58, None]","['-', 12]","['John Egbert', 'Dave Strider']",Homestuck,4184,"['M', 'M']",Ambig
-"[59, None]","['+', 3]","['Dean Winchester', 'Sam Winchester']",Supernatural,4163,Gen,White
-"[60, None]","['+', 16]","['Laura Hollis', 'Carmilla Karnstein']",Carmilla (Web Series),4101,"['F', 'F']",White
-"[61, None]","['-', 9]","['Niall Horan', 'Harry Styles']",One Direction (Band),4023,"['M', 'M']",White
-"[62, None]","['-', 9]","['Jane Foster', 'Thor']",The Avengers (Marvel Movies),4000,"['F', 'M']",White
-"[63, None]","['-', 7]","['Katniss Everdeen', 'Peeta Mellark']",Hunger Games Trilogy - Suzanne Collins,3976,"['F', 'M']",Whi/Amb
-"[64, None]","['+', 15]","['Patrick Stump', 'Pete Wentz']",Fall Out Boy,3952,"['M', 'M']",Whi/POC
-"[65, '=']","['+', 26]","['James “Bucky” Barnes', 'Steve Rogers']",Captain America (Movies),3893,Gen,White
-"[65, '=']","['-', 5]","['Jessica Moore', 'Sam Winchester']",Supernatural,3893,"['F', 'M']",White
-"[67, None]","['-', 17]","['Carlos', 'Cecil Palmer']",Welcome to Night Vale,3827,"['M', 'M']",Amb/POC
-"[68, None]","[None, 0]","['Harry Potter', 'Ginny Weasley']",Harry Potter - J. K. Rowling,3719,"['F', 'M']",White
-"[69, None]","['New', None]","['Adrien Agreste', 'Marinette Dupain-Cheng']",Miraculous Ladybug,3712,"['F', 'M']",Whi/POC
-"[70, None]","['-', 19]","['Niall Horan', 'Zayn Malik']",One Direction (Band),3700,"['M', 'M']",Whi/POC
-"[71, None]","['-', 5]","['Levi', 'Erwin Smith']",Shingeki no Kyojin | Attack on Titan,3681,"['M', 'M']",White
-"[72, None]","['New', None]","['Inquisitor', 'Solas']",Dragon Age: Inquisition,3667,Other,Whi/Amb
-"[73, None]","['New', None]","['Leo Fitz', 'Jemma Simmons']",Agents of S.H.I.E.L.D. (TV),3612,"['F', 'M']",White
-"[74, None]","['-', 16]","['Sebastian Moran', 'James Moriarty']",Sherlock (TV),3526,"['M', 'M']",White
-"[75, None]","['-', 20]","['Daniel Jackson', ', ""Jack O', 'Neill""]']",Stargate SG-1,3502,"['M', 'M']",White
-"[76, None]","['-', 7]","['Nanase Haruka', 'Tachibana Makoto']",Free!,3499,"['M', 'M']",POC
-"[77, None]","['+', 6]","['James Potter', 'Lily Evans Potter']",Harry Potter - J. K. Rowling,3442,"['F', 'M']",White
-"[78, None]","['-', 1]","['America (Hetalia)', 'England (Hetalia)']",Hetalia: Axis Powers,3374,"['M', 'M']",White
-"[79, None]","['-', 15]","['Bruce Banner', 'Tony Stark']",The Avengers (Marvel Movies),3314,"['M', 'M']",White
-"[80, None]","['-', 7]","['Hermione Granger', 'Draco Malfoy']",Harry Potter - J. K. Rowling,3303,"['F', 'M']",Whi/Amb
-"[81, None]","['-', 14]","['Vernon Boyd', 'Erica Reyes']",Teen Wolf (TV),3286,"['F', 'M']",Whi/POC
-"[82, None]","['New', None]","['Harry Hart', 'Gary “Eggsy” Unwin']",Kingsman: The Secret Service (2015),3281,"['M', 'M']",White
-"[83, None]","['-', 22]","['Lydia Martin', 'Jackson Whittemore']",Teen Wolf (TV),3280,"['F', 'M']",White
-"[84, None]","['-', 25]","['Benton Fraser', 'Ray Kowalski']",due South,3269,"['M', 'M']",White
-"[85, None]","['-', 7]","['Peter Hale', 'Stiles Stilinski']",Teen Wolf (TV),3264,"['M', 'M']",White
-"[86, None]","['-', 14]","['Rose Lalonde', 'Kanaya Maryam']",Homestuck,3188,"['F', 'F']",Ambig
-"[87, None]","['-', 16]","['Spike', 'Buffy Summers']",Buffy the Vampire Slayer,3170,"['F', 'M']",White
-"[88, None]","['New', None]","['Josh Dun', 'Tyler Joseph']",Twenty One Pilots,3169,"['M', 'M']",Whi/POC
-"[89, None]","['+', 4]","['Dave Strider', 'Karkat Vantas']",Homestuck,3091,"['M', 'M']",Ambig
-"[90, None]","['New', None]","['Min Yoongi | Suga', 'Park Jimin']",Bangtan Boys | BTS,3080,"['M', 'M']",POC
-"[91, None]","['New', None]","['Fenris', 'Hawke']",Dragon Age II,3054,Other,Amb/POC
-"[92, None]","['-', 27]","['Eleventh Doctor', 'River Song']",Doctor Who (2005),2956,"['F', 'M']",White
-"[93, None]","['-', 5]","['Lydia Martin', 'Stiles Stilinski']",Teen Wolf (TV),2942,"['F', 'M']",White
-"[94, None]","['New', None]","['Poe Dameron', 'Finn']",Star Wars Episode VII: The Force Awakens (2015),2940,"['M', 'M']",POC
-"[95, None]","[None, 0]","['Uchiha Sasuke', 'Uzumaki']",Naruto Naruto,2931,"['M', 'M']",POC
-"[96, None]","['-', 22]","['Gavin Free', 'Michael Jones']",Rooster Teeth/Achievement Hunter/Funhaus RPF,2929,"['M', 'M']",White
-"[97, None]","['New', None]","['Fox Mulder', 'Dana Scully']",The X-Files,2882,"['F', 'M']",White
-"[98, None]","['-', 28]","['Sam Carter', ', ""Jack O', 'Neill""]']",Stargate SG-1,2830,"['F', 'M']",White
-"[99, None]","['-', 8]","['Kaidan Alenko', 'Shepard']",Mass Effect,2792,Other,Amb/POC
-"[100, None]","['New', None]","['Alistair', 'Warden (Dragon Age)']",Dragon Age: Origins,2769,Other,Amb/POC
+`[1, None]`,`[None, 0]`,`['Castiel', 'Dean Winchester']`,Supernatural,56390,`['M', 'M']`,White
+`[2, None]`,`[None, 0]`,`['Sherlock Holmes', 'John Watson']`,Sherlock (TV),46048,`['M', 'M']`,White
+`[3, None]`,`[None, 0]`,`['Derek Hale', 'Stiles Stilinski']`,Teen Wolf (TV),42539,`['M', 'M']`,White
+`[4, None]`,`[None, 0]`,`['Harry Styles', 'Louis Tomlinson']`,One Direction (Band),27354,`['M', 'M']`,White
+`[5, None]`,`['+', 2]`,`['James “Bucky” Barnes', 'Steve Rogers']`,Captain America (Movies),21639,`['M', 'M']`,White
+`[6, None]`,`['-', 1]`,`['Dean Winchester', 'Sam Winchester']`,Supernatural,18976,`['M', 'M']`,White
+`[7, None]`,`['+', 1]`,`['Steve Rogers', 'Tony Stark']`,The Avengers (Marvel Movies),16414,`['M', 'M']`,White
+`[8, None]`,`['-', 2]`,`['Merlin', 'Arthur Pendragon']`,Merlin (TV),15778,`['M', 'M']`,White
+`[9, None]`,`[None, 0]`,`['Draco Malfoy', 'Harry Potter']`,Harry Potter - J. K. Rowling,15190,`['M', 'M']`,White
+`[10, None]`,`[None, 0]`,`['Blaine Anderson', 'Kurt Hummel']`,Glee,12943,`['M', 'M']`,Whi/POC
+`[11, None]`,`['-', 11]`,`['Sherlock Holmes', 'John Watson']`,Sherlock (TV),12484,Gen,White
+`[12, None]`,`['+', 1]`,`['Erik Lehnsherr', 'Charles Xavier']`,X-Men (Alternate Timeline Movies),10365,`['M', 'M']`,White
+`[13, None]`,`['+', 3]`,`['Levi', 'Eren Yeager']`,Shingeki no Kyojin | Attack on Titan,10116,`['M', 'M']`,White
+`[14, None]`,`['-', 2]`,`['Rodney McKay', 'John Sheppard']`,Stargate Atlantis,9745,`['M', 'M']`,White
+`[15, None]`,`['-', 1]`,`['Jensen Ackles', 'Jared Padalecki']`,Supernatural RPF,9636,`['M', 'M']`,White
+`[16, None]`,`['-', 1]`,`['Clint Barton', 'Phil Coulson']`,The Avengers (Marvel Movies),8894,`['M', 'M']`,White
+`[17, None]`,`['+', 1]`,`['Clint Barton', 'Natasha Romanov']`,The Avengers (Marvel Movies),8812,`['F', 'M']`,White
+`[18, None]`,`['+', 3]`,`['Gabriel', 'Sam Winchester']`,Supernatural,8513,`['M', 'M']`,White
+`[19, None]`,`['+', 20]`,`['Will Graham', 'Hannibal Lecter']`,Hannibal (TV),8488,`['M', 'M']`,White
+`[20, None]`,`['-', 1]`,`['Zayn Malik', 'Liam Payne']`,One Direction (Band),8060,`['M', 'M']`,Whi/POC
+`[21, None]`,`['+', 9]`,`['Sirius Black', 'Remus Lupin']`,Harry Potter - J. K. Rowling,8006,`['M', 'M']`,White
+`[22, None]`,`['-', 5]`,`['Enjolras', 'Grantaire']`,Les Misérables - All Media Types,7907,`['M', 'M']`,White
+`[23, None]`,`['+', 1]`,`['Bilbo Baggins', 'Thorin Oakenshield']`,The Hobbit - All Media Types,7719,`['M', 'M']`,White
+`[24, None]`,`['+', 13]`,`['Oliver Queen', 'Felicity Smoak']`,Arrow (TV 2012),7665,`['F', 'M']`,White
+`[25, None]`,`['-', 3]`,`['James T. Kirk', 'Spock']`,Star Trek: Alternate Original Series (Movies),7501,`['M', 'M']`,White
+`[26, None]`,`['-', 6]`,`['Steve McGarrett', 'Danny “Danno” Williams']`,Hawaii Five-0 (2010),7484,`['M', 'M']`,White
+`[27, None]`,`['+', 13]`,`['Evil Queen | Regina Mills', 'Emma Swan']`,Once Upon a Time (TV),7239,`['F', 'F']`,Whi/POC
+`[28, None]`,`['-', 3]`,`['Ian Gallagher', 'Mickey Milkovich']`,Shameless (US),6885,`['M', 'M']`,White
+`[29, None]`,`['+', 2]`,`['Pepper Potts', 'Tony Stark']`,The Avengers (Marvel Movies),6869,`['F', 'M']`,White
+`[30, None]`,`['+', 15]`,`['Bellamy Blake', 'Clarke Griffin']`,The 100 (TV),6756,`['F', 'M']`,Whi/POC
+`[31, None]`,`['-', 5]`,`['Harry Potter', 'Severus Snape']`,Harry Potter - J. K. Rowling,6751,`['M', 'M']`,White
+`[32, None]`,`['+', 4]`,`['Frank Iero', 'Gerard Way']`,My Chemical Romance,6667,`['M', 'M']`,White
+`[33, None]`,`['-', 6]`,`['Jack Harkness', 'Ianto Jones']`,Torchwood,6666,`['M', 'M']`,White
+`[34, None]`,`['-', 6]`,`['Loki', 'Thor']`,Thor (Movies),6506,`['M', 'M']`,White
+`[35, None]`,`['-', 6]`,`['Allison Argent', 'Scott McCall']`,Teen Wolf (TV),6471,`['F', 'M']`,Whi/POC
+`[36, None]`,`['+', 45]`,`['Dan Howell', 'Phil Lester']`,Phandom/The Fantastic Foursome (YouTube RPF),6465,`['M', 'M']`,White
+`[37, None]`,`['+', 7]`,`['Captain Hook | Killian Jones', 'Emma Swan']`,Once Upon a Time (TV),6406,`['F', 'M']`,White
+`[38, None]`,`['-', 15]`,`['Jim Ellison', 'Blair Sandburg']`,The Sentinel,6250,`['M', 'M']`,White
+`[39, None]`,`['New', None]`,`['Clarke Griffin', 'Lexa']`,The 100 (TV),6049,`['F', 'F']`,White
+`[40, None]`,`['-', 6]`,`['Mycroft Holmes', 'Lestrade']`,Sherlock (TV),6028,`['M', 'M']`,White
+`[41, None]`,`['-', 9]`,`['James T. Kirk', 'Leonard McCoy']`,Star Trek: Alternate Original Series (Movies),5678,`['M', 'M']`,White
+`[42, None]`,`['-', 7]`,`['Loki', 'Tony Stark']`,The Avengers (Marvel Movies),5639,`['M', 'M']`,White
+`[43, None]`,`['-', 1]`,`['Belle', 'Rumplestiltskin | Mr. Gold']`,Once Upon a Time (TV),5530,`['F', 'M']`,White
+`[44, None]`,`['-', 11]`,`['Clark Kent', 'Lex Luthor']`,Smallville,5511,`['M', 'M']`,White
+`[45, None]`,`['-', 7]`,`['Arthur', 'Eames (Inception)']`,Inception (2010),5490,`['M', 'M']`,White
+`[46, None]`,`['+', 17]`,`['Inquisitor', 'Cullen Rutherford']`,Dragon Age: Inquisition,5400,Other,Whi/Amb
+`[47, None]`,`['-', 6]`,`['Marco Bott', 'Jean Kirstein']`,Shingeki no Kyojin | Attack on Titan,5304,`['M', 'M']`,White
+`[48, None]`,`['-', 5]`,`['Sherlock Holmes', 'Molly Hooper']`,Sherlock (TV),5172,`['F', 'M']`,White
+`[49, None]`,`['+', 5]`,`['Castiel', 'Dean Winchester']`,Supernatural,4945,Gen,White
+`[50, None]`,`['-', 3]`,`['Hermione Granger', 'Ron Weasley']`,Harry Potter - J. K. Rowling,4792,`['F', 'M']`,Whi/Amb
+`[51, None]`,`['+', 33]`,`['Hinata Shouyou', 'Kageyama Tobio']`,Haikyuu!!,4734,`['M', 'M']`,POC
+`[52, None]`,`['-', 3]`,`['Tenth Doctor', 'Rose Tyler']`,Doctor Who (2005),4709,`['F', 'M']`,White
+`[53, None]`,`['+', 4]`,`['James Bond', 'Q']`,James Bond (Craig movies),4483,`['M', 'M']`,White
+`[54, None]`,`['New', None]`,`['Magnus Bane', 'Alec Lightwood']`,Mortal Instruments Series - Cassandra Clare,4346,`['M', 'M']`,Whi/POC
+`[55, None]`,`['New', None]`,`['Iwaizumi Hajime', 'Oikawa Tooru']`,Haikyuu!!,4281,`['M', 'M']`,POC
+`[56, None]`,`['-', 8]`,`['Mary Morstan', 'John Watson']`,Sherlock (TV),4275,`['F', 'M']`,White
+`[57, None]`,`['New', None]`,`['Armitage Hux', 'Kylo Ren']`,Star Wars Episode VII: The Force Awakens (2015),4256,`['M', 'M']`,White
+`[58, None]`,`['-', 12]`,`['John Egbert', 'Dave Strider']`,Homestuck,4184,`['M', 'M']`,Ambig
+`[59, None]`,`['+', 3]`,`['Dean Winchester', 'Sam Winchester']`,Supernatural,4163,Gen,White
+`[60, None]`,`['+', 16]`,`['Laura Hollis', 'Carmilla Karnstein']`,Carmilla (Web Series),4101,`['F', 'F']`,White
+`[61, None]`,`['-', 9]`,`['Niall Horan', 'Harry Styles']`,One Direction (Band),4023,`['M', 'M']`,White
+`[62, None]`,`['-', 9]`,`['Jane Foster', 'Thor']`,The Avengers (Marvel Movies),4000,`['F', 'M']`,White
+`[63, None]`,`['-', 7]`,`['Katniss Everdeen', 'Peeta Mellark']`,Hunger Games Trilogy - Suzanne Collins,3976,`['F', 'M']`,Whi/Amb
+`[64, None]`,`['+', 15]`,`['Patrick Stump', 'Pete Wentz']`,Fall Out Boy,3952,`['M', 'M']`,Whi/POC
+`[65, '=']`,`['+', 26]`,`['James “Bucky” Barnes', 'Steve Rogers']`,Captain America (Movies),3893,Gen,White
+`[65, '=']`,`['-', 5]`,`['Jessica Moore', 'Sam Winchester']`,Supernatural,3893,`['F', 'M']`,White
+`[67, None]`,`['-', 17]`,`['Carlos', 'Cecil Palmer']`,Welcome to Night Vale,3827,`['M', 'M']`,Amb/POC
+`[68, None]`,`[None, 0]`,`['Harry Potter', 'Ginny Weasley']`,Harry Potter - J. K. Rowling,3719,`['F', 'M']`,White
+`[69, None]`,`['New', None]`,`['Adrien Agreste', 'Marinette Dupain-Cheng']`,Miraculous Ladybug,3712,`['F', 'M']`,Whi/POC
+`[70, None]`,`['-', 19]`,`['Niall Horan', 'Zayn Malik']`,One Direction (Band),3700,`['M', 'M']`,Whi/POC
+`[71, None]`,`['-', 5]`,`['Levi', 'Erwin Smith']`,Shingeki no Kyojin | Attack on Titan,3681,`['M', 'M']`,White
+`[72, None]`,`['New', None]`,`['Inquisitor', 'Solas']`,Dragon Age: Inquisition,3667,Other,Whi/Amb
+`[73, None]`,`['New', None]`,`['Leo Fitz', 'Jemma Simmons']`,Agents of S.H.I.E.L.D. (TV),3612,`['F', 'M']`,White
+`[74, None]`,`['-', 16]`,`['Sebastian Moran', 'James Moriarty']`,Sherlock (TV),3526,`['M', 'M']`,White
+`[75, None]`,`['-', 20]`,`['Daniel Jackson', 'Jack O"Neill']`,Stargate SG-1,3502,`['M', 'M']`,White
+`[76, None]`,`['-', 7]`,`['Nanase Haruka', 'Tachibana Makoto']`,Free!,3499,`['M', 'M']`,POC
+`[77, None]`,`['+', 6]`,`['James Potter', 'Lily Evans Potter']`,Harry Potter - J. K. Rowling,3442,`['F', 'M']`,White
+`[78, None]`,`['-', 1]`,`['America (Hetalia)', 'England (Hetalia)']`,Hetalia: Axis Powers,3374,`['M', 'M']`,White
+`[79, None]`,`['-', 15]`,`['Bruce Banner', 'Tony Stark']`,The Avengers (Marvel Movies),3314,`['M', 'M']`,White
+`[80, None]`,`['-', 7]`,`['Hermione Granger', 'Draco Malfoy']`,Harry Potter - J. K. Rowling,3303,`['F', 'M']`,Whi/Amb
+`[81, None]`,`['-', 14]`,`['Vernon Boyd', 'Erica Reyes']`,Teen Wolf (TV),3286,`['F', 'M']`,Whi/POC
+`[82, None]`,`['New', None]`,`['Harry Hart', 'Gary “Eggsy” Unwin']`,Kingsman: The Secret Service (2015),3281,`['M', 'M']`,White
+`[83, None]`,`['-', 22]`,`['Lydia Martin', 'Jackson Whittemore']`,Teen Wolf (TV),3280,`['F', 'M']`,White
+`[84, None]`,`['-', 25]`,`['Benton Fraser', 'Ray Kowalski']`,due South,3269,`['M', 'M']`,White
+`[85, None]`,`['-', 7]`,`['Peter Hale', 'Stiles Stilinski']`,Teen Wolf (TV),3264,`['M', 'M']`,White
+`[86, None]`,`['-', 14]`,`['Rose Lalonde', 'Kanaya Maryam']`,Homestuck,3188,`['F', 'F']`,Ambig
+`[87, None]`,`['-', 16]`,`['Spike', 'Buffy Summers']`,Buffy the Vampire Slayer,3170,`['F', 'M']`,White
+`[88, None]`,`['New', None]`,`['Josh Dun', 'Tyler Joseph']`,Twenty One Pilots,3169,`['M', 'M']`,Whi/POC
+`[89, None]`,`['+', 4]`,`['Dave Strider', 'Karkat Vantas']`,Homestuck,3091,`['M', 'M']`,Ambig
+`[90, None]`,`['New', None]`,`['Min Yoongi | Suga', 'Park Jimin']`,Bangtan Boys | BTS,3080,`['M', 'M']`,POC
+`[91, None]`,`['New', None]`,`['Fenris', 'Hawke']`,Dragon Age II,3054,Other,Amb/POC
+`[92, None]`,`['-', 27]`,`['Eleventh Doctor', 'River Song']`,Doctor Who (2005),2956,`['F', 'M']`,White
+`[93, None]`,`['-', 5]`,`['Lydia Martin', 'Stiles Stilinski']`,Teen Wolf (TV),2942,`['F', 'M']`,White
+`[94, None]`,`['New', None]`,`['Poe Dameron', 'Finn']`,Star Wars Episode VII: The Force Awakens (2015),2940,`['M', 'M']`,POC
+`[95, None]`,`[None, 0]`,`['Uchiha Sasuke', 'Uzumaki']`,Naruto Naruto,2931,`['M', 'M']`,POC
+`[96, None]`,`['-', 22]`,`['Gavin Free', 'Michael Jones']`,Rooster Teeth/Achievement Hunter/Funhaus RPF,2929,`['M', 'M']`,White
+`[97, None]`,`['New', None]`,`['Fox Mulder', 'Dana Scully']`,The X-Files,2882,`['F', 'M']`,White
+`[98, None]`,`['-', 28]`,`['Sam Carter', 'Jack O"Neill']`,Stargate SG-1,2830,`['F', 'M']`,White
+`[99, None]`,`['-', 8]`,`['Kaidan Alenko', 'Shepard']`,Mass Effect,2792,Other,Amb/POC
+`[100, None]`,`['New', None]`,`['Alistair', 'Warden (Dragon Age)']`,Dragon Age: Origins,2769,Other,Amb/POC

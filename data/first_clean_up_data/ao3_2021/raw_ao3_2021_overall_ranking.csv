@@ -1,101 +1,101 @@
 Rank,Change,Relationship,Fandom,Works,Type,Race
-1,0,"['Castiel', 'Dean Winchester']",Supernatural,96616,"['M', 'M']","['White', 'White']"
-2,0,"['Sherlock Holmes', 'John Watson']",Sherlock (TV),64408,"['M', 'M']","['White', 'White']"
-3,0,"['Derek Hale', 'Stiles Stilinski']",Teen Wolf (TV),62648,"['M', 'M']","['White', 'White']"
-4,0,"['James ""Bucky"" Barnes', 'Steve Rogers']",Captain America (Movies),55252,"['M', 'M']","['White', 'White']"
-5,0,"['Draco Malfoy', 'Harry Potter']",Harry Potter - J. K. Rowling,49245,"['M', 'M']","['White', 'White']"
-6,0,"['Steve Rogers', 'Tony Stark']",The Avengers (Marvel Movies),40510,"['M', 'M']","['White', 'White']"
-7,2,"['Aziraphale', 'Crowley (Good Omens)']",Good Omens (TV),36546,"['M', 'M']","['White', 'White']"
-8,-1,"['Harry Styles', 'Louis Tomlinson']",One Direction (Band),35365,"['M', 'M']","['White', 'White']"
-9,-1,"['Keith', 'Lance (Voltron)']",Voltron: Legendary Defender,31707,"['M', 'M']","['Ambig', 'Latino']"
-10,0,"['Dean Winchester', 'Sam Winchester']",Supernatural,29526,"['M', 'M']","['White', 'White']"
-11,2,"['Jeon Jungkook', 'Kim Taehyung | V']",Bangtan Boys | BTS,28479,"['M', 'M']","['Asian', 'Asian']"
-12,-1,"['Magnus Bane', 'Alec Lightwood']",Shadowhunters (TV),28086,"['M', 'M']","['Asian', 'White']"
-13,1,"['Rey', 'Ben Solo | Kylo Ren']",Star Wars Sequel Trilogy,25865,"['F', 'M']","['White', 'White']"
-14,2,"['Adrien Agreste | Chat Noir', 'Marinette Dupain-Cheng | Ladybug']",Miraculous Ladybug,25668,"['F', 'M']","['White', 'Asian']"
-15,-3,"['Katsuki Yuuri', 'Victor Nikiforov']",Yuri!!! on Ice (Anime),25647,"['M', 'M']","['Asian', 'White']"
-16,9,"['Bakugou Katsuki', 'Midoriya Izuku']",Boku no Hero Academia | My Hero Academia,25351,"['M', 'M']","['Asian', 'Asian']"
-17,2,"['Sirius Black', 'Remus Lupin']",Harry Potter - J. K. Rowling,24891,"['M', 'M']","['White', 'White']"
-18,17,"['Lán Zhàn | Lán Wàngjī', 'Wèi Yīng | Wèi Wúxiàn']",魔道祖师 - 墨香铜臭 | Módào Zǔshī - Mòxiāng Tóngxiù,23826,"['M', 'M']","['Asian', 'Asian']"
-19,9,"['Bakugou Katsuki', 'Kirishima Eijirou']",Boku no Hero Academia | My Hero Academia,22606,"['M', 'M']","['Asian', 'Asian']"
-20,-3,"['Merlin', 'Arthur Pendragon (Merlin)']",Merlin (TV),22577,"['M', 'M']","['White', 'White']"
-21,-6,"['Min Yoongi | Suga', 'Park Jimin']",Bangtan Boys | BTS,22410,"['M', 'M']","['Asian', 'Asian']"
-22,-4,"['Jeon Jungkook', 'Park Jimin']",Bangtan Boys | BTS,22400,"['M', 'M']","['Asian', 'Asian']"
-23,-1,"['Peter Parker', 'Tony Stark']",Marvel Cinematic Universe,22165,Gen,"['White', 'White']"
-24,0,"['Will Graham', 'Hannibal Lecter']",Hannibal (TV),21446,"['M', 'M']","['White', 'White']"
-25,-4,"['Pepper Potts', 'Tony Stark']",Marvel Cinematic Universe,19609,"['F', 'M']","['White', 'White']"
-26,0,"['Kim Namjoon | RM', 'Kim Seokjin | Jin']",Bangtan Boys | BTS,19256,"['M', 'M']","['Asian', 'Asian']"
-27,4,"['Midoriya Izuku', 'Todoroki Shouto']",Boku no Hero Academia | My Hero Academia,18807,"['M', 'M']","['Asian', 'Asian']"
-28,-8,"['Sherlock Holmes', 'John Watson']",Sherlock (TV),18502,Gen,"['White', 'White']"
-29,-6,"['Dan Howell', 'Phil Lester']",Phandom/The Fantastic Foursome (YouTube RPF),17455,"['M', 'M']","['White', 'White']"
-30,-3,"['Blaine Anderson', 'Kurt Hummel']",Glee,17427,"['M', 'M']","['Asian', 'White']"
-31,20,"['Iwaizumi Hajime', 'Oikawa Tooru']",Haikyuu!!,16456,"['M', 'M']","['Asian', 'Asian']"
-32,4,"['Kara Danvers', 'Lena Luthor']",Supergirl (TV 2015),16227,"['F', 'F']","['White', 'White']"
-33,-4,"['Erik Lehnsherr', 'Charles Xavier']",X-Men (Alternate Timeline Movies),15634,"['M', 'M']","['White', 'White']"
-34,-4,"['Levi Ackerman', 'Eren Yeager']",Shingeki no Kyojin | Attack on Titan,15492,"['M', 'M']","['White', 'White']"
-35,24,"['James Potter', 'Lily Evans Potter']",Harry Potter - J. K. Rowling,15164,"['F', 'M']","['White', 'White']"
-36,-4,"['Keith', 'Shiro (Voltron)']",Voltron: Legendary Defender,15162,"['M', 'M']","['Ambig', 'Asian']"
-37,18,"['Hinata Shouyou', 'Kageyama Tobio']",Haikyuu!!,15073,"['M', 'M']","['Asian', 'Asian']"
-38,2,"['Jung Hoseok | J-Hope', 'Min Yoongi | Suga']",Bangtan Boys | BTS,14892,"['M', 'M']","['Asian', 'Asian']"
-39,7,"['Hermione Granger', 'Ron Weasley']",Harry Potter - J. K. Rowling,14881,"['F', 'M']","['Ambig', 'White']"
-40,18,"['Hermione Granger', 'Draco Malfoy']",Harry Potter - J. K. Rowling,14834,"['F', 'M']","['Ambig', 'White']"
-41,-8,"['Armitage Hux', 'Ben Solo | Kylo Ren']",Star Wars Sequel Trilogy,14503,"['M', 'M']","['White', 'White']"
-42,0,"['Eddie Kaspbrak', 'Richie Tozier']",IT (Movies – Muschietti),14105,"['M', 'M']","['White', 'White']"
-43,-4,"['Bellamy Blake', 'Clarke Griffin']",The 100 (TV),14092,"['F', 'M']","['Asian', 'White']"
-44,39,"['Geralt z Rivii | Geralt of Rivia', 'Jaskier | Dandelion']",Wiedźmin | The Witcher - All Media Types,13915,"['M', 'M']","['White', 'White']"
-45,N,"['Clay | Dream', 'GeorgeNotFound (Video Blogging RPF)']",Video Blogging RPF,13780,"['M', 'M']","['White', 'White']"
-46,-12,"['Gabriel', 'Sam Winchester']",Supernatural,13657,"['M', 'M']","['White', 'White']"
-47,-9,"['Loki', 'Thor (Marvel)']",Thor (Movies),13642,"['M', 'M']","['White', 'White']"
-48,-11,"['Jensen Ackles', 'Jared Padalecki']",Supernatural RPF,13640,"['M', 'M']","['White', 'White']"
-49,-8,"['Evil Queen | Regina Mills', 'Emma Swan']",Once Upon a Time (TV),13451,"['F', 'F']","['Latino', 'White']"
-50,-7,"['James T. Kirk', 'Spock']",Star Trek: Alternate Original Series (Movies),13316,"['M', 'M']","['White', 'White']"
-51,-2,"['Ian Gallagher', 'Mickey Milkovich']",Shameless (US),13094,"['M', 'M']","['White', 'White']"
-52,-4,"['Harry Potter', 'Severus Snape']",Harry Potter - J. K. Rowling,13007,"['M', 'M']","['White', 'White']"
-53,28,"['Akaashi Keiji', 'Bokuto Koutarou']",Haikyuu!!,12789,"['M', 'M']","['Asian', 'Asian']"
-54,19,"['Dazai Osamu', 'Nakahara Chuuya (Bungou Stray Dogs)']",文豪ストレイドッグス | Bungou Stray Dogs,12626,"['M', 'M']","['Asian', 'Asian']"
-55,33,"['Aizawa Shouta | Eraserhead', 'Yamada Hizashi | Present Mic']",Boku no Hero Academia | My Hero Academia,12591,"['M', 'M']","['Asian', 'Asian']"
-56,-12,"['Rodney McKay', 'John Sheppard']",Stargate Atlantis,12518,"['M', 'M']","['White', 'White']"
-57,3,"['Kim Taehyung | V', 'Park Jimin']",Bangtan Boys | BTS,12489,"['M', 'M']","['Asian', 'Asian']"
-58,-11,"['Clarke Griffin', 'Lexa']",The 100 (TV),12449,"['F', 'F']","['White', 'White']"
-59,9,"['Harry Potter', 'Ginny Weasley']",Harry Potter - J. K. Rowling,12002,"['F', 'M']","['White', 'White']"
-60,-10,"['Clint Barton', 'Natasha Romanov']",The Avengers (Marvel Movies),11828,"['F', 'M']","['White', 'White']"
-61,5,"['Jeon Jungkook', 'Min Yoongi | Suga']",Bangtan Boys | BTS,11576,"['M', 'M']","['Asian', 'Asian']"
-62,-10,"['Oliver Queen', 'Felicity Smoak']",Arrow (TV 2012),11487,"['F', 'M']","['White', 'White']"
-63,-18,"['Steve McGarrett', 'Danny ""Danno"" Williams']",Hawaii Five-0 (2010),11461,"['M', 'M']","['White', 'White']"
-64,-10,"['Enjolras', 'Grantaire (Les Misérables)']",Les Misérables - All Media Types,11292,"['M', 'M']","['White', 'White']"
-65,7,"['Dean Winchester', 'Sam Winchester']",Supernatural,11170,Gen,"['White', 'White']"
-66,-9,"['Captain Hook | Killian Jones', 'Emma Swan']",Once Upon a Time (TV),11000,"['F', 'M']","['White', 'White']"
-67,-14,"['Clint Barton', 'Phil Coulson']",The Avengers (Marvel Movies),10951,"['M', 'M']","['White', 'White']"
-68,-12,"['Mycroft Holmes', 'Greg Lestrade']",Sherlock (TV),10945,"['M', 'M']","['White', 'White']"
-69,-7,"['Loki', 'Tony Stark']",The Avengers (Marvel Movies),10842,"['M', 'M']","['White', 'White']"
-70,-7,"['Jack Harkness', 'Ianto Jones']",Torchwood,10827,"['M', 'M']","['White', 'White']"
-71,8,"['James ""Bucky"" Barnes', 'Reader']",Marvel Cinematic Universe,10797,Other,"['White', 'Ambig']"
-72,-3,"['Castiel', 'Dean Winchester']",Supernatural,10733,Gen,"['White', 'White']"
-73,-6,"['James ""Bucky"" Barnes', 'Steve Rogers']",Captain America (Movies),10634,Gen,"['White', 'White']"
-74,-13,"['Bilbo Baggins', 'Thorin Oakenshield']",The Hobbit - All Media Types,10518,"['M', 'M']","['White', 'White']"
-75,-4,"['Fox Mulder', 'Dana Scully']",The X-Files,10377,"['F', 'M']","['White', 'White']"
-76,0,"['Aziraphale', 'Crowley (Good Omens)']",Good Omens (TV),10369,Gen,"['White', 'White']"
-77,-12,"['Tenth Doctor', 'Rose Tyler']",Doctor Who (2005),10253,"['F', 'M']","['White', 'White']"
-78,-14,"['Frank Iero', 'Gerard Way']",My Chemical Romance,10234,"['M', 'M']","['White', 'White']"
-79,1,"['Uchiha Sasuke', 'Uzumaki Naruto']",Naruto,9578,"['M', 'M']","['Asian', 'Asian']"
-80,N,"['Bakugou Katsuki', 'Midoriya Izuku']",Boku no Hero Academia | My Hero Academia,9370,Gen,"['Asian', 'Asian']"
-81,-11,"['Zayn Malik', 'Liam Payne']",One Direction (Band),9305,"['M', 'M']","['Asian', 'White']"
-82,-8,"['Sherlock Holmes', 'Molly Hooper']",Sherlock (TV),8976,"['F', 'M']","['White', 'White']"
-83,8,"['Kim Taehyung | V', 'Min Yoongi | Suga']",Bangtan Boys | BTS,8968,"['M', 'M']","['Asian', 'Asian']"
-84,1,"['James ""Bucky"" Barnes', 'Tony Stark']",Marvel Cinematic Universe,8767,"['M', 'M']","['White', 'White']"
-85,N,"['Sawamura Daichi', 'Sugawara Koushi']",Haikyuu!!,8761,"['M', 'M']","['Asian', 'Asian']"
-86,-11,"['Inquisitor', 'Cullen Rutherford']",Dragon Age: Inquisition,8594,Other,"['Ambig', 'White']"
-87,6,"['Jaime Lannister', 'Brienne of Tarth']",Game of Thrones (TV),8484,"['F', 'M']","['White', 'White']"
-88,11,"['Byun Baekhyun', 'Park Chanyeol']",EXO (Band),8408,"['M', 'M']","['Asian', 'Asian']"
-89,N,"['Adora', 'Catra (She-Ra)']",She-Ra and the Princesses of Power (2018),8347,"['F', 'F']","['White', 'Ambig']"
-90,N,"['Evan ""Buck"" Buckley', 'Eddie Diaz (9-1-1 TV)']",9-1-1 (TV),8345,"['M', 'M']","['White', 'Latino']"
-91,N,"['Kozume Kenma', 'Kuroo Tetsurou']",Haikyuu!!,8290,"['M', 'M']","['Asian', 'Asian']"
-92,-15,"['Belle', 'Rumplestiltskin | Mr. Gold']",Once Upon a Time (TV),8283,"['F', 'M']","['White', 'White']"
-93,1,"['Peter Hale', 'Stiles Stilinski']",Teen Wolf (TV),8206,"['M', 'M']","['White', 'White']"
-94,N,"['Annabeth Chase', 'Percy Jackson']",Percy Jackson and the Olympians - Rick Riordan,8205,"['F', 'M']","['White', 'White']"
-95,-17,"['James T. Kirk', 'Leonard ""Bones"" McCoy']",Star Trek: Alternate Original Series (Movies),8161,"['M', 'M']","['White', 'White']"
-96,-12,"['Dean Winchester', 'You']",Supernatural,8088,Other,"['White', 'Ambig']"
-97,N,"['Harry Potter', 'Tom Riddle | Voldemort']",Harry Potter - J. K. Rowling,8083,"['M', 'M']","['White', 'White']"
-98,N,"['Levi Ackerman', 'Erwin Smith']",Shingeki no Kyojin | Attack on Titan,8065,"['M', 'M']","['White', 'White']"
-99,N,"['Tsukishima Kei', 'Yamaguchi Tadashi']",Haikyuu!!,7968,"['M', 'M']","['Asian', 'Asian']"
-100,-11,"['Poe Dameron', 'Finn']",Star Wars Sequel Trilogy,7945,"['M', 'M']","['Latino', 'Black']"
+1,0,`['Castiel', 'Dean Winchester']`,Supernatural,96616,`['M', 'M']`,`['White', 'White']`
+2,0,`['Sherlock Holmes', 'John Watson']`,Sherlock (TV),64408,`['M', 'M']`,`['White', 'White']`
+3,0,`['Derek Hale', 'Stiles Stilinski']`,Teen Wolf (TV),62648,`['M', 'M']`,`['White', 'White']`
+4,0,`['James "Bucky" Barnes', 'Steve Rogers']`,Captain America (Movies),55252,`['M', 'M']`,`['White', 'White']`
+5,0,`['Draco Malfoy', 'Harry Potter']`,Harry Potter - J. K. Rowling,49245,`['M', 'M']`,`['White', 'White']`
+6,0,`['Steve Rogers', 'Tony Stark']`,The Avengers (Marvel Movies),40510,`['M', 'M']`,`['White', 'White']`
+7,2,`['Aziraphale', 'Crowley (Good Omens)']`,Good Omens (TV),36546,`['M', 'M']`,`['White', 'White']`
+8,-1,`['Harry Styles', 'Louis Tomlinson']`,One Direction (Band),35365,`['M', 'M']`,`['White', 'White']`
+9,-1,`['Keith', 'Lance (Voltron)']`,Voltron: Legendary Defender,31707,`['M', 'M']`,`['Ambig', 'Latino']`
+10,0,`['Dean Winchester', 'Sam Winchester']`,Supernatural,29526,`['M', 'M']`,`['White', 'White']`
+11,2,`['Jeon Jungkook', 'Kim Taehyung | V']`,Bangtan Boys | BTS,28479,`['M', 'M']`,`['Asian', 'Asian']`
+12,-1,`['Magnus Bane', 'Alec Lightwood']`,Shadowhunters (TV),28086,`['M', 'M']`,`['Asian', 'White']`
+13,1,`['Rey', 'Ben Solo | Kylo Ren']`,Star Wars Sequel Trilogy,25865,`['F', 'M']`,`['White', 'White']`
+14,2,`['Adrien Agreste | Chat Noir', 'Marinette Dupain-Cheng | Ladybug']`,Miraculous Ladybug,25668,`['F', 'M']`,`['White', 'Asian']`
+15,-3,`['Katsuki Yuuri', 'Victor Nikiforov']`,Yuri!!! on Ice (Anime),25647,`['M', 'M']`,`['Asian', 'White']`
+16,9,`['Bakugou Katsuki', 'Midoriya Izuku']`,Boku no Hero Academia | My Hero Academia,25351,`['M', 'M']`,`['Asian', 'Asian']`
+17,2,`['Sirius Black', 'Remus Lupin']`,Harry Potter - J. K. Rowling,24891,`['M', 'M']`,`['White', 'White']`
+18,17,`['Lán Zhàn | Lán Wàngjī', 'Wèi Yīng | Wèi Wúxiàn']`,魔道祖师 - 墨香铜臭 | Módào Zǔshī - Mòxiāng Tóngxiù,23826,`['M', 'M']`,`['Asian', 'Asian']`
+19,9,`['Bakugou Katsuki', 'Kirishima Eijirou']`,Boku no Hero Academia | My Hero Academia,22606,`['M', 'M']`,`['Asian', 'Asian']`
+20,-3,`['Merlin', 'Arthur Pendragon (Merlin)']`,Merlin (TV),22577,`['M', 'M']`,`['White', 'White']`
+21,-6,`['Min Yoongi | Suga', 'Park Jimin']`,Bangtan Boys | BTS,22410,`['M', 'M']`,`['Asian', 'Asian']`
+22,-4,`['Jeon Jungkook', 'Park Jimin']`,Bangtan Boys | BTS,22400,`['M', 'M']`,`['Asian', 'Asian']`
+23,-1,`['Peter Parker', 'Tony Stark']`,Marvel Cinematic Universe,22165,Gen,`['White', 'White']`
+24,0,`['Will Graham', 'Hannibal Lecter']`,Hannibal (TV),21446,`['M', 'M']`,`['White', 'White']`
+25,-4,`['Pepper Potts', 'Tony Stark']`,Marvel Cinematic Universe,19609,`['F', 'M']`,`['White', 'White']`
+26,0,`['Kim Namjoon | RM', 'Kim Seokjin | Jin']`,Bangtan Boys | BTS,19256,`['M', 'M']`,`['Asian', 'Asian']`
+27,4,`['Midoriya Izuku', 'Todoroki Shouto']`,Boku no Hero Academia | My Hero Academia,18807,`['M', 'M']`,`['Asian', 'Asian']`
+28,-8,`['Sherlock Holmes', 'John Watson']`,Sherlock (TV),18502,Gen,`['White', 'White']`
+29,-6,`['Dan Howell', 'Phil Lester']`,Phandom/The Fantastic Foursome (YouTube RPF),17455,`['M', 'M']`,`['White', 'White']`
+30,-3,`['Blaine Anderson', 'Kurt Hummel']`,Glee,17427,`['M', 'M']`,`['Asian', 'White']`
+31,20,`['Iwaizumi Hajime', 'Oikawa Tooru']`,Haikyuu!!,16456,`['M', 'M']`,`['Asian', 'Asian']`
+32,4,`['Kara Danvers', 'Lena Luthor']`,Supergirl (TV 2015),16227,`['F', 'F']`,`['White', 'White']`
+33,-4,`['Erik Lehnsherr', 'Charles Xavier']`,X-Men (Alternate Timeline Movies),15634,`['M', 'M']`,`['White', 'White']`
+34,-4,`['Levi Ackerman', 'Eren Yeager']`,Shingeki no Kyojin | Attack on Titan,15492,`['M', 'M']`,`['White', 'White']`
+35,24,`['James Potter', 'Lily Evans Potter']`,Harry Potter - J. K. Rowling,15164,`['F', 'M']`,`['White', 'White']`
+36,-4,`['Keith', 'Shiro (Voltron)']`,Voltron: Legendary Defender,15162,`['M', 'M']`,`['Ambig', 'Asian']`
+37,18,`['Hinata Shouyou', 'Kageyama Tobio']`,Haikyuu!!,15073,`['M', 'M']`,`['Asian', 'Asian']`
+38,2,`['Jung Hoseok | J-Hope', 'Min Yoongi | Suga']`,Bangtan Boys | BTS,14892,`['M', 'M']`,`['Asian', 'Asian']`
+39,7,`['Hermione Granger', 'Ron Weasley']`,Harry Potter - J. K. Rowling,14881,`['F', 'M']`,`['Ambig', 'White']`
+40,18,`['Hermione Granger', 'Draco Malfoy']`,Harry Potter - J. K. Rowling,14834,`['F', 'M']`,`['Ambig', 'White']`
+41,-8,`['Armitage Hux', 'Ben Solo | Kylo Ren']`,Star Wars Sequel Trilogy,14503,`['M', 'M']`,`['White', 'White']`
+42,0,`['Eddie Kaspbrak', 'Richie Tozier']`,IT (Movies – Muschietti),14105,`['M', 'M']`,`['White', 'White']`
+43,-4,`['Bellamy Blake', 'Clarke Griffin']`,The 100 (TV),14092,`['F', 'M']`,`['Asian', 'White']`
+44,39,`['Geralt z Rivii | Geralt of Rivia', 'Jaskier | Dandelion']`,Wiedźmin | The Witcher - All Media Types,13915,`['M', 'M']`,`['White', 'White']`
+45,N,`['Clay | Dream', 'GeorgeNotFound (Video Blogging RPF)']`,Video Blogging RPF,13780,`['M', 'M']`,`['White', 'White']`
+46,-12,`['Gabriel', 'Sam Winchester']`,Supernatural,13657,`['M', 'M']`,`['White', 'White']`
+47,-9,`['Loki', 'Thor (Marvel)']`,Thor (Movies),13642,`['M', 'M']`,`['White', 'White']`
+48,-11,`['Jensen Ackles', 'Jared Padalecki']`,Supernatural RPF,13640,`['M', 'M']`,`['White', 'White']`
+49,-8,`['Evil Queen | Regina Mills', 'Emma Swan']`,Once Upon a Time (TV),13451,`['F', 'F']`,`['Latino', 'White']`
+50,-7,`['James T. Kirk', 'Spock']`,Star Trek: Alternate Original Series (Movies),13316,`['M', 'M']`,`['White', 'White']`
+51,-2,`['Ian Gallagher', 'Mickey Milkovich']`,Shameless (US),13094,`['M', 'M']`,`['White', 'White']`
+52,-4,`['Harry Potter', 'Severus Snape']`,Harry Potter - J. K. Rowling,13007,`['M', 'M']`,`['White', 'White']`
+53,28,`['Akaashi Keiji', 'Bokuto Koutarou']`,Haikyuu!!,12789,`['M', 'M']`,`['Asian', 'Asian']`
+54,19,`['Dazai Osamu', 'Nakahara Chuuya (Bungou Stray Dogs)']`,文豪ストレイドッグス | Bungou Stray Dogs,12626,`['M', 'M']`,`['Asian', 'Asian']`
+55,33,`['Aizawa Shouta | Eraserhead', 'Yamada Hizashi | Present Mic']`,Boku no Hero Academia | My Hero Academia,12591,`['M', 'M']`,`['Asian', 'Asian']`
+56,-12,`['Rodney McKay', 'John Sheppard']`,Stargate Atlantis,12518,`['M', 'M']`,`['White', 'White']`
+57,3,`['Kim Taehyung | V', 'Park Jimin']`,Bangtan Boys | BTS,12489,`['M', 'M']`,`['Asian', 'Asian']`
+58,-11,`['Clarke Griffin', 'Lexa']`,The 100 (TV),12449,`['F', 'F']`,`['White', 'White']`
+59,9,`['Harry Potter', 'Ginny Weasley']`,Harry Potter - J. K. Rowling,12002,`['F', 'M']`,`['White', 'White']`
+60,-10,`['Clint Barton', 'Natasha Romanov']`,The Avengers (Marvel Movies),11828,`['F', 'M']`,`['White', 'White']`
+61,5,`['Jeon Jungkook', 'Min Yoongi | Suga']`,Bangtan Boys | BTS,11576,`['M', 'M']`,`['Asian', 'Asian']`
+62,-10,`['Oliver Queen', 'Felicity Smoak']`,Arrow (TV 2012),11487,`['F', 'M']`,`['White', 'White']`
+63,-18,`['Steve McGarrett', 'Danny "Danno" Williams']`,Hawaii Five-0 (2010),11461,`['M', 'M']`,`['White', 'White']`
+64,-10,`['Enjolras', 'Grantaire (Les Misérables)']`,Les Misérables - All Media Types,11292,`['M', 'M']`,`['White', 'White']`
+65,7,`['Dean Winchester', 'Sam Winchester']`,Supernatural,11170,Gen,`['White', 'White']`
+66,-9,`['Captain Hook | Killian Jones', 'Emma Swan']`,Once Upon a Time (TV),11000,`['F', 'M']`,`['White', 'White']`
+67,-14,`['Clint Barton', 'Phil Coulson']`,The Avengers (Marvel Movies),10951,`['M', 'M']`,`['White', 'White']`
+68,-12,`['Mycroft Holmes', 'Greg Lestrade']`,Sherlock (TV),10945,`['M', 'M']`,`['White', 'White']`
+69,-7,`['Loki', 'Tony Stark']`,The Avengers (Marvel Movies),10842,`['M', 'M']`,`['White', 'White']`
+70,-7,`['Jack Harkness', 'Ianto Jones']`,Torchwood,10827,`['M', 'M']`,`['White', 'White']`
+71,8,`['James "Bucky" Barnes', 'Reader']`,Marvel Cinematic Universe,10797,Other,`['White', 'Ambig']`
+72,-3,`['Castiel', 'Dean Winchester']`,Supernatural,10733,Gen,`['White', 'White']`
+73,-6,`['James "Bucky" Barnes', 'Steve Rogers']`,Captain America (Movies),10634,Gen,`['White', 'White']`
+74,-13,`['Bilbo Baggins', 'Thorin Oakenshield']`,The Hobbit - All Media Types,10518,`['M', 'M']`,`['White', 'White']`
+75,-4,`['Fox Mulder', 'Dana Scully']`,The X-Files,10377,`['F', 'M']`,`['White', 'White']`
+76,0,`['Aziraphale', 'Crowley (Good Omens)']`,Good Omens (TV),10369,Gen,`['White', 'White']`
+77,-12,`['Tenth Doctor', 'Rose Tyler']`,Doctor Who (2005),10253,`['F', 'M']`,`['White', 'White']`
+78,-14,`['Frank Iero', 'Gerard Way']`,My Chemical Romance,10234,`['M', 'M']`,`['White', 'White']`
+79,1,`['Uchiha Sasuke', 'Uzumaki Naruto']`,Naruto,9578,`['M', 'M']`,`['Asian', 'Asian']`
+80,N,`['Bakugou Katsuki', 'Midoriya Izuku']`,Boku no Hero Academia | My Hero Academia,9370,Gen,`['Asian', 'Asian']`
+81,-11,`['Zayn Malik', 'Liam Payne']`,One Direction (Band),9305,`['M', 'M']`,`['Asian', 'White']`
+82,-8,`['Sherlock Holmes', 'Molly Hooper']`,Sherlock (TV),8976,`['F', 'M']`,`['White', 'White']`
+83,8,`['Kim Taehyung | V', 'Min Yoongi | Suga']`,Bangtan Boys | BTS,8968,`['M', 'M']`,`['Asian', 'Asian']`
+84,1,`['James "Bucky" Barnes', 'Tony Stark']`,Marvel Cinematic Universe,8767,`['M', 'M']`,`['White', 'White']`
+85,N,`['Sawamura Daichi', 'Sugawara Koushi']`,Haikyuu!!,8761,`['M', 'M']`,`['Asian', 'Asian']`
+86,-11,`['Inquisitor', 'Cullen Rutherford']`,Dragon Age: Inquisition,8594,Other,`['Ambig', 'White']`
+87,6,`['Jaime Lannister', 'Brienne of Tarth']`,Game of Thrones (TV),8484,`['F', 'M']`,`['White', 'White']`
+88,11,`['Byun Baekhyun', 'Park Chanyeol']`,EXO (Band),8408,`['M', 'M']`,`['Asian', 'Asian']`
+89,N,`['Adora', 'Catra (She-Ra)']`,She-Ra and the Princesses of Power (2018),8347,`['F', 'F']`,`['White', 'Ambig']`
+90,N,`['Evan "Buck" Buckley', 'Eddie Diaz (9-1-1 TV)']`,9-1-1 (TV),8345,`['M', 'M']`,`['White', 'Latino']`
+91,N,`['Kozume Kenma', 'Kuroo Tetsurou']`,Haikyuu!!,8290,`['M', 'M']`,`['Asian', 'Asian']`
+92,-15,`['Belle', 'Rumplestiltskin | Mr. Gold']`,Once Upon a Time (TV),8283,`['F', 'M']`,`['White', 'White']`
+93,1,`['Peter Hale', 'Stiles Stilinski']`,Teen Wolf (TV),8206,`['M', 'M']`,`['White', 'White']`
+94,N,`['Annabeth Chase', 'Percy Jackson']`,Percy Jackson and the Olympians - Rick Riordan,8205,`['F', 'M']`,`['White', 'White']`
+95,-17,`['James T. Kirk', 'Leonard "Bones" McCoy']`,Star Trek: Alternate Original Series (Movies),8161,`['M', 'M']`,`['White', 'White']`
+96,-12,`['Dean Winchester', 'You']`,Supernatural,8088,Other,`['White', 'Ambig']`
+97,N,`['Harry Potter', 'Tom Riddle | Voldemort']`,Harry Potter - J. K. Rowling,8083,`['M', 'M']`,`['White', 'White']`
+98,N,`['Levi Ackerman', 'Erwin Smith']`,Shingeki no Kyojin | Attack on Titan,8065,`['M', 'M']`,`['White', 'White']`
+99,N,`['Tsukishima Kei', 'Yamaguchi Tadashi']`,Haikyuu!!,7968,`['M', 'M']`,`['Asian', 'Asian']`
+100,-11,`['Poe Dameron', 'Finn']`,Star Wars Sequel Trilogy,7945,`['M', 'M']`,`['Latino', 'Black']`

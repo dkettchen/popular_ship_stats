@@ -12,7 +12,7 @@ def read_data_from_csv(filepath: str):
     (remaining values are strings)
     """
     with open(filepath, "r", newline="") as csv_file:
-        read_data = reader(csv_file)
+        read_data = reader(csv_file, quotechar="`")
         data_list = [row for row in read_data] #turns it into a list of lists of string values
         
     output_list = []
@@ -20,6 +20,23 @@ def read_data_from_csv(filepath: str):
         new_row = []
         for item in row:
             if item[0] == "[": # if it's supposed to be a list
+                # split_item = split(r",\s", item) #splitting at commas
+                # split_item[0] = split_item[0][1:] #removing opening [
+                # split_item[-1] = split_item[-1][:-1] #removing closing ]
+                # new_item = []
+                # for bit in split_item:
+                #     if bit[0] == "'":
+                #         new_bit = bit[1:-1]
+                #     elif bit == "None":
+                #         new_bit = None
+                #     elif bit == "":
+                #         continue
+                #     else: new_bit = int(bit)
+                #     new_item.append(new_bit)
+                #     print(type(new_bit), new_bit)
+                # print(row, new_row, filepath)
+
+
                 split_item = split(r"'", item)
                 new_item = [bit for bit in split_item if bit not in ["[", "]", ", "]]
                     # we're turning it back into a list

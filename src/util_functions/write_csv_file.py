@@ -18,7 +18,7 @@ def make_csv_file(clean_data: list, file_name: str):
         strings_list.append(temp_list)
 
     with open(file_name, "w", newline="") as csv_file:
-        clean_writer = writer(csv_file)
+        clean_writer = writer(csv_file, quotechar="`")
         clean_writer.writerows(strings_list)
 
 if __name__ == "__main__":
