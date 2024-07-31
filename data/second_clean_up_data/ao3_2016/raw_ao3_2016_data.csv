@@ -1,6 +1,6 @@
 Rank,Relationship,Fandom,New Works,Total Works,Type,Race
 `[1, None]`,`['Castiel', 'Dean Winchester']`,Supernatural,13204,56363,`['M', 'M']`,White
-`[2, None]`,`['James “Bucky” Barnes', 'Steve Rogers']`,Captain America (Movies),9327,21626,`['M', 'M']`,White
+`[2, None]`,`['James "Bucky" Barnes', 'Steve Rogers']`,Captain America (Movies),9327,21626,`['M', 'M']`,White
 `[3, None]`,`['Derek Hale', 'Stiles Stilinski']`,Teen Wolf (TV),7591,42531,`['M', 'M']`,White
 `[4, None]`,`['Sherlock Holmes', 'John Watson']`,Sherlock (TV),6661,46030,`['M', 'M']`,White
 `[5, None]`,`['Harry Styles', 'Louis Tomlinson']`,One Direction (Band),5732,27375,`['M', 'M']`,White
@@ -32,10 +32,10 @@ Rank,Relationship,Fandom,New Works,Total Works,Type,Race
 `[31, None]`,`['Rey', 'Ben Solo | Kylo Ren']`,Star Wars Episode VII: The Force Awakens (2015),2082,2082,`['F', 'M']`,White
 `[32, None]`,`['Clint Barton', 'Natasha Romanov']`,The Avengers (Marvel Movies),2064,8809,`['F', 'M']`,White
 `[33, None]`,`['Blaine Anderson', 'Kurt Hummel']`,Glee,2034,12934,`['M', 'M']`,Whi/POC
-`[34, None]`,`['Harry Hart', 'Gary “Eggsy” Unwin']`,Kingsman: The Secret Service (2015),2002,3281,`['M', 'M']`,White
+`[34, None]`,`['Harry Hart', 'Gary "Eggsy" Unwin']`,Kingsman: The Secret Service (2015),2002,3281,`['M', 'M']`,White
 `[35, None]`,`['Sherlock Holmes', 'John Watson']`,Sherlock (TV),1966,12484,Gen,White
 `[36, None]`,`['Akaashi Keiji', 'Bokuto Koutarou']`,Haikyuu!!,1959,2383,`['M', 'M']`,POC
-`[37, None]`,`['James “Bucky” Barnes', 'Steve Rogers']`,Captain America (Movies),1930,3890,Gen,White
+`[37, None]`,`['James "Bucky" Barnes', 'Steve Rogers']`,Captain America (Movies),1930,3890,Gen,White
 `[38, None]`,`['Bill Cipher', 'Dipper Pines']`,Gravity Falls,1907,2655,`['M', 'M']`,Whi/Amb
 `[39, None]`,`['Jensen Ackles', 'Jared Padalecki']`,Supernatural RPF,1892,9634,`['M', 'M']`,White
 `[40, None]`,`['Sawamura Daichi', 'Sugawara Koushi']`,Haikyuu!!,1865,2762,`['M', 'M']`,POC

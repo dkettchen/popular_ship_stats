@@ -3,7 +3,7 @@ Rank,Change,Relationship,Fandom,Total Works,Type,Race
 `[2, None]`,`[None, 0]`,`['Sherlock Holmes', 'John Watson']`,Sherlock (TV),52232,`['M', 'M']`,White
 `[3, None]`,`[None, 0]`,`['Derek Hale', 'Stiles Stilinski']`,Teen Wolf (TV),47528,`['M', 'M']`,White
 `[4, None]`,`[None, 0]`,`['Harry Styles', 'Louis Tomlinson']`,One Direction (Band),29338,`['M', 'M']`,White
-`[5, None]`,`[None, 0]`,`['James “Bucky” Barnes', 'Steve Rogers']`,Captain America (Movies),27854,`['M', 'M']`,White
+`[5, None]`,`[None, 0]`,`['James "Bucky" Barnes', 'Steve Rogers']`,Captain America (Movies),27854,`['M', 'M']`,White
 `[6, None]`,`[None, 0]`,`['Dean Winchester', 'Sam Winchester']`,Supernatural,22797,`['M', 'M']`,White
 `[7, None]`,`['+', 2]`,`['Draco Malfoy', 'Harry Potter']`,Harry Potter - J. K. Rowling,22402,`['M', 'M']`,White
 `[8, None]`,`['-', 1]`,`['Steve Rogers', 'Tony Stark']`,The Avengers (Marvel Movies),19859,`['M', 'M']`,White
@@ -29,7 +29,7 @@ Rank,Change,Relationship,Fandom,Total Works,Type,Race
 `[28, None]`,`['+', 3]`,`['Harry Potter', 'Severus Snape']`,Harry Potter - J. K. Rowling,8818,`['M', 'M']`,White
 `[29, None]`,`['-', 1]`,`['Ian Gallagher', 'Mickey Milkovich']`,Shameless (US),8707,`['M', 'M']`,White
 `[30, None]`,`['-', 8]`,`['Enjolras', 'Grantaire']`,Les Misérables - All Media Types,8701,`['M', 'M']`,White
-`[31, None]`,`['-', 5]`,`['Steve McGarrett', 'Danny “Danno” Williams']`,Hawaii Five-0 (2010),8657,`['M', 'M']`,White
+`[31, None]`,`['-', 5]`,`['Steve McGarrett', 'Danny "Danno" Williams']`,Hawaii Five-0 (2010),8657,`['M', 'M']`,White
 `[32, None]`,`['+', 7]`,`['Clarke Griffin', 'Lexa']`,The 100 (TV),8535,`['F', 'F']`,White
 `[33, None]`,`['-', 3]`,`['Bellamy Blake', 'Clarke Griffin']`,The 100 (TV),8506,`['F', 'M']`,Whi/POC
 `[34, None]`,`['-', 14]`,`['Zayn Malik', 'Liam Payne']`,One Direction (Band),8481,`['M', 'M']`,Whi/POC
@@ -64,7 +64,7 @@ Rank,Change,Relationship,Fandom,Total Works,Type,Race
 `[63, None]`,`['-', 4]`,`['Dean Winchester', 'Sam Winchester']`,Supernatural,5249,Gen,White
 `[64, None]`,`['New', None]`,`['Kim Namjoon | Rap Monster', 'Kim Seokjin | Jin']`,Bangtan Boys | BTS,5152,`['M', 'M']`,POC
 `[65, None]`,`['New', None]`,`['Jeon Jungkook', 'Park Jimin']`,Bangtan Boys | BTS,5077,`['M', 'M']`,POC
-`[66, None]`,`['-', 1]`,`['James “Bucky” Barnes', 'Steve Rogers']`,Captain America (Movies),5021,Gen,White
+`[66, None]`,`['-', 1]`,`['James "Bucky" Barnes', 'Steve Rogers']`,Captain America (Movies),5021,Gen,White
 `[67, None]`,`['+', 1]`,`['Harry Potter', 'Ginny Weasley']`,Harry Potter - J. K. Rowling,4971,`['F', 'M']`,White
 `[68, None]`,`['-', 12]`,`['Mary Morstan', 'John Watson']`,Sherlock (TV),4900,`['F', 'M']`,White
 `[69, None]`,`['+', 4]`,`['Leo Fitz', 'Jemma Simmons']`,Agents of S.H.I.E.L.D. (TV),4863,`['F', 'M']`,White
@@ -82,7 +82,7 @@ Rank,Change,Relationship,Fandom,Total Works,Type,Race
 `[81, None]`,`['-', 10]`,`['Levi', 'Erwin Smith']`,Shingeki no Kyojin | Attack on Titan,4289,`['M', 'M']`,White
 `[82, None]`,`['-', 21]`,`['Niall Horan', 'Harry Styles']`,One Direction (Band),4218,`['M', 'M']`,White
 `[83, None]`,`['New', None]`,`['Sawamura Daichi', 'Sugawara Koushi']`,Haikyuu!!,4164,`['M', 'M']`,POC
-`[84, None]`,`['-', 2]`,`['Harry Hart', 'Gary “Eggsy” Unwin']`,Kingsman: The Secret Service (2015),4121,`['M', 'M']`,White
+`[84, None]`,`['-', 2]`,`['Harry Hart', 'Gary "Eggsy" Unwin']`,Kingsman: The Secret Service (2015),4121,`['M', 'M']`,White
 `[85, None]`,`['+', 12]`,`['Fox Mulder', 'Dana Scully']`,The X-Files,4097,`['F', 'M']`,White
 `[86, None]`,`['-', 19]`,`['Carlos', 'Cecil Palmer']`,Welcome to Night Vale,4053,`['M', 'M']`,Amb/POC
 `[87, None]`,`['-', 9]`,`['America (Hetalia)', 'England (Hetalia)']`,Hetalia: Axis Powers,4030,`['M', 'M']`,White

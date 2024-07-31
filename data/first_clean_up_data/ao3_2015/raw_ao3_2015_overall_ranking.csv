@@ -5,7 +5,7 @@ Rank,Change,Pairing Tag,Fandom,Works,Type,Race
 4,0,`['Harry Styles', 'Louis Tomlinson']`,One Direction (Band),`21,658`,`['M', 'M']`,White
 5,0,`['Dean Winchester', 'Sam Winchester']`,Supernatural,`14,677`,`['M', 'M']`,White
 6,0,`['Merlin', 'Arthur Pendragon']`,Merlin (TV),`13,337`,`['M', 'M']`,White
-7,+15,`['James “Bucky” Barnes', 'Steve Rogers']`,Captain America (Movies),`12,337`,`['M', 'M']`,White
+7,+15,`['James "Bucky" Barnes', 'Steve Rogers']`,Captain America (Movies),`12,337`,`['M', 'M']`,White
 8,0,`['Steve Rogers', 'Tony Stark']`,The Avengers (Marvel Movies),`11,999`,`['M', 'M']`,White
 9,-2,`['Draco Malfoy', 'Harry Potter']`,Harry Potter - J. K. Rowling,`11,552`,`['M', 'M']`,White
 10,0,`['Blaine Anderson', 'Kurt Hummel']`,Glee,`10,911`,`['M', 'M']`,Whi/POC
@@ -18,7 +18,7 @@ Rank,Change,Pairing Tag,Fandom,Works,Type,Race
 17,+1,`['Enjolras', 'Grantaire']`,Les Misérables - All Media Types,`6,838`,`['M', 'M']`,White
 18,+7,`['Clint Barton', 'Natasha Romanov']`,The Avengers (Marvel Movies),`6,751`,`['F', 'M']`,White
 19,+8,`['Zayn Malik', 'Liam Payne']`,One Direction (Band),`6,665`,`['M', 'M']`,Whi/POC
-20,-4,`['Steve McGarrett', 'Danny “Danno” Williams']`,Hawaii Five-0 (2010),`6,534`,`['M', 'M']`,White
+20,-4,`['Steve McGarrett', 'Danny "Danno" Williams']`,Hawaii Five-0 (2010),`6,534`,`['M', 'M']`,White
 21,+7,`['Gabriel', 'Sam Winchester']`,Supernatural,`6,325`,`['M', 'M']`,White
 22,-3,`['James T. Kirk', 'Spock']`,Star Trek: Alternate Original Series (Movies),`6,247`,`['M', 'M']`,White
 23,-11,`['Jim Ellison', 'Blair Sandburg']`,The Sentinel,`6,090`,`['M', 'M']`,White
@@ -90,7 +90,7 @@ Rank,Change,Pairing Tag,Fandom,Works,Type,Race
 89,-19,`['Anthony DiNozzo', 'Jethro Gibbs']`,NCIS,`2,021`,`['M', 'M']`,White
 90,+10,`['Scott McCall', 'Stiles Stilinski']`,Teen Wolf (TV),`1,996`,`['M', 'M']`,Whi/POC
 91,N,`['Kaidan Alenko', 'Shepard']`,Mass Effect,`1,992`,Other,Amb/POC
-92,N,`['James “Bucky” Barnes', 'Steve Rogers']`,Captain America (Movies),`1,969`,Gen,White
+92,N,`['James "Bucky" Barnes', 'Steve Rogers']`,Captain America (Movies),`1,969`,Gen,White
 93,-2,`['Dave Strider', 'Karkat Vantas']`,Homestuck,`1,957`,`['M', 'M']`,Ambig
 94,-29,`['Adam Lambert', 'Tommy Ratliff']`,Adam Lambert (Musician),`1,951`,`['M', 'M']`,White
 95,N,`['Uchiha Sasuke', 'Uzumaki']`,Naruto Naruto,`1,948`,`['M', 'M']`,POC

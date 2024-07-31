@@ -3,7 +3,7 @@ Rank,Change,Relationship,Fandom,New Works,Total Works,Type,Race
 `[2, None]`,`['-', 1]`,`['Castiel', 'Dean Winchester']`,Supernatural,9785,66148,`['M', 'M']`,White
 `[3, None]`,`['New', None]`,`['Keith', 'Lance (Voltron)']`,Voltron: Legendary Defender,9646,10613,`['M', 'M']`,Amb/POC
 `[4, None]`,`['+', 9]`,`['Draco Malfoy', 'Harry Potter']`,Harry Potter - J. K. Rowling,7226,22402,`['M', 'M']`,White
-`[5, None]`,`['-', 3]`,`['James “Bucky” Barnes', 'Steve Rogers']`,Captain America (Movies),6227,27853,`['M', 'M']`,White
+`[5, None]`,`['-', 3]`,`['James "Bucky" Barnes', 'Steve Rogers']`,Captain America (Movies),6227,27853,`['M', 'M']`,White
 `[6, None]`,`['-', 2]`,`['Sherlock Holmes', 'John Watson']`,Sherlock (TV),6202,52232,`['M', 'M']`,White
 `[7, None]`,`['+', 7]`,`['Magnus Bane', 'Alec Lightwood']`,Shadowhunters (TV),5392,9734,`['M', 'M']`,Whi/POC
 `[8, None]`,`['-', 5]`,`['Derek Hale', 'Stiles Stilinski']`,Teen Wolf (TV),4997,47528,`['M', 'M']`,White
@@ -33,7 +33,7 @@ Rank,Change,Relationship,Fandom,New Works,Total Works,Type,Race
 `[32, None]`,`['New', None]`,`['Cassian Andor', 'Jyn Erso Rogue One: A']`,Star Wars Story (2016),2138,2138,`['F', 'M']`,Whi/POC
 `[33, None]`,`['-', 9]`,`['Sirius Black', 'Remus Lupin']`,Harry Potter - J. K. Rowling,2132,10137,`['M', 'M']`,White
 `[34, None]`,`['New', None]`,`['Harry Potter', 'Severus Snape']`,Harry Potter - J. K. Rowling,2070,8818,`['M', 'M']`,White
-`[35, None]`,`['New', None]`,`['Alexander Hamilton', 'Elizabeth “Eliza” Schuyler']`,Hamilton – Miranda,2010,2010,`['F', 'M']`,POC
+`[35, None]`,`['New', None]`,`['Alexander Hamilton', 'Elizabeth "Eliza" Schuyler']`,Hamilton – Miranda,2010,2010,`['F', 'M']`,POC
 `[36, None]`,`['New', None]`,`['Allura', 'Shiro (Voltron)']`,Voltron: Legendary Defender,2009,2133,`['F', 'M']`,POC
 `[37, None]`,`['-', 2]`,`['Sherlock Holmes', 'John Watson']`,Sherlock (TV),1969,14453,Gen,White
 `[38, None]`,`['-', 33]`,`['Harry Styles', 'Louis Tomlinson']`,One Direction (Band),1963,29338,`['M', 'M']`,White
@@ -72,21 +72,21 @@ Rank,Change,Relationship,Fandom,New Works,Total Works,Type,Race
 `[71, None]`,`['+', 22]`,`['Harry Potter', 'Ginny Weasley']`,Harry Potter - J. K. Rowling,1257,4971,`['F', 'M']`,White
 `[72, None]`,`['-', 28]`,`['Leo Fitz', 'Jemma Simmons']`,Agents of S.H.I.E.L.D. (TV),1253,4863,`['F', 'M']`,White
 `[73, None]`,`['New', None]`,`['Credence Barebone', 'Original Percival Graves']`,Fantastic Beasts and Where to Find Them (Movies),1250,1250,`['M', 'M']`,White
-`[74, None]`,`['New', None]`,`['James “Bucky” Barnes', 'Reader']`,Marvel Cinematic Universe,1236,2475,Other,Whi/Amb
+`[74, None]`,`['New', None]`,`['James "Bucky" Barnes', 'Reader']`,Marvel Cinematic Universe,1236,2475,Other,Whi/Amb
 `[75, None]`,`['New', None]`,`['Prompto Argentum', 'Noctis Lucis Caelum']`,Final Fantasy XV,1222,1289,`['M', 'M']`,Whi/POC
 `[76, None]`,`['-', 22]`,`['Fox Mulder', 'Dana Scully']`,The X-Files,1217,4097,`['F', 'M']`,White
 `[77, None]`,`['New', None]`,`['Benton Fraser', 'Ray Kowalski']`,due South,1213,4481,`['M', 'M']`,White
 `[78, None]`,`['New', None]`,`['Kim Taehyung | V', 'Min Yoongi | Suga 방Bangtan Boys |']`,BTS,1209,1810,`['M', 'M']`,POC
 `[79, None]`,`['New', None]`,`['Alexander Hamilton', 'Thomas Jefferson']`,Hamilton – Miranda,1192,1485,`['M', 'M']`,POC
-`[80, None]`,`['New', None]`,`['Steve McGarrett', 'Danny “Danno” Williams']`,Hawaii Five-0 (2010),1174,8657,`['M', 'M']`,White
+`[80, None]`,`['New', None]`,`['Steve McGarrett', 'Danny "Danno" Williams']`,Hawaii Five-0 (2010),1174,8657,`['M', 'M']`,White
 `[81, None]`,`['-', 36]`,`['Frank Iero', 'Gerard Way']`,My Chemical Romance,1157,7823,`['M', 'M']`,White
 `[82, None]`,`['New', None]`,`['Betty Cooper', 'Jughead Jones']`,Riverdale (TV 2017),1155,1155,`['F', 'M']`,White
 `[83, None]`,`['New', None]`,`['Byun Baekhyun', 'Park Chanyeol']`,EXO (Band),1148,2103,`['M', 'M']`,POC
-`[84, None]`,`['New', None]`,`['Fareeha “Pharah” Amari', 'Angela “Mercy” Ziegler']`,Overwatch (Video Game),1136,1387,`['F', 'F']`,Whi/POC
-`[85, None]`,`['-', 48]`,`['James “Bucky” Barnes', 'Steve Rogers']`,Captain America (Movies),1130,5020,Gen,White
+`[84, None]`,`['New', None]`,`['Fareeha "Pharah" Amari', 'Angela "Mercy" Ziegler']`,Overwatch (Video Game),1136,1387,`['F', 'F']`,Whi/POC
+`[85, None]`,`['-', 48]`,`['James "Bucky" Barnes', 'Steve Rogers']`,Captain America (Movies),1130,5020,Gen,White
 `[86, None]`,`['-', 53]`,`['Blaine Anderson', 'Kurt Hummel']`,Glee,1125,14059,`['M', 'M']`,Whi/POC
 `[87, None]`,`['New', None]`,`['Benton Fraser', 'Ray Vecchio']`,due South,1110,1520,`['M', 'M']`,White
-`[88, None]`,`['New', None]`,`['James “Bucky” Barnes', 'Tony Stark']`,Marvel Cinematic Universe,1109,2510,`['M', 'M']`,White
+`[88, None]`,`['New', None]`,`['James "Bucky" Barnes', 'Tony Stark']`,Marvel Cinematic Universe,1109,2510,`['M', 'M']`,White
 `[89, None]`,`['-', 6]`,`['Nico di Angelo', 'Will Solace']`,Percy Jackson and the Olympians - Rick Riordan,1104,3372,`['M', 'M']`,White
 `[90, None]`,`['+', 4]`,`['Kara Danvers', 'Cat Grant']`,Supergirl (TV 2015),1103,2106,`['F', 'F']`,White
 `[91, None]`,`['New', None]`,`['Chirrut Îmwe', 'Baze Malbus Rogue One: A']`,Star Wars Story (2016),1101,1101,`['M', 'M']`,POC

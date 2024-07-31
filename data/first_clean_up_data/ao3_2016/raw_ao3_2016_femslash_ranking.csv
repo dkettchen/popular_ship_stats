@@ -12,7 +12,7 @@ Rank,Change,Pairing,Fandom,Works,Race
 11,-2,`['Allison Argent', 'Lydia Martin']`,Teen Wolf (TV),`1,601`,White
 12,N,`['Alphys', 'Undyne']`,Undertale (Video Game),`1,448`,Ambig
 13,8,`['Chloe Beale', 'Beca Mitchell']`,Pitch Perfect (Movies),`1,377`,White
-14,-4,`['Myka Bering', 'Helena “H. G.” Wells']`,Warehouse 13,`1,285`,White
+14,-4,`['Myka Bering', 'Helena "H. G." Wells']`,Warehouse 13,`1,285`,White
 15,-3,`['Jemma Simmons', 'Skye | Daisy Johnson']`,Agents of S.H.I.E.L.D. (TV),`1,223`,Whi/POC
 16,-3,`['Delphine Cormier', 'Cosima Niehaus']`,Orphan Black (TV),`1,217`,White
 17,N,`['Kara Danvers', 'Cat Grant']`,Supergirl (TV 2015),`1,043`,White
@@ -65,9 +65,9 @@ Rank,Change,Pairing,Fandom,Works,Race
 64,18,`['Clarke Griffin', 'Raven Reyes']`,The 100 (TV),379,Whi/POC
 65,-8,`['Dorothy Baum', 'Charlie Bradbury']`,Supernatural,368,White
 66=,-16,`['Gabrielle', 'Xena']`,Xena: Warrior Princess,367,White
-66=,-12,`['Jennifer “JJ” Jareau', 'Emily Prentiss']`,Criminal Minds,367,White
+66=,-12,`['Jennifer "JJ" Jareau', 'Emily Prentiss']`,Criminal Minds,367,White
 68,N,`['Female Inquisitor', 'Sera']`,Dragon Age: Inquisition,362,Whi/Amb
-69,-22,`['Arizona Robbins', 'Calliope “Callie” Torres']`,Grey’s Anatomy,356,Whi/POC
+69,-22,`['Arizona Robbins', 'Calliope "Callie" Torres']`,Grey’s Anatomy,356,Whi/POC
 70,-26,`['Sam Carter', 'Janet Fraiser']`,Stargate SG-1,346,White
 71,-18,`['Jade Harley', 'Rose Lalonde']`,Homestuck,343,Ambig
 72,-21,`['Jenny Flint', 'Madame Vastra']`,Doctor Who (2005),336,Whi/Amb
@@ -94,7 +94,7 @@ Rank,Change,Pairing,Fandom,Works,Race
 93,-23,`['Olivia Benson', 'Alexandra Cabot']`,Law & Order: SVU,269,White
 94=,N,`['Alicia Clark', 'Elyza Lex']`,The 100 (TV),262,White
 94=,N,`['Costia', 'Lexa (The 100)']`,The 100 (TV),262,Whi/Amb
-96,N,`['Fareeha “Pharah” Amari', 'Angela “Mercy” Ziegler']`,Overwatch (Video Game),259,Whi/POC
+96,N,`['Fareeha "Pharah" Amari', 'Angela "Mercy" Ziegler']`,Overwatch (Video Game),259,Whi/POC
 97,N,`['Jessika Pava', 'Rey']`,Star Wars Episode VII: The Force Awakens (2015),258,Whi/POC
 98,N,`['Anya', 'Raven Reyes']`,The 100 (TV),254,POC
 99=,-30,`['Katniss Everdeen', 'Johanna Mason']`,Hunger Games Series - All Media Types,253,Whi/Amb

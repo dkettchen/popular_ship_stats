@@ -16,8 +16,8 @@ Rank,Change,Relationship,Fandom,Total Works,Race
 `[15, None]`,`['-', 4]`,`['Allison Argent', 'Lydia Martin']`,Teen Wolf (TV),1700,White
 `[16, None]`,`['-', 3]`,`['Chloe Beale', 'Beca Mitchell']`,Pitch Perfect (Movies),1630,White
 `[17, None]`,`['-', 1]`,`['Delphine Cormier', 'Cosima Niehaus']`,Orphan Black (TV),1445,White
-`[18, None]`,`['+', 78]`,`['Fareeha “Pharah” Amari', 'Angela “Mercy” Ziegler']`,Overwatch (Video Game),1387,Whi/POC
-`[19, None]`,`['-', 5]`,`['Myka Bering', 'Helena “H. G.” Wells']`,Warehouse 13,1384,White
+`[18, None]`,`['+', 78]`,`['Fareeha "Pharah" Amari', 'Angela "Mercy" Ziegler']`,Overwatch (Video Game),1387,Whi/POC
+`[19, None]`,`['-', 5]`,`['Myka Bering', 'Helena "H. G." Wells']`,Warehouse 13,1384,White
 `[20, None]`,`['-', 5]`,`['Jemma Simmons', 'Skye | Daisy Johnson']`,Agents of S.H.I.E.L.D. (TV),1335,Whi/POC
 `[21, None]`,`['-', 1]`,`['Blake Belladonna', 'Yang Xiao Long']`,RWBY,1304,Whi/POC
 `[22, None]`,`[None, 0]`,`['Maxine Caulfield', 'Chloe Price']`,Life Is Strange (Video Game),1201,White
@@ -40,7 +40,7 @@ Rank,Change,Relationship,Fandom,Total Works,Race
 `[39, None]`,`['-', 10]`,`['Terezi Pyrope', 'Vriska Serket']`,Homestuck,805,Ambig
 `[40, None]`,`['+', 33]`,`['Clary Fray', 'Isabelle Lightwood']`,Shadowhunters (TV),804,Whi/POC
 `[41, None]`,`['-', 10]`,`['Pacifica Northwest', 'Mabel Pines']`,Gravity Falls,796,White
-`[42, None]`,`['New', None]`,`['Maria Reynolds', 'Elizabeth “Eliza” Schuyler']`,Hamilton – Miranda,791,POC
+`[42, None]`,`['New', None]`,`['Maria Reynolds', 'Elizabeth "Eliza" Schuyler']`,Hamilton – Miranda,791,POC
 `[43, None]`,`['-', 9]`,`['Maria Hill', 'Natasha Romanov']`,Marvel Cinematic Universe,762,White
 `[44, None]`,`['-', 7]`,`['Pearl', 'Rose Quartz (Steven Universe)']`,Steven Universe (Cartoon),761,Ambig
 `[45, None]`,`['-', 12]`,`['Faith Lehane', 'Buffy Summers']`,Buffy the Vampire Slayer,760,White
@@ -67,7 +67,7 @@ Rank,Change,Relationship,Fandom,Total Works,Race
 `[66, None]`,`['-', 21]`,`['Laura Hollis', 'Danny Lawrence']`,Carmilla (Web Series),503,White
 `[67, None]`,`['-', 11]`,`['Kaiou Michiru', 'Tenoh Haruka']`,Bishoujo Senshi Sailor Moon | Pretty Guardian Sailor Moon,498,POC
 `[68, None]`,`['New', None]`,`['Mila Babicheva', 'Sara Crispino']`,Yuri!!! on Ice (Anime),483,White
-`[69, None]`,`['-', 3]`,`['Jennifer “JJ” Jareau', 'Emily Prentiss']`,Criminal Minds,481,White
+`[69, None]`,`['-', 3]`,`['Jennifer "JJ" Jareau', 'Emily Prentiss']`,Criminal Minds,481,White
 `[70, None]`,`['-', 26]`,`['Quinn Fabray', 'Santana Lopez']`,Glee,479,Whi/POC
 `[71, None]`,`['-', 11]`,`['Female Inquisitor', 'Josephine Montilyet']`,Dragon Age: Inquisition,476,Amb/POC
 `[72, None]`,`['-', 4]`,`['Female Inquisitor', 'Sera']`,Dragon Age: Inquisition,473,Whi/Amb
@@ -86,7 +86,7 @@ Rank,Change,Relationship,Fandom,Total Works,Race
 `[85, None]`,`['-', 24]`,`['Gail Peck', 'Holly Stewart']`,Rookie Blue,430,White
 `[86, None]`,`['-', 28]`,`['Kanaya Maryam', 'Vriska Serket']`,Homestuck,429,Ambig
 `[87, None]`,`['-', 23]`,`['Clarke Griffin', 'Raven Reyes']`,The 100 (TV),421,Whi/POC
-`[88, None]`,`['-', 19]`,`['Arizona Robbins', 'Calliope “Callie” Torres']`,Grey’s Anatomy,414,Whi/POC
+`[88, None]`,`['-', 19]`,`['Arizona Robbins', 'Calliope "Callie" Torres']`,Grey’s Anatomy,414,Whi/POC
 `[89, None]`,`['New', None]`,`['Carol Aird', 'Therese Belivet']`,Carol (2015),404,White
 `[90, None]`,`['+', 4]`,`['Costia', 'Lexa (The 100)']`,The 100 (TV),399,Whi/Amb
 `[91, None]`,`['-', 29]`,`['Bo', 'Lauren']`,Lost Girl,397,White

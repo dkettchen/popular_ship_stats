@@ -12,7 +12,7 @@ Rank,Change,Relationship,Fandom,Total Works,Race
 `[11, None]`,`['-', 2]`,`['Allison Argent', 'Lydia Martin']`,Teen Wolf (TV),1601,White
 `[12, None]`,`['New', None]`,`['Alphys', 'Undyne']`,Undertale (Video Game),1448,Ambig
 `[13, None]`,`['+', 8]`,`['Chloe Beale', 'Beca Mitchell']`,Pitch Perfect (Movies),1377,White
-`[14, None]`,`['-', 4]`,`['Myka Bering', 'Helena “H. G.” Wells']`,Warehouse 13,1285,White
+`[14, None]`,`['-', 4]`,`['Myka Bering', 'Helena "H. G." Wells']`,Warehouse 13,1285,White
 `[15, None]`,`['-', 3]`,`['Jemma Simmons', 'Skye | Daisy Johnson']`,Agents of S.H.I.E.L.D. (TV),1223,Whi/POC
 `[16, None]`,`['-', 3]`,`['Delphine Cormier', 'Cosima Niehaus']`,Orphan Black (TV),1217,White
 `[17, None]`,`['New', None]`,`['Kara Danvers', 'Cat Grant']`,Supergirl (TV 2015),1043,White
@@ -65,9 +65,9 @@ Rank,Change,Relationship,Fandom,Total Works,Race
 `[64, None]`,`['+', 18]`,`['Clarke Griffin', 'Raven Reyes']`,The 100 (TV),379,Whi/POC
 `[65, None]`,`['-', 8]`,`['Dorothy Baum', 'Charlie Bradbury']`,Supernatural,368,White
 `[66, '=']`,`['-', 16]`,`['Gabrielle', 'Xena']`,Xena: Warrior Princess,367,White
-`[66, '=']`,`['-', 12]`,`['Jennifer “JJ” Jareau', 'Emily Prentiss']`,Criminal Minds,367,White
+`[66, '=']`,`['-', 12]`,`['Jennifer "JJ" Jareau', 'Emily Prentiss']`,Criminal Minds,367,White
 `[68, None]`,`['New', None]`,`['Female Inquisitor', 'Sera']`,Dragon Age: Inquisition,362,Whi/Amb
-`[69, None]`,`['-', 22]`,`['Arizona Robbins', 'Calliope “Callie” Torres']`,Grey’s Anatomy,356,Whi/POC
+`[69, None]`,`['-', 22]`,`['Arizona Robbins', 'Calliope "Callie" Torres']`,Grey’s Anatomy,356,Whi/POC
 `[70, None]`,`['-', 26]`,`['Sam Carter', 'Janet Fraiser']`,Stargate SG-1,346,White
 `[71, None]`,`['-', 18]`,`['Jade Harley', 'Rose Lalonde']`,Homestuck,343,Ambig
 `[72, None]`,`['-', 21]`,`['Jenny Flint', 'Madame Vastra']`,Doctor Who (2005),336,Whi/Amb
@@ -94,7 +94,7 @@ Rank,Change,Relationship,Fandom,Total Works,Race
 `[93, None]`,`['-', 23]`,`['Olivia Benson', 'Alexandra Cabot']`,Law & Order: SVU,269,White
 `[94, '=']`,`['New', None]`,`['Alicia Clark', 'Elyza Lex']`,The 100 (TV),262,White
 `[94, '=']`,`['New', None]`,`['Costia', 'Lexa (The 100)']`,The 100 (TV),262,Whi/Amb
-`[96, None]`,`['New', None]`,`['Fareeha “Pharah” Amari', 'Angela “Mercy” Ziegler']`,Overwatch (Video Game),259,Whi/POC
+`[96, None]`,`['New', None]`,`['Fareeha "Pharah" Amari', 'Angela "Mercy" Ziegler']`,Overwatch (Video Game),259,Whi/POC
 `[97, None]`,`['New', None]`,`['Jessika Pava', 'Rey']`,Star Wars Episode VII: The Force Awakens (2015),258,Whi/POC
 `[98, None]`,`['New', None]`,`['Anya', 'Raven Reyes']`,The 100 (TV),254,POC
 `[99, '=']`,`['-', 30]`,`['Katniss Everdeen', 'Johanna Mason']`,Hunger Games Series - All Media Types,253,Whi/Amb

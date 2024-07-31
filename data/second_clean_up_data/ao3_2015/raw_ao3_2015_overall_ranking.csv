@@ -5,7 +5,7 @@ Rank,Change,Relationship,Fandom,Total Works,Type,Race
 `[4, None]`,`[None, 0]`,`['Harry Styles', 'Louis Tomlinson']`,One Direction (Band),21658,`['M', 'M']`,White
 `[5, None]`,`[None, 0]`,`['Dean Winchester', 'Sam Winchester']`,Supernatural,14677,`['M', 'M']`,White
 `[6, None]`,`[None, 0]`,`['Merlin', 'Arthur Pendragon']`,Merlin (TV),13337,`['M', 'M']`,White
-`[7, None]`,`['+', 15]`,`['James “Bucky” Barnes', 'Steve Rogers']`,Captain America (Movies),12337,`['M', 'M']`,White
+`[7, None]`,`['+', 15]`,`['James "Bucky" Barnes', 'Steve Rogers']`,Captain America (Movies),12337,`['M', 'M']`,White
 `[8, None]`,`[None, 0]`,`['Steve Rogers', 'Tony Stark']`,The Avengers (Marvel Movies),11999,`['M', 'M']`,White
 `[9, None]`,`['-', 2]`,`['Draco Malfoy', 'Harry Potter']`,Harry Potter - J. K. Rowling,11552,`['M', 'M']`,White
 `[10, None]`,`[None, 0]`,`['Blaine Anderson', 'Kurt Hummel']`,Glee,10911,`['M', 'M']`,Whi/POC
@@ -18,7 +18,7 @@ Rank,Change,Relationship,Fandom,Total Works,Type,Race
 `[17, None]`,`['+', 1]`,`['Enjolras', 'Grantaire']`,Les Misérables - All Media Types,6838,`['M', 'M']`,White
 `[18, None]`,`['+', 7]`,`['Clint Barton', 'Natasha Romanov']`,The Avengers (Marvel Movies),6751,`['F', 'M']`,White
 `[19, None]`,`['+', 8]`,`['Zayn Malik', 'Liam Payne']`,One Direction (Band),6665,`['M', 'M']`,Whi/POC
-`[20, None]`,`['-', 4]`,`['Steve McGarrett', 'Danny “Danno” Williams']`,Hawaii Five-0 (2010),6534,`['M', 'M']`,White
+`[20, None]`,`['-', 4]`,`['Steve McGarrett', 'Danny "Danno" Williams']`,Hawaii Five-0 (2010),6534,`['M', 'M']`,White
 `[21, None]`,`['+', 7]`,`['Gabriel', 'Sam Winchester']`,Supernatural,6325,`['M', 'M']`,White
 `[22, None]`,`['-', 3]`,`['James T. Kirk', 'Spock']`,Star Trek: Alternate Original Series (Movies),6247,`['M', 'M']`,White
 `[23, None]`,`['-', 11]`,`['Jim Ellison', 'Blair Sandburg']`,The Sentinel,6090,`['M', 'M']`,White
@@ -90,7 +90,7 @@ Rank,Change,Relationship,Fandom,Total Works,Type,Race
 `[89, None]`,`['-', 19]`,`['Anthony DiNozzo', 'Jethro Gibbs']`,NCIS,2021,`['M', 'M']`,White
 `[90, None]`,`['+', 10]`,`['Scott McCall', 'Stiles Stilinski']`,Teen Wolf (TV),1996,`['M', 'M']`,Whi/POC
 `[91, None]`,`['New', None]`,`['Kaidan Alenko', 'Shepard']`,Mass Effect,1992,Other,Amb/POC
-`[92, None]`,`['New', None]`,`['James “Bucky” Barnes', 'Steve Rogers']`,Captain America (Movies),1969,Gen,White
+`[92, None]`,`['New', None]`,`['James "Bucky" Barnes', 'Steve Rogers']`,Captain America (Movies),1969,Gen,White
 `[93, None]`,`['-', 2]`,`['Dave Strider', 'Karkat Vantas']`,Homestuck,1957,`['M', 'M']`,Ambig
 `[94, None]`,`['-', 29]`,`['Adam Lambert', 'Tommy Ratliff']`,Adam Lambert (Musician),1951,`['M', 'M']`,White
 `[95, None]`,`['New', None]`,`['Uchiha Sasuke', 'Uzumaki']`,Naruto Naruto,1948,`['M', 'M']`,POC

@@ -3,7 +3,7 @@ Rank,Change,Pairing Tag,Fandom,Works,Type,Race
 2,0,`['Sherlock Holmes', 'John Watson']`,Sherlock (TV),`46,048`,`['M', 'M']`,White
 3,0,`['Derek Hale', 'Stiles Stilinski']`,Teen Wolf (TV),`42,539`,`['M', 'M']`,White
 4,0,`['Harry Styles', 'Louis Tomlinson']`,One Direction (Band),`27,354`,`['M', 'M']`,White
-5,2,`['James “Bucky” Barnes', 'Steve Rogers']`,Captain America (Movies),`21,639`,`['M', 'M']`,White
+5,2,`['James "Bucky" Barnes', 'Steve Rogers']`,Captain America (Movies),`21,639`,`['M', 'M']`,White
 6,-1,`['Dean Winchester', 'Sam Winchester']`,Supernatural,`18,976`,`['M', 'M']`,White
 7,1,`['Steve Rogers', 'Tony Stark']`,The Avengers (Marvel Movies),`16,414`,`['M', 'M']`,White
 8,-2,`['Merlin', 'Arthur Pendragon']`,Merlin (TV),`15,778`,`['M', 'M']`,White
@@ -24,7 +24,7 @@ Rank,Change,Pairing Tag,Fandom,Works,Type,Race
 23,1,`['Bilbo Baggins', 'Thorin Oakenshield']`,The Hobbit - All Media Types,`7,719`,`['M', 'M']`,White
 24,13,`['Oliver Queen', 'Felicity Smoak']`,Arrow (TV 2012),`7,665`,`['F', 'M']`,White
 25,-3,`['James T. Kirk', 'Spock']`,Star Trek: Alternate Original Series (Movies),`7,501`,`['M', 'M']`,White
-26,-6,`['Steve McGarrett', 'Danny “Danno” Williams']`,Hawaii Five-0 (2010),`7,484`,`['M', 'M']`,White
+26,-6,`['Steve McGarrett', 'Danny "Danno" Williams']`,Hawaii Five-0 (2010),`7,484`,`['M', 'M']`,White
 27,13,`['Evil Queen | Regina Mills', 'Emma Swan']`,Once Upon a Time (TV),`7,239`,`['F', 'F']`,Whi/POC
 28,-3,`['Ian Gallagher', 'Mickey Milkovich']`,Shameless (US),`6,885`,`['M', 'M']`,White
 29,2,`['Pepper Potts', 'Tony Stark']`,The Avengers (Marvel Movies),`6,869`,`['F', 'M']`,White
@@ -63,7 +63,7 @@ Rank,Change,Pairing Tag,Fandom,Works,Type,Race
 62,-9,`['Jane Foster', 'Thor']`,The Avengers (Marvel Movies),`4,000`,`['F', 'M']`,White
 63,-7,`['Katniss Everdeen', 'Peeta Mellark']`,Hunger Games Trilogy - Suzanne Collins,`3,976`,`['F', 'M']`,Whi/Amb
 64,15,`['Patrick Stump', 'Pete Wentz']`,Fall Out Boy,`3,952`,`['M', 'M']`,Whi/POC
-65=,26,`['James “Bucky” Barnes', 'Steve Rogers']`,Captain America (Movies),`3,893`,Gen,White
+65=,26,`['James "Bucky" Barnes', 'Steve Rogers']`,Captain America (Movies),`3,893`,Gen,White
 65=,-5,`['Jessica Moore', 'Sam Winchester']`,Supernatural,`3,893`,`['F', 'M']`,White
 67,-17,`['Carlos', 'Cecil Palmer']`,Welcome to Night Vale,`3,827`,`['M', 'M']`,Amb/POC
 68,0,`['Harry Potter', 'Ginny Weasley']`,Harry Potter - J. K. Rowling,`3,719`,`['F', 'M']`,White
@@ -80,7 +80,7 @@ Rank,Change,Pairing Tag,Fandom,Works,Type,Race
 79,-15,`['Bruce Banner', 'Tony Stark']`,The Avengers (Marvel Movies),`3,314`,`['M', 'M']`,White
 80,-7,`['Hermione Granger', 'Draco Malfoy']`,Harry Potter - J. K. Rowling,`3,303`,`['F', 'M']`,Whi/Amb
 81,-14,`['Vernon Boyd', 'Erica Reyes']`,Teen Wolf (TV),`3,286`,`['F', 'M']`,Whi/POC
-82,N,`['Harry Hart', 'Gary “Eggsy” Unwin']`,Kingsman: The Secret Service (2015),`3,281`,`['M', 'M']`,White
+82,N,`['Harry Hart', 'Gary "Eggsy" Unwin']`,Kingsman: The Secret Service (2015),`3,281`,`['M', 'M']`,White
 83,-22,`['Lydia Martin', 'Jackson Whittemore']`,Teen Wolf (TV),`3,280`,`['F', 'M']`,White
 84,-25,`['Benton Fraser', 'Ray Kowalski']`,due South,`3,269`,`['M', 'M']`,White
 85,-7,`['Peter Hale', 'Stiles Stilinski']`,Teen Wolf (TV),`3,264`,`['M', 'M']`,White

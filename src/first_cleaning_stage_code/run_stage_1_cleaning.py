@@ -5,6 +5,11 @@ from src.util_functions.write_csv_file import make_csv_file
 from re import sub
 
 def escape_apostrophes(data_list):
+    """
+    replaces any apostrophes with and any non-standard double quotes 
+    with normal double quotes to prevent formatting errors
+    """
+
     for column in range(len(data_list[0])):
         if data_list[0][column] == "Fandom":
             fandom_index = column
@@ -19,6 +24,10 @@ def escape_apostrophes(data_list):
                 new_character = sub(r"'", '"', character) 
                     #replacing apostrophes with " to prevent wrong processing smh
                 new_pairing.append(new_character)
+            elif '“' in character:
+                new_character = sub(r'“', '"', character) 
+                new_character_2 = sub(r'”', '"', new_character) 
+                new_pairing.append(new_character_2)
             else: new_pairing.append(character)
         temp_row.append(new_pairing)
 
@@ -26,6 +35,10 @@ def escape_apostrophes(data_list):
         if "'" in row[fandom_index]:
             new_fandom = sub(r"'", '"', row[fandom_index])
             temp_row.append(new_fandom)
+        elif '“' in row[fandom_index]:
+            new_fandom = sub(r'“', '"', row[fandom_index]) 
+            new_fandom_2 = sub(r'”', '"', new_fandom) 
+            temp_row.append(new_fandom_2)
         else: temp_row.append(row[fandom_index])
 
         temp_row.extend(row[fandom_index+1:])
