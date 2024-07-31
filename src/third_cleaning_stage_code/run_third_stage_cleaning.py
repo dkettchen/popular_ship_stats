@@ -6,6 +6,9 @@ from src.third_cleaning_stage_code.add_missing_columns import add_missing_column
 from re import sub
 
 def turning_apostrophes_back(data_list):
+    """
+    turns all double quotes in characters and fandom strings into apostrophes/single quotes
+    """
     data = []
     #turning apostrophes back to normal now that we're out of csv land:
     for row in data_list:
