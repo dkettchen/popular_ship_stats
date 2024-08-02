@@ -5,7 +5,7 @@ Rank,Change,Relationship,Fandom,Type,Race,Total Works
 `[4, None]`,`[None, None]`,`['Harry Styles', 'Louis Tomlinson']`,One Direction (Band),`['M', 'M']`,White,14632
 `[5, None]`,`[None, None]`,`['Dean Winchester', 'Sam Winchester']`,Supernatural,`['M', 'M']`,White,11074
 `[6, None]`,`[None, None]`,`['Merlin', 'Arthur Pendragon']`,Merlin (TV),`['M', 'M']`,White,11006
-`[7, None]`,`[None, None]`,`['Draco Malfoy', 'Harry Potter']`,Harry PotterJ. K. Rowling,`['M', 'M']`,White,9196
+`[7, None]`,`[None, None]`,`['Draco Malfoy', 'Harry Potter']`,Harry Potter - J. K. Rowling,`['M', 'M']`,White,9196
 `[8, None]`,`[None, None]`,`['Steve Rogers', 'Tony Stark']`,The Avengers (Marvel Movies),`['M', 'M']`,White,9193
 `[9, None]`,`[None, None]`,`['Sherlock Holmes', 'John Watson']`,Sherlock (TV),Gen,White,8413
 `[10, None]`,`[None, None]`,`['Blaine Anderson', 'Kurt Hummel']`,Glee,`['M', 'M']`,Amb/Whi,8250
@@ -16,23 +16,23 @@ Rank,Change,Relationship,Fandom,Type,Race,Total Works
 `[15, None]`,`[None, None]`,`['Clark Kent', 'Lex Luthor']`,Smallville,`['M', 'M']`,White,6120
 `[16, None]`,`[None, None]`,`['Steve McGarrett', 'Danny "Danno" Williams']`,Hawaii Five-0,`['M', 'M']`,White,5868
 `[17, None]`,`[None, None]`,`['Clint Barton', 'Phil Coulson']`,The Avengers (Marvel Movies),`['M', 'M']`,White,5840
-`[18, None]`,`[None, None]`,`['Enjolras', 'Grantaire']`,Les MisérablesAll Media Types,`['M', 'M']`,White,5504
+`[18, None]`,`[None, None]`,`['Enjolras', 'Grantaire']`,Les Misérables - All Media Types,`['M', 'M']`,White,5504
 `[19, None]`,`[None, None]`,`['James T. Kirk', 'Spock']`,Star Trek: Alternate Original Series (Movies),`['M', 'M']`,White,5119
 `[20, None]`,`[None, None]`,`['Jack Harkness', 'Ianto Jones']`,Torchwood,`['M', 'M']`,White,5026
 `[21, None]`,`[None, None]`,`['James T. Kirk', 'Leonard McCoy']`,Star Trek: Alternate Original Series (Movies),`['M', 'M']`,White,4795
 `[22, None]`,`[None, None]`,`['James "Bucky" Barnes', 'Steve Rogers']`,Captain America (Movies),`['M', 'M']`,White,4614
 `[23, None]`,`[None, None]`,`['Allison Argent', 'Scott McCall']`,Teen Wolf (TV),`['F', 'M']`,POC/Whi,4600
-`[24, None]`,`[None, None]`,`['Harry Potter', 'Severus Snape']`,Harry PotterJ. K. Rowling,`['M', 'M']`,White,4540
+`[24, None]`,`[None, None]`,`['Harry Potter', 'Severus Snape']`,Harry Potter - J. K. Rowling,`['M', 'M']`,White,4540
 `[25, None]`,`[None, None]`,`['Clint Barton', 'Natasha Romanov']`,The Avengers (Marvel Movies),`['F', 'M']`,White,4518
 `[26, None]`,`[None, None]`,`['Loki', 'Thor']`,Thor (Movies),`['M', 'M']`,White,4494
 `[27, None]`,`[None, None]`,`['Zayn Malik', 'Liam Payne']`,One Direction (Band),`['M', 'M']`,POC/Whi,4462
 `[28, None]`,`[None, None]`,`['Gabriel', 'Sam Winchester']`,Supernatural,`['M', 'M']`,White,4288
 `[29, None]`,`[None, None]`,`['Arthur', 'Eames (Inception)']`,Inception (2010),`['M', 'M']`,White,4164
-`[30, None]`,`[None, None]`,`['Sirius Black', 'Remus Lupin']`,Harry PotterJ. K. Rowling,`['M', 'M']`,White,4144
+`[30, None]`,`[None, None]`,`['Sirius Black', 'Remus Lupin']`,Harry Potter - J. K. Rowling,`['M', 'M']`,White,4144
 `[31, None]`,`[None, None]`,`['Pepper Potts', 'Tony Stark']`,The Avengers (Marvel Movies),`['F', 'M']`,White,3876
 `[32, None]`,`[None, None]`,`['Loki', 'Tony Stark']`,The Avengers (Marvel Movies),`['M', 'M']`,White,3782
 `[33, None]`,`['New', None]`,`['Levi', 'Eren Yeager']`,Shingeki no Kyojin | Attack on Titan,`['M', 'M']`,White,3598
-`[34, None]`,`[None, None]`,`['Bilbo Baggins', 'Thorin Oakenshield']`,The HobbitAll Media Types,`['M', 'M']`,White,3446
+`[34, None]`,`[None, None]`,`['Bilbo Baggins', 'Thorin Oakenshield']`,The Hobbit - All Media Types,`['M', 'M']`,White,3446
 `[35, None]`,`[None, None]`,`['Frank Iero', 'Gerard Way']`,My Chemical Romance,`['M', 'M']`,White,3408
 `[36, None]`,`[None, None]`,`['Will Graham', 'Hannibal Lecter']`,Hannibal (TV),`['M', 'M']`,White,3217
 `[37, None]`,`[None, None]`,`['Mycroft Holmes', 'Greg Lestrade']`,Sherlock (TV),`['M', 'M']`,White,3000
@@ -40,7 +40,7 @@ Rank,Change,Relationship,Fandom,Type,Race,Total Works
 `[39, None]`,`[None, None]`,`['Ian Gallagher', 'Mickey Milkovich']`,Shameless (US),`['M', 'M']`,White,2930
 `[40, None]`,`[None, None]`,`['Benton Fraser', 'Ray Kowalski']`,due South,`['M', 'M']`,White,2839
 `[41, None]`,`[None, None]`,`['Daniel Jackson', 'Jack O"Neill']`,Stargate SG-1,`['M', 'M']`,White,2805
-`[42, None]`,`[None, None]`,`['Hermione Granger', 'Ron Weasley']`,Harry PotterJ. K. Rowling,`['F', 'M']`,White,2677
+`[42, None]`,`[None, None]`,`['Hermione Granger', 'Ron Weasley']`,Harry Potter - J. K. Rowling,`['F', 'M']`,White,2677
 `[43, None]`,`[None, None]`,`['Belle', 'Rumplestiltskin | Mr. Gold']`,Once Upon a Time (TV),`['F', 'M']`,White,2614
 `[44, None]`,`[None, None]`,`['James Bond', 'Q']`,Skyfall (2012),`['M', 'M']`,White,2560
 `[45, None]`,`[None, None]`,`['Mary Morstan', 'John Watson']`,Sherlock (TV),`['F', 'M']`,White,2535
@@ -50,7 +50,7 @@ Rank,Change,Relationship,Fandom,Type,Race,Total Works
 `[49, None]`,`[None, None]`,`['Niall Horan', 'Zayn Malik']`,One Direction (Band),`['M', 'M']`,POC/Whi,2386
 `[50, None]`,`[None, None]`,`['Lydia Martin', 'Jackson Whittemore']`,Teen Wolf (TV),`['F', 'M']`,White,2372
 `[51, None]`,`[None, None]`,`['Evil Queen | Regina Mills', 'Emma Swan']`,Once Upon a Time (TV),`['F', 'F']`,Amb/Whi,2359
-`[52, None]`,`[None, None]`,`['Katniss Everdeen', 'Peeta Mellark']`,Hunger Games TrilogySuzanne Collins,`['F', 'M']`,Amb/Whi,2280
+`[52, None]`,`[None, None]`,`['Katniss Everdeen', 'Peeta Mellark']`,Hunger Games Trilogy - Suzanne Collins,`['F', 'M']`,Amb/Whi,2280
 `[53, None]`,`[None, None]`,`['Niall Horan', 'Harry Styles']`,One Direction (Band),`['M', 'M']`,White,2264
 `[54, None]`,`[None, None]`,`['Spike', 'Buffy Summers']`,Buffy the Vampire Slayer,`['F', 'M']`,White,2232
 `[55, None]`,`['New', None]`,`['Sherlock Holmes', 'Molly Hooper']`,Sherlock (TV),`['F', 'M']`,White,2196
@@ -61,12 +61,12 @@ Rank,Change,Relationship,Fandom,Type,Race,Total Works
 `[60, None]`,`[None, None]`,`['Bruce Banner', 'Tony Stark']`,The Avengers (Marvel Movies),`['M', 'M']`,White,2129
 `[61, None]`,`[None, None]`,`['Isaac Lahey', 'Scott McCall']`,Teen Wolf (TV),`['M', 'M']`,POC/Whi,2060
 `[62, None]`,`[None, None]`,`['Vernon Boyd', 'Erica Reyes']`,Teen Wolf (TV),`['F', 'M']`,POC/Whi,1995
-`[63, None]`,`[None, None]`,`['Harry Potter', 'Ginny Weasley']`,Harry PotterJ. K. Rowling,`['F', 'M']`,White,1958
+`[63, None]`,`[None, None]`,`['Harry Potter', 'Ginny Weasley']`,Harry Potter - J. K. Rowling,`['F', 'M']`,White,1958
 `[64, None]`,`[None, None]`,`['Dean Winchester', 'Sam Winchester']`,Supernatural,Gen,White,1944
 `[65, None]`,`[None, None]`,`['Adam Lambert', 'Tommy Ratliff']`,Adam Lambert (Musician),`['M', 'M']`,White,1934
 `[66, None]`,`[None, None]`,`['Jessica Moore', 'Sam Winchester']`,Supernatural,`['F', 'M']`,White,1885
 `[67, None]`,`[None, None]`,`['Rose Lalonde', 'Kanaya Maryam']`,Homestuck,`['F', 'F']`,Ambig,1838
-`[68, None]`,`[None, None]`,`['Hermione Granger', 'Draco Malfoy']`,Harry PotterJ. K. Rowling,`['F', 'M']`,White,1834
+`[68, None]`,`[None, None]`,`['Hermione Granger', 'Draco Malfoy']`,Harry Potter - J. K. Rowling,`['F', 'M']`,White,1834
 `[69, None]`,`['New', None]`,`['Oliver Queen', 'Felicity Smoak']`,Arrow (TV 2012),`['F', 'M']`,White,1823
 `[70, None]`,`[None, None]`,`['Anthony DiNozzo', 'Jethro Gibbs']`,NCIS,`['M', 'M']`,White,1693
 `[71, None]`,`['New', None]`,`['Castiel', 'Dean Winchester']`,Supernatural,Gen,White,1640
@@ -85,8 +85,8 @@ Rank,Change,Relationship,Fandom,Type,Race,Total Works
 `[84, None]`,`[None, None]`,`['Castiel', 'Sam Winchester']`,Supernatural,`['M', 'M']`,White,1387
 `[85, None]`,`['New', None]`,`['Zayn Malik', 'Harry Styles']`,One Direction (Band),`['M', 'M']`,POC/Whi,1375
 `[86, None]`,`[None, None]`,`['Xander Harris', 'Spike']`,Buffy the Vampire Slayer,`['M', 'M']`,White,1371
-`[87, '=']`,`[None, None]`,`['James Potter', 'Lily Evans Potter']`,Harry PotterJ. K. Rowling,`['F', 'M']`,White,1366
-`[87, '=']`,`[None, None]`,`['Remus Lupin', 'Severus Snape']`,Harry PotterJ. K. Rowling,`['M', 'M']`,White,1366
+`[87, '=']`,`[None, None]`,`['James Potter', 'Lily Evans Potter']`,Harry Potter - J. K. Rowling,`['F', 'M']`,White,1366
+`[87, '=']`,`[None, None]`,`['Remus Lupin', 'Severus Snape']`,Harry Potter - J. K. Rowling,`['M', 'M']`,White,1366
 `[89, None]`,`[None, None]`,`['Patrick Stump', 'Pete Wentz']`,Fall Out Boy,`['M', 'M']`,POC/Whi,1354
 `[90, None]`,`['New', None]`,`['Patrick Kane', 'Jonathan Toews']`,Hockey RPF,`['M', 'M']`,White,1348
 `[91, None]`,`[None, None]`,`['Dave Strider', 'Karkat Vantas']`,Homestuck,`['M', 'M']`,Ambig,1335

@@ -39,7 +39,7 @@ def split_raw_data_2013_2014_and_2020_to_2023(filepath: str):
             else:
                 split_list = split(r" - ", string[:-1]) # splitting at the " - " separators
             if  "2013" in filepath and split_list[2] in books:
-                book = split_list[2] + split_list[3]
+                book = split_list[2] + " - " + split_list[3]
                 temp_list = []
                 temp_list.extend(split_list[:2])
                 temp_list.append(book)
@@ -56,14 +56,14 @@ def split_raw_data_2013_2014_and_2020_to_2023(filepath: str):
         elif "2014" in filepath:
             split_list = split(r" - ", string[:-1]) # splitting at the " - " separators
             if "2014_overall" in filepath and split_list[3] in books:
-                book = split_list[3] + split_list[4]
+                book = split_list[3] + " - " + split_list[4]
                 temp_list = []
                 temp_list.extend(split_list[:3])
                 temp_list.append(book)
                 temp_list.extend(split_list[5:])
                 split_list = temp_list
             elif "2014_femslash" in filepath and split_list[2] in books:
-                book = split_list[2] + split_list[3]
+                book = split_list[2] + " - " + split_list[3]
                 temp_list = []
                 temp_list.extend(split_list[:2])
                 temp_list.append(book)

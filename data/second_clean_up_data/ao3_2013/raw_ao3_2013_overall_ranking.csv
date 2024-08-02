@@ -8,7 +8,7 @@ Rank,Relationship,Fandom,Type,Total Works
 `[7, None]`,`['Harry Styles', 'Louis Tomlinson']`,One Direction (Band),`['M', 'M']`,6809
 `[8, None]`,`['Steve Rogers', 'Tony Stark']`,The Avengers (Marvel Movies),`['M', 'M']`,6681
 `[9, None]`,`['Jim Ellison', 'Blair Sandburg']`,The Sentinel,`['M', 'M']`,6660
-`[10, None]`,`['Draco Malfoy', 'Harry Potter']`,Harry PotterJ. K. Rowling,`['M', 'M']`,6107
+`[10, None]`,`['Draco Malfoy', 'Harry Potter']`,Harry Potter - J. K. Rowling,`['M', 'M']`,6107
 `[11, None]`,`['Clark Kent', 'Lex Luthor']`,Smallville,`['M', 'M']`,5879
 `[12, None]`,`['Blaine Anderson', 'Kurt Hummel']`,Glee,`['M', 'M']`,5483
 `[13, None]`,`['Sherlock Holmes', 'John Watson']`,Sherlock (TV),Gen,5072
@@ -19,12 +19,12 @@ Rank,Relationship,Fandom,Type,Total Works
 `[18, None]`,`['Jack Harkness', 'Ianto Jones']`,Torchwood,`['M', 'M']`,3796
 `[19, None]`,`['Clint Barton', 'Phil Coulson']`,The Avengers (Marvel Movies),`['M', 'M']`,3721
 `[20, None]`,`['Arthur', 'Eames (Inception)']`,Inception (2010),`['M', 'M']`,3645
-`[21, None]`,`['Sirius Black', 'Remus Lupin']`,Harry PotterJ. K. Rowling,`['M', 'M']`,3334
+`[21, None]`,`['Sirius Black', 'Remus Lupin']`,Harry Potter - J. K. Rowling,`['M', 'M']`,3334
 `[22, None]`,`['James T. Kirk', 'Leonard McCoy']`,Star Trek: Alternate Original Series (Movies),`['M', 'M']`,3140
-`[23, None]`,`['Enjolras', 'Grantaire']`,Les MisérablesAll Media Types,`['M', 'M']`,3041
+`[23, None]`,`['Enjolras', 'Grantaire']`,Les Misérables - All Media Types,`['M', 'M']`,3041
 `[24, None]`,`['Clint Barton', 'Natasha Romanov']`,The Avengers (Marvel Movies),`['F', 'M']`,3017
 `[25, None]`,`['James T. Kirk', 'Spock']`,Star Trek: Alternate Original Series (Movies),`['M', 'M']`,2995
-`[26, None]`,`['Harry Potter', 'Severus Snape']`,Harry PotterJ. K. Rowling,`['M', 'M']`,2930
+`[26, None]`,`['Harry Potter', 'Severus Snape']`,Harry Potter - J. K. Rowling,`['M', 'M']`,2930
 `[27, None]`,`['Loki', 'Thor']`,Thor (Movies),`['M', 'M']`,2921
 `[28, None]`,`['Allison Argent', 'Scott McCall']`,Teen Wolf (TV),`['F', 'M']`,2855
 `[29, None]`,`['Gabriel', 'Sam Winchester']`,Supernatural,`['M', 'M']`,2730
@@ -39,7 +39,7 @@ Rank,Relationship,Fandom,Type,Total Works
 `[38, None]`,`['John Egbert', 'Dave Strider']`,Homestuck,`['M', 'M']`,2200
 `[39, None]`,`['Bilbo Baggins', 'Thorin Oakenshield']`,The Hobbit (Jackson movies),`['M', 'M']`,1973
 `[40, None]`,`['The Doctor', 'River Song']`,Doctor Who (2005),`['F', 'M']`,1925
-`[41, None]`,`['Hermione Granger', 'Ron Weasley']`,Harry PotterJ. K. Rowling,`['F', 'M']`,1845
+`[41, None]`,`['Hermione Granger', 'Ron Weasley']`,Harry Potter - J. K. Rowling,`['F', 'M']`,1845
 `[42, None]`,`['Spike', 'Buffy Summers']`,Buffy the Vampire Slayer,`['F', 'M']`,1840
 `[43, None]`,`['James Bond', 'Q']`,Skyfall (2012),`['M', 'M']`,1750
 `[44, None]`,`['Adam Lambert', 'Tommy Ratliff']`,Adam Lambert (Musician),`['M', 'M']`,1746
@@ -51,10 +51,10 @@ Rank,Relationship,Fandom,Type,Total Works
 `[50, None]`,`['Kris Allen', 'Adam Lambert']`,American Idol RPF,`['M', 'M']`,1550
 `[51, None]`,`['Lydia Martin', 'Jackson Whittemore']`,Teen Wolf (TV),`['F', 'M']`,1539
 `[52, None]`,`['Sebastian Moran', 'Jim Moriarty']`,Sherlock (TV),`['M', 'M']`,1516
-`[53, None]`,`['Katniss Everdeen', 'Peeta Mellark']`,Hunger Games TrilogySuzanne Collins,`['F', 'M']`,1432
-`[54, None]`,`['Harry Potter', 'Ginny Weasley']`,Harry PotterJ. K. Rowling,`['F', 'M']`,1380
+`[53, None]`,`['Katniss Everdeen', 'Peeta Mellark']`,Hunger Games Trilogy - Suzanne Collins,`['F', 'M']`,1432
+`[54, None]`,`['Harry Potter', 'Ginny Weasley']`,Harry Potter - J. K. Rowling,`['F', 'M']`,1380
 `[55, None]`,`['Anthony DiNozzo', 'Jethro Gibbs']`,NCIS,`['M', 'M']`,1362
-`[56, None]`,`['Hermione Granger', 'Draco Malfoy']`,Harry PotterJ. K. Rowling,`['F', 'M']`,1345
+`[56, None]`,`['Hermione Granger', 'Draco Malfoy']`,Harry Potter - J. K. Rowling,`['F', 'M']`,1345
 `[57, None]`,`['Santana Lopez', 'Brittany S. Pierce']`,Glee,`['F', 'F']`,1344
 `[58, None]`,`['Brian Kinney', 'Justin Taylor']`,Queer as Folk (US),`['M', 'M']`,1316
 `[59, None]`,`['Tenth Doctor', 'Rose Tyler']`,Doctor Who (2005),`['F', 'M']`,1294
@@ -70,18 +70,18 @@ Rank,Relationship,Fandom,Type,Total Works
 `[69, None]`,`['William Bodie', 'Ray Doyle']`,The Professionals,`['M', 'M']`,1078
 `[70, None]`,`['Mike Ross', 'Harvey Specter']`,Suits (TV),`['M', 'M']`,1072
 `[71, None]`,`['Dean Winchester', 'Sam Winchester']`,Supernatural,Gen,1067
-`[72, None]`,`['Lily Evans Potter', 'James Potter']`,Harry PotterJ. K. Rowling,`['F', 'M']`,1049
+`[72, None]`,`['Lily Evans Potter', 'James Potter']`,Harry Potter - J. K. Rowling,`['F', 'M']`,1049
 `[73, None]`,`['Niall Horan', 'Harry Styles']`,One Direction (Band),`['M', 'M']`,1037
 `[74, None]`,`['John Egbert', 'Karkat Vantas']`,Homestuck,`['M', 'M']`,1032
-`[75, None]`,`['Edward Cullen', 'Bella Swan']`,Twilight SeriesStephenie Meyer,`['F', 'M']`,1027
+`[75, None]`,`['Edward Cullen', 'Bella Swan']`,Twilight Series - Stephenie Meyer,`['F', 'M']`,1027
 `[76, None]`,`['James "Bucky" Barnes', 'Steve Rogers']`,Captain America (Movies),`['M', 'M']`,1016
 `[77, None]`,`['Spock', 'Nyota Uhura']`,Star Trek: Alternate Original Series (Movies),`['F', 'M']`,1016
 `[78, None]`,`['Evil Queen | Regina Mills', 'Emma Swan']`,Once Upon a Time (TV),`['F', 'F']`,1005
 `[79, None]`,`['Jake English', 'Dirk Strider']`,Homestuck,`['M', 'M']`,1001
 `[80, None]`,`['Jessica Moore', 'Sam Winchester']`,Supernatural,`['F', 'M']`,993
-`[81, None]`,`['Remus Lupin', 'Severus Snape']`,Harry PotterJ. K. Rowling,`['M', 'M']`,971
+`[81, None]`,`['Remus Lupin', 'Severus Snape']`,Harry Potter - J. K. Rowling,`['M', 'M']`,971
 `[82, None]`,`['Mary Morstan', 'John Watson']`,Sherlock (TV),`['F', 'M']`,954
-`[83, None]`,`['Hermione Granger', 'Severus Snape']`,Harry PotterJ. K. Rowling,`['F', 'M']`,950
+`[83, None]`,`['Hermione Granger', 'Severus Snape']`,Harry Potter - J. K. Rowling,`['F', 'M']`,950
 `[84, None]`,`['Clark Kent', 'Bruce Wayne']`,DCU (Comics),`['M', 'M']`,923
 `[85, None]`,`['Fíli', 'Kíli']`,The Hobbit (Jackson movies),`['M', 'M']`,918
 `[86, None]`,`['Agron', 'Nasir']`,Spartacus Series (TV),`['M', 'M']`,890
@@ -99,11 +99,11 @@ Rank,Relationship,Fandom,Type,Total Works
 `[98, None]`,`['Liam Payne', 'Louis Tomlinson']`,One Direction (Band),`['M', 'M']`,801
 `[99, None]`,`['Ian Gallagher', 'Mickey Milkovich']`,Shameless (US),`['M', 'M']`,796
 `[100, None]`,`['Lucifer', 'Sam Winchester']`,Supernatural,`['M', 'M']`,791
-`[101, None]`,`['Courfeyrac', 'Jean Prouvaire']`,Les MisérablesAll Media Types,`['M', 'M']`,782
+`[101, None]`,`['Courfeyrac', 'Jean Prouvaire']`,Les Misérables - All Media Types,`['M', 'M']`,782
 `[102, None]`,`['Tim Drake', 'Jason Todd']`,DCU (Comics),`['M', 'M']`,755
-`[103, None]`,`['Cosette Fauchelevent', 'Marius Pontmercy']`,Les MisérablesAll Media Types,`['F', 'M']`,750
+`[103, None]`,`['Cosette Fauchelevent', 'Marius Pontmercy']`,Les Misérables - All Media Types,`['F', 'M']`,750
 `[104, None]`,`['Sherlock Holmes', 'Molly Hooper']`,Sherlock (TV),`['F', 'M']`,748
-`[105, None]`,`['Frodo Baggins', 'Sam Gamgee']`,The Lord of the RingsJ. R. R. Tolkien,`['M', 'M']`,742
+`[105, None]`,`['Frodo Baggins', 'Sam Gamgee']`,The Lord of the Rings - J. R. R. Tolkien,`['M', 'M']`,742
 `[106, None]`,`['Castiel', 'Dean Winchester']`,Supernatural,Gen,732
 `[107, None]`,`['Chris Pine', 'Zachary Quinto']`,Star Trek RPF,`['M', 'M']`,730
 `[108, None]`,`['Hatake Kakashi', 'Umino Iruka']`,Naruto,`['M', 'M']`,728
@@ -121,7 +121,7 @@ Rank,Relationship,Fandom,Type,Total Works
 `[120, None]`,`['Brad Colbert', 'Nate Fick']`,Generation Kill,`['M', 'M']`,675
 `[121, None]`,`['Gamzee Makara', 'Tavros Nitram']`,Homestuck,`['M', 'M']`,673
 `[122, None]`,`['Sauli Koskinen', 'Adam Lambert']`,Adam Lambert (Musician),`['M', 'M']`,671
-`[123, None]`,`['Harry Potter', 'Ron Weasley']`,Harry PotterJ. K. Rowling,`['M', 'M']`,663
+`[123, None]`,`['Harry Potter', 'Ron Weasley']`,Harry Potter - J. K. Rowling,`['M', 'M']`,663
 `[124, None]`,`['Kurt Hummel', 'David Karofsky']`,Glee,`['M', 'M']`,662
 `[125, None]`,`['Duncan MacLeod', 'Methos']`,Highlander: The Series,`['M', 'M']`,657
 `[126, None]`,`['Qui-Gon Jinn', 'Obi-Wan Kenobi']`,Star Wars Episode I: The Phantom Menace,`['M', 'M']`,656
@@ -130,14 +130,14 @@ Rank,Relationship,Fandom,Type,Total Works
 `[129, None]`,`['Jade Harley', 'Dave Strider']`,Homestuck,`['F', 'M']`,637
 `[130, None]`,`['Eridan Ampora', 'Sollux Captor']`,Homestuck,`['M', 'M']`,631
 `[131, None]`,`['Female Shepard', 'Garrus Vakarian']`,Mass Effect,`['F', 'M']`,627
-`[132, None]`,`['Arya Stark', 'Gendry Waters']`,A Song of Ice and FireGeorge R. R. Martin,`['F', 'M']`,609
+`[132, None]`,`['Arya Stark', 'Gendry Waters']`,A Song of Ice and Fire - George R. R. Martin,`['F', 'M']`,609
 `[133, None]`,`['Harold Finch', 'John Reese']`,Person of Interest (TV),`['M', 'M']`,609
 `[134, None]`,`['Niall Horan', 'Liam Payne']`,One Direction (Band),`['M', 'M']`,609
 `[135, None]`,`['William Adama', 'Laura Roslin']`,Battlestar Galactica (2003),`['F', 'M']`,604
 `[136, None]`,`['Gene Hunt', 'Sam Tyler']`,Life on Mars (UK),`['M', 'M']`,601
 `[137, None]`,`['Lizzie Bennet', 'William Darcy']`,Lizzie Bennet Diaries,`['F', 'M']`,599
 `[138, None]`,`['Tenth Doctor (duplicate)', 'Rose Tyler']`,Doctor Who (2005),`['F', 'M']`,596
-`[139, None]`,`['Aziraphale', 'Crowley']`,Good OmensNeil Gaiman & Terry Pratchett,`['M', 'M']`,593
+`[139, None]`,`['Aziraphale', 'Crowley']`,Good Omens - Neil Gaiman & Terry Pratchett,`['M', 'M']`,593
 `[140, None]`,`['Aaron Hotchner', 'Spencer Reid']`,Criminal Minds,`['M', 'M']`,590
 `[141, None]`,`['Bradley James', 'Colin Morgan']`,Merlin (TV) RPF,`['M', 'M']`,588
 `[142, None]`,`['Lee Adama', 'Kara Thrace']`,Battlestar Galactica (2003),`['F', 'M']`,572
@@ -146,7 +146,7 @@ Rank,Relationship,Fandom,Type,Total Works
 `[145, None]`,`['Peter Hale', 'Stiles Stilinski']`,Teen Wolf (TV),`['M', 'M']`,562
 `[146, None]`,`['Kaidan Alenko', 'Male Shepard']`,Mass Effect,`['M', 'M']`,560
 `[147, None]`,`['Clark Kent', 'Lois Lane']`,Smallville,`['F', 'M']`,551
-`[148, None]`,`['Sandor Clegane', 'Sansa Stark']`,A Song of Ice and FireGeorge R. R. Martin,`['F', 'M']`,549
+`[148, None]`,`['Sandor Clegane', 'Sansa Stark']`,A Song of Ice and Fire - George R. R. Martin,`['F', 'M']`,549
 `[149, None]`,`['Kurt Hummel', 'Sebastian Smythe']`,Glee,`['M', 'M']`,548
 `[150, None]`,`['Edward Elric', 'Winry Rockbell']`,Fullmetal Alchemist,`['F', 'M']`,547
 `[151, None]`,`['Sheldon Cooper', 'Penny']`,The Big Bang Theory (TV),`['F', 'M']`,542
@@ -154,7 +154,7 @@ Rank,Relationship,Fandom,Type,Total Works
 `[153, None]`,`['Axel', 'Roxas']`,Kingdom Hearts,`['M', 'M']`,537
 `[154, None]`,`['Duo Maxwell', 'Heero Yuy']`,Gundam Wing,`['M', 'M']`,527
 `[155, None]`,`['Akanishi Jin', 'Kamenashi Kazuya']`,KAT-TUN (Band),`['M', 'M']`,525
-`[156, None]`,`['Javert', 'Jean Valjean']`,Les MisérablesAll Media Types,`['M', 'M']`,525
+`[156, None]`,`['Javert', 'Jean Valjean']`,Les Misérables - All Media Types,`['M', 'M']`,525
 `[157, None]`,`['Zayn Malik', 'Louis Tomlinson']`,One Direction (Band),`['M', 'M']`,519
 `[158, None]`,`['Ninth Doctor', 'Rose Tyler']`,Doctor Who (2005),`['F', 'M']`,515
 `[159, None]`,`['Dick Grayson', 'Bruce Wayne']`,Batman (Comics),`['M', 'M']`,511
