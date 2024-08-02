@@ -71,8 +71,6 @@ def collect_characters_by_fandoms():
         dump(fandom_characters, json_file, indent=4)
     
                     
-
-
 if __name__ == "__main__":
     collect_all_fandoms()
     collect_all_characters()
