@@ -31,7 +31,7 @@ Rank,Change,Pairing,Fandom,Works,Race
 30,-9,`['Anna', 'Elsa (Frozen)']`,Frozen (2013),976,White
 31,-8,`['Tara Maclay', 'Willow Rosenberg']`,Buffy the Vampire Slayer,934,White
 32,-6,`['Sansa Stark', 'Margaery Tyrell']`,Game of Thrones (TV),909,White
-33,-5,`['Ashlyn Harris', 'Ali Krieger']`,Women’s Soccer RPF,870,White
+33,-5,`['Ashlyn Harris', 'Ali Krieger']`,Women"s Soccer RPF,870,White
 34,-9,`['Gwen', 'Morgana (Merlin)']`,Merlin (TV),863,Whi/POC
 35,4,`['Ruby', 'Sapphire']`,Steven Universe (Cartoon),856,Ambig
 36,-12,`['Pepper Potts', 'Natasha Romanov']`,The Avengers (Marvel Movies),845,White
@@ -40,7 +40,7 @@ Rank,Change,Pairing,Fandom,Works,Race
 39,-10,`['Terezi Pyrope', 'Vriska Serket']`,Homestuck,805,Ambig
 40,33,`['Clary Fray', 'Isabelle Lightwood']`,Shadowhunters (TV),804,Whi/POC
 41,-10,`['Pacifica Northwest', 'Mabel Pines']`,Gravity Falls,796,White
-42,N,`['Maria Reynolds', 'Elizabeth "Eliza" Schuyler']`,Hamilton – Miranda,791,POC
+42,N,`['Maria Reynolds', 'Elizabeth "Eliza" Schuyler']`,Hamilton,791,POC
 43,-9,`['Maria Hill', 'Natasha Romanov']`,Marvel Cinematic Universe,762,White
 44,-7,`['Pearl', 'Rose Quartz (Steven Universe)']`,Steven Universe (Cartoon),761,Ambig
 45,-12,`['Faith Lehane', 'Buffy Summers']`,Buffy the Vampire Slayer,760,White
@@ -58,7 +58,7 @@ Rank,Change,Pairing,Fandom,Works,Race
 57,-19,`['Jane Crocker', 'Roxy Lalonde']`,Homestuck,593,Ambig
 58,-12,`['Octavia Blake', 'Raven Reyes']`,The 100 (TV),590,Whi/POC
 59,-12,`['Charlie Bradbury', 'Jo Harvelle']`,Supernatural,584,White
-60,-20,`['Tobin Heath', 'Alex Morgan']`,Women’s Soccer RPF,577,White
+60,-20,`['Tobin Heath', 'Alex Morgan']`,Women"s Soccer RPF,577,White
 61,27,`['Maya Hart', 'Riley Matthews']`,Girl Meets World,567,White
 62,N,`['Betty Cooper', 'Veronica Lodge']`,Riverdale (TV 2017),533,Whi/POC
 63,-6,`['Cosette Fauchelevent', 'Éponine Thénardier']`,Les Misérables - All Media Types,522,White
@@ -72,9 +72,9 @@ Rank,Change,Pairing,Fandom,Works,Race
 71,-11,`['Female Inquisitor', 'Josephine Montilyet']`,Dragon Age: Inquisition,476,Amb/POC
 72,-4,`['Female Inquisitor', 'Sera']`,Dragon Age: Inquisition,473,Whi/Amb
 73,-18,`['Belle', 'Red Riding Hood | Ruby']`,Once Upon a Time (TV),464,White
-74,-20,`['Kelley O"Hara', 'Hope Solo']`,Women’s Soccer RPF,463,White
+74,-20,`['Kelley O"Hara', 'Hope Solo']`,Women"s Soccer RPF,463,White
 75=,10,`['Camila Cabello', 'Lauren Jauregui']`,Fifth Harmony (Band),460,POC
-75=,N,`['Tobin Heath', 'Christen Press']`,Women’s Soccer RPF,460,Whi/POC
+75=,N,`['Tobin Heath', 'Christen Press']`,Women"s Soccer RPF,460,Whi/POC
 77,-28,`['Kahlan Amnell', 'Cara Mason']`,Legend of the Seeker,455,White
 78,-13,`['Dorothy Baum', 'Charlie Bradbury']`,Supernatural,453,White
 79,-20,`['Cora Hale', 'Lydia Martin']`,Teen Wolf (TV),452,White
@@ -86,7 +86,7 @@ Rank,Change,Pairing,Fandom,Works,Race
 85,-24,`['Gail Peck', 'Holly Stewart']`,Rookie Blue,430,White
 86,-28,`['Kanaya Maryam', 'Vriska Serket']`,Homestuck,429,Ambig
 87,-23,`['Clarke Griffin', 'Raven Reyes']`,The 100 (TV),421,Whi/POC
-88,-19,`['Arizona Robbins', 'Calliope "Callie" Torres']`,Grey’s Anatomy,414,Whi/POC
+88,-19,`['Arizona Robbins', 'Calliope "Callie" Torres']`,Grey"s Anatomy,414,Whi/POC
 89,N,`['Carol Aird', 'Therese Belivet']`,Carol (2015),404,White
 90,4,`['Costia', 'Lexa (The 100)']`,The 100 (TV),399,Whi/Amb
 91,-29,`['Bo', 'Lauren']`,Lost Girl,397,White

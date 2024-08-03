@@ -26,7 +26,7 @@ Rank,Change,Relationship,Fandom,Total Works,Race
 `[25, None]`,`['-', 7]`,`['Gwen', 'Morgana (Merlin)']`,Merlin (TV),774,Whi/POC
 `[26, None]`,`['-', 1]`,`['Sansa Stark', 'Margaery Tyrell']`,Game of Thrones (TV),712,White
 `[27, None]`,`['-', 5]`,`['Miranda Priestly', 'Andrea Sachs']`,The Devil Wears Prada (2006),700,White
-`[28, None]`,`['+', 21]`,`['Ashlyn Harris', 'Ali Krieger']`,Women’s Soccer RPF,695,White
+`[28, None]`,`['+', 21]`,`['Ashlyn Harris', 'Ali Krieger']`,Women"s Soccer RPF,695,White
 `[29, None]`,`['-', 6]`,`['Terezi Pyrope', 'Vriska Serket']`,Homestuck,691,Ambig
 `[30, None]`,`['-', 2]`,`['Female Shepard', 'Liara T"Soni']`,Mass Effect,672,Ambig
 `[31, None]`,`['+', 44]`,`['Pacifica Northwest', 'Mabel Pines']`,Gravity Falls,665,White
@@ -38,7 +38,7 @@ Rank,Change,Relationship,Fandom,Total Works,Race
 `[37, None]`,`['New', None]`,`['Pearl', 'Rose Quartz']`,Steven Universe (Cartoon),560,Ambig
 `[38, None]`,`['-', 11]`,`['Jane Crocker', 'Roxy Lalonde']`,Homestuck,558,Ambig
 `[39, None]`,`['New', None]`,`['Ruby', 'Sapphire']`,Steven Universe (Cartoon),557,Ambig
-`[40, None]`,`['+', 21]`,`['Tobin Heath', 'Alex Morgan']`,Women’s Soccer RPF,524,White
+`[40, None]`,`['+', 21]`,`['Tobin Heath', 'Alex Morgan']`,Women"s Soccer RPF,524,White
 `[41, None]`,`['New', None]`,`['Shimizu Kiyoko', 'Yachi Hitoka']`,Haikyuu!!,504,POC
 `[42, None]`,`['New', None]`,`['Waverly Earp', 'Nicole Haught']`,Wynonna Earp (TV),500,White
 `[43, None]`,`['-', 7]`,`['Female Hawke', 'Isabela']`,Dragon Age II,493,Amb/POC
@@ -52,7 +52,7 @@ Rank,Change,Relationship,Fandom,Total Works,Race
 `[51, None]`,`['-', 21]`,`['Rachel Berry', 'Santana Lopez']`,Glee,423,Whi/POC
 `[52, None]`,`['New', None]`,`['Lapis Lazuli', 'Peridot']`,Steven Universe (Cartoon),421,Ambig
 `[53, None]`,`['New', None]`,`['Amethyst', 'Pearl (Steven Universe)']`,Steven Universe (Cartoon),418,Ambig
-`[54, None]`,`['+', 44]`,`['Kelley O"Hara', 'Hope Solo']`,Women’s Soccer RPF,413,White
+`[54, None]`,`['+', 44]`,`['Kelley O"Hara', 'Hope Solo']`,Women"s Soccer RPF,413,White
 `[55, None]`,`['-', 3]`,`['Belle', 'Red Riding Hood | Ruby']`,Once Upon a Time (TV),412,White
 `[56, None]`,`['-', 8]`,`['Kaiou Michiru', 'Tenoh Haruka']`,Bishoujo Senshi Sailor Moon | Pretty Guardian Sailor Moon,410,POC
 `[57, None]`,`['-', 19]`,`['Cosette Fauchelevent', 'Éponine Thénardier']`,Les Misérables - All Media Types,407,White
@@ -67,7 +67,7 @@ Rank,Change,Relationship,Fandom,Total Works,Race
 `[66, '=']`,`['-', 16]`,`['Gabrielle', 'Xena']`,Xena: Warrior Princess,367,White
 `[66, '=']`,`['-', 12]`,`['Jennifer "JJ" Jareau', 'Emily Prentiss']`,Criminal Minds,367,White
 `[68, None]`,`['New', None]`,`['Female Inquisitor', 'Sera']`,Dragon Age: Inquisition,362,Whi/Amb
-`[69, None]`,`['-', 22]`,`['Arizona Robbins', 'Calliope "Callie" Torres']`,Grey’s Anatomy,356,Whi/POC
+`[69, None]`,`['-', 22]`,`['Arizona Robbins', 'Calliope "Callie" Torres']`,Grey"s Anatomy,356,Whi/POC
 `[70, None]`,`['-', 26]`,`['Sam Carter', 'Janet Fraiser']`,Stargate SG-1,346,White
 `[71, None]`,`['-', 18]`,`['Jade Harley', 'Rose Lalonde']`,Homestuck,343,Ambig
 `[72, None]`,`['-', 21]`,`['Jenny Flint', 'Madame Vastra']`,Doctor Who (2005),336,Whi/Amb

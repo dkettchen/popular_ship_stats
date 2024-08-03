@@ -45,9 +45,9 @@ Rank,Change,Relationship,Fandom,Total Works,Release Date
 `[44, None]`,`['-', 16]`,`['Sam Carter', 'Janet Fraiser']`,Stargate SG-1,302,1997 Aug 15
 `[45, None]`,`['-', 8]`,`['Princess Bubblegum', 'Marceline']`,Adventure Time,296,2010 May 17
 `[46, None]`,`['-', 16]`,`['Alicia Florrick', 'Kalinda Sharma']`,The Good Wife (TV),293,2009 Sep 22
-`[47, None]`,`['-', 18]`,`['Arizona Robbins', 'Calliope "Callie" Torres']`,Grey’s Anatomy,290,2009 Jan 08
+`[47, None]`,`['-', 18]`,`['Arizona Robbins', 'Calliope "Callie" Torres']`,Grey"s Anatomy,290,2009 Jan 08
 `[48, None]`,`['New', None]`,`['Kaiou Michiru', 'Tenoh Haruka']`,Bishoujo Senshi Sailor Moon | Pretty Guardian Sailor Moon,286,2000 Jun 06
-`[49, None]`,`['-', 17]`,`['Ashlyn Harris', 'Ali Krieger']`,Women’s Soccer RPF,283,2013 Mar 11
+`[49, None]`,`['-', 17]`,`['Ashlyn Harris', 'Ali Krieger']`,Women"s Soccer RPF,283,2013 Mar 11
 `[50, None]`,`['-', 17]`,`['Gabrielle', 'Xena']`,Xena: Warrior Princess,277,1995 Sep 04
 `[51, None]`,`['-', 5]`,`['Jenny Flint', 'Madame Vastra']`,Doctor Who (2005),272,2011 Jun 04
 `[52, None]`,`['-', 10]`,`['Belle', 'Red Riding Hood | Ruby']`,Once Upon a Time (TV),271,2012 Feb 12
@@ -59,7 +59,7 @@ Rank,Change,Relationship,Fandom,Total Works,Release Date
 `[58, '=']`,`['New', None]`,`['Brenda Leigh Johnson', 'Sharon Raydor']`,The Closer,240,2009 Jun 22
 `[58, '=']`,`['-', 18]`,`['Luna Lovegood', 'Ginny Weasley']`,Harry Potter - J. K. Rowling,240,2003 Jun 21
 `[60, None]`,`['New', None]`,`['Tori Vega', 'Jade West']`,Victorious,239,2010 Mar 27
-`[61, None]`,`['-', 23]`,`['Tobin Heath', 'Alex Morgan']`,Women’s Soccer RPF,236,2010 Mar 31
+`[61, None]`,`['-', 23]`,`['Tobin Heath', 'Alex Morgan']`,Women"s Soccer RPF,236,2010 Mar 31
 `[62, None]`,`['-', 14]`,`['Akemi Homura', 'Kaname Madoka']`,Mahou Shoujo Madoka Magika | Puella Magi Madoka Magica,233,2011 Jan 06
 `[63, '=']`,`['New', None]`,`['Meenah Peixes', 'Aranea Serket']`,Homestuck,229,2012 Mar 26
 `[63, '=']`,`['New', None]`,`['Piper Chapman', 'Alex Vause']`,Orange is the New Black,229,2013 Jul 11
@@ -96,7 +96,7 @@ Rank,Change,Relationship,Fandom,Total Works,Release Date
 `[95, '=']`,`['New', None]`,`['Clara', 'Harry Watson']`,Sherlock (TV),151,2010 Jul 25
 `[95, '=']`,`['New', None]`,`['Erica Davidson', 'Franky Doyle']`,Wentworth (TV),151,2013 May 01
 `[97, None]`,`['New', None]`,`['Kim Possible', 'Shego']`,Kim Possible (Cartoon),150,2002 Jun 14
-`[98, '=']`,`['New', None]`,`['Kelley O"Hara', 'Hope Solo']`,Women’s Soccer RPF,149,2010 Mar 31
+`[98, '=']`,`['New', None]`,`['Kelley O"Hara', 'Hope Solo']`,Women"s Soccer RPF,149,2010 Mar 31
 `[98, '=']`,`['New', None]`,`['Hermione Granger', 'Pansy Parkinson']`,Harry Potter - J. K. Rowling,149,1997 Jun 26
 `[100, '=']`,`['New', None]`,`['Annabeth Chase', 'Piper McLean']`,Percy Jackson and the Olympians - Rick Riordan,143,2010 Oct 12
 `[100, '=']`,`['New', None]`,`['Naomi Campbell', 'Emily Fitch']`,Skins (UK),143,2009 Jan 22

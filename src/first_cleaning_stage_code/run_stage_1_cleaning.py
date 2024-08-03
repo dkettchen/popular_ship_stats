@@ -8,6 +8,8 @@ def escape_apostrophes(data_list):
     """
     replaces any apostrophes with and any non-standard double quotes 
     with normal double quotes to prevent formatting errors
+
+    it also fixes a bunch of other formatting-problem-causing symbols etc
     """
 
     for column in range(len(data_list[0])):
@@ -28,6 +30,9 @@ def escape_apostrophes(data_list):
                 new_character = sub(r'“', '"', character) 
                 new_character_2 = sub(r'”', '"', new_character) 
                 new_pairing.append(new_character_2)
+            elif '’' in character:
+                new_character = sub(r'’', '"', character)
+                new_pairing.append(new_character)
             else: new_pairing.append(character)
         temp_row.append(new_pairing)
 
@@ -39,6 +44,12 @@ def escape_apostrophes(data_list):
             new_fandom = sub(r'“', '"', row[fandom_index]) 
             new_fandom_2 = sub(r'”', '"', new_fandom) 
             temp_row.append(new_fandom_2)
+        elif '’' in row[fandom_index]:
+            new_fandom = sub(r'’', '"', row[fandom_index])
+            temp_row.append(new_fandom)
+        elif "–" in row[fandom_index]:
+            new_fandom = sub(r' – Miranda', '', row[fandom_index])
+            temp_row.append(new_fandom)
         else: temp_row.append(row[fandom_index])
 
         temp_row.extend(row[fandom_index+1:])

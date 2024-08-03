@@ -50,8 +50,6 @@ def collect_characters_by_fandoms():
 
         for row in data_list:
             if row["Fandom"] in loaded_fandom_dict["all_unformated_fandoms"]:
-                if row["Fandom"] == "BTS":
-                    print(row, path)
                 for character in row["Relationship"]:
                     if "(" in character:    #removing parenthesis-caused doubles
                                             # bc we don't need the parentheses, 
@@ -69,8 +67,8 @@ def collect_characters_by_fandoms():
 
     with open("data/reference_and_test_files/full_characters_per_fandom.json", "w") as json_file:
         dump(fandom_characters, json_file, indent=4)
-    
-                    
+
+
 if __name__ == "__main__":
     collect_all_fandoms()
     collect_all_characters()
