@@ -1,0 +1,1587 @@
+{
+    "RPF": {
+        "5 Seconds of Summer": {
+            "Fandom": "5 Seconds of Summer",
+            "Type": "Music RPF",
+            "OP Versions": [
+                "5 Seconds of Summer (Band)"
+            ]
+        },
+        "Adam Lambert": {
+            "Fandom": "Adam Lambert",
+            "Type": "Music RPF",
+            "OP Versions": [
+                "Adam Lambert (Musician)"
+            ]
+        },
+        "American Idol": {
+            "Fandom": "American Idol",
+            "Type": "Unscripted TV RPF",
+            "OP Versions": [
+                "American Idol RPF"
+            ]
+        },
+        "Bangtan Boys / BTS": {
+            "Fandom": "Bangtan Boys / BTS",
+            "Type": "Music RPF",
+            "OP Versions": [
+                "Bangtan Boys | BTS"
+            ]
+        },
+        "Doctor Who": {
+            "Fandom": "Doctor Who",
+            "Type": "Actor RPF",
+            "OP Versions": [
+                "Doctor Who RPF"
+            ]
+        },
+        "Drag": {
+            "Fandom": "Drag",
+            "Type": "Unscripted TV RPF",
+            "OP Versions": [
+                "RuPaul's Drag Race (US) RPF",
+                "RuPaul's Drag Race RPF"
+            ]
+        },
+        "EXO": {
+            "Fandom": "EXO",
+            "Type": "Music RPF",
+            "OP Versions": [
+                "EXO (Band)",
+                "Fall Out Boy"
+            ]
+        },
+        "Fifth Harmony": {
+            "Fandom": "Fifth Harmony",
+            "Type": "Music RPF",
+            "OP Versions": [
+                "Fifth Harmony (Band)"
+            ]
+        },
+        "Figure Skating": {
+            "Fandom": "Figure Skating",
+            "Type": "Sports RPF",
+            "OP Versions": [
+                "Figure Skating RPF"
+            ]
+        },
+        "Grandmaster of Demonic Cultivation / The Untamed | \u9b54\u9053\u7956\u5e08 / \u9648\u60c5\u4ee4": {
+            "Fandom": "Grandmaster of Demonic Cultivation / The Untamed | \u9b54\u9053\u7956\u5e08 / \u9648\u60c5\u4ee4",
+            "Type": "Actor RPF",
+            "OP Versions": [
+                "\u9648\u60c5\u4ee4 | The Untamed (TV) RPF"
+            ]
+        },
+        "Hockey": {
+            "Fandom": "Hockey",
+            "Type": "Sports RPF",
+            "OP Versions": [
+                "Hockey RPF"
+            ]
+        },
+        "KAT-TUN": {
+            "Fandom": "KAT-TUN",
+            "Type": "Music RPF",
+            "OP Versions": [
+                "KAT-TUN (Band)"
+            ]
+        },
+        "Lord of the Rings": {
+            "Fandom": "Lord of the Rings",
+            "Type": "Actor RPF",
+            "OP Versions": [
+                "Lord of the Rings RPF"
+            ]
+        },
+        "MIRROR": {
+            "Fandom": "MIRROR",
+            "Type": "Music RPF",
+            "OP Versions": [
+                "MIRROR (Hong Kong Band)"
+            ]
+        },
+        "Merlin": {
+            "Fandom": "Merlin",
+            "Type": "Actor RPF",
+            "OP Versions": [
+                "Merlin (TV) RPF"
+            ]
+        },
+        "My Chemical Romance": {
+            "Fandom": "My Chemical Romance",
+            "Type": "Music RPF",
+            "OP Versions": [
+                "My Chemical Romance"
+            ]
+        },
+        "NCT": {
+            "Fandom": "NCT",
+            "Type": "Music RPF",
+            "OP Versions": [
+                "NCT (Band)"
+            ]
+        },
+        "One Direction": {
+            "Fandom": "One Direction",
+            "Type": "Music RPF",
+            "OP Versions": [
+                "One Direction (Band)",
+                "Panic! at the Disco"
+            ]
+        },
+        "Red Velvet": {
+            "Fandom": "Red Velvet",
+            "Type": "Music RPF",
+            "OP Versions": [
+                "Red Velvet (K-pop Band)"
+            ]
+        },
+        "Star Trek": {
+            "Fandom": "Star Trek",
+            "Type": "Actor RPF",
+            "OP Versions": [
+                "Star Trek RPF"
+            ]
+        },
+        "Stray Kids": {
+            "Fandom": "Stray Kids",
+            "Type": "Music RPF",
+            "OP Versions": [
+                "Stray Kids (Band)"
+            ]
+        },
+        "Supernatural": {
+            "Fandom": "Supernatural",
+            "Type": "Actor RPF",
+            "OP Versions": [
+                "Supernatural (TV 2005) RPF",
+                "Supernatural RPF"
+            ]
+        },
+        "TOMORROW X TOGETHER / TXT": {
+            "Fandom": "TOMORROW X TOGETHER / TXT",
+            "Type": "Music RPF",
+            "OP Versions": [
+                "TOMORROW X TOGETHER | TXT",
+                "Twenty One Pilots"
+            ]
+        },
+        "Women's Soccer": {
+            "Fandom": "Women's Soccer",
+            "Type": "Sports RPF",
+            "OP Versions": [
+                "Women's Association Football | Women's Soccer RPF",
+                "Women's Soccer RPF"
+            ]
+        },
+        "Youtube": {
+            "Fandom": "Youtube",
+            "Type": "Online Creator RPF",
+            "OP Versions": [
+                "Hermitcraft SMP",
+                "Minecraft (Video Game)",
+                "Phandom/The Fantastic Foursome (YouTube RPF)",
+                "Rooster Teeth/Achievement Hunter RPF",
+                "Rooster Teeth/Achievement Hunter/Funhaus RPF",
+                "Video Blogging RPF"
+            ]
+        }
+    },
+    "fictional": {
+        "9-1-1": {
+            "Fandom": "9-1-1",
+            "Author Name": null,
+            "OP Versions": [
+                "9-1-1 (TV)",
+                "9-1-1: Lone Star (TV 2020)"
+            ]
+        },
+        "A Song of Ice and Fire / Game of Thrones Universe": {
+            "Fandom": "A Song of Ice and Fire / Game of Thrones Universe",
+            "Author Name": "George R. R. Martin",
+            "OP Versions": [
+                "A Song of Ice and Fire - George R. R. Martin",
+                "Game of Thrones (TV)",
+                "House of the Dragon (TV)"
+            ]
+        },
+        "Addam's Family Universe": {
+            "Fandom": "Addam's Family Universe",
+            "Author Name": null,
+            "OP Versions": [
+                "Wednesday (TV 2022)"
+            ]
+        },
+        "Adventure Time": {
+            "Fandom": "Adventure Time",
+            "Author Name": null,
+            "OP Versions": [
+                "Adventure Time"
+            ]
+        },
+        "All For The Game": {
+            "Fandom": "All For The Game",
+            "Author Name": "Nora Sakavic",
+            "OP Versions": [
+                "All For The Game - Nora Sakavic"
+            ]
+        },
+        "American Horror Story": {
+            "Fandom": "American Horror Story",
+            "Author Name": null,
+            "OP Versions": [
+                "American Horror Story",
+                "American Horror Story: Coven"
+            ]
+        },
+        "Amphibia": {
+            "Fandom": "Amphibia",
+            "Author Name": null,
+            "OP Versions": [
+                "Amphibia (Cartoon)"
+            ]
+        },
+        "Angel": {
+            "Fandom": "Angel",
+            "Author Name": null,
+            "OP Versions": [
+                "Angel: the Series"
+            ]
+        },
+        "Arcane": {
+            "Fandom": "Arcane",
+            "Author Name": null,
+            "OP Versions": [
+                "Arcane: League of Legends (Cartoon 2021)"
+            ]
+        },
+        "Attack on Titan | \u9032\u6483\u306e\u5de8\u4eba": {
+            "Fandom": "Attack on Titan | \u9032\u6483\u306e\u5de8\u4eba",
+            "Author Name": null,
+            "OP Versions": [
+                "Shingeki no Kyojin | Attack on Titan"
+            ]
+        },
+        "Avatar: The last Airbender Universe": {
+            "Fandom": "Avatar: The last Airbender Universe",
+            "Author Name": null,
+            "OP Versions": [
+                "Avatar: Legend of Korra",
+                "Avatar: The Last Airbender"
+            ]
+        },
+        "BLUELOCK | \u30d6\u30eb\u30fc\u30ed\u30c3\u30af": {
+            "Fandom": "BLUELOCK | \u30d6\u30eb\u30fc\u30ed\u30c3\u30af",
+            "Author Name": null,
+            "OP Versions": [
+                "Blue Lock (Manga)"
+            ]
+        },
+        "Battlestar Galactica": {
+            "Fandom": "Battlestar Galactica",
+            "Author Name": null,
+            "OP Versions": [
+                "Battlestar Galactica (2003)"
+            ]
+        },
+        "Be More Chill": {
+            "Fandom": "Be More Chill",
+            "Author Name": null,
+            "OP Versions": [
+                "Be More Chill \u2013 Iconis/Tracz"
+            ]
+        },
+        "Bridgerton": {
+            "Fandom": "Bridgerton",
+            "Author Name": null,
+            "OP Versions": [
+                "Bridgerton (TV)"
+            ]
+        },
+        "Buffy the Vampire Slayer": {
+            "Fandom": "Buffy the Vampire Slayer",
+            "Author Name": null,
+            "OP Versions": [
+                "Buffy the Vampire Slayer",
+                "Buffy the Vampire Slayer (TV)"
+            ]
+        },
+        "Bungou Stray Dogs | \u6587\u8c6a\u30b9\u30c8\u30ec\u30a4\u30c9\u30c3\u30b0\u30b9": {
+            "Fandom": "Bungou Stray Dogs | \u6587\u8c6a\u30b9\u30c8\u30ec\u30a4\u30c9\u30c3\u30b0\u30b9",
+            "Author Name": null,
+            "OP Versions": [
+                "\u6587\u8c6a\u30b9\u30c8\u30ec\u30a4\u30c9\u30c3\u30b0\u30b9 | Bungou Stray Dogs"
+            ]
+        },
+        "Call of Duty": {
+            "Fandom": "Call of Duty",
+            "Author Name": null,
+            "OP Versions": [
+                "Call of Duty (Video Games)"
+            ]
+        },
+        "Carmilla": {
+            "Fandom": "Carmilla",
+            "Author Name": null,
+            "OP Versions": [
+                "Carmilla (Web Series)"
+            ]
+        },
+        "Carol": {
+            "Fandom": "Carol",
+            "Author Name": null,
+            "OP Versions": [
+                "Carol (2015)"
+            ]
+        },
+        "Carry On": {
+            "Fandom": "Carry On",
+            "Author Name": "Rainbow Rowell",
+            "OP Versions": [
+                "Carry On Series - Rainbow Rowell"
+            ]
+        },
+        "Castle": {
+            "Fandom": "Castle",
+            "Author Name": null,
+            "OP Versions": [
+                "Castle"
+            ]
+        },
+        "Check Please!": {
+            "Fandom": "Check Please!",
+            "Author Name": null,
+            "OP Versions": [
+                "Check Please! (Webcomic)"
+            ]
+        },
+        "Chilling Adventures of Sabrina": {
+            "Fandom": "Chilling Adventures of Sabrina",
+            "Author Name": null,
+            "OP Versions": [
+                "Chilling Adventures of Sabrina (TV 2018)"
+            ]
+        },
+        "Criminal Minds": {
+            "Fandom": "Criminal Minds",
+            "Author Name": null,
+            "OP Versions": [
+                "Criminal Minds",
+                "Criminal Minds (US TV)"
+            ]
+        },
+        "Critical Role": {
+            "Fandom": "Critical Role",
+            "Author Name": null,
+            "OP Versions": [
+                "Critical Role (Web Series)"
+            ]
+        },
+        "DC": {
+            "Fandom": "DC",
+            "Author Name": null,
+            "OP Versions": [
+                "Arrow (TV 2012)",
+                "Batman (Comics)",
+                "Batman - All Media Types",
+                "DC's Legends of Tomorrow (TV)",
+                "DCU (Comics)",
+                "Gotham (TV)",
+                "Smallville",
+                "Supergirl (TV 2015)",
+                "The Flash (TV 2014)"
+            ]
+        },
+        "Dangan Ronpa": {
+            "Fandom": "Dangan Ronpa",
+            "Author Name": null,
+            "OP Versions": [
+                "New Dangan Ronpa V3: Everyone's New Semester of Killing",
+                "Super Dangan Ronpa 2"
+            ]
+        },
+        "Descendants": {
+            "Fandom": "Descendants",
+            "Author Name": null,
+            "OP Versions": [
+                "Descendants (Disney Movies)"
+            ]
+        },
+        "Detroit: Become Human": {
+            "Fandom": "Detroit: Become Human",
+            "Author Name": null,
+            "OP Versions": [
+                "Detroit: Become Human (Video Game)"
+            ]
+        },
+        "Doctor Who": {
+            "Fandom": "Doctor Who",
+            "Author Name": null,
+            "OP Versions": [
+                "Doctor Who (2005)"
+            ]
+        },
+        "Dragon Age": {
+            "Fandom": "Dragon Age",
+            "Author Name": null,
+            "OP Versions": [
+                "Dragon Age - All Media Types",
+                "Dragon Age II",
+                "Dragon Age: Inquisition",
+                "Dragon Age: Origins"
+            ]
+        },
+        "Due South": {
+            "Fandom": "Due South",
+            "Author Name": null,
+            "OP Versions": [
+                "due South"
+            ]
+        },
+        "Emmerdale": {
+            "Fandom": "Emmerdale",
+            "Author Name": null,
+            "OP Versions": [
+                "Emmerdale"
+            ]
+        },
+        "Faking It": {
+            "Fandom": "Faking It",
+            "Author Name": null,
+            "OP Versions": [
+                "Faking It (TV 2014)"
+            ]
+        },
+        "Final Fantasy | \u30d5\u30a1\u30a4\u30ca\u30eb\u30d5\u30a1\u30f3\u30bf\u30b8\u30fc": {
+            "Fandom": "Final Fantasy | \u30d5\u30a1\u30a4\u30ca\u30eb\u30d5\u30a1\u30f3\u30bf\u30b8\u30fc",
+            "Author Name": null,
+            "OP Versions": [
+                "Final Fantasy XIII",
+                "Final Fantasy XV"
+            ]
+        },
+        "Fire Emblem | \u30d5\u30a1\u30a4\u30a2\u30fc\u30a8\u30e0\u30d6\u30ec\u30e0": {
+            "Fandom": "Fire Emblem | \u30d5\u30a1\u30a4\u30a2\u30fc\u30a8\u30e0\u30d6\u30ec\u30e0",
+            "Author Name": null,
+            "OP Versions": [
+                "Fire Emblem: Three Houses"
+            ]
+        },
+        "Free!": {
+            "Fandom": "Free!",
+            "Author Name": null,
+            "OP Versions": [
+                "Free!"
+            ]
+        },
+        "Frozen": {
+            "Fandom": "Frozen",
+            "Author Name": null,
+            "OP Versions": [
+                "Frozen (2013)",
+                "Frozen (Disney Movies)"
+            ]
+        },
+        "Fullmetal Alchemist | \u92fc\u306e\u932c\u91d1\u8853\u5e2b": {
+            "Fandom": "Fullmetal Alchemist | \u92fc\u306e\u932c\u91d1\u8853\u5e2b",
+            "Author Name": null,
+            "OP Versions": [
+                "Fullmetal Alchemist"
+            ]
+        },
+        "Generation Kill": {
+            "Fandom": "Generation Kill",
+            "Author Name": null,
+            "OP Versions": [
+                "Generation Kill"
+            ]
+        },
+        "Genshin Impact | \u539f\u795e": {
+            "Fandom": "Genshin Impact | \u539f\u795e",
+            "Author Name": null,
+            "OP Versions": [
+                "\u539f\u795e | Genshin Impact (Video Game)"
+            ]
+        },
+        "Ghostbusters": {
+            "Fandom": "Ghostbusters",
+            "Author Name": null,
+            "OP Versions": [
+                "Ghostbusters (2016)"
+            ]
+        },
+        "Girl Meets World": {
+            "Fandom": "Girl Meets World",
+            "Author Name": null,
+            "OP Versions": [
+                "Girl Meets World"
+            ]
+        },
+        "Glee": {
+            "Fandom": "Glee",
+            "Author Name": null,
+            "OP Versions": [
+                "Glee"
+            ]
+        },
+        "Good Omens": {
+            "Fandom": "Good Omens",
+            "Author Name": [
+                "Neil Gaiman",
+                "Terry Pratchett"
+            ],
+            "OP Versions": [
+                "Good Omens (TV)",
+                "Good Omens - Neil Gaiman & Terry Pratchett"
+            ]
+        },
+        "Grandmaster of Demonic Cultivation / The Untamed | \u9b54\u9053\u7956\u5e08 / \u9648\u60c5\u4ee4": {
+            "Fandom": "Grandmaster of Demonic Cultivation / The Untamed | \u9b54\u9053\u7956\u5e08 / \u9648\u60c5\u4ee4",
+            "Author Name": "\u58a8\u9999\u94dc\u81ed | M\u00f2xi\u0101ng T\u00f3ngxi\u00f9",
+            "OP Versions": [
+                "M\u00f3d\u00e0o Z\u01d4sh\u012b - M\u00f2xi\u0101ng T\u00f3ngxi\u00f9",
+                "\u9b54\u9053\u7956\u5e08 - \u58a8\u9999\u94dc\u81ed | M\u00f3d\u00e0o Z\u01d4sh\u012b - M\u00f2xi\u0101ng T\u00f3ngxi\u00f9"
+            ]
+        },
+        "Gravity Falls": {
+            "Fandom": "Gravity Falls",
+            "Author Name": null,
+            "OP Versions": [
+                "Gravity Falls"
+            ]
+        },
+        "Grey's Anatomy": {
+            "Fandom": "Grey's Anatomy",
+            "Author Name": null,
+            "OP Versions": [
+                "Grey's Anatomy"
+            ]
+        },
+        "Haikyuu!! | \u30cf\u30a4\u30ad\u30e5\u30fc!!": {
+            "Fandom": "Haikyuu!! | \u30cf\u30a4\u30ad\u30e5\u30fc!!",
+            "Author Name": null,
+            "OP Versions": [
+                "Haikyuu!!"
+            ]
+        },
+        "Hamilton": {
+            "Fandom": "Hamilton",
+            "Author Name": null,
+            "OP Versions": [
+                "Hamilton"
+            ]
+        },
+        "Hannibal": {
+            "Fandom": "Hannibal",
+            "Author Name": null,
+            "OP Versions": [
+                "Hannibal (TV)"
+            ]
+        },
+        "Harry Potter Universe": {
+            "Fandom": "Harry Potter Universe",
+            "Author Name": "J. K. Rowling",
+            "OP Versions": [
+                "Fantastic Beasts and Where to Find Them (Movies)",
+                "Harry Potter - J. K. Rowling"
+            ]
+        },
+        "Hatsune Miku / \u30dc\u30fc\u30ab\u30ed\u30a4\u30c9 | \u521d\u97f3\u30df\u30af": {
+            "Fandom": "Hatsune Miku / \u30dc\u30fc\u30ab\u30ed\u30a4\u30c9 | \u521d\u97f3\u30df\u30af",
+            "Author Name": null,
+            "OP Versions": [
+                "Project SEKAI COLORFUL STAGE!"
+            ]
+        },
+        "Hawaii Five-0": {
+            "Fandom": "Hawaii Five-0",
+            "Author Name": null,
+            "OP Versions": [
+                "Hawaii Five-0",
+                "Hawaii Five-0 (2010)"
+            ]
+        },
+        "Hazbin Hotel": {
+            "Fandom": "Hazbin Hotel",
+            "Author Name": null,
+            "OP Versions": [
+                "Hazbin Hotel (Web Series)"
+            ]
+        },
+        "Heartstopper": {
+            "Fandom": "Heartstopper",
+            "Author Name": null,
+            "OP Versions": [
+                "Heartstopper (TV)"
+            ]
+        },
+        "Heaven Official's Blessing | \u5929\u5b98\u8d50\u798f": {
+            "Fandom": "Heaven Official's Blessing | \u5929\u5b98\u8d50\u798f",
+            "Author Name": "\u58a8\u9999\u94dc\u81ed | M\u00f2xi\u0101ng T\u00f3ngxi\u00f9",
+            "OP Versions": [
+                "Ti\u0101n Gu\u0101n C\u00ec F\u00fa - M\u00f2xi\u0101ng T\u00f3ngxi\u00f9",
+                "\u5929\u5b98\u8d50\u798f - \u58a8\u9999\u94dc\u81ed | Ti\u0101n Gu\u0101n C\u00ec F\u00fa - M\u00f2xi\u0101ng T\u00f3ngxi\u00f9"
+            ]
+        },
+        "Hetalia | \u30d8\u30bf\u30ea\u30a2": {
+            "Fandom": "Hetalia | \u30d8\u30bf\u30ea\u30a2",
+            "Author Name": null,
+            "OP Versions": [
+                "Hetalia: Axis Powers"
+            ]
+        },
+        "Highlander": {
+            "Fandom": "Highlander",
+            "Author Name": null,
+            "OP Versions": [
+                "Highlander: The Series"
+            ]
+        },
+        "Holby City": {
+            "Fandom": "Holby City",
+            "Author Name": null,
+            "OP Versions": [
+                "Holby City"
+            ]
+        },
+        "Homestuck": {
+            "Fandom": "Homestuck",
+            "Author Name": null,
+            "OP Versions": [
+                "Homestuck"
+            ]
+        },
+        "House M.D.": {
+            "Fandom": "House M.D.",
+            "Author Name": null,
+            "OP Versions": [
+                "House M.D."
+            ]
+        },
+        "Hunger Games / Panem Universe": {
+            "Fandom": "Hunger Games / Panem Universe",
+            "Author Name": "Suzanne Collins",
+            "OP Versions": [
+                "Hunger Games Series - All Media Types",
+                "Hunger Games Trilogy - Suzanne Collins"
+            ]
+        },
+        "IT": {
+            "Fandom": "IT",
+            "Author Name": "Stephen King",
+            "OP Versions": [
+                "IT (2017)",
+                "IT (Movies \u2013 Muschietti)",
+                "IT - Stephen King"
+            ]
+        },
+        "Inception": {
+            "Fandom": "Inception",
+            "Author Name": null,
+            "OP Versions": [
+                "Inception (2010)"
+            ]
+        },
+        "James Bond Universe": {
+            "Fandom": "James Bond Universe",
+            "Author Name": null,
+            "OP Versions": [
+                "James Bond (Craig movies)",
+                "Skyfall (2012)"
+            ]
+        },
+        "JoJo's Bizarre Adventure | \u30b8\u30e7\u30b8\u30e7\u306e\u5947\u5999\u306a\u5192\u967a": {
+            "Fandom": "JoJo's Bizarre Adventure | \u30b8\u30e7\u30b8\u30e7\u306e\u5947\u5999\u306a\u5192\u967a",
+            "Author Name": null,
+            "OP Versions": [
+                "JoJo no Kimyou na Bouken | JoJo's Bizarre Adventure"
+            ]
+        },
+        "Jujutsu Kaisen | \u546a\u8853\u5efb\u6226": {
+            "Fandom": "Jujutsu Kaisen | \u546a\u8853\u5efb\u6226",
+            "Author Name": null,
+            "OP Versions": [
+                "\u546a\u8853\u5efb\u6226 | Jujutsu Kaisen (Manga)"
+            ]
+        },
+        "Julie and The Phantoms": {
+            "Fandom": "Julie and The Phantoms",
+            "Author Name": null,
+            "OP Versions": [
+                "Julie and The Phantoms (TV 2020)"
+            ]
+        },
+        "Kill la Kill | \u30ad\u30eb\u30e9\u30ad\u30eb": {
+            "Fandom": "Kill la Kill | \u30ad\u30eb\u30e9\u30ad\u30eb",
+            "Author Name": null,
+            "OP Versions": [
+                "Kill la Kill"
+            ]
+        },
+        "Killing Eve": {
+            "Fandom": "Killing Eve",
+            "Author Name": null,
+            "OP Versions": [
+                "Killing Eve (TV 2018)"
+            ]
+        },
+        "Kim Possible": {
+            "Fandom": "Kim Possible",
+            "Author Name": null,
+            "OP Versions": [
+                "Kim Possible (Cartoon)"
+            ]
+        },
+        "Kingdom Hearts": {
+            "Fandom": "Kingdom Hearts",
+            "Author Name": null,
+            "OP Versions": [
+                "Kingdom Hearts"
+            ]
+        },
+        "Kingsman": {
+            "Fandom": "Kingsman",
+            "Author Name": null,
+            "OP Versions": [
+                "Kingsman: The Secret Service (2015)"
+            ]
+        },
+        "KinnPorsche": {
+            "Fandom": "KinnPorsche",
+            "Author Name": null,
+            "OP Versions": [
+                "KinnPorsche: The Series (TV)"
+            ]
+        },
+        "LEGO Monkie Kid": {
+            "Fandom": "LEGO Monkie Kid",
+            "Author Name": null,
+            "OP Versions": [
+                "LEGO Monkie Kid"
+            ]
+        },
+        "Law & Order": {
+            "Fandom": "Law & Order",
+            "Author Name": null,
+            "OP Versions": [
+                "Law & Order: SVU"
+            ]
+        },
+        "Legend of the Seeker": {
+            "Fandom": "Legend of the Seeker",
+            "Author Name": null,
+            "OP Versions": [
+                "Legend of the Seeker"
+            ]
+        },
+        "Les Mis\u00e9rables": {
+            "Fandom": "Les Mis\u00e9rables",
+            "Author Name": null,
+            "OP Versions": [
+                "Les Mis\u00e9rables - All Media Types"
+            ]
+        },
+        "Life Is Strange": {
+            "Fandom": "Life Is Strange",
+            "Author Name": null,
+            "OP Versions": [
+                "Life Is Strange (Video Game)"
+            ]
+        },
+        "Life on Mars": {
+            "Fandom": "Life on Mars",
+            "Author Name": null,
+            "OP Versions": [
+                "Life on Mars (UK)"
+            ]
+        },
+        "Little Witch Academia | \u30ea\u30c8\u30eb\u30a6\u30a3\u30c3\u30c1\u30a2\u30ab\u30c7\u30df\u30a2": {
+            "Fandom": "Little Witch Academia | \u30ea\u30c8\u30eb\u30a6\u30a3\u30c3\u30c1\u30a2\u30ab\u30c7\u30df\u30a2",
+            "Author Name": null,
+            "OP Versions": [
+                "Little Witch Academia"
+            ]
+        },
+        "Lizzie Bennet Diaries": {
+            "Fandom": "Lizzie Bennet Diaries",
+            "Author Name": null,
+            "OP Versions": [
+                "Lizzie Bennet Diaries"
+            ]
+        },
+        "Lockwood & Co.": {
+            "Fandom": "Lockwood & Co.",
+            "Author Name": "Jonathan Stroud",
+            "OP Versions": [
+                "Lockwood & Co. - Jonathan Stroud"
+            ]
+        },
+        "Lord of the Rings Universe": {
+            "Fandom": "Lord of the Rings Universe",
+            "Author Name": "J. R. R. Tolkien",
+            "OP Versions": [
+                "The Hobbit (Jackson movies)",
+                "The Hobbit - All Media Types",
+                "The Lord of the Rings - J. R. R. Tolkien"
+            ]
+        },
+        "Lost Girl": {
+            "Fandom": "Lost Girl",
+            "Author Name": null,
+            "OP Versions": [
+                "Lost Girl"
+            ]
+        },
+        "Love Live! | \u30e9\u30d6\u30e9\u30a4\u30d6!": {
+            "Fandom": "Love Live! | \u30e9\u30d6\u30e9\u30a4\u30d6!",
+            "Author Name": null,
+            "OP Versions": [
+                "Love Live! School Idol Project"
+            ]
+        },
+        "Lucifer": {
+            "Fandom": "Lucifer",
+            "Author Name": null,
+            "OP Versions": [
+                "Lucifer (TV)"
+            ]
+        },
+        "Maleficent": {
+            "Fandom": "Maleficent",
+            "Author Name": null,
+            "OP Versions": [
+                "Maleficent (2014)"
+            ]
+        },
+        "Marvel": {
+            "Fandom": "Marvel",
+            "Author Name": null,
+            "OP Versions": [
+                "Agent Carter (TV)",
+                "Agents of S.H.I.E.L.D. (TV)",
+                "Captain America (Movies)",
+                "Captain Marvel (2019)",
+                "Hawkeye (TV 2021)",
+                "Loki (TV 2021)",
+                "Marvel Cinematic Universe",
+                "Spider-Man (Tom Holland Movies)",
+                "Spider-Man - All Media Types",
+                "The Avengers (Marvel Movies)",
+                "Thor (Movies)",
+                "Venom (Movie 2018)",
+                "X-Men (Alternate Timeline Movies)",
+                "X-Men: First Class (2011)",
+                "Young Avengers"
+            ]
+        },
+        "Mass Effect": {
+            "Fandom": "Mass Effect",
+            "Author Name": null,
+            "OP Versions": [
+                "Mass Effect",
+                "Mass Effect Trilogy"
+            ]
+        },
+        "Merlin": {
+            "Fandom": "Merlin",
+            "Author Name": null,
+            "OP Versions": [
+                "Merlin (TV)"
+            ]
+        },
+        "Miraculous: Tales of Ladybug & Cat Noir | Miraculous: Les Aventures de Ladybug et Chat Noir": {
+            "Fandom": "Miraculous: Tales of Ladybug & Cat Noir | Miraculous: Les Aventures de Ladybug et Chat Noir",
+            "Author Name": null,
+            "OP Versions": [
+                "Miraculous Ladybug"
+            ]
+        },
+        "Mobile Suit Gundam Wing | \u65b0\u6a5f\u52d5\u6226\u8a18\u30ac\u30f3\u30c0\u30e0 W": {
+            "Fandom": "Mobile Suit Gundam Wing | \u65b0\u6a5f\u52d5\u6226\u8a18\u30ac\u30f3\u30c0\u30e0 W",
+            "Author Name": null,
+            "OP Versions": [
+                "Gundam Wing"
+            ]
+        },
+        "Mortal Instruments": {
+            "Fandom": "Mortal Instruments",
+            "Author Name": "Cassandra Clare",
+            "OP Versions": [
+                "Mortal Instruments Series - Cassandra Clare"
+            ]
+        },
+        "Motherland": {
+            "Fandom": "Motherland",
+            "Author Name": null,
+            "OP Versions": [
+                "Motherland: Fort Salem (TV)"
+            ]
+        },
+        "My Hero Academia | \u50d5\u306e\u30d2\u30fc\u30ed\u30fc\u30a2\u30ab\u30c7\u30df\u30a2": {
+            "Fandom": "My Hero Academia | \u50d5\u306e\u30d2\u30fc\u30ed\u30fc\u30a2\u30ab\u30c7\u30df\u30a2",
+            "Author Name": null,
+            "OP Versions": [
+                "Boku no Hero Academia | My Hero Academia"
+            ]
+        },
+        "NCIS": {
+            "Fandom": "NCIS",
+            "Author Name": null,
+            "OP Versions": [
+                "NCIS"
+            ]
+        },
+        "Naruto": {
+            "Fandom": "Naruto",
+            "Author Name": null,
+            "OP Versions": [
+                "Naruto",
+                "Naruto Naruto"
+            ]
+        },
+        "New Gods | \u65b0\u795e\u699c": {
+            "Fandom": "New Gods | \u65b0\u795e\u699c",
+            "Author Name": null,
+            "OP Versions": [
+                "\u65b0\u795e\u699c | New Gods (Movies)"
+            ]
+        },
+        "Omniscient Reader | \uc804\uc9c0\uc801 \ub3c5\uc790 \uc2dc\uc810": {
+            "Fandom": "Omniscient Reader | \uc804\uc9c0\uc801 \ub3c5\uc790 \uc2dc\uc810",
+            "Author Name": "Sing-Shong",
+            "OP Versions": [
+                "Omniscient Reader \u2013 Sing-Shong"
+            ]
+        },
+        "Once Upon a Time": {
+            "Fandom": "Once Upon a Time",
+            "Author Name": null,
+            "OP Versions": [
+                "Once Upon a Time (TV)"
+            ]
+        },
+        "One Piece | \u30ef\u30f3\u30d4\u30fc\u30b9": {
+            "Fandom": "One Piece | \u30ef\u30f3\u30d4\u30fc\u30b9",
+            "Author Name": null,
+            "OP Versions": [
+                "One Piece (Anime & Manga)"
+            ]
+        },
+        "One-Punch Man | \u30ef\u30f3\u30d1\u30f3\u30de\u30f3": {
+            "Fandom": "One-Punch Man | \u30ef\u30f3\u30d1\u30f3\u30de\u30f3",
+            "Author Name": null,
+            "OP Versions": [
+                "One-Punch Man"
+            ]
+        },
+        "Orange is the New Black": {
+            "Fandom": "Orange is the New Black",
+            "Author Name": null,
+            "OP Versions": [
+                "Orange is the New Black"
+            ]
+        },
+        "Orphan Black": {
+            "Fandom": "Orphan Black",
+            "Author Name": null,
+            "OP Versions": [
+                "Orphan Black (TV)"
+            ]
+        },
+        "Our Flag Means Death": {
+            "Fandom": "Our Flag Means Death",
+            "Author Name": null,
+            "OP Versions": [
+                "Our Flag Means Death (TV)"
+            ]
+        },
+        "Overwatch": {
+            "Fandom": "Overwatch",
+            "Author Name": null,
+            "OP Versions": [
+                "Overwatch (Video Game)"
+            ]
+        },
+        "Pacific Rim": {
+            "Fandom": "Pacific Rim",
+            "Author Name": null,
+            "OP Versions": [
+                "Pacific Rim (2013)"
+            ]
+        },
+        "Percy Jackson": {
+            "Fandom": "Percy Jackson",
+            "Author Name": "Rick Riordan",
+            "OP Versions": [
+                "Percy Jackson and the Olympians - Rick Riordan"
+            ]
+        },
+        "Person of Interest": {
+            "Fandom": "Person of Interest",
+            "Author Name": null,
+            "OP Versions": [
+                "Person of Interest (TV)"
+            ]
+        },
+        "Persona": {
+            "Fandom": "Persona",
+            "Author Name": null,
+            "OP Versions": [
+                "Persona 4",
+                "Persona 5"
+            ]
+        },
+        "Pitch Perfect": {
+            "Fandom": "Pitch Perfect",
+            "Author Name": null,
+            "OP Versions": [
+                "Pitch Perfect (2012)",
+                "Pitch Perfect (Movies)"
+            ]
+        },
+        "Power Rangers": {
+            "Fandom": "Power Rangers",
+            "Author Name": null,
+            "OP Versions": [
+                "Power Rangers (2017)"
+            ]
+        },
+        "Pretty Guardian Sailor Moon | \u7f8e\u5c11\u5973\u6226\u58eb\u30bb\u30fc\u30e9\u30fc\u30e0\u30fc\u30f3": {
+            "Fandom": "Pretty Guardian Sailor Moon | \u7f8e\u5c11\u5973\u6226\u58eb\u30bb\u30fc\u30e9\u30fc\u30e0\u30fc\u30f3",
+            "Author Name": null,
+            "OP Versions": [
+                "Bishoujo Senshi Sailor Moon | Pretty Guardian Sailor Moon"
+            ]
+        },
+        "Puella Magi Madoka Magica | \u9b54\u6cd5\u5c11\u5973\u307e\u3069\u304b\u2606\u30de\u30ae\u30ab": {
+            "Fandom": "Puella Magi Madoka Magica | \u9b54\u6cd5\u5c11\u5973\u307e\u3069\u304b\u2606\u30de\u30ae\u30ab",
+            "Author Name": null,
+            "OP Versions": [
+                "Mahou Shoujo Madoka Magika | Puella Magi Madoka Magica",
+                "Puella Magi Madoka Magica"
+            ]
+        },
+        "Queer as Folk": {
+            "Fandom": "Queer as Folk",
+            "Author Name": null,
+            "OP Versions": [
+                "Queer as Folk (US)"
+            ]
+        },
+        "RWBY": {
+            "Fandom": "RWBY",
+            "Author Name": null,
+            "OP Versions": [
+                "RWBY"
+            ]
+        },
+        "Raven Cycle": {
+            "Fandom": "Raven Cycle",
+            "Author Name": "Maggie Stiefvater",
+            "OP Versions": [
+                "Raven Cycle - Maggie Stiefvater"
+            ]
+        },
+        "Riverdale": {
+            "Fandom": "Riverdale",
+            "Author Name": null,
+            "OP Versions": [
+                "Riverdale (TV 2017)"
+            ]
+        },
+        "Rizzoli & Isles": {
+            "Fandom": "Rizzoli & Isles",
+            "Author Name": null,
+            "OP Versions": [
+                "Rizzoli & Isles"
+            ]
+        },
+        "Rookie Blue": {
+            "Fandom": "Rookie Blue",
+            "Author Name": null,
+            "OP Versions": [
+                "Rookie Blue"
+            ]
+        },
+        "Roswell New Mexico": {
+            "Fandom": "Roswell New Mexico",
+            "Author Name": null,
+            "OP Versions": [
+                "Roswell New Mexico (TV 2019)"
+            ]
+        },
+        "SK8 the Infinity | SK\u221e \u30a8\u30b9\u30b1\u30fc\u30a8\u30a4\u30c8": {
+            "Fandom": "SK8 the Infinity | SK\u221e \u30a8\u30b9\u30b1\u30fc\u30a8\u30a4\u30c8",
+            "Author Name": null,
+            "OP Versions": [
+                "SK8 the Infinity (Anime)"
+            ]
+        },
+        "SKAM": {
+            "Fandom": "SKAM",
+            "Author Name": null,
+            "OP Versions": [
+                "SKAM (Norway)",
+                "SKAM (TV)"
+            ]
+        },
+        "Sanders Sides": {
+            "Fandom": "Sanders Sides",
+            "Author Name": null,
+            "OP Versions": [
+                "Sanders Sides (Web Series)"
+            ]
+        },
+        "Schitt's Creek": {
+            "Fandom": "Schitt's Creek",
+            "Author Name": null,
+            "OP Versions": [
+                "Schitt's Creek"
+            ]
+        },
+        "Seraph of the End | \u7d42\u308f\u308a\u306e\u30bb\u30e9\u30d5": {
+            "Fandom": "Seraph of the End | \u7d42\u308f\u308a\u306e\u30bb\u30e9\u30d5",
+            "Author Name": null,
+            "OP Versions": [
+                "Owari no Seraph | Seraph of the End"
+            ]
+        },
+        "Shadow and Bone": {
+            "Fandom": "Shadow and Bone",
+            "Author Name": null,
+            "OP Versions": [
+                "Shadow and Bone (TV)"
+            ]
+        },
+        "Shadowhunters": {
+            "Fandom": "Shadowhunters",
+            "Author Name": null,
+            "OP Versions": [
+                "Shadowhunters (TV)"
+            ]
+        },
+        "Shameless": {
+            "Fandom": "Shameless",
+            "Author Name": null,
+            "OP Versions": [
+                "Shameless (US)"
+            ]
+        },
+        "She-Ra and the Princesses of Power": {
+            "Fandom": "She-Ra and the Princesses of Power",
+            "Author Name": null,
+            "OP Versions": [
+                "She-Ra and the Princesses of Power (2018)"
+            ]
+        },
+        "Sherlock": {
+            "Fandom": "Sherlock",
+            "Author Name": null,
+            "OP Versions": [
+                "Sherlock (TV)"
+            ]
+        },
+        "Six of Crows": {
+            "Fandom": "Six of Crows",
+            "Author Name": "Leigh Bardugo",
+            "OP Versions": [
+                "Six of Crows Series - Leigh Bardugo"
+            ]
+        },
+        "Skins": {
+            "Fandom": "Skins",
+            "Author Name": null,
+            "OP Versions": [
+                "Skins (UK)"
+            ]
+        },
+        "South Park": {
+            "Fandom": "South Park",
+            "Author Name": null,
+            "OP Versions": [
+                "South Park"
+            ]
+        },
+        "Spartacus": {
+            "Fandom": "Spartacus",
+            "Author Name": null,
+            "OP Versions": [
+                "Spartacus Series (TV)"
+            ]
+        },
+        "Star Trek": {
+            "Fandom": "Star Trek",
+            "Author Name": null,
+            "OP Versions": [
+                "Star Trek: Alternate Original Series (Movies)",
+                "Star Trek: Voyager"
+            ]
+        },
+        "Star Wars": {
+            "Fandom": "Star Wars",
+            "Author Name": null,
+            "OP Versions": [
+                "Star Wars - All Media Types",
+                "Star Wars Episode I: The Phantom Menace",
+                "Star Wars Episode VII: The Force Awakens (2015)",
+                "Star Wars Sequel Trilogy",
+                "Star Wars Story (2016)"
+            ]
+        },
+        "Stargate": {
+            "Fandom": "Stargate",
+            "Author Name": null,
+            "OP Versions": [
+                "Stargate Atlantis",
+                "Stargate SG-1"
+            ]
+        },
+        "Starsky & Hutch": {
+            "Fandom": "Starsky & Hutch",
+            "Author Name": null,
+            "OP Versions": [
+                "Starsky & Hutch"
+            ]
+        },
+        "Station 19": {
+            "Fandom": "Station 19",
+            "Author Name": null,
+            "OP Versions": [
+                "Station 19 (TV)"
+            ]
+        },
+        "Steven Universe": {
+            "Fandom": "Steven Universe",
+            "Author Name": null,
+            "OP Versions": [
+                "Steven Universe (Cartoon)"
+            ]
+        },
+        "Stranger Things": {
+            "Fandom": "Stranger Things",
+            "Author Name": null,
+            "OP Versions": [
+                "Stranger Things (TV 2016)"
+            ]
+        },
+        "Suits": {
+            "Fandom": "Suits",
+            "Author Name": null,
+            "OP Versions": [
+                "Suits (TV)"
+            ]
+        },
+        "Super-Vocal | \u58f0\u5165\u4eba\u5fc3": {
+            "Fandom": "Super-Vocal | \u58f0\u5165\u4eba\u5fc3",
+            "Author Name": null,
+            "OP Versions": [
+                "\u58f0\u5165\u4eba\u5fc3 | Super-Vocal (TV)"
+            ]
+        },
+        "Supernatural": {
+            "Fandom": "Supernatural",
+            "Author Name": null,
+            "OP Versions": [
+                "Supernatural",
+                "Supernatural (TV 2005)"
+            ]
+        },
+        "Teen Wolf": {
+            "Fandom": "Teen Wolf",
+            "Author Name": null,
+            "OP Versions": [
+                "Teen Wolf (TV)"
+            ]
+        },
+        "Teenage Mutant Ninja Turtles": {
+            "Fandom": "Teenage Mutant Ninja Turtles",
+            "Author Name": null,
+            "OP Versions": [
+                "Rise of the Teenage Mutant Ninja Turtles"
+            ]
+        },
+        "The 100": {
+            "Fandom": "The 100",
+            "Author Name": null,
+            "OP Versions": [
+                "The 100 (TV)"
+            ]
+        },
+        "The Big Bang Theory": {
+            "Fandom": "The Big Bang Theory",
+            "Author Name": null,
+            "OP Versions": [
+                "The Big Bang Theory (TV)"
+            ]
+        },
+        "The Closer": {
+            "Fandom": "The Closer",
+            "Author Name": null,
+            "OP Versions": [
+                "The Closer"
+            ]
+        },
+        "The Devil Wears Prada": {
+            "Fandom": "The Devil Wears Prada",
+            "Author Name": null,
+            "OP Versions": [
+                "The Devil Wears Prada (2006)"
+            ]
+        },
+        "The Good Wife": {
+            "Fandom": "The Good Wife",
+            "Author Name": null,
+            "OP Versions": [
+                "The Good Wife (TV)"
+            ]
+        },
+        "The Haunting of Bly Manor": {
+            "Fandom": "The Haunting of Bly Manor",
+            "Author Name": null,
+            "OP Versions": [
+                "The Haunting of Bly Manor (TV)"
+            ]
+        },
+        "The Last of Us": {
+            "Fandom": "The Last of Us",
+            "Author Name": null,
+            "OP Versions": [
+                "The Last of Us (Video Games)"
+            ]
+        },
+        "The Locked Tomb / Gideon the Ninth": {
+            "Fandom": "The Locked Tomb / Gideon the Ninth",
+            "Author Name": "Tamsyn Muir",
+            "OP Versions": [
+                "The Locked Tomb Series - Tamsyn Muir",
+                "The Locked Tomb Series | Gideon the Ninth Series - Tamsyn Muir"
+            ]
+        },
+        "The Magnus Archives": {
+            "Fandom": "The Magnus Archives",
+            "Author Name": null,
+            "OP Versions": [
+                "The Magnus Archives (Podcast)"
+            ]
+        },
+        "The Man From U.N.C.L.E.": {
+            "Fandom": "The Man From U.N.C.L.E.",
+            "Author Name": null,
+            "OP Versions": [
+                "The Man From U.N.C.L.E. (2015)"
+            ]
+        },
+        "The Old Guard": {
+            "Fandom": "The Old Guard",
+            "Author Name": null,
+            "OP Versions": [
+                "The Old Guard (Movie 2020)"
+            ]
+        },
+        "The Owl House": {
+            "Fandom": "The Owl House",
+            "Author Name": null,
+            "OP Versions": [
+                "The Owl House (Cartoon)"
+            ]
+        },
+        "The Professionals": {
+            "Fandom": "The Professionals",
+            "Author Name": null,
+            "OP Versions": [
+                "The Professionals"
+            ]
+        },
+        "The Rookie": {
+            "Fandom": "The Rookie",
+            "Author Name": null,
+            "OP Versions": [
+                "The Rookie (TV 2018)"
+            ]
+        },
+        "The Sandman": {
+            "Fandom": "The Sandman",
+            "Author Name": null,
+            "OP Versions": [
+                "The Sandman (TV 2022)"
+            ]
+        },
+        "The Sentinel": {
+            "Fandom": "The Sentinel",
+            "Author Name": null,
+            "OP Versions": [
+                "The Sentinel",
+                "The Sentinel (TV)"
+            ]
+        },
+        "The Walking Dead": {
+            "Fandom": "The Walking Dead",
+            "Author Name": null,
+            "OP Versions": [
+                "The Walking Dead (TV)"
+            ]
+        },
+        "The Wilds": {
+            "Fandom": "The Wilds",
+            "Author Name": null,
+            "OP Versions": [
+                "The Wilds (TV 2020)"
+            ]
+        },
+        "The Witcher | Wied\u017amin": {
+            "Fandom": "The Witcher | Wied\u017amin",
+            "Author Name": null,
+            "OP Versions": [
+                "The Witcher (TV)",
+                "Wied\u017amin | The Witcher - All Media Types"
+            ]
+        },
+        "The X-Files": {
+            "Fandom": "The X-Files",
+            "Author Name": null,
+            "OP Versions": [
+                "The X-Files"
+            ]
+        },
+        "Tokyo Ghoul | \u6771\u4eac\u55b0\u7a2e": {
+            "Fandom": "Tokyo Ghoul | \u6771\u4eac\u55b0\u7a2e",
+            "Author Name": null,
+            "OP Versions": [
+                "Tokyo Ghoul"
+            ]
+        },
+        "Tokyo Revengers | \u6771\u4eac\u534d\u30ea\u30d9\u30f3\u30b8\u30e3\u30fc\u30ba": {
+            "Fandom": "Tokyo Revengers | \u6771\u4eac\u534d\u30ea\u30d9\u30f3\u30b8\u30e3\u30fc\u30ba",
+            "Author Name": null,
+            "OP Versions": [
+                "\u6771\u4eac\u534d\u30ea\u30d9\u30f3\u30b8\u30e3\u30fc\u30ba | Tokyo Revengers (Manga)"
+            ]
+        },
+        "Top Gun": {
+            "Fandom": "Top Gun",
+            "Author Name": null,
+            "OP Versions": [
+                "Top Gun (Movies)"
+            ]
+        },
+        "Torchwood": {
+            "Fandom": "Torchwood",
+            "Author Name": null,
+            "OP Versions": [
+                "Torchwood"
+            ]
+        },
+        "Trigun Universe | \u30c8\u30e9\u30a4\u30ac\u30f3": {
+            "Fandom": "Trigun Universe | \u30c8\u30e9\u30a4\u30ac\u30f3",
+            "Author Name": null,
+            "OP Versions": [
+                "Trigun Stampede (Anime 2023)"
+            ]
+        },
+        "Twilight": {
+            "Fandom": "Twilight",
+            "Author Name": "Stephenie Meyer",
+            "OP Versions": [
+                "Twilight Series - Stephenie Meyer"
+            ]
+        },
+        "Undertale": {
+            "Fandom": "Undertale",
+            "Author Name": null,
+            "OP Versions": [
+                "Undertale (Video Game)"
+            ]
+        },
+        "Vampire Diaries Universe": {
+            "Fandom": "Vampire Diaries Universe",
+            "Author Name": null,
+            "OP Versions": [
+                "Legacies (TV 2018)"
+            ]
+        },
+        "Victorious": {
+            "Fandom": "Victorious",
+            "Author Name": null,
+            "OP Versions": [
+                "Victorious"
+            ]
+        },
+        "Voltron": {
+            "Fandom": "Voltron",
+            "Author Name": null,
+            "OP Versions": [
+                "Voltron: Legendary Defender"
+            ]
+        },
+        "Warehouse 13": {
+            "Fandom": "Warehouse 13",
+            "Author Name": null,
+            "OP Versions": [
+                "Warehouse 13"
+            ]
+        },
+        "Warrior Nun": {
+            "Fandom": "Warrior Nun",
+            "Author Name": null,
+            "OP Versions": [
+                "Warrior Nun (TV)"
+            ]
+        },
+        "Welcome to Night Vale": {
+            "Fandom": "Welcome to Night Vale",
+            "Author Name": null,
+            "OP Versions": [
+                "Welcome to Night Vale"
+            ]
+        },
+        "Wentworth": {
+            "Fandom": "Wentworth",
+            "Author Name": null,
+            "OP Versions": [
+                "Wentworth (TV)"
+            ]
+        },
+        "White Collar": {
+            "Fandom": "White Collar",
+            "Author Name": null,
+            "OP Versions": [
+                "White Collar"
+            ]
+        },
+        "Word of Honor | \u5c71\u6cb3\u4ee4": {
+            "Fandom": "Word of Honor | \u5c71\u6cb3\u4ee4",
+            "Author Name": null,
+            "OP Versions": [
+                "\u5c71\u6cb3\u4ee4 | Word of Honor (TV 2021)"
+            ]
+        },
+        "Wynonna Earp": {
+            "Fandom": "Wynonna Earp",
+            "Author Name": null,
+            "OP Versions": [
+                "Wynonna Earp (TV)"
+            ]
+        },
+        "Xena": {
+            "Fandom": "Xena",
+            "Author Name": null,
+            "OP Versions": [
+                "Xena: Warrior Princess"
+            ]
+        },
+        "Young Royals": {
+            "Fandom": "Young Royals",
+            "Author Name": null,
+            "OP Versions": [
+                "Young Royals (TV 2021)"
+            ]
+        },
+        "Yuri!!! on ICE | \u30e6\u30fc\u30ea!!! on ICE": {
+            "Fandom": "Yuri!!! on ICE | \u30e6\u30fc\u30ea!!! on ICE",
+            "Author Name": null,
+            "OP Versions": [
+                "Yuri!!! on Ice (Anime)"
+            ]
+        }
+    }
+}
