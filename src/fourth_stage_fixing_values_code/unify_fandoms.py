@@ -1,6 +1,7 @@
 from src.util_functions.retrieve_data_from_json_lines import get_json_lines_data
 from src.util_functions.get_file_paths import find_paths
 from re import split, sub
+from json import dump
 
 def separate_RPF_from_fictional():
     """
@@ -51,7 +52,6 @@ def format_unified_labels(data_dict):
     for "fictional" key fandoms:
     {
         "Fandom" : str, (updated fandom name (eg "Marvel"))
-        "Type" : str = None,
         "Author Name" : str = None,
         "OP Versions" : set (containing all spellings & instances of the fandom group 
         in question in OP's data, 
@@ -69,7 +69,7 @@ def format_unified_labels(data_dict):
                 "Unscripted TV", 
                 "Online Creators"
             ])
-        "op_versions": set (containing all spellings & instances of the 
+        "OP Versions": set (containing all spellings & instances of the 
         fandom group in question in OP's data)
     }
     
@@ -106,7 +106,7 @@ def format_unified_labels(data_dict):
             or "craft" in rpf_fandom:
             new_rpf_fandom = "Youtube"
         elif "The Untamed" in rpf_fandom:
-            new_rpf_fandom = rpf_fandom[:-9]
+            new_rpf_fandom = "魔道祖师 / 陈情令 | Grandmaster of Demonic Cultivation / The Untamed"
         elif rpf_fandom[-4:] == " RPF": 
             new_rpf_fandom = rpf_fandom[:-4] # removing remaining " RPF" suffixes
         elif "MIRROR" in rpf_fandom:
@@ -119,22 +119,22 @@ def format_unified_labels(data_dict):
 
         
         if new_rpf_fandom in list(new_dict["RPF"].keys()): # if we already got the fandom
-            new_dict["RPF"][new_rpf_fandom]["op_versions"].add(rpf_fandom) # we add to it
+            new_dict["RPF"][new_rpf_fandom]["OP Versions"].add(rpf_fandom) # we add to it
         else: # other wise add it
             rpf_dict = {
                 "Fandom": None,
                 "Type": None,
-                "op_versions": set()
+                "OP Versions": set()
             }
             rpf_dict["Fandom"] = new_rpf_fandom
-            rpf_dict["op_versions"].add(rpf_fandom)
+            rpf_dict["OP Versions"].add(rpf_fandom)
 
             new_dict["RPF"][new_rpf_fandom] = rpf_dict
 
     for fandom_name in new_dict["RPF"]: # adding types
         rpf_dict = new_dict["RPF"][fandom_name]
         if rpf_dict["Fandom"] in ["Figure Skating", "Hockey", "Women's Soccer"]:
-            rpf_dict["Type"] = "Sports"
+            rpf_dict["Type"] = "Sports RPF"
         elif rpf_dict["Fandom"] in [
             "Adam Lambert", 
             'Bangtan Boys / BTS',
@@ -150,13 +150,13 @@ def format_unified_labels(data_dict):
             "Fifth Harmony", 
             '5 Seconds of Summer'
         ]:
-            rpf_dict["Type"] = "Music"
+            rpf_dict["Type"] = "Music RPF"
         elif rpf_dict["Fandom"] not in ["Drag", "Youtube", "Minecraft", "American Idol"]:
-            rpf_dict["Type"] = "Actors"
+            rpf_dict["Type"] = "Actor RPF"
         elif rpf_dict["Fandom"] in ["Drag", "American Idol"]:
-            rpf_dict["Type"] = "Unscripted TV"
+            rpf_dict["Type"] = "Unscripted TV RPF"
         else: 
-            rpf_dict["Type"] = "Online Creators"
+            rpf_dict["Type"] = "Online Creator RPF"
 
 
     temp_list = []
@@ -171,6 +171,9 @@ def format_unified_labels(data_dict):
             if "Tamsyn Muir" in fandom:
                 author_name = "Tamsyn Muir"
                 new_fandom = 'The Locked Tomb Series | Gideon the Ninth Series'
+            elif "Good Omens" in fandom:
+                author_name = ["Neil Gaiman", "Terry Pratchett"]
+                new_fandom = "Good Omens"
             else:
                 split_book = split(r" \- ", fandom)
                 author_name = split_book[1]
@@ -190,7 +193,6 @@ def format_unified_labels(data_dict):
 
         temp_dict = {
             "Author Name": author_name,
-            "Type": set(),
             "Fandom": new_fandom,
             "op-version": fandom
         }
@@ -201,7 +203,6 @@ def format_unified_labels(data_dict):
         author = item["Author Name"]
         temp_fandom = item["Fandom"]
         old_fandom = item["Fandom"]
-        types = item["Type"]
         op_versions = item["op-version"]
 
         if "(" in temp_fandom:
@@ -219,7 +220,6 @@ def format_unified_labels(data_dict):
 
         temp_dict_1 = {
             "Author Name": author,
-            "Type": types,
             "Fandom": temp_fandom,
             "op-version": op_versions
         }
@@ -234,10 +234,12 @@ def format_unified_labels(data_dict):
 
             non_gathered_dict[fandom] = {
                 "Fandom": fandom,
-                "Type": item["Type"],
                 "Author Name": item["Author Name"],
                 "OP Versions": set()
             }
+
+        if item["Author Name"]: # making sure we're not losing the author name
+            non_gathered_dict[fandom]["Author Name"] = item["Author Name"]
 
         non_gathered_dict[fandom]["OP Versions"].add(item["op-version"])
     
@@ -343,8 +345,8 @@ def format_unified_labels(data_dict):
             fandom = "トライガン | Trigun Universe"
         elif key == "Wednesday":
             fandom = "Addam's Family Universe"
-        elif "Love Life!" in key:
-            fandom = "ラブライブ! | Love Life!"
+        elif "Love Live!" in key:
+            fandom = "ラブライブ! | Love Live!"
         elif key == "Project SEKAI COLORFUL STAGE!":
             fandom = "初音ミク | Hatsune Miku / ボーカロイド | Vocaloid"
         elif key == "Blue Lock":
@@ -372,7 +374,11 @@ def format_unified_labels(data_dict):
         elif key == "Yuri!!! on Ice":
             fandom = "ユーリ!!! on ICE | Yuri!!! on ICE"
         elif key == "Miraculous Ladybug":
-            fandom = "Miraculous : Les Aventures de Ladybug et Chat Noir | Miraculous: Tales of Ladybug & Cat Noir"
+            fandom = "Miraculous: Les Aventures de Ladybug et Chat Noir | Miraculous: Tales of Ladybug & Cat Noir"
+        elif key == "Detroit":
+            fandom = "Detroit: Become Human"
+        elif key == "due South":
+            fandom = "Due South"
         else: 
             fandom = non_gathered_dict[key]["Fandom"]
 
@@ -391,16 +397,112 @@ def format_unified_labels(data_dict):
 
 
 def unify_fandoms():
+    """
+    writes a file of unified fandoms called "unified_full_fandoms_list" in the 
+    "reference_and_test_files" folder containing a dict with the following format:
+    {
+        "RPF": {
+            <fandom_name> (str) : {
+                "Fandom": <fandom_name> (str),
+                "Type": <RPF type> (str),
+                "OP Versions": [
+                    (str), ...
+                ]
+            },
+            ...
+        }
+        "fictional": {
+            <fandom_name> (str) : {
+                "Fandom": <fandom_name> (str),
+                "Author Name": <author_name/s> (str/list/None),
+                "OP Versions": [
+                    (str), ...
+                ]
+            },
+            ...
+        }
+    }
+
+    "OP Versions" lists as well as the fandom keys themselves are ordered alphabetically.
+    All titles with a translation/original title have been formatted to have their english 
+    title first, original second to ensure their inclusion in the alphabetical sorting.
+    """
+
+    separated_rpf_and_fic = separate_RPF_from_fictional()
+    data_dict = format_unified_labels(separated_rpf_and_fic)
+    RPF_dict = data_dict["RPF"]
+    fic_dict = data_dict["fictional"]
+
+    # turning OP version sets into sorted lists (RPF)
+    temp_RPF_dict = {}
+    for key in RPF_dict:
+        current_rpf = RPF_dict[key]
+        sorted_list = sorted(list(current_rpf["OP Versions"]))
+        new_rpf = current_rpf
+        new_rpf["OP Versions"] = sorted_list
+
+        if "|" in key: # reversing order of original/translated to include in sort
+            split_fandom = split(r" \| ", key)
+            new_fandom = split_fandom[1] + " | " + split_fandom[0]
+            new_rpf["Fandom"] = new_fandom
+        temp_RPF_dict[new_rpf["Fandom"]] = new_rpf
+    
+    # ordering keys (RPF)
+    rpf_keys = sorted(list(temp_RPF_dict.keys()))
+    new_RPF_dict = {}
+    for key in rpf_keys:
+        new_RPF_dict[key] = temp_RPF_dict[key]
+    
+
+    # turning OP version sets into sorted lists (fic)
+    temp_fic_dict = {}
+    for key in fic_dict:
+        current_fic = fic_dict[key]
+        sorted_list = sorted(list(current_fic["OP Versions"]))
+        new_fic = current_fic
+        new_fic["OP Versions"] = sorted_list
+
+        if "|" in key: # reversing order of original/translated to include in sort
+            split_fandom = split(r" \| ", key)
+            new_fandom = split_fandom[1] + " | " + split_fandom[0]
+            new_fic["Fandom"] = new_fandom
+        temp_fic_dict[new_fic["Fandom"]] = new_fic
+
+    # ordering keys (fic)
+    fic_keys = sorted(list(temp_fic_dict.keys()))
+    new_fic_dict = {}
+    for key in fic_keys:
+        new_fic_dict[key] = temp_fic_dict[key]
+
+    output_dict = {
+        "RPF" : new_RPF_dict,
+        "fictional" : new_fic_dict
+    }
+
+    with open("data/reference_and_test_files/unified_full_fandoms_list.json", "w") as file:
+        dump(output_dict, file, indent=4)
+
+    list_dict = {
+        "RPF" : [key for key in new_RPF_dict],
+        "fictional" : [key for key in new_fic_dict]
+    }
+    with open("data/reference_and_test_files/full_fandoms_list.json", "w") as fandom_list_file:
+        dump(list_dict, fandom_list_file, indent=4)
+
     #TODO:
-    # - this should update the fandoms list
-    # - use RPF separation helper func
-    # - use format unified labels helper func
-    # - turn op version sets into lists & order them
-    # - order fandom keys alphabetically
-    # - print result into a nice new json file
+    # - use RPF separation helper func ✅
+    # - use format unified labels helper func ✅
+    # - turn op version sets into lists & order them ✅
+    # - order fandom keys alphabetically ✅
+    # - print result into a nice new json file ✅
+        # - this should update the fandoms list (nope I've made a separate one for now)
+            # use new fandoms to update list (without details!)
+        # -> unifies all fandoms into useable names ✅
+        # while collecting their original instances ✅
+        # & separating into RPF & fictional categories ✅
 
     pass
 
 
 if __name__ == "__main__":
-    format_unified_labels(separate_RPF_from_fictional())
+    unify_fandoms()
