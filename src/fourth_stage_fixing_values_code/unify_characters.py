@@ -1,4 +1,83 @@
-    # - adding types of media for fictional category
+
+#things to fix at a glance:
+    # fix misattributed late-addition music groups ✅
+
+    # RM form bts is doubled
+    # so is xiao zhan/sean from untamed
+    # mcr is both doubled up
+    # the expected first name/last name order inconsistency issue w a lot of names
+    # a buncha doubles among the youtubers
+
+    # there's a few doubles in AoT
+    # critical role has doubles
+    # DC has a suspicious lack of aliases, pls fix in formatting later
+    # dragon age has doubles
+    # elsa frozen is double
+    # crowley good omens is double
+    # america hetalia is double
+    # les mis has doubles
+    # lost girl lauren is double
+    # of course there's marvel doubles, and same as w dc a sus lack of aliases
+    # mass effect has male & female & non-specified shepard 
+    #   -> figure out what regular shepard was classed as gender-wise
+    # merlin has doubles
+    # as does miraculous ladybug
+    # mha has doubles & lacks some aliases
+    # naruto has a double
+    # rumpelstiltskin once upon a time still misspellt & therefore double
+    # zosan one piece lacking their aliases
+    # pretty sure mccree's dead name in overwatch, also missing aliases
+    # person of interest has a double
+    # pitch perfect has a double
+    # as does power rangers
+    # and queer as folk
+    # are jim & james moriarity the same person in sherlock holmes? if so they're double
+    # star trek has double
+    # star wars has kylo double
+    # so many steven universe doubles
+    # reader & you doubled up in supernatural
+    # tmnt have doubles
+    # the 100 has doubles
+    # last of us ellie is double
+    # undyne undertale is double
+    # as is lance voltron
+# the rest looks fine but we'll have to see if everyone is accounted for later    
+
+
+#TODO:
+# remove doubles
+    #doubles are generally caused by:
+        # missing parts of names vs present ones
+        # brackets specifying property we don't need to specify
+    # -> remove brackets
+    # for missing name parts more formatting is needed:
+# separate & collect all name parts
+    # split at " | " for aliases (there is no consistency abt order tho)
+    # split at white spaces for everything else
+# categorise name parts appropriately
+    # if split item starts & ends on ' -> it's a nickname
+    # figure out which bits are first names, last names & aliases
+# complete name parts where missing
+    # complete first/last names where missing from one double but present in the other
+    # add aliases where obviously missing
+    # add translations if you can find a reliable way to scrape the info 
+    #   cause fucking hell it'd be a lot of work otherwise ToT
+
+# add original fandom instances to character profiles
+    # eg their fandom may have many instances but they were only listed for these ones specifically
+    # -> to keep track of that as we clean, same as w fandoms
+
+# add gender where same-sex slash pairings
+    # start from latest info
+    # do not replace after it's been added
+    # if it's not a same-sex slash pairing, hence has another label, 
+    #   find a way to skip or keep track of other label
+# same for race where in order or same
+    # from most recent info, do not replace w older info
+    # otherwise keep track of untouched labels for later research & categorisation
+
+
+# - adding types of media for fictional category
         # -many fandoms will have multiple adaptations
         # -categories I def saw so far:
             # movies (live action)

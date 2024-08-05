@@ -3,6 +3,10 @@ from src.util_functions.get_file_paths import find_paths
 from re import split, sub
 from json import dump
 
+#I have manually scrolled through all fandoms to verify em
+#all the things I'd wanna test for seem to have worked correctly, 
+# so I'm ok with not writing a test suite for these ones
+
 def separate_RPF_from_fictional():
     """
     returns a dict with keys "RPF" and "fictional"
@@ -115,8 +119,7 @@ def format_unified_labels(data_dict):
             new_rpf_fandom = "Red Velvet"
         elif "|" in rpf_fandom:
             new_rpf_fandom = sub(r"\|", "/", rpf_fandom)
-        # else it stays as is
-
+        else: new_rpf_fandom = rpf_fandom # it stays as is
         
         if new_rpf_fandom in list(new_dict["RPF"].keys()): # if we already got the fandom
             new_dict["RPF"][new_rpf_fandom]["OP Versions"].add(rpf_fandom) # we add to it
@@ -130,6 +133,7 @@ def format_unified_labels(data_dict):
             rpf_dict["OP Versions"].add(rpf_fandom)
 
             new_dict["RPF"][new_rpf_fandom] = rpf_dict
+
 
     for fandom_name in new_dict["RPF"]: # adding types
         rpf_dict = new_dict["RPF"][fandom_name]
@@ -148,7 +152,10 @@ def format_unified_labels(data_dict):
             "EXO", 
             'TOMORROW X TOGETHER / TXT',
             "Fifth Harmony", 
-            '5 Seconds of Summer'
+            '5 Seconds of Summer', 
+            "Fall Out Boy",
+            "Panic! at the Disco",
+            "Twenty One Pilots"
         ]:
             rpf_dict["Type"] = "Music RPF"
         elif rpf_dict["Fandom"] not in ["Drag", "Youtube", "Minecraft", "American Idol"]:
