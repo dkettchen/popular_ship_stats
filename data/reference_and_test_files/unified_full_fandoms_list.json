@@ -47,7 +47,13 @@
             "Fandom": "EXO",
             "Type": "Music RPF",
             "OP Versions": [
-                "EXO (Band)",
+                "EXO (Band)"
+            ]
+        },
+        "Fall Out Boy": {
+            "Fandom": "Fall Out Boy",
+            "Type": "Music RPF",
+            "OP Versions": [
                 "Fall Out Boy"
             ]
         },
@@ -125,7 +131,13 @@
             "Fandom": "One Direction",
             "Type": "Music RPF",
             "OP Versions": [
-                "One Direction (Band)",
+                "One Direction (Band)"
+            ]
+        },
+        "Panic! at the Disco": {
+            "Fandom": "Panic! at the Disco",
+            "Type": "Music RPF",
+            "OP Versions": [
                 "Panic! at the Disco"
             ]
         },
@@ -162,7 +174,13 @@
             "Fandom": "TOMORROW X TOGETHER / TXT",
             "Type": "Music RPF",
             "OP Versions": [
-                "TOMORROW X TOGETHER | TXT",
+                "TOMORROW X TOGETHER | TXT"
+            ]
+        },
+        "Twenty One Pilots": {
+            "Fandom": "Twenty One Pilots",
+            "Type": "Music RPF",
+            "OP Versions": [
                 "Twenty One Pilots"
             ]
         },

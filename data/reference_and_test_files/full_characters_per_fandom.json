@@ -1,1638 +1,1422 @@
 {
-    "5 Seconds of Summer (Band)": [
-        "Luke Hemmings",
-        "Michael Clifford"
-    ],
-    "9-1-1 (TV)": [
-        "Eddie Diaz",
-        "Evan 'Buck' Buckley"
-    ],
-    "9-1-1: Lone Star (TV 2020)": [
-        "Carlos Reyes",
-        "TK Strand"
-    ],
-    "A Song of Ice and Fire - George R. R. Martin": [
-        "Arya Stark",
-        "Gendry Waters",
-        "Sandor Clegane",
-        "Sansa Stark"
-    ],
-    "Adam Lambert (Musician)": [
-        "Adam Lambert",
-        "Sauli Koskinen",
-        "Tommy Ratliff"
-    ],
-    "Adventure Time": [
-        "Marceline",
-        "Princess Bubblegum"
-    ],
-    "Agent Carter (TV)": [
-        "Angie Martinelli",
-        "Peggy Carter"
-    ],
-    "Agents of S.H.I.E.L.D. (TV)": [
-        "Grant Ward",
-        "Jemma Simmons",
-        "Leo Fitz",
-        "Skye",
-        "Skye | Daisy Johnson"
-    ],
-    "All For The Game - Nora Sakavic": [
-        "Andrew Minyard",
-        "Neil Josten"
-    ],
-    "American Horror Story": [
-        "Cordelia Foxx | Cordelia Goode",
-        "Misty Day"
-    ],
-    "American Horror Story: Coven": [
-        "Cordelia Foxx | Cordelia Goode",
-        "Misty Day"
-    ],
-    "American Idol RPF": [
-        "Adam Lambert",
-        "Kris Allen"
-    ],
-    "Amphibia (Cartoon)": [
-        "Anne Boonchuy",
-        "Marcy Wu",
-        "Sasha Waybright"
-    ],
-    "Angel: the Series": [
-        "Angel",
-        "Spike"
-    ],
-    "Arcane: League of Legends (Cartoon 2021)": [
-        "Caitlyn",
-        "Jayce",
-        "Vi",
-        "Viktor"
-    ],
-    "Arrow (TV 2012)": [
-        "Felicity Smoak",
-        "Nyssa al Ghul",
-        "Oliver Queen",
-        "Sara Lance"
-    ],
-    "Avatar: Legend of Korra": [
-        "Asami Sato",
-        "Korra",
-        "Kya II",
-        "Lin Beifong"
-    ],
-    "Avatar: The Last Airbender": [
-        "Azula",
-        "Katara",
-        "Sokka",
-        "Ty Lee",
-        "Zuko"
-    ],
-    "Bangtan Boys | BTS": [
-        "Jeon Jungkook",
-        "Jung Hoseok | J-Hope",
-        "Kim Namjoon | RM",
-        "Kim Namjoon | Rap Monster",
-        "Kim Seokjin | Jin",
-        "Kim Taehyung | V",
-        "Min Yoongi | Suga",
-        "Park Jimin"
-    ],
-    "Batman (Comics)": [
-        "Bruce Wayne",
-        "Dick Grayson"
-    ],
-    "Batman - All Media Types": [
-        "Harleen Quinzel",
-        "Jason Todd",
-        "Pamela Isley",
-        "Tim Drake"
-    ],
-    "Battlestar Galactica (2003)": [
-        "Kara Thrace",
-        "Laura Roslin",
-        "Lee Adama",
-        "William Adama"
-    ],
-    "Be More Chill \u2013 Iconis/Tracz": [
-        "Jeremy Heere",
-        "Michael Mell"
-    ],
-    "Bishoujo Senshi Sailor Moon | Pretty Guardian Sailor Moon": [
-        "Kaiou Michiru",
-        "Tenoh Haruka"
-    ],
-    "Blue Lock (Manga)": [
-        "Mikage Reo",
-        "Nagi Seishirou"
-    ],
-    "Boku no Hero Academia | My Hero Academia": [
-        "Aizawa Shouta | Eraserhead",
-        "Asui Tsuyu",
-        "Bakugou Katsuki",
-        "Dabi",
-        "Dabi | Todoroki Touya",
-        "Jirou Kyouka",
-        "Kaminari Denki",
-        "Kirishima Eijirou",
-        "Midoriya Izuku",
-        "Reader",
-        "Shinsou Hitoshi",
-        "Takami Keigo | Hawks",
-        "Todoroki Shouto",
-        "Uraraka Ochako",
-        "Yagi Toshinori | All Might",
-        "Yamada Hizashi | Present Mic",
-        "Yaoyorozu Momo"
-    ],
-    "Bridgerton (TV)": [
-        "Anthony Bridgerton",
-        "Kate Sheffield | Kate Sharma"
-    ],
-    "Buffy the Vampire Slayer": [
-        "Angel",
-        "Buffy Summers",
-        "Faith Lehane",
-        "Spike",
-        "Tara Maclay",
-        "Willow Rosenberg",
-        "Xander Harris"
-    ],
-    "Buffy the Vampire Slayer (TV)": [
-        "Buffy Summers",
-        "Faith Lehane",
-        "Tara Maclay",
-        "Willow Rosenberg"
-    ],
-    "Call of Duty (Video Games)": [
-        "John 'Soap' MacTavish",
-        "Reader",
-        "Simon 'Ghost' Riley"
-    ],
-    "Captain America (Movies)": [
-        "James 'Bucky' Barnes",
-        "Steve Rogers"
-    ],
-    "Captain Marvel (2019)": [
-        "Carol Danvers",
-        "Maria Rambeau"
-    ],
-    "Carmilla (Web Series)": [
-        "Carmilla Karnstein",
-        "Danny Lawrence",
-        "Laura Hollis"
-    ],
-    "Carol (2015)": [
-        "Carol Aird",
-        "Therese Belivet"
-    ],
-    "Carry On Series - Rainbow Rowell": [
-        "Simon Snow",
-        "Tyrannus Basilton 'Baz' Pitch"
-    ],
-    "Castle": [
-        "Kate Beckett",
-        "Richard Castle"
-    ],
-    "Check Please! (Webcomic)": [
-        "Eric Bittle",
-        "Jack Zimmermann"
-    ],
-    "Chilling Adventures of Sabrina (TV 2018)": [
-        "Mary Wardwell | Madam Satan | Lilith",
-        "Zelda Spellman"
-    ],
-    "Criminal Minds": [
-        "Aaron Hotchner",
-        "Derek Morgan",
-        "Emily Prentiss",
-        "Jennifer 'JJ' Jareau",
-        "Spencer Reid"
-    ],
-    "Criminal Minds (US TV)": [
-        "Emily Prentiss",
-        "Jennifer 'JJ' Jareau"
-    ],
-    "Critical Role (Web Series)": [
-        "Beauregard",
-        "Beauregard Lionett",
-        "Jester Lavorre",
-        "Yasha"
-    ],
-    "DC's Legends of Tomorrow (TV)": [
-        "Ava Sharpe",
-        "Sara Lance"
-    ],
-    "DCU (Comics)": [
-        "Bruce Wayne",
-        "Clark Kent",
-        "Jason Todd",
-        "Kon-El",
-        "Tim Drake"
-    ],
-    "Descendants (Disney Movies)": [
-        "Evie",
-        "Mal"
-    ],
-    "Detroit: Become Human (Video Game)": [
-        "Connor",
-        "Gavin Reed",
-        "Hank Anderson",
-        "Upgraded Connor | RK900"
-    ],
-    "Doctor Who (2005)": [
-        "Amy Pond",
-        "Clara Oswin Oswald",
-        "Eleventh Doctor",
-        "Jenny Flint",
-        "Madame Vastra",
-        "Ninth Doctor",
-        "River Song",
-        "Rory Williams",
-        "Rose Tyler",
-        "Tenth Doctor",
-        "The Doctor",
-        "Thirteenth Doctor",
-        "Twelfth Doctor",
-        "Yasmin Khan"
-    ],
-    "Doctor Who RPF": [
-        "Alex Kingston",
-        "Matt Smith"
-    ],
-    "Dragon Age - All Media Types": [
-        "Female Hawke",
-        "Isabela"
-    ],
-    "Dragon Age II": [
-        "Female Hawke",
-        "Fenris",
-        "Hawke",
-        "Isabela"
-    ],
-    "Dragon Age: Inquisition": [
-        "Cullen Rutherford",
-        "Dorian Pavus",
-        "Female Inquisitor",
-        "Inquisitor",
-        "Iron Bull",
-        "Josephine Montilyet",
-        "Sera",
-        "Solas"
-    ],
-    "Dragon Age: Origins": [
-        "Alistair",
-        "Female Warden",
-        "Leliana",
-        "Warden"
-    ],
-    "EXO (Band)": [
-        "Byun Baekhyun",
-        "Do Kyungsoo | D.O",
-        "Kim Jongin | Kai",
-        "Park Chanyeol"
-    ],
-    "Emmerdale": [
-        "Aaron Dingle",
-        "Charity Dingle",
-        "Robert Sugden",
-        "Vanessa Woodfield"
-    ],
-    "Faking It (TV 2014)": [
-        "Amy Raudenfeld",
-        "Karma Ashcroft"
-    ],
-    "Fall Out Boy": [
-        "Patrick Stump",
-        "Pete Wentz"
-    ],
-    "Fantastic Beasts and Where to Find Them (Movies)": [
-        "Credence Barebone",
-        "Original Percival Graves"
-    ],
-    "Fifth Harmony (Band)": [
-        "Camila Cabello",
-        "Lauren Jauregui"
-    ],
-    "Figure Skating RPF": [
-        "Boyang Jin",
-        "Yuzuru Hanyu"
-    ],
-    "Final Fantasy XIII": [
-        "Lightning",
-        "Oerba Yun Fang"
-    ],
-    "Final Fantasy XV": [
-        "Noctis Lucis Caelum",
-        "Prompto Argentum"
-    ],
-    "Fire Emblem: Three Houses": [
-        "Dimitri Alexandre Blaiddyd",
-        "Edelgard von Hresvelg",
-        "Felix Hugo Fraldarius",
-        "My Unit | Byleth",
-        "Sylvain Jose Gautier"
-    ],
-    "Free!": [
-        "Matsuoka Rin",
-        "Nanase Haruka",
-        "Tachibana Makoto"
-    ],
-    "Frozen (2013)": [
-        "Anna",
-        "Elsa"
-    ],
-    "Frozen (Disney Movies)": [
-        "Anna",
-        "Elsa"
-    ],
-    "Fullmetal Alchemist": [
-        "Edward Elric",
-        "Roy Mustang",
-        "Winry Rockbell"
-    ],
-    "Game of Thrones (TV)": [
-        "Arya Stark",
-        "Brienne of Tarth",
-        "Daenerys Targaryen",
-        "Gendry Waters",
-        "Jaime Lannister",
-        "Jon Snow",
-        "Margaery Tyrell",
-        "Sansa Stark"
-    ],
-    "Generation Kill": [
-        "Brad Colbert",
-        "Nate Fick"
-    ],
-    "Ghostbusters (2016)": [
-        "Erin Gilbert",
-        "Jillian Holtzmann"
-    ],
-    "Girl Meets World": [
-        "Maya Hart",
-        "Riley Matthews"
-    ],
-    "Glee": [
-        "Blaine Anderson",
-        "Brittany S. Pierce",
-        "David Karofsky",
-        "Finn Hudson",
-        "Kurt Hummel",
-        "Noah Puckerman",
-        "Quinn Fabray",
-        "Rachel Berry",
-        "Santana Lopez",
-        "Sebastian Smythe"
-    ],
-    "Good Omens (TV)": [
-        "Aziraphale",
-        "Crowley"
-    ],
-    "Good Omens - Neil Gaiman & Terry Pratchett": [
-        "Aziraphale",
-        "Crowley"
-    ],
-    "Gotham (TV)": [
-        "Edward Nygma",
-        "Oswald Cobblepot"
-    ],
-    "Gravity Falls": [
-        "Bill Cipher",
-        "Dipper Pines",
-        "Mabel Pines",
-        "Pacifica Northwest"
-    ],
-    "Grey's Anatomy": [
-        "Addison Montgomery",
-        "Arizona Robbins",
-        "Calliope 'Callie' Torres",
-        "Meredith Grey"
-    ],
-    "Grey\u2019s Anatomy": [
-        "Arizona Robbins",
-        "Calliope 'Callie' Torres"
-    ],
-    "Gundam Wing": [
-        "Duo Maxwell",
-        "Heero Yuy"
-    ],
-    "Haikyuu!!": [
-        "Akaashi Keiji",
-        "Bokuto Koutarou",
-        "Hinata Shouyou",
-        "Iwaizumi Hajime",
-        "Kageyama Tobio",
-        "Kozume Kenma",
-        "Kuroo Tetsurou",
-        "Miya Atsumu",
-        "Oikawa Tooru",
-        "Sakusa Kiyoomi",
-        "Sawamura Daichi",
-        "Shimizu Kiyoko",
-        "Sugawara Koushi",
-        "Tsukishima Kei",
-        "Yachi Hitoka",
-        "Yamaguchi Tadashi"
-    ],
-    "Hamilton \u2013 Miranda": [
-        "Alexander Hamilton",
-        "Elizabeth 'Eliza' Schuyler",
-        "John Laurens",
-        "Maria Reynolds",
-        "Thomas Jefferson"
-    ],
-    "Hannibal (TV)": [
-        "Alana Bloom",
-        "Hannibal Lecter",
-        "Margot Verger",
-        "Will Graham"
-    ],
-    "Harry Potter - J. K. Rowling": [
-        "Barty Crouch Jr.",
-        "Bellatrix Black Lestrange",
-        "Dorcas Meadowes",
-        "Draco Malfoy",
-        "Evan Rosier",
-        "Ginny Weasley",
-        "Harry Potter",
-        "Hermione Granger",
-        "James Potter",
-        "Lily Evans Potter",
-        "Luna Lovegood",
-        "Marlene McKinnon",
-        "Mary Macdonald",
-        "Pansy Parkinson",
-        "Regulus Black",
-        "Remus Lupin",
-        "Ron Weasley",
-        "Severus Snape",
-        "Sirius Black",
-        "Tom Riddle | Voldemort"
-    ],
-    "Hawaii Five-0": [
-        "Danny 'Danno' Williams",
-        "Steve McGarrett"
-    ],
-    "Hawaii Five-0 (2010)": [
-        "Danny 'Danno' Williams",
-        "Steve McGarrett"
-    ],
-    "Hawkeye (TV 2021)": [
-        "Kate Bishop",
-        "Yelena Belova"
-    ],
-    "Hazbin Hotel (Web Series)": [
-        "Charlie Magne",
-        "Vaggie"
-    ],
-    "Heartstopper (TV)": [
-        "Charles 'Charlie' Spring",
-        "Nicholas 'Nick' Nelson"
-    ],
-    "Hermitcraft SMP": [
-        "Charles | Grian",
-        "Ryan | GoodTimesWithScar"
-    ],
-    "Hetalia: Axis Powers": [
-        "America",
-        "England"
-    ],
-    "Highlander: The Series": [
-        "Duncan MacLeod",
-        "Methos"
-    ],
-    "Hockey RPF": [
-        "Jonathan Toews",
-        "Patrick Kane"
-    ],
-    "Holby City": [
-        "Bernie Wolfe",
-        "Serena Campbell"
-    ],
-    "Homestuck": [
-        "Aranea Serket",
-        "Calliope",
-        "Dave Strider",
-        "Dirk Strider",
-        "Eridan Ampora",
-        "Gamzee Makara",
-        "Jade Harley",
-        "Jake English",
-        "Jane Crocker",
-        "John Egbert",
-        "Kanaya Maryam",
-        "Karkat Vantas",
-        "Meenah Peixes",
-        "Rose Lalonde",
-        "Roxy Lalonde",
-        "Sollux Captor",
-        "Tavros Nitram",
-        "Terezi Pyrope",
-        "Vriska Serket"
-    ],
-    "House M.D.": [
-        "Greg House",
-        "James Wilson"
-    ],
-    "House of the Dragon (TV)": [
-        "Aemond 'One-Eye' Targaryen",
-        "Alicent Hightower",
-        "Daemon Targaryen",
-        "Lucerys Velaryon",
-        "Rhaenyra Targaryen"
-    ],
-    "Hunger Games Series - All Media Types": [
-        "Johanna Mason",
-        "Katniss Everdeen"
-    ],
-    "Hunger Games Trilogy - Suzanne Collins": [
-        "Katniss Everdeen",
-        "Peeta Mellark"
-    ],
-    "IT (2017)": [
-        "Eddie Kaspbrak",
-        "Richie Tozier"
-    ],
-    "IT (Movies \u2013 Muschietti)": [
-        "Ben Hanscom",
-        "Beverly Marsh",
-        "Eddie Kaspbrak",
-        "Richie Tozier"
-    ],
-    "IT - Stephen King": [
-        "Eddie Kaspbrak",
-        "Richie Tozier"
-    ],
-    "Inception (2010)": [
-        "Arthur",
-        "Eames"
-    ],
-    "James Bond (Craig movies)": [
-        "James Bond",
-        "Q"
-    ],
-    "JoJo no Kimyou na Bouken | JoJo's Bizarre Adventure": [
-        "Bruno Buccellati",
-        "Kakyoin Noriaki",
-        "Kujo Jotaro",
-        "Leone Abbacchio"
-    ],
-    "Julie and The Phantoms (TV 2020)": [
-        "Alex Mercer",
-        "Julie Molina",
-        "Luke Patterson",
-        "Willie"
-    ],
-    "KAT-TUN (Band)": [
-        "Akanishi Jin",
-        "Kamenashi Kazuya"
-    ],
-    "Kill la Kill": [
-        "Kiryuuin Satsuki",
-        "Matoi Ryuuko"
-    ],
-    "Killing Eve (TV 2018)": [
-        "Eve Polastri",
-        "Villanelle | Oksana Astankova"
-    ],
-    "Kim Possible (Cartoon)": [
-        "Kim Possible",
-        "Shego"
-    ],
-    "Kingdom Hearts": [
-        "Axel",
-        "Roxas"
-    ],
-    "Kingsman: The Secret Service (2015)": [
-        "Gary 'Eggsy' Unwin",
-        "Harry Hart"
-    ],
-    "KinnPorsche: The Series (TV)": [
-        "Kim Khimhant Theerapanyakun",
-        "Kinn Anakinn Theerapanyakun",
-        "Pete Phongsakorn Saengtham",
-        "Porchay Pichaya Kittisawat",
-        "Porsche Pachara Kittisawat",
-        "Vegas Kornwit Theerapanyakun"
-    ],
-    "LEGO Monkie Kid": [
-        "Liu Er Mihou | Six-eared Macaque",
-        "Sun Wukong | Monkey King"
-    ],
-    "Law & Order: SVU": [
-        "Alexandra Cabot",
-        "Elliot Stabler",
-        "Olivia Benson"
-    ],
-    "Legacies (TV 2018)": [
-        "Hope Mikaelson",
-        "Josie Saltzman",
-        "Penelope Park"
-    ],
-    "Legend of the Seeker": [
-        "Cara Mason",
-        "Kahlan Amnell"
-    ],
-    "Les Mis\u00e9rables - All Media Types": [
-        "Cosette Fauchelevent",
-        "Courfeyrac",
-        "Enjolras",
-        "Grantaire",
-        "Javert",
-        "Jean Prouvaire",
-        "Jean Valjean",
-        "Marius Pontmercy",
-        "\u00c9ponine Th\u00e9nardier"
-    ],
-    "Life Is Strange (Video Game)": [
-        "Chloe Price",
-        "Maxine 'Max' Caulfield",
-        "Maxine Caulfield",
-        "Rachel Amber",
-        "Victoria Chase"
-    ],
-    "Life on Mars (UK)": [
-        "Gene Hunt",
-        "Sam Tyler"
-    ],
-    "Little Witch Academia": [
-        "Atsuko 'Akko' Kagari",
-        "Diana Cavendish"
-    ],
-    "Lizzie Bennet Diaries": [
-        "Lizzie Bennet",
-        "William Darcy"
-    ],
-    "Lockwood & Co. - Jonathan Stroud": [
-        "Anthony Lockwood",
-        "Lucy Carlyle"
-    ],
-    "Loki (TV 2021)": [
-        "Loki",
-        "Mobius M. Mobius"
-    ],
-    "Lord of the Rings RPF": [
-        "Sean Bean",
-        "Viggo Mortensen"
-    ],
-    "Lost Girl": [
-        "Bo",
-        "Lauren",
-        "Lauren Lewis",
-        "Tamsin"
-    ],
-    "Love Live! School Idol Project": [
-        "Ayase Eli",
-        "Nishikino Maki",
-        "Toujou Nozomi",
-        "Yazawa Nico"
-    ],
-    "Lucifer (TV)": [
-        "Chloe Decker",
-        "Lucifer Morningstar"
-    ],
-    "MIRROR (Hong Kong Band)": [
-        "Lo Hon-ting | Anson Lo",
-        "Lui Cheuk-on | Edan Lui"
-    ],
-    "Mahou Shoujo Madoka Magika | Puella Magi Madoka Magica": [
-        "Akemi Homura",
-        "Kaname Madoka",
-        "Miki Sayaka",
-        "Sakura Kyouko"
-    ],
-    "Maleficent (2014)": [
-        "Aurora",
-        "Maleficent"
-    ],
-    "Marvel Cinematic Universe": [
-        "James 'Bucky' Barnes",
-        "Loki",
-        "Maria Hill",
-        "Natasha Romanov",
-        "Pepper Potts",
-        "Peter Parker",
-        "Reader",
-        "Sam Wilson",
-        "Stephen Strange",
-        "Steve Rogers",
-        "Tony Stark",
-        "Wanda Maximoff"
-    ],
-    "Mass Effect": [
-        "Female Shepard",
-        "Garrus Vakarian",
-        "Kaidan Alenko",
-        "Liara T'Soni",
-        "Male Shepard",
-        "Shepard"
-    ],
-    "Mass Effect Trilogy": [
-        "Female Shepard",
-        "Liara T'Soni"
-    ],
-    "Merlin (TV)": [
-        "Arthur Pendragon",
-        "Guinevere",
-        "Gwen",
-        "Merlin",
-        "Morgana",
-        "Morgause"
-    ],
-    "Merlin (TV) RPF": [
-        "Bradley James",
-        "Colin Morgan"
-    ],
-    "Minecraft (Video Game)": [
-        "Alexis | Quackity",
-        "Clay | Dream",
-        "GeorgeNotFound",
-        "Karl Jacobs",
-        "Kristin Rosales Watson",
-        "Phil Watson",
-        "Phil Watson | Philza",
-        "Ranboo",
-        "Sapnap",
-        "Technoblade",
-        "Toby Smith | Tubbo",
-        "TommyInnit",
-        "Wilbur Soot"
-    ],
-    "Miraculous Ladybug": [
-        "Adrien Agreste",
-        "Adrien Agreste | Chat Noir",
-        "Juleka Couffaine",
-        "Marinette Dupain-Cheng",
-        "Marinette Dupain-Cheng | Ladybug",
-        "Rose Lavillant"
-    ],
-    "Mortal Instruments Series - Cassandra Clare": [
-        "Alec Lightwood",
-        "Magnus Bane"
-    ],
-    "Motherland: Fort Salem (TV)": [
-        "Raelle Collar",
-        "Scylla Ramshorn"
-    ],
-    "My Chemical Romance": [
-        "Frank",
-        "Frank Iero",
-        "Gerard",
-        "Gerard Way"
-    ],
-    "M\u00f3d\u00e0o Z\u01d4sh\u012b - M\u00f2xi\u0101ng T\u00f3ngxi\u00f9": [
-        "L\u00e1n Zh\u00e0n | L\u00e1n W\u00e0ngj\u012b",
-        "W\u00e8i Y\u012bng | W\u00e8i W\u00faxi\u00e0n"
-    ],
-    "NCIS": [
-        "Abby Sciuto",
-        "Anthony DiNozzo",
-        "Jethro Gibbs",
-        "Ziva David"
-    ],
-    "NCT (Band)": [
-        "Lee Donghyuck | Haechan",
-        "Lee Jeno",
-        "Mark Lee",
-        "Na Jaemin"
-    ],
-    "Naruto": [
-        "Haruno Sakura",
-        "Hatake Kakashi",
-        "Uchiha Sasuke",
-        "Umino Iruka",
-        "Uzumaki Naruto",
-        "Yamanaka Ino"
-    ],
-    "Naruto Naruto": [
-        "Uchiha Sasuke",
-        "Uzumaki"
-    ],
-    "New Dangan Ronpa V3: Everyone's New Semester of Killing": [
-        "Oma Kokichi",
-        "Saihara Shuichi"
-    ],
-    "Omniscient Reader \u2013 Sing-Shong": [
-        "Kim Dokja",
-        "Yoo Joonghyuk"
-    ],
-    "Once Upon a Time (TV)": [
-        "Aurora",
-        "Belle",
-        "Captain Hook | Killian Jones",
-        "Emma Swan",
-        "Evil Queen | Regina Mills",
-        "Mulan",
-        "Red Riding Hood | Ruby",
-        "Rumpelstiltskin | Mr. Gold",
-        "Rumplestiltskin | Mr. Gold"
-    ],
-    "One Direction (Band)": [
-        "Harry Styles",
-        "Liam Payne",
-        "Louis Tomlinson",
-        "Niall Horan",
-        "Zayn Malik"
-    ],
-    "One Piece (Anime & Manga)": [
-        "Roronoa Zoro",
-        "Vinsmoke Sanji"
-    ],
-    "One-Punch Man": [
-        "Genos",
-        "Saitama"
-    ],
-    "Orange is the New Black": [
-        "Alex Vause",
-        "Piper Chapman"
-    ],
-    "Orphan Black (TV)": [
-        "Alison Hendrix",
-        "Beth Childs",
-        "Cosima Niehaus",
-        "Delphine Cormier"
-    ],
-    "Our Flag Means Death (TV)": [
-        "Blackbeard | Edward Teach",
-        "Israel Hands",
-        "Stede Bonnet"
-    ],
-    "Overwatch (Video Game)": [
-        "Angela 'Mercy' Ziegler",
-        "Emily",
-        "Fareeha 'Pharah' Amari",
-        "Hanzo Shimada",
-        "Jesse McCree",
-        "Lena 'Tracer' Oxton",
-        "Moira O'Deorain",
-        "Reaper | Gabriel Reyes",
-        "Soldier: 76 | Jack Morrison",
-        "Widowmaker | Am\u00e9lie Lacroix"
-    ],
-    "Owari no Seraph | Seraph of the End": [
-        "Hyakuya Mikaela",
-        "Hyakuya Yuuichirou"
-    ],
-    "Pacific Rim (2013)": [
-        "Hermann Gottlieb",
-        "Newton Geiszler"
-    ],
-    "Panic! at the Disco": [
-        "Brendon Urie",
-        "Ryan Ross",
-        "Spencer Smith"
-    ],
-    "Percy Jackson and the Olympians - Rick Riordan": [
-        "Annabeth Chase",
-        "Nico di Angelo",
-        "Percy Jackson",
-        "Piper McLean",
-        "Will Solace"
-    ],
-    "Person of Interest (TV)": [
-        "Harold Finch",
-        "John Reese",
-        "Root",
-        "Root | Samantha Groves",
-        "Sameen Shaw"
-    ],
-    "Persona 4": [
-        "Amagi Yukiko",
-        "Satonaka Chie"
-    ],
-    "Persona 5": [
-        "Akechi Goro",
-        "Persona 5 Protagonist"
-    ],
-    "Phandom/The Fantastic Foursome (YouTube RPF)": [
-        "Dan Howell",
-        "Phil Lester"
-    ],
-    "Pitch Perfect (2012)": [
-        "Beca Mitchell",
-        "Chloe"
-    ],
-    "Pitch Perfect (Movies)": [
-        "Beca Mitchell",
-        "Chloe",
-        "Chloe Beale"
-    ],
-    "Power Rangers (2017)": [
-        "Kimberly Hart",
-        "Trini"
-    ],
-    "Project SEKAI COLORFUL STAGE!": [
-        "Aoyagi Touya",
-        "Kamishiro Rui",
-        "Shinonome Akito",
-        "Tenma Tsukasa"
-    ],
-    "Puella Magi Madoka Magica": [
-        "Akemi Homura",
-        "Kaname Madoka"
-    ],
-    "Queer as Folk (US)": [
-        "Brian Kinney",
-        "Justin Taylor"
-    ],
-    "RWBY": [
-        "Blake Belladonna",
-        "Ruby Rose",
-        "Weiss Schnee",
-        "Yang Xiao Long"
-    ],
-    "Raven Cycle - Maggie Stiefvater": [
-        "Adam Parrish",
-        "Ronan Lynch"
-    ],
-    "Red Velvet (K-pop Band)": [
-        "Bae Joohyun | Irene",
-        "Kang Seulgi"
-    ],
-    "Rise of the Teenage Mutant Ninja Turtles": [
-        "Donatello",
-        "Leonardo",
-        "Michelangelo",
-        "Raphael"
-    ],
-    "Riverdale (TV 2017)": [
-        "Betty Cooper",
-        "Cheryl Blossom",
-        "Jughead Jones",
-        "Toni Topaz",
-        "Veronica Lodge"
-    ],
-    "Rizzoli & Isles": [
-        "Jane Rizzoli",
-        "Maura Isles"
-    ],
-    "Rookie Blue": [
-        "Gail Peck",
-        "Holly Stewart"
-    ],
-    "Rooster Teeth/Achievement Hunter RPF": [
-        "Gavin Free",
-        "Michael Jones"
-    ],
-    "Rooster Teeth/Achievement Hunter/Funhaus RPF": [
-        "Gavin Free",
-        "Michael Jones"
-    ],
-    "Roswell New Mexico (TV 2019)": [
-        "Alex Manes",
-        "Michael Guerin"
-    ],
-    "RuPaul's Drag Race (US) RPF": [
-        "Brooke Lynn Hytes",
-        "Katya Zamolodchikova",
-        "Trixie Mattel",
-        "Vanessa Vanjie Mateo"
-    ],
-    "RuPaul's Drag Race RPF": [
-        "Katya Zamolodchikova",
-        "Trixie Mattel"
-    ],
-    "SK8 the Infinity (Anime)": [
-        "Hasegawa Langa",
-        "Kyan Reki",
-        "Nanjo Kojiro | Joe",
-        "Sakurayashiki Kaoru | Cherry Blossom"
-    ],
-    "SKAM (Norway)": [
-        "Even Bech N\u00e6sheim",
-        "Isak Valtersen"
-    ],
-    "SKAM (TV)": [
-        "Even Bech N\u00e6sheim",
-        "Isak Valtersen"
-    ],
-    "Sanders Sides (Web Series)": [
-        "Anxiety | Virgil Sanders",
-        "Creativity | Roman 'Princey' Sanders",
-        "Logic | Logan Sanders",
-        "Morality | Patton Sanders"
-    ],
-    "Schitt's Creek": [
-        "David Rose",
-        "Patrick Brewer"
-    ],
-    "Shadow and Bone (TV)": [
-        "Alina Starkov",
-        "The Darkling | Aleksander Morozova"
-    ],
-    "Shadowhunters (TV)": [
-        "Alec Lightwood",
-        "Clary Fray",
-        "Isabelle Lightwood",
-        "Magnus Bane"
-    ],
-    "Shameless (US)": [
-        "Ian Gallagher",
-        "Mickey Milkovich"
-    ],
-    "She-Ra and the Princesses of Power (2018)": [
-        "Adora",
-        "Catra",
-        "Glimmer",
-        "Perfuma",
-        "Scorpia"
-    ],
-    "Sherlock (TV)": [
-        "Clara",
-        "Greg Lestrade",
-        "Harry Watson",
-        "Irene Adler",
-        "James Moriarty",
-        "Jim Moriarty",
-        "John Watson",
-        "Lestrade",
-        "Mary Morstan",
-        "Molly Hooper",
-        "Mycroft Holmes",
-        "Sebastian Moran",
-        "Sherlock Holmes"
-    ],
-    "Shingeki no Kyojin | Attack on Titan": [
-        "Annie Leonhart",
-        "Eren Yeager",
-        "Erwin Smith",
-        "Jean Kirstein",
-        "Krista Lenz | Historia Reiss",
-        "Levi",
-        "Levi Ackerman",
-        "Marco Bott",
-        "Mikasa Ackerman",
-        "Ymir",
-        "Ymir of the 104th"
-    ],
-    "Six of Crows Series - Leigh Bardugo": [
-        "Jesper Fahey",
-        "Wylan Van Eck"
-    ],
-    "Skins (UK)": [
-        "Emily Fitch",
-        "Naomi Campbell"
-    ],
-    "Skyfall (2012)": [
-        "James Bond",
-        "Q"
-    ],
-    "Smallville": [
-        "Clark Kent",
-        "Lex Luthor",
-        "Lois Lane"
-    ],
-    "South Park": [
-        "Craig Tucker",
-        "Kyle Broflovski",
-        "Stan Marsh",
-        "Tweek Tweak"
-    ],
-    "Spartacus Series (TV)": [
-        "Agron",
-        "Nasir"
-    ],
-    "Spider-Man (Tom Holland Movies)": [
-        "Michelle Jones",
-        "Peter Parker"
-    ],
-    "Spider-Man - All Media Types": [
-        "Peter Parker",
-        "Wade Wilson"
-    ],
-    "Star Trek RPF": [
-        "Chris Pine",
-        "Zachary Quinto"
-    ],
-    "Star Trek: Alternate Original Series (Movies)": [
-        "Hikaru Sulu",
-        "James T. Kirk",
-        "Leonard 'Bones' McCoy",
-        "Leonard McCoy",
-        "Nyota Uhura",
-        "Pavel Chekov",
-        "Spock"
-    ],
-    "Star Trek: Voyager": [
-        "Kathryn Janeway",
-        "Seven of Nine"
-    ],
-    "Star Wars - All Media Types": [
-        "Anakin Skywalker | Darth Vader",
-        "Han Solo",
-        "Leia Organa",
-        "Obi-Wan Kenobi",
-        "Padm\u00e9 Amidala"
-    ],
-    "Star Wars Episode I: The Phantom Menace": [
-        "Obi-Wan Kenobi",
-        "Qui-Gon Jinn"
-    ],
-    "Star Wars Episode VII: The Force Awakens (2015)": [
-        "Armitage Hux",
-        "Ben Solo | Kylo Ren",
-        "Finn",
-        "Jessika Pava",
-        "Kylo Ren",
-        "Poe Dameron",
-        "Rey"
-    ],
-    "Star Wars Sequel Trilogy": [
-        "Armitage Hux",
-        "Ben Solo | Kylo Ren",
-        "Finn",
-        "Poe Dameron",
-        "Rey"
-    ],
-    "Star Wars Story (2016)": [
-        "Baze Malbus Rogue One: A",
-        "Cassian Andor",
-        "Chirrut \u00cemwe",
-        "Jyn Erso Rogue One: A"
-    ],
-    "Stargate Atlantis": [
-        "Elizabeth Weir",
-        "John Sheppard",
-        "Rodney McKay"
-    ],
-    "Stargate SG-1": [
-        "Daniel Jackson",
-        "Jack O'Neill",
-        "Janet Fraiser",
-        "Sam Carter"
-    ],
-    "Starsky & Hutch": [
-        "David Starsky",
-        "Ken Hutchinson"
-    ],
-    "Station 19 (TV)": [
-        "Carina DeLuca",
-        "Maya Bishop"
-    ],
-    "Steven Universe (Cartoon)": [
-        "Amethyst",
-        "Garnet",
-        "Jasper",
-        "Lapis Lazuli",
-        "Pearl",
-        "Peridot",
-        "Rose Quartz",
-        "Rose Quartz | Pink Diamond",
-        "Ruby",
-        "Sapphire"
-    ],
-    "Stranger Things (TV 2016)": [
-        "Billy Hargrove",
-        "Chrissy Cunningham",
-        "Eddie Munson",
-        "Eleven | Jane Hopper",
-        "Jim 'Chief' Hopper",
-        "Joyce Byers",
-        "Lucas Sinclair",
-        "Maxine 'Max' Mayfield",
-        "Mike Wheeler",
-        "Nancy Wheeler",
-        "Reader",
-        "Robin Buckley",
-        "Steve Harrington",
-        "Will Byers"
-    ],
-    "Stray Kids (Band)": [
-        "Han Jisung | Han",
-        "Hwang Hyunjin",
-        "Lee Felix",
-        "Lee Minho | Lee Know"
-    ],
-    "Suits (TV)": [
-        "Harvey Specter",
-        "Mike Ross"
-    ],
-    "Super Dangan Ronpa 2": [
-        "Hinata Hajime",
-        "Komaeda Nagito"
-    ],
-    "Supergirl (TV 2015)": [
-        "Alex Danvers",
-        "Astra",
-        "Cat Grant",
-        "Kara Danvers",
-        "Kelly Olsen",
-        "Lena Luthor",
-        "Maggie Sawyer",
-        "Samantha 'Sam' Arias"
-    ],
-    "Supernatural": [
-        "Anna Milton",
-        "Castiel",
-        "Charlie Bradbury",
-        "Dean Winchester",
-        "Dorothy Baum",
-        "Gabriel",
-        "Gilda",
-        "Jessica Moore",
-        "Jo Harvelle",
-        "Lucifer",
-        "Ruby",
-        "Sam Winchester",
-        "You"
-    ],
-    "Supernatural (TV 2005)": [
-        "Castiel",
-        "Dean Winchester",
-        "Gabriel",
-        "Reader",
-        "Sam Winchester"
-    ],
-    "Supernatural (TV 2005) RPF": [
-        "Jared Padalecki",
-        "Jensen Ackles"
-    ],
-    "Supernatural RPF": [
-        "Jared Padalecki",
-        "Jensen Ackles"
-    ],
-    "TOMORROW X TOGETHER | TXT": [
-        "Choi Soobin",
-        "Choi Yeonjun"
-    ],
-    "Teen Wolf (TV)": [
-        "Allison Argent",
-        "Cora Hale",
-        "Derek Hale",
-        "Erica Reyes",
-        "Isaac Lahey",
-        "Jackson Whittemore",
-        "Kira Yukimura",
-        "Liam Dunbar",
-        "Lydia Martin",
-        "Malia Tate",
-        "Peter Hale",
-        "Scott McCall",
-        "Stiles Stilinski",
-        "Theo Raeken",
-        "Vernon Boyd"
-    ],
-    "The 100 (TV)": [
-        "Alicia Clark",
-        "Anya",
-        "Bellamy Blake",
-        "Clarke Griffin",
-        "Costia",
-        "Elyza Lex",
-        "Lexa",
-        "Lincoln",
-        "Octavia Blake",
-        "Raven Reyes"
-    ],
-    "The Avengers (Marvel Movies)": [
-        "Bruce Banner",
-        "Clint Barton",
-        "Darcy Lewis",
-        "Jane Foster",
-        "Loki",
-        "Maria Hill",
-        "Natasha Romanov",
-        "Pepper Potts",
-        "Phil Coulson",
-        "Steve Rogers",
-        "Thor",
-        "Tony Stark"
-    ],
-    "The Big Bang Theory (TV)": [
-        "Penny",
-        "Sheldon Cooper"
-    ],
-    "The Closer": [
-        "Brenda Leigh Johnson",
-        "Sharon Raydor"
-    ],
-    "The Devil Wears Prada (2006)": [
-        "Andrea Sachs",
-        "Miranda Priestly"
-    ],
-    "The Flash (TV 2014)": [
-        "Barry Allen",
-        "Leonard Snart"
-    ],
-    "The Good Wife (TV)": [
-        "Alicia Florrick",
-        "Kalinda Sharma"
-    ],
-    "The Haunting of Bly Manor (TV)": [
-        "Dani Clayton",
-        "Jamie Taylor"
-    ],
-    "The Hobbit (Jackson movies)": [
-        "Bilbo Baggins",
-        "F\u00edli",
-        "K\u00edli",
-        "Thorin Oakenshield"
-    ],
-    "The Hobbit - All Media Types": [
-        "Bilbo Baggins",
-        "Thorin Oakenshield"
-    ],
-    "The Last of Us (Video Games)": [
-        "Dina",
-        "Ellie",
-        "Joel"
-    ],
-    "The Locked Tomb Series - Tamsyn Muir": [
-        "Gideon Nav",
-        "Harrowhark Nonagesimus"
-    ],
-    "The Locked Tomb Series | Gideon the Ninth Series - Tamsyn Muir": [
-        "Gideon Nav",
-        "Harrowhark Nonagesimus"
-    ],
-    "The Lord of the Rings - J. R. R. Tolkien": [
-        "Frodo Baggins",
-        "Sam Gamgee"
-    ],
-    "The Magnus Archives (Podcast)": [
-        "Jonathan 'Jon' Sims | The Archivist",
-        "Martin Blackwood"
-    ],
-    "The Man From U.N.C.L.E. (2015)": [
-        "Illya Kuryakin",
-        "Napoleon Solo"
-    ],
-    "The Old Guard (Movie 2020)": [
-        "Andy | Andromache of Scythia",
-        "Joe | Yusuf Al-Kaysani",
-        "Nicky | Nicol\u00f2 di Genova",
-        "Quynh | Noriko"
-    ],
-    "The Owl House (Cartoon)": [
-        "Amity Blight",
-        "Eda Clawthorne",
-        "Hunter | The Golden Guard",
-        "Luz Noceda",
-        "Raine Whispers",
-        "Willow Park"
-    ],
-    "The Professionals": [
-        "Ray Doyle",
-        "William Bodie"
-    ],
-    "The Rookie (TV 2018)": [
-        "Lucy Chen",
-        "Tim Bradford"
-    ],
-    "The Sandman (TV 2022)": [
-        "Dream of the Endless",
-        "Hob Gadling"
-    ],
-    "The Sentinel": [
-        "Blair Sandburg",
-        "Jim Ellison"
-    ],
-    "The Sentinel (TV)": [
-        "Blair Sandburg",
-        "Jim Ellison"
-    ],
-    "The Walking Dead (TV)": [
-        "Daryl Dixon",
-        "Rick Grimes"
-    ],
-    "The Wilds (TV 2020)": [
-        "Shelby Goodkind",
-        "Toni Shalifoe"
-    ],
-    "The Witcher (TV)": [
-        "Geralt z Rivii | Geralt of Rivia",
-        "Jaskier | Dandelion"
-    ],
-    "The X-Files": [
-        "Dana Scully",
-        "Fox Mulder"
-    ],
-    "Thor (Movies)": [
-        "Loki",
-        "Thor"
-    ],
-    "Ti\u0101n Gu\u0101n C\u00ec F\u00fa - M\u00f2xi\u0101ng T\u00f3ngxi\u00f9": [
-        "Hu\u0101 Ch\u00e9ng",
-        "Xi\u00e8 Li\u00e1n"
-    ],
-    "Tokyo Ghoul": [
-        "Nagachika Hideyoshi",
-        "Sasaki Haise"
-    ],
-    "Top Gun (Movies)": [
-        "Bradley 'Rooster' Bradshaw",
-        "Jake 'Hangman' Seresin",
-        "Pete 'Maverick' Mitchell",
-        "Tom 'Iceman' Kazansky"
-    ],
-    "Torchwood": [
-        "Ianto Jones",
-        "Jack Harkness"
-    ],
-    "Trigun Stampede (Anime 2023)": [
-        "Nicholas D. Wolfwood",
-        "Vash the Stampede"
-    ],
-    "Twenty One Pilots": [
-        "Josh Dun",
-        "Tyler Joseph"
-    ],
-    "Twilight Series - Stephenie Meyer": [
-        "Bella Swan",
-        "Edward Cullen"
-    ],
-    "Undertale (Video Game)": [
-        "Alphys",
-        "Sans",
-        "Undyne",
-        "You"
-    ],
-    "Venom (Movie 2018)": [
-        "Eddie Brock",
-        "Venom Symbiote"
-    ],
-    "Victorious": [
-        "Jade West",
-        "Tori Vega"
-    ],
-    "Video Blogging RPF": [
-        "Clay | Dream",
-        "Darryl Noveschosch",
-        "GeorgeNotFound",
-        "Karl Jacobs",
-        "Mark Fischbach",
-        "Phil Watson",
-        "Ranboo",
-        "Sapnap",
-        "Sean McLoughlin",
-        "Technoblade",
-        "Toby Smith | Tubbo",
-        "TommyInnit",
-        "Wilbur Soot",
-        "Zak Ahmed"
-    ],
-    "Voltron: Legendary Defender": [
-        "Adam",
-        "Allura",
-        "Keith",
-        "Lance",
-        "Shiro"
-    ],
-    "Warehouse 13": [
-        "Helena 'H. G.' Wells",
-        "Myka Bering"
-    ],
-    "Warrior Nun (TV)": [
-        "Ava Silva",
-        "Sister Beatrice"
-    ],
-    "Wednesday (TV 2022)": [
-        "Enid Sinclair",
-        "Wednesday Addams"
-    ],
-    "Welcome to Night Vale": [
-        "Carlos",
-        "Cecil Palmer"
-    ],
-    "Wentworth (TV)": [
-        "Erica Davidson",
-        "Franky Doyle"
-    ],
-    "White Collar": [
-        "Elizabeth Burke",
-        "Neal Caffrey",
-        "Peter Burke"
-    ],
-    "Wied\u017amin | The Witcher - All Media Types": [
-        "Geralt z Rivii | Geralt of Rivia",
-        "Jaskier | Dandelion"
-    ],
-    "Women's Association Football | Women's Soccer RPF": [
-        "Ali Krieger",
-        "Ashlyn Harris",
-        "Christen Press",
-        "Tobin Heath"
-    ],
-    "Women's Soccer RPF": [
-        "Alex Morgan",
-        "Ali Krieger",
-        "Ashlyn Harris",
-        "Christen Press",
-        "Tobin Heath"
-    ],
-    "Women\u2019s Soccer RPF": [
-        "Alex Morgan",
-        "Ali Krieger",
-        "Ashlyn Harris",
-        "Christen Press",
-        "Hope Solo",
-        "Kelley O'Hara",
-        "Tobin Heath"
-    ],
-    "Wynonna Earp (TV)": [
-        "Nicole Haught",
-        "Waverly Earp"
-    ],
-    "X-Men (Alternate Timeline Movies)": [
-        "Charles Xavier",
-        "Erik Lehnsherr"
-    ],
-    "X-Men: First Class (2011)": [
-        "Charles Xavier",
-        "Erik Lehnsherr"
-    ],
-    "Xena: Warrior Princess": [
-        "Gabrielle",
-        "Xena"
-    ],
-    "Young Avengers": [
-        "America Chavez",
-        "Billy Kaplan",
-        "Kate Bishop",
-        "Teddy Altman"
-    ],
-    "Young Royals (TV 2021)": [
-        "Simon Eriksson",
-        "Wilhelm"
-    ],
-    "Yuri!!! on Ice (Anime)": [
-        "Katsuki Yuuri",
-        "Mila Babicheva",
-        "Otabek Altin",
-        "Sara Crispino",
-        "Victor Nikiforov",
-        "Yuri Plisetsky"
-    ],
-    "due South": [
-        "Benton Fraser",
-        "Ray Kowalski",
-        "Ray Vecchio"
-    ],
-    "\u539f\u795e | Genshin Impact (Video Game)": [
-        "Albedo",
-        "Alhaitham",
-        "Beidou",
-        "Cyno",
-        "Diluc",
-        "Ganyu",
-        "Jean",
-        "Kaedehara Kazuha",
-        "Kaeya",
-        "Kamisato Ayato",
-        "Kaveh",
-        "Keqing",
-        "Lisa",
-        "Ningguang",
-        "Raiden Ei | Baal",
-        "Scaramouche",
-        "Tartaglia | Childe",
-        "Thoma",
-        "Tighnari",
-        "Traveler",
-        "Venti",
-        "Xiao | Alatus",
-        "Yae Miko",
-        "Zhongli"
-    ],
-    "\u546a\u8853\u5efb\u6226 | Jujutsu Kaisen (Manga)": [
-        "Getou Suguru",
-        "Gojo Satoru"
-    ],
-    "\u58f0\u5165\u4eba\u5fc3 | Super-Vocal (TV)": [
-        "Ayanga",
-        "Zh\u00e8ng Y\u00fanl\u00f3ng"
-    ],
-    "\u5929\u5b98\u8d50\u798f - \u58a8\u9999\u94dc\u81ed | Ti\u0101n Gu\u0101n C\u00ec F\u00fa - M\u00f2xi\u0101ng T\u00f3ngxi\u00f9": [
-        "Hu\u0101 Ch\u00e9ng",
-        "Xi\u00e8 Li\u00e1n"
-    ],
-    "\u5c71\u6cb3\u4ee4 | Word of Honor (TV 2021)": [
-        "Wen Kexing",
-        "Zhou Zishu"
-    ],
-    "\u6587\u8c6a\u30b9\u30c8\u30ec\u30a4\u30c9\u30c3\u30b0\u30b9 | Bungou Stray Dogs": [
-        "Akutagawa Ryuunosuke",
-        "Dazai Osamu",
-        "Nakahara Chuuya",
-        "Nakajima Atsushi"
-    ],
-    "\u65b0\u795e\u699c | New Gods (Movies)": [
-        "Liu Chenxiang",
-        "Yang Jian | Erlang Shen"
-    ],
-    "\u6771\u4eac\u534d\u30ea\u30d9\u30f3\u30b8\u30e3\u30fc\u30ba | Tokyo Revengers (Manga)": [
-        "Mikey | Sano Manjirou",
-        "Takemitchy | Hanagaki Takemichi"
-    ],
-    "\u9648\u60c5\u4ee4 | The Untamed (TV) RPF": [
-        "Wang Yi Bo",
-        "Xiao Zhan",
-        "Xiao Zhan | Sean"
-    ],
-    "\u9b54\u9053\u7956\u5e08 - \u58a8\u9999\u94dc\u81ed | M\u00f3d\u00e0o Z\u01d4sh\u012b - M\u00f2xi\u0101ng T\u00f3ngxi\u00f9": [
-        "Ji\u0101ng Ch\u00e9ng | Ji\u0101ng W\u01ceny\u00edn",
-        "L\u00e1n Hu\u00e0n | L\u00e1n X\u012bch\u00e9n",
-        "L\u00e1n Zh\u00e0n | L\u00e1n W\u00e0ngj\u012b",
-        "W\u00e8i Y\u012bng | W\u00e8i W\u00faxi\u00e0n"
-    ]
+    "RPF": {
+        "5 Seconds of Summer": [
+            "Luke Hemmings",
+            "Michael Clifford"
+        ],
+        "Adam Lambert": [
+            "Adam Lambert",
+            "Sauli Koskinen",
+            "Tommy Ratliff"
+        ],
+        "American Idol": [
+            "Adam Lambert",
+            "Kris Allen"
+        ],
+        "Bangtan Boys / BTS": [
+            "Jeon Jungkook",
+            "Jung Hoseok | J-Hope",
+            "Kim Namjoon | RM",
+            "Kim Namjoon | Rap Monster",
+            "Kim Seokjin | Jin",
+            "Kim Taehyung | V",
+            "Min Yoongi | Suga",
+            "Park Jimin"
+        ],
+        "Doctor Who": [
+            "Alex Kingston",
+            "Matt Smith"
+        ],
+        "Drag": [
+            "Brooke Lynn Hytes",
+            "Katya Zamolodchikova",
+            "Trixie Mattel",
+            "Vanessa Vanjie Mateo"
+        ],
+        "EXO": [
+            "Byun Baekhyun",
+            "Do Kyungsoo | D.O",
+            "Kim Jongin | Kai",
+            "Park Chanyeol"
+        ],
+        "Fall Out Boy": [
+            "Patrick Stump",
+            "Pete Wentz"
+        ],
+        "Fifth Harmony": [
+            "Camila Cabello",
+            "Lauren Jauregui"
+        ],
+        "Figure Skating": [
+            "Boyang Jin",
+            "Yuzuru Hanyu"
+        ],
+        "Grandmaster of Demonic Cultivation / The Untamed | \u9b54\u9053\u7956\u5e08 / \u9648\u60c5\u4ee4": [
+            "Wang Yi Bo",
+            "Xiao Zhan",
+            "Xiao Zhan | Sean"
+        ],
+        "Hockey": [
+            "Jonathan Toews",
+            "Patrick Kane"
+        ],
+        "KAT-TUN": [
+            "Akanishi Jin",
+            "Kamenashi Kazuya"
+        ],
+        "Lord of the Rings": [
+            "Sean Bean",
+            "Viggo Mortensen"
+        ],
+        "MIRROR": [
+            "Lo Hon-ting | Anson Lo",
+            "Lui Cheuk-on | Edan Lui"
+        ],
+        "Merlin": [
+            "Bradley James",
+            "Colin Morgan"
+        ],
+        "My Chemical Romance": [
+            "Frank",
+            "Frank Iero",
+            "Gerard",
+            "Gerard Way"
+        ],
+        "NCT": [
+            "Lee Donghyuck | Haechan",
+            "Lee Jeno",
+            "Mark Lee",
+            "Na Jaemin"
+        ],
+        "One Direction": [
+            "Harry Styles",
+            "Liam Payne",
+            "Louis Tomlinson",
+            "Niall Horan",
+            "Zayn Malik"
+        ],
+        "Panic! at the Disco": [
+            "Brendon Urie",
+            "Ryan Ross",
+            "Spencer Smith"
+        ],
+        "Red Velvet": [
+            "Bae Joohyun | Irene",
+            "Kang Seulgi"
+        ],
+        "Star Trek": [
+            "Chris Pine",
+            "Zachary Quinto"
+        ],
+        "Stray Kids": [
+            "Han Jisung | Han",
+            "Hwang Hyunjin",
+            "Lee Felix",
+            "Lee Minho | Lee Know"
+        ],
+        "Supernatural": [
+            "Jared Padalecki",
+            "Jensen Ackles"
+        ],
+        "TOMORROW X TOGETHER / TXT": [
+            "Choi Soobin",
+            "Choi Yeonjun"
+        ],
+        "Twenty One Pilots": [
+            "Josh Dun",
+            "Tyler Joseph"
+        ],
+        "Women's Soccer": [
+            "Alex Morgan",
+            "Ali Krieger",
+            "Ashlyn Harris",
+            "Christen Press",
+            "Hope Solo",
+            "Kelley O'Hara",
+            "Tobin Heath"
+        ],
+        "Youtube": [
+            "Alexis | Quackity",
+            "Charles | Grian",
+            "Clay | Dream",
+            "Dan Howell",
+            "Darryl Noveschosch",
+            "Gavin Free",
+            "GeorgeNotFound",
+            "GeorgeNotFound (Video Blogging RPF)",
+            "Karl Jacobs",
+            "Kristin Rosales Watson",
+            "Mark Fischbach",
+            "Michael Jones",
+            "Phil Lester",
+            "Phil Watson",
+            "Phil Watson (Video Blogging RPF)",
+            "Phil Watson | Philza",
+            "Ranboo",
+            "Ryan | GoodTimesWithScar",
+            "Sapnap",
+            "Sapnap (Video Blogging RPF)",
+            "Sean McLoughlin",
+            "Technoblade",
+            "Technoblade (Video Blogging RPF)",
+            "Toby Smith | Tubbo",
+            "TommyInnit",
+            "TommyInnit (Video Blogging RPF)",
+            "Wilbur Soot",
+            "Zak Ahmed"
+        ]
+    },
+    "fictional": {
+        "9-1-1": [
+            "Carlos Reyes",
+            "Eddie Diaz (9-1-1 TV)",
+            "Evan 'Buck' Buckley",
+            "TK Strand"
+        ],
+        "A Song of Ice and Fire / Game of Thrones Universe": [
+            "Aemond 'One-Eye' Targaryen",
+            "Alicent Hightower",
+            "Arya Stark",
+            "Brienne of Tarth",
+            "Daemon Targaryen",
+            "Daenerys Targaryen",
+            "Gendry Waters",
+            "Jaime Lannister",
+            "Jon Snow",
+            "Lucerys Velaryon (Son of Rhaenyra)",
+            "Margaery Tyrell",
+            "Rhaenyra Targaryen",
+            "Sandor Clegane",
+            "Sansa Stark"
+        ],
+        "Addam's Family Universe": [
+            "Enid Sinclair",
+            "Wednesday Addams"
+        ],
+        "Adventure Time": [
+            "Marceline",
+            "Princess Bubblegum"
+        ],
+        "All For The Game": [
+            "Andrew Minyard",
+            "Neil Josten"
+        ],
+        "American Horror Story": [
+            "Cordelia Foxx | Cordelia Goode",
+            "Misty Day"
+        ],
+        "Amphibia": [
+            "Anne Boonchuy",
+            "Marcy Wu",
+            "Sasha Waybright"
+        ],
+        "Angel": [
+            "Angel",
+            "Spike"
+        ],
+        "Arcane": [
+            "Caitlyn",
+            "Jayce",
+            "Vi (League of Legends)",
+            "Viktor (League of Legends)"
+        ],
+        "Attack on Titan | \u9032\u6483\u306e\u5de8\u4eba": [
+            "Annie Leonhart",
+            "Eren Yeager",
+            "Erwin Smith",
+            "Jean Kirstein",
+            "Krista Lenz | Historia Reiss",
+            "Levi",
+            "Levi Ackerman",
+            "Marco Bott",
+            "Mikasa Ackerman",
+            "Ymir",
+            "Ymir of the 104th"
+        ],
+        "Avatar: The last Airbender Universe": [
+            "Asami Sato",
+            "Azula",
+            "Katara",
+            "Korra",
+            "Kya II",
+            "Lin Beifong",
+            "Sokka",
+            "Ty Lee (Avatar)",
+            "Zuko (Avatar)"
+        ],
+        "BLUELOCK | \u30d6\u30eb\u30fc\u30ed\u30c3\u30af": [
+            "Mikage Reo",
+            "Nagi Seishirou"
+        ],
+        "Battlestar Galactica": [
+            "Kara Thrace",
+            "Laura Roslin",
+            "Lee Adama",
+            "William Adama"
+        ],
+        "Be More Chill": [
+            "Jeremy Heere",
+            "Michael Mell"
+        ],
+        "Bridgerton": [
+            "Anthony Bridgerton",
+            "Kate Sheffield | Kate Sharma"
+        ],
+        "Buffy the Vampire Slayer": [
+            "Angel",
+            "Buffy Summers",
+            "Faith Lehane",
+            "Spike",
+            "Tara Maclay",
+            "Willow Rosenberg",
+            "Xander Harris"
+        ],
+        "Bungou Stray Dogs | \u6587\u8c6a\u30b9\u30c8\u30ec\u30a4\u30c9\u30c3\u30b0\u30b9": [
+            "Akutagawa Ryuunosuke",
+            "Dazai Osamu",
+            "Nakahara Chuuya (Bungou Stray Dogs)",
+            "Nakajima Atsushi (Bungou Stray Dogs)"
+        ],
+        "Call of Duty": [
+            "John 'Soap' MacTavish",
+            "Reader",
+            "Simon 'Ghost' Riley"
+        ],
+        "Carmilla": [
+            "Carmilla Karnstein",
+            "Danny Lawrence",
+            "Laura Hollis"
+        ],
+        "Carol": [
+            "Carol Aird",
+            "Therese Belivet"
+        ],
+        "Carry On": [
+            "Simon Snow",
+            "Tyrannus Basilton 'Baz' Pitch"
+        ],
+        "Castle": [
+            "Kate Beckett",
+            "Richard Castle"
+        ],
+        "Check Please!": [
+            "Eric Bittle",
+            "Jack Zimmermann"
+        ],
+        "Chilling Adventures of Sabrina": [
+            "Mary Wardwell | Madam Satan | Lilith",
+            "Zelda Spellman"
+        ],
+        "Criminal Minds": [
+            "Aaron Hotchner",
+            "Derek Morgan",
+            "Emily Prentiss",
+            "Jennifer 'JJ' Jareau",
+            "Spencer Reid"
+        ],
+        "Critical Role": [
+            "Beauregard",
+            "Beauregard Lionett",
+            "Jester Lavorre",
+            "Yasha",
+            "Yasha (Critical Role)"
+        ],
+        "DC": [
+            "Alex Danvers",
+            "Astra",
+            "Ava Sharpe",
+            "Barry Allen",
+            "Bruce Wayne",
+            "Cat Grant",
+            "Clark Kent",
+            "Dick Grayson",
+            "Edward Nygma",
+            "Felicity Smoak",
+            "Harleen Quinzel",
+            "Jason Todd",
+            "Kara Danvers",
+            "Kelly Olsen",
+            "Kon-El",
+            "Lena Luthor",
+            "Leonard Snart",
+            "Lex Luthor",
+            "Lois Lane",
+            "Maggie Sawyer",
+            "Nyssa al Ghul",
+            "Oliver Queen",
+            "Oswald Cobblepot",
+            "Pamela Isley",
+            "Samantha 'Sam' Arias",
+            "Sara Lance",
+            "Tim Drake"
+        ],
+        "Dangan Ronpa": [
+            "Hinata Hajime",
+            "Komaeda Nagito",
+            "Oma Kokichi",
+            "Saihara Shuichi"
+        ],
+        "Descendants": [
+            "Evie",
+            "Mal (Disney)"
+        ],
+        "Detroit: Become Human": [
+            "Connor",
+            "Gavin Reed",
+            "Hank Anderson",
+            "Upgraded Connor | RK900"
+        ],
+        "Doctor Who": [
+            "Amy Pond",
+            "Clara Oswin Oswald",
+            "Eleventh Doctor",
+            "Jenny Flint",
+            "Madame Vastra",
+            "Ninth Doctor",
+            "River Song",
+            "Rory Williams",
+            "Rose Tyler",
+            "Tenth Doctor",
+            "Tenth Doctor (duplicate)",
+            "The Doctor",
+            "Thirteenth Doctor",
+            "Twelfth Doctor",
+            "Yasmin Khan"
+        ],
+        "Dragon Age": [
+            "Alistair",
+            "Cullen Rutherford",
+            "Dorian Pavus",
+            "Female Hawke",
+            "Female Inquisitor",
+            "Female Warden",
+            "Female Warden (Dragon Age)",
+            "Fenris",
+            "Hawke",
+            "Inquisitor",
+            "Iron Bull",
+            "Isabela",
+            "Josephine Montilyet",
+            "Leliana",
+            "Sera",
+            "Solas",
+            "Solas (Dragon Age)",
+            "Warden (Dragon Age)"
+        ],
+        "Due South": [
+            "Benton Fraser",
+            "Ray Kowalski",
+            "Ray Vecchio"
+        ],
+        "Emmerdale": [
+            "Aaron Dingle",
+            "Charity Dingle",
+            "Robert Sugden",
+            "Vanessa Woodfield"
+        ],
+        "Faking It": [
+            "Amy Raudenfeld",
+            "Karma Ashcroft"
+        ],
+        "Final Fantasy | \u30d5\u30a1\u30a4\u30ca\u30eb\u30d5\u30a1\u30f3\u30bf\u30b8\u30fc": [
+            "Lightning",
+            "Noctis Lucis Caelum",
+            "Oerba Yun Fang",
+            "Prompto Argentum"
+        ],
+        "Fire Emblem | \u30d5\u30a1\u30a4\u30a2\u30fc\u30a8\u30e0\u30d6\u30ec\u30e0": [
+            "Dimitri Alexandre Blaiddyd",
+            "Edelgard von Hresvelg",
+            "Felix Hugo Fraldarius",
+            "My Unit | Byleth",
+            "Sylvain Jose Gautier"
+        ],
+        "Free!": [
+            "Matsuoka Rin",
+            "Nanase Haruka",
+            "Tachibana Makoto"
+        ],
+        "Frozen": [
+            "Anna",
+            "Elsa (Disney)",
+            "Elsa (Frozen)"
+        ],
+        "Fullmetal Alchemist | \u92fc\u306e\u932c\u91d1\u8853\u5e2b": [
+            "Edward Elric",
+            "Roy Mustang",
+            "Winry Rockbell"
+        ],
+        "Generation Kill": [
+            "Brad Colbert",
+            "Nate Fick"
+        ],
+        "Genshin Impact | \u539f\u795e": [
+            "Albedo",
+            "Alhaitham",
+            "Beidou",
+            "Cyno",
+            "Diluc",
+            "Ganyu",
+            "Jean",
+            "Kaedehara Kazuha",
+            "Kaeya (Genshin Impact)",
+            "Kamisato Ayato",
+            "Kaveh (Genshin Impact)",
+            "Keqing (Genshin Impact)",
+            "Lisa (Genshin Impact)",
+            "Ningguang (Genshin Impact)",
+            "Raiden Ei | Baal",
+            "Scaramouche",
+            "Tartaglia | Childe",
+            "Thoma",
+            "Tighnari (Genshin Impact)",
+            "Traveler (Genshin Impact)",
+            "Venti",
+            "Xiao | Alatus (Genshin Impact)",
+            "Yae Miko",
+            "Zhongli (Genshin Impact)"
+        ],
+        "Ghostbusters": [
+            "Erin Gilbert",
+            "Jillian Holtzmann"
+        ],
+        "Girl Meets World": [
+            "Maya Hart",
+            "Riley Matthews"
+        ],
+        "Glee": [
+            "Blaine Anderson",
+            "Brittany S. Pierce",
+            "David Karofsky",
+            "Finn Hudson",
+            "Kurt Hummel",
+            "Noah Puckerman",
+            "Quinn Fabray",
+            "Rachel Berry",
+            "Santana Lopez",
+            "Sebastian Smythe"
+        ],
+        "Good Omens": [
+            "Aziraphale",
+            "Crowley",
+            "Crowley (Good Omens)"
+        ],
+        "Grandmaster of Demonic Cultivation / The Untamed | \u9b54\u9053\u7956\u5e08 / \u9648\u60c5\u4ee4": [
+            "Ji\u0101ng Ch\u00e9ng | Ji\u0101ng W\u01ceny\u00edn",
+            "L\u00e1n Hu\u00e0n | L\u00e1n X\u012bch\u00e9n",
+            "L\u00e1n Zh\u00e0n | L\u00e1n W\u00e0ngj\u012b",
+            "W\u00e8i Y\u012bng | W\u00e8i W\u00faxi\u00e0n"
+        ],
+        "Gravity Falls": [
+            "Bill Cipher",
+            "Dipper Pines",
+            "Mabel Pines",
+            "Pacifica Northwest"
+        ],
+        "Grey's Anatomy": [
+            "Addison Montgomery",
+            "Arizona Robbins",
+            "Calliope 'Callie' Torres",
+            "Meredith Grey"
+        ],
+        "Haikyuu!! | \u30cf\u30a4\u30ad\u30e5\u30fc!!": [
+            "Akaashi Keiji",
+            "Bokuto Koutarou",
+            "Hinata Shouyou",
+            "Iwaizumi Hajime",
+            "Kageyama Tobio",
+            "Kozume Kenma",
+            "Kuroo Tetsurou",
+            "Miya Atsumu",
+            "Oikawa Tooru",
+            "Sakusa Kiyoomi",
+            "Sawamura Daichi",
+            "Shimizu Kiyoko",
+            "Sugawara Koushi",
+            "Tsukishima Kei",
+            "Yachi Hitoka",
+            "Yamaguchi Tadashi"
+        ],
+        "Hamilton": [
+            "Alexander Hamilton",
+            "Elizabeth 'Eliza' Schuyler",
+            "John Laurens",
+            "Maria Reynolds",
+            "Thomas Jefferson"
+        ],
+        "Hannibal": [
+            "Alana Bloom",
+            "Hannibal Lecter",
+            "Margot Verger",
+            "Will Graham"
+        ],
+        "Harry Potter Universe": [
+            "Barty Crouch Jr.",
+            "Bellatrix Black Lestrange",
+            "Credence Barebone",
+            "Dorcas Meadowes",
+            "Draco Malfoy",
+            "Evan Rosier",
+            "Ginny Weasley",
+            "Harry Potter",
+            "Hermione Granger",
+            "James Potter",
+            "Lily Evans Potter",
+            "Luna Lovegood",
+            "Marlene McKinnon",
+            "Mary Macdonald",
+            "Original Percival Graves",
+            "Pansy Parkinson",
+            "Regulus Black",
+            "Remus Lupin",
+            "Ron Weasley",
+            "Severus Snape",
+            "Sirius Black",
+            "Tom Riddle | Voldemort"
+        ],
+        "Hatsune Miku / \u30dc\u30fc\u30ab\u30ed\u30a4\u30c9 | \u521d\u97f3\u30df\u30af": [
+            "Aoyagi Touya",
+            "Kamishiro Rui",
+            "Shinonome Akito",
+            "Tenma Tsukasa"
+        ],
+        "Hawaii Five-0": [
+            "Danny 'Danno' Williams",
+            "Steve McGarrett"
+        ],
+        "Hazbin Hotel": [
+            "Charlie Magne",
+            "Vaggie"
+        ],
+        "Heartstopper": [
+            "Charles 'Charlie' Spring",
+            "Nicholas 'Nick' Nelson"
+        ],
+        "Heaven Official's Blessing | \u5929\u5b98\u8d50\u798f": [
+            "Hu\u0101 Ch\u00e9ng",
+            "Xi\u00e8 Li\u00e1n (Ti\u0101n Gu\u0101n C\u00ec F\u00fa)"
+        ],
+        "Hetalia | \u30d8\u30bf\u30ea\u30a2": [
+            "America",
+            "America (Hetalia)",
+            "England (Hetalia)"
+        ],
+        "Highlander": [
+            "Duncan MacLeod",
+            "Methos"
+        ],
+        "Holby City": [
+            "Bernie Wolfe",
+            "Serena Campbell"
+        ],
+        "Homestuck": [
+            "Aranea Serket",
+            "Calliope",
+            "Dave Strider",
+            "Dirk Strider",
+            "Eridan Ampora",
+            "Gamzee Makara",
+            "Jade Harley",
+            "Jake English",
+            "Jane Crocker",
+            "John Egbert",
+            "Kanaya Maryam",
+            "Karkat Vantas",
+            "Meenah Peixes",
+            "Rose Lalonde",
+            "Roxy Lalonde",
+            "Sollux Captor",
+            "Tavros Nitram",
+            "Terezi Pyrope",
+            "Vriska Serket"
+        ],
+        "House M.D.": [
+            "Greg House",
+            "James Wilson"
+        ],
+        "Hunger Games / Panem Universe": [
+            "Johanna Mason",
+            "Katniss Everdeen",
+            "Peeta Mellark"
+        ],
+        "IT": [
+            "Ben Hanscom",
+            "Beverly Marsh",
+            "Eddie Kaspbrak",
+            "Richie Tozier"
+        ],
+        "Inception": [
+            "Arthur",
+            "Eames (Inception)"
+        ],
+        "James Bond Universe": [
+            "James Bond",
+            "Q"
+        ],
+        "JoJo's Bizarre Adventure | \u30b8\u30e7\u30b8\u30e7\u306e\u5947\u5999\u306a\u5192\u967a": [
+            "Bruno Buccellati",
+            "Kakyoin Noriaki",
+            "Kujo Jotaro",
+            "Leone Abbacchio"
+        ],
+        "Jujutsu Kaisen | \u546a\u8853\u5efb\u6226": [
+            "Getou Suguru",
+            "Gojo Satoru"
+        ],
+        "Julie and The Phantoms": [
+            "Alex Mercer",
+            "Julie Molina",
+            "Luke Patterson",
+            "Willie (Julie and The Phantoms)"
+        ],
+        "Kill la Kill | \u30ad\u30eb\u30e9\u30ad\u30eb": [
+            "Kiryuuin Satsuki",
+            "Matoi Ryuuko"
+        ],
+        "Killing Eve": [
+            "Eve Polastri",
+            "Villanelle | Oksana Astankova"
+        ],
+        "Kim Possible": [
+            "Kim Possible",
+            "Shego"
+        ],
+        "Kingdom Hearts": [
+            "Axel",
+            "Roxas"
+        ],
+        "Kingsman": [
+            "Gary 'Eggsy' Unwin",
+            "Harry Hart"
+        ],
+        "KinnPorsche": [
+            "Kim Khimhant Theerapanyakun",
+            "Kinn Anakinn Theerapanyakun",
+            "Pete Phongsakorn Saengtham",
+            "Porchay Pichaya Kittisawat",
+            "Porsche Pachara Kittisawat",
+            "Vegas Kornwit Theerapanyakun"
+        ],
+        "LEGO Monkie Kid": [
+            "Liu Er Mihou | Six-eared Macaque",
+            "Sun Wukong | Monkey King"
+        ],
+        "Law & Order": [
+            "Alexandra Cabot",
+            "Elliot Stabler",
+            "Olivia Benson"
+        ],
+        "Legend of the Seeker": [
+            "Cara Mason",
+            "Kahlan Amnell"
+        ],
+        "Les Mis\u00e9rables": [
+            "Cosette Fauchelevent",
+            "Courfeyrac",
+            "Enjolras",
+            "Grantaire",
+            "Grantaire (Les Mis\u00e9rables)",
+            "Javert",
+            "Jean Prouvaire",
+            "Jean Valjean",
+            "Marius Pontmercy",
+            "\u00c9ponine Th\u00e9nardier"
+        ],
+        "Life Is Strange": [
+            "Chloe Price",
+            "Maxine 'Max' Caulfield",
+            "Maxine Caulfield",
+            "Rachel Amber",
+            "Victoria Chase"
+        ],
+        "Life on Mars": [
+            "Gene Hunt",
+            "Sam Tyler"
+        ],
+        "Little Witch Academia | \u30ea\u30c8\u30eb\u30a6\u30a3\u30c3\u30c1\u30a2\u30ab\u30c7\u30df\u30a2": [
+            "Atsuko 'Akko' Kagari",
+            "Diana Cavendish"
+        ],
+        "Lizzie Bennet Diaries": [
+            "Lizzie Bennet",
+            "William Darcy"
+        ],
+        "Lockwood & Co.": [
+            "Anthony Lockwood",
+            "Lucy Carlyle"
+        ],
+        "Lord of the Rings Universe": [
+            "Bilbo Baggins",
+            "Frodo Baggins",
+            "F\u00edli",
+            "K\u00edli",
+            "Sam Gamgee",
+            "Thorin Oakenshield"
+        ],
+        "Lost Girl": [
+            "Bo",
+            "Lauren",
+            "Lauren Lewis",
+            "Tamsin"
+        ],
+        "Love Live! | \u30e9\u30d6\u30e9\u30a4\u30d6!": [
+            "Ayase Eli",
+            "Nishikino Maki",
+            "Toujou Nozomi",
+            "Yazawa Nico"
+        ],
+        "Lucifer": [
+            "Chloe Decker",
+            "Lucifer Morningstar"
+        ],
+        "Maleficent": [
+            "Aurora",
+            "Maleficent"
+        ],
+        "Marvel": [
+            "America Chavez",
+            "Angie Martinelli",
+            "Billy Kaplan",
+            "Bruce Banner",
+            "Carol Danvers",
+            "Charles Xavier",
+            "Clint Barton",
+            "Darcy Lewis",
+            "Eddie Brock",
+            "Erik Lehnsherr",
+            "Grant Ward",
+            "James 'Bucky' Barnes",
+            "Jane Foster",
+            "Jemma Simmons",
+            "Kate Bishop",
+            "Leo Fitz",
+            "Loki",
+            "Loki (Marvel)",
+            "Maria Hill",
+            "Maria Rambeau",
+            "Michelle Jones",
+            "Mobius M. Mobius",
+            "Natasha Romanov",
+            "Peggy Carter",
+            "Pepper Potts",
+            "Peter Parker",
+            "Phil Coulson",
+            "Reader",
+            "Sam Wilson",
+            "Skye",
+            "Skye | Daisy Johnson",
+            "Stephen Strange",
+            "Steve Rogers",
+            "Teddy Altman",
+            "Thor",
+            "Thor (Marvel)",
+            "Tony Stark",
+            "Venom Symbiote",
+            "Wade Wilson",
+            "Wanda Maximoff",
+            "Yelena Belova"
+        ],
+        "Mass Effect": [
+            "Female Shepard",
+            "Garrus Vakarian",
+            "Kaidan Alenko",
+            "Liara T'Soni",
+            "Male Shepard",
+            "Shepard"
+        ],
+        "Merlin": [
+            "Arthur Pendragon",
+            "Arthur Pendragon (Merlin)",
+            "Guinevere",
+            "Gwen",
+            "Merlin",
+            "Morgana",
+            "Morgana (Merlin)",
+            "Morgause (Merlin)"
+        ],
+        "Miraculous: Tales of Ladybug & Cat Noir | Miraculous: Les Aventures de Ladybug et Chat Noir": [
+            "Adrien Agreste",
+            "Adrien Agreste | Chat Noir",
+            "Juleka Couffaine",
+            "Marinette Dupain-Cheng",
+            "Marinette Dupain-Cheng | Ladybug",
+            "Rose Lavillant"
+        ],
+        "Mobile Suit Gundam Wing | \u65b0\u6a5f\u52d5\u6226\u8a18\u30ac\u30f3\u30c0\u30e0 W": [
+            "Duo Maxwell",
+            "Heero Yuy"
+        ],
+        "Mortal Instruments": [
+            "Alec Lightwood",
+            "Magnus Bane"
+        ],
+        "Motherland": [
+            "Raelle Collar",
+            "Scylla Ramshorn"
+        ],
+        "My Hero Academia | \u50d5\u306e\u30d2\u30fc\u30ed\u30fc\u30a2\u30ab\u30c7\u30df\u30a2": [
+            "Aizawa Shouta | Eraserhead",
+            "Asui Tsuyu",
+            "Bakugou Katsuki",
+            "Dabi",
+            "Dabi | Todoroki Touya",
+            "Jirou Kyouka",
+            "Kaminari Denki",
+            "Kirishima Eijirou",
+            "Midoriya Izuku",
+            "Reader",
+            "Shinsou Hitoshi",
+            "Takami Keigo | Hawks",
+            "Todoroki Shouto",
+            "Uraraka Ochako",
+            "Yagi Toshinori | All Might",
+            "Yamada Hizashi | Present Mic",
+            "Yaoyorozu Momo"
+        ],
+        "NCIS": [
+            "Abby Sciuto",
+            "Anthony DiNozzo",
+            "Jethro Gibbs",
+            "Ziva David"
+        ],
+        "Naruto": [
+            "Haruno Sakura",
+            "Hatake Kakashi",
+            "Uchiha Sasuke",
+            "Umino Iruka",
+            "Uzumaki",
+            "Uzumaki Naruto",
+            "Yamanaka Ino"
+        ],
+        "New Gods | \u65b0\u795e\u699c": [
+            "Liu Chenxiang",
+            "Yang Jian | Erlang Shen"
+        ],
+        "Omniscient Reader | \uc804\uc9c0\uc801 \ub3c5\uc790 \uc2dc\uc810": [
+            "Kim Dokja",
+            "Yoo Joonghyuk"
+        ],
+        "Once Upon a Time": [
+            "Aurora",
+            "Belle",
+            "Captain Hook | Killian Jones",
+            "Emma Swan",
+            "Evil Queen | Regina Mills",
+            "Mulan",
+            "Red Riding Hood | Ruby",
+            "Rumpelstiltskin | Mr. Gold",
+            "Rumplestiltskin | Mr. Gold"
+        ],
+        "One Piece | \u30ef\u30f3\u30d4\u30fc\u30b9": [
+            "Roronoa Zoro",
+            "Vinsmoke Sanji"
+        ],
+        "One-Punch Man | \u30ef\u30f3\u30d1\u30f3\u30de\u30f3": [
+            "Genos",
+            "Saitama (One-Punch Man)"
+        ],
+        "Orange is the New Black": [
+            "Alex Vause",
+            "Piper Chapman"
+        ],
+        "Orphan Black": [
+            "Alison Hendrix",
+            "Beth Childs",
+            "Cosima Niehaus",
+            "Delphine Cormier"
+        ],
+        "Our Flag Means Death": [
+            "Blackbeard | Edward Teach",
+            "Israel Hands",
+            "Stede Bonnet"
+        ],
+        "Overwatch": [
+            "Angela 'Mercy' Ziegler",
+            "Emily",
+            "Fareeha 'Pharah' Amari",
+            "Hanzo Shimada",
+            "Jesse McCree",
+            "Lena 'Tracer' Oxton",
+            "Moira O'Deorain",
+            "Reaper | Gabriel Reyes",
+            "Soldier: 76 | Jack Morrison",
+            "Widowmaker | Am\u00e9lie Lacroix"
+        ],
+        "Pacific Rim": [
+            "Hermann Gottlieb",
+            "Newton Geiszler"
+        ],
+        "Percy Jackson": [
+            "Annabeth Chase",
+            "Nico di Angelo",
+            "Percy Jackson",
+            "Piper McLean",
+            "Will Solace"
+        ],
+        "Person of Interest": [
+            "Harold Finch",
+            "John Reese",
+            "Root",
+            "Root | Samantha Groves",
+            "Sameen Shaw"
+        ],
+        "Persona": [
+            "Akechi Goro",
+            "Amagi Yukiko",
+            "Persona 5 Protagonist",
+            "Satonaka Chie"
+        ],
+        "Pitch Perfect": [
+            "Beca Mitchell",
+            "Chloe",
+            "Chloe Beale"
+        ],
+        "Power Rangers": [
+            "Kimberly Hart",
+            "Trini",
+            "Trini (Power Rangers 2017)"
+        ],
+        "Pretty Guardian Sailor Moon | \u7f8e\u5c11\u5973\u6226\u58eb\u30bb\u30fc\u30e9\u30fc\u30e0\u30fc\u30f3": [
+            "Kaiou Michiru",
+            "Tenoh Haruka"
+        ],
+        "Puella Magi Madoka Magica | \u9b54\u6cd5\u5c11\u5973\u307e\u3069\u304b\u2606\u30de\u30ae\u30ab": [
+            "Akemi Homura",
+            "Kaname Madoka",
+            "Miki Sayaka",
+            "Sakura Kyouko"
+        ],
+        "Queer as Folk": [
+            "Brian Kinney",
+            "Justin Taylor",
+            "Justin Taylor (Queer as Folk)"
+        ],
+        "RWBY": [
+            "Blake Belladonna",
+            "Ruby Rose",
+            "Weiss Schnee",
+            "Yang Xiao Long"
+        ],
+        "Raven Cycle": [
+            "Adam Parrish",
+            "Ronan Lynch"
+        ],
+        "Riverdale": [
+            "Betty Cooper",
+            "Cheryl Blossom",
+            "Jughead Jones",
+            "Toni Topaz",
+            "Veronica Lodge"
+        ],
+        "Rizzoli & Isles": [
+            "Jane Rizzoli",
+            "Maura Isles"
+        ],
+        "Rookie Blue": [
+            "Gail Peck",
+            "Holly Stewart"
+        ],
+        "Roswell New Mexico": [
+            "Alex Manes",
+            "Michael Guerin"
+        ],
+        "SK8 the Infinity | SK\u221e \u30a8\u30b9\u30b1\u30fc\u30a8\u30a4\u30c8": [
+            "Hasegawa Langa",
+            "Kyan Reki",
+            "Nanjo Kojiro | Joe",
+            "Sakurayashiki Kaoru | Cherry Blossom"
+        ],
+        "SKAM": [
+            "Even Bech N\u00e6sheim",
+            "Isak Valtersen"
+        ],
+        "Sanders Sides": [
+            "Anxiety | Virgil Sanders",
+            "Creativity | Roman 'Princey' Sanders",
+            "Logic | Logan Sanders",
+            "Morality | Patton Sanders"
+        ],
+        "Schitt's Creek": [
+            "David Rose",
+            "Patrick Brewer"
+        ],
+        "Seraph of the End | \u7d42\u308f\u308a\u306e\u30bb\u30e9\u30d5": [
+            "Hyakuya Mikaela",
+            "Hyakuya Yuuichirou"
+        ],
+        "Shadow and Bone": [
+            "Alina Starkov",
+            "The Darkling | Aleksander Morozova"
+        ],
+        "Shadowhunters": [
+            "Alec Lightwood",
+            "Clary Fray",
+            "Isabelle Lightwood",
+            "Magnus Bane"
+        ],
+        "Shameless": [
+            "Ian Gallagher",
+            "Mickey Milkovich"
+        ],
+        "She-Ra and the Princesses of Power": [
+            "Adora",
+            "Catra (She-Ra)",
+            "Glimmer (She-Ra)",
+            "Perfuma",
+            "Scorpia (She-Ra)"
+        ],
+        "Sherlock": [
+            "Clara",
+            "Greg Lestrade",
+            "Harry Watson",
+            "Irene Adler",
+            "James Moriarty",
+            "Jim Moriarty",
+            "John Watson",
+            "Lestrade",
+            "Mary Morstan",
+            "Molly Hooper",
+            "Mycroft Holmes",
+            "Sebastian Moran",
+            "Sherlock Holmes"
+        ],
+        "Six of Crows": [
+            "Jesper Fahey",
+            "Wylan Van Eck"
+        ],
+        "Skins": [
+            "Emily Fitch",
+            "Naomi Campbell"
+        ],
+        "South Park": [
+            "Craig Tucker",
+            "Kyle Broflovski",
+            "Stan Marsh",
+            "Tweek Tweak"
+        ],
+        "Spartacus": [
+            "Agron",
+            "Nasir"
+        ],
+        "Star Trek": [
+            "Hikaru Sulu",
+            "James T. Kirk",
+            "Kathryn Janeway",
+            "Leonard 'Bones' McCoy",
+            "Leonard McCoy",
+            "Nyota Uhura",
+            "Pavel Chekov",
+            "Seven of Nine",
+            "Spock"
+        ],
+        "Star Wars": [
+            "Anakin Skywalker | Darth Vader",
+            "Armitage Hux",
+            "Baze Malbus Rogue One: A",
+            "Ben Solo | Kylo Ren",
+            "Cassian Andor",
+            "Chirrut \u00cemwe",
+            "Finn",
+            "Han Solo",
+            "Jessika Pava",
+            "Jyn Erso Rogue One: A",
+            "Kylo Ren",
+            "Leia Organa",
+            "Obi-Wan Kenobi",
+            "Padm\u00e9 Amidala",
+            "Poe Dameron",
+            "Qui-Gon Jinn",
+            "Rey"
+        ],
+        "Stargate": [
+            "Daniel Jackson",
+            "Elizabeth Weir",
+            "Jack O'Neill",
+            "Janet Fraiser",
+            "John Sheppard",
+            "Rodney McKay",
+            "Sam Carter"
+        ],
+        "Starsky & Hutch": [
+            "David Starsky",
+            "Ken Hutchinson"
+        ],
+        "Station 19": [
+            "Carina DeLuca",
+            "Maya Bishop"
+        ],
+        "Steven Universe": [
+            "Amethyst",
+            "Garnet",
+            "Jasper",
+            "Lapis Lazuli",
+            "Pearl",
+            "Pearl (Steven Universe)",
+            "Peridot",
+            "Peridot (Steven Universe)",
+            "Rose Quartz",
+            "Rose Quartz (Steven Universe)",
+            "Rose Quartz | Pink Diamond",
+            "Ruby",
+            "Sapphire",
+            "Sapphire (Steven Universe)"
+        ],
+        "Stranger Things": [
+            "Billy Hargrove",
+            "Chrissy Cunningham",
+            "Eddie Munson",
+            "Eleven | Jane Hopper",
+            "Jim 'Chief' Hopper",
+            "Joyce Byers",
+            "Lucas Sinclair",
+            "Maxine 'Max' Mayfield",
+            "Mike Wheeler",
+            "Nancy Wheeler",
+            "Reader",
+            "Robin Buckley",
+            "Steve Harrington",
+            "Will Byers"
+        ],
+        "Suits": [
+            "Harvey Specter",
+            "Mike Ross"
+        ],
+        "Super-Vocal | \u58f0\u5165\u4eba\u5fc3": [
+            "Ayanga",
+            "Zh\u00e8ng Y\u00fanl\u00f3ng"
+        ],
+        "Supernatural": [
+            "Anna Milton",
+            "Castiel",
+            "Charlie Bradbury",
+            "Dean Winchester",
+            "Dorothy Baum",
+            "Gabriel",
+            "Gilda",
+            "Jessica Moore",
+            "Jo Harvelle",
+            "Lucifer",
+            "Reader",
+            "Ruby",
+            "Sam Winchester",
+            "You"
+        ],
+        "Teen Wolf": [
+            "Allison Argent",
+            "Cora Hale",
+            "Derek Hale",
+            "Erica Reyes",
+            "Isaac Lahey",
+            "Jackson Whittemore",
+            "Kira Yukimura",
+            "Liam Dunbar",
+            "Lydia Martin",
+            "Malia Tate",
+            "Peter Hale",
+            "Scott McCall",
+            "Stiles Stilinski",
+            "Theo Raeken",
+            "Vernon Boyd"
+        ],
+        "Teenage Mutant Ninja Turtles": [
+            "Donatello",
+            "Leonardo",
+            "Leonardo (TMNT)",
+            "Michelangelo",
+            "Raphael (TMNT)"
+        ],
+        "The 100": [
+            "Alicia Clark",
+            "Anya",
+            "Bellamy Blake",
+            "Clarke Griffin",
+            "Costia",
+            "Elyza Lex",
+            "Lexa",
+            "Lexa (The 100)",
+            "Lincoln",
+            "Octavia Blake",
+            "Raven Reyes",
+            "Raven Reyes (The 100)"
+        ],
+        "The Big Bang Theory": [
+            "Penny",
+            "Sheldon Cooper"
+        ],
+        "The Closer": [
+            "Brenda Leigh Johnson",
+            "Sharon Raydor"
+        ],
+        "The Devil Wears Prada": [
+            "Andrea Sachs",
+            "Miranda Priestly"
+        ],
+        "The Good Wife": [
+            "Alicia Florrick",
+            "Kalinda Sharma"
+        ],
+        "The Haunting of Bly Manor": [
+            "Dani Clayton",
+            "Jamie Taylor"
+        ],
+        "The Last of Us": [
+            "Dina",
+            "Ellie",
+            "Ellie (The Last of Us)",
+            "Joel (The Last of Us)"
+        ],
+        "The Locked Tomb / Gideon the Ninth": [
+            "Gideon Nav",
+            "Harrowhark Nonagesimus"
+        ],
+        "The Magnus Archives": [
+            "Jonathan 'Jon' Sims | The Archivist",
+            "Martin Blackwood"
+        ],
+        "The Man From U.N.C.L.E.": [
+            "Illya Kuryakin",
+            "Napoleon Solo"
+        ],
+        "The Old Guard": [
+            "Andy | Andromache of Scythia",
+            "Joe | Yusuf Al-Kaysani",
+            "Nicky | Nicol\u00f2 di Genova",
+            "Quynh | Noriko"
+        ],
+        "The Owl House": [
+            "Amity Blight",
+            "Eda Clawthorne",
+            "Hunter | The Golden Guard",
+            "Luz Noceda",
+            "Raine Whispers",
+            "Willow Park"
+        ],
+        "The Professionals": [
+            "Ray Doyle",
+            "William Bodie"
+        ],
+        "The Rookie": [
+            "Lucy Chen",
+            "Tim Bradford"
+        ],
+        "The Sandman": [
+            "Dream of the Endless",
+            "Hob Gadling"
+        ],
+        "The Sentinel": [
+            "Blair Sandburg",
+            "Jim Ellison"
+        ],
+        "The Walking Dead": [
+            "Daryl Dixon",
+            "Rick Grimes"
+        ],
+        "The Wilds": [
+            "Shelby Goodkind",
+            "Toni Shalifoe"
+        ],
+        "The Witcher | Wied\u017amin": [
+            "Geralt z Rivii | Geralt of Rivia",
+            "Jaskier | Dandelion"
+        ],
+        "The X-Files": [
+            "Dana Scully",
+            "Fox Mulder"
+        ],
+        "Tokyo Ghoul | \u6771\u4eac\u55b0\u7a2e": [
+            "Nagachika Hideyoshi",
+            "Sasaki Haise"
+        ],
+        "Tokyo Revengers | \u6771\u4eac\u534d\u30ea\u30d9\u30f3\u30b8\u30e3\u30fc\u30ba": [
+            "Mikey | Sano Manjirou",
+            "Takemitchy | Hanagaki Takemichi"
+        ],
+        "Top Gun": [
+            "Bradley 'Rooster' Bradshaw",
+            "Jake 'Hangman' Seresin",
+            "Pete 'Maverick' Mitchell",
+            "Tom 'Iceman' Kazansky"
+        ],
+        "Torchwood": [
+            "Ianto Jones",
+            "Jack Harkness"
+        ],
+        "Trigun Universe | \u30c8\u30e9\u30a4\u30ac\u30f3": [
+            "Nicholas D. Wolfwood",
+            "Vash the Stampede"
+        ],
+        "Twilight": [
+            "Bella Swan",
+            "Edward Cullen"
+        ],
+        "Undertale": [
+            "Alphys",
+            "Sans (Undertale)",
+            "Undyne",
+            "Undyne (Undertale)",
+            "You"
+        ],
+        "Vampire Diaries Universe": [
+            "Hope Mikaelson",
+            "Josie Saltzman",
+            "Penelope Park"
+        ],
+        "Victorious": [
+            "Jade West",
+            "Tori Vega"
+        ],
+        "Voltron": [
+            "Adam",
+            "Allura",
+            "Keith",
+            "Lance",
+            "Lance (Voltron)",
+            "Shiro (Voltron)"
+        ],
+        "Warehouse 13": [
+            "Helena 'H. G.' Wells",
+            "Myka Bering"
+        ],
+        "Warrior Nun": [
+            "Ava Silva",
+            "Sister Beatrice"
+        ],
+        "Welcome to Night Vale": [
+            "Carlos",
+            "Cecil Palmer"
+        ],
+        "Wentworth": [
+            "Erica Davidson",
+            "Franky Doyle"
+        ],
+        "White Collar": [
+            "Elizabeth Burke",
+            "Neal Caffrey",
+            "Peter Burke"
+        ],
+        "Word of Honor | \u5c71\u6cb3\u4ee4": [
+            "Wen Kexing",
+            "Zhou Zishu"
+        ],
+        "Wynonna Earp": [
+            "Nicole Haught",
+            "Waverly Earp"
+        ],
+        "Xena": [
+            "Gabrielle",
+            "Xena"
+        ],
+        "Young Royals": [
+            "Simon Eriksson",
+            "Wilhelm"
+        ],
+        "Yuri!!! on ICE | \u30e6\u30fc\u30ea!!! on ICE": [
+            "Katsuki Yuuri",
+            "Mila Babicheva",
+            "Otabek Altin",
+            "Sara Crispino",
+            "Victor Nikiforov",
+            "Yuri Plisetsky"
+        ]
+    }
 }
