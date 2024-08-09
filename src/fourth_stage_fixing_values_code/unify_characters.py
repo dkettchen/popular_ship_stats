@@ -1,4 +1,12 @@
 
+def remove_brackets():
+    #how do we import the characters? from what source? straight from the third stage files?
+    pass
+
+# pandas will be hecking useful for some of this current shuffling things about!
+    # I am tempted to like- refactor a bunch of my functions to use pandas instead ToT
+
+(
 #things to fix at a glance:
     # fix misattributed late-addition music groups ✅
 
@@ -42,7 +50,7 @@
     # undyne undertale is double
     # as is lance voltron
 # the rest looks fine but we'll have to see if everyone is accounted for later    
-
+)
 
 #TODO:
 # remove doubles
@@ -66,6 +74,18 @@
 # add original fandom instances to character profiles
     # eg their fandom may have many instances but they were only listed for these ones specifically
     # -> to keep track of that as we clean, same as w fandoms
+# make a file that contains 
+    # new name of character
+    # all old names of character
+    # fandom they're from (new name)
+    # og instances of fandom they were listed with
+    # -> to look up & replace main files from later
+
+# -> other details will be in their separate files to be in their own tables later!
+    # we should make a file that doesn't have two keys but instead is json lines or csv format
+    #   with all RPF & fictional fandoms mixed in
+    #   w the respective fandom's details in one line
+    # and then another one to do the same w characters & their details
 
 # add gender where same-sex slash pairings
     # start from latest info
