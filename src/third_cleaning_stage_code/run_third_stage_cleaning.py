@@ -1,4 +1,4 @@
-from json import dumps
+from json import dumps, dump
 from src.util_functions.get_file_paths import find_paths
 from src.util_functions.retrieve_data_from_csv import read_data_from_csv
 from src.third_cleaning_stage_code.add_race_list_for_all_white_pairings import add_list_for_white_only_pairings
@@ -29,7 +29,7 @@ def turning_apostrophes_back(data_list):
 
 def run_cleaning_stage_3():
     """
-    runs stage 3 formatting code and then prints json lines formatted 
+    runs stage 3 formatting code and then prints json 
     files to the data/third_clean_up_data folder
     """
 
@@ -39,15 +39,20 @@ def run_cleaning_stage_3():
         added_white_lists = add_list_for_white_only_pairings(input_list)
         added_columns = add_missing_columns(added_white_lists)
         data = turning_apostrophes_back(added_columns)
+        # this is a list of dicts we were printing to json lines
 
         filename = "data/third_clean_up_data/" + path[26:-4] + ".json" #our relevant filepath goes here
 
-        with open(filename, 'w') as file: 
-            #this does seem to overwrite it every time so I don't need to worry about that!
-                #it's cause it's "w" not "a" -> it overwrites, it doesn't append!
-            for entry in data:
-                json_line = dumps(entry)
-                file.write(json_line + '\n')
+        # with open(filename, 'w') as file: 
+        #     #this does seem to overwrite it every time so I don't need to worry about that!
+        #         #it's cause it's "w" not "a" -> it overwrites, it doesn't append!
+        #     for entry in data:
+        #         json_line = dumps(entry)
+        #         file.write(json_line + '\n')
+        # ^^ previous json lines version
+
+        with open(filename, 'w') as file:
+            dump(data, file, indent=4)
     
 
 if __name__ == "__main__":
