@@ -7,6 +7,9 @@ def csv_to_data_frame(filepath):
 
     returns a data frame containing the csv data, 
     with columns names from the header row and zero indexed row ids
+
+    the reader only differentiates between str and int values, 
+    so lists etc will not be converted back properly, they remain strings
     """
     with open(filepath, "r", encoding="UTF-8") as csv_file:
         read_data = pd.read_csv(csv_file, sep=",", header=0, quotechar="`")
@@ -18,17 +21,21 @@ def json_list_of_dicts_to_data_frame(file_path):
 
     returns a data frame containing the json data, 
     with columns names from the dict keys and zero indexed row ids
+
+    the values will successfully be turned back to their original types
+    with the exception of None (unless contained within a list f.e.), 
+    which will become nan -> which is a float type for some reason
     """
     with open(file_path, "r", encoding="UTF-8") as json_file:
         read_data = pd.read_json(json_file, orient="records")
     return read_data
 
-# need to test both of these!
 
 # once we have a working dataframe function 
 # (incl value type conversion being taken care of every time!)
     # if the value type conversion doesn't work, maybe we can read the data 
     # w our usual read funcs first and then put em into pandas?
+        # -> def do that for csv as the csv one doesn't convert lists etc smh
 # TODO: we can refactor our other funcs to use pandas 
 # (and by refactor I mean make new version while keeping old one just in case
 # cause I do not like digging through versioning)
