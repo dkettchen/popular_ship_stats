@@ -1,100 +1,2449 @@
-{"Rank": [1, null], "Change": [null, 0], "Relationship": ["Evil Queen | Regina Mills", "Emma Swan"], "Fandom": "Once Upon a Time (TV)", "New Works": null, "Total Works": 9071, "Type": ["F", "F"], "Race": "Whi/POC", "Release Date": null}
-{"Rank": [2, null], "Change": [null, 0], "Relationship": ["Clarke Griffin", "Lexa"], "Fandom": "The 100 (TV)", "New Works": null, "Total Works": 8535, "Type": ["F", "F"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [3, null], "Change": [null, 0], "Relationship": ["Laura Hollis", "Carmilla Karnstein"], "Fandom": "Carmilla (Web Series)", "New Works": null, "Total Works": 4729, "Type": ["F", "F"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [4, null], "Change": ["New", null], "Relationship": ["Kara Danvers", "Lena Luthor"], "Fandom": "Supergirl (TV 2015)", "New Works": null, "Total Works": 3793, "Type": ["F", "F"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [5, null], "Change": ["-", 1], "Relationship": ["Rose Lalonde", "Kanaya Maryam"], "Fandom": "Homestuck", "New Works": null, "Total Works": 3583, "Type": ["F", "F"], "Race": "Ambig", "Release Date": null}
-{"Rank": [6, null], "Change": ["-", 1], "Relationship": ["Korra", "Asami Sato"], "Fandom": "Avatar: Legend of Korra", "New Works": null, "Total Works": 3148, "Type": ["F", "F"], "Race": "POC", "Release Date": null}
-{"Rank": [7, null], "Change": ["New", null], "Relationship": ["Alex Danvers", "Maggie Sawyer"], "Fandom": "Supergirl (TV 2015)", "New Works": null, "Total Works": 3018, "Type": ["F", "F"], "Race": "Whi/POC", "Release Date": null}
-{"Rank": [8, null], "Change": ["+", 4], "Relationship": ["Alphys", "Undyne (Undertale)"], "Fandom": "Undertale (Video Game)", "New Works": null, "Total Works": 2473, "Type": ["F", "F"], "Race": "Ambig", "Release Date": null}
-{"Rank": [9, null], "Change": ["-", 1], "Relationship": ["Root | Samantha Groves", "Sameen Shaw"], "Fandom": "Person of Interest (TV)", "New Works": null, "Total Works": 2394, "Type": ["F", "F"], "Race": "Whi/POC", "Release Date": null}
-{"Rank": [10, null], "Change": ["-", 3], "Relationship": ["Krista Lenz | Historia Reiss", "Ymir"], "Fandom": "Shingeki no Kyojin | Attack on Titan", "New Works": null, "Total Works": 2359, "Type": ["F", "F"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [11, null], "Change": ["-", 5], "Relationship": ["Santana Lopez", "Brittany S. Pierce"], "Fandom": "Glee", "New Works": null, "Total Works": 2218, "Type": ["F", "F"], "Race": "Whi/POC", "Release Date": null}
-{"Rank": [12, null], "Change": ["+", 5], "Relationship": ["Kara Danvers", "Cat Grant"], "Fandom": "Supergirl (TV 2015)", "New Works": null, "Total Works": 2106, "Type": ["F", "F"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [13, null], "Change": ["-", 3], "Relationship": ["Peggy Carter", "Angie Martinelli"], "Fandom": "Agent Carter (TV)", "New Works": null, "Total Works": 1895, "Type": ["F", "F"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [14, null], "Change": ["-", 5], "Relationship": ["Rachel Berry", "Quinn Fabray"], "Fandom": "Glee", "New Works": null, "Total Works": 1839, "Type": ["F", "F"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [15, null], "Change": ["-", 4], "Relationship": ["Allison Argent", "Lydia Martin"], "Fandom": "Teen Wolf (TV)", "New Works": null, "Total Works": 1700, "Type": ["F", "F"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [16, null], "Change": ["-", 3], "Relationship": ["Chloe Beale", "Beca Mitchell"], "Fandom": "Pitch Perfect (Movies)", "New Works": null, "Total Works": 1630, "Type": ["F", "F"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [17, null], "Change": ["-", 1], "Relationship": ["Delphine Cormier", "Cosima Niehaus"], "Fandom": "Orphan Black (TV)", "New Works": null, "Total Works": 1445, "Type": ["F", "F"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [18, null], "Change": ["+", 78], "Relationship": ["Fareeha 'Pharah' Amari", "Angela 'Mercy' Ziegler"], "Fandom": "Overwatch (Video Game)", "New Works": null, "Total Works": 1387, "Type": ["F", "F"], "Race": "Whi/POC", "Release Date": null}
-{"Rank": [19, null], "Change": ["-", 5], "Relationship": ["Myka Bering", "Helena 'H. G.' Wells"], "Fandom": "Warehouse 13", "New Works": null, "Total Works": 1384, "Type": ["F", "F"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [20, null], "Change": ["-", 5], "Relationship": ["Jemma Simmons", "Skye | Daisy Johnson"], "Fandom": "Agents of S.H.I.E.L.D. (TV)", "New Works": null, "Total Works": 1335, "Type": ["F", "F"], "Race": "Whi/POC", "Release Date": null}
-{"Rank": [21, null], "Change": ["-", 1], "Relationship": ["Blake Belladonna", "Yang Xiao Long"], "Fandom": "RWBY", "New Works": null, "Total Works": 1304, "Type": ["F", "F"], "Race": "Whi/POC", "Release Date": null}
-{"Rank": [22, null], "Change": [null, 0], "Relationship": ["Maxine Caulfield", "Chloe Price"], "Fandom": "Life Is Strange (Video Game)", "New Works": null, "Total Works": 1201, "Type": ["F", "F"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [23, null], "Change": ["+", 19], "Relationship": ["Waverly Earp", "Nicole Haught"], "Fandom": "Wynonna Earp (TV)", "New Works": null, "Total Works": 1169, "Type": ["F", "F"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [24, null], "Change": ["New", null], "Relationship": ["Erin Gilbert", "Jillian Holtzmann"], "Fandom": "Ghostbusters (2016)", "New Works": null, "Total Works": 1164, "Type": ["F", "F"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [25, null], "Change": ["+", 7], "Relationship": ["Ruby Rose", "Weiss Schnee"], "Fandom": "RWBY", "New Works": null, "Total Works": 1101, "Type": ["F", "F"], "Race": "Whi/POC", "Release Date": null}
-{"Rank": [26, null], "Change": ["-", 8], "Relationship": ["Mikasa Ackerman", "Annie Leonhart"], "Fandom": "Shingeki no Kyojin | Attack on Titan", "New Works": null, "Total Works": 1100, "Type": ["F", "F"], "Race": "Whi/POC", "Release Date": null}
-{"Rank": [27, null], "Change": ["New", null], "Relationship": ["Serena Campbell", "Bernie Wolfe"], "Fandom": "Holby City", "New Works": null, "Total Works": 1091, "Type": ["F", "F"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [28, null], "Change": ["-", 9], "Relationship": ["Maura Isles", "Jane Rizzoli"], "Fandom": "Rizzoli & Isles", "New Works": null, "Total Works": 1059, "Type": ["F", "F"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [29, null], "Change": ["+", 23], "Relationship": ["Lapis Lazuli", "Peridot (Steven Universe)"], "Fandom": "Steven Universe (Cartoon)", "New Works": null, "Total Works": 980, "Type": ["F", "F"], "Race": "Ambig", "Release Date": null}
-{"Rank": [30, null], "Change": ["-", 9], "Relationship": ["Anna", "Elsa (Frozen)"], "Fandom": "Frozen (2013)", "New Works": null, "Total Works": 976, "Type": ["F", "F"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [31, null], "Change": ["-", 8], "Relationship": ["Tara Maclay", "Willow Rosenberg"], "Fandom": "Buffy the Vampire Slayer", "New Works": null, "Total Works": 934, "Type": ["F", "F"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [32, null], "Change": ["-", 6], "Relationship": ["Sansa Stark", "Margaery Tyrell"], "Fandom": "Game of Thrones (TV)", "New Works": null, "Total Works": 909, "Type": ["F", "F"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [33, null], "Change": ["-", 5], "Relationship": ["Ashlyn Harris", "Ali Krieger"], "Fandom": "Women's Soccer RPF", "New Works": null, "Total Works": 870, "Type": ["F", "F"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [34, null], "Change": ["-", 9], "Relationship": ["Gwen", "Morgana (Merlin)"], "Fandom": "Merlin (TV)", "New Works": null, "Total Works": 863, "Type": ["F", "F"], "Race": "Whi/POC", "Release Date": null}
-{"Rank": [35, null], "Change": ["+", 4], "Relationship": ["Ruby", "Sapphire"], "Fandom": "Steven Universe (Cartoon)", "New Works": null, "Total Works": 856, "Type": ["F", "F"], "Race": "Ambig", "Release Date": null}
-{"Rank": [36, null], "Change": ["-", 12], "Relationship": ["Pepper Potts", "Natasha Romanov"], "Fandom": "The Avengers (Marvel Movies)", "New Works": null, "Total Works": 845, "Type": ["F", "F"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [37, null], "Change": ["-", 10], "Relationship": ["Miranda Priestly", "Andrea Sachs"], "Fandom": "The Devil Wears Prada (2006)", "New Works": null, "Total Works": 843, "Type": ["F", "F"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [38, null], "Change": ["-", 8], "Relationship": ["Female Shepard", "Liara T'Soni"], "Fandom": "Mass Effect Trilogy", "New Works": null, "Total Works": 838, "Type": ["F", "F"], "Race": "Ambig", "Release Date": null}
-{"Rank": [39, null], "Change": ["-", 10], "Relationship": ["Terezi Pyrope", "Vriska Serket"], "Fandom": "Homestuck", "New Works": null, "Total Works": 805, "Type": ["F", "F"], "Race": "Ambig", "Release Date": null}
-{"Rank": [40, null], "Change": ["+", 33], "Relationship": ["Clary Fray", "Isabelle Lightwood"], "Fandom": "Shadowhunters (TV)", "New Works": null, "Total Works": 804, "Type": ["F", "F"], "Race": "Whi/POC", "Release Date": null}
-{"Rank": [41, null], "Change": ["-", 10], "Relationship": ["Pacifica Northwest", "Mabel Pines"], "Fandom": "Gravity Falls", "New Works": null, "Total Works": 796, "Type": ["F", "F"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [42, null], "Change": ["New", null], "Relationship": ["Maria Reynolds", "Elizabeth 'Eliza' Schuyler"], "Fandom": "Hamilton", "New Works": null, "Total Works": 791, "Type": ["F", "F"], "Race": "POC", "Release Date": null}
-{"Rank": [43, null], "Change": ["-", 9], "Relationship": ["Maria Hill", "Natasha Romanov"], "Fandom": "Marvel Cinematic Universe", "New Works": null, "Total Works": 762, "Type": ["F", "F"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [44, null], "Change": ["-", 7], "Relationship": ["Pearl", "Rose Quartz (Steven Universe)"], "Fandom": "Steven Universe (Cartoon)", "New Works": null, "Total Works": 761, "Type": ["F", "F"], "Race": "Ambig", "Release Date": null}
-{"Rank": [45, null], "Change": ["-", 12], "Relationship": ["Faith Lehane", "Buffy Summers"], "Fandom": "Buffy the Vampire Slayer", "New Works": null, "Total Works": 760, "Type": ["F", "F"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [46, null], "Change": ["-", 10], "Relationship": ["Nyssa al Ghul", "Sara Lance"], "Fandom": "Arrow (TV 2012)", "New Works": null, "Total Works": 749, "Type": ["F", "F"], "Race": "Whi/POC", "Release Date": null}
-{"Rank": [47, null], "Change": ["-", 6], "Relationship": ["Shimizu Kiyoko", "Yachi Hitoka"], "Fandom": "Haikyuu!!", "New Works": null, "Total Works": 748, "Type": ["F", "F"], "Race": "POC", "Release Date": null}
-{"Rank": [48, null], "Change": ["+", 15], "Relationship": ["Luna Lovegood", "Ginny Weasley"], "Fandom": "Harry Potter - J. K. Rowling", "New Works": null, "Total Works": 683, "Type": ["F", "F"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [49, null], "Change": ["-", 14], "Relationship": ["Malia Tate", "Kira Yukimura"], "Fandom": "Teen Wolf (TV)", "New Works": null, "Total Works": 681, "Type": ["F", "F"], "Race": "Whi/POC", "Release Date": null}
-{"Rank": [50, null], "Change": ["+", 3], "Relationship": ["Amethyst", "Pearl (Steven Universe)"], "Fandom": "Steven Universe (Cartoon)", "New Works": null, "Total Works": 636, "Type": ["F", "F"], "Race": "Ambig", "Release Date": null}
-{"Rank": [51, null], "Change": ["+", 47], "Relationship": ["Anya", "Raven Reyes"], "Fandom": "The 100 (TV)", "New Works": null, "Total Works": 632, "Type": ["F", "F"], "Race": "POC", "Release Date": null}
-{"Rank": [52, null], "Change": ["+", 22], "Relationship": ["Pamela Isley", "Harleen Quinzel"], "Fandom": "Batman - All Media Types", "New Works": null, "Total Works": 628, "Type": ["F", "F"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [53, null], "Change": ["New", null], "Relationship": ["Alex Danvers", "Kara Danvers"], "Fandom": "Supergirl (TV 2015)", "New Works": null, "Total Works": 624, "Type": ["F", "F"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [54, null], "Change": ["-", 6], "Relationship": ["Leliana", "Female Warden"], "Fandom": "Dragon Age: Origins", "New Works": null, "Total Works": 611, "Type": ["F", "F"], "Race": "Whi/Amb", "Release Date": null}
-{"Rank": [55, null], "Change": ["-", 12], "Relationship": ["Female Hawke", "Isabela"], "Fandom": "Dragon Age II", "New Works": null, "Total Works": 601, "Type": ["F", "F"], "Race": "Amb/POC", "Release Date": null}
-{"Rank": [56, null], "Change": ["+", 30], "Relationship": ["Astra", "Alex Danvers"], "Fandom": "Supergirl (TV 2015)", "New Works": null, "Total Works": 598, "Type": ["F", "F"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [57, null], "Change": ["-", 19], "Relationship": ["Jane Crocker", "Roxy Lalonde"], "Fandom": "Homestuck", "New Works": null, "Total Works": 593, "Type": ["F", "F"], "Race": "Ambig", "Release Date": null}
-{"Rank": [58, null], "Change": ["-", 12], "Relationship": ["Octavia Blake", "Raven Reyes"], "Fandom": "The 100 (TV)", "New Works": null, "Total Works": 590, "Type": ["F", "F"], "Race": "Whi/POC", "Release Date": null}
-{"Rank": [59, null], "Change": ["-", 12], "Relationship": ["Charlie Bradbury", "Jo Harvelle"], "Fandom": "Supernatural", "New Works": null, "Total Works": 584, "Type": ["F", "F"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [60, null], "Change": ["-", 20], "Relationship": ["Tobin Heath", "Alex Morgan"], "Fandom": "Women's Soccer RPF", "New Works": null, "Total Works": 577, "Type": ["F", "F"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [61, null], "Change": ["+", 27], "Relationship": ["Maya Hart", "Riley Matthews"], "Fandom": "Girl Meets World", "New Works": null, "Total Works": 567, "Type": ["F", "F"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [62, null], "Change": ["New", null], "Relationship": ["Betty Cooper", "Veronica Lodge"], "Fandom": "Riverdale (TV 2017)", "New Works": null, "Total Works": 533, "Type": ["F", "F"], "Race": "Whi/POC", "Release Date": null}
-{"Rank": [63, null], "Change": ["-", 6], "Relationship": ["Cosette Fauchelevent", "\u00c9ponine Th\u00e9nardier"], "Fandom": "Les Mis\u00e9rables - All Media Types", "New Works": null, "Total Works": 522, "Type": ["F", "F"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [64, null], "Change": ["+", 2], "Relationship": ["Gabrielle", "Xena"], "Fandom": "Xena: Warrior Princess", "New Works": null, "Total Works": 518, "Type": ["F", "F"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [65, null], "Change": ["-", 15], "Relationship": ["Princess Bubblegum", "Marceline"], "Fandom": "Adventure Time", "New Works": null, "Total Works": 515, "Type": ["F", "F"], "Race": "Ambig", "Release Date": null}
-{"Rank": [66, null], "Change": ["-", 21], "Relationship": ["Laura Hollis", "Danny Lawrence"], "Fandom": "Carmilla (Web Series)", "New Works": null, "Total Works": 503, "Type": ["F", "F"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [67, null], "Change": ["-", 11], "Relationship": ["Kaiou Michiru", "Tenoh Haruka"], "Fandom": "Bishoujo Senshi Sailor Moon | Pretty Guardian Sailor Moon", "New Works": null, "Total Works": 498, "Type": ["F", "F"], "Race": "POC", "Release Date": null}
-{"Rank": [68, null], "Change": ["New", null], "Relationship": ["Mila Babicheva", "Sara Crispino"], "Fandom": "Yuri!!! on Ice (Anime)", "New Works": null, "Total Works": 483, "Type": ["F", "F"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [69, null], "Change": ["-", 3], "Relationship": ["Jennifer 'JJ' Jareau", "Emily Prentiss"], "Fandom": "Criminal Minds", "New Works": null, "Total Works": 481, "Type": ["F", "F"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [70, null], "Change": ["-", 26], "Relationship": ["Quinn Fabray", "Santana Lopez"], "Fandom": "Glee", "New Works": null, "Total Works": 479, "Type": ["F", "F"], "Race": "Whi/POC", "Release Date": null}
-{"Rank": [71, null], "Change": ["-", 11], "Relationship": ["Female Inquisitor", "Josephine Montilyet"], "Fandom": "Dragon Age: Inquisition", "New Works": null, "Total Works": 476, "Type": ["F", "F"], "Race": "Amb/POC", "Release Date": null}
-{"Rank": [72, null], "Change": ["-", 4], "Relationship": ["Female Inquisitor", "Sera"], "Fandom": "Dragon Age: Inquisition", "New Works": null, "Total Works": 473, "Type": ["F", "F"], "Race": "Whi/Amb", "Release Date": null}
-{"Rank": [73, null], "Change": ["-", 18], "Relationship": ["Belle", "Red Riding Hood | Ruby"], "Fandom": "Once Upon a Time (TV)", "New Works": null, "Total Works": 464, "Type": ["F", "F"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [74, null], "Change": ["-", 20], "Relationship": ["Kelley O'Hara", "Hope Solo"], "Fandom": "Women's Soccer RPF", "New Works": null, "Total Works": 463, "Type": ["F", "F"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [75, "="], "Change": ["+", 10], "Relationship": ["Camila Cabello", "Lauren Jauregui"], "Fandom": "Fifth Harmony (Band)", "New Works": null, "Total Works": 460, "Type": ["F", "F"], "Race": "POC", "Release Date": null}
-{"Rank": [75, "="], "Change": ["New", null], "Relationship": ["Tobin Heath", "Christen Press"], "Fandom": "Women's Soccer RPF", "New Works": null, "Total Works": 460, "Type": ["F", "F"], "Race": "Whi/POC", "Release Date": null}
-{"Rank": [77, null], "Change": ["-", 28], "Relationship": ["Kahlan Amnell", "Cara Mason"], "Fandom": "Legend of the Seeker", "New Works": null, "Total Works": 455, "Type": ["F", "F"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [78, null], "Change": ["-", 13], "Relationship": ["Dorothy Baum", "Charlie Bradbury"], "Fandom": "Supernatural", "New Works": null, "Total Works": 453, "Type": ["F", "F"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [79, null], "Change": ["-", 20], "Relationship": ["Cora Hale", "Lydia Martin"], "Fandom": "Teen Wolf (TV)", "New Works": null, "Total Works": 452, "Type": ["F", "F"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [80, null], "Change": ["New", null], "Relationship": ["Ayase Eli", "Toujou Nozomi"], "Fandom": "Love Live! School Idol Project", "New Works": null, "Total Works": 451, "Type": ["F", "F"], "Race": "POC", "Release Date": null}
-{"Rank": [81, null], "Change": ["+", 3], "Relationship": ["Garnet", "Pearl (Steven Universe)"], "Fandom": "Steven Universe (Cartoon)", "New Works": null, "Total Works": 449, "Type": ["F", "F"], "Race": "Ambig", "Release Date": null}
-{"Rank": [82, null], "Change": ["New", null], "Relationship": ["Amethyst", "Peridot (Steven Universe)"], "Fandom": "Steven Universe (Cartoon)", "New Works": null, "Total Works": 445, "Type": ["F", "F"], "Race": "Ambig", "Release Date": null}
-{"Rank": [83, null], "Change": ["New", null], "Relationship": ["Kimberly Hart", "Trini (Power Rangers 2017)"], "Fandom": "Power Rangers (2017)", "New Works": null, "Total Works": 441, "Type": ["F", "F"], "Race": "POC", "Release Date": null}
-{"Rank": [84, null], "Change": ["-", 33], "Relationship": ["Rachel Berry", "Santana Lopez"], "Fandom": "Glee", "New Works": null, "Total Works": 436, "Type": ["F", "F"], "Race": "Whi/POC", "Release Date": null}
-{"Rank": [85, null], "Change": ["-", 24], "Relationship": ["Gail Peck", "Holly Stewart"], "Fandom": "Rookie Blue", "New Works": null, "Total Works": 430, "Type": ["F", "F"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [86, null], "Change": ["-", 28], "Relationship": ["Kanaya Maryam", "Vriska Serket"], "Fandom": "Homestuck", "New Works": null, "Total Works": 429, "Type": ["F", "F"], "Race": "Ambig", "Release Date": null}
-{"Rank": [87, null], "Change": ["-", 23], "Relationship": ["Clarke Griffin", "Raven Reyes"], "Fandom": "The 100 (TV)", "New Works": null, "Total Works": 421, "Type": ["F", "F"], "Race": "Whi/POC", "Release Date": null}
-{"Rank": [88, null], "Change": ["-", 19], "Relationship": ["Arizona Robbins", "Calliope 'Callie' Torres"], "Fandom": "Grey's Anatomy", "New Works": null, "Total Works": 414, "Type": ["F", "F"], "Race": "Whi/POC", "Release Date": null}
-{"Rank": [89, null], "Change": ["New", null], "Relationship": ["Carol Aird", "Therese Belivet"], "Fandom": "Carol (2015)", "New Works": null, "Total Works": 404, "Type": ["F", "F"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [90, null], "Change": ["+", 4], "Relationship": ["Costia", "Lexa (The 100)"], "Fandom": "The 100 (TV)", "New Works": null, "Total Works": 399, "Type": ["F", "F"], "Race": "Whi/Amb", "Release Date": null}
-{"Rank": [91, null], "Change": ["-", 29], "Relationship": ["Bo", "Lauren"], "Fandom": "Lost Girl", "New Works": null, "Total Works": 397, "Type": ["F", "F"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [92, null], "Change": ["-", 20], "Relationship": ["Jenny Flint", "Madame Vastra"], "Fandom": "Doctor Who (2005)", "New Works": null, "Total Works": 390, "Type": ["F", "F"], "Race": "Whi/Amb", "Release Date": null}
-{"Rank": [93, null], "Change": ["-", 12], "Relationship": ["Hermione Granger", "Ginny Weasley"], "Fandom": "Harry Potter - J. K. Rowling", "New Works": null, "Total Works": 388, "Type": ["F", "F"], "Race": "Whi/Amb", "Release Date": null}
-{"Rank": [94, null], "Change": ["-", 23], "Relationship": ["Jade Harley", "Rose Lalonde"], "Fandom": "Homestuck", "New Works": null, "Total Works": 385, "Type": ["F", "F"], "Race": "Ambig", "Release Date": null}
-{"Rank": [95, null], "Change": ["New", null], "Relationship": ["Nishikino Maki", "Yazawa Nico"], "Fandom": "Love Live! School Idol Project", "New Works": null, "Total Works": 383, "Type": ["F", "F"], "Race": "POC", "Release Date": null}
-{"Rank": [96, null], "Change": ["-", 26], "Relationship": ["Sam Carter", "Janet Fraiser"], "Fandom": "Stargate SG-1", "New Works": null, "Total Works": 382, "Type": ["F", "F"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [97, null], "Change": ["-", 20], "Relationship": ["Akemi Homura", "Kaname Madoka"], "Fandom": "Mahou Shoujo Madoka Magika | Puella Magi Madoka Magica", "New Works": null, "Total Works": 373, "Type": ["F", "F"], "Race": "POC", "Release Date": null}
-{"Rank": [98, null], "Change": ["-", 23], "Relationship": ["Irene Adler", "Molly Hooper"], "Fandom": "Sherlock (TV)", "New Works": null, "Total Works": 363, "Type": ["F", "F"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [99, null], "Change": ["-", 8], "Relationship": ["Maxine Caulfield", "Victoria Chase"], "Fandom": "Life Is Strange (Video Game)", "New Works": null, "Total Works": 361, "Type": ["F", "F"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [100, null], "Change": ["New", null], "Relationship": ["Alana Bloom", "Margot Verger"], "Fandom": "Hannibal (TV)", "New Works": null, "Total Works": 360, "Type": ["F", "F"], "Race": ["White", "White"], "Release Date": null}
+[
+    {
+        "Rank": [
+            1,
+            null
+        ],
+        "Change": [
+            null,
+            0
+        ],
+        "Relationship": [
+            "Evil Queen | Regina Mills",
+            "Emma Swan"
+        ],
+        "Fandom": "Once Upon a Time (TV)",
+        "New Works": null,
+        "Total Works": 9071,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": "Whi/POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            2,
+            null
+        ],
+        "Change": [
+            null,
+            0
+        ],
+        "Relationship": [
+            "Clarke Griffin",
+            "Lexa"
+        ],
+        "Fandom": "The 100 (TV)",
+        "New Works": null,
+        "Total Works": 8535,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            3,
+            null
+        ],
+        "Change": [
+            null,
+            0
+        ],
+        "Relationship": [
+            "Laura Hollis",
+            "Carmilla Karnstein"
+        ],
+        "Fandom": "Carmilla (Web Series)",
+        "New Works": null,
+        "Total Works": 4729,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            4,
+            null
+        ],
+        "Change": [
+            "New",
+            null
+        ],
+        "Relationship": [
+            "Kara Danvers",
+            "Lena Luthor"
+        ],
+        "Fandom": "Supergirl (TV 2015)",
+        "New Works": null,
+        "Total Works": 3793,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            5,
+            null
+        ],
+        "Change": [
+            "-",
+            1
+        ],
+        "Relationship": [
+            "Rose Lalonde",
+            "Kanaya Maryam"
+        ],
+        "Fandom": "Homestuck",
+        "New Works": null,
+        "Total Works": 3583,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": "Ambig",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            6,
+            null
+        ],
+        "Change": [
+            "-",
+            1
+        ],
+        "Relationship": [
+            "Korra",
+            "Asami Sato"
+        ],
+        "Fandom": "Avatar: Legend of Korra",
+        "New Works": null,
+        "Total Works": 3148,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": "POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            7,
+            null
+        ],
+        "Change": [
+            "New",
+            null
+        ],
+        "Relationship": [
+            "Alex Danvers",
+            "Maggie Sawyer"
+        ],
+        "Fandom": "Supergirl (TV 2015)",
+        "New Works": null,
+        "Total Works": 3018,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": "Whi/POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            8,
+            null
+        ],
+        "Change": [
+            "+",
+            4
+        ],
+        "Relationship": [
+            "Alphys",
+            "Undyne (Undertale)"
+        ],
+        "Fandom": "Undertale (Video Game)",
+        "New Works": null,
+        "Total Works": 2473,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": "Ambig",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            9,
+            null
+        ],
+        "Change": [
+            "-",
+            1
+        ],
+        "Relationship": [
+            "Root | Samantha Groves",
+            "Sameen Shaw"
+        ],
+        "Fandom": "Person of Interest (TV)",
+        "New Works": null,
+        "Total Works": 2394,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": "Whi/POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            10,
+            null
+        ],
+        "Change": [
+            "-",
+            3
+        ],
+        "Relationship": [
+            "Krista Lenz | Historia Reiss",
+            "Ymir"
+        ],
+        "Fandom": "Shingeki no Kyojin | Attack on Titan",
+        "New Works": null,
+        "Total Works": 2359,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            11,
+            null
+        ],
+        "Change": [
+            "-",
+            5
+        ],
+        "Relationship": [
+            "Santana Lopez",
+            "Brittany S. Pierce"
+        ],
+        "Fandom": "Glee",
+        "New Works": null,
+        "Total Works": 2218,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": "Whi/POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            12,
+            null
+        ],
+        "Change": [
+            "+",
+            5
+        ],
+        "Relationship": [
+            "Kara Danvers",
+            "Cat Grant"
+        ],
+        "Fandom": "Supergirl (TV 2015)",
+        "New Works": null,
+        "Total Works": 2106,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            13,
+            null
+        ],
+        "Change": [
+            "-",
+            3
+        ],
+        "Relationship": [
+            "Peggy Carter",
+            "Angie Martinelli"
+        ],
+        "Fandom": "Agent Carter (TV)",
+        "New Works": null,
+        "Total Works": 1895,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            14,
+            null
+        ],
+        "Change": [
+            "-",
+            5
+        ],
+        "Relationship": [
+            "Rachel Berry",
+            "Quinn Fabray"
+        ],
+        "Fandom": "Glee",
+        "New Works": null,
+        "Total Works": 1839,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            15,
+            null
+        ],
+        "Change": [
+            "-",
+            4
+        ],
+        "Relationship": [
+            "Allison Argent",
+            "Lydia Martin"
+        ],
+        "Fandom": "Teen Wolf (TV)",
+        "New Works": null,
+        "Total Works": 1700,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            16,
+            null
+        ],
+        "Change": [
+            "-",
+            3
+        ],
+        "Relationship": [
+            "Chloe Beale",
+            "Beca Mitchell"
+        ],
+        "Fandom": "Pitch Perfect (Movies)",
+        "New Works": null,
+        "Total Works": 1630,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            17,
+            null
+        ],
+        "Change": [
+            "-",
+            1
+        ],
+        "Relationship": [
+            "Delphine Cormier",
+            "Cosima Niehaus"
+        ],
+        "Fandom": "Orphan Black (TV)",
+        "New Works": null,
+        "Total Works": 1445,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            18,
+            null
+        ],
+        "Change": [
+            "+",
+            78
+        ],
+        "Relationship": [
+            "Fareeha 'Pharah' Amari",
+            "Angela 'Mercy' Ziegler"
+        ],
+        "Fandom": "Overwatch (Video Game)",
+        "New Works": null,
+        "Total Works": 1387,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": "Whi/POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            19,
+            null
+        ],
+        "Change": [
+            "-",
+            5
+        ],
+        "Relationship": [
+            "Myka Bering",
+            "Helena 'H. G.' Wells"
+        ],
+        "Fandom": "Warehouse 13",
+        "New Works": null,
+        "Total Works": 1384,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            20,
+            null
+        ],
+        "Change": [
+            "-",
+            5
+        ],
+        "Relationship": [
+            "Jemma Simmons",
+            "Skye | Daisy Johnson"
+        ],
+        "Fandom": "Agents of S.H.I.E.L.D. (TV)",
+        "New Works": null,
+        "Total Works": 1335,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": "Whi/POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            21,
+            null
+        ],
+        "Change": [
+            "-",
+            1
+        ],
+        "Relationship": [
+            "Blake Belladonna",
+            "Yang Xiao Long"
+        ],
+        "Fandom": "RWBY",
+        "New Works": null,
+        "Total Works": 1304,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": "Whi/POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            22,
+            null
+        ],
+        "Change": [
+            null,
+            0
+        ],
+        "Relationship": [
+            "Maxine Caulfield",
+            "Chloe Price"
+        ],
+        "Fandom": "Life Is Strange (Video Game)",
+        "New Works": null,
+        "Total Works": 1201,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            23,
+            null
+        ],
+        "Change": [
+            "+",
+            19
+        ],
+        "Relationship": [
+            "Waverly Earp",
+            "Nicole Haught"
+        ],
+        "Fandom": "Wynonna Earp (TV)",
+        "New Works": null,
+        "Total Works": 1169,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            24,
+            null
+        ],
+        "Change": [
+            "New",
+            null
+        ],
+        "Relationship": [
+            "Erin Gilbert",
+            "Jillian Holtzmann"
+        ],
+        "Fandom": "Ghostbusters (2016)",
+        "New Works": null,
+        "Total Works": 1164,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            25,
+            null
+        ],
+        "Change": [
+            "+",
+            7
+        ],
+        "Relationship": [
+            "Ruby Rose",
+            "Weiss Schnee"
+        ],
+        "Fandom": "RWBY",
+        "New Works": null,
+        "Total Works": 1101,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": "Whi/POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            26,
+            null
+        ],
+        "Change": [
+            "-",
+            8
+        ],
+        "Relationship": [
+            "Mikasa Ackerman",
+            "Annie Leonhart"
+        ],
+        "Fandom": "Shingeki no Kyojin | Attack on Titan",
+        "New Works": null,
+        "Total Works": 1100,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": "Whi/POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            27,
+            null
+        ],
+        "Change": [
+            "New",
+            null
+        ],
+        "Relationship": [
+            "Serena Campbell",
+            "Bernie Wolfe"
+        ],
+        "Fandom": "Holby City",
+        "New Works": null,
+        "Total Works": 1091,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            28,
+            null
+        ],
+        "Change": [
+            "-",
+            9
+        ],
+        "Relationship": [
+            "Maura Isles",
+            "Jane Rizzoli"
+        ],
+        "Fandom": "Rizzoli & Isles",
+        "New Works": null,
+        "Total Works": 1059,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            29,
+            null
+        ],
+        "Change": [
+            "+",
+            23
+        ],
+        "Relationship": [
+            "Lapis Lazuli",
+            "Peridot (Steven Universe)"
+        ],
+        "Fandom": "Steven Universe (Cartoon)",
+        "New Works": null,
+        "Total Works": 980,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": "Ambig",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            30,
+            null
+        ],
+        "Change": [
+            "-",
+            9
+        ],
+        "Relationship": [
+            "Anna",
+            "Elsa (Frozen)"
+        ],
+        "Fandom": "Frozen (2013)",
+        "New Works": null,
+        "Total Works": 976,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            31,
+            null
+        ],
+        "Change": [
+            "-",
+            8
+        ],
+        "Relationship": [
+            "Tara Maclay",
+            "Willow Rosenberg"
+        ],
+        "Fandom": "Buffy the Vampire Slayer",
+        "New Works": null,
+        "Total Works": 934,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            32,
+            null
+        ],
+        "Change": [
+            "-",
+            6
+        ],
+        "Relationship": [
+            "Sansa Stark",
+            "Margaery Tyrell"
+        ],
+        "Fandom": "Game of Thrones (TV)",
+        "New Works": null,
+        "Total Works": 909,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            33,
+            null
+        ],
+        "Change": [
+            "-",
+            5
+        ],
+        "Relationship": [
+            "Ashlyn Harris",
+            "Ali Krieger"
+        ],
+        "Fandom": "Women's Soccer RPF",
+        "New Works": null,
+        "Total Works": 870,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            34,
+            null
+        ],
+        "Change": [
+            "-",
+            9
+        ],
+        "Relationship": [
+            "Gwen",
+            "Morgana (Merlin)"
+        ],
+        "Fandom": "Merlin (TV)",
+        "New Works": null,
+        "Total Works": 863,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": "Whi/POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            35,
+            null
+        ],
+        "Change": [
+            "+",
+            4
+        ],
+        "Relationship": [
+            "Ruby",
+            "Sapphire"
+        ],
+        "Fandom": "Steven Universe (Cartoon)",
+        "New Works": null,
+        "Total Works": 856,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": "Ambig",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            36,
+            null
+        ],
+        "Change": [
+            "-",
+            12
+        ],
+        "Relationship": [
+            "Pepper Potts",
+            "Natasha Romanov"
+        ],
+        "Fandom": "The Avengers (Marvel Movies)",
+        "New Works": null,
+        "Total Works": 845,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            37,
+            null
+        ],
+        "Change": [
+            "-",
+            10
+        ],
+        "Relationship": [
+            "Miranda Priestly",
+            "Andrea Sachs"
+        ],
+        "Fandom": "The Devil Wears Prada (2006)",
+        "New Works": null,
+        "Total Works": 843,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            38,
+            null
+        ],
+        "Change": [
+            "-",
+            8
+        ],
+        "Relationship": [
+            "Female Shepard",
+            "Liara T'Soni"
+        ],
+        "Fandom": "Mass Effect Trilogy",
+        "New Works": null,
+        "Total Works": 838,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": "Ambig",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            39,
+            null
+        ],
+        "Change": [
+            "-",
+            10
+        ],
+        "Relationship": [
+            "Terezi Pyrope",
+            "Vriska Serket"
+        ],
+        "Fandom": "Homestuck",
+        "New Works": null,
+        "Total Works": 805,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": "Ambig",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            40,
+            null
+        ],
+        "Change": [
+            "+",
+            33
+        ],
+        "Relationship": [
+            "Clary Fray",
+            "Isabelle Lightwood"
+        ],
+        "Fandom": "Shadowhunters (TV)",
+        "New Works": null,
+        "Total Works": 804,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": "Whi/POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            41,
+            null
+        ],
+        "Change": [
+            "-",
+            10
+        ],
+        "Relationship": [
+            "Pacifica Northwest",
+            "Mabel Pines"
+        ],
+        "Fandom": "Gravity Falls",
+        "New Works": null,
+        "Total Works": 796,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            42,
+            null
+        ],
+        "Change": [
+            "New",
+            null
+        ],
+        "Relationship": [
+            "Maria Reynolds",
+            "Elizabeth 'Eliza' Schuyler"
+        ],
+        "Fandom": "Hamilton",
+        "New Works": null,
+        "Total Works": 791,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": "POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            43,
+            null
+        ],
+        "Change": [
+            "-",
+            9
+        ],
+        "Relationship": [
+            "Maria Hill",
+            "Natasha Romanov"
+        ],
+        "Fandom": "Marvel Cinematic Universe",
+        "New Works": null,
+        "Total Works": 762,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            44,
+            null
+        ],
+        "Change": [
+            "-",
+            7
+        ],
+        "Relationship": [
+            "Pearl",
+            "Rose Quartz (Steven Universe)"
+        ],
+        "Fandom": "Steven Universe (Cartoon)",
+        "New Works": null,
+        "Total Works": 761,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": "Ambig",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            45,
+            null
+        ],
+        "Change": [
+            "-",
+            12
+        ],
+        "Relationship": [
+            "Faith Lehane",
+            "Buffy Summers"
+        ],
+        "Fandom": "Buffy the Vampire Slayer",
+        "New Works": null,
+        "Total Works": 760,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            46,
+            null
+        ],
+        "Change": [
+            "-",
+            10
+        ],
+        "Relationship": [
+            "Nyssa al Ghul",
+            "Sara Lance"
+        ],
+        "Fandom": "Arrow (TV 2012)",
+        "New Works": null,
+        "Total Works": 749,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": "Whi/POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            47,
+            null
+        ],
+        "Change": [
+            "-",
+            6
+        ],
+        "Relationship": [
+            "Shimizu Kiyoko",
+            "Yachi Hitoka"
+        ],
+        "Fandom": "Haikyuu!!",
+        "New Works": null,
+        "Total Works": 748,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": "POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            48,
+            null
+        ],
+        "Change": [
+            "+",
+            15
+        ],
+        "Relationship": [
+            "Luna Lovegood",
+            "Ginny Weasley"
+        ],
+        "Fandom": "Harry Potter - J. K. Rowling",
+        "New Works": null,
+        "Total Works": 683,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            49,
+            null
+        ],
+        "Change": [
+            "-",
+            14
+        ],
+        "Relationship": [
+            "Malia Tate",
+            "Kira Yukimura"
+        ],
+        "Fandom": "Teen Wolf (TV)",
+        "New Works": null,
+        "Total Works": 681,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": "Whi/POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            50,
+            null
+        ],
+        "Change": [
+            "+",
+            3
+        ],
+        "Relationship": [
+            "Amethyst",
+            "Pearl (Steven Universe)"
+        ],
+        "Fandom": "Steven Universe (Cartoon)",
+        "New Works": null,
+        "Total Works": 636,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": "Ambig",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            51,
+            null
+        ],
+        "Change": [
+            "+",
+            47
+        ],
+        "Relationship": [
+            "Anya",
+            "Raven Reyes"
+        ],
+        "Fandom": "The 100 (TV)",
+        "New Works": null,
+        "Total Works": 632,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": "POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            52,
+            null
+        ],
+        "Change": [
+            "+",
+            22
+        ],
+        "Relationship": [
+            "Pamela Isley",
+            "Harleen Quinzel"
+        ],
+        "Fandom": "Batman - All Media Types",
+        "New Works": null,
+        "Total Works": 628,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            53,
+            null
+        ],
+        "Change": [
+            "New",
+            null
+        ],
+        "Relationship": [
+            "Alex Danvers",
+            "Kara Danvers"
+        ],
+        "Fandom": "Supergirl (TV 2015)",
+        "New Works": null,
+        "Total Works": 624,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            54,
+            null
+        ],
+        "Change": [
+            "-",
+            6
+        ],
+        "Relationship": [
+            "Leliana",
+            "Female Warden"
+        ],
+        "Fandom": "Dragon Age: Origins",
+        "New Works": null,
+        "Total Works": 611,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": "Whi/Amb",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            55,
+            null
+        ],
+        "Change": [
+            "-",
+            12
+        ],
+        "Relationship": [
+            "Female Hawke",
+            "Isabela"
+        ],
+        "Fandom": "Dragon Age II",
+        "New Works": null,
+        "Total Works": 601,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": "Amb/POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            56,
+            null
+        ],
+        "Change": [
+            "+",
+            30
+        ],
+        "Relationship": [
+            "Astra",
+            "Alex Danvers"
+        ],
+        "Fandom": "Supergirl (TV 2015)",
+        "New Works": null,
+        "Total Works": 598,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            57,
+            null
+        ],
+        "Change": [
+            "-",
+            19
+        ],
+        "Relationship": [
+            "Jane Crocker",
+            "Roxy Lalonde"
+        ],
+        "Fandom": "Homestuck",
+        "New Works": null,
+        "Total Works": 593,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": "Ambig",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            58,
+            null
+        ],
+        "Change": [
+            "-",
+            12
+        ],
+        "Relationship": [
+            "Octavia Blake",
+            "Raven Reyes"
+        ],
+        "Fandom": "The 100 (TV)",
+        "New Works": null,
+        "Total Works": 590,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": "Whi/POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            59,
+            null
+        ],
+        "Change": [
+            "-",
+            12
+        ],
+        "Relationship": [
+            "Charlie Bradbury",
+            "Jo Harvelle"
+        ],
+        "Fandom": "Supernatural",
+        "New Works": null,
+        "Total Works": 584,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            60,
+            null
+        ],
+        "Change": [
+            "-",
+            20
+        ],
+        "Relationship": [
+            "Tobin Heath",
+            "Alex Morgan"
+        ],
+        "Fandom": "Women's Soccer RPF",
+        "New Works": null,
+        "Total Works": 577,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            61,
+            null
+        ],
+        "Change": [
+            "+",
+            27
+        ],
+        "Relationship": [
+            "Maya Hart",
+            "Riley Matthews"
+        ],
+        "Fandom": "Girl Meets World",
+        "New Works": null,
+        "Total Works": 567,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            62,
+            null
+        ],
+        "Change": [
+            "New",
+            null
+        ],
+        "Relationship": [
+            "Betty Cooper",
+            "Veronica Lodge"
+        ],
+        "Fandom": "Riverdale (TV 2017)",
+        "New Works": null,
+        "Total Works": 533,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": "Whi/POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            63,
+            null
+        ],
+        "Change": [
+            "-",
+            6
+        ],
+        "Relationship": [
+            "Cosette Fauchelevent",
+            "\u00c9ponine Th\u00e9nardier"
+        ],
+        "Fandom": "Les Mis\u00e9rables - All Media Types",
+        "New Works": null,
+        "Total Works": 522,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            64,
+            null
+        ],
+        "Change": [
+            "+",
+            2
+        ],
+        "Relationship": [
+            "Gabrielle",
+            "Xena"
+        ],
+        "Fandom": "Xena: Warrior Princess",
+        "New Works": null,
+        "Total Works": 518,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            65,
+            null
+        ],
+        "Change": [
+            "-",
+            15
+        ],
+        "Relationship": [
+            "Princess Bubblegum",
+            "Marceline"
+        ],
+        "Fandom": "Adventure Time",
+        "New Works": null,
+        "Total Works": 515,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": "Ambig",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            66,
+            null
+        ],
+        "Change": [
+            "-",
+            21
+        ],
+        "Relationship": [
+            "Laura Hollis",
+            "Danny Lawrence"
+        ],
+        "Fandom": "Carmilla (Web Series)",
+        "New Works": null,
+        "Total Works": 503,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            67,
+            null
+        ],
+        "Change": [
+            "-",
+            11
+        ],
+        "Relationship": [
+            "Kaiou Michiru",
+            "Tenoh Haruka"
+        ],
+        "Fandom": "Bishoujo Senshi Sailor Moon | Pretty Guardian Sailor Moon",
+        "New Works": null,
+        "Total Works": 498,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": "POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            68,
+            null
+        ],
+        "Change": [
+            "New",
+            null
+        ],
+        "Relationship": [
+            "Mila Babicheva",
+            "Sara Crispino"
+        ],
+        "Fandom": "Yuri!!! on Ice (Anime)",
+        "New Works": null,
+        "Total Works": 483,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            69,
+            null
+        ],
+        "Change": [
+            "-",
+            3
+        ],
+        "Relationship": [
+            "Jennifer 'JJ' Jareau",
+            "Emily Prentiss"
+        ],
+        "Fandom": "Criminal Minds",
+        "New Works": null,
+        "Total Works": 481,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            70,
+            null
+        ],
+        "Change": [
+            "-",
+            26
+        ],
+        "Relationship": [
+            "Quinn Fabray",
+            "Santana Lopez"
+        ],
+        "Fandom": "Glee",
+        "New Works": null,
+        "Total Works": 479,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": "Whi/POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            71,
+            null
+        ],
+        "Change": [
+            "-",
+            11
+        ],
+        "Relationship": [
+            "Female Inquisitor",
+            "Josephine Montilyet"
+        ],
+        "Fandom": "Dragon Age: Inquisition",
+        "New Works": null,
+        "Total Works": 476,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": "Amb/POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            72,
+            null
+        ],
+        "Change": [
+            "-",
+            4
+        ],
+        "Relationship": [
+            "Female Inquisitor",
+            "Sera"
+        ],
+        "Fandom": "Dragon Age: Inquisition",
+        "New Works": null,
+        "Total Works": 473,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": "Whi/Amb",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            73,
+            null
+        ],
+        "Change": [
+            "-",
+            18
+        ],
+        "Relationship": [
+            "Belle",
+            "Red Riding Hood | Ruby"
+        ],
+        "Fandom": "Once Upon a Time (TV)",
+        "New Works": null,
+        "Total Works": 464,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            74,
+            null
+        ],
+        "Change": [
+            "-",
+            20
+        ],
+        "Relationship": [
+            "Kelley O'Hara",
+            "Hope Solo"
+        ],
+        "Fandom": "Women's Soccer RPF",
+        "New Works": null,
+        "Total Works": 463,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            75,
+            "="
+        ],
+        "Change": [
+            "+",
+            10
+        ],
+        "Relationship": [
+            "Camila Cabello",
+            "Lauren Jauregui"
+        ],
+        "Fandom": "Fifth Harmony (Band)",
+        "New Works": null,
+        "Total Works": 460,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": "POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            75,
+            "="
+        ],
+        "Change": [
+            "New",
+            null
+        ],
+        "Relationship": [
+            "Tobin Heath",
+            "Christen Press"
+        ],
+        "Fandom": "Women's Soccer RPF",
+        "New Works": null,
+        "Total Works": 460,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": "Whi/POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            77,
+            null
+        ],
+        "Change": [
+            "-",
+            28
+        ],
+        "Relationship": [
+            "Kahlan Amnell",
+            "Cara Mason"
+        ],
+        "Fandom": "Legend of the Seeker",
+        "New Works": null,
+        "Total Works": 455,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            78,
+            null
+        ],
+        "Change": [
+            "-",
+            13
+        ],
+        "Relationship": [
+            "Dorothy Baum",
+            "Charlie Bradbury"
+        ],
+        "Fandom": "Supernatural",
+        "New Works": null,
+        "Total Works": 453,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            79,
+            null
+        ],
+        "Change": [
+            "-",
+            20
+        ],
+        "Relationship": [
+            "Cora Hale",
+            "Lydia Martin"
+        ],
+        "Fandom": "Teen Wolf (TV)",
+        "New Works": null,
+        "Total Works": 452,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            80,
+            null
+        ],
+        "Change": [
+            "New",
+            null
+        ],
+        "Relationship": [
+            "Ayase Eli",
+            "Toujou Nozomi"
+        ],
+        "Fandom": "Love Live! School Idol Project",
+        "New Works": null,
+        "Total Works": 451,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": "POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            81,
+            null
+        ],
+        "Change": [
+            "+",
+            3
+        ],
+        "Relationship": [
+            "Garnet",
+            "Pearl (Steven Universe)"
+        ],
+        "Fandom": "Steven Universe (Cartoon)",
+        "New Works": null,
+        "Total Works": 449,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": "Ambig",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            82,
+            null
+        ],
+        "Change": [
+            "New",
+            null
+        ],
+        "Relationship": [
+            "Amethyst",
+            "Peridot (Steven Universe)"
+        ],
+        "Fandom": "Steven Universe (Cartoon)",
+        "New Works": null,
+        "Total Works": 445,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": "Ambig",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            83,
+            null
+        ],
+        "Change": [
+            "New",
+            null
+        ],
+        "Relationship": [
+            "Kimberly Hart",
+            "Trini (Power Rangers 2017)"
+        ],
+        "Fandom": "Power Rangers (2017)",
+        "New Works": null,
+        "Total Works": 441,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": "POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            84,
+            null
+        ],
+        "Change": [
+            "-",
+            33
+        ],
+        "Relationship": [
+            "Rachel Berry",
+            "Santana Lopez"
+        ],
+        "Fandom": "Glee",
+        "New Works": null,
+        "Total Works": 436,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": "Whi/POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            85,
+            null
+        ],
+        "Change": [
+            "-",
+            24
+        ],
+        "Relationship": [
+            "Gail Peck",
+            "Holly Stewart"
+        ],
+        "Fandom": "Rookie Blue",
+        "New Works": null,
+        "Total Works": 430,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            86,
+            null
+        ],
+        "Change": [
+            "-",
+            28
+        ],
+        "Relationship": [
+            "Kanaya Maryam",
+            "Vriska Serket"
+        ],
+        "Fandom": "Homestuck",
+        "New Works": null,
+        "Total Works": 429,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": "Ambig",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            87,
+            null
+        ],
+        "Change": [
+            "-",
+            23
+        ],
+        "Relationship": [
+            "Clarke Griffin",
+            "Raven Reyes"
+        ],
+        "Fandom": "The 100 (TV)",
+        "New Works": null,
+        "Total Works": 421,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": "Whi/POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            88,
+            null
+        ],
+        "Change": [
+            "-",
+            19
+        ],
+        "Relationship": [
+            "Arizona Robbins",
+            "Calliope 'Callie' Torres"
+        ],
+        "Fandom": "Grey's Anatomy",
+        "New Works": null,
+        "Total Works": 414,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": "Whi/POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            89,
+            null
+        ],
+        "Change": [
+            "New",
+            null
+        ],
+        "Relationship": [
+            "Carol Aird",
+            "Therese Belivet"
+        ],
+        "Fandom": "Carol (2015)",
+        "New Works": null,
+        "Total Works": 404,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            90,
+            null
+        ],
+        "Change": [
+            "+",
+            4
+        ],
+        "Relationship": [
+            "Costia",
+            "Lexa (The 100)"
+        ],
+        "Fandom": "The 100 (TV)",
+        "New Works": null,
+        "Total Works": 399,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": "Whi/Amb",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            91,
+            null
+        ],
+        "Change": [
+            "-",
+            29
+        ],
+        "Relationship": [
+            "Bo",
+            "Lauren"
+        ],
+        "Fandom": "Lost Girl",
+        "New Works": null,
+        "Total Works": 397,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            92,
+            null
+        ],
+        "Change": [
+            "-",
+            20
+        ],
+        "Relationship": [
+            "Jenny Flint",
+            "Madame Vastra"
+        ],
+        "Fandom": "Doctor Who (2005)",
+        "New Works": null,
+        "Total Works": 390,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": "Whi/Amb",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            93,
+            null
+        ],
+        "Change": [
+            "-",
+            12
+        ],
+        "Relationship": [
+            "Hermione Granger",
+            "Ginny Weasley"
+        ],
+        "Fandom": "Harry Potter - J. K. Rowling",
+        "New Works": null,
+        "Total Works": 388,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": "Whi/Amb",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            94,
+            null
+        ],
+        "Change": [
+            "-",
+            23
+        ],
+        "Relationship": [
+            "Jade Harley",
+            "Rose Lalonde"
+        ],
+        "Fandom": "Homestuck",
+        "New Works": null,
+        "Total Works": 385,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": "Ambig",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            95,
+            null
+        ],
+        "Change": [
+            "New",
+            null
+        ],
+        "Relationship": [
+            "Nishikino Maki",
+            "Yazawa Nico"
+        ],
+        "Fandom": "Love Live! School Idol Project",
+        "New Works": null,
+        "Total Works": 383,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": "POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            96,
+            null
+        ],
+        "Change": [
+            "-",
+            26
+        ],
+        "Relationship": [
+            "Sam Carter",
+            "Janet Fraiser"
+        ],
+        "Fandom": "Stargate SG-1",
+        "New Works": null,
+        "Total Works": 382,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            97,
+            null
+        ],
+        "Change": [
+            "-",
+            20
+        ],
+        "Relationship": [
+            "Akemi Homura",
+            "Kaname Madoka"
+        ],
+        "Fandom": "Mahou Shoujo Madoka Magika | Puella Magi Madoka Magica",
+        "New Works": null,
+        "Total Works": 373,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": "POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            98,
+            null
+        ],
+        "Change": [
+            "-",
+            23
+        ],
+        "Relationship": [
+            "Irene Adler",
+            "Molly Hooper"
+        ],
+        "Fandom": "Sherlock (TV)",
+        "New Works": null,
+        "Total Works": 363,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            99,
+            null
+        ],
+        "Change": [
+            "-",
+            8
+        ],
+        "Relationship": [
+            "Maxine Caulfield",
+            "Victoria Chase"
+        ],
+        "Fandom": "Life Is Strange (Video Game)",
+        "New Works": null,
+        "Total Works": 361,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            100,
+            null
+        ],
+        "Change": [
+            "New",
+            null
+        ],
+        "Relationship": [
+            "Alana Bloom",
+            "Margot Verger"
+        ],
+        "Fandom": "Hannibal (TV)",
+        "New Works": null,
+        "Total Works": 360,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    }
+]

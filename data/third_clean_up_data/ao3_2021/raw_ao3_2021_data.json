@@ -1,100 +1,2531 @@
-{"Rank": [1, null], "Change": ["New", null], "Relationship": ["Clay | Dream", "GeorgeNotFound (Video Blogging RPF)"], "Fandom": "Video Blogging RPF", "New Works": 13472, "Total Works": 13780, "Type": ["M", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [2, null], "Change": ["+", 14], "Relationship": ["Castiel", "Dean Winchester"], "Fandom": "Supernatural", "New Works": 12086, "Total Works": 96616, "Type": ["M", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [3, null], "Change": ["-", 1], "Relationship": ["L\u00e1n Zh\u00e0n | L\u00e1n W\u00e0ngj\u012b", "W\u00e8i Y\u012bng | W\u00e8i W\u00faxi\u00e0n"], "Fandom": "\u9b54\u9053\u7956\u5e08 - \u58a8\u9999\u94dc\u81ed | M\u00f3d\u00e0o Z\u01d4sh\u012b - M\u00f2xi\u0101ng T\u00f3ngxi\u00f9", "New Works": 10848, "Total Works": 23825, "Type": ["M", "M"], "Race": ["Asian", "Asian"], "Release Date": null}
-{"Rank": [4, null], "Change": ["+", 2], "Relationship": ["Draco Malfoy", "Harry Potter"], "Fandom": "Harry Potter - J. K. Rowling", "New Works": 9069, "Total Works": 49245, "Type": ["M", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [5, null], "Change": ["+", 2], "Relationship": ["Bakugou Katsuki", "Midoriya Izuku"], "Fandom": "Boku no Hero Academia | My Hero Academia", "New Works": 8567, "Total Works": 25351, "Type": ["M", "M"], "Race": ["Asian", "Asian"], "Release Date": null}
-{"Rank": [6, null], "Change": ["-", 5], "Relationship": ["Aziraphale", "Crowley (Good Omens)"], "Fandom": "Good Omens (TV)", "New Works": 8410, "Total Works": 36546, "Type": ["M", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [7, null], "Change": ["+", 3], "Relationship": ["Bakugou Katsuki", "Kirishima Eijirou"], "Fandom": "Boku no Hero Academia | My Hero Academia", "New Works": 7324, "Total Works": 22607, "Type": ["M", "M"], "Race": ["Asian", "Asian"], "Release Date": null}
-{"Rank": [8, null], "Change": ["+", 23], "Relationship": ["Sirius Black", "Remus Lupin"], "Fandom": "Harry Potter - J. K. Rowling", "New Works": 7231, "Total Works": 24891, "Type": ["M", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [9, null], "Change": ["New", null], "Relationship": ["Wilbur Soot", "Technoblade", "TommyInnit", "Phil Watson"], "Fandom": "Video Blogging RPF", "New Works": 6910, "Total Works": 6910, "Type": "Gen", "Race": ["White", "White"], "Release Date": null}
-{"Rank": [10, null], "Change": ["New", null], "Relationship": ["Toby Smith | Tubbo", "TommyInnit"], "Fandom": "Video Blogging RPF", "New Works": 6870, "Total Works": 6870, "Type": "Gen", "Race": ["White", "White"], "Release Date": null}
-{"Rank": [11, null], "Change": ["-", 6], "Relationship": ["Geralt z Rivii | Geralt of Rivia", "Jaskier | Dandelion"], "Fandom": "Wied\u017amin | The Witcher - All Media Types", "New Works": 6401, "Total Works": 13917, "Type": ["M", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [12, null], "Change": ["New", null], "Relationship": ["Wilbur Soot", "TommyInnit"], "Fandom": "Video Blogging RPF", "New Works": 6247, "Total Works": 6247, "Type": "Gen", "Race": ["White", "White"], "Release Date": null}
-{"Rank": [13, null], "Change": ["+", 1], "Relationship": ["Adrien Agreste | Chat Noir", "Marinette Dupain-Cheng | Ladybug"], "Fandom": "Miraculous Ladybug", "New Works": 6103, "Total Works": 25668, "Type": ["F", "M"], "Race": ["White", "Asian"], "Release Date": null}
-{"Rank": [14, null], "Change": ["-", 5], "Relationship": ["James 'Bucky' Barnes", "Steve Rogers"], "Fandom": "Captain America (Movies)", "New Works": 5643, "Total Works": 55252, "Type": ["M", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [15, null], "Change": ["+", 25], "Relationship": ["Akaashi Keiji", "Bokuto Koutarou"], "Fandom": "Haikyuu!!", "New Works": 5379, "Total Works": 12789, "Type": ["M", "M"], "Race": ["Asian", "Asian"], "Release Date": null}
-{"Rank": [16, null], "Change": ["+", 6], "Relationship": ["Aizawa Shouta | Eraserhead", "Yamada Hizashi | Present Mic"], "Fandom": "Boku no Hero Academia | My Hero Academia", "New Works": 5334, "Total Works": 12591, "Type": ["M", "M"], "Race": ["Asian", "Asian"], "Release Date": null}
-{"Rank": [17, null], "Change": ["+", 28], "Relationship": ["Iwaizumi Hajime", "Oikawa Tooru"], "Fandom": "Haikyuu!!", "New Works": 5324, "Total Works": 16455, "Type": ["M", "M"], "Race": ["Asian", "Asian"], "Release Date": null}
-{"Rank": [18, null], "Change": ["New", null], "Relationship": ["Miya Atsumu", "Sakusa Kiyoomi"], "Fandom": "Haikyuu!!", "New Works": 5277, "Total Works": 6001, "Type": ["M", "M"], "Race": ["Asian", "Asian"], "Release Date": null}
-{"Rank": [19, null], "Change": ["-", 6], "Relationship": ["Jeon Jungkook", "Kim Taehyung | V"], "Fandom": "Bangtan Boys | BTS", "New Works": 5201, "Total Works": 28479, "Type": ["M", "M"], "Race": ["Asian", "Asian"], "Release Date": null}
-{"Rank": [20, null], "Change": ["+", 33], "Relationship": ["James Potter", "Lily Evans Potter"], "Fandom": "Harry Potter - J. K. Rowling", "New Works": 5057, "Total Works": 15164, "Type": ["F", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [21, null], "Change": ["New", null], "Relationship": ["Joe | Yusuf Al-Kaysani", "Nicky | Nicol\u00f2 di Genova"], "Fandom": "The Old Guard (Movie 2020)", "New Works": 4922, "Total Works": 5557, "Type": ["M", "M"], "Race": ["M.E.", "White"], "Release Date": null}
-{"Rank": [22, null], "Change": ["-", 14], "Relationship": ["Peter Parker", "Tony Stark"], "Fandom": "Marvel Cinematic Universe", "New Works": 4829, "Total Works": 22164, "Type": "Gen", "Race": ["White", "White"], "Release Date": null}
-{"Rank": [23, null], "Change": ["-", 8], "Relationship": ["Midoriya Izuku", "Todoroki Shouto"], "Fandom": "Boku no Hero Academia | My Hero Academia", "New Works": 4787, "Total Works": 18807, "Type": ["M", "M"], "Race": ["Asian", "Asian"], "Release Date": null}
-{"Rank": [24, null], "Change": ["+", 12], "Relationship": ["Hermione Granger", "Draco Malfoy"], "Fandom": "Harry Potter - J. K. Rowling", "New Works": 4678, "Total Works": 14834, "Type": ["F", "M"], "Race": ["Ambig", "White"], "Release Date": null}
-{"Rank": [25, null], "Change": ["-", 22], "Relationship": ["Rey", "Ben Solo | Kylo Ren"], "Fandom": "Star Wars Sequel Trilogy", "New Works": 4659, "Total Works": 25865, "Type": ["F", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [26, null], "Change": ["+", 9], "Relationship": ["Hinata Shouyou", "Kageyama Tobio"], "Fandom": "Haikyuu!!", "New Works": 4655, "Total Works": 15073, "Type": ["M", "M"], "Race": ["Asian", "Asian"], "Release Date": null}
-{"Rank": [27, null], "Change": ["-", 9], "Relationship": ["Evan 'Buck' Buckley", "Eddie Diaz (9-1-1 TV)"], "Fandom": "9-1-1 (TV)", "New Works": 4642, "Total Works": 8345, "Type": ["M", "M"], "Race": ["White", "Latino"], "Release Date": null}
-{"Rank": [28, null], "Change": ["-", 11], "Relationship": ["Jeon Jungkook", "Park Jimin"], "Fandom": "Bangtan Boys | BTS", "New Works": 4564, "Total Works": 22400, "Type": ["M", "M"], "Race": ["Asian", "Asian"], "Release Date": null}
-{"Rank": [29, null], "Change": ["New", null], "Relationship": ["Technoblade", "TommyInnit (Video Blogging RPF)"], "Fandom": "Video Blogging RPF", "New Works": 4482, "Total Works": 4482, "Type": "Gen", "Race": ["White", "White"], "Release Date": null}
-{"Rank": [30, null], "Change": ["+", 3], "Relationship": ["Bakugou Katsuki", "Midoriya Izuku"], "Fandom": "Boku no Hero Academia | My Hero Academia", "New Works": 4391, "Total Works": 9370, "Type": "Gen", "Race": ["Asian", "Asian"], "Release Date": null}
-{"Rank": [31, null], "Change": ["-", 20], "Relationship": ["Steve Rogers", "Tony Stark"], "Fandom": "The Avengers (Marvel Movies)", "New Works": 4285, "Total Works": 40510, "Type": ["M", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [32, null], "Change": ["+", 24], "Relationship": ["Will Graham", "Hannibal Lecter"], "Fandom": "Hannibal (TV)", "New Works": 4226, "Total Works": 21446, "Type": ["M", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [33, null], "Change": ["New", null], "Relationship": ["Tartaglia | Childe", "Zhongli (Genshin Impact)"], "Fandom": "\u539f\u795e | Genshin Impact (Video Game)", "New Works": 4125, "Total Works": 4125, "Type": ["M", "M"], "Race": ["White", "Asian"], "Release Date": null}
-{"Rank": [34, null], "Change": ["-", 7], "Relationship": ["Merlin", "Arthur Pendragon (Merlin)"], "Fandom": "Merlin (TV)", "New Works": 3907, "Total Works": 22575, "Type": ["M", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [35, null], "Change": ["-", 11], "Relationship": ["Dazai Osamu", "Nakahara Chuuya (Bungou Stray Dogs)"], "Fandom": "\u6587\u8c6a\u30b9\u30c8\u30ec\u30a4\u30c9\u30c3\u30b0\u30b9 | Bungou Stray Dogs", "New Works": 3887, "Total Works": 12626, "Type": ["M", "M"], "Race": ["Asian", "Asian"], "Release Date": null}
-{"Rank": [36, null], "Change": ["New", null], "Relationship": ["Amity Blight", "Luz Noceda"], "Fandom": "The Owl House (Cartoon)", "New Works": 3797, "Total Works": 3797, "Type": ["F", "F"], "Race": ["White", "Af Lat"], "Release Date": null}
-{"Rank": [37, null], "Change": ["New", null], "Relationship": ["Ranboo", "Toby Smith | Tubbo"], "Fandom": "Video Blogging RPF", "New Works": 3711, "Total Works": 3711, "Type": "Gen", "Race": ["White", "White"], "Release Date": null}
-{"Rank": [38, null], "Change": ["-", 6], "Relationship": ["Martin Blackwood", "Jonathan 'Jon' Sims | The Archivist"], "Fandom": "The Magnus Archives (Podcast)", "New Works": 3541, "Total Works": 6889, "Type": ["M", "M"], "Race": ["Ambig", "Ambig"], "Release Date": null}
-{"Rank": [39, null], "Change": ["-", 16], "Relationship": ["Adora", "Catra (She-Ra)"], "Fandom": "She-Ra and the Princesses of Power (2018)", "New Works": 3478, "Total Works": 8347, "Type": ["F", "F"], "Race": ["White", "Ambig"], "Release Date": null}
-{"Rank": [40, null], "Change": ["New", null], "Relationship": ["James 'Bucky' Barnes", "Sam Wilson"], "Fandom": "Marvel Cinematic Universe", "New Works": 3447, "Total Works": 6477, "Type": ["M", "M"], "Race": ["White", "Black"], "Release Date": null}
-{"Rank": [41, null], "Change": ["+", 43], "Relationship": ["Kozume Kenma", "Kuroo Tetsurou"], "Fandom": "Haikyuu!!", "New Works": 3384, "Total Works": 8290, "Type": ["M", "M"], "Race": ["Asian", "Asian"], "Release Date": null}
-{"Rank": [42, null], "Change": ["-", 16], "Relationship": ["Derek Hale", "Stiles Stilinski"], "Fandom": "Teen Wolf (TV)", "New Works": 3365, "Total Works": 62648, "Type": ["M", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [43, null], "Change": ["-", 23], "Relationship": ["Magnus Bane", "Alec Lightwood"], "Fandom": "Shadowhunters (TV)", "New Works": 3327, "Total Works": 28086, "Type": ["M", "M"], "Race": ["Asian", "White"], "Release Date": null}
-{"Rank": [44, null], "Change": ["New", null], "Relationship": ["Clay | Dream", "GeorgeNotFound", "Sapnap (Video Blogging RPF)"], "Fandom": "Video Blogging RPF", "New Works": 3291, "Total Works": 3291, "Type": "Gen", "Race": ["White", "White"], "Release Date": null}
-{"Rank": [45, null], "Change": ["+", 6], "Relationship": ["Hermione Granger", "Ron Weasley"], "Fandom": "Harry Potter - J. K. Rowling", "New Works": 3234, "Total Works": 14881, "Type": ["F", "M"], "Race": ["Ambig", "White"], "Release Date": null}
-{"Rank": [46, null], "Change": ["+", 35], "Relationship": ["Aizawa Shouta | Eraserhead", "Midoriya Izuku"], "Fandom": "Boku no Hero Academia | My Hero Academia", "New Works": 3216, "Total Works": 5373, "Type": "Gen", "Race": ["Asian", "Asian"], "Release Date": null}
-{"Rank": [47, "="], "Change": ["-", 28], "Relationship": ["Kara Danvers", "Lena Luthor"], "Fandom": "Supergirl (TV 2015)", "New Works": 3193, "Total Works": 16227, "Type": ["F", "F"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [47, "="], "Change": ["-", 3], "Relationship": ["Dabi | Todoroki Touya", "Takami Keigo | Hawks"], "Fandom": "Boku no Hero Academia | My Hero Academia", "New Works": 3193, "Total Works": 6096, "Type": ["M", "M"], "Race": ["Asian", "Asian"], "Release Date": null}
-{"Rank": [49, null], "Change": ["New", null], "Relationship": ["Hasegawa Langa", "Kyan Reki"], "Fandom": "SK8 the Infinity (Anime)", "New Works": 3107, "Total Works": 3107, "Type": ["M", "M"], "Race": ["Asian", "Asian"], "Release Date": null}
-{"Rank": [50, null], "Change": ["+", 24], "Relationship": ["James 'Bucky' Barnes", "Reader"], "Fandom": "Marvel Cinematic Universe", "New Works": 3081, "Total Works": 10797, "Type": "Other", "Race": ["White", "Ambig"], "Release Date": null}
-{"Rank": [51, null], "Change": ["New", null], "Relationship": ["Tsukishima Kei", "Yamaguchi Tadashi"], "Fandom": "Haikyuu!!", "New Works": 2993, "Total Works": 7968, "Type": ["M", "M"], "Race": ["Asian", "Asian"], "Release Date": null}
-{"Rank": [52, null], "Change": ["New", null], "Relationship": ["Technoblade", "Phil Watson (Video Blogging RPF)"], "Fandom": "Minecraft (Video Game)", "New Works": 2973, "Total Works": 2973, "Type": "Gen", "Race": ["White", "White"], "Release Date": null}
-{"Rank": [53, null], "Change": ["+", 42], "Relationship": ["Sokka", "Zuko (Avatar)"], "Fandom": "Avatar: The Last Airbender", "New Works": 2893, "Total Works": 4680, "Type": ["M", "M"], "Race": ["Indig", "Asian"], "Release Date": null}
-{"Rank": [54, null], "Change": ["-", 2], "Relationship": ["Sherlock Holmes", "John Watson"], "Fandom": "Sherlock (TV)", "New Works": 2877, "Total Works": 64408, "Type": ["M", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [55, null], "Change": ["New", null], "Relationship": ["Karl Jacobs", "Sapnap"], "Fandom": "Video Blogging RPF", "New Works": 2853, "Total Works": 2853, "Type": ["M", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [56, null], "Change": ["+", 6], "Relationship": ["Kaminari Denki", "Shinsou Hitoshi"], "Fandom": "Boku no Hero Academia | My Hero Academia", "New Works": 2820, "Total Works": 5520, "Type": ["M", "M"], "Race": ["Asian", "Asian"], "Release Date": null}
-{"Rank": [57, null], "Change": ["+", 3], "Relationship": ["Harry Potter", "Ginny Weasley"], "Fandom": "Harry Potter - J. K. Rowling", "New Works": 2777, "Total Works": 12002, "Type": ["F", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [58, null], "Change": ["New", null], "Relationship": ["Wilbur Soot", "Technoblade"], "Fandom": "Video Blogging RPF", "New Works": 2735, "Total Works": 2735, "Type": "Gen", "Race": ["White", "White"], "Release Date": null}
-{"Rank": [59, null], "Change": ["New", null], "Relationship": ["Getou Suguru", "Gojo Satoru"], "Fandom": "\u546a\u8853\u5efb\u6226 | Jujutsu Kaisen (Manga)", "New Works": 2716, "Total Works": 2716, "Type": ["M", "M"], "Race": ["Asian", "Asian"], "Release Date": null}
-{"Rank": [60, null], "Change": ["-", 23], "Relationship": ["Kim Taehyung | V", "Park Jimin"], "Fandom": "Bangtan Boys | BTS", "New Works": 2629, "Total Works": 12489, "Type": ["M", "M"], "Race": ["Asian", "Asian"], "Release Date": null}
-{"Rank": [61, null], "Change": ["-", 20], "Relationship": ["Patrick Brewer", "David Rose"], "Fandom": "Schitt's Creek", "New Works": 2617, "Total Works": 5757, "Type": ["M", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [62, null], "Change": ["-", 34], "Relationship": ["Kim Namjoon | RM", "Kim Seokjin | Jin"], "Fandom": "Bangtan Boys | BTS", "New Works": 2603, "Total Works": 19256, "Type": ["M", "M"], "Race": ["Asian", "Asian"], "Release Date": null}
-{"Rank": [63, null], "Change": ["-", 33], "Relationship": ["Min Yoongi | Suga", "Park Jimin"], "Fandom": "Bangtan Boys | BTS", "New Works": 2586, "Total Works": 22410, "Type": ["M", "M"], "Race": ["Asian", "Asian"], "Release Date": null}
-{"Rank": [64, null], "Change": ["New", null], "Relationship": ["Clay | Dream", "Sapnap (Video Blogging RPF)"], "Fandom": "Video Blogging RPF", "New Works": 2577, "Total Works": 2577, "Type": "Gen", "Race": ["White", "White"], "Release Date": null}
-{"Rank": [65, null], "Change": ["-", 16], "Relationship": ["Bakugou Katsuki", "Todoroki Shouto"], "Fandom": "Boku no Hero Academia | My Hero Academia", "New Works": 2559, "Total Works": 7514, "Type": ["M", "M"], "Race": ["Asian", "Asian"], "Release Date": null}
-{"Rank": [66, null], "Change": ["New", null], "Relationship": ["Obi-Wan Kenobi", "Anakin Skywalker | Darth Vader"], "Fandom": "Star Wars - All Media Types", "New Works": 2535, "Total Works": 5197, "Type": "Gen", "Race": ["White", "White"], "Release Date": null}
-{"Rank": [67, null], "Change": ["New", null], "Relationship": ["Sawamura Daichi", "Sugawara Koushi"], "Fandom": "Haikyuu!!", "New Works": 2516, "Total Works": 8761, "Type": ["M", "M"], "Race": ["Asian", "Asian"], "Release Date": null}
-{"Rank": [68, null], "Change": ["+", 15], "Relationship": ["Akechi Goro", "Persona 5 Protagonist"], "Fandom": "Persona 5", "New Works": 2498, "Total Works": 5765, "Type": ["M", "M"], "Race": ["Asian", "Asian"], "Release Date": null}
-{"Rank": [69, null], "Change": ["-", 57], "Relationship": ["Aziraphale", "Crowley (Good Omens)"], "Fandom": "Good Omens (TV)", "New Works": 2463, "Total Works": 10369, "Type": "Gen", "Race": ["White", "White"], "Release Date": null}
-{"Rank": [70, null], "Change": ["New", null], "Relationship": ["Nanjo Kojiro | Joe", "Sakurayashiki Kaoru | Cherry Blossom"], "Fandom": "SK8 the Infinity (Anime)", "New Works": 2461, "Total Works": 2461, "Type": ["M", "M"], "Race": ["Asian", "Asian"], "Release Date": null}
-{"Rank": [71, null], "Change": ["New", null], "Relationship": ["Ranboo", "TommyInnit (Video Blogging RPF)"], "Fandom": "Minecraft (Video Game)", "New Works": 2445, "Total Works": 2445, "Type": "Gen", "Race": ["White", "White"], "Release Date": null}
-{"Rank": [72, null], "Change": ["New", null], "Relationship": ["Katara", "Zuko (Avatar)"], "Fandom": "Avatar: The Last Airbender", "New Works": 2441, "Total Works": 5355, "Type": ["F", "M"], "Race": ["Indig", "Asian"], "Release Date": null}
-{"Rank": [73, null], "Change": ["New", null], "Relationship": ["Diluc", "Kaeya (Genshin Impact)"], "Fandom": "\u539f\u795e | Genshin Impact (Video Game)", "New Works": 2425, "Total Works": 2425, "Type": ["M", "M"], "Race": ["White", "Ambig"], "Release Date": null}
-{"Rank": [74, null], "Change": ["New", null], "Relationship": ["Clay | Dream", "GeorgeNotFound (Video Blogging RPF)"], "Fandom": "Video Blogging RPF", "New Works": 2385, "Total Works": 2385, "Type": "Gen", "Race": ["White", "White"], "Release Date": null}
-{"Rank": [75, null], "Change": ["+", 5], "Relationship": ["Dean Winchester", "Sam Winchester"], "Fandom": "Supernatural", "New Works": 2376, "Total Works": 11170, "Type": "Gen", "Race": ["White", "White"], "Release Date": null}
-{"Rank": [76, null], "Change": ["New", null], "Relationship": ["Clay | Dream", "TommyInnit (Video Blogging RPF)"], "Fandom": "Video Blogging RPF", "New Works": 2371, "Total Works": 2371, "Type": "Gen", "Race": ["White", "White"], "Release Date": null}
-{"Rank": [77, null], "Change": ["New", null], "Relationship": ["TommyInnit", "Phil Watson (Video Blogging RPF)"], "Fandom": "Video Blogging RPF", "New Works": 2341, "Total Works": 2341, "Type": "Gen", "Race": ["White", "White"], "Release Date": null}
-{"Rank": [78, null], "Change": ["New", null], "Relationship": ["Harry Styles", "Louis Tomlinson"], "Fandom": "One Direction (Band)", "New Works": 2257, "Total Works": 35365, "Type": ["M", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [79, null], "Change": ["-", 33], "Relationship": ["Jung Hoseok | J-Hope", "Min Yoongi | Suga"], "Fandom": "Bangtan Boys | BTS", "New Works": 2249, "Total Works": 14892, "Type": ["M", "M"], "Race": ["Asian", "Asian"], "Release Date": null}
-{"Rank": [80, "="], "Change": ["-", 59], "Relationship": ["Pepper Potts", "Tony Stark"], "Fandom": "Marvel Cinematic Universe", "New Works": 2245, "Total Works": 19609, "Type": ["F", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [80, "="], "Change": ["New", null], "Relationship": ["Hinata Hajime", "Komaeda Nagito"], "Fandom": "Super Dangan Ronpa 2", "New Works": 2245, "Total Works": 5037, "Type": ["M", "M"], "Race": ["Asian", "Asian"], "Release Date": null}
-{"Rank": [82, null], "Change": ["+", 3], "Relationship": ["Han Jisung | Han", "Lee Minho | Lee Know"], "Fandom": "Stray Kids (Band)", "New Works": 2242, "Total Works": 5328, "Type": ["M", "M"], "Race": ["Asian", "Asian"], "Release Date": null}
-{"Rank": [83, null], "Change": ["-", 58], "Relationship": ["Wang Yi Bo", "Xiao Zhan | Sean"], "Fandom": "\u9648\u60c5\u4ee4 | The Untamed (TV) RPF", "New Works": 2223, "Total Works": 5659, "Type": ["M", "M"], "Race": ["Asian", "Asian"], "Release Date": null}
-{"Rank": [84, null], "Change": ["-", 6], "Relationship": ["Annabeth Chase", "Percy Jackson"], "Fandom": "Percy Jackson and the Olympians - Rick Riordan", "New Works": 2217, "Total Works": 8205, "Type": ["F", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [85, null], "Change": ["New", null], "Relationship": ["Carlos Reyes", "TK Strand"], "Fandom": "9-1-1: Lone Star (TV 2020)", "New Works": 2213, "Total Works": 3154, "Type": ["M", "M"], "Race": ["Latino", "White"], "Release Date": null}
-{"Rank": [86, null], "Change": ["New", null], "Relationship": ["Levi Ackerman", "Erwin Smith"], "Fandom": "Shingeki no Kyojin | Attack on Titan", "New Works": 2169, "Total Works": 8065, "Type": ["M", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [87, "="], "Change": ["New", null], "Relationship": ["Julie Molina", "Luke Patterson"], "Fandom": "Julie and The Phantoms (TV 2020)", "New Works": 2150, "Total Works": 2150, "Type": ["F", "M"], "Race": ["Latino", "White"], "Release Date": null}
-{"Rank": [87, "="], "Change": ["New", null], "Relationship": ["Alexis | Quackity", "Karl Jacobs", "Sapnap"], "Fandom": "Minecraft (Video Game)", "New Works": 2150, "Total Works": 2150, "Type": "Poly", "Race": ["Latino", "White"], "Release Date": null}
-{"Rank": [89, null], "Change": ["New", null], "Relationship": ["Bakugou Katsuki", "Reader"], "Fandom": "Boku no Hero Academia | My Hero Academia", "New Works": 2138, "Total Works": 4298, "Type": "Other", "Race": ["Asian", "Ambig"], "Release Date": null}
-{"Rank": [90, null], "Change": ["-", 32], "Relationship": ["Midoriya Izuku", "Uraraka Ochako"], "Fandom": "Boku no Hero Academia | My Hero Academia", "New Works": 2136, "Total Works": 6104, "Type": ["F", "M"], "Race": ["Asian", "Asian"], "Release Date": null}
-{"Rank": [91, null], "Change": ["New", null], "Relationship": ["Zak Ahmed", "Darryl Noveschosch"], "Fandom": "Video Blogging RPF", "New Works": 2135, "Total Works": 2135, "Type": ["M", "M"], "Race": ["M.E.", "White"], "Release Date": null}
-{"Rank": [92, null], "Change": ["-", 38], "Relationship": ["Jeon Jungkook", "Min Yoongi | Suga"], "Fandom": "Bangtan Boys | BTS", "New Works": 2106, "Total Works": 11576, "Type": ["M", "M"], "Race": ["Asian", "Asian"], "Release Date": null}
-{"Rank": [93, null], "Change": ["New", null], "Relationship": ["Alex Mercer", "Willie (Julie and The Phantoms)"], "Fandom": "Julie and The Phantoms (TV 2020)", "New Works": 2033, "Total Works": 2033, "Type": ["M", "M"], "Race": ["White", "As Ind"], "Release Date": null}
-{"Rank": [94, null], "Change": ["-", 3], "Relationship": ["Neil Josten", "Andrew Minyard"], "Fandom": "All For The Game - Nora Sakavic", "New Works": 2021, "Total Works": 6690, "Type": ["M", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [95, null], "Change": ["New", null], "Relationship": ["Oma Kokichi", "Saihara Shuichi"], "Fandom": "New Dangan Ronpa V3: Everyone's New Semester of Killing", "New Works": 1986, "Total Works": 4991, "Type": ["M", "M"], "Race": ["Asian", "Asian"], "Release Date": null}
-{"Rank": [96, null], "Change": ["New", null], "Relationship": ["Clay | Dream", "Technoblade (Video Blogging RPF)"], "Fandom": "Minecraft (Video Game)", "New Works": 1943, "Total Works": 1943, "Type": "Gen", "Race": ["White", "White"], "Release Date": null}
-{"Rank": [97, null], "Change": ["-", 4], "Relationship": ["Midoriya Izuku", "Todoroki Shouto"], "Fandom": "Boku no Hero Academia | My Hero Academia", "New Works": 1926, "Total Works": 4790, "Type": "Gen", "Race": ["Asian", "Asian"], "Release Date": null}
-{"Rank": [98, null], "Change": ["New", null], "Relationship": ["Midoriya Izuku", "Yagi Toshinori | All Might"], "Fandom": "Boku no Hero Academia | My Hero Academia", "New Works": 1916, "Total Works": 4409, "Type": "Gen", "Race": ["Asian", "Asian"], "Release Date": null}
-{"Rank": [99, null], "Change": ["-", 5], "Relationship": ["Padm\u00e9 Amidala", "Anakin Skywalker | Darth Vader"], "Fandom": "Star Wars - All Media Types", "New Works": 1908, "Total Works": 5999, "Type": ["F", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [100, null], "Change": ["New", null], "Relationship": ["Wen Kexing", "Zhou Zishu"], "Fandom": "\u5c71\u6cb3\u4ee4 | Word of Honor (TV 2021)", "New Works": 1901, "Total Works": 1901, "Type": ["M", "M"], "Race": ["Asian", "Asian"], "Release Date": null}
+[
+    {
+        "Rank": [
+            1,
+            null
+        ],
+        "Change": [
+            "New",
+            null
+        ],
+        "Relationship": [
+            "Clay | Dream",
+            "GeorgeNotFound (Video Blogging RPF)"
+        ],
+        "Fandom": "Video Blogging RPF",
+        "New Works": 13472,
+        "Total Works": 13780,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            2,
+            null
+        ],
+        "Change": [
+            "+",
+            14
+        ],
+        "Relationship": [
+            "Castiel",
+            "Dean Winchester"
+        ],
+        "Fandom": "Supernatural",
+        "New Works": 12086,
+        "Total Works": 96616,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            3,
+            null
+        ],
+        "Change": [
+            "-",
+            1
+        ],
+        "Relationship": [
+            "L\u00e1n Zh\u00e0n | L\u00e1n W\u00e0ngj\u012b",
+            "W\u00e8i Y\u012bng | W\u00e8i W\u00faxi\u00e0n"
+        ],
+        "Fandom": "\u9b54\u9053\u7956\u5e08 - \u58a8\u9999\u94dc\u81ed | M\u00f3d\u00e0o Z\u01d4sh\u012b - M\u00f2xi\u0101ng T\u00f3ngxi\u00f9",
+        "New Works": 10848,
+        "Total Works": 23825,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "Asian",
+            "Asian"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            4,
+            null
+        ],
+        "Change": [
+            "+",
+            2
+        ],
+        "Relationship": [
+            "Draco Malfoy",
+            "Harry Potter"
+        ],
+        "Fandom": "Harry Potter - J. K. Rowling",
+        "New Works": 9069,
+        "Total Works": 49245,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            5,
+            null
+        ],
+        "Change": [
+            "+",
+            2
+        ],
+        "Relationship": [
+            "Bakugou Katsuki",
+            "Midoriya Izuku"
+        ],
+        "Fandom": "Boku no Hero Academia | My Hero Academia",
+        "New Works": 8567,
+        "Total Works": 25351,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "Asian",
+            "Asian"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            6,
+            null
+        ],
+        "Change": [
+            "-",
+            5
+        ],
+        "Relationship": [
+            "Aziraphale",
+            "Crowley (Good Omens)"
+        ],
+        "Fandom": "Good Omens (TV)",
+        "New Works": 8410,
+        "Total Works": 36546,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            7,
+            null
+        ],
+        "Change": [
+            "+",
+            3
+        ],
+        "Relationship": [
+            "Bakugou Katsuki",
+            "Kirishima Eijirou"
+        ],
+        "Fandom": "Boku no Hero Academia | My Hero Academia",
+        "New Works": 7324,
+        "Total Works": 22607,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "Asian",
+            "Asian"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            8,
+            null
+        ],
+        "Change": [
+            "+",
+            23
+        ],
+        "Relationship": [
+            "Sirius Black",
+            "Remus Lupin"
+        ],
+        "Fandom": "Harry Potter - J. K. Rowling",
+        "New Works": 7231,
+        "Total Works": 24891,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            9,
+            null
+        ],
+        "Change": [
+            "New",
+            null
+        ],
+        "Relationship": [
+            "Wilbur Soot",
+            "Technoblade",
+            "TommyInnit",
+            "Phil Watson"
+        ],
+        "Fandom": "Video Blogging RPF",
+        "New Works": 6910,
+        "Total Works": 6910,
+        "Type": "Gen",
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            10,
+            null
+        ],
+        "Change": [
+            "New",
+            null
+        ],
+        "Relationship": [
+            "Toby Smith | Tubbo",
+            "TommyInnit"
+        ],
+        "Fandom": "Video Blogging RPF",
+        "New Works": 6870,
+        "Total Works": 6870,
+        "Type": "Gen",
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            11,
+            null
+        ],
+        "Change": [
+            "-",
+            6
+        ],
+        "Relationship": [
+            "Geralt z Rivii | Geralt of Rivia",
+            "Jaskier | Dandelion"
+        ],
+        "Fandom": "Wied\u017amin | The Witcher - All Media Types",
+        "New Works": 6401,
+        "Total Works": 13917,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            12,
+            null
+        ],
+        "Change": [
+            "New",
+            null
+        ],
+        "Relationship": [
+            "Wilbur Soot",
+            "TommyInnit"
+        ],
+        "Fandom": "Video Blogging RPF",
+        "New Works": 6247,
+        "Total Works": 6247,
+        "Type": "Gen",
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            13,
+            null
+        ],
+        "Change": [
+            "+",
+            1
+        ],
+        "Relationship": [
+            "Adrien Agreste | Chat Noir",
+            "Marinette Dupain-Cheng | Ladybug"
+        ],
+        "Fandom": "Miraculous Ladybug",
+        "New Works": 6103,
+        "Total Works": 25668,
+        "Type": [
+            "F",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "Asian"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            14,
+            null
+        ],
+        "Change": [
+            "-",
+            5
+        ],
+        "Relationship": [
+            "James 'Bucky' Barnes",
+            "Steve Rogers"
+        ],
+        "Fandom": "Captain America (Movies)",
+        "New Works": 5643,
+        "Total Works": 55252,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            15,
+            null
+        ],
+        "Change": [
+            "+",
+            25
+        ],
+        "Relationship": [
+            "Akaashi Keiji",
+            "Bokuto Koutarou"
+        ],
+        "Fandom": "Haikyuu!!",
+        "New Works": 5379,
+        "Total Works": 12789,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "Asian",
+            "Asian"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            16,
+            null
+        ],
+        "Change": [
+            "+",
+            6
+        ],
+        "Relationship": [
+            "Aizawa Shouta | Eraserhead",
+            "Yamada Hizashi | Present Mic"
+        ],
+        "Fandom": "Boku no Hero Academia | My Hero Academia",
+        "New Works": 5334,
+        "Total Works": 12591,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "Asian",
+            "Asian"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            17,
+            null
+        ],
+        "Change": [
+            "+",
+            28
+        ],
+        "Relationship": [
+            "Iwaizumi Hajime",
+            "Oikawa Tooru"
+        ],
+        "Fandom": "Haikyuu!!",
+        "New Works": 5324,
+        "Total Works": 16455,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "Asian",
+            "Asian"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            18,
+            null
+        ],
+        "Change": [
+            "New",
+            null
+        ],
+        "Relationship": [
+            "Miya Atsumu",
+            "Sakusa Kiyoomi"
+        ],
+        "Fandom": "Haikyuu!!",
+        "New Works": 5277,
+        "Total Works": 6001,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "Asian",
+            "Asian"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            19,
+            null
+        ],
+        "Change": [
+            "-",
+            6
+        ],
+        "Relationship": [
+            "Jeon Jungkook",
+            "Kim Taehyung | V"
+        ],
+        "Fandom": "Bangtan Boys | BTS",
+        "New Works": 5201,
+        "Total Works": 28479,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "Asian",
+            "Asian"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            20,
+            null
+        ],
+        "Change": [
+            "+",
+            33
+        ],
+        "Relationship": [
+            "James Potter",
+            "Lily Evans Potter"
+        ],
+        "Fandom": "Harry Potter - J. K. Rowling",
+        "New Works": 5057,
+        "Total Works": 15164,
+        "Type": [
+            "F",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            21,
+            null
+        ],
+        "Change": [
+            "New",
+            null
+        ],
+        "Relationship": [
+            "Joe | Yusuf Al-Kaysani",
+            "Nicky | Nicol\u00f2 di Genova"
+        ],
+        "Fandom": "The Old Guard (Movie 2020)",
+        "New Works": 4922,
+        "Total Works": 5557,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "M.E.",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            22,
+            null
+        ],
+        "Change": [
+            "-",
+            14
+        ],
+        "Relationship": [
+            "Peter Parker",
+            "Tony Stark"
+        ],
+        "Fandom": "Marvel Cinematic Universe",
+        "New Works": 4829,
+        "Total Works": 22164,
+        "Type": "Gen",
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            23,
+            null
+        ],
+        "Change": [
+            "-",
+            8
+        ],
+        "Relationship": [
+            "Midoriya Izuku",
+            "Todoroki Shouto"
+        ],
+        "Fandom": "Boku no Hero Academia | My Hero Academia",
+        "New Works": 4787,
+        "Total Works": 18807,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "Asian",
+            "Asian"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            24,
+            null
+        ],
+        "Change": [
+            "+",
+            12
+        ],
+        "Relationship": [
+            "Hermione Granger",
+            "Draco Malfoy"
+        ],
+        "Fandom": "Harry Potter - J. K. Rowling",
+        "New Works": 4678,
+        "Total Works": 14834,
+        "Type": [
+            "F",
+            "M"
+        ],
+        "Race": [
+            "Ambig",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            25,
+            null
+        ],
+        "Change": [
+            "-",
+            22
+        ],
+        "Relationship": [
+            "Rey",
+            "Ben Solo | Kylo Ren"
+        ],
+        "Fandom": "Star Wars Sequel Trilogy",
+        "New Works": 4659,
+        "Total Works": 25865,
+        "Type": [
+            "F",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            26,
+            null
+        ],
+        "Change": [
+            "+",
+            9
+        ],
+        "Relationship": [
+            "Hinata Shouyou",
+            "Kageyama Tobio"
+        ],
+        "Fandom": "Haikyuu!!",
+        "New Works": 4655,
+        "Total Works": 15073,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "Asian",
+            "Asian"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            27,
+            null
+        ],
+        "Change": [
+            "-",
+            9
+        ],
+        "Relationship": [
+            "Evan 'Buck' Buckley",
+            "Eddie Diaz (9-1-1 TV)"
+        ],
+        "Fandom": "9-1-1 (TV)",
+        "New Works": 4642,
+        "Total Works": 8345,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "Latino"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            28,
+            null
+        ],
+        "Change": [
+            "-",
+            11
+        ],
+        "Relationship": [
+            "Jeon Jungkook",
+            "Park Jimin"
+        ],
+        "Fandom": "Bangtan Boys | BTS",
+        "New Works": 4564,
+        "Total Works": 22400,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "Asian",
+            "Asian"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            29,
+            null
+        ],
+        "Change": [
+            "New",
+            null
+        ],
+        "Relationship": [
+            "Technoblade",
+            "TommyInnit (Video Blogging RPF)"
+        ],
+        "Fandom": "Video Blogging RPF",
+        "New Works": 4482,
+        "Total Works": 4482,
+        "Type": "Gen",
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            30,
+            null
+        ],
+        "Change": [
+            "+",
+            3
+        ],
+        "Relationship": [
+            "Bakugou Katsuki",
+            "Midoriya Izuku"
+        ],
+        "Fandom": "Boku no Hero Academia | My Hero Academia",
+        "New Works": 4391,
+        "Total Works": 9370,
+        "Type": "Gen",
+        "Race": [
+            "Asian",
+            "Asian"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            31,
+            null
+        ],
+        "Change": [
+            "-",
+            20
+        ],
+        "Relationship": [
+            "Steve Rogers",
+            "Tony Stark"
+        ],
+        "Fandom": "The Avengers (Marvel Movies)",
+        "New Works": 4285,
+        "Total Works": 40510,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            32,
+            null
+        ],
+        "Change": [
+            "+",
+            24
+        ],
+        "Relationship": [
+            "Will Graham",
+            "Hannibal Lecter"
+        ],
+        "Fandom": "Hannibal (TV)",
+        "New Works": 4226,
+        "Total Works": 21446,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            33,
+            null
+        ],
+        "Change": [
+            "New",
+            null
+        ],
+        "Relationship": [
+            "Tartaglia | Childe",
+            "Zhongli (Genshin Impact)"
+        ],
+        "Fandom": "\u539f\u795e | Genshin Impact (Video Game)",
+        "New Works": 4125,
+        "Total Works": 4125,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "Asian"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            34,
+            null
+        ],
+        "Change": [
+            "-",
+            7
+        ],
+        "Relationship": [
+            "Merlin",
+            "Arthur Pendragon (Merlin)"
+        ],
+        "Fandom": "Merlin (TV)",
+        "New Works": 3907,
+        "Total Works": 22575,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            35,
+            null
+        ],
+        "Change": [
+            "-",
+            11
+        ],
+        "Relationship": [
+            "Dazai Osamu",
+            "Nakahara Chuuya (Bungou Stray Dogs)"
+        ],
+        "Fandom": "\u6587\u8c6a\u30b9\u30c8\u30ec\u30a4\u30c9\u30c3\u30b0\u30b9 | Bungou Stray Dogs",
+        "New Works": 3887,
+        "Total Works": 12626,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "Asian",
+            "Asian"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            36,
+            null
+        ],
+        "Change": [
+            "New",
+            null
+        ],
+        "Relationship": [
+            "Amity Blight",
+            "Luz Noceda"
+        ],
+        "Fandom": "The Owl House (Cartoon)",
+        "New Works": 3797,
+        "Total Works": 3797,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": [
+            "White",
+            "Af Lat"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            37,
+            null
+        ],
+        "Change": [
+            "New",
+            null
+        ],
+        "Relationship": [
+            "Ranboo",
+            "Toby Smith | Tubbo"
+        ],
+        "Fandom": "Video Blogging RPF",
+        "New Works": 3711,
+        "Total Works": 3711,
+        "Type": "Gen",
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            38,
+            null
+        ],
+        "Change": [
+            "-",
+            6
+        ],
+        "Relationship": [
+            "Martin Blackwood",
+            "Jonathan 'Jon' Sims | The Archivist"
+        ],
+        "Fandom": "The Magnus Archives (Podcast)",
+        "New Works": 3541,
+        "Total Works": 6889,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "Ambig",
+            "Ambig"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            39,
+            null
+        ],
+        "Change": [
+            "-",
+            16
+        ],
+        "Relationship": [
+            "Adora",
+            "Catra (She-Ra)"
+        ],
+        "Fandom": "She-Ra and the Princesses of Power (2018)",
+        "New Works": 3478,
+        "Total Works": 8347,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": [
+            "White",
+            "Ambig"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            40,
+            null
+        ],
+        "Change": [
+            "New",
+            null
+        ],
+        "Relationship": [
+            "James 'Bucky' Barnes",
+            "Sam Wilson"
+        ],
+        "Fandom": "Marvel Cinematic Universe",
+        "New Works": 3447,
+        "Total Works": 6477,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "Black"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            41,
+            null
+        ],
+        "Change": [
+            "+",
+            43
+        ],
+        "Relationship": [
+            "Kozume Kenma",
+            "Kuroo Tetsurou"
+        ],
+        "Fandom": "Haikyuu!!",
+        "New Works": 3384,
+        "Total Works": 8290,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "Asian",
+            "Asian"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            42,
+            null
+        ],
+        "Change": [
+            "-",
+            16
+        ],
+        "Relationship": [
+            "Derek Hale",
+            "Stiles Stilinski"
+        ],
+        "Fandom": "Teen Wolf (TV)",
+        "New Works": 3365,
+        "Total Works": 62648,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            43,
+            null
+        ],
+        "Change": [
+            "-",
+            23
+        ],
+        "Relationship": [
+            "Magnus Bane",
+            "Alec Lightwood"
+        ],
+        "Fandom": "Shadowhunters (TV)",
+        "New Works": 3327,
+        "Total Works": 28086,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "Asian",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            44,
+            null
+        ],
+        "Change": [
+            "New",
+            null
+        ],
+        "Relationship": [
+            "Clay | Dream",
+            "GeorgeNotFound",
+            "Sapnap (Video Blogging RPF)"
+        ],
+        "Fandom": "Video Blogging RPF",
+        "New Works": 3291,
+        "Total Works": 3291,
+        "Type": "Gen",
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            45,
+            null
+        ],
+        "Change": [
+            "+",
+            6
+        ],
+        "Relationship": [
+            "Hermione Granger",
+            "Ron Weasley"
+        ],
+        "Fandom": "Harry Potter - J. K. Rowling",
+        "New Works": 3234,
+        "Total Works": 14881,
+        "Type": [
+            "F",
+            "M"
+        ],
+        "Race": [
+            "Ambig",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            46,
+            null
+        ],
+        "Change": [
+            "+",
+            35
+        ],
+        "Relationship": [
+            "Aizawa Shouta | Eraserhead",
+            "Midoriya Izuku"
+        ],
+        "Fandom": "Boku no Hero Academia | My Hero Academia",
+        "New Works": 3216,
+        "Total Works": 5373,
+        "Type": "Gen",
+        "Race": [
+            "Asian",
+            "Asian"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            47,
+            "="
+        ],
+        "Change": [
+            "-",
+            28
+        ],
+        "Relationship": [
+            "Kara Danvers",
+            "Lena Luthor"
+        ],
+        "Fandom": "Supergirl (TV 2015)",
+        "New Works": 3193,
+        "Total Works": 16227,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            47,
+            "="
+        ],
+        "Change": [
+            "-",
+            3
+        ],
+        "Relationship": [
+            "Dabi | Todoroki Touya",
+            "Takami Keigo | Hawks"
+        ],
+        "Fandom": "Boku no Hero Academia | My Hero Academia",
+        "New Works": 3193,
+        "Total Works": 6096,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "Asian",
+            "Asian"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            49,
+            null
+        ],
+        "Change": [
+            "New",
+            null
+        ],
+        "Relationship": [
+            "Hasegawa Langa",
+            "Kyan Reki"
+        ],
+        "Fandom": "SK8 the Infinity (Anime)",
+        "New Works": 3107,
+        "Total Works": 3107,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "Asian",
+            "Asian"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            50,
+            null
+        ],
+        "Change": [
+            "+",
+            24
+        ],
+        "Relationship": [
+            "James 'Bucky' Barnes",
+            "Reader"
+        ],
+        "Fandom": "Marvel Cinematic Universe",
+        "New Works": 3081,
+        "Total Works": 10797,
+        "Type": "Other",
+        "Race": [
+            "White",
+            "Ambig"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            51,
+            null
+        ],
+        "Change": [
+            "New",
+            null
+        ],
+        "Relationship": [
+            "Tsukishima Kei",
+            "Yamaguchi Tadashi"
+        ],
+        "Fandom": "Haikyuu!!",
+        "New Works": 2993,
+        "Total Works": 7968,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "Asian",
+            "Asian"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            52,
+            null
+        ],
+        "Change": [
+            "New",
+            null
+        ],
+        "Relationship": [
+            "Technoblade",
+            "Phil Watson (Video Blogging RPF)"
+        ],
+        "Fandom": "Minecraft (Video Game)",
+        "New Works": 2973,
+        "Total Works": 2973,
+        "Type": "Gen",
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            53,
+            null
+        ],
+        "Change": [
+            "+",
+            42
+        ],
+        "Relationship": [
+            "Sokka",
+            "Zuko (Avatar)"
+        ],
+        "Fandom": "Avatar: The Last Airbender",
+        "New Works": 2893,
+        "Total Works": 4680,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "Indig",
+            "Asian"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            54,
+            null
+        ],
+        "Change": [
+            "-",
+            2
+        ],
+        "Relationship": [
+            "Sherlock Holmes",
+            "John Watson"
+        ],
+        "Fandom": "Sherlock (TV)",
+        "New Works": 2877,
+        "Total Works": 64408,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            55,
+            null
+        ],
+        "Change": [
+            "New",
+            null
+        ],
+        "Relationship": [
+            "Karl Jacobs",
+            "Sapnap"
+        ],
+        "Fandom": "Video Blogging RPF",
+        "New Works": 2853,
+        "Total Works": 2853,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            56,
+            null
+        ],
+        "Change": [
+            "+",
+            6
+        ],
+        "Relationship": [
+            "Kaminari Denki",
+            "Shinsou Hitoshi"
+        ],
+        "Fandom": "Boku no Hero Academia | My Hero Academia",
+        "New Works": 2820,
+        "Total Works": 5520,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "Asian",
+            "Asian"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            57,
+            null
+        ],
+        "Change": [
+            "+",
+            3
+        ],
+        "Relationship": [
+            "Harry Potter",
+            "Ginny Weasley"
+        ],
+        "Fandom": "Harry Potter - J. K. Rowling",
+        "New Works": 2777,
+        "Total Works": 12002,
+        "Type": [
+            "F",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            58,
+            null
+        ],
+        "Change": [
+            "New",
+            null
+        ],
+        "Relationship": [
+            "Wilbur Soot",
+            "Technoblade"
+        ],
+        "Fandom": "Video Blogging RPF",
+        "New Works": 2735,
+        "Total Works": 2735,
+        "Type": "Gen",
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            59,
+            null
+        ],
+        "Change": [
+            "New",
+            null
+        ],
+        "Relationship": [
+            "Getou Suguru",
+            "Gojo Satoru"
+        ],
+        "Fandom": "\u546a\u8853\u5efb\u6226 | Jujutsu Kaisen (Manga)",
+        "New Works": 2716,
+        "Total Works": 2716,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "Asian",
+            "Asian"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            60,
+            null
+        ],
+        "Change": [
+            "-",
+            23
+        ],
+        "Relationship": [
+            "Kim Taehyung | V",
+            "Park Jimin"
+        ],
+        "Fandom": "Bangtan Boys | BTS",
+        "New Works": 2629,
+        "Total Works": 12489,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "Asian",
+            "Asian"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            61,
+            null
+        ],
+        "Change": [
+            "-",
+            20
+        ],
+        "Relationship": [
+            "Patrick Brewer",
+            "David Rose"
+        ],
+        "Fandom": "Schitt's Creek",
+        "New Works": 2617,
+        "Total Works": 5757,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            62,
+            null
+        ],
+        "Change": [
+            "-",
+            34
+        ],
+        "Relationship": [
+            "Kim Namjoon | RM",
+            "Kim Seokjin | Jin"
+        ],
+        "Fandom": "Bangtan Boys | BTS",
+        "New Works": 2603,
+        "Total Works": 19256,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "Asian",
+            "Asian"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            63,
+            null
+        ],
+        "Change": [
+            "-",
+            33
+        ],
+        "Relationship": [
+            "Min Yoongi | Suga",
+            "Park Jimin"
+        ],
+        "Fandom": "Bangtan Boys | BTS",
+        "New Works": 2586,
+        "Total Works": 22410,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "Asian",
+            "Asian"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            64,
+            null
+        ],
+        "Change": [
+            "New",
+            null
+        ],
+        "Relationship": [
+            "Clay | Dream",
+            "Sapnap (Video Blogging RPF)"
+        ],
+        "Fandom": "Video Blogging RPF",
+        "New Works": 2577,
+        "Total Works": 2577,
+        "Type": "Gen",
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            65,
+            null
+        ],
+        "Change": [
+            "-",
+            16
+        ],
+        "Relationship": [
+            "Bakugou Katsuki",
+            "Todoroki Shouto"
+        ],
+        "Fandom": "Boku no Hero Academia | My Hero Academia",
+        "New Works": 2559,
+        "Total Works": 7514,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "Asian",
+            "Asian"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            66,
+            null
+        ],
+        "Change": [
+            "New",
+            null
+        ],
+        "Relationship": [
+            "Obi-Wan Kenobi",
+            "Anakin Skywalker | Darth Vader"
+        ],
+        "Fandom": "Star Wars - All Media Types",
+        "New Works": 2535,
+        "Total Works": 5197,
+        "Type": "Gen",
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            67,
+            null
+        ],
+        "Change": [
+            "New",
+            null
+        ],
+        "Relationship": [
+            "Sawamura Daichi",
+            "Sugawara Koushi"
+        ],
+        "Fandom": "Haikyuu!!",
+        "New Works": 2516,
+        "Total Works": 8761,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "Asian",
+            "Asian"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            68,
+            null
+        ],
+        "Change": [
+            "+",
+            15
+        ],
+        "Relationship": [
+            "Akechi Goro",
+            "Persona 5 Protagonist"
+        ],
+        "Fandom": "Persona 5",
+        "New Works": 2498,
+        "Total Works": 5765,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "Asian",
+            "Asian"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            69,
+            null
+        ],
+        "Change": [
+            "-",
+            57
+        ],
+        "Relationship": [
+            "Aziraphale",
+            "Crowley (Good Omens)"
+        ],
+        "Fandom": "Good Omens (TV)",
+        "New Works": 2463,
+        "Total Works": 10369,
+        "Type": "Gen",
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            70,
+            null
+        ],
+        "Change": [
+            "New",
+            null
+        ],
+        "Relationship": [
+            "Nanjo Kojiro | Joe",
+            "Sakurayashiki Kaoru | Cherry Blossom"
+        ],
+        "Fandom": "SK8 the Infinity (Anime)",
+        "New Works": 2461,
+        "Total Works": 2461,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "Asian",
+            "Asian"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            71,
+            null
+        ],
+        "Change": [
+            "New",
+            null
+        ],
+        "Relationship": [
+            "Ranboo",
+            "TommyInnit (Video Blogging RPF)"
+        ],
+        "Fandom": "Minecraft (Video Game)",
+        "New Works": 2445,
+        "Total Works": 2445,
+        "Type": "Gen",
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            72,
+            null
+        ],
+        "Change": [
+            "New",
+            null
+        ],
+        "Relationship": [
+            "Katara",
+            "Zuko (Avatar)"
+        ],
+        "Fandom": "Avatar: The Last Airbender",
+        "New Works": 2441,
+        "Total Works": 5355,
+        "Type": [
+            "F",
+            "M"
+        ],
+        "Race": [
+            "Indig",
+            "Asian"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            73,
+            null
+        ],
+        "Change": [
+            "New",
+            null
+        ],
+        "Relationship": [
+            "Diluc",
+            "Kaeya (Genshin Impact)"
+        ],
+        "Fandom": "\u539f\u795e | Genshin Impact (Video Game)",
+        "New Works": 2425,
+        "Total Works": 2425,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "Ambig"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            74,
+            null
+        ],
+        "Change": [
+            "New",
+            null
+        ],
+        "Relationship": [
+            "Clay | Dream",
+            "GeorgeNotFound (Video Blogging RPF)"
+        ],
+        "Fandom": "Video Blogging RPF",
+        "New Works": 2385,
+        "Total Works": 2385,
+        "Type": "Gen",
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            75,
+            null
+        ],
+        "Change": [
+            "+",
+            5
+        ],
+        "Relationship": [
+            "Dean Winchester",
+            "Sam Winchester"
+        ],
+        "Fandom": "Supernatural",
+        "New Works": 2376,
+        "Total Works": 11170,
+        "Type": "Gen",
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            76,
+            null
+        ],
+        "Change": [
+            "New",
+            null
+        ],
+        "Relationship": [
+            "Clay | Dream",
+            "TommyInnit (Video Blogging RPF)"
+        ],
+        "Fandom": "Video Blogging RPF",
+        "New Works": 2371,
+        "Total Works": 2371,
+        "Type": "Gen",
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            77,
+            null
+        ],
+        "Change": [
+            "New",
+            null
+        ],
+        "Relationship": [
+            "TommyInnit",
+            "Phil Watson (Video Blogging RPF)"
+        ],
+        "Fandom": "Video Blogging RPF",
+        "New Works": 2341,
+        "Total Works": 2341,
+        "Type": "Gen",
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            78,
+            null
+        ],
+        "Change": [
+            "New",
+            null
+        ],
+        "Relationship": [
+            "Harry Styles",
+            "Louis Tomlinson"
+        ],
+        "Fandom": "One Direction (Band)",
+        "New Works": 2257,
+        "Total Works": 35365,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            79,
+            null
+        ],
+        "Change": [
+            "-",
+            33
+        ],
+        "Relationship": [
+            "Jung Hoseok | J-Hope",
+            "Min Yoongi | Suga"
+        ],
+        "Fandom": "Bangtan Boys | BTS",
+        "New Works": 2249,
+        "Total Works": 14892,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "Asian",
+            "Asian"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            80,
+            "="
+        ],
+        "Change": [
+            "-",
+            59
+        ],
+        "Relationship": [
+            "Pepper Potts",
+            "Tony Stark"
+        ],
+        "Fandom": "Marvel Cinematic Universe",
+        "New Works": 2245,
+        "Total Works": 19609,
+        "Type": [
+            "F",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            80,
+            "="
+        ],
+        "Change": [
+            "New",
+            null
+        ],
+        "Relationship": [
+            "Hinata Hajime",
+            "Komaeda Nagito"
+        ],
+        "Fandom": "Super Dangan Ronpa 2",
+        "New Works": 2245,
+        "Total Works": 5037,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "Asian",
+            "Asian"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            82,
+            null
+        ],
+        "Change": [
+            "+",
+            3
+        ],
+        "Relationship": [
+            "Han Jisung | Han",
+            "Lee Minho | Lee Know"
+        ],
+        "Fandom": "Stray Kids (Band)",
+        "New Works": 2242,
+        "Total Works": 5328,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "Asian",
+            "Asian"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            83,
+            null
+        ],
+        "Change": [
+            "-",
+            58
+        ],
+        "Relationship": [
+            "Wang Yi Bo",
+            "Xiao Zhan | Sean"
+        ],
+        "Fandom": "\u9648\u60c5\u4ee4 | The Untamed (TV) RPF",
+        "New Works": 2223,
+        "Total Works": 5659,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "Asian",
+            "Asian"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            84,
+            null
+        ],
+        "Change": [
+            "-",
+            6
+        ],
+        "Relationship": [
+            "Annabeth Chase",
+            "Percy Jackson"
+        ],
+        "Fandom": "Percy Jackson and the Olympians - Rick Riordan",
+        "New Works": 2217,
+        "Total Works": 8205,
+        "Type": [
+            "F",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            85,
+            null
+        ],
+        "Change": [
+            "New",
+            null
+        ],
+        "Relationship": [
+            "Carlos Reyes",
+            "TK Strand"
+        ],
+        "Fandom": "9-1-1: Lone Star (TV 2020)",
+        "New Works": 2213,
+        "Total Works": 3154,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "Latino",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            86,
+            null
+        ],
+        "Change": [
+            "New",
+            null
+        ],
+        "Relationship": [
+            "Levi Ackerman",
+            "Erwin Smith"
+        ],
+        "Fandom": "Shingeki no Kyojin | Attack on Titan",
+        "New Works": 2169,
+        "Total Works": 8065,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            87,
+            "="
+        ],
+        "Change": [
+            "New",
+            null
+        ],
+        "Relationship": [
+            "Julie Molina",
+            "Luke Patterson"
+        ],
+        "Fandom": "Julie and The Phantoms (TV 2020)",
+        "New Works": 2150,
+        "Total Works": 2150,
+        "Type": [
+            "F",
+            "M"
+        ],
+        "Race": [
+            "Latino",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            87,
+            "="
+        ],
+        "Change": [
+            "New",
+            null
+        ],
+        "Relationship": [
+            "Alexis | Quackity",
+            "Karl Jacobs",
+            "Sapnap"
+        ],
+        "Fandom": "Minecraft (Video Game)",
+        "New Works": 2150,
+        "Total Works": 2150,
+        "Type": "Poly",
+        "Race": [
+            "Latino",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            89,
+            null
+        ],
+        "Change": [
+            "New",
+            null
+        ],
+        "Relationship": [
+            "Bakugou Katsuki",
+            "Reader"
+        ],
+        "Fandom": "Boku no Hero Academia | My Hero Academia",
+        "New Works": 2138,
+        "Total Works": 4298,
+        "Type": "Other",
+        "Race": [
+            "Asian",
+            "Ambig"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            90,
+            null
+        ],
+        "Change": [
+            "-",
+            32
+        ],
+        "Relationship": [
+            "Midoriya Izuku",
+            "Uraraka Ochako"
+        ],
+        "Fandom": "Boku no Hero Academia | My Hero Academia",
+        "New Works": 2136,
+        "Total Works": 6104,
+        "Type": [
+            "F",
+            "M"
+        ],
+        "Race": [
+            "Asian",
+            "Asian"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            91,
+            null
+        ],
+        "Change": [
+            "New",
+            null
+        ],
+        "Relationship": [
+            "Zak Ahmed",
+            "Darryl Noveschosch"
+        ],
+        "Fandom": "Video Blogging RPF",
+        "New Works": 2135,
+        "Total Works": 2135,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "M.E.",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            92,
+            null
+        ],
+        "Change": [
+            "-",
+            38
+        ],
+        "Relationship": [
+            "Jeon Jungkook",
+            "Min Yoongi | Suga"
+        ],
+        "Fandom": "Bangtan Boys | BTS",
+        "New Works": 2106,
+        "Total Works": 11576,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "Asian",
+            "Asian"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            93,
+            null
+        ],
+        "Change": [
+            "New",
+            null
+        ],
+        "Relationship": [
+            "Alex Mercer",
+            "Willie (Julie and The Phantoms)"
+        ],
+        "Fandom": "Julie and The Phantoms (TV 2020)",
+        "New Works": 2033,
+        "Total Works": 2033,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "As Ind"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            94,
+            null
+        ],
+        "Change": [
+            "-",
+            3
+        ],
+        "Relationship": [
+            "Neil Josten",
+            "Andrew Minyard"
+        ],
+        "Fandom": "All For The Game - Nora Sakavic",
+        "New Works": 2021,
+        "Total Works": 6690,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            95,
+            null
+        ],
+        "Change": [
+            "New",
+            null
+        ],
+        "Relationship": [
+            "Oma Kokichi",
+            "Saihara Shuichi"
+        ],
+        "Fandom": "New Dangan Ronpa V3: Everyone's New Semester of Killing",
+        "New Works": 1986,
+        "Total Works": 4991,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "Asian",
+            "Asian"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            96,
+            null
+        ],
+        "Change": [
+            "New",
+            null
+        ],
+        "Relationship": [
+            "Clay | Dream",
+            "Technoblade (Video Blogging RPF)"
+        ],
+        "Fandom": "Minecraft (Video Game)",
+        "New Works": 1943,
+        "Total Works": 1943,
+        "Type": "Gen",
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            97,
+            null
+        ],
+        "Change": [
+            "-",
+            4
+        ],
+        "Relationship": [
+            "Midoriya Izuku",
+            "Todoroki Shouto"
+        ],
+        "Fandom": "Boku no Hero Academia | My Hero Academia",
+        "New Works": 1926,
+        "Total Works": 4790,
+        "Type": "Gen",
+        "Race": [
+            "Asian",
+            "Asian"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            98,
+            null
+        ],
+        "Change": [
+            "New",
+            null
+        ],
+        "Relationship": [
+            "Midoriya Izuku",
+            "Yagi Toshinori | All Might"
+        ],
+        "Fandom": "Boku no Hero Academia | My Hero Academia",
+        "New Works": 1916,
+        "Total Works": 4409,
+        "Type": "Gen",
+        "Race": [
+            "Asian",
+            "Asian"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            99,
+            null
+        ],
+        "Change": [
+            "-",
+            5
+        ],
+        "Relationship": [
+            "Padm\u00e9 Amidala",
+            "Anakin Skywalker | Darth Vader"
+        ],
+        "Fandom": "Star Wars - All Media Types",
+        "New Works": 1908,
+        "Total Works": 5999,
+        "Type": [
+            "F",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            100,
+            null
+        ],
+        "Change": [
+            "New",
+            null
+        ],
+        "Relationship": [
+            "Wen Kexing",
+            "Zhou Zishu"
+        ],
+        "Fandom": "\u5c71\u6cb3\u4ee4 | Word of Honor (TV 2021)",
+        "New Works": 1901,
+        "Total Works": 1901,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "Asian",
+            "Asian"
+        ],
+        "Release Date": null
+    }
+]

@@ -1,100 +1,2443 @@
-{"Rank": [1, null], "Change": [null, null], "Relationship": ["Castiel", "Dean Winchester"], "Fandom": "Supernatural", "New Works": 13204, "Total Works": 56363, "Type": ["M", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [2, null], "Change": [null, null], "Relationship": ["James 'Bucky' Barnes", "Steve Rogers"], "Fandom": "Captain America (Movies)", "New Works": 9327, "Total Works": 21626, "Type": ["M", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [3, null], "Change": [null, null], "Relationship": ["Derek Hale", "Stiles Stilinski"], "Fandom": "Teen Wolf (TV)", "New Works": 7591, "Total Works": 42531, "Type": ["M", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [4, null], "Change": [null, null], "Relationship": ["Sherlock Holmes", "John Watson"], "Fandom": "Sherlock (TV)", "New Works": 6661, "Total Works": 46030, "Type": ["M", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [5, null], "Change": [null, null], "Relationship": ["Harry Styles", "Louis Tomlinson"], "Fandom": "One Direction (Band)", "New Works": 5732, "Total Works": 27375, "Type": ["M", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [6, null], "Change": [null, null], "Relationship": ["Clarke Griffin", "Lexa"], "Fandom": "The 100 (TV)", "New Works": 4628, "Total Works": 6045, "Type": ["F", "F"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [7, null], "Change": [null, null], "Relationship": ["Armitage Hux", "Ben Solo | Kylo Ren"], "Fandom": "Star Wars Episode VII: The Force Awakens (2015)", "New Works": 4601, "Total Works": 4601, "Type": ["M", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [8, null], "Change": [null, null], "Relationship": ["Steve Rogers", "Tony Stark"], "Fandom": "The Avengers (Marvel Movies)", "New Works": 4432, "Total Works": 16407, "Type": ["M", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [9, null], "Change": [null, null], "Relationship": ["Dean Winchester", "Sam Winchester"], "Fandom": "Supernatural", "New Works": 4313, "Total Works": 18972, "Type": ["M", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [10, null], "Change": [null, null], "Relationship": ["Dan Howell", "Phil Lester"], "Fandom": "Phandom/The Fantastic Foursome (YouTube RPF)", "New Works": 4220, "Total Works": 6418, "Type": ["M", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [11, null], "Change": [null, null], "Relationship": ["Will Graham", "Hannibal Lecter"], "Fandom": "Hannibal (TV)", "New Works": 3863, "Total Works": 8486, "Type": ["M", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [12, null], "Change": [null, null], "Relationship": ["Adrien Agreste", "Marinette Dupain-Cheng"], "Fandom": "Miraculous Ladybug", "New Works": 3705, "Total Works": 3705, "Type": ["F", "M"], "Race": "Whi/POC", "Release Date": null}
-{"Rank": [13, null], "Change": [null, null], "Relationship": ["Draco Malfoy", "Harry Potter"], "Fandom": "Harry Potter - J. K. Rowling", "New Works": 3632, "Total Works": 15176, "Type": ["M", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [14, null], "Change": [null, null], "Relationship": ["Magnus Bane", "Alec Lightwood"], "Fandom": "Mortal Instruments Series - Cassandra Clare", "New Works": 3277, "Total Works": 4342, "Type": ["M", "M"], "Race": "Whi/POC", "Release Date": null}
-{"Rank": [15, null], "Change": [null, null], "Relationship": ["Iwaizumi Hajime", "Oikawa Tooru"], "Fandom": "Haikyuu!!", "New Works": 3249, "Total Works": 4278, "Type": ["M", "M"], "Race": "POC", "Release Date": null}
-{"Rank": [16, null], "Change": [null, null], "Relationship": ["Bellamy Blake", "Clarke Griffin"], "Fandom": "The 100 (TV)", "New Works": 3131, "Total Works": 6752, "Type": ["F", "M"], "Race": "Whi/POC", "Release Date": null}
-{"Rank": [17, null], "Change": [null, null], "Relationship": ["Poe Dameron", "Finn"], "Fandom": "Star Wars Episode VII: The Force Awakens (2015)", "New Works": 2938, "Total Works": 2938, "Type": ["M", "M"], "Race": "POC", "Release Date": null}
-{"Rank": [18, null], "Change": [null, null], "Relationship": ["Levi", "Eren Yeager"], "Fandom": "Shingeki no Kyojin | Attack on Titan", "New Works": 2912, "Total Works": 10110, "Type": ["M", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [19, null], "Change": [null, null], "Relationship": ["Oliver Queen", "Felicity Smoak"], "Fandom": "Arrow (TV 2012)", "New Works": 2803, "Total Works": 7661, "Type": ["F", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [20, null], "Change": [null, null], "Relationship": ["Captain Hook | Killian Jones", "Emma Swan"], "Fandom": "Once Upon a Time (TV)", "New Works": 2725, "Total Works": 6402, "Type": ["F", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [21, null], "Change": [null, null], "Relationship": ["Min Yoongi | Suga", "Park Jimin"], "Fandom": "Bangtan Boys | BTS", "New Works": 2694, "Total Works": 3080, "Type": ["M", "M"], "Race": "POC", "Release Date": null}
-{"Rank": [22, null], "Change": [null, null], "Relationship": ["Hinata Shouyou", "Kageyama Tobio"], "Fandom": "Haikyuu!!", "New Works": 2657, "Total Works": 4734, "Type": ["M", "M"], "Race": "POC", "Release Date": null}
-{"Rank": [23, null], "Change": [null, null], "Relationship": ["Evil Queen | Regina Mills", "Emma Swan"], "Fandom": "Once Upon a Time (TV)", "New Works": 2637, "Total Works": 7238, "Type": ["F", "F"], "Race": "Whi/POC", "Release Date": null}
-{"Rank": [24, null], "Change": [null, null], "Relationship": ["Sirius Black", "Remus Lupin"], "Fandom": "Harry Potter - J. K. Rowling", "New Works": 2544, "Total Works": 8005, "Type": ["M", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [25, null], "Change": [null, null], "Relationship": ["Inquisitor", "Cullen Rutherford"], "Fandom": "Dragon Age: Inquisition", "New Works": 2504, "Total Works": 5398, "Type": "Other", "Race": "Whi/Amb", "Release Date": null}
-{"Rank": [26, null], "Change": [null, null], "Relationship": ["Merlin", "Arthur Pendragon"], "Fandom": "Merlin (TV)", "New Works": 2440, "Total Works": 15775, "Type": ["M", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [27, null], "Change": [null, null], "Relationship": ["Josh Dun", "Tyler Joseph"], "Fandom": "Twenty One Pilots", "New Works": 2403, "Total Works": 3170, "Type": ["M", "M"], "Race": "Whi/POC", "Release Date": null}
-{"Rank": [28, null], "Change": [null, null], "Relationship": ["Gabriel", "Sam Winchester"], "Fandom": "Supernatural", "New Works": 2192, "Total Works": 8511, "Type": ["M", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [29, null], "Change": [null, null], "Relationship": ["Jeon Jungkook", "Kim Taehyung | V"], "Fandom": "Bangtan Boys | BTS", "New Works": 2182, "Total Works": 2476, "Type": ["M", "M"], "Race": "POC", "Release Date": null}
-{"Rank": [30, null], "Change": [null, null], "Relationship": ["Inquisitor", "Solas"], "Fandom": "Dragon Age: Inquisition", "New Works": 2096, "Total Works": 3669, "Type": "Other", "Race": "Whi/Amb", "Release Date": null}
-{"Rank": [31, null], "Change": [null, null], "Relationship": ["Rey", "Ben Solo | Kylo Ren"], "Fandom": "Star Wars Episode VII: The Force Awakens (2015)", "New Works": 2082, "Total Works": 2082, "Type": ["F", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [32, null], "Change": [null, null], "Relationship": ["Clint Barton", "Natasha Romanov"], "Fandom": "The Avengers (Marvel Movies)", "New Works": 2064, "Total Works": 8809, "Type": ["F", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [33, null], "Change": [null, null], "Relationship": ["Blaine Anderson", "Kurt Hummel"], "Fandom": "Glee", "New Works": 2034, "Total Works": 12934, "Type": ["M", "M"], "Race": "Whi/POC", "Release Date": null}
-{"Rank": [34, null], "Change": [null, null], "Relationship": ["Harry Hart", "Gary 'Eggsy' Unwin"], "Fandom": "Kingsman: The Secret Service (2015)", "New Works": 2002, "Total Works": 3281, "Type": ["M", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [35, null], "Change": [null, null], "Relationship": ["Sherlock Holmes", "John Watson"], "Fandom": "Sherlock (TV)", "New Works": 1966, "Total Works": 12484, "Type": "Gen", "Race": ["White", "White"], "Release Date": null}
-{"Rank": [36, null], "Change": [null, null], "Relationship": ["Akaashi Keiji", "Bokuto Koutarou"], "Fandom": "Haikyuu!!", "New Works": 1959, "Total Works": 2383, "Type": ["M", "M"], "Race": "POC", "Release Date": null}
-{"Rank": [37, null], "Change": [null, null], "Relationship": ["James 'Bucky' Barnes", "Steve Rogers"], "Fandom": "Captain America (Movies)", "New Works": 1930, "Total Works": 3890, "Type": "Gen", "Race": ["White", "White"], "Release Date": null}
-{"Rank": [38, null], "Change": [null, null], "Relationship": ["Bill Cipher", "Dipper Pines"], "Fandom": "Gravity Falls", "New Works": 1907, "Total Works": 2655, "Type": ["M", "M"], "Race": "Whi/Amb", "Release Date": null}
-{"Rank": [39, null], "Change": [null, null], "Relationship": ["Jensen Ackles", "Jared Padalecki"], "Fandom": "Supernatural RPF", "New Works": 1892, "Total Works": 9634, "Type": ["M", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [40, null], "Change": [null, null], "Relationship": ["Sawamura Daichi", "Sugawara Koushi"], "Fandom": "Haikyuu!!", "New Works": 1865, "Total Works": 2762, "Type": ["M", "M"], "Race": "POC", "Release Date": null}
-{"Rank": [41, null], "Change": [null, null], "Relationship": ["Erik Lehnsherr", "Charles Xavier"], "Fandom": "X-Men (Alternate Timeline Movies)", "New Works": 1826, "Total Works": 10362, "Type": ["M", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [42, null], "Change": [null, null], "Relationship": ["Alexander Hamilton", "John Laurens"], "Fandom": "Hamilton", "New Works": 1807, "Total Works": 1807, "Type": ["M", "M"], "Race": "POC", "Release Date": null}
-{"Rank": [43, null], "Change": [null, null], "Relationship": ["Clarke Griffin", "Lexa"], "Fandom": "The 100 (TV)", "New Works": 1804, "Total Works": 2735, "Type": "Gen", "Race": ["White", "White"], "Release Date": null}
-{"Rank": [44, null], "Change": [null, null], "Relationship": ["Leo Fitz", "Jemma Simmons"], "Fandom": "Agents of S.H.I.E.L.D. (TV)", "New Works": 1802, "Total Works": 3610, "Type": ["F", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [45, null], "Change": [null, null], "Relationship": ["Frank Iero", "Gerard Way"], "Fandom": "My Chemical Romance", "New Works": 1773, "Total Works": 6666, "Type": ["M", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [46, null], "Change": [null, null], "Relationship": ["Mark Fischbach", "Sean McLoughlin"], "Fandom": "Video Blogging RPF", "New Works": 1756, "Total Works": 1756, "Type": ["M", "M"], "Race": "Whi/POC", "Release Date": null}
-{"Rank": [47, null], "Change": [null, null], "Relationship": ["Castiel", "Dean Winchester"], "Fandom": "Supernatural", "New Works": 1752, "Total Works": 4941, "Type": "Gen", "Race": ["White", "White"], "Release Date": null}
-{"Rank": [48, null], "Change": [null, null], "Relationship": ["Belle", "Rumplestiltskin | Mr. Gold"], "Fandom": "Once Upon a Time (TV)", "New Works": 1715, "Total Works": 5534, "Type": ["F", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [49, null], "Change": [null, null], "Relationship": ["Jeon Jungkook", "Park Jimin"], "Fandom": "Bangtan Boys | BTS", "New Works": 1697, "Total Works": 1884, "Type": ["M", "M"], "Race": "POC", "Release Date": null}
-{"Rank": [50, null], "Change": [null, null], "Relationship": ["Laura Hollis", "Carmilla Karnstein"], "Fandom": "Carmilla (Web Series)", "New Works": 1671, "Total Works": 4100, "Type": ["F", "F"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [51, null], "Change": [null, null], "Relationship": ["Sans (Undertale)", "You"], "Fandom": "Undertale (Video Game)", "New Works": 1641, "Total Works": 1641, "Type": "Other", "Race": "Ambig", "Release Date": null}
-{"Rank": [52, "="], "Change": [null, null], "Relationship": ["Bilbo Baggins", "Thorin Oakenshield"], "Fandom": "The Hobbit - All Media Types", "New Works": 1637, "Total Works": 7712, "Type": ["M", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [52, "="], "Change": [null, null], "Relationship": ["Patrick Stump", "Pete Wentz"], "Fandom": "Fall Out Boy", "New Works": 1637, "Total Works": 3952, "Type": ["M", "M"], "Race": "Whi/POC", "Release Date": null}
-{"Rank": [54, null], "Change": [null, null], "Relationship": ["Fox Mulder", "Dana Scully"], "Fandom": "The X-Files", "New Works": 1553, "Total Works": 2880, "Type": ["F", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [55, null], "Change": [null, null], "Relationship": ["Dan Howell", "Phil Lester"], "Fandom": "Phandom/The Fantastic Foursome (YouTube RPF)", "New Works": 1485, "Total Works": 2148, "Type": ["M", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [56, null], "Change": [null, null], "Relationship": ["Kim Namjoon | Rap Monster", "Kim Seokjin | Jin"], "Fandom": "Bangtan Boys | BTS", "New Works": 1484, "Total Works": 1662, "Type": ["M", "M"], "Race": "POC", "Release Date": null}
-{"Rank": [57, null], "Change": [null, null], "Relationship": ["Dean Winchester", "You"], "Fandom": "Supernatural", "New Works": 1465, "Total Works": 2324, "Type": "Other", "Race": "Whi/Amb", "Release Date": null}
-{"Rank": [58, null], "Change": [null, null], "Relationship": ["Hyakuya Mikaela", "Hyakuya Yuuichirou"], "Fandom": "Owari no Seraph | Seraph of the End", "New Works": 1453, "Total Works": 1635, "Type": ["M", "M"], "Race": "POC", "Release Date": null}
-{"Rank": [59, null], "Change": [null, null], "Relationship": ["Alphys", "Undyne"], "Fandom": "Undertale (Video Game)", "New Works": 1432, "Total Works": 1432, "Type": ["F", "F"], "Race": "Ambig", "Release Date": null}
-{"Rank": [60, null], "Change": [null, null], "Relationship": ["Pepper Potts", "Tony Stark"], "Fandom": "The Avengers (Marvel Movies)", "New Works": 1425, "Total Works": 6865, "Type": ["F", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [61, null], "Change": [null, null], "Relationship": ["Tsukishima Kei", "Yamaguchi Tadashi"], "Fandom": "Haikyuu!!", "New Works": 1422, "Total Works": 2188, "Type": ["M", "M"], "Race": "POC", "Release Date": null}
-{"Rank": [62, null], "Change": [null, null], "Relationship": ["Zayn Malik", "Liam Payne"], "Fandom": "One Direction (Band)", "New Works": 1416, "Total Works": 8081, "Type": ["M", "M"], "Race": "Whi/POC", "Release Date": null}
-{"Rank": [63, null], "Change": [null, null], "Relationship": ["Clint Barton", "Phil Coulson"], "Fandom": "The Avengers (Marvel Movies)", "New Works": 1412, "Total Works": 8891, "Type": ["M", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [64, null], "Change": [null, null], "Relationship": ["Sherlock Holmes", "Molly Hooper"], "Fandom": "Sherlock (TV)", "New Works": 1382, "Total Works": 5171, "Type": ["F", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [65, "="], "Change": [null, null], "Relationship": ["James Bond", "Q"], "Fandom": "James Bond (Craig movies)", "New Works": 1350, "Total Works": 4485, "Type": ["M", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [65, "="], "Change": [null, null], "Relationship": ["James Potter", "Lily Evans Potter"], "Fandom": "Harry Potter - J. K. Rowling", "New Works": 1350, "Total Works": 3441, "Type": ["F", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [67, null], "Change": [null, null], "Relationship": ["Barry Allen", "Leonard Snart"], "Fandom": "The Flash (TV 2014)", "New Works": 1323, "Total Works": 1461, "Type": ["M", "M"], "Race": "Whi/POC", "Release Date": null}
-{"Rank": [68, null], "Change": [null, null], "Relationship": ["Aaron Dingle", "Robert Sugden"], "Fandom": "Emmerdale", "New Works": 1321, "Total Works": 1702, "Type": ["M", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [69, null], "Change": [null, null], "Relationship": ["Peter Parker", "Wade Wilson"], "Fandom": "Spider-Man - All Media Types", "New Works": 1317, "Total Works": 2755, "Type": ["M", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [70, null], "Change": [null, null], "Relationship": ["Genos", "Saitama (One-Punch Man)"], "Fandom": "One-Punch Man", "New Works": 1297, "Total Works": 1297, "Type": ["M", "M"], "Race": "POC", "Release Date": null}
-{"Rank": [71, null], "Change": [null, null], "Relationship": ["Tenth Doctor", "Rose Tyler"], "Fandom": "Doctor Who (2005)", "New Works": 1282, "Total Works": 4710, "Type": ["F", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [72, null], "Change": [null, null], "Relationship": ["Fenris", "Hawke"], "Fandom": "Dragon Age II", "New Works": 1264, "Total Works": 3052, "Type": "Other", "Race": "Amb/POC", "Release Date": null}
-{"Rank": [73, "="], "Change": [null, null], "Relationship": ["Dean Winchester", "Sam Winchester"], "Fandom": "Supernatural", "New Works": 1254, "Total Works": 4159, "Type": "Gen", "Race": ["White", "White"], "Release Date": null}
-{"Rank": [73, "="], "Change": [null, null], "Relationship": ["James T. Kirk", "Spock"], "Fandom": "Star Trek: Alternate Original Series (Movies)", "New Works": 1254, "Total Works": 7499, "Type": ["M", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [75, null], "Change": [null, null], "Relationship": ["Hermione Granger", "Ron Weasley"], "Fandom": "Harry Potter - J. K. Rowling", "New Works": 1248, "Total Works": 4789, "Type": ["F", "M"], "Race": "Whi/Amb", "Release Date": null}
-{"Rank": [76, null], "Change": [null, null], "Relationship": ["Octavia Blake", "Lincoln"], "Fandom": "The 100 (TV)", "New Works": 1227, "Total Works": 1968, "Type": ["F", "M"], "Race": "Whi/POC", "Release Date": null}
-{"Rank": [77, null], "Change": [null, null], "Relationship": ["Ronan Lynch", "Adam Parrish"], "Fandom": "Raven Cycle - Maggie Stiefvater", "New Works": 1208, "Total Works": 1613, "Type": ["M", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [78, null], "Change": [null, null], "Relationship": ["Eric Bittle", "Jack Zimmermann"], "Fandom": "Check Please! (Webcomic)", "New Works": 1197, "Total Works": 1446, "Type": ["M", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [79, null], "Change": [null, null], "Relationship": ["Rodney McKay", "John Sheppard"], "Fandom": "Stargate Atlantis", "New Works": 1192, "Total Works": 9741, "Type": ["M", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [80, null], "Change": [null, null], "Relationship": ["Leia Organa", "Han Solo"], "Fandom": "Star Wars - All Media Types", "New Works": 1180, "Total Works": 1437, "Type": ["F", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [81, null], "Change": [null, null], "Relationship": ["Michael Clifford", "Luke Hemmings"], "Fandom": "5 Seconds of Summer (Band)", "New Works": 1168, "Total Works": 2455, "Type": ["M", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [82, null], "Change": [null, null], "Relationship": ["Twelfth Doctor", "Clara Oswin Oswald"], "Fandom": "Doctor Who (2005)", "New Works": 1160, "Total Works": 1730, "Type": ["F", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [83, null], "Change": [null, null], "Relationship": ["Nico di Angelo", "Will Solace"], "Fandom": "Percy Jackson and the Olympians - Rick Riordan", "New Works": 1157, "Total Works": 2268, "Type": ["M", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [84, null], "Change": [null, null], "Relationship": ["Marco Bott", "Jean Kirstein"], "Fandom": "Shingeki no Kyojin | Attack on Titan", "New Works": 1152, "Total Works": 5303, "Type": ["M", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [85, null], "Change": [null, null], "Relationship": ["Dave Strider", "Karkat Vantas"], "Fandom": "Homestuck", "New Works": 1135, "Total Works": 3091, "Type": ["M", "M"], "Race": "Ambig", "Release Date": null}
-{"Rank": [86, null], "Change": [null, null], "Relationship": ["Iron Bull", "Dorian Pavus"], "Fandom": "Dragon Age: Inquisition", "New Works": 1130, "Total Works": 1787, "Type": ["M", "M"], "Race": "Amb/POC", "Release Date": null}
-{"Rank": [87, null], "Change": [null, null], "Relationship": ["Kozume Kenma", "Kuroo Tetsurou"], "Fandom": "Haikyuu!!", "New Works": 1091, "Total Works": 1581, "Type": ["M", "M"], "Race": "POC", "Release Date": null}
-{"Rank": [88, null], "Change": [null, null], "Relationship": ["Enjolras", "Grantaire"], "Fandom": "Les Mis\u00e9rables - All Media Types", "New Works": 1075, "Total Works": 7907, "Type": ["M", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [89, null], "Change": [null, null], "Relationship": ["Inquisitor", "Dorian Pavus"], "Fandom": "Dragon Age: Inquisition", "New Works": 1063, "Total Works": 1925, "Type": "Other", "Race": "Amb/POC", "Release Date": null}
-{"Rank": [90, null], "Change": [null, null], "Relationship": ["Daryl Dixon", "Rick Grimes"], "Fandom": "The Walking Dead (TV)", "New Works": 1055, "Total Works": 2115, "Type": ["M", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [91, null], "Change": [null, null], "Relationship": ["Root | Samantha Groves", "Sameen Shaw"], "Fandom": "Person of Interest (TV)", "New Works": 1049, "Total Works": 1896, "Type": ["F", "F"], "Race": "Whi/POC", "Release Date": null}
-{"Rank": [92, null], "Change": [null, null], "Relationship": ["Mycroft Holmes", "Lestrade"], "Fandom": "Sherlock (TV)", "New Works": 1040, "Total Works": 6027, "Type": ["M", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [93, null], "Change": [null, null], "Relationship": ["Harry Potter", "Ginny Weasley"], "Fandom": "Harry Potter - J. K. Rowling", "New Works": 1026, "Total Works": 3714, "Type": ["F", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [94, null], "Change": [null, null], "Relationship": ["Kara Danvers", "Cat Grant"], "Fandom": "Supergirl (TV 2015)", "New Works": 1003, "Total Works": 1003, "Type": ["F", "F"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [95, null], "Change": [null, null], "Relationship": ["Korra", "Asami Sato"], "Fandom": "Avatar: Legend of Korra", "New Works": 999, "Total Works": 2749, "Type": ["F", "F"], "Race": "POC", "Release Date": null}
-{"Rank": [96, null], "Change": [null, null], "Relationship": ["Illya Kuryakin", "Napoleon Solo"], "Fandom": "The Man From U.N.C.L.E. (2015)", "New Works": 997, "Total Works": 1501, "Type": ["M", "M"], "Race": ["White", "White"], "Release Date": null}
-{"Rank": [97, null], "Change": [null, null], "Relationship": ["Jung Hoseok | J-Hope", "Min Yoongi | Suga"], "Fandom": "Bangtan Boys | BTS", "New Works": 995, "Total Works": 1147, "Type": ["M", "M"], "Race": "POC", "Release Date": null}
-{"Rank": [98, null], "Change": [null, null], "Relationship": ["Loki (Marvel)", "Reader"], "Fandom": "Marvel Cinematic Universe", "New Works": 992, "Total Works": 1086, "Type": "Other", "Race": "Whi/Amb", "Release Date": null}
-{"Rank": [99, null], "Change": [null, null], "Relationship": ["Uchiha Sasuke", "Uzumaki"], "Fandom": "Naruto Naruto", "New Works": 987, "Total Works": 2935, "Type": ["M", "M"], "Race": "POC", "Release Date": null}
-{"Rank": [100, null], "Change": [null, null], "Relationship": ["Ian Gallagher", "Mickey Milkovich"], "Fandom": "Shameless (US)", "New Works": 982, "Total Works": 6884, "Type": ["M", "M"], "Race": ["White", "White"], "Release Date": null}
+[
+    {
+        "Rank": [
+            1,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Castiel",
+            "Dean Winchester"
+        ],
+        "Fandom": "Supernatural",
+        "New Works": 13204,
+        "Total Works": 56363,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            2,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "James 'Bucky' Barnes",
+            "Steve Rogers"
+        ],
+        "Fandom": "Captain America (Movies)",
+        "New Works": 9327,
+        "Total Works": 21626,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            3,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Derek Hale",
+            "Stiles Stilinski"
+        ],
+        "Fandom": "Teen Wolf (TV)",
+        "New Works": 7591,
+        "Total Works": 42531,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            4,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Sherlock Holmes",
+            "John Watson"
+        ],
+        "Fandom": "Sherlock (TV)",
+        "New Works": 6661,
+        "Total Works": 46030,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            5,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Harry Styles",
+            "Louis Tomlinson"
+        ],
+        "Fandom": "One Direction (Band)",
+        "New Works": 5732,
+        "Total Works": 27375,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            6,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Clarke Griffin",
+            "Lexa"
+        ],
+        "Fandom": "The 100 (TV)",
+        "New Works": 4628,
+        "Total Works": 6045,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            7,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Armitage Hux",
+            "Ben Solo | Kylo Ren"
+        ],
+        "Fandom": "Star Wars Episode VII: The Force Awakens (2015)",
+        "New Works": 4601,
+        "Total Works": 4601,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            8,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Steve Rogers",
+            "Tony Stark"
+        ],
+        "Fandom": "The Avengers (Marvel Movies)",
+        "New Works": 4432,
+        "Total Works": 16407,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            9,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Dean Winchester",
+            "Sam Winchester"
+        ],
+        "Fandom": "Supernatural",
+        "New Works": 4313,
+        "Total Works": 18972,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            10,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Dan Howell",
+            "Phil Lester"
+        ],
+        "Fandom": "Phandom/The Fantastic Foursome (YouTube RPF)",
+        "New Works": 4220,
+        "Total Works": 6418,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            11,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Will Graham",
+            "Hannibal Lecter"
+        ],
+        "Fandom": "Hannibal (TV)",
+        "New Works": 3863,
+        "Total Works": 8486,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            12,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Adrien Agreste",
+            "Marinette Dupain-Cheng"
+        ],
+        "Fandom": "Miraculous Ladybug",
+        "New Works": 3705,
+        "Total Works": 3705,
+        "Type": [
+            "F",
+            "M"
+        ],
+        "Race": "Whi/POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            13,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Draco Malfoy",
+            "Harry Potter"
+        ],
+        "Fandom": "Harry Potter - J. K. Rowling",
+        "New Works": 3632,
+        "Total Works": 15176,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            14,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Magnus Bane",
+            "Alec Lightwood"
+        ],
+        "Fandom": "Mortal Instruments Series - Cassandra Clare",
+        "New Works": 3277,
+        "Total Works": 4342,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": "Whi/POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            15,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Iwaizumi Hajime",
+            "Oikawa Tooru"
+        ],
+        "Fandom": "Haikyuu!!",
+        "New Works": 3249,
+        "Total Works": 4278,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": "POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            16,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Bellamy Blake",
+            "Clarke Griffin"
+        ],
+        "Fandom": "The 100 (TV)",
+        "New Works": 3131,
+        "Total Works": 6752,
+        "Type": [
+            "F",
+            "M"
+        ],
+        "Race": "Whi/POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            17,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Poe Dameron",
+            "Finn"
+        ],
+        "Fandom": "Star Wars Episode VII: The Force Awakens (2015)",
+        "New Works": 2938,
+        "Total Works": 2938,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": "POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            18,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Levi",
+            "Eren Yeager"
+        ],
+        "Fandom": "Shingeki no Kyojin | Attack on Titan",
+        "New Works": 2912,
+        "Total Works": 10110,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            19,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Oliver Queen",
+            "Felicity Smoak"
+        ],
+        "Fandom": "Arrow (TV 2012)",
+        "New Works": 2803,
+        "Total Works": 7661,
+        "Type": [
+            "F",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            20,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Captain Hook | Killian Jones",
+            "Emma Swan"
+        ],
+        "Fandom": "Once Upon a Time (TV)",
+        "New Works": 2725,
+        "Total Works": 6402,
+        "Type": [
+            "F",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            21,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Min Yoongi | Suga",
+            "Park Jimin"
+        ],
+        "Fandom": "Bangtan Boys | BTS",
+        "New Works": 2694,
+        "Total Works": 3080,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": "POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            22,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Hinata Shouyou",
+            "Kageyama Tobio"
+        ],
+        "Fandom": "Haikyuu!!",
+        "New Works": 2657,
+        "Total Works": 4734,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": "POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            23,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Evil Queen | Regina Mills",
+            "Emma Swan"
+        ],
+        "Fandom": "Once Upon a Time (TV)",
+        "New Works": 2637,
+        "Total Works": 7238,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": "Whi/POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            24,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Sirius Black",
+            "Remus Lupin"
+        ],
+        "Fandom": "Harry Potter - J. K. Rowling",
+        "New Works": 2544,
+        "Total Works": 8005,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            25,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Inquisitor",
+            "Cullen Rutherford"
+        ],
+        "Fandom": "Dragon Age: Inquisition",
+        "New Works": 2504,
+        "Total Works": 5398,
+        "Type": "Other",
+        "Race": "Whi/Amb",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            26,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Merlin",
+            "Arthur Pendragon"
+        ],
+        "Fandom": "Merlin (TV)",
+        "New Works": 2440,
+        "Total Works": 15775,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            27,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Josh Dun",
+            "Tyler Joseph"
+        ],
+        "Fandom": "Twenty One Pilots",
+        "New Works": 2403,
+        "Total Works": 3170,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": "Whi/POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            28,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Gabriel",
+            "Sam Winchester"
+        ],
+        "Fandom": "Supernatural",
+        "New Works": 2192,
+        "Total Works": 8511,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            29,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Jeon Jungkook",
+            "Kim Taehyung | V"
+        ],
+        "Fandom": "Bangtan Boys | BTS",
+        "New Works": 2182,
+        "Total Works": 2476,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": "POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            30,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Inquisitor",
+            "Solas"
+        ],
+        "Fandom": "Dragon Age: Inquisition",
+        "New Works": 2096,
+        "Total Works": 3669,
+        "Type": "Other",
+        "Race": "Whi/Amb",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            31,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Rey",
+            "Ben Solo | Kylo Ren"
+        ],
+        "Fandom": "Star Wars Episode VII: The Force Awakens (2015)",
+        "New Works": 2082,
+        "Total Works": 2082,
+        "Type": [
+            "F",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            32,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Clint Barton",
+            "Natasha Romanov"
+        ],
+        "Fandom": "The Avengers (Marvel Movies)",
+        "New Works": 2064,
+        "Total Works": 8809,
+        "Type": [
+            "F",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            33,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Blaine Anderson",
+            "Kurt Hummel"
+        ],
+        "Fandom": "Glee",
+        "New Works": 2034,
+        "Total Works": 12934,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": "Whi/POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            34,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Harry Hart",
+            "Gary 'Eggsy' Unwin"
+        ],
+        "Fandom": "Kingsman: The Secret Service (2015)",
+        "New Works": 2002,
+        "Total Works": 3281,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            35,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Sherlock Holmes",
+            "John Watson"
+        ],
+        "Fandom": "Sherlock (TV)",
+        "New Works": 1966,
+        "Total Works": 12484,
+        "Type": "Gen",
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            36,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Akaashi Keiji",
+            "Bokuto Koutarou"
+        ],
+        "Fandom": "Haikyuu!!",
+        "New Works": 1959,
+        "Total Works": 2383,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": "POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            37,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "James 'Bucky' Barnes",
+            "Steve Rogers"
+        ],
+        "Fandom": "Captain America (Movies)",
+        "New Works": 1930,
+        "Total Works": 3890,
+        "Type": "Gen",
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            38,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Bill Cipher",
+            "Dipper Pines"
+        ],
+        "Fandom": "Gravity Falls",
+        "New Works": 1907,
+        "Total Works": 2655,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": "Whi/Amb",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            39,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Jensen Ackles",
+            "Jared Padalecki"
+        ],
+        "Fandom": "Supernatural RPF",
+        "New Works": 1892,
+        "Total Works": 9634,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            40,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Sawamura Daichi",
+            "Sugawara Koushi"
+        ],
+        "Fandom": "Haikyuu!!",
+        "New Works": 1865,
+        "Total Works": 2762,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": "POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            41,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Erik Lehnsherr",
+            "Charles Xavier"
+        ],
+        "Fandom": "X-Men (Alternate Timeline Movies)",
+        "New Works": 1826,
+        "Total Works": 10362,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            42,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Alexander Hamilton",
+            "John Laurens"
+        ],
+        "Fandom": "Hamilton",
+        "New Works": 1807,
+        "Total Works": 1807,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": "POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            43,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Clarke Griffin",
+            "Lexa"
+        ],
+        "Fandom": "The 100 (TV)",
+        "New Works": 1804,
+        "Total Works": 2735,
+        "Type": "Gen",
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            44,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Leo Fitz",
+            "Jemma Simmons"
+        ],
+        "Fandom": "Agents of S.H.I.E.L.D. (TV)",
+        "New Works": 1802,
+        "Total Works": 3610,
+        "Type": [
+            "F",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            45,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Frank Iero",
+            "Gerard Way"
+        ],
+        "Fandom": "My Chemical Romance",
+        "New Works": 1773,
+        "Total Works": 6666,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            46,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Mark Fischbach",
+            "Sean McLoughlin"
+        ],
+        "Fandom": "Video Blogging RPF",
+        "New Works": 1756,
+        "Total Works": 1756,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": "Whi/POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            47,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Castiel",
+            "Dean Winchester"
+        ],
+        "Fandom": "Supernatural",
+        "New Works": 1752,
+        "Total Works": 4941,
+        "Type": "Gen",
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            48,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Belle",
+            "Rumplestiltskin | Mr. Gold"
+        ],
+        "Fandom": "Once Upon a Time (TV)",
+        "New Works": 1715,
+        "Total Works": 5534,
+        "Type": [
+            "F",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            49,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Jeon Jungkook",
+            "Park Jimin"
+        ],
+        "Fandom": "Bangtan Boys | BTS",
+        "New Works": 1697,
+        "Total Works": 1884,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": "POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            50,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Laura Hollis",
+            "Carmilla Karnstein"
+        ],
+        "Fandom": "Carmilla (Web Series)",
+        "New Works": 1671,
+        "Total Works": 4100,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            51,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Sans (Undertale)",
+            "You"
+        ],
+        "Fandom": "Undertale (Video Game)",
+        "New Works": 1641,
+        "Total Works": 1641,
+        "Type": "Other",
+        "Race": "Ambig",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            52,
+            "="
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Bilbo Baggins",
+            "Thorin Oakenshield"
+        ],
+        "Fandom": "The Hobbit - All Media Types",
+        "New Works": 1637,
+        "Total Works": 7712,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            52,
+            "="
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Patrick Stump",
+            "Pete Wentz"
+        ],
+        "Fandom": "Fall Out Boy",
+        "New Works": 1637,
+        "Total Works": 3952,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": "Whi/POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            54,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Fox Mulder",
+            "Dana Scully"
+        ],
+        "Fandom": "The X-Files",
+        "New Works": 1553,
+        "Total Works": 2880,
+        "Type": [
+            "F",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            55,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Dan Howell",
+            "Phil Lester"
+        ],
+        "Fandom": "Phandom/The Fantastic Foursome (YouTube RPF)",
+        "New Works": 1485,
+        "Total Works": 2148,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            56,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Kim Namjoon | Rap Monster",
+            "Kim Seokjin | Jin"
+        ],
+        "Fandom": "Bangtan Boys | BTS",
+        "New Works": 1484,
+        "Total Works": 1662,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": "POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            57,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Dean Winchester",
+            "You"
+        ],
+        "Fandom": "Supernatural",
+        "New Works": 1465,
+        "Total Works": 2324,
+        "Type": "Other",
+        "Race": "Whi/Amb",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            58,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Hyakuya Mikaela",
+            "Hyakuya Yuuichirou"
+        ],
+        "Fandom": "Owari no Seraph | Seraph of the End",
+        "New Works": 1453,
+        "Total Works": 1635,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": "POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            59,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Alphys",
+            "Undyne"
+        ],
+        "Fandom": "Undertale (Video Game)",
+        "New Works": 1432,
+        "Total Works": 1432,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": "Ambig",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            60,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Pepper Potts",
+            "Tony Stark"
+        ],
+        "Fandom": "The Avengers (Marvel Movies)",
+        "New Works": 1425,
+        "Total Works": 6865,
+        "Type": [
+            "F",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            61,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Tsukishima Kei",
+            "Yamaguchi Tadashi"
+        ],
+        "Fandom": "Haikyuu!!",
+        "New Works": 1422,
+        "Total Works": 2188,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": "POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            62,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Zayn Malik",
+            "Liam Payne"
+        ],
+        "Fandom": "One Direction (Band)",
+        "New Works": 1416,
+        "Total Works": 8081,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": "Whi/POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            63,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Clint Barton",
+            "Phil Coulson"
+        ],
+        "Fandom": "The Avengers (Marvel Movies)",
+        "New Works": 1412,
+        "Total Works": 8891,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            64,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Sherlock Holmes",
+            "Molly Hooper"
+        ],
+        "Fandom": "Sherlock (TV)",
+        "New Works": 1382,
+        "Total Works": 5171,
+        "Type": [
+            "F",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            65,
+            "="
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "James Bond",
+            "Q"
+        ],
+        "Fandom": "James Bond (Craig movies)",
+        "New Works": 1350,
+        "Total Works": 4485,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            65,
+            "="
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "James Potter",
+            "Lily Evans Potter"
+        ],
+        "Fandom": "Harry Potter - J. K. Rowling",
+        "New Works": 1350,
+        "Total Works": 3441,
+        "Type": [
+            "F",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            67,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Barry Allen",
+            "Leonard Snart"
+        ],
+        "Fandom": "The Flash (TV 2014)",
+        "New Works": 1323,
+        "Total Works": 1461,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": "Whi/POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            68,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Aaron Dingle",
+            "Robert Sugden"
+        ],
+        "Fandom": "Emmerdale",
+        "New Works": 1321,
+        "Total Works": 1702,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            69,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Peter Parker",
+            "Wade Wilson"
+        ],
+        "Fandom": "Spider-Man - All Media Types",
+        "New Works": 1317,
+        "Total Works": 2755,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            70,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Genos",
+            "Saitama (One-Punch Man)"
+        ],
+        "Fandom": "One-Punch Man",
+        "New Works": 1297,
+        "Total Works": 1297,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": "POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            71,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Tenth Doctor",
+            "Rose Tyler"
+        ],
+        "Fandom": "Doctor Who (2005)",
+        "New Works": 1282,
+        "Total Works": 4710,
+        "Type": [
+            "F",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            72,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Fenris",
+            "Hawke"
+        ],
+        "Fandom": "Dragon Age II",
+        "New Works": 1264,
+        "Total Works": 3052,
+        "Type": "Other",
+        "Race": "Amb/POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            73,
+            "="
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Dean Winchester",
+            "Sam Winchester"
+        ],
+        "Fandom": "Supernatural",
+        "New Works": 1254,
+        "Total Works": 4159,
+        "Type": "Gen",
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            73,
+            "="
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "James T. Kirk",
+            "Spock"
+        ],
+        "Fandom": "Star Trek: Alternate Original Series (Movies)",
+        "New Works": 1254,
+        "Total Works": 7499,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            75,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Hermione Granger",
+            "Ron Weasley"
+        ],
+        "Fandom": "Harry Potter - J. K. Rowling",
+        "New Works": 1248,
+        "Total Works": 4789,
+        "Type": [
+            "F",
+            "M"
+        ],
+        "Race": "Whi/Amb",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            76,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Octavia Blake",
+            "Lincoln"
+        ],
+        "Fandom": "The 100 (TV)",
+        "New Works": 1227,
+        "Total Works": 1968,
+        "Type": [
+            "F",
+            "M"
+        ],
+        "Race": "Whi/POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            77,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Ronan Lynch",
+            "Adam Parrish"
+        ],
+        "Fandom": "Raven Cycle - Maggie Stiefvater",
+        "New Works": 1208,
+        "Total Works": 1613,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            78,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Eric Bittle",
+            "Jack Zimmermann"
+        ],
+        "Fandom": "Check Please! (Webcomic)",
+        "New Works": 1197,
+        "Total Works": 1446,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            79,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Rodney McKay",
+            "John Sheppard"
+        ],
+        "Fandom": "Stargate Atlantis",
+        "New Works": 1192,
+        "Total Works": 9741,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            80,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Leia Organa",
+            "Han Solo"
+        ],
+        "Fandom": "Star Wars - All Media Types",
+        "New Works": 1180,
+        "Total Works": 1437,
+        "Type": [
+            "F",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            81,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Michael Clifford",
+            "Luke Hemmings"
+        ],
+        "Fandom": "5 Seconds of Summer (Band)",
+        "New Works": 1168,
+        "Total Works": 2455,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            82,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Twelfth Doctor",
+            "Clara Oswin Oswald"
+        ],
+        "Fandom": "Doctor Who (2005)",
+        "New Works": 1160,
+        "Total Works": 1730,
+        "Type": [
+            "F",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            83,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Nico di Angelo",
+            "Will Solace"
+        ],
+        "Fandom": "Percy Jackson and the Olympians - Rick Riordan",
+        "New Works": 1157,
+        "Total Works": 2268,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            84,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Marco Bott",
+            "Jean Kirstein"
+        ],
+        "Fandom": "Shingeki no Kyojin | Attack on Titan",
+        "New Works": 1152,
+        "Total Works": 5303,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            85,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Dave Strider",
+            "Karkat Vantas"
+        ],
+        "Fandom": "Homestuck",
+        "New Works": 1135,
+        "Total Works": 3091,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": "Ambig",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            86,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Iron Bull",
+            "Dorian Pavus"
+        ],
+        "Fandom": "Dragon Age: Inquisition",
+        "New Works": 1130,
+        "Total Works": 1787,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": "Amb/POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            87,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Kozume Kenma",
+            "Kuroo Tetsurou"
+        ],
+        "Fandom": "Haikyuu!!",
+        "New Works": 1091,
+        "Total Works": 1581,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": "POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            88,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Enjolras",
+            "Grantaire"
+        ],
+        "Fandom": "Les Mis\u00e9rables - All Media Types",
+        "New Works": 1075,
+        "Total Works": 7907,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            89,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Inquisitor",
+            "Dorian Pavus"
+        ],
+        "Fandom": "Dragon Age: Inquisition",
+        "New Works": 1063,
+        "Total Works": 1925,
+        "Type": "Other",
+        "Race": "Amb/POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            90,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Daryl Dixon",
+            "Rick Grimes"
+        ],
+        "Fandom": "The Walking Dead (TV)",
+        "New Works": 1055,
+        "Total Works": 2115,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            91,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Root | Samantha Groves",
+            "Sameen Shaw"
+        ],
+        "Fandom": "Person of Interest (TV)",
+        "New Works": 1049,
+        "Total Works": 1896,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": "Whi/POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            92,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Mycroft Holmes",
+            "Lestrade"
+        ],
+        "Fandom": "Sherlock (TV)",
+        "New Works": 1040,
+        "Total Works": 6027,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            93,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Harry Potter",
+            "Ginny Weasley"
+        ],
+        "Fandom": "Harry Potter - J. K. Rowling",
+        "New Works": 1026,
+        "Total Works": 3714,
+        "Type": [
+            "F",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            94,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Kara Danvers",
+            "Cat Grant"
+        ],
+        "Fandom": "Supergirl (TV 2015)",
+        "New Works": 1003,
+        "Total Works": 1003,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            95,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Korra",
+            "Asami Sato"
+        ],
+        "Fandom": "Avatar: Legend of Korra",
+        "New Works": 999,
+        "Total Works": 2749,
+        "Type": [
+            "F",
+            "F"
+        ],
+        "Race": "POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            96,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Illya Kuryakin",
+            "Napoleon Solo"
+        ],
+        "Fandom": "The Man From U.N.C.L.E. (2015)",
+        "New Works": 997,
+        "Total Works": 1501,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            97,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Jung Hoseok | J-Hope",
+            "Min Yoongi | Suga"
+        ],
+        "Fandom": "Bangtan Boys | BTS",
+        "New Works": 995,
+        "Total Works": 1147,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": "POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            98,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Loki (Marvel)",
+            "Reader"
+        ],
+        "Fandom": "Marvel Cinematic Universe",
+        "New Works": 992,
+        "Total Works": 1086,
+        "Type": "Other",
+        "Race": "Whi/Amb",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            99,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Uchiha Sasuke",
+            "Uzumaki"
+        ],
+        "Fandom": "Naruto Naruto",
+        "New Works": 987,
+        "Total Works": 2935,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": "POC",
+        "Release Date": null
+    },
+    {
+        "Rank": [
+            100,
+            null
+        ],
+        "Change": [
+            null,
+            null
+        ],
+        "Relationship": [
+            "Ian Gallagher",
+            "Mickey Milkovich"
+        ],
+        "Fandom": "Shameless (US)",
+        "New Works": 982,
+        "Total Works": 6884,
+        "Type": [
+            "M",
+            "M"
+        ],
+        "Race": [
+            "White",
+            "White"
+        ],
+        "Release Date": null
+    }
+]
