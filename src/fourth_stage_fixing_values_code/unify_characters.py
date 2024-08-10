@@ -1,10 +1,69 @@
+from src.util_functions.get_file_paths import find_paths
+from src.util_functions.attempting_pandas import json_list_of_dicts_to_data_frame
 
-def remove_brackets():
-    #how do we import the characters? from what source? straight from the third stage files?
-    pass
+def gather_all_raw_characters():
+    """
+    returns a list of all unique character names from the stage 3 data sets
+    """
+    name_list = []
+
+    all_paths = find_paths("data/third_clean_up_data/")
+
+    for path in all_paths:
+        read_df = json_list_of_dicts_to_data_frame(path)
+        relationship_list = list(read_df["Relationship"])
+        name_list.extend(relationship_list)
+
+    unique_list = sorted(list(set(name_list)))
+
+    return unique_list
+#TODO: test
+
+def remove_brackets(character_list):
+    """
+    takes a list of unique character names, removes all suffixes in brackets ()
+
+    returns a dict in the format of {<old_name>: <new_name>, ...}, 
+    with a key for each value in the input list
+    """
+    name_dict = {}
+
+    for old_name in character_list:
+        if "(" in old_name:
+            for char in range(len(old_name)):
+                if old_name[char] == "(":
+                    bracket_index = char - 1 # including preceding whitespace
+            new_name = old_name[:bracket_index]
+        else: new_name = old_name
+
+        name_dict[old_name] = new_name
+        # -> so we can say "if it was this, make it this", 
+        # and avoid double trouble between fandoms or same character formatted differently
+        # in testing we'll also be able to check that same amount of keys as input names
+
+    return name_dict
+#TODO: test
+
+#TODO:
+    # check that bracket caused doubles have been removed
+    # separate & collect name parts
+        # split at " | " for aliases
+        # split at white spaces afterwards
+    # categorise name parts
+        # if split item starts & ends on ' -> it's a nickname
+        # figure out which bits are first names, last names & aliases
+    # complete name parts where missing
+        # complete first/last names where missing from one double but present in the other
+        # add aliases where obviously missing
+        # add translations if you can find a reliable way to scrape the info 
+        #   cause fucking hell it'd be a lot of work otherwise ToT
+
 
 # pandas will be hecking useful for some of this current shuffling things about!
     # I am tempted to like- refactor a bunch of my functions to use pandas instead ToT
+# update: we can use pandas to add the clean info to our main data sets, 
+# but I still think it'll be easier to do the cleaning manually in regular python
+# where I feel like I can have more control (with my current skills) and flexibility
 
 (
 #things to fix at a glance:
@@ -57,19 +116,8 @@ def remove_brackets():
     #doubles are generally caused by:
         # missing parts of names vs present ones
         # brackets specifying property we don't need to specify
-    # -> remove brackets
-    # for missing name parts more formatting is needed:
-# separate & collect all name parts
-    # split at " | " for aliases (there is no consistency abt order tho)
-    # split at white spaces for everything else
-# categorise name parts appropriately
-    # if split item starts & ends on ' -> it's a nickname
-    # figure out which bits are first names, last names & aliases
-# complete name parts where missing
-    # complete first/last names where missing from one double but present in the other
-    # add aliases where obviously missing
-    # add translations if you can find a reliable way to scrape the info 
-    #   cause fucking hell it'd be a lot of work otherwise ToT
+    # -> remove brackets ✅
+    # for missing name parts more formatting is needed (see above)
 
 # add original fandom instances to character profiles
     # eg their fandom may have many instances but they were only listed for these ones specifically
