@@ -1,8 +1,8 @@
 #TODO:
     # check that bracket caused doubles have been removed ✅
-    # separate & collect name parts
-        # split at " | " for aliases
-        # split at white spaces afterwards
+    # separate & collect name parts ✅
+        # split at " | " for aliases ✅
+        # split at white spaces afterwards ✅
     # categorise name parts
         # if split item starts & ends on ' -> it's a nickname
         # figure out which bits are first names, last names & aliases

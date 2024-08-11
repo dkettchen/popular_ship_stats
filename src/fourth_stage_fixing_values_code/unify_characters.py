@@ -144,8 +144,46 @@ def separate_name_parts(character_dict):
 
     return new_dict
             
+#TODO:
+def categorise_name_parts(character_dict):
+    """
+    takes a dict with split name values as output by separate_name_parts func
 
+    returns a (dict??) of dicts with appropriately categorised names for each character
+    """
+    # categorise names by fandoms, so we can make sure we're staying within each fandom
 
+    # for simple, two-name, obviously first-name-last-name ordered characters, 
+    #   categorise them as "given name" and "surname" by order
+
+    # for eastern names w possibly/likely different order, 
+    #   look up which is given name if unsure
+
+    # have a new value that indicates western or eastern name order
+    #   eg "W" for first name - last name, "E" for surname - given name, 
+    #   and then we can maybe have a null or n/a for single names, etc
+    # -> that way we can easily concat the right way around later! :)
+
+    # we should also include titles as a separate value where relevant 
+    #   (eg "Mr Gold", various Captains, etc)
+
+    # anything with '' around it gets categorised as nickname/alias for now
+
+    # look for obvious doubles & go with most complete version
+
+    # look up missing bits & add them 
+    #   (eg last names, aliases, etc that I know exist, 
+    #   look for middle names where initials are present)
+
+    # look up any characters you don't know to make sure
+
+    # we're not fucking with translations, I've decided, 
+    #   so remove em where present (eg geralt of rivia)
+
+    # include (clean) fandom value & prior name versions for each character dict
+    
+    # return resulting collection
+    pass
 
 
 
@@ -154,11 +192,13 @@ if __name__ == "__main__":
     # character_dict = {"all_unformatted_characters": all_unformatted_characters}
     # with open("data/reference_and_test_files/full_characters_list.json", "w") as file:
     #     dump(character_dict, file, indent=4)
+    
     bracketless_characters = remove_brackets(all_unformatted_characters)
     # character_dict = {"no_brackets_characters": bracketless_characters}
     # with open("data/reference_and_test_files/cleaned_characters_list_1_no_brackets.json", "w") as file:
     #     dump(character_dict, file, indent=4)
+
     split_name_characters = separate_name_parts(bracketless_characters)
-    character_dict = {"split_name_characters": split_name_characters}
-    with open("data/reference_and_test_files/cleaned_characters_list_2_split_names.json", "w") as file:
-        dump(character_dict, file, indent=4)
+    # character_dict = {"split_name_characters": split_name_characters}
+    # with open("data/reference_and_test_files/cleaned_characters_list_2_split_names.json", "w") as file:
+    #     dump(character_dict, file, indent=4)
