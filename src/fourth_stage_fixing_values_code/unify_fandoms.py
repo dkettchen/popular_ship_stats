@@ -13,7 +13,7 @@ def separate_RPF_from_fictional():
     containing all fandom labels in respective category
     from third cleaning stage data, ordered alphabetically
     """
-    all_paths = find_paths("data/third_clean_up_data/")
+    all_paths = find_paths("data/third_clean_up_data_json_lines_version/")
     RPF_list = []
     fictional_list = []
 
@@ -35,6 +35,9 @@ def separate_RPF_from_fictional():
                 or "Hermit" in row["Fandom"]:
                 RPF_list.append(row["Fandom"])
 
+            elif row["Fandom"] == "Star Wars Story (2016)":
+                fandom = "Rogue One: A Star Wars Story (2016)"
+                fictional_list.append(fandom)
             else: 
                 fictional_list.append(row["Fandom"])
 
@@ -237,6 +240,7 @@ def format_unified_labels(data_dict):
     for item in temp_list_1:    # gathering now-duplicates into one value, 
                                 # adding their op-versions together
         fandom = item["Fandom"]
+
         if fandom not in non_gathered_dict:
 
             non_gathered_dict[fandom] = {
@@ -307,7 +311,7 @@ def format_unified_labels(data_dict):
             fandom = "Dangan Ronpa"
         elif "Persona" in key:
             fandom = "Persona"
-        elif "Star Wars" in key:
+        elif "Star Wars" in key or key == "Rogue One":
             fandom = "Star Wars"
         elif "Stargate" in key:
             fandom = "Stargate"

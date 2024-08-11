@@ -1,5 +1,7 @@
 from src.util_functions.get_file_paths import find_paths
 from src.util_functions.attempting_pandas import json_list_of_dicts_to_data_frame
+from json import dump
+from re import split
 
 def gather_all_raw_characters():
     """
@@ -12,12 +14,13 @@ def gather_all_raw_characters():
     for path in all_paths:
         read_df = json_list_of_dicts_to_data_frame(path)
         relationship_list = list(read_df["Relationship"])
-        name_list.extend(relationship_list)
+        for part in relationship_list:
+            name_list.extend(part) 
+            # no clue what happened here that we needed to iterate over it hm
 
     unique_list = sorted(list(set(name_list)))
 
     return unique_list
-#TODO: test
 
 def remove_brackets(character_list):
     """
@@ -42,143 +45,120 @@ def remove_brackets(character_list):
         # in testing we'll also be able to check that same amount of keys as input names
 
     return name_dict
-#TODO: test
 
-#TODO:
-    # check that bracket caused doubles have been removed
-    # separate & collect name parts
-        # split at " | " for aliases
-        # split at white spaces afterwards
-    # categorise name parts
-        # if split item starts & ends on ' -> it's a nickname
-        # figure out which bits are first names, last names & aliases
-    # complete name parts where missing
-        # complete first/last names where missing from one double but present in the other
-        # add aliases where obviously missing
-        # add translations if you can find a reliable way to scrape the info 
-        #   cause fucking hell it'd be a lot of work otherwise ToT
+def separate_name_parts(character_dict):
+    """
+    takes a dict in the format of {<old_name>: <new_name>, ...} 
+    as output by the remove brackets func
 
+    returns a dict in the same format, except the new name has been separated into its parts
 
-# pandas will be hecking useful for some of this current shuffling things about!
-    # I am tempted to like- refactor a bunch of my functions to use pandas instead ToT
-# update: we can use pandas to add the clean info to our main data sets, 
-# but I still think it'll be easier to do the cleaning manually in regular python
-# where I feel like I can have more control (with my current skills) and flexibility
+    where present aliases that consist of multiple words have been kept together
 
-(
-#things to fix at a glance:
-    # fix misattributed late-addition music groups ✅
+    any names with "<something> of <something>" or "<something> the <something>" 
+    have been split before the "of"/"the", grouping them with the latter portion of the name
 
-    # RM form bts is doubled
-    # so is xiao zhan/sean from untamed
-    # mcr is both doubled up
-    # the expected first name/last name order inconsistency issue w a lot of names
-    # a buncha doubles among the youtubers
+    RM from BTS and Rumpelstiltskin from Once Upon A Time have been 
+    given a unified spelling to get rid of their doubles
+    Rogue One characters have had their keys fixed after a prior formatting error
+    """
+    new_dict = {}
+    for key in character_dict:
+        value = character_dict[key]
+        if " | " in value:
+            split_name = split(r" \| ", value)
+        else: split_name = [value]
+        new_name = []
+        for part in split_name:
+            if part in ['Rap Monster', 'RM']:
+                new_part = ["Rap Monster / RM"]
+            elif part in ['Rumpelstiltskin', 'Rumplestiltskin']:
+                new_part = ["Rumpelstiltskin"]
+            elif " of " in part:
+                new_split = split(r" of ", part)
+                new_part = [new_split[0], "of " + new_split[1]]
+            elif part == "Geralt z Rivii":
+                new_part = ["Geralt","z Rivii"]
+            elif " di " in part:
+                new_split = split(r" di ", part)
+                new_part = [new_split[0], "di " + new_split[1]]
+            elif " al " in part:
+                new_split = split(r" al ", part)
+                new_part = [new_split[0], "al " + new_split[1]]
+            elif " Van " in part:
+                new_split = split(r" Van ", part)
+                new_part = [new_split[0], "Van " + new_split[1]]
+            elif " the " in part:
+                new_split = split(r" the ", part)
+                new_part = [new_split[0], "the " + new_split[1]]
+            elif part == "Helena 'H. G.' Wells":
+                new_part = ["Helena","'H. G.'","Wells"]
+            elif "Female " in part:
+                new_part = [part[7:]]
+            elif "Male " in part:
+                new_part = [part[5:]]
+            elif part == "You":
+                new_part = ["Reader"]
+            elif "Rogue One" in part:
+                if "Baze Malbus" in part:
+                    new_part = ["Baze", "Malbus"]
+                    key = "Baze Malbus"
+                elif "Jyn Erso" in part:
+                    new_part = ["Jyn", "Erso"]
+                    key = "Jyn Erso"
+            elif part not in [
+                'Chat Noir',
+                'Darth Vader',
+                'Captain Hook',
+                'Evil Queen',
+                'The Golden Guard',
+                'The Archivist',
+                'Six-eared Macaque',
+                'Madam Satan',
+                'My Unit', # I think this is not a name, but tbh look up, other name was 'Byleth'
+                'Red Riding Hood',
+                'Cherry Blossom',
+                'Soldier: 76',
+                'Monkey King',
+                'The Darkling',
+                'All Might',
+                'Present Mic',
+                'Kylo Ren',
+                "Ninth Doctor",
+                "Persona 5 Protagonist",
+                "Princess Bubblegum",
+                "Pink Diamond",
+                "Rose Quartz",
+                "Mr. Gold",
+                "Tenth Doctor",
+                "The Doctor",
+                "Thirteenth Doctor",
+                "Twelfth Doctor",
+                "Upgraded Connor",
+                ]:
+                new_part = split(r"\s", part)
+            else:
+                new_part = [part]
+            new_name.extend(new_part)
+        new_dict[key] = new_name
 
-    # there's a few doubles in AoT
-    # critical role has doubles
-    # DC has a suspicious lack of aliases, pls fix in formatting later
-    # dragon age has doubles
-    # elsa frozen is double
-    # crowley good omens is double
-    # america hetalia is double
-    # les mis has doubles
-    # lost girl lauren is double
-    # of course there's marvel doubles, and same as w dc a sus lack of aliases
-    # mass effect has male & female & non-specified shepard 
-    #   -> figure out what regular shepard was classed as gender-wise
-    # merlin has doubles
-    # as does miraculous ladybug
-    # mha has doubles & lacks some aliases
-    # naruto has a double
-    # rumpelstiltskin once upon a time still misspellt & therefore double
-    # zosan one piece lacking their aliases
-    # pretty sure mccree's dead name in overwatch, also missing aliases
-    # person of interest has a double
-    # pitch perfect has a double
-    # as does power rangers
-    # and queer as folk
-    # are jim & james moriarity the same person in sherlock holmes? if so they're double
-    # star trek has double
-    # star wars has kylo double
-    # so many steven universe doubles
-    # reader & you doubled up in supernatural
-    # tmnt have doubles
-    # the 100 has doubles
-    # last of us ellie is double
-    # undyne undertale is double
-    # as is lance voltron
-# the rest looks fine but we'll have to see if everyone is accounted for later    
-)
-
-#TODO:
-# remove doubles
-    #doubles are generally caused by:
-        # missing parts of names vs present ones
-        # brackets specifying property we don't need to specify
-    # -> remove brackets ✅
-    # for missing name parts more formatting is needed (see above)
-
-# add original fandom instances to character profiles
-    # eg their fandom may have many instances but they were only listed for these ones specifically
-    # -> to keep track of that as we clean, same as w fandoms
-# make a file that contains 
-    # new name of character
-    # all old names of character
-    # fandom they're from (new name)
-    # og instances of fandom they were listed with
-    # -> to look up & replace main files from later
-
-# -> other details will be in their separate files to be in their own tables later!
-    # we should make a file that doesn't have two keys but instead is json lines or csv format
-    #   with all RPF & fictional fandoms mixed in
-    #   w the respective fandom's details in one line
-    # and then another one to do the same w characters & their details
-
-# add gender where same-sex slash pairings
-    # start from latest info
-    # do not replace after it's been added
-    # if it's not a same-sex slash pairing, hence has another label, 
-    #   find a way to skip or keep track of other label
-# same for race where in order or same
-    # from most recent info, do not replace w older info
-    # otherwise keep track of untouched labels for later research & categorisation
+    return new_dict
+            
 
 
-# - adding types of media for fictional category
-        # -many fandoms will have multiple adaptations
-        # -categories I def saw so far:
-            # movies (live action)
-            # TV (live action)
-            # web series
-            # comics
-            # books
-            # musicals
-            # animation
-        # (if I find more translated versions from international properties in 
-        # this research process I shall add them to their names as a case in previous function)
-    # -> also add country of origin while we're at it
-        # eg anime wouldn't be labelled anime, simply as "animation" from "japan"
-        # -countries are easy enough to look up while looking up the property itself
-        # -some fandoms may have international adaptations, hence have several countries listed
-            # ex one piece from japan, but has a western adaptation now too
-            # -how do we handle shows that are produced cross-countries tho? 
-            # like where it was shot & made across more than one country per thing
-            # & actors f.e. are from all over the place too (like the one piece example,
-            # does it have an official country of origin? do we count it as US american? 
-            # there were so many british ppl tho, 
-            # and I know how much the americans produce over here)
-                # maybe count it as the country that the production company is sitting in
-                # even if it was shot/made elsewhere
-                # as that's who came up with the idea & spent the money & now owns the thing
-                # ex new batman movie was shot in the UK but would count 
-                # as american cause the americans produced it right?
-        # -for RPF list country of origin/residence of people in question
-        # or where present country(ies) of origin of the media they are famous for
-            # eg kpop groups should be listed as korean (even if some of the members aren't)
-            # eg US american movies/TV should be listed as US american
-            # but eg youtubers or sports are global categories, 
-                # so should be listed for specific ppl involved instead
-    # and release years while we're at it where possible
-        # where it's many things we should add them individually maybe (like marvel & DC)
-        # for series/franchises that spanned multiple years include beginning & end years
+
+
+
+if __name__ == "__main__":
+    all_unformatted_characters = gather_all_raw_characters()
+    # character_dict = {"all_unformatted_characters": all_unformatted_characters}
+    # with open("data/reference_and_test_files/full_characters_list.json", "w") as file:
+    #     dump(character_dict, file, indent=4)
+    bracketless_characters = remove_brackets(all_unformatted_characters)
+    # character_dict = {"no_brackets_characters": bracketless_characters}
+    # with open("data/reference_and_test_files/cleaned_characters_list_1_no_brackets.json", "w") as file:
+    #     dump(character_dict, file, indent=4)
+    split_name_characters = separate_name_parts(bracketless_characters)
+    character_dict = {"split_name_characters": split_name_characters}
+    with open("data/reference_and_test_files/cleaned_characters_list_2_split_names.json", "w") as file:
+        dump(character_dict, file, indent=4)
