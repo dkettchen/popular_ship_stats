@@ -136,6 +136,9 @@
     # and release years while we're at it where possible
         # where it's many things we should add them individually maybe (like marvel & DC)
         # for series/franchises that spanned multiple years include beginning & end years
+        # -> do "relevant dates" item instead of simply release year
+            # -> contains release dates, end dates, season releases, 
+            # important events if I know of them (like destiel confession)
 
 # - for pairings: add a columns abt whether they're canon or not bc that's a stat I'd like to track
     # however I'm aware of how hard this may end up being to determine for all the pairings, 

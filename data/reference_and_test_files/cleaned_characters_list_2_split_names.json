@@ -191,7 +191,8 @@
         "Anakin Skywalker | Darth Vader": [
             "Anakin",
             "Skywalker",
-            "Darth Vader"
+            "Darth",
+            "Vader"
         ],
         "Andrea Sachs": [
             "Andrea",
@@ -394,7 +395,8 @@
         "Ben Solo | Kylo Ren": [
             "Ben",
             "Solo",
-            "Kylo Ren"
+            "Kylo",
+            "Ren"
         ],
         "Benton Fraser": [
             "Benton",
@@ -536,7 +538,8 @@
             "Cabello"
         ],
         "Captain Hook | Killian Jones": [
-            "Captain Hook",
+            "Captain",
+            "Hook",
             "Killian",
             "Jones"
         ],
@@ -1954,7 +1957,8 @@
             "Broflovski"
         ],
         "Kylo Ren": [
-            "Kylo Ren"
+            "Kylo",
+            "Ren"
         ],
         "K\u00edli": [
             "K\u00edli"
@@ -1966,8 +1970,7 @@
             "Lance"
         ],
         "Lapis Lazuli": [
-            "Lapis",
-            "Lazuli"
+            "Lapis Lazuli"
         ],
         "Laura Hollis": [
             "Laura",
@@ -2304,7 +2307,8 @@
         "Mary Wardwell | Madam Satan | Lilith": [
             "Mary",
             "Wardwell",
-            "Madam Satan",
+            "Madam",
+            "Satan",
             "Lilith"
         ],
         "Matoi Ryuuko": [
@@ -2789,7 +2793,8 @@
             "Kittisawat"
         ],
         "Princess Bubblegum": [
-            "Princess Bubblegum"
+            "Princess",
+            "Bubblegum"
         ],
         "Prompto Argentum": [
             "Prompto",
@@ -2982,11 +2987,13 @@
         ],
         "Rumpelstiltskin | Mr. Gold": [
             "Rumpelstiltskin",
-            "Mr. Gold"
+            "Mr.",
+            "Gold"
         ],
         "Rumplestiltskin | Mr. Gold": [
             "Rumpelstiltskin",
-            "Mr. Gold"
+            "Mr.",
+            "Gold"
         ],
         "Ryan Ross": [
             "Ryan",
@@ -3535,8 +3542,7 @@
             "Theerapanyakun"
         ],
         "Venom Symbiote": [
-            "Venom",
-            "Symbiote"
+            "Venom Symbiote"
         ],
         "Venti": [
             "Venti"

@@ -1,160 +1,454 @@
-from src.util_functions.get_file_paths import find_paths
-from src.util_functions.attempting_pandas import json_list_of_dicts_to_data_frame
-from json import dump
-from re import split
+from src.fourth_stage_fixing_values_code.separate_names_into_parts import (
+    gather_all_raw_characters, 
+    remove_brackets, 
+    separate_name_parts
+)
+from json import dump, load
 
-def gather_all_raw_characters():
+def group_split_names_by_fandom(character_dict):
     """
-    returns a list of all unique character names from the stage 3 data sets
+    takes dict with split name values as output by separate_name_parts_func
+
+    returns a dict with two keys ("RPF" and "fictional"), 
+    each holding a nested dict value of the following format:
+    {
+        <fandom>: {
+            {
+                "split_name": <split name list from input dict value>,
+                "og_name": <non-split name from input dict key>
+            }, ...
+        }, ...
+    }
     """
-    name_list = []
+    with open("data/reference_and_test_files/full_characters_per_fandom.json") as char_per_fandom_file:
+        char_per_fandom_data = load(char_per_fandom_file)
+    RPF_dict = char_per_fandom_data["RPF"]
+    fic_dict = char_per_fandom_data["fictional"]
 
-    all_paths = find_paths("data/third_clean_up_data/")
-
-    for path in all_paths:
-        read_df = json_list_of_dicts_to_data_frame(path)
-        relationship_list = list(read_df["Relationship"])
-        for part in relationship_list:
-            name_list.extend(part) 
-            # no clue what happened here that we needed to iterate over it hm
-
-    unique_list = sorted(list(set(name_list)))
-
-    return unique_list
-
-def remove_brackets(character_list):
-    """
-    takes a list of unique character names, removes all suffixes in brackets ()
-
-    returns a dict in the format of {<old_name>: <new_name>, ...}, 
-    with a key for each value in the input list
-    """
-    name_dict = {}
-
-    for old_name in character_list:
-        if "(" in old_name:
-            for char in range(len(old_name)):
-                if old_name[char] == "(":
-                    bracket_index = char - 1 # including preceding whitespace
-            new_name = old_name[:bracket_index]
-        else: new_name = old_name
-
-        name_dict[old_name] = new_name
-        # -> so we can say "if it was this, make it this", 
-        # and avoid double trouble between fandoms or same character formatted differently
-        # in testing we'll also be able to check that same amount of keys as input names
-
-    return name_dict
-
-def separate_name_parts(character_dict):
-    """
-    takes a dict in the format of {<old_name>: <new_name>, ...} 
-    as output by the remove brackets func
-
-    returns a dict in the same format, except the new name has been separated into its parts
-
-    where present aliases that consist of multiple words have been kept together
-
-    any names with "<something> of <something>" or "<something> the <something>" 
-    have been split before the "of"/"the", grouping them with the latter portion of the name
-
-    RM from BTS and Rumpelstiltskin from Once Upon A Time have been 
-    given a unified spelling to get rid of their doubles
-    Rogue One characters have had their keys fixed after a prior formatting error
-    """
-    new_dict = {}
-    for key in character_dict:
-        value = character_dict[key]
-        if " | " in value:
-            split_name = split(r" \| ", value)
-        else: split_name = [value]
-        new_name = []
-        for part in split_name:
-            if part in ['Rap Monster', 'RM']:
-                new_part = ["Rap Monster / RM"]
-            elif part in ['Rumpelstiltskin', 'Rumplestiltskin']:
-                new_part = ["Rumpelstiltskin"]
-            elif " of " in part:
-                new_split = split(r" of ", part)
-                new_part = [new_split[0], "of " + new_split[1]]
-            elif part == "Geralt z Rivii":
-                new_part = ["Geralt","z Rivii"]
-            elif " di " in part:
-                new_split = split(r" di ", part)
-                new_part = [new_split[0], "di " + new_split[1]]
-            elif " al " in part:
-                new_split = split(r" al ", part)
-                new_part = [new_split[0], "al " + new_split[1]]
-            elif " Van " in part:
-                new_split = split(r" Van ", part)
-                new_part = [new_split[0], "Van " + new_split[1]]
-            elif " the " in part:
-                new_split = split(r" the ", part)
-                new_part = [new_split[0], "the " + new_split[1]]
-            elif part == "Helena 'H. G.' Wells":
-                new_part = ["Helena","'H. G.'","Wells"]
-            elif "Female " in part:
-                new_part = [part[7:]]
-            elif "Male " in part:
-                new_part = [part[5:]]
-            elif part == "You":
-                new_part = ["Reader"]
-            elif "Rogue One" in part:
-                if "Baze Malbus" in part:
-                    new_part = ["Baze", "Malbus"]
-                    key = "Baze Malbus"
-                elif "Jyn Erso" in part:
-                    new_part = ["Jyn", "Erso"]
-                    key = "Jyn Erso"
-            elif part not in [
-                'Chat Noir',
-                'Darth Vader',
-                'Captain Hook',
-                'Evil Queen',
-                'The Golden Guard',
-                'The Archivist',
-                'Six-eared Macaque',
-                'Madam Satan',
-                'My Unit', # I think this is not a name, but tbh look up, other name was 'Byleth'
-                'Red Riding Hood',
-                'Cherry Blossom',
-                'Soldier: 76',
-                'Monkey King',
-                'The Darkling',
-                'All Might',
-                'Present Mic',
-                'Kylo Ren',
-                "Ninth Doctor",
-                "Persona 5 Protagonist",
-                "Princess Bubblegum",
-                "Pink Diamond",
-                "Rose Quartz",
-                "Mr. Gold",
-                "Tenth Doctor",
-                "The Doctor",
-                "Thirteenth Doctor",
-                "Twelfth Doctor",
-                "Upgraded Connor",
-                ]:
-                new_part = split(r"\s", part)
-            else:
-                new_part = [part]
-            new_name.extend(new_part)
-        new_dict[key] = new_name
-
-    return new_dict
-            
-#TODO:
-def categorise_name_parts(character_dict):
-    """
-    takes a dict with split name values as output by separate_name_parts func
-
-    returns a (dict??) of dicts with appropriately categorised names for each character
-    """
     # categorise names by fandoms, so we can make sure we're staying within each fandom
+    split_names_by_fandoms = {
+        "RPF": {},
+        "fictional": {}
+    }
+    for fandom in RPF_dict:
+        split_names_by_fandoms["RPF"][fandom] = []
+        for character in RPF_dict[fandom]:
+            if character in list(character_dict.keys()):
+                split_name = character_dict[character]
+                temp_dict = {
+                    "split_name": split_name,
+                    "og_name": character
+                }
+                split_names_by_fandoms["RPF"][fandom].append(temp_dict)
+            else: print(character, "from", fandom, "is missing")
+    for fandom in fic_dict:
+        split_names_by_fandoms["fictional"][fandom] = []
+        for character in fic_dict[fandom]:
+            if character in list(character_dict.keys()):
+                split_name = character_dict[character]
+                temp_dict = {
+                    "split_name": split_name,
+                    "og_name": character
+                }
+                split_names_by_fandoms["fictional"][fandom].append(temp_dict)
+            elif character == "Baze Malbus Rogue One: A":
+                split_name = character_dict["Baze Malbus"]
+                temp_dict = {
+                    "split_name": split_name,
+                    "og_name": character
+                }
+                split_names_by_fandoms["fictional"][fandom].append(temp_dict)
+            elif character == "Jyn Erso Rogue One: A":
+                split_name = character_dict["Jyn Erso"]
+                temp_dict = {
+                    "split_name": split_name,
+                    "og_name": character
+                }
+                split_names_by_fandoms["fictional"][fandom].append(temp_dict)
+            else: print(character, "from", fandom, "is missing")
+
+    return split_names_by_fandoms
+
+def categorise_names(char_by_fandom_dict):
+    """
+    takes a dict as put out by group_split_names_by_fandom
+
+    returns a dict with two keys ("RPF" and "fictional"), 
+    each holding a nested dict value of the following format: 
+    {
+        <fandom>: {
+            <character_name>: {
+                "given_name": None or str,
+                "middle_name(s)": None or str,
+                "surname": None or str,
+                "alias": None or str,
+                "nickname": None or str,
+                "title (prefix)": None or str,
+                "title (suffix)": None or str,
+                "full_name": None or str
+                "op_versions": [str, ...]
+            }, ...
+        }, ...
+    }
+    """
+
+    # setting up useful variables
+    rpf_dict = char_by_fandom_dict["RPF"]
+    fic_dict = char_by_fandom_dict["fictional"]
+    all_rpf_fandoms = list(rpf_dict.keys())
+    all_fic_fandoms = list(fic_dict.keys())
+
+    # first key layer (rpf vs fictional)
+    categorised_characters = {
+        "RPF": {},
+        "fictional": {}
+    }
+
+    # second key layer (fandoms)
+    for fandom in all_rpf_fandoms:
+        categorised_characters["RPF"][fandom] = {}
+    for fandom in all_fic_fandoms:
+        categorised_characters["fictional"][fandom] = {}
+
 
     # for simple, two-name, obviously first-name-last-name ordered characters, 
     #   categorise them as "given name" and "surname" by order
+
+
+    # these should all already be in the surname - given name order
+    eastern_order_folks = [
+        ['Jeon', 'Jungkook'],
+        ['Park', 'Jimin'],
+        ['Byun', 'Baekhyun'],
+        ['Park', 'Chanyeol'],
+        ['Boyang', 'Jin'],
+        ['Yuzuru', 'Hanyu'],
+        ['Xiao', 'Zhan'],
+        ['Akanishi', 'Jin'],
+        ['Kamenashi', 'Kazuya'],
+        ['Lee', 'Jeno'],
+        ['Na', 'Jaemin'],
+        ['Kang', 'Seulgi'],
+        ['Hwang', 'Hyunjin'],
+        ['Choi', 'Soobin'],
+        ['Choi', 'Yeonjun'],
+        ['Asami', 'Sato'],
+        ['Lin', 'Beifong'],
+        ['Mikage', 'Reo'],
+        ['Nagi', 'Seishirou'],
+        ['Akutagawa', 'Ryuunosuke'],
+        ['Dazai', 'Osamu'],
+        ['Nakahara', 'Chuuya'],
+        ['Nakajima', 'Atsushi'],
+        ['Hinata', 'Hajime'],
+        ['Komaeda', 'Nagito'],
+        ['Oma', 'Kokichi'],
+        ['Saihara', 'Shuichi'],
+        ['Matsuoka', 'Rin'],
+        ['Nanase', 'Haruka'],
+        ['Tachibana', 'Makoto'],
+        ['Kaedehara', 'Kazuha'],
+        ['Kamisato', 'Ayato'],
+        ['Xiao', 'Alatus'],
+        ['Yae', 'Miko'],
+        ['Akaashi', 'Keiji'],
+        ['Bokuto', 'Koutarou'],
+        ['Hinata', 'Shouyou'],
+        ['Iwaizumi', 'Hajime'],
+        ['Kageyama', 'Tobio'],
+        ['Kozume', 'Kenma'],
+        ['Kuroo', 'Tetsurou'],
+        ['Miya', 'Atsumu'],
+        ['Oikawa', 'Tooru'],
+        ['Sakusa', 'Kiyoomi'],
+        ['Sawamura', 'Daichi'],
+        ['Shimizu', 'Kiyoko'],
+        ['Sugawara', 'Koushi'],
+        ['Tsukishima', 'Kei'],
+        ['Yachi', 'Hitoka'],
+        ['Yamaguchi', 'Tadashi'],
+        ['Aoyagi', 'Touya'],
+        ['Kamishiro', 'Rui'],
+        ['Shinonome', 'Akito'],
+        ['Tenma', 'Tsukasa'],
+        ['Huā', 'Chéng'],
+        ['Xiè', 'Lián'],
+        ['Kakyoin', 'Noriaki'],
+        ['Kujo', 'Jotaro'],
+        ['Getou', 'Suguru'],
+        ['Gojo', 'Satoru'],
+        ['Kiryuuin', 'Satsuki'],
+        ['Matoi', 'Ryuuko'],
+        ['Ayase', 'Eli'], # love live, already in eastern order, can stay that way
+        ['Nishikino', 'Maki'],
+        ['Toujou', 'Nozomi'],
+        ['Yazawa', 'Nico'],
+        ['Asui', 'Tsuyu'],
+        ['Bakugou', 'Katsuki'],
+        ['Jirou', 'Kyouka'],
+        ['Kaminari', 'Denki'],
+        ['Kirishima', 'Eijirou'],
+        ['Midoriya', 'Izuku'],
+        ['Shinsou', 'Hitoshi'],
+        ['Todoroki', 'Shouto'],
+        ['Uraraka', 'Ochako'],
+        ['Yaoyorozu', 'Momo'],
+        ['Haruno', 'Sakura'],
+        ['Hatake', 'Kakashi'],
+        ['Uchiha', 'Sasuke'],
+        ['Umino', 'Iruka'],
+        ['Uzumaki', 'Naruto'],
+        ['Yamanaka', 'Ino'],
+        ['Liu', 'Chenxiang'],
+        ['Kim', 'Dokja'],
+        ['Yoo', 'Joonghyuk'],
+        ['Roronoa', 'Zoro'],
+        ['Vinsmoke', 'Sanji'],
+        ['Hanzo', 'Shimada'],
+        ['Akechi', 'Goro'],
+        ['Amagi', 'Yukiko'],
+        ['Satonaka', 'Chie'],
+        ['Kaiou', 'Michiru'],
+        ['Tenoh', 'Haruka'],
+        ['Akemi', 'Homura'],
+        ['Kaname', 'Madoka'],
+        ['Miki', 'Sayaka'],
+        ['Sakura', 'Kyouko'],
+        ['Hasegawa', 'Langa'],
+        ['Kyan', 'Reki'],
+        ['Hyakuya', 'Mikaela'],
+        ['Hyakuya', 'Yuuichirou'], # seraph of the end, yuuichirou is given name, eastern order
+        ['Zhèng', 'Yúnlóng'],
+        ['Kira', 'Yukimura'],
+        ['Nagachika', 'Hideyoshi'],
+        ['Sasaki', 'Haise'],
+        ['Penelope', 'Park'], # is this one? ditto as above
+        ['Wen', 'Kexing'],
+        ['Zhou', 'Zishu'],
+        ['Katsuki', 'Yuuri'],
+    ]
+    non_double_names = [
+        ['Ryan', 'GoodTimesWithScar'],
+        ['Princess', 'Bubblegum'],
+        ['Kya', 'II'],
+        ['Ymir', 'of the 104th'],
+        ['Upgraded Connor', 'RK900'],
+        ['My Unit', 'Byleth'], # this is fire emblem protag/pc
+        ['Red Riding Hood', 'Ruby'],
+        ['Lapis', 'Lazuli'],
+        ['Rose Quartz', 'Pink Diamond'],
+        ['Dream', 'of the Endless'],
+        ['Jaskier', 'Dandelion'],
+        ['Vash', 'the Stampede']
+    ]
+    single_first_names = [
+        'Adam', 
+        'Adora', 
+        'Alistair', 
+        'Allura', 
+        'Alphys',  
+        'Anna', 
+        'Anya', 
+        'Arthur', 
+        'Astra', 
+        'Aurora', 
+        'Axel', 
+        'Aziraphale', 
+        'Azula',  
+        'Belle', 
+        'Bo', 
+        'Caitlyn', 
+        'Calliope', 
+        'Carlos', 
+        'Castiel', 
+        'Catra', 
+        'Chloe', 
+        'Clara', 
+        'Connor', 
+        'Costia', 
+        'Dina', 
+        'Donatello', 
+        'Ellie', 
+        'Elsa', 
+        'Emily', 
+        'Evie', 
+        'Fenris', 
+        'Finn', 
+        'Frank', 
+        'Fíli', 
+        'Gabriel', 
+        'Gabrielle', 
+        'Gerard', 
+        'Gilda', 
+        'Glimmer', 
+        'Guinevere', 
+        'Gwen', 
+        'Isabela', 
+        'Jean', 
+        'Joel', 
+        'Katara', 
+        'Keith', 
+        'Korra', 
+        'Kíli', 
+        'Lance', 
+        'Lauren', 
+        'Leliana', 
+        'Leonardo', 
+        'Levi', 
+        'Lexa',
+        'Lisa', 
+        'Loki', 
+        'Lucifer', 
+        'Mal', 
+        'Maleficent', 
+        'Marceline', 
+        'Merlin', 
+        'Michelangelo', 
+        'Morgana', 
+        'Morgause', 
+        'Mulan',
+        'Penny', 
+        'Perfuma', 
+        'Raphael', 
+        'Rey', 
+        'Scorpia', 
+        'Sera', 
+        'Shego', 
+        'Shiro', 
+        'Skye', 
+        'Sokka', 
+        'Solas',  
+        'Thoma', 
+        'Thor', 
+        'Undyne', 
+        'Vi', 
+        'Viktor', 
+        'Warden', 
+        'Wilhelm', 
+        'Willie', 
+        'Xena', 
+        'Yasha', 
+        'Ymir', 
+        'Zuko'
+    ]
+    single_aliases = [
+        'Dabi',
+        'Genos',
+        'GeorgeNotFound',
+        'Q',
+        'Ranboo',
+        'Saitama',
+        'Sapnap',
+        'Technoblade',
+        'TommyInnit',
+    ]
+
+
+    for category in ["RPF", "fictional"]:
+        current_dict = char_by_fandom_dict[category]
+        for fandom in current_dict:
+            for name in current_dict[fandom]: # fandom key's value is a list of dicts
+                split_name = name["split_name"]
+                if len(split_name) == 2 \
+                    and split_name not in non_double_names \
+                        and "Doctor" not in split_name: 
+                    # if there is only two names
+                    if split_name in eastern_order_folks: 
+                        # if they're already in eastern order & should stay that way
+                        surname = split_name[0]
+                        given_name = split_name[1]
+                        order = "E"
+                    elif split_name == ['Lee', 'Felix']: 
+                        # man's australian, if we have mark in western order, felix should be too
+                        surname = split_name[0]
+                        given_name = split_name[1]
+                        order = "W"
+                    else: 
+                        # they're in western order
+                        given_name = split_name[0]
+                        surname = split_name[1]
+                        order = "W"
+                elif len(split_name) == 1 \
+                    and split_name[0] != "Reader" \
+                        and "Doctor" not in split_name[0]:
+                    # if there's only one name part
+                    if split_name[0] in single_first_names:
+                        given_name = split_name[0]
+                    elif split_name[0] in single_aliases:
+                        alias = split_name[0]
+                    #else: 
+                    #    print(f"('{split_name[0]}', '{fandom}'),") 
+                    #    # there's a buncha stuff to look up & possibly add to first names & aliases lists
+                    
+
+
+
+
+
+
+
+
+    # for category in split_names_by_fandoms: # aka RPF or fic
+    #     for fandom in split_names_by_fandoms[category]:
+    #         for name in split_names_by_fandoms[category][fandom]:
+    #             if len(name["split_name"]) == 1:
+    #                 print(f"({name['split_name']}, '{fandom}'),")
+    #                 single_item_name = name["split_name"]
+    #                 if (single_item_name, fandom) in 
+
+                # if len(name["split_name"]) == 2 and "Lee" in name["split_name"]: #example, needs more
+                #     given_name = name["split_name"][1]
+                #     surname = name["split_name"][0]
+                #     order = "E"
+                    
+                # if len(name["split_name"]) == 2:
+                #     given_name = name["split_name"][0]
+                #     surname = name["split_name"][1]
+                #     order = "W"
+                #     print(name["split_name"])
+                # # elif len(name["split_name"]) == 1: 
+                # #     print(f"{fandom}: {name}")
+                # temp_dict = {
+                #     "given_name" : given_name,
+                #     "surname": surname,
+                #     "order": order
+                # }
+
+
+    # currently not correctly categorised: (as far as I can tell)
+    """
+
+
+    (this list may not be exhaustive rip)
+    q: do we make all anime characters follow eastern order or only the ones w non-western names?
+        -I say only non-western ones, 
+        bc I think they tend to also use western order for western last-name ppl, idk
+        -> check wikis for cases where unsure??
+
+    ['Anne', 'Boonchuy'] # thai american, protag of amphibia, western order
+    ['Marcy', 'Wu'] # taiwanese, also amphibia, also western order
+    ['Levi', 'Ackerman'] # ackermans are western order on the wiki
+    ['Mikasa', 'Ackerman']
+    ['Kanaya', 'Maryam'] # fucking homestuck
+    ['Karkat', 'Vantas']
+    ['Meenah', 'Peixes']
+    ['Tavros', 'Nitram']
+    ['Terezi', 'Pyrope']
+    ['Heero', 'Yuy'] # gundam, hiiro yui, in that order, I'm gonna assume it's western order 
+                     # bc neither of his parents share his last name???? 
+                     # and both of em have western last names so uhh
+    ['Hikaru', 'Sulu'] # order is fine like this, just call it western, 
+                       # star trek don't care abt eastern order lmao
+    ['Quynh', 'Noriko'] # old guard -> noriko is og, quynh is movie version, both single names
+    ['Tori', 'Vega'] # victoria 'tori' vega from victorious
+    ['Lucy', 'Chen'] # the rookie protag, western order
+    ['Ty', 'Lee'] # avatar, we'll call it western order
+    ['Lee', 'Adama'] # Commander Leland "Lee" Joseph Adama from battlestar galactica
+
+        ['Mark', 'Lee']    ['Lee', 'Felix'] how do we handle these two?
+    """
+
+
 
     # for eastern names w possibly/likely different order, 
     #   look up which is given name if unsure
@@ -189,16 +483,11 @@ def categorise_name_parts(character_dict):
 
 if __name__ == "__main__":
     all_unformatted_characters = gather_all_raw_characters()
-    # character_dict = {"all_unformatted_characters": all_unformatted_characters}
-    # with open("data/reference_and_test_files/full_characters_list.json", "w") as file:
-    #     dump(character_dict, file, indent=4)
-    
     bracketless_characters = remove_brackets(all_unformatted_characters)
-    # character_dict = {"no_brackets_characters": bracketless_characters}
-    # with open("data/reference_and_test_files/cleaned_characters_list_1_no_brackets.json", "w") as file:
-    #     dump(character_dict, file, indent=4)
-
     split_name_characters = separate_name_parts(bracketless_characters)
-    # character_dict = {"split_name_characters": split_name_characters}
-    # with open("data/reference_and_test_files/cleaned_characters_list_2_split_names.json", "w") as file:
+    grouped_by_fandom = group_split_names_by_fandom(split_name_characters)
+
+    categorised_names = categorise_names(grouped_by_fandom)
+    # character_dict = {"categorised_name_characters": categorised_names}
+    # with open("data/reference_and_test_files/cleaned_characters_list_3_categorised_names.json", "w") as file:
     #     dump(character_dict, file, indent=4)
