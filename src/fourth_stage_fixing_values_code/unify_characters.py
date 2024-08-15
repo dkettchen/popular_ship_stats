@@ -406,7 +406,110 @@ def categorise_names(char_by_fandom_dict):
         'Lincoln',
     ]
 
-    
+    surname_given_alias_E = [
+        ['Jung', 'Hoseok', 'J-Hope'],
+        ['Kim', 'Namjoon', 'Rap Monster / RM'],
+        ['Kim', 'Seokjin', 'Jin'],
+        ['Kim', 'Taehyung', 'V'],
+        ['Min', 'Yoongi', 'Suga'],
+        ['Xiao', 'Zhan', 'Sean'],
+        ['Sun', 'Wukong', 'Monkey King'], # is this given-sur in the right order already?
+        ['Aizawa', 'Shouta', 'Eraserhead'],
+        ['Takami', 'Keigo', 'Hawks'],
+        ['Yagi', 'Toshinori', 'All Might'],
+        ['Yamada', 'Hizashi', 'Present Mic'],
+        ['Sakurayashiki', 'Kaoru', 'Cherry Blossom'],
+        ['Lee', 'Donghyuck', 'Haechan'],
+        ['Bae', 'Joohyun', 'Irene'],
+        ['Han', 'Jisung', 'Han'],
+        ['Do', 'Kyungsoo', 'D.O'],
+        ['Kim', 'Jongin', 'Kai'],
+        ['Nanjo', 'Kojiro', 'Joe'],
+    ]
+    first_last_alias_W = [
+        ['Phil', 'Watson', 'Philza'],
+        ['Toby', 'Smith', 'Tubbo'],
+        ['Tom', 'Riddle', 'Voldemort'],
+        ['Adrien', 'Agreste', 'Chat Noir'],
+        ['Marinette', 'Dupain-Cheng', 'Ladybug'],
+    ]
+    first_nick_last_W = [
+        ['Evan', "'Buck'", 'Buckley'],
+        ['Aemond', "'One-Eye'", 'Targaryen'],
+        ['John', "'Soap'", 'MacTavish'],
+        ['Simon', "'Ghost'", 'Riley'],
+        ['Jennifer', "'JJ'", 'Jareau'],
+        ['Samantha', "'Sam'", 'Arias'],
+        ['Calliope', "'Callie'", 'Torres'],
+        ['Elizabeth', "'Eliza'", 'Schuyler'],
+        ['Danny', "'Danno'", 'Williams'],
+        ['Charles', "'Charlie'", 'Spring'],
+        ['Nicholas', "'Nick'", 'Nelson'],
+        ['Gary', "'Eggsy'", 'Unwin'],
+        ['Maxine', "'Max'", 'Caulfield'],
+        ['Atsuko', "'Akko'", 'Kagari'],
+        ['James', "'Bucky'", 'Barnes'],
+        ['Angela', "'Mercy'", 'Ziegler'], # these are more like aliases
+        ['Fareeha', "'Pharah'", 'Amari'], #
+        ['Lena', "'Tracer'", 'Oxton'], #
+        ['Leonard', "'Bones'", 'McCoy'],
+        ['Jim', "'Chief'", 'Hopper'],
+        ['Maxine', "'Max'", 'Mayfield'],
+        ['Bradley', "'Rooster'", 'Bradshaw'], # what fandom are these ones from?
+        ['Jake', "'Hangman'", 'Seresin'], #
+        ['Pete', "'Maverick'", 'Mitchell'], #
+        ['Tom', "'Iceman'", 'Kazansky'], # alias
+        ['Helena', "'H. G.'", 'Wells'],
+    ]
+    first_middle_last_W = [
+        ['Brittany', 'S.', 'Pierce'],
+        ['Mobius', 'M.', 'Mobius'],
+        ['James', 'T.', 'Kirk'],
+        ['Nicholas', 'D.', 'Wolfwood'],
+        ['Brooke', 'Lynn', 'Hytes'],
+        ['Dimitri', 'Alexandre', 'Blaiddyd'],
+        ['Felix', 'Hugo', 'Fraldarius'],
+        ['Sylvain', 'Jose', 'Gautier'],
+        ['Brenda', 'Leigh', 'Johnson'],
+        ['Clara', 'Oswin', 'Oswald'],
+        ['Kinn', 'Anakinn', 'Theerapanyakun'],
+        ['Vegas', 'Kornwit', 'Theerapanyakun'],
+        ['Pete', 'Phongsakorn', 'Saengtham'],
+        ['Porchay', 'Pichaya', 'Kittisawat'],
+        ['Porsche', 'Pachara', 'Kittisawat'],
+        ['Even', 'Bech', 'Næsheim'],
+    ]
+    alias_first_last_W = [
+        ['Skye', 'Daisy', 'Johnson'], # iirc -> look up
+        ['Evil Queen', 'Regina', 'Mills'],
+        ['Blackbeard', 'Edward', 'Teach'],
+        ['Reaper', 'Gabriel', 'Reyes'],
+        ['Soldier: 76', 'Jack', 'Morrison'],
+        ['Widowmaker', 'Amélie', 'Lacroix'],
+        ['Root', 'Samantha', 'Groves'],
+        ['The Darkling', 'Aleksander', 'Morozova'],
+        ['Eleven', 'Jane', 'Hopper'],
+        ['Anxiety', 'Virgil', 'Sanders'],
+        ['Logic', 'Logan', 'Sanders'],
+        ['Morality', 'Patton', 'Sanders'],
+    ]
+    first_maiden_last_W = [
+        ['Kristin', 'Rosales', 'Watson'],
+        ['Bellatrix', 'Black', 'Lestrange'],
+        ['Lily', 'Evans', 'Potter'],
+    ]
+    nick_first_last_W = [
+        ['Andy', 'Andromache', 'of Scythia'],
+        ['Joe', 'Yusuf', 'Al-Kaysani'],
+    ]
+    nick_sur_given_E = [
+        ['Mikey', 'Sano', 'Manjirou'],
+        ['Takemitchy', 'Hanagaki', 'Takemichi'],
+    ]
+
+    ( # things that need fixing
+        ['Edelgard', 'von', 'Hresvelg'],
+    )
 
 
     for category in ["RPF", "fictional"]:
@@ -460,13 +563,112 @@ def categorise_names(char_by_fandom_dict):
                         surname = split_name[0]
                     elif "Venom" in split_name[0]:
                         alias = "Venom"
-                    else: 
-                       print(f"'{split_name[0]}', {category}") 
-                    #    # there's a buncha stuff to look up & possibly add to first names & aliases lists
-                    
 
+                elif len(split_name) == 3:
+                    if split_name in surname_given_alias_E:
+                        surname = split_name[0]
+                        given_name = split_name[1]
+                        alias = split_name[2]
+                        order = "E"
+                    elif split_name in first_last_alias_W:
+                        given_name = split_name[0]
+                        surname = split_name[1]
+                        alias = split_name[2]
+                        order = "W"
+                    elif split_name in first_nick_last_W:
+                        given_name = split_name[0]
+                        nickname = split_name[1]
+                        surname = split_name[2]
+                        order = "W"
+                    elif split_name in first_middle_last_W:
+                        given_name = split_name[0]
+                        middle_name = split_name[1]
+                        surname = split_name[2]
+                        order = "W"
+                    elif split_name in alias_first_last_W:
+                        alias = split_name[0]
+                        given_name = split_name[1]
+                        surname = split_name[2]
+                        order = "W"
+                    elif split_name in first_maiden_last_W:
+                        given_name = split_name[0]
+                        surname = split_name[1] + "-" + split_name[2]
+                        order = "W"
+                    elif split_name in nick_first_last_W:
+                        nickname = split_name[0]
+                        given_name = split_name[1]
+                        surname = split_name[2]
+                        order = "W"
+                    elif split_name in nick_sur_given_E:
+                        nickname = split_name[0]
+                        surname = split_name[1]
+                        given_name = split_name[2]
+                        order = "E"
 
+                    elif split_name == ['Original', 'Percival', 'Graves']: # what is this original business, first, last, W
+                        given_name = split_name[1]
+                        surname = split_name[2]
+                        order = "W"
+                    elif split_name == ['Barty', 'Crouch', 'Jr.']: # first, last, junior suffix, W
+                        given_name = split_name[0]
+                        surname = split_name[1]
+                        title_suffix = split_name[2]
+                        order = "W"
+                    elif split_name == ['Rumpelstiltskin', 'Mr.', 'Gold']: # alias, title, surname W
+                        alias = split_name[0]
+                        title_prefix = split_name[1]
+                        surname = split_name[2]
+                        order = "W"
+                    elif split_name == ['Dabi', 'Todoroki', 'Touya']: # alias, surname, given E
+                        alias = split_name[0]
+                        surname = split_name[1]
+                        given_name = split_name[2]
+                        order = "W"
+                    elif split_name == ['Nicky', 'Nicolò', 'di Genova']: # assuming nick first last W
+                        nickname = split_name[0]
+                        given_name = split_name[1]
+                        surname = split_name[2]
+                        order = "W"
+                    elif split_name == ['Wang', 'Yi', 'Bo']: # sur given given, E
+                        surname = split_name[0]
+                        given_name = split_name[1] + " " + split_name[2]
+                        order = "E"
+                    elif split_name == ['Yang', 'Xiao', 'Long']: # given, sur sur E
+                        given_name = split_name[0]
+                        surname = split_name[1] + " " + split_name[2]
+                        order = "E"
+                    elif split_name == ['Oerba', 'Yun', 'Fang']: # surname-sur, given E
+                        surname = split_name[0] + "-" + split_name[1]
+                        given_name = split_name[2]
+                        order = "E"
+                    elif split_name == ['Raiden', 'Ei', 'Baal']: # two fucking different characters, to be investigated!
+                        surname = split_name[0]
+                        given_name = split_name[1]
+                        order = "E"
+                    elif split_name == ['Vanessa', 'Vanjie', 'Mateo']: # drag name, so I guess first middle last or alias as a whole W
+                        given_name = split_name[0]
+                        middle_name = split_name[1]
+                        surname = split_name[2]
+                        order = "W"
+                    elif split_name == ['Noctis', 'Lucis', 'Caelum']: # first KINGDOM HE'S THE PRINCE OF last W
+                        given_name = split_name[0]
+                        middle_name = split_name[1] # I GUESS
+                        surname = split_name[2]
+                        order = "W"
+                    elif split_name == ['Villanelle', 'Oksana', 'Astankova']: # alias, Oksana Anatolyevna Astankova first middle last W
+                        alias = split_name[0]
+                        given_name = split_name[1]
+                        middle_name = "Anatolyevna"
+                        surname = split_name[2]
+                        order = "W"
+                    elif split_name == ['Kim', 'Khimhant', 'Theerapanyakun']: # still no evidence of this middle name :l
+                        given_name = split_name[0]
+                        surname = split_name[2]
+                        alias = "Wik"
+                        order = "W"
 
+                    else:
+                        print(f"{split_name}, {fandom}")
 
 
 
