@@ -74,10 +74,10 @@ def categorise_names(char_by_fandom_dict):
     takes a dict as put out by group_split_names_by_fandom
 
     returns a dict with two keys ("RPF" and "fictional"), 
-    each holding a nested dict value of the following format: 
+    each holding a dict value of the following format: 
     {
-        <fandom>: {
-            <character_name>: {
+        <fandom>: [
+            {
                 "given_name": None or str,
                 "middle_name(s)": None or str,
                 "surname": None or str,
@@ -85,11 +85,12 @@ def categorise_names(char_by_fandom_dict):
                 "nickname": None or str,
                 "title (prefix)": None or str,
                 "title (suffix)": None or str,
-                "full_name": None or str
+                "full_name": None or str,
+                "fandom": str,
                 "op_versions": [str, ...]
             }, ...
-        }, ...
-    }
+        ], ...
+    ]
     """
 
     # setting up useful variables
@@ -98,17 +99,17 @@ def categorise_names(char_by_fandom_dict):
     all_rpf_fandoms = list(rpf_dict.keys())
     all_fic_fandoms = list(fic_dict.keys())
 
-    # first key layer (rpf vs fictional)
+    # first layer (rpf vs fictional keys)
     categorised_characters = {
         "RPF": {},
         "fictional": {}
     }
 
-    # second key layer (fandoms)
+    # second layer (fandom keys)
     for fandom in all_rpf_fandoms:
-        categorised_characters["RPF"][fandom] = {}
+        categorised_characters["RPF"][fandom] = []
     for fandom in all_fic_fandoms:
-        categorised_characters["fictional"][fandom] = {}
+        categorised_characters["fictional"][fandom] = []
 
 
     # for simple, two-name, obviously first-name-last-name ordered characters, 
@@ -247,6 +248,7 @@ def categorise_names(char_by_fandom_dict):
         'Alistair', 
         'Allura', 
         'Alphys',  
+        'Angel',
         'Anna', 
         'Anya', 
         'Arthur', 
@@ -329,25 +331,100 @@ def categorise_names(char_by_fandom_dict):
         'Xena', 
         'Yasha', 
         'Ymir', 
-        'Zuko'
+        'Zuko',
+        'Jayce',
+        'Beauregard',
+        'Albedo',
+        'Alhaitham',
+        'Beidou',
+        'Cyno',
+        'Diluc',
+        'Ganyu',
+        'Kaeya',
+        'Kaveh',
+        'Keqing',
+        'Ningguang',
+        'Scaramouche',
+        'Tighnari',
+        'Venti',
+        'Zhongli',
+        'Methos',
+        'Roxas',
+        'Tamsin',
+        'Genos',
+        'Saitama',
+        'Trini',
+        'Agron',
+        'Nasir',
+        'Amethyst',
+        'Garnet',
+        'Jasper',
+        'Lapis Lazuli',
+        'Pearl',
+        'Peridot',
+        'Rose Quartz',
+        'Ruby',
+        'Sapphire',
+        'Sans',
     ]
     single_aliases = [
         'Dabi',
-        'Genos',
         'GeorgeNotFound',
         'Q',
         'Ranboo',
-        'Saitama',
         'Sapnap',
         'Technoblade',
         'TommyInnit',
+        'Lightning',
+        'America',
+        'England',
+        'Root',
+        'Ayanga',
     ]
+    single_nicknames = [
+        'Spike',
+        'Kon-El',
+        'Vaggie',
+        'Spock',
+    ] # I'm including alien names where other names exist here, eg kryptonians
+    player_characters = [
+        'Hawke',
+        'Inquisitor',
+        'Traveler',
+        'Shepard',
+        'Persona 5 Protagonist',
+    ]
+    single_surnames = [
+        'Crowley',
+        'Eames',
+        'Courfeyrac',
+        'Enjolras',
+        'Grantaire',
+        'Javert',
+        'Uzumaki',
+        'Lestrade',
+        'Lincoln',
+    ]
+
+    
 
 
     for category in ["RPF", "fictional"]:
         current_dict = char_by_fandom_dict[category]
         for fandom in current_dict:
             for name in current_dict[fandom]: # fandom key's value is a list of dicts
+                default_dict = {
+                    "given_name": None,
+                    "middle_name(s)": None,
+                    "surname": None,
+                    "alias": None,
+                    "nickname": None,
+                    "title (prefix)": None,
+                    "title (suffix)": None,
+                    "full_name": None,
+                    "fandom": fandom,
+                    "op_versions": []
+                }
                 split_name = name["split_name"]
                 if len(split_name) == 2 \
                     and split_name not in non_double_names \
@@ -370,14 +447,21 @@ def categorise_names(char_by_fandom_dict):
                         order = "W"
                 elif len(split_name) == 1 \
                     and split_name[0] != "Reader" \
-                        and "Doctor" not in split_name[0]:
+                        and "Doctor" not in split_name[0] \
+                            and split_name[0] not in player_characters:
                     # if there's only one name part
                     if split_name[0] in single_first_names:
                         given_name = split_name[0]
                     elif split_name[0] in single_aliases:
                         alias = split_name[0]
-                    #else: 
-                    #    print(f"('{split_name[0]}', '{fandom}'),") 
+                    elif split_name[0] in single_nicknames:
+                        nickname = split_name[0]
+                    elif split_name[0] in single_surnames:
+                        surname = split_name[0]
+                    elif "Venom" in split_name[0]:
+                        alias = "Venom"
+                    else: 
+                       print(f"'{split_name[0]}', {category}") 
                     #    # there's a buncha stuff to look up & possibly add to first names & aliases lists
                     
 
