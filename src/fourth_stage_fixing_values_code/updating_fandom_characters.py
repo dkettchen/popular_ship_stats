@@ -7,7 +7,7 @@ def collect_characters_by_unified_fandoms():
     updates the full_characters_per_fandom file with unified fandoms
     """
 
-    all_paths = find_paths("data/third_clean_up_data/")
+    all_paths = find_paths("data/third_clean_up_data_json_lines_version/")
 
     with open("data/reference_and_test_files/unified_full_fandoms_list.json", "r") as fandoms_file:
         loaded_fandom_dict = load(fandoms_file) # loading dict of all unified fandoms

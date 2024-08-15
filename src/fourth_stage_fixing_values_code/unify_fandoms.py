@@ -32,7 +32,8 @@ def separate_RPF_from_fictional():
                 or 'BTS' in row["Fandom"] \
                 or "Fall Out Boy" in row["Fandom"] \
                 or "Minecraft" in row["Fandom"] \
-                or "Hermit" in row["Fandom"]:
+                or "Hermit" in row["Fandom"] \
+                or "Super-Vocal" in row["Fandom"]:
                 RPF_list.append(row["Fandom"])
 
             elif row["Fandom"] == "Star Wars Story (2016)":
@@ -120,6 +121,8 @@ def format_unified_labels(data_dict):
             new_rpf_fandom = "MIRROR"
         elif "Red Velvet" in rpf_fandom:
             new_rpf_fandom = "Red Velvet"
+        elif "Super-Vocal" in rpf_fandom:
+            new_rpf_fandom = '声入人心 | Super-Vocal'
         elif "|" in rpf_fandom:
             new_rpf_fandom = sub(r"\|", "/", rpf_fandom)
         else: new_rpf_fandom = rpf_fandom # it stays as is
@@ -158,7 +161,8 @@ def format_unified_labels(data_dict):
             '5 Seconds of Summer', 
             "Fall Out Boy",
             "Panic! at the Disco",
-            "Twenty One Pilots"
+            "Twenty One Pilots",
+            '声入人心 | Super-Vocal'
         ]:
             rpf_dict["Type"] = "Music RPF"
         elif rpf_dict["Fandom"] not in ["Drag", "Youtube", "Minecraft", "American Idol"]:
@@ -499,18 +503,6 @@ def unify_fandoms():
     }
     with open("data/reference_and_test_files/full_fandoms_list.json", "w") as fandom_list_file:
         dump(list_dict, fandom_list_file, indent=4)
-
-    #TODO:
-    # - use RPF separation helper func ✅
-    # - use format unified labels helper func ✅
-    # - turn op version sets into lists & order them ✅
-    # - order fandom keys alphabetically ✅
-    # - print result into a nice new json file ✅
-        # - this should update the fandoms list (nope I've made a separate one for now)
-            # use new fandoms to update list (without details!)
-        # -> unifies all fandoms into useable names ✅
-        # while collecting their original instances ✅
-        # & separating into RPF & fictional categories ✅
 
     pass
 
