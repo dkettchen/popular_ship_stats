@@ -919,23 +919,6 @@ def categorise_names(char_by_fandom_dict):
 
     return categorised_characters
 
-    # look for obvious doubles & go with most complete version
-
-    # look up missing bits & add them 
-    #   (eg last names, aliases, etc that I know exist, 
-    #   look for middle names where initials are present)
-
-    # look up any characters you don't know to make sure
-
-    # we're not fucking with translations, I've decided, 
-    #   so remove em where present (eg geralt of rivia)
-
-    # include (clean) fandom value & prior name versions for each character dict
-    
-    # return resulting collection
-    pass
-
-
 
 if __name__ == "__main__":
     all_unformatted_characters = gather_all_raw_characters()
