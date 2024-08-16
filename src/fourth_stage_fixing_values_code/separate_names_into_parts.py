@@ -71,7 +71,7 @@ def separate_name_parts(character_dict):
         new_name = []
         for part in split_name:
             if part in ['Rap Monster', 'RM']:
-                new_part = ["Rap Monster / RM"]
+                new_part = ["Rap Monster/RM"]
             elif part in ['Rumpelstiltskin', 'Rumplestiltskin']:
                 new_part = ["Rumpelstiltskin"]
             elif " of " in part:
@@ -88,6 +88,9 @@ def separate_name_parts(character_dict):
             elif " Van " in part:
                 new_split = split(r" Van ", part)
                 new_part = [new_split[0], "Van " + new_split[1]]
+            elif " von " in part:
+                new_split = split(r" von ", part)
+                new_part = [new_split[0], "von " + new_split[1]]
             elif " the " in part:
                 new_split = split(r" the ", part)
                 new_part = [new_split[0], "the " + new_split[1]]
@@ -134,9 +137,11 @@ def separate_name_parts(character_dict):
                 "The Doctor",
                 "Thirteenth Doctor",
                 "Twelfth Doctor",
+                "Eleventh Doctor",
                 "Upgraded Connor",
                 "Venom Symbiote",
-                "Lapis Lazuli"
+                "Lapis Lazuli", 
+                "Iron Bull"
                 ]:
                 new_part = split(r"\s", part)
             else:
