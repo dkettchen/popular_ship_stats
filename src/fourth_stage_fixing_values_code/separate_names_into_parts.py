@@ -154,14 +154,14 @@ def separate_name_parts(character_dict):
 
 if __name__ == "__main__":
     all_unformatted_characters = gather_all_raw_characters()
-    # character_dict = {"all_unformatted_characters": all_unformatted_characters}
-    # with open("data/reference_and_test_files/full_characters_list.json", "w") as file:
-    #     dump(character_dict, file, indent=4)
+    character_dict = {"all_unformatted_characters": all_unformatted_characters}
+    with open("data/reference_and_test_files/full_characters_list.json", "w") as file:
+        dump(character_dict, file, indent=4)
     
     bracketless_characters = remove_brackets(all_unformatted_characters)
-    # character_dict = {"no_brackets_characters": bracketless_characters}
-    # with open("data/reference_and_test_files/cleaned_characters_list_1_no_brackets.json", "w") as file:
-    #     dump(character_dict, file, indent=4)
+    character_dict = {"no_brackets_characters": bracketless_characters}
+    with open("data/reference_and_test_files/cleaned_characters_list_1_no_brackets.json", "w") as file:
+        dump(character_dict, file, indent=4)
 
     split_name_characters = separate_name_parts(bracketless_characters)
     character_dict = {"split_name_characters": split_name_characters}

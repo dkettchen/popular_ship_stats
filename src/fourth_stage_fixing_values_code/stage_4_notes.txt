@@ -146,3 +146,38 @@
     # also for pairings where they are canon in one version and not canon in another 
     # (eg destiel only being canon in spanish lmao, or lan zhan/wwx only being canon in the book)
     # -> have it be more options than just is_canon: true/false, to account for those ones
+
+
+    file running order to update helper files:
+    -unify_fandoms.py
+        - reads from:
+            third_clean_up_data_json_lines_version folder   <- dependant on json lines files
+        - updates: 
+            unified_full_fandoms_list.json
+            full_fandoms_list.json
+    -updating_fandom_characters.py
+        - reads from:
+            third_clean_up_data_json_lines_version folder   <- dependant on json lines files
+            unified_full_fandoms_list.json                  <- dependant on unify_fandoms
+        - updates:
+            full_characters_per_fandom.json
+    -separate_names_into_parts.py
+        - reads from:
+            third_clean_up_data folder                      <- dependant on non-json lines files
+        - updates:
+            full_characters_list.json
+            cleaned_characters_list_1_no_brackets.json
+            cleaned_characters_list_2_split_names.json
+    -categorise_character_names.py
+        - imports from: 
+            separate_names_into_parts.py                    <- dependant on separate_names_into_parts
+        - reads from:
+            full_characters_per_fandom.json                 <- dependant on updating_fandom_characters
+        - updates:
+            cleaned_characters_list_3_categorised_names.json
+    -complete_character_names.py
+        - imports from:
+            separate_names_into_parts.py                    <- dependant on separate_names_into_parts
+            categorise_character_names.py                   <- dependant on categorise_character_names
+        - updates:
+            cleaned_characters_list_3_abbreviated.json

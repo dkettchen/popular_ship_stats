@@ -124,6 +124,7 @@ def categorise_names(char_by_fandom_dict):
         'Inquisitor',
         'Traveler',
         'Shepard',
+        "Warden",
         'Persona 5 Protagonist',
         ['My Unit', 'Byleth'],
     ]
@@ -660,6 +661,7 @@ def categorise_names(char_by_fandom_dict):
                         surname = split_name[0]
                         given_name = split_name[1]
                         alias = split_name[2] + " " + split_name[0] # Sean Xiao
+                        order = "E"
                     elif split_name == ['Original', 'Percival', 'Graves']: # what is this original business, first, last, W
                         given_name = split_name[1]
                         surname = split_name[2]
@@ -838,10 +840,10 @@ def categorise_names(char_by_fandom_dict):
                         full_name += " " + middle_name
                     if nickname:
                         full_name += " " + "'" + nickname + "'"
-                    if maiden_name:
-                        full_name += " née " + maiden_name
                     if surname: 
                         full_name += " " + surname
+                    if maiden_name:
+                        full_name += ", née " + maiden_name
                 elif order == "E":
                     if surname: 
                         full_name += " " + surname

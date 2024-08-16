@@ -559,8 +559,8 @@
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
-                    "name_order": null,
-                    "full_name": "Zhan Xiao | Sean Xiao",
+                    "name_order": "E",
+                    "full_name": "Xiao Zhan | Sean Xiao",
                     "fandom": "Grandmaster of Demonic Cultivation / The Untamed | \u9b54\u9053\u7956\u5e08 / \u9648\u60c5\u4ee4",
                     "op_versions": [
                         "Xiao Zhan | Sean"
@@ -1540,7 +1540,7 @@
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Kristin n\u00e9e Rosales Watson",
+                    "full_name": "Kristin Watson, n\u00e9e Rosales",
                     "fandom": "Youtube",
                     "op_versions": [
                         "Kristin Rosales Watson"
@@ -2900,7 +2900,7 @@
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Kate n\u00e9e Sheffield/Sharma Bridgerton",
+                    "full_name": "Kate Bridgerton, n\u00e9e Sheffield/Sharma",
                     "fandom": "Bridgerton",
                     "op_versions": [
                         "Kate Sheffield | Kate Sharma"
@@ -4445,32 +4445,32 @@
                     ]
                 },
                 {
-                    "given_name": "Warden",
+                    "given_name": null,
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": null,
-                    "alias": null,
+                    "alias": "Player Character",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": null,
-                    "full_name": "Warden",
+                    "full_name": "Player Character",
                     "fandom": "Dragon Age",
                     "op_versions": [
                         "Female Warden"
                     ]
                 },
                 {
-                    "given_name": "Warden",
+                    "given_name": null,
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": null,
-                    "alias": null,
+                    "alias": "Player Character",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": null,
-                    "full_name": "Warden",
+                    "full_name": "Player Character",
                     "fandom": "Dragon Age",
                     "op_versions": [
                         "Female Warden (Dragon Age)"
@@ -4637,16 +4637,16 @@
                     ]
                 },
                 {
-                    "given_name": "Warden",
+                    "given_name": null,
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": null,
-                    "alias": null,
+                    "alias": "Player Character",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": null,
-                    "full_name": "Warden",
+                    "full_name": "Player Character",
                     "fandom": "Dragon Age",
                     "op_versions": [
                         "Warden (Dragon Age)"
@@ -6432,7 +6432,7 @@
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Bellatrix n\u00e9e Black Lestrange",
+                    "full_name": "Bellatrix Lestrange, n\u00e9e Black",
                     "fandom": "Harry Potter Universe",
                     "op_versions": [
                         "Bellatrix Black Lestrange"
@@ -6576,7 +6576,7 @@
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Lily n\u00e9e Evans Potter",
+                    "full_name": "Lily Potter, n\u00e9e Evans",
                     "fandom": "Harry Potter Universe",
                     "op_versions": [
                         "Lily Evans Potter"
@@ -7669,6 +7669,40 @@
                     ]
                 }
             ],
+            "Journey to the West Universe": [
+                {
+                    "given_name": "Mihou",
+                    "middle_name": null,
+                    "maiden_name": null,
+                    "surname": "Liu'Er",
+                    "alias": "Six-eared Macaque",
+                    "nickname": null,
+                    "title (prefix)": null,
+                    "title (suffix)": null,
+                    "name_order": "E",
+                    "full_name": "Liu'Er Mihou | Six-eared Macaque",
+                    "fandom": "Journey to the West Universe",
+                    "op_versions": [
+                        "Liu Er Mihou | Six-eared Macaque"
+                    ]
+                },
+                {
+                    "given_name": "Wukong",
+                    "middle_name": null,
+                    "maiden_name": null,
+                    "surname": "Sun",
+                    "alias": "Monkey King",
+                    "nickname": null,
+                    "title (prefix)": null,
+                    "title (suffix)": null,
+                    "name_order": "E",
+                    "full_name": "Sun Wukong | Monkey King",
+                    "fandom": "Journey to the West Universe",
+                    "op_versions": [
+                        "Sun Wukong | Monkey King"
+                    ]
+                }
+            ],
             "Jujutsu Kaisen | \u546a\u8853\u5efb\u6226": [
                 {
                     "given_name": "Suguru",
@@ -8034,40 +8068,6 @@
                     "fandom": "KinnPorsche",
                     "op_versions": [
                         "Vegas Kornwit Theerapanyakun"
-                    ]
-                }
-            ],
-            "LEGO Monkie Kid": [
-                {
-                    "given_name": "Mihou",
-                    "middle_name": null,
-                    "maiden_name": null,
-                    "surname": "Liu'Er",
-                    "alias": "Six-eared Macaque",
-                    "nickname": null,
-                    "title (prefix)": null,
-                    "title (suffix)": null,
-                    "name_order": "E",
-                    "full_name": "Liu'Er Mihou | Six-eared Macaque",
-                    "fandom": "LEGO Monkie Kid",
-                    "op_versions": [
-                        "Liu Er Mihou | Six-eared Macaque"
-                    ]
-                },
-                {
-                    "given_name": "Wukong",
-                    "middle_name": null,
-                    "maiden_name": null,
-                    "surname": "Sun",
-                    "alias": "Monkey King",
-                    "nickname": null,
-                    "title (prefix)": null,
-                    "title (suffix)": null,
-                    "name_order": "E",
-                    "full_name": "Sun Wukong | Monkey King",
-                    "fandom": "LEGO Monkie Kid",
-                    "op_versions": [
-                        "Sun Wukong | Monkey King"
                     ]
                 }
             ],
