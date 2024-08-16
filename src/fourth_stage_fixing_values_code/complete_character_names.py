@@ -28,13 +28,54 @@ def complete_unique_characters(data_dict):
         for fandom in data_dict[category]: # list of dicts
             # let's start by seeing what we have:
             all_characters = [character["full_name"] for character in data_dict[category][fandom]]
-            categorised_characters_abbreviated[category][fandom] = all_characters
+            categorised_characters_abbreviated[category][fandom] = sorted(all_characters)
 
     with open("data/reference_and_test_files/cleaned_characters_list_3_abbreviated.json", "w") as file:
         dump(categorised_characters_abbreviated, file, indent=4)
 
 
     # look for obvious doubles & go with most complete version
+    """
+    RPF doubles: 
+    [
+        "Bangtan Boys / BTS",
+        "Grandmaster of Demonic Cultivation / The Untamed | (...)",
+        "My Chemical Romance",
+        "Youtube",
+    ]
+    fic doubles:
+    [
+        "Attack on Titan | (...)",
+        "Critical Role",
+        "Doctor Who",
+        "Dragon Age",
+        "Frozen",
+        "Good Omens",
+        "Hetalia | (...)",
+        "Les Misérables",
+        "Life Is Strange",
+        "Lost Girl",
+        "Marvel",
+        "Mass Effect",
+        "Merlin",
+        "Miraculous: Tales of Ladybug & Cat Noir | Miraculous: Les Aventures de Ladybug et Chat Noir",
+        "Naruto",
+        "Once Upon a Time",
+        "Person of Interest",
+        "Pitch Perfect",
+        "Power Rangers",
+        "Queer as Folk",
+        "Star Trek",
+        "Star Wars",
+        "Steven Universe",
+        "Supernatural",
+        "Teenage Mutant Ninja Turtles",
+        "The 100",
+        "The Last of Us",
+        "Undertale",
+        "Voltron",
+    ]    
+    """
 
     # look up missing bits & add them 
     #   (eg last names, aliases, etc that I know exist, 

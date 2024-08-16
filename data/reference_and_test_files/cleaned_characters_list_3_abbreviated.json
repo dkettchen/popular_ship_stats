@@ -109,9 +109,9 @@
             "Zachary Quinto"
         ],
         "Stray Kids": [
+            "Felix Lee",
             "Han Jisung | Han",
             "Hwang Hyunjin",
-            "Felix Lee",
             "Lee Minho | Lee Know"
         ],
         "Super-Vocal | \u58f0\u5165\u4eba\u5fc3": [
@@ -228,8 +228,8 @@
             "Annie Leonhart",
             "Eren Yeager",
             "Erwin Smith",
-            "Jean Kirstein",
             "Historia Reiss | Krista Lenz",
+            "Jean Kirstein",
             "Levi",
             "Levi Ackerman",
             "Marco Bott",
@@ -283,8 +283,8 @@
         ],
         "Call of Duty": [
             "John 'Soap' MacTavish",
-            "Y/N | Reader",
-            "Simon 'Ghost' Riley"
+            "Simon 'Ghost' Riley",
+            "Y/N | Reader"
         ],
         "Carmilla": [
             "Carmilla Karnstein",
@@ -326,6 +326,7 @@
             "Yasha"
         ],
         "DC": [
+            "'Kon-El'",
             "Alex Danvers",
             "Astra",
             "Ava Sharpe",
@@ -340,7 +341,6 @@
             "Jason Todd",
             "Kara Danvers",
             "Kelly Olsen",
-            "'Kon-El'",
             "Lena Luthor",
             "Leonard Snart",
             "Lex Luthor",
@@ -366,23 +366,23 @@
         ],
         "Detroit: Become Human": [
             "Connor",
+            "Connor (RK900)",
             "Gavin Reed",
-            "Hank Anderson",
-            "Connor (RK900)"
+            "Hank Anderson"
         ],
         "Doctor Who": [
             "Amy Pond",
             "Clara Oswin Oswald",
-            "The Eleventh Doctor",
             "Jenny Flint",
             "Madame Vastra",
-            "The Ninth Doctor",
             "River Song",
             "Rory Williams",
             "Rose Tyler",
-            "The Tenth Doctor",
-            "The Tenth Doctor",
             "The Doctor",
+            "The Eleventh Doctor",
+            "The Ninth Doctor",
+            "The Tenth Doctor",
+            "The Tenth Doctor",
             "The Thirteenth Doctor",
             "The Twelfth Doctor",
             "Yasmin Khan"
@@ -391,21 +391,21 @@
             "Alistair",
             "Cullen Rutherford",
             "Dorian Pavus",
-            "Player Character",
-            "Player Character",
-            "Player Character",
-            "Player Character",
             "Fenris",
-            "Player Character",
-            "Player Character",
             "Iron Bull",
             "Isabela",
             "Josephine Montilyet",
             "Leliana",
+            "Player Character",
+            "Player Character",
+            "Player Character",
+            "Player Character",
+            "Player Character",
+            "Player Character",
+            "Player Character",
             "Sera",
             "Solas",
-            "Solas",
-            "Player Character"
+            "Solas"
         ],
         "Due South": [
             "Benton Fraser",
@@ -469,12 +469,12 @@
             "Keqing",
             "Lisa",
             "Ningguang",
+            "Player Character",
             "Raiden Ei",
             "Scaramouche",
             "Tartaglia Childe",
             "Thoma",
             "Tighnari",
-            "Player Character",
             "Venti",
             "Xiao Alatus",
             "Yae Miko",
@@ -569,8 +569,8 @@
             "Luna Lovegood",
             "Marlene McKinnon",
             "Mary Macdonald",
-            "Percival Graves",
             "Pansy Parkinson",
+            "Percival Graves",
             "Regulus Black",
             "Remus Lupin",
             "Ron Weasley",
@@ -785,6 +785,7 @@
             "Carol Danvers",
             "Charles Xavier",
             "Clint Barton",
+            "Daisy Johnson | Skye",
             "Darcy Lewis",
             "Eddie Brock",
             "Erik Lehnsherr",
@@ -805,10 +806,8 @@
             "Pepper Potts",
             "Peter Parker",
             "Phil Coulson",
-            "Y/N | Reader",
             "Sam Wilson",
             "Skye",
-            "Daisy Johnson | Skye",
             "Stephen Strange",
             "Steve Rogers",
             "Teddy Altman",
@@ -818,13 +817,14 @@
             "Venom (Symbiote)",
             "Wade Wilson",
             "Wanda Maximoff",
+            "Y/N | Reader",
             "Yelena Belova"
         ],
         "Mass Effect": [
-            "Player Character",
             "Garrus Vakarian",
             "Kaidan Alenko",
             "Liara T'Soni",
+            "Player Character",
             "Player Character",
             "Player Character"
         ],
@@ -863,16 +863,16 @@
             "Asui Tsuyu",
             "Bakugou Katsuki",
             "Dabi",
-            "Touya Todoroki | Dabi",
             "Jirou Kyouka",
             "Kaminari Denki",
             "Kirishima Eijirou",
             "Midoriya Izuku",
-            "Y/N | Reader",
             "Shinsou Hitoshi",
             "Takami Keigo | Hawks",
             "Todoroki Shouto",
+            "Touya Todoroki | Dabi",
             "Uraraka Ochako",
+            "Y/N | Reader",
             "Yagi Toshinori | All Might",
             "Yamada Hizashi | Present Mic",
             "Yaoyorozu Momo"
@@ -893,8 +893,8 @@
             "Yamanaka Ino"
         ],
         "New Gods | \u65b0\u795e\u699c": [
-            "Liu Chenxiang",
-            "Erlang Shen | Yang Jian"
+            "Erlang Shen | Yang Jian",
+            "Liu Chenxiang"
         ],
         "Omniscient Reader | \uc804\uc9c0\uc801 \ub3c5\uc790 \uc2dc\uc810": [
             "Kim Dokja",
@@ -903,13 +903,13 @@
         "Once Upon a Time": [
             "Aurora",
             "Belle",
-            "Killian Jones | Captain Hook",
             "Emma Swan",
-            "Regina Mills | Evil Queen",
-            "Mulan",
-            "Ruby | Red Riding Hood",
+            "Killian Jones | Captain Hook",
             "Mr. Gold | Rumpelstiltskin",
-            "Mr. Gold | Rumpelstiltskin"
+            "Mr. Gold | Rumpelstiltskin",
+            "Mulan",
+            "Regina Mills | Evil Queen",
+            "Ruby | Red Riding Hood"
         ],
         "One Piece | \u30ef\u30f3\u30d4\u30fc\u30b9": [
             "Roronoa Zoro",
@@ -935,16 +935,16 @@
             "Stede Bonnet"
         ],
         "Overwatch": [
+            "Am\u00e9lie Lacroix | Widowmaker",
             "Angela Ziegler | Mercy",
             "Emily",
             "Fareeha Amari | Pharah",
+            "Gabriel Reyes | Reaper",
             "Hanzo Shimada",
+            "Jack Morrison | Soldier: 76",
             "Jesse McCree",
             "Lena Oxton | Tracer",
-            "Moira O'Deorain",
-            "Gabriel Reyes | Reaper",
-            "Jack Morrison | Soldier: 76",
-            "Am\u00e9lie Lacroix | Widowmaker"
+            "Moira O'Deorain"
         ],
         "Pacific Rim": [
             "Hermann Gottlieb",
@@ -1035,10 +1035,10 @@
             "Isak Valtersen"
         ],
         "Sanders Sides": [
-            "Virgil Sanders | Anxiety",
-            "Roman 'Princey' Sanders | Creativity",
             "Logan Sanders | Logic",
-            "Patton Sanders | Morality"
+            "Patton Sanders | Morality",
+            "Roman 'Princey' Sanders | Creativity",
+            "Virgil Sanders | Anxiety"
         ],
         "Schitt's Creek": [
             "David Rose",
@@ -1049,8 +1049,8 @@
             "Hyakuya Yuuichirou"
         ],
         "Shadow and Bone": [
-            "Alina Starkov",
-            "Aleksander Morozova | The Darkling"
+            "Aleksander Morozova | The Darkling",
+            "Alina Starkov"
         ],
         "Shadowhunters": [
             "Alec Lightwood",
@@ -1172,10 +1172,10 @@
             "Maxine 'Max' Mayfield",
             "Mike Wheeler",
             "Nancy Wheeler",
-            "Y/N | Reader",
             "Robin Buckley",
             "Steve Harrington",
-            "Will Byers"
+            "Will Byers",
+            "Y/N | Reader"
         ],
         "Suits": [
             "Harvey Specter",
@@ -1192,9 +1192,9 @@
             "Jessica Moore",
             "Jo Harvelle",
             "Lucifer",
-            "Y/N | Reader",
             "Ruby",
             "Sam Winchester",
+            "Y/N | Reader",
             "Y/N | Reader"
         ],
         "Teen Wolf": [
@@ -1275,9 +1275,9 @@
         ],
         "The Old Guard": [
             "Andromache 'Andy' of Scythia",
-            "Yusuf 'Joe' Al-Kaysani",
             "Nicol\u00f2 'Nicky' di Genova",
-            "Quynh Noriko"
+            "Quynh Noriko",
+            "Yusuf 'Joe' Al-Kaysani"
         ],
         "The Owl House": [
             "Amity Blight",
@@ -1324,8 +1324,8 @@
             "Sasaki Haise"
         ],
         "Tokyo Revengers | \u6771\u4eac\u534d\u30ea\u30d9\u30f3\u30b8\u30e3\u30fc\u30ba": [
-            "Sano 'Mikey' Manjirou",
-            "Hanagaki 'Takemitchy' Takemichi"
+            "Hanagaki 'Takemitchy' Takemichi",
+            "Sano 'Mikey' Manjirou"
         ],
         "Top Gun": [
             "Bradley 'Rooster' Bradshaw",
