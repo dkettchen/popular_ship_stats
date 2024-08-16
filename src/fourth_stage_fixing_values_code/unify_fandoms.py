@@ -396,6 +396,8 @@ def format_unified_labels(data_dict):
             fandom = "Due South"
         elif key == "LEGO Monkie Kid":
             fandom = "Journey to the West Universe"
+        elif key == "KinnPorsche":
+            fandom = "คินน์พอร์ช เดอะ ซีรีส์ | KinnPorsche"
         else: 
             fandom = non_gathered_dict[key]["Fandom"]
 

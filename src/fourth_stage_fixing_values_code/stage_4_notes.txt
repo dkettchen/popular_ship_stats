@@ -148,6 +148,15 @@
     # -> have it be more options than just is_canon: true/false, to account for those ones
 
 
+    source venv/bin/activate
+    export PYTHONPATH=$(pwd)
+
+    python src/fourth_stage_fixing_values_code/unify_fandoms.py
+    python src/fourth_stage_fixing_values_code/updating_fandom_characters.py
+    python src/fourth_stage_fixing_values_code/separate_names_into_parts.py
+    python src/fourth_stage_fixing_values_code/categorise_character_names.py
+    python src/fourth_stage_fixing_values_code/complete_character_names.py
+
     file running order to update helper files:
     -unify_fandoms.py
         - reads from:
