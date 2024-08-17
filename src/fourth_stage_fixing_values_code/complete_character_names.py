@@ -221,54 +221,8 @@ def complete_character_names(data_dict):
 
     returns a nested dict that contains all completed character name profiles
     """
-    #TODO: look up genshin etc in my notes
-    {
-        "Genshin Impact | \u539f\u795e": [
-            "Albedo",
-            "Alhaitham",
-            "Beidou",
-            "Cyno",
-            "Diluc",
-            "Ganyu",
-            "Jean",
-            "Kaedehara Kazuha",
-            "Kaeya",
-            "Kamisato Ayato",
-            "Kaveh",
-            "Keqing",
-            "Lisa",
-            "Ningguang",
-            "Player Character",
-            "Raiden Ei",
-            "Scaramouche", # I remember this one had more name bits
-            "Tartaglia Childe",
-            "Thoma",
-            "Tighnari",
-            "Venti",
-            "Xiao Alatus",
-            "Yae Miko",
-            "Zhongli"
-        ],
-        "Good Omens": [
-            "Crowley" # this man had a full name too
-        ],
-        "Hetalia | \u30d8\u30bf\u30ea\u30a2": [
-            "America", # both these fuckers had other names!
-            "England"
-        ],
-        "Power Rangers": [
-            "Kimberly Hart",
-            "Trini" # this one has a last name! I already looked it up
-        ],
-
-
-    }
-
     new_dict = {}
 
-    # look up missing bits ✅ & add them 
-    #   (eg last names, aliases, etc that I know exist)
-        #TODO: fix fandom names where special characters
     reuse_given_name = {
         "Bangtan Boys / BTS": [
             "Jeon Jungkook", # Jungkook
@@ -378,6 +332,12 @@ def complete_character_names(data_dict):
         "The Witcher | Wiedźmin": {
             "Geralt of Rivia": "The Witcher"
         },
+        "Genshin Impact | 原神": { # add aliases
+            "Raiden Ei": "Beelzebul", # alias
+            "Scaramouche" : "The Balladeer", # alias
+            "Yae Miko": "Guuji", # alias
+        },
+
     }
     add_first_last_W = { 
         "Youtube": {
@@ -428,14 +388,11 @@ def complete_character_names(data_dict):
                 "name_order": "W",
             },
             "Jason Todd": {
-                "given_name": "Jason", 
                 "middle_name": "Peter", 
-                "surname": "Todd", 
                 "alias": "Robin/Red Hood",
                 "name_order": "W",
             },
-            "Kara Danvers": {
-                "given_name": "Kara", 
+            "Kara Danvers": { 
                 "surname": "Danvers/Zor-El", 
                 "alias": "Supergirl",
                 "name_order": "W",
@@ -472,6 +429,39 @@ def complete_character_names(data_dict):
                 "alias": "Falcon/Captain America",
                 "name_order": "W",
             }
+        },
+        "Power Rangers": {
+            "Kimberly Hart": { # add middle, nick, alias
+                "middle_name": "Ann",
+                "nickname": "Kim",
+                "alias": "Pink Ranger",
+                "name_order": "W",
+            },
+            "Trini": { # add sur, alias, order
+                "surname": "Kwan",
+                "alias": "Yellow Ranger",
+                "name_order": "W",
+            }
+        },
+        "Good Omens": { # add first & middle name & order
+            "Crowley": {
+                "given_name" : "Anthony", 
+                "middle_name" : "J.", 
+                "name_order": "W",
+            }
+        },
+        "Hetalia | ヘタリア": { # add full names
+            "America": { # given middle sur order
+                "given_name" :"Alfred", 
+                "middle_name" :"F.", 
+                "surname" : "Jones",
+                "name_order": "W",
+            },
+            "England": { # given sur order
+                "given_name" :"Arthur", 
+                "surname" : "Kirkland",
+                "name_order": "W",
+            },
         },
     }
     other_name_parts = {
@@ -541,29 +531,69 @@ def complete_character_names(data_dict):
                     new_char_value["name_order"] = "W"
                 elif fandom in name_and_alias_W \
                 and character in name_and_alias_W[fandom]:
-                    # all of em have these 4
-                    new_char_value["given_name"] = name_and_alias_W[fandom][character]["given_name"]
-                    new_char_value["surname"] = name_and_alias_W[fandom][character]["surname"]
-                    new_char_value["alias"] = name_and_alias_W[fandom][character]["alias"]
+                    # all of em have an order
                     new_char_value["name_order"] = name_and_alias_W[fandom][character]["name_order"]
-                    if character in [ # given nick sur alias order
+                    if character in [ # alias
                         "'Kon-El'",
                         "Alex Danvers",
                         "Dick Grayson",
                         "Pepper Potts",
                         "Sam Wilson",
-                    ]:
-                        new_char_value["nickname"] = name_and_alias_W[fandom][character]["nickname"]
-                    elif character in [ # given middle sur alias order
-                        "Jason Todd",
-                    ]:
-                        new_char_value["middle_name"] = name_and_alias_W[fandom][character]["middle_name"]
-                    elif character in [ # given middle nick sur alias order
                         "James 'Bucky' Barnes",
                         "Natasha Romanov",
+                        "Jason Todd",
+                        "Trini",
+                        "Kimberly Hart",
+                        "Kara Danvers",
+                    ]:
+                        new_char_value["alias"] = name_and_alias_W[fandom][character]["alias"]
+                    if character in [ # given
+                        "'Kon-El'",
+                        "Alex Danvers",
+                        "Dick Grayson",
+                        "Pepper Potts",
+                        "Sam Wilson",
+                        "James 'Bucky' Barnes",
+                        "Natasha Romanov",
+                        "Crowley",
+                        "America",
+                        "England",
+                    ]:
+                        new_char_value["given_name"] = name_and_alias_W[fandom][character]["given_name"]
+                    if character in [ # sur
+                        "'Kon-El'",
+                        "Alex Danvers",
+                        "Dick Grayson",
+                        "Pepper Potts",
+                        "Sam Wilson",
+                        "James 'Bucky' Barnes",
+                        "Natasha Romanov",
+                        "Trini",
+                        "America",
+                        "England",
+                        "Kara Danvers"
+                    ]:
+                        new_char_value["surname"] = name_and_alias_W[fandom][character]["surname"]
+                    if character in [ # nick
+                        "'Kon-El'",
+                        "Alex Danvers",
+                        "Dick Grayson",
+                        "Pepper Potts",
+                        "Sam Wilson",
+                        "James 'Bucky' Barnes",
+                        "Natasha Romanov",
+                        "Kimberly Hart",
+                    ]:
+                        new_char_value["nickname"] = name_and_alias_W[fandom][character]["nickname"]
+                    if character in [ # middle
+                        "Jason Todd",
+                        "James 'Bucky' Barnes",
+                        "Natasha Romanov",
+                        "Kimberly Hart",
+                        "Crowley",
+                        "America",
                     ]:
                         new_char_value["middle_name"] = name_and_alias_W[fandom][character]["middle_name"]
-                        new_char_value["nickname"] = name_and_alias_W[fandom][character]["nickname"]
 
                 elif fandom in other_name_parts \
                 and character in other_name_parts[fandom]:
@@ -600,16 +630,7 @@ def complete_character_names(data_dict):
                 new_dict[category][fandom][complete_char_value["full_name"]] = complete_char_value
 
     return new_dict
-                    
 
-
-
-
-
-    # make new collection to return
-    
-
-    pass
 
 if __name__ == "__main__":
     all_unformatted_characters = gather_all_raw_characters()

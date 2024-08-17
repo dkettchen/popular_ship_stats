@@ -4914,49 +4914,49 @@
                         "Ningguang (Genshin Impact)"
                     ]
                 },
-                "Raiden Ei": {
+                "Raiden Ei | Beelzebul": {
                     "given_name": "Ei",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Raiden",
-                    "alias": null,
+                    "alias": "Beelzebul",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "E",
-                    "full_name": "Raiden Ei",
+                    "full_name": "Raiden Ei | Beelzebul",
                     "fandom": "Genshin Impact | \u539f\u795e",
                     "op_versions": [
                         "Raiden Ei | Baal"
                     ]
                 },
-                "Scaramouche": {
+                "Scaramouche | The Balladeer": {
                     "given_name": "Scaramouche",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": null,
-                    "alias": null,
+                    "alias": "The Balladeer",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": null,
-                    "full_name": "Scaramouche",
+                    "full_name": "Scaramouche | The Balladeer",
                     "fandom": "Genshin Impact | \u539f\u795e",
                     "op_versions": [
                         "Scaramouche"
                     ]
                 },
-                "Tartaglia Childe": {
+                "Tartaglia | Childe": {
                     "given_name": "Tartaglia",
                     "middle_name": null,
                     "maiden_name": null,
-                    "surname": "Childe",
-                    "alias": null,
+                    "surname": null,
+                    "alias": "Childe",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
-                    "name_order": "W",
-                    "full_name": "Tartaglia Childe",
+                    "name_order": null,
+                    "full_name": "Tartaglia | Childe",
                     "fandom": "Genshin Impact | \u539f\u795e",
                     "op_versions": [
                         "Tartaglia | Childe"
@@ -5026,33 +5026,33 @@
                         "Venti"
                     ]
                 },
-                "Xiao Alatus": {
+                "Alatus | Xiao": {
                     "given_name": "Alatus",
                     "middle_name": null,
                     "maiden_name": null,
-                    "surname": "Xiao",
-                    "alias": null,
+                    "surname": null,
+                    "alias": "Xiao",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
-                    "name_order": "E",
-                    "full_name": "Xiao Alatus",
+                    "name_order": null,
+                    "full_name": "Alatus | Xiao",
                     "fandom": "Genshin Impact | \u539f\u795e",
                     "op_versions": [
                         "Xiao | Alatus (Genshin Impact)"
                     ]
                 },
-                "Yae Miko": {
+                "Yae Miko | Guuji": {
                     "given_name": "Miko",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Yae",
-                    "alias": null,
+                    "alias": "Guuji",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "E",
-                    "full_name": "Yae Miko",
+                    "full_name": "Yae Miko | Guuji",
                     "fandom": "Genshin Impact | \u539f\u795e",
                     "op_versions": [
                         "Yae Miko"
@@ -5322,17 +5322,17 @@
                         "Aziraphale"
                     ]
                 },
-                "Crowley": {
-                    "given_name": null,
-                    "middle_name": null,
+                "Anthony J. Crowley": {
+                    "given_name": "Anthony",
+                    "middle_name": "J.",
                     "maiden_name": null,
                     "surname": "Crowley",
                     "alias": null,
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
-                    "name_order": null,
-                    "full_name": "Crowley",
+                    "name_order": "W",
+                    "full_name": "Anthony J. Crowley",
                     "fandom": "Good Omens",
                     "op_versions": [
                         "Crowley",
@@ -6501,34 +6501,34 @@
                 }
             },
             "Hetalia | \u30d8\u30bf\u30ea\u30a2": {
-                "America": {
-                    "given_name": null,
-                    "middle_name": null,
+                "Alfred F. Jones | America": {
+                    "given_name": "Alfred",
+                    "middle_name": "F.",
                     "maiden_name": null,
-                    "surname": null,
+                    "surname": "Jones",
                     "alias": "America",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
-                    "name_order": null,
-                    "full_name": "America",
+                    "name_order": "W",
+                    "full_name": "Alfred F. Jones | America",
                     "fandom": "Hetalia | \u30d8\u30bf\u30ea\u30a2",
                     "op_versions": [
                         "America",
                         "America (Hetalia)"
                     ]
                 },
-                "England": {
-                    "given_name": null,
+                "Arthur Kirkland | England": {
+                    "given_name": "Arthur",
                     "middle_name": null,
                     "maiden_name": null,
-                    "surname": null,
+                    "surname": "Kirkland",
                     "alias": "England",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
-                    "name_order": null,
-                    "full_name": "England",
+                    "name_order": "W",
+                    "full_name": "Arthur Kirkland | England",
                     "fandom": "Hetalia | \u30d8\u30bf\u30ea\u30a2",
                     "op_versions": [
                         "England (Hetalia)"
@@ -10519,33 +10519,33 @@
                 }
             },
             "Power Rangers": {
-                "Kimberly Hart": {
+                "Kimberly Ann 'Kim' Hart | Pink Ranger": {
                     "given_name": "Kimberly",
-                    "middle_name": null,
+                    "middle_name": "Ann",
                     "maiden_name": null,
                     "surname": "Hart",
-                    "alias": null,
-                    "nickname": null,
+                    "alias": "Pink Ranger",
+                    "nickname": "Kim",
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Kimberly Hart",
+                    "full_name": "Kimberly Ann 'Kim' Hart | Pink Ranger",
                     "fandom": "Power Rangers",
                     "op_versions": [
                         "Kimberly Hart"
                     ]
                 },
-                "Trini": {
+                "Trini Kwan | Yellow Ranger": {
                     "given_name": "Trini",
                     "middle_name": null,
                     "maiden_name": null,
-                    "surname": null,
-                    "alias": null,
+                    "surname": "Kwan",
+                    "alias": "Yellow Ranger",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
-                    "name_order": null,
-                    "full_name": "Trini",
+                    "name_order": "W",
+                    "full_name": "Trini Kwan | Yellow Ranger",
                     "fandom": "Power Rangers",
                     "op_versions": [
                         "Trini",

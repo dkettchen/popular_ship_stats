@@ -324,7 +324,6 @@ def categorise_names(char_by_fandom_dict):
         ['Tachibana', 'Makoto'],
         ['Kaedehara', 'Kazuha'],
         ['Kamisato', 'Ayato'],
-        ['Xiao', 'Alatus'],
         ['Yae', 'Miko'],
         ['Akaashi', 'Keiji'],
         ['Bokuto', 'Koutarou'],
@@ -417,6 +416,8 @@ def categorise_names(char_by_fandom_dict):
         ["Madame", "Vastra"],
         ["Alexis", "Quackity"],
         ["Charles", "Grian"],
+        ['Xiao', 'Alatus'],
+        ["Tartaglia", "Childe"],
     ]
     given_suffix = [
         ['Ymir', 'of the 104th'],
@@ -431,6 +432,7 @@ def categorise_names(char_by_fandom_dict):
         ["Clay", "Dream"],
         ["Alexis", "Quackity"],
         ["Charles", "Grian"],
+        ["Tartaglia", "Childe"],
     ]
 
     # 3 part names
@@ -609,6 +611,9 @@ def categorise_names(char_by_fandom_dict):
                     elif split_name == ["Madame", "Vastra"]:
                         title_prefix = split_name[0]
                         surname = split_name[1]
+                    elif split_name == ['Xiao', 'Alatus']:
+                        alias = split_name[0]
+                        given_name = split_name[1]
 
                 elif len(split_name) == 1 \
                 and split_name[0] != "Reader" \

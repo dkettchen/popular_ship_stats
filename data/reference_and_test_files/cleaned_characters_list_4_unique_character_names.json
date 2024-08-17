@@ -5012,17 +5012,17 @@
                         "Scaramouche"
                     ]
                 },
-                "Tartaglia Childe": {
+                "Tartaglia | Childe": {
                     "given_name": "Tartaglia",
                     "middle_name": null,
                     "maiden_name": null,
-                    "surname": "Childe",
-                    "alias": null,
+                    "surname": null,
+                    "alias": "Childe",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
-                    "name_order": "W",
-                    "full_name": "Tartaglia Childe",
+                    "name_order": null,
+                    "full_name": "Tartaglia | Childe",
                     "fandom": "Genshin Impact | \u539f\u795e",
                     "op_versions": [
                         "Tartaglia | Childe"
@@ -5092,17 +5092,17 @@
                         "Venti"
                     ]
                 },
-                "Xiao Alatus": {
+                "Alatus | Xiao": {
                     "given_name": "Alatus",
                     "middle_name": null,
                     "maiden_name": null,
-                    "surname": "Xiao",
-                    "alias": null,
+                    "surname": null,
+                    "alias": "Xiao",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
-                    "name_order": "E",
-                    "full_name": "Xiao Alatus",
+                    "name_order": null,
+                    "full_name": "Alatus | Xiao",
                     "fandom": "Genshin Impact | \u539f\u795e",
                     "op_versions": [
                         "Xiao | Alatus (Genshin Impact)"
