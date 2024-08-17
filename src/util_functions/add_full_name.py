@@ -32,7 +32,16 @@ def add_full_name(name_dict):
 
     if title_prefix:
         full_name += " " + title_prefix
-    if order == "W":
+    if order == "E":
+        if surname: 
+            full_name += " " + surname
+        if middle_name:
+            full_name += " " + middle_name
+        if nickname:
+            full_name += " " + "'" + nickname + "'"
+        if given_name:
+            full_name += " " + given_name
+    else: # if W or no order indicated
         if given_name:
             full_name += " " + given_name
         if middle_name:
@@ -43,24 +52,6 @@ def add_full_name(name_dict):
             full_name += " " + surname
         if maiden_name:
             full_name += ", née " + maiden_name
-    elif order == "E":
-        if surname: 
-            full_name += " " + surname
-        if middle_name:
-            full_name += " " + middle_name
-        if nickname:
-            full_name += " " + "'" + nickname + "'"
-        if given_name:
-            full_name += " " + given_name
-    else: 
-        if given_name:
-            full_name += " " + given_name
-        if middle_name:
-            full_name += " " + middle_name
-        if nickname:
-            full_name += " " + "'" + nickname + "'"
-        if surname: 
-            full_name += " " + surname
     if title_suffix:
         full_name += " " + title_suffix
     if alias:
