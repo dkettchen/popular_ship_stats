@@ -4,7 +4,8 @@ def add_full_name(name_dict):
     """
     Takes a name dictionary with (at least) the following keys: ["given_name", 
     "middle_name", "maiden_name", "surname", "alias", "nickname", "title (prefix)", 
-    "title (suffix)", "name_order", "full_name"] which should be set to None or a string value.
+    "title (suffix)", "name_order", "full_name", "fandom] which should be set to None 
+    or a string value.
     
     Returns that a new version of that same dictionary with a full name string 
     assembled from the remaining name part keys where present.
@@ -23,6 +24,7 @@ def add_full_name(name_dict):
     title_prefix = copy_dict["title (prefix)"]
     title_suffix = copy_dict["title (suffix)"]
     order = copy_dict["name_order"]
+    fandom = copy_dict["fandom"]
 
     full_name = ""
 
@@ -88,6 +90,13 @@ def add_full_name(name_dict):
         full_name = " Anakin Skywalker | Darth Vader"
     elif full_name == " Captain Killian Jones | Hook":
         full_name = " Killian Jones | Captain Hook"
+    elif "One Piece" in fandom:
+        if order == "E":
+            full_name = f" {surname} {given_name}"
+        else:
+            full_name = f" {given_name} {surname}"
+        if alias:
+            full_name += f" | {alias} {given_name}"
 
     full_name = full_name[1:] # removing leading white space
 
