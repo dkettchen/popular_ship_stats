@@ -60,74 +60,140 @@ def complete_unique_characters(data_dict):
                     if char["alias"]:
                         character_value["alias"] = char["alias"]
                     character_value["full_name"] = 'Phil Watson | Philza'
-                    character_value["op_versions"].extend(char["op_versions"])
                 elif fandom == "My Chemical Romance":
                     if "Gerard" in char["full_name"]:
                         character_value = unique_characters["RPF"][fandom]['Gerard Way']
                         if char["surname"]:
                             character_value["surname"] = char["surname"]
                         character_value["full_name"] = 'Gerard Way'
-                        character_value["op_versions"].extend(char["op_versions"])
                     elif "Frank" in char["full_name"]:
                         character_value = unique_characters["RPF"][fandom]["Frank Iero"]
                         if char["surname"]:
                             character_value["surname"] = char["surname"]
                         character_value["full_name"] = "Frank Iero"
-                        character_value["op_versions"].extend(char["op_versions"])
                 elif "Xiao Zhan" in char["full_name"]:
                     character_value = unique_characters["RPF"][fandom]['Xiao Zhan | Sean Xiao']
                     if char["alias"]:
                         character_value["alias"] = char["alias"]
                     character_value["full_name"] = 'Xiao Zhan | Sean Xiao'
-                    character_value["op_versions"].extend(char["op_versions"])
                 else:
                     character_value = unique_characters["RPF"][fandom][char["full_name"]]
-                    character_value["op_versions"].extend(char["op_versions"])
+                
+                character_value["op_versions"].extend(char["op_versions"])
+
+    for fandom in data_dict["fictional"]:
+        unique_characters["fictional"][fandom] = {}
+        for char in data_dict["fictional"][fandom]:
+            if char["full_name"] not in unique_characters["fictional"][fandom].keys():
+                if "Attack on Titan" in fandom and "Levi" in char["full_name"]:
+                    unique_characters["fictional"][fandom]['Levi Ackerman'] = char
+                elif "Attack on Titan" in fandom and "Ymir" in char["full_name"]:
+                    unique_characters["fictional"][fandom]['Ymir of the 104th'] = char
+                elif fandom == "Critical Role" and "Beauregard" in char["full_name"]:
+                    unique_characters["fictional"][fandom]['Beauregard Lionett'] = char
+                elif fandom == 'Life Is Strange' and "Maxine" in char["full_name"]:
+                    if "Maxine 'Max' Caulfield" not in unique_characters["fictional"][fandom].keys():
+                        unique_characters["fictional"][fandom]["Maxine 'Max' Caulfield"] = char
+                    else:
+                        character_value = unique_characters["fictional"][fandom]["Maxine 'Max' Caulfield"]
+                        character_value["op_versions"].extend(char["op_versions"])
+                elif fandom == 'Lost Girl' and "Lauren" in char["full_name"]:
+                    unique_characters["fictional"][fandom]['Lauren Lewis'] = char    
+                elif fandom == 'Marvel' and "Skye" in char["full_name"]:
+                    unique_characters["fictional"][fandom]['Daisy Johnson | Skye'] = char
+                elif "Miraculous" in fandom and "Adrien" in char["full_name"]:
+                    unique_characters["fictional"][fandom]['Adrien Agreste | Chat Noir'] = char
+                elif "Miraculous" in fandom and "Marinette" in char["full_name"]:
+                    unique_characters["fictional"][fandom]['Marinette Dupain-Cheng | Ladybug'] = char
+                elif fandom == "Naruto" and "Uzumaki" in char["full_name"]:
+                    unique_characters["fictional"][fandom]['Uzumaki Naruto'] = char
+                elif fandom == 'Person of Interest' and "Root" in char["full_name"]:
+                    unique_characters["fictional"][fandom]['Samantha Groves | Root'] = char
+                elif fandom == 'Pitch Perfect' and "Chloe" in char["full_name"]:
+                    unique_characters["fictional"][fandom]['Chloe Beale'] = char
+                elif fandom == "Star Trek" and "Leonard" in char["full_name"]:
+                    if "Leonard 'Bones' McCoy" not in unique_characters["fictional"][fandom].keys():
+                        unique_characters["fictional"][fandom]["Leonard 'Bones' McCoy"] = char
+                    else: # fucking wrong order smh
+                        character_value = unique_characters["fictional"][fandom]["Leonard 'Bones' McCoy"]
+                        character_value["op_versions"].extend(char["op_versions"])
+                elif fandom == 'Star Wars' and "Kylo Ren" in char["full_name"]:
+                    if 'Ben Solo | Kylo Ren' not in unique_characters["fictional"][fandom].keys():
+                        unique_characters["fictional"][fandom]['Ben Solo | Kylo Ren'] = char
+                    else:
+                        character_value = unique_characters["fictional"][fandom]['Ben Solo | Kylo Ren']
+                        character_value["op_versions"].extend(char["op_versions"])
+                elif fandom == 'Steven Universe' and "Rose Quartz" in char["full_name"]:
+                    unique_characters["fictional"][fandom]['Rose Quartz | Pink Diamond'] = char
+                else:
+                    unique_characters["fictional"][fandom][char["full_name"]] = char
+            else:
+                if "Attack on Titan" in fandom and "Levi" in char["full_name"]:
+                    character_value = unique_characters["fictional"][fandom]['Levi Ackerman']
+                    if char["surname"]:
+                        character_value["surname"] = char["surname"]
+                    character_value["full_name"] = 'Levi Ackerman'
+                elif "Attack on Titan" in fandom and "Ymir" in char["full_name"]:
+                    character_value = unique_characters["fictional"][fandom]['Ymir of the 104th']
+                    if char["title (suffix)"]:
+                        character_value["title (suffix)"] = char["title (suffix)"]
+                    character_value["full_name"] = 'Ymir of the 104th'
+                elif fandom == "Critical Role" and "Beauregard" in char["full_name"]:
+                    character_value = unique_characters["fictional"][fandom]['Beauregard Lionett']
+                    if char["surname"]:
+                        character_value["surname"] = char["surname"]
+                    character_value["full_name"] = 'Beauregard Lionett'
+                elif fandom == 'Lost Girl' and "Lauren" in char["full_name"]:
+                    character_value = unique_characters["fictional"][fandom]['Lauren Lewis']
+                    if char["surname"]:
+                        character_value["surname"] = char["surname"]
+                    character_value["full_name"] = 'Lauren Lewis'
+                elif fandom == 'Marvel' and "Skye" in char["full_name"]:
+                    character_value = unique_characters["fictional"][fandom]['Daisy Johnson | Skye']
+                    if char["surname"]:
+                        character_value["surname"] = char["surname"]
+                        character_value["given_name"] = char["given_name"]
+                        character_value["name_order"] = char["name_order"]
+                    character_value["full_name"] = 'Daisy Johnson | Skye'
+                elif "Miraculous" in fandom and "Adrien" in char["full_name"]:
+                    character_value = unique_characters["fictional"][fandom]['Adrien Agreste | Chat Noir']
+                    if char["alias"]:
+                        character_value["alias"] = char["alias"]
+                    character_value["full_name"] = 'Adrien Agreste | Chat Noir'
+                elif "Miraculous" in fandom and "Marinette" in char["full_name"]:
+                    character_value = unique_characters["fictional"][fandom]['Marinette Dupain-Cheng | Ladybug']
+                    if char["alias"]:
+                        character_value["alias"] = char["alias"]
+                    character_value["full_name"] = 'Marinette Dupain-Cheng | Ladybug'
+                elif fandom == "Naruto" and "Uzumaki" in char["full_name"]:
+                    character_value = unique_characters["fictional"][fandom]['Uzumaki Naruto']
+                    if char["given_name"]:
+                        character_value["given_name"] = char["given_name"]
+                        character_value["name_order"] = char["name_order"]
+                    character_value["full_name"] = 'Uzumaki Naruto'
+                elif fandom == 'Person of Interest' and "Root" in char["full_name"]:
+                    character_value = unique_characters["fictional"][fandom]['Samantha Groves | Root']
+                    if char["surname"]:
+                        character_value["surname"] = char["surname"]
+                        character_value["given_name"] = char["given_name"]
+                        character_value["name_order"] = char["name_order"]
+                    character_value["full_name"] = 'Samantha Groves | Root'
+                elif fandom == 'Pitch Perfect' and "Chloe" in char["full_name"]:
+                    character_value = unique_characters["fictional"][fandom]['Chloe Beale']
+                    if char["surname"]:
+                        character_value["surname"] = char["surname"]
+                    character_value["full_name"] = 'Chloe Beale'
+                elif fandom == 'Steven Universe' and "Rose Quartz" in char["full_name"]:
+                    character_value = unique_characters["fictional"][fandom]['Rose Quartz | Pink Diamond']
+                    if char["alias"]:
+                        character_value["alias"] = char["alias"]
+                    character_value["full_name"] = 'Rose Quartz | Pink Diamond'
+                else:
+                    character_value = unique_characters["fictional"][fandom][char["full_name"]]
+                
+                character_value["op_versions"].extend(char["op_versions"])
 
 
-
-    # look for obvious doubles & go with most complete version
-    """
-    RPF doubles: 
-    [
-        "Bangtan Boys / BTS",
-        "Grandmaster of Demonic Cultivation / The Untamed | (...)",
-        "My Chemical Romance",
-        "Youtube",
-    ]
-    fic doubles:
-    [
-        "Attack on Titan | (...)",
-        "Critical Role",
-        "Doctor Who",
-        "Dragon Age",
-        "Frozen",
-        "Good Omens",
-        "Hetalia | (...)",
-        "Les Misérables",
-        "Life Is Strange",
-        "Lost Girl",
-        "Marvel",
-        "Mass Effect",
-        "Merlin",
-        "Miraculous: Tales of Ladybug & Cat Noir | Miraculous: Les Aventures de Ladybug et Chat Noir",
-        "Naruto",
-        "Once Upon a Time",
-        "Person of Interest",
-        "Pitch Perfect",
-        "Power Rangers",
-        "Queer as Folk",
-        "Star Trek",
-        "Star Wars",
-        "Steven Universe",
-        "Supernatural",
-        "Teenage Mutant Ninja Turtles",
-        "The 100",
-        "The Last of Us",
-        "Undertale",
-        "Voltron",
-    ]    
-    """
 
     return unique_characters
 
@@ -172,6 +238,6 @@ if __name__ == "__main__":
     categorised_names = categorise_names(grouped_by_fandom)
 
     completed_characters = complete_unique_characters(categorised_names)
-    character_dict = {"completed_characters": completed_characters}
-    with open("data/reference_and_test_files/cleaned_characters_list_4_complete_character_names.json", "w") as file:
-        dump(character_dict, file, indent=4)
+    # character_dict = {"completed_characters": completed_characters}
+    # with open("data/reference_and_test_files/cleaned_characters_list_4_complete_character_names.json", "w") as file:
+    #     dump(character_dict, file, indent=4)

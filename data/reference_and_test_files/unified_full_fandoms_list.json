@@ -266,13 +266,6 @@
                 "Amphibia (Cartoon)"
             ]
         },
-        "Angel": {
-            "Fandom": "Angel",
-            "Author Name": null,
-            "OP Versions": [
-                "Angel: the Series"
-            ]
-        },
         "Arcane": {
             "Fandom": "Arcane",
             "Author Name": null,
@@ -323,10 +316,11 @@
                 "Bridgerton (TV)"
             ]
         },
-        "Buffy the Vampire Slayer": {
-            "Fandom": "Buffy the Vampire Slayer",
+        "Buffy Universe": {
+            "Fandom": "Buffy Universe",
             "Author Name": null,
             "OP Versions": [
+                "Angel: the Series",
                 "Buffy the Vampire Slayer",
                 "Buffy the Vampire Slayer (TV)"
             ]

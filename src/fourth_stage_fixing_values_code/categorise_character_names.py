@@ -413,7 +413,8 @@ def categorise_names(char_by_fandom_dict):
         ['Dream', 'of the Endless'],
         ['Jaskier', 'Dandelion'],
         ['Vash', 'the Stampede'],
-        ["Clay", "Dream"]
+        ["Clay", "Dream"],
+        ["Madame", "Vastra"]
     ]
     given_suffix = [
         ['Ymir', 'of the 104th'],
@@ -595,7 +596,10 @@ def categorise_names(char_by_fandom_dict):
                         given_name = split_name[1]
                     elif split_name == ['Upgraded Connor', 'RK900']: # add (RK800) to regular connor
                         given_name = "Connor (RK900)" 
-                
+                    elif split_name == ["Madame", "Vastra"]:
+                        title_prefix = split_name[0]
+                        surname = split_name[1]
+
                 elif len(split_name) == 1 \
                 and split_name[0] != "Reader" \
                 and "Doctor" not in split_name[0] \

@@ -2315,40 +2315,6 @@
                     ]
                 }
             ],
-            "Angel": [
-                {
-                    "given_name": "Angel",
-                    "middle_name": null,
-                    "maiden_name": null,
-                    "surname": null,
-                    "alias": null,
-                    "nickname": null,
-                    "title (prefix)": null,
-                    "title (suffix)": null,
-                    "name_order": null,
-                    "full_name": "Angel",
-                    "fandom": "Angel",
-                    "op_versions": [
-                        "Angel"
-                    ]
-                },
-                {
-                    "given_name": null,
-                    "middle_name": null,
-                    "maiden_name": null,
-                    "surname": null,
-                    "alias": null,
-                    "nickname": "Spike",
-                    "title (prefix)": null,
-                    "title (suffix)": null,
-                    "name_order": null,
-                    "full_name": "Spike",
-                    "fandom": "Angel",
-                    "op_versions": [
-                        "Spike"
-                    ]
-                }
-            ],
             "Arcane": [
                 {
                     "given_name": "Caitlyn",
@@ -2907,7 +2873,7 @@
                     ]
                 }
             ],
-            "Buffy the Vampire Slayer": [
+            "Buffy Universe": [
                 {
                     "given_name": "Angel",
                     "middle_name": null,
@@ -2919,7 +2885,7 @@
                     "title (suffix)": null,
                     "name_order": null,
                     "full_name": "Angel",
-                    "fandom": "Buffy the Vampire Slayer",
+                    "fandom": "Buffy Universe",
                     "op_versions": [
                         "Angel"
                     ]
@@ -2935,7 +2901,7 @@
                     "title (suffix)": null,
                     "name_order": "W",
                     "full_name": "Buffy Summers",
-                    "fandom": "Buffy the Vampire Slayer",
+                    "fandom": "Buffy Universe",
                     "op_versions": [
                         "Buffy Summers"
                     ]
@@ -2951,7 +2917,7 @@
                     "title (suffix)": null,
                     "name_order": "W",
                     "full_name": "Faith Lehane",
-                    "fandom": "Buffy the Vampire Slayer",
+                    "fandom": "Buffy Universe",
                     "op_versions": [
                         "Faith Lehane"
                     ]
@@ -2967,7 +2933,7 @@
                     "title (suffix)": null,
                     "name_order": null,
                     "full_name": "Spike",
-                    "fandom": "Buffy the Vampire Slayer",
+                    "fandom": "Buffy Universe",
                     "op_versions": [
                         "Spike"
                     ]
@@ -2983,7 +2949,7 @@
                     "title (suffix)": null,
                     "name_order": "W",
                     "full_name": "Tara Maclay",
-                    "fandom": "Buffy the Vampire Slayer",
+                    "fandom": "Buffy Universe",
                     "op_versions": [
                         "Tara Maclay"
                     ]
@@ -2999,7 +2965,7 @@
                     "title (suffix)": null,
                     "name_order": "W",
                     "full_name": "Willow Rosenberg",
-                    "fandom": "Buffy the Vampire Slayer",
+                    "fandom": "Buffy Universe",
                     "op_versions": [
                         "Willow Rosenberg"
                     ]
@@ -3015,7 +2981,7 @@
                     "title (suffix)": null,
                     "name_order": "W",
                     "full_name": "Xander Harris",
-                    "fandom": "Buffy the Vampire Slayer",
+                    "fandom": "Buffy Universe",
                     "op_versions": [
                         "Xander Harris"
                     ]
@@ -4187,15 +4153,15 @@
                     ]
                 },
                 {
-                    "given_name": "Madame",
+                    "given_name": null,
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Vastra",
                     "alias": null,
                     "nickname": null,
-                    "title (prefix)": null,
+                    "title (prefix)": "Madame",
                     "title (suffix)": null,
-                    "name_order": "W",
+                    "name_order": null,
                     "full_name": "Madame Vastra",
                     "fandom": "Doctor Who",
                     "op_versions": [
