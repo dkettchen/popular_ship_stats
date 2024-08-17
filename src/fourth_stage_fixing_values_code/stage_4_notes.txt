@@ -151,8 +151,7 @@
     # base the related column on
 
 
-    source venv/bin/activate
-    export PYTHONPATH=$(pwd)
+    source venv/bin/activate && export PYTHONPATH=$(pwd)
 
     python src/fourth_stage_fixing_values_code/unify_fandoms.py
     python src/fourth_stage_fixing_values_code/updating_fandom_characters.py

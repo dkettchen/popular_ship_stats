@@ -3,6 +3,7 @@ from src.fourth_stage_fixing_values_code.separate_names_into_parts import (
     remove_brackets, 
     separate_name_parts
 )
+from src.util_functions.add_full_name import add_full_name
 from json import dump, load
 
 
@@ -834,83 +835,6 @@ def categorise_names(char_by_fandom_dict):
                     given_name = "Y/N"
                 else: alias = "Player Character"
 
-                # let's be silly:
-                full_name = ""
-
-                if nickname and nickname[0] == "'":
-                    nickname = nickname[1:-1] # removing quotes for consistency
-
-                if title_prefix:
-                    full_name += " " + title_prefix
-                if order == "W":
-                    if given_name:
-                        full_name += " " + given_name
-                    if middle_name:
-                        full_name += " " + middle_name
-                    if nickname:
-                        full_name += " " + "'" + nickname + "'"
-                    if surname: 
-                        full_name += " " + surname
-                    if maiden_name:
-                        full_name += ", née " + maiden_name
-                elif order == "E":
-                    if surname: 
-                        full_name += " " + surname
-                    if middle_name:
-                        full_name += " " + middle_name
-                    if nickname:
-                        full_name += " " + "'" + nickname + "'"
-                    if given_name:
-                        full_name += " " + given_name
-                else: 
-                    if given_name:
-                        full_name += " " + given_name
-                    if middle_name:
-                        full_name += " " + middle_name
-                    if nickname:
-                        full_name += " " + "'" + nickname + "'"
-                    if surname: 
-                        full_name += " " + surname
-                if title_suffix:
-                    full_name += " " + title_suffix
-                if alias:
-                    if (alias in [
-                        "Player Character", 
-                        "Root", 
-                        "Dabi", 
-                        "Venom (Symbiote)",
-                        "Q", 
-                        "America",
-                        "England", 
-                        "Lightning",
-                        "Iron Bull", 
-                        "TommyInnit",
-                        "Technoblade",
-                        "Sapnap",
-                        "Ranboo",
-                        "GeorgeNotFound",
-                        "Ayanga",
-                    ] and not given_name) or alias == "Doctor":
-                        full_name += " " + alias
-                    else: full_name += " | " + alias
-
-                if len(full_name) == 0:
-                    print(split_name)
-                elif full_name in [
-                    " 'Spock'", 
-                    " 'Vaggie'",
-                    " 'Spike'",
-                ]: # removing quotes
-                    full_name = full_name[1:-1]
-                elif full_name == " Ben Solo Ren | Kylo":
-                    full_name = " Ben Solo | Kylo Ren"
-                elif full_name == " Darth Anakin Skywalker | Vader":
-                    full_name = " Anakin Skywalker | Darth Vader"
-                elif full_name == " Captain Killian Jones | Hook":
-                    full_name = " Killian Jones | Captain Hook"
-
-                full_name = full_name[1:] # removing leading white space
-
                 default_dict = {
                     "given_name": given_name,
                     "middle_name": middle_name,
@@ -921,10 +845,11 @@ def categorise_names(char_by_fandom_dict):
                     "title (prefix)": title_prefix,
                     "title (suffix)": title_suffix,
                     "name_order": order,
-                    "full_name": full_name,
+                    "full_name": None,
                     "fandom": fandom,
                     "op_versions": [og_name]
                 }
+                default_dict = add_full_name(default_dict)
 
                 categorised_characters[category][fandom].append(default_dict) # appending to current fandom list
 
