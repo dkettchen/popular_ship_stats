@@ -141,7 +141,8 @@ def separate_name_parts(character_dict):
                 "Upgraded Connor",
                 "Venom Symbiote",
                 "Lapis Lazuli", 
-                "Iron Bull"
+                "Iron Bull",
+                "Wilbur Soot"
                 ]:
                 new_part = split(r"\s", part)
             else:

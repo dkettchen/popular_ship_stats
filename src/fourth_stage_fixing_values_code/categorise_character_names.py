@@ -270,6 +270,7 @@ def categorise_names(char_by_fandom_dict):
         'Root',
         'Ayanga',
         "Iron Bull",
+        "Wilbur Soot",
     ]
     single_nicknames = [
         'Spike',
@@ -378,7 +379,6 @@ def categorise_names(char_by_fandom_dict):
         ['Yoo', 'Joonghyuk'],
         ['Roronoa', 'Zoro'],
         ['Vinsmoke', 'Sanji'],
-        ['Hanzo', 'Shimada'],
         ['Akechi', 'Goro'],
         ['Amagi', 'Yukiko'],
         ['Satonaka', 'Chie'],
@@ -415,7 +415,9 @@ def categorise_names(char_by_fandom_dict):
         ['Jaskier', 'Dandelion'],
         ['Vash', 'the Stampede'],
         ["Clay", "Dream"],
-        ["Madame", "Vastra"]
+        ["Madame", "Vastra"],
+        ["Alexis", "Quackity"],
+        ["Charles", "Grian"],
     ]
     given_suffix = [
         ['Ymir', 'of the 104th'],
@@ -427,7 +429,9 @@ def categorise_names(char_by_fandom_dict):
         ['Ryan', 'GoodTimesWithScar'],
         ['Jaskier', 'Dandelion'],
         ['Rose Quartz', 'Pink Diamond'],
-        ["Clay", "Dream"]
+        ["Clay", "Dream"],
+        ["Alexis", "Quackity"],
+        ["Charles", "Grian"],
     ]
 
     # 3 part names
@@ -577,6 +581,10 @@ def categorise_names(char_by_fandom_dict):
                             surname = split_name[0]
                             given_name = split_name[1]
                             order = "W"
+                        elif split_name == ["Hanzo","Shimada"]:
+                            surname = split_name[1]
+                            given_name = split_name[0]
+                            order = "E"
                         else: 
                             # they're in western order
                             given_name = split_name[0]

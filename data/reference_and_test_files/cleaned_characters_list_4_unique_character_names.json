@@ -1326,33 +1326,33 @@
                 }
             },
             "Youtube": {
-                "Alexis Quackity": {
+                "Alexis | Quackity": {
                     "given_name": "Alexis",
                     "middle_name": null,
                     "maiden_name": null,
-                    "surname": "Quackity",
-                    "alias": null,
+                    "surname": null,
+                    "alias": "Quackity",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
-                    "name_order": "W",
-                    "full_name": "Alexis Quackity",
+                    "name_order": null,
+                    "full_name": "Alexis | Quackity",
                     "fandom": "Youtube",
                     "op_versions": [
                         "Alexis | Quackity"
                     ]
                 },
-                "Charles Grian": {
+                "Charles | Grian": {
                     "given_name": "Charles",
                     "middle_name": null,
                     "maiden_name": null,
-                    "surname": "Grian",
-                    "alias": null,
+                    "surname": null,
+                    "alias": "Grian",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
-                    "name_order": "W",
-                    "full_name": "Charles Grian",
+                    "name_order": null,
+                    "full_name": "Charles | Grian",
                     "fandom": "Youtube",
                     "op_versions": [
                         "Charles | Grian"
@@ -1652,15 +1652,15 @@
                     ]
                 },
                 "Wilbur Soot": {
-                    "given_name": "Wilbur",
+                    "given_name": null,
                     "middle_name": null,
                     "maiden_name": null,
-                    "surname": "Soot",
-                    "alias": null,
+                    "surname": null,
+                    "alias": "Wilbur Soot",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
-                    "name_order": "W",
+                    "name_order": null,
                     "full_name": "Wilbur Soot",
                     "fandom": "Youtube",
                     "op_versions": [
@@ -10219,17 +10219,17 @@
                         "Fareeha 'Pharah' Amari"
                     ]
                 },
-                "Hanzo Shimada": {
-                    "given_name": "Shimada",
+                "Shimada Hanzo": {
+                    "given_name": "Hanzo",
                     "middle_name": null,
                     "maiden_name": null,
-                    "surname": "Hanzo",
+                    "surname": "Shimada",
                     "alias": null,
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "E",
-                    "full_name": "Hanzo Shimada",
+                    "full_name": "Shimada Hanzo",
                     "fandom": "Overwatch",
                     "op_versions": [
                         "Hanzo Shimada"

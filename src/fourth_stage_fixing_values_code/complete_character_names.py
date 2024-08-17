@@ -299,6 +299,7 @@ def complete_character_names(data_dict):
             "Sara Lance", # White Canary (she has an actual lance???)
             "Tim Drake" # HOW MANY ROBINS CAN ONE MAN NEED OMFG Robin / Red Robin
         ], # how on earth is canon bisexual wonder woman not on this list wtf
+
         "Genshin Impact | \u539f\u795e": [
             "Albedo",
             "Alhaitham",
@@ -332,6 +333,7 @@ def complete_character_names(data_dict):
             "America", # both these fuckers had other names!
             "England"
         ],
+
         "JoJo's Bizarre Adventure | \u30b8\u30e7\u30b8\u30e7\u306e\u5947\u5999\u306a\u5192\u967a": [
             "Kujo Jotaro", # "Jojo"
         ],
@@ -380,6 +382,7 @@ def complete_character_names(data_dict):
             "Uraraka Ochako", # Uravity
             "Yaoyorozu Momo" # Creati
         ],
+
         "One Piece | \u30ef\u30f3\u30d4\u30fc\u30b9": [
             "Roronoa Zoro", # Pirate Hunter
             "Vinsmoke Sanji" # Black-Leg
@@ -389,28 +392,22 @@ def complete_character_names(data_dict):
             "Saitama" # One Punch Man / Caped Baldy
         ],
         "Overwatch": [
-            "Am\u00e9lie Lacroix | Widowmaker",
-            "Angela Ziegler | Mercy",
-            "Emily", # tracer's gf canon wlw
-            "Fareeha Amari | Pharah",
-            "Gabriel Reyes | Reaper",
             "Hanzo Shimada", # Hanzo
-            "Jack Morrison | Soldier: 76",
             "Jesse McCree", # McCree
-            "Lena Oxton | Tracer", # canon wlw
             "Moira O'Deorain" # Moira
         ],
+
         "Power Rangers": [
             "Kimberly Hart",
             "Trini" # this one has a last name! I already looked it up
         ],
+
         "Pretty Guardian Sailor Moon | \u7f8e\u5c11\u5973\u6226\u58eb\u30bb\u30fc\u30e9\u30fc\u30e0\u30fc\u30f3": [
-            "Kaiou Michiru", # Sailor Neptune - this is the """cousins"""
+            "Kaiou Michiru", # Sailor Neptune
             "Tenoh Haruka" # Sailor Uranus
         ],
         "The Witcher | Wied\u017amin": [
             "Geralt of Rivia", # The Witcher
-            "Jaskier | Dandelion"
         ],
 
         "categories to group by": [
@@ -421,33 +418,174 @@ def complete_character_names(data_dict):
         ]
     }
 
-    # look up missing bits & add them 
-    #   (eg last names, aliases, etc that I know exist, 
-    #   look for middle names where initials are present)
 
-    # look up any characters you don't know to make sure
+    reuse_given_name = {
+        "Bangtan Boys / BTS": [
+            "Jeon Jungkook", # Jungkook
+            "Park Jimin" # Jimin
+        ],
+        "EXO": [
+            "Byun Baekhyun", # Baek Hyun
+            "Park Chanyeol" # Chanyeol
+        ],
+        "NCT": [
+            "Lee Jeno", # Jeno
+            "Mark Lee", # Mark
+            "Na Jaemin" # Jaemin
+        ],
+        "Red Velvet": [
+            "Kang Seulgi" # Seulgi
+        ],
+        "Stray Kids": [
+            "Felix Lee", # Felix
+            "Hwang Hyunjin", # Hyunjin
+        ],
+        "TOMORROW X TOGETHER / TXT": [
+            "Choi Soobin", # Soobin
+            "Choi Yeonjun" # Yeonjun
+        ],
+        "Overwatch": [
+            "Moira O'Deorain" # Moira
+            "Shimada Hanzo" # hanzo later too
+        ],
+    }
+    add_alias = {
+        "Youtube": [
+            "Dan Howell", # danisnotonfire
+            "Darryl Noveschosch", #BadBoyHalo
+            "Mark Fischbach", # Markiplier
+            "Phil Lester", # AmazingPhil
+            "Sean McLoughlin", #Jacksepticeye
+            "Zak Ahmed" # Skeppy
+        ],
+        "American Horror Story": [
+            "Cordelia Foxx/Goode", # The Supreme
+        ],
+        "DC": [
+            "Ava Sharpe", # Roundhouse 
+            "Barry Allen", # The Flash
+            "Bruce Wayne", # Batman
+            "Clark Kent", # Superman
+            "Edward Nygma", # The Riddler
+            "Harleen Quinzel", # Harley Quinn
+            "Kelly Olsen", # Guardian
+            "Lena Luthor", # Ultrawoman
+            "Leonard Snart", # Captain Cold
+            "Oliver Queen", # Green Arrow
+            "Oswald Cobblepot", # The Penguin
+            "Pamela Isley", # Poison Ivy
+            "Samantha 'Sam' Arias", # Reign
+            "Sara Lance", # White Canary (she has an actual lance???)
+            "Tim Drake" # HOW MANY ROBINS CAN ONE MAN NEED OMFG Robin / Red Robin
+        ],
+        "Marvel": [
+            "America Chavez", # Ms America
+            "Billy Kaplan", # Wiccan -canon gays
+            "Bruce Banner", # Hulk
+            "Carol Danvers", # Ms Marvel / Captain Marvel
+            "Charles Xavier", # Professor X
+            "Clint Barton", # Hawkeye
+            "Eddie Brock", # Venom
+            "Erik Lehnsherr", # Magneto
+            "Jane Foster", # Thor
+            "Kate Bishop", # Hawkeye
+            "Maria Rambeau", # Photon
+            "Peter Parker", # Spiderman
+            "Stephen Strange", # Doctor Strange
+            "Steve Rogers", # Captain America
+            "Teddy Altman", # Hulkling
+            "Tony Stark", # Iron Man
+            "Wade Wilson", # Deadpool
+            "Wanda Maximoff", #Scarlet Witch
+            "Yelena Belova" # Black Widow / White Widow (natasha's adopted sister apparently, I think I've seen her get blown away by a bad explosion before)
+        ],
+        "Miraculous: Tales of Ladybug & Cat Noir | Miraculous: Les Aventures de Ladybug et Chat Noir": [
+            "Juleka Couffaine", # Reflekta
+            "Rose Lavillant" # Princess Fragrance
+        ],
+        "My Hero Academia | \u50d5\u306e\u30d2\u30fc\u30ed\u30fc\u30a2\u30ab\u30c7\u30df\u30a2": [
+            "Asui Tsuyu", # Froppy
+            "Jirou Kyouka", # Earphone Jack
+            "Kaminari Denki", # Chargebolt
+            "Kirishima Eijirou", # Red Riot
+            "Midoriya Izuku", # Deku
+            "Todoroki Shouto", # Shoto
+            "Uraraka Ochako", # Uravity
+            "Yaoyorozu Momo" # Creati
+        ],
+        "One Piece | \u30ef\u30f3\u30d4\u30fc\u30b9": [
+            "Roronoa Zoro", # Pirate Hunter
+            "Vinsmoke Sanji" # Black-Leg
+        ],
+        "One-Punch Man | \u30ef\u30f3\u30d1\u30f3\u30de\u30f3": [
+            "Genos", # Demon Cyborg
+            "Saitama" # One Punch Man / Caped Baldy
+        ],
+        "Pretty Guardian Sailor Moon | \u7f8e\u5c11\u5973\u6226\u58eb\u30bb\u30fc\u30e9\u30fc\u30e0\u30fc\u30f3": [
+            "Kaiou Michiru", # Sailor Neptune
+            "Tenoh Haruka" # Sailor Uranus
+        ],
+        "The Witcher | Wied\u017amin": [
+            "Geralt of Rivia", # The Witcher
+        ],
+    }
+    add_first_last_W = { 
+        "Youtube": [
+            "GeorgeNotFound", # George Davidson
+            "Sapnap", # Nicholas Armstrong
 
-    # we're not fucking with translations, I've decided, 
-    #   so remove em where still present if any
+        ],
+    }
+    name_and_alias_W = { # various configs
+        "DC": [
+            "'Kon-El'", # Connor Kent, Superboy
+            "Alex Danvers", # Dr. Alexandra "Alex" Danvers, Supergirl / Sentinel
+            "Dick Grayson", # Nicholas "Dick" Grayson, Robin / Nightwing
+            "Jason Todd", # Jason Peter Todd, Robin / Red Hood
+            "Kara Danvers", # Kara Zor-El, Supergirl
+            
+        ],
+        "Marvel": [
+            "James 'Bucky' Barnes", # James Buchanan "Bucky" Barnes, Winter Soldier / Captain America
+            "Natasha Romanov", # Natalia Alianovna "Natasha" Romanova, black widow
+            "Pepper Potts", # Virginia "Pepper" Potts, Rescue
+            "Sam Wilson", # Samuel "Sam" Wilson, Falcon, Captain America
+        ],
+    }
+    other_name_parts = {
+        "Youtube": [
+            "Technoblade", # Alexander
+            "TommyInnit", # Thomas Michael Simons (I can't believe we know this man's middle name lmao)
+            "Wilbur Soot", # real name is William Patrick Spencer Gold
+        ],
+        "DC": [
+            "Lex Luthor", # Alexander Joseph "Lex" Luthor
+            "Nyssa al Ghul", # Nyssa Raatko (seems to be her "real" name listed, but also goes by the og one)
+            "Astra", # Astra In-Ze - Alura's twin sister
+        ],
+        "JoJo's Bizarre Adventure | \u30b8\u30e7\u30b8\u30e7\u306e\u5947\u5999\u306a\u5192\u967a": [
+            "Kujo Jotaro", # "Jojo"
+        ],
+        "Marvel": [
+            "Leo Fitz", # Leopold "Leo" Fitz
+            "Loki", # Loki Laufeyson / Odinson
+            "Michelle Jones", # "MJ"
+            "Mobius M. Mobius", # comic wiki lists "Moby" as nickname lmao
+            "Thor", # Thor Odinson
+        ],
+        "Overwatch": [
+            "Jesse McCree", # McCree
+        ],
+    }
+
+
+
+    # look up missing bits ✅ & add them 
+    #   (eg last names, aliases, etc that I know exist)
 
     # collect prior name versions for each character dict
 
-
-    # if character is the same as other character:
-    #   if it's the exact same dict -> just keep one and move on
-    #   if they're different: 
-        # iterate through relevant keys of char dict:
-            # if value on new dict is none
-                # continue
-            # if value exists in new dict
-                # if there is already a value and it is different from new value:
-                    #print pls
-                # otherwise:
-                    # replace with new value
-        # append new version's og versions to this one's to collect em all
-
-    # check if any values are missing that we know should be there
-        # add them for relevant cases
+    # recompile full name
 
     # make new collection to return
     

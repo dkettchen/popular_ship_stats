@@ -71,6 +71,7 @@ def add_full_name(name_dict):
             "Ranboo",
             "GeorgeNotFound",
             "Ayanga",
+            "Wilbur Soot",
         ] and not given_name) or alias == "Doctor":
             full_name += " " + alias
         else: full_name += " | " + alias
