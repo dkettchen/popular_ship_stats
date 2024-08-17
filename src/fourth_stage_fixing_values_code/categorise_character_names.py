@@ -412,7 +412,8 @@ def categorise_names(char_by_fandom_dict):
         ['Rose Quartz', 'Pink Diamond'],
         ['Dream', 'of the Endless'],
         ['Jaskier', 'Dandelion'],
-        ['Vash', 'the Stampede']
+        ['Vash', 'the Stampede'],
+        ["Clay", "Dream"]
     ]
     given_suffix = [
         ['Ymir', 'of the 104th'],
@@ -424,6 +425,7 @@ def categorise_names(char_by_fandom_dict):
         ['Ryan', 'GoodTimesWithScar'],
         ['Jaskier', 'Dandelion'],
         ['Rose Quartz', 'Pink Diamond'],
+        ["Clay", "Dream"]
     ]
 
     # 3 part names

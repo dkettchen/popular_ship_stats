@@ -22,16 +22,68 @@ def complete_unique_characters(data_dict):
     originally listed names that have been unified, and their cleaned fandom name 
     """
 
-    categorised_characters_abbreviated = {"RPF": {},
-                                          "fictional": {}}
-    for category in ["RPF", "fictional"]:
-        for fandom in data_dict[category]: # list of dicts
-            # let's start by seeing what we have:
-            all_characters = [character["full_name"] for character in data_dict[category][fandom]]
-            categorised_characters_abbreviated[category][fandom] = sorted(all_characters)
+    # categorised_characters_abbreviated = {"RPF": {},
+    #                                       "fictional": {}}
+    # for category in ["RPF", "fictional"]:
+    #     for fandom in data_dict[category]: # list of dicts
+    #         # let's start by seeing what we have:
+    #         all_characters = [character["full_name"] for character in data_dict[category][fandom]]
+    #         categorised_characters_abbreviated[category][fandom] = sorted(all_characters)
 
-    with open("data/reference_and_test_files/cleaned_characters_list_3_abbreviated.json", "w") as file:
-        dump(categorised_characters_abbreviated, file, indent=4)
+    # with open("data/reference_and_test_files/cleaned_characters_list_3_abbreviated.json", "w") as file:
+    #     dump(categorised_characters_abbreviated, file, indent=4)
+
+
+    unique_characters = {
+        "RPF": {},
+        "fictional": {}
+    }
+
+    for fandom in data_dict["RPF"]:
+        unique_characters["RPF"][fandom] = {}
+        for char in data_dict["RPF"][fandom]:
+            if char["full_name"] not in unique_characters["RPF"][fandom].keys():
+                if "Phil Watson" in char["full_name"]:
+                    unique_characters["RPF"][fandom]['Phil Watson | Philza'] = char
+                elif fandom == "My Chemical Romance":
+                    if "Gerard" in char["full_name"]:
+                        unique_characters["RPF"][fandom]['Gerard Way'] = char
+                    elif "Frank" in char["full_name"]:
+                        unique_characters["RPF"][fandom]['Frank Iero'] = char
+                elif "Xiao Zhan" in char["full_name"]:
+                    unique_characters["RPF"][fandom]['Xiao Zhan | Sean Xiao'] = char
+                else:
+                    unique_characters["RPF"][fandom][char["full_name"]] = char
+            else:
+                if "Phil Watson" in char["full_name"]:
+                    character_value = unique_characters["RPF"][fandom]['Phil Watson | Philza']
+                    if char["alias"]:
+                        character_value["alias"] = char["alias"]
+                    character_value["full_name"] = 'Phil Watson | Philza'
+                    character_value["op_versions"].extend(char["op_versions"])
+                elif fandom == "My Chemical Romance":
+                    if "Gerard" in char["full_name"]:
+                        character_value = unique_characters["RPF"][fandom]['Gerard Way']
+                        if char["surname"]:
+                            character_value["surname"] = char["surname"]
+                        character_value["full_name"] = 'Gerard Way'
+                        character_value["op_versions"].extend(char["op_versions"])
+                    elif "Frank" in char["full_name"]:
+                        character_value = unique_characters["RPF"][fandom]["Frank Iero"]
+                        if char["surname"]:
+                            character_value["surname"] = char["surname"]
+                        character_value["full_name"] = "Frank Iero"
+                        character_value["op_versions"].extend(char["op_versions"])
+                elif "Xiao Zhan" in char["full_name"]:
+                    character_value = unique_characters["RPF"][fandom]['Xiao Zhan | Sean Xiao']
+                    if char["alias"]:
+                        character_value["alias"] = char["alias"]
+                    character_value["full_name"] = 'Xiao Zhan | Sean Xiao'
+                    character_value["op_versions"].extend(char["op_versions"])
+                else:
+                    character_value = unique_characters["RPF"][fandom][char["full_name"]]
+                    character_value["op_versions"].extend(char["op_versions"])
+
 
 
     # look for obvious doubles & go with most complete version
@@ -77,6 +129,8 @@ def complete_unique_characters(data_dict):
     ]    
     """
 
+    return unique_characters
+
     # look up missing bits & add them 
     #   (eg last names, aliases, etc that I know exist, 
     #   look for middle names where initials are present)
@@ -118,6 +172,6 @@ if __name__ == "__main__":
     categorised_names = categorise_names(grouped_by_fandom)
 
     completed_characters = complete_unique_characters(categorised_names)
-    character_dict = {"categorised_name_characters_abr": categorised_names}
-    # with open("data/reference_and_test_files/cleaned_characters_list_4_complete_character_names.json", "w") as file:
-    #     dump(character_dict, file, indent=4)
+    character_dict = {"completed_characters": completed_characters}
+    with open("data/reference_and_test_files/cleaned_characters_list_4_complete_character_names.json", "w") as file:
+        dump(character_dict, file, indent=4)

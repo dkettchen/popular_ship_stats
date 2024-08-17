@@ -146,6 +146,9 @@
     # also for pairings where they are canon in one version and not canon in another 
     # (eg destiel only being canon in spanish lmao, or lan zhan/wwx only being canon in the book)
     # -> have it be more options than just is_canon: true/false, to account for those ones
+# - ALSO! add a related column to be able to query for incest ships lmao
+    # we can have in the character profiles a section for family members of theirs, to then 
+    # base the related column on
 
 
     source venv/bin/activate

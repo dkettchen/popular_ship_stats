@@ -1422,13 +1422,13 @@
                     "given_name": "Clay",
                     "middle_name": null,
                     "maiden_name": null,
-                    "surname": "Dream",
-                    "alias": null,
+                    "surname": null,
+                    "alias": "Dream",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
-                    "name_order": "W",
-                    "full_name": "Clay Dream",
+                    "name_order": null,
+                    "full_name": "Clay | Dream",
                     "fandom": "Youtube",
                     "op_versions": [
                         "Clay | Dream"
