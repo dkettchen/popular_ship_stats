@@ -4023,7 +4023,7 @@
             ],
             "Detroit: Become Human": [
                 {
-                    "given_name": "Connor",
+                    "given_name": "Connor (RK800)",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": null,
@@ -4032,7 +4032,7 @@
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": null,
-                    "full_name": "Connor",
+                    "full_name": "Connor (RK800)",
                     "fandom": "Detroit: Become Human",
                     "op_versions": [
                         "Connor"

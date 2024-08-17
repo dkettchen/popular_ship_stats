@@ -605,7 +605,9 @@ def categorise_names(char_by_fandom_dict):
                 and "Doctor" not in split_name[0] \
                 and split_name[0] not in player_characters:
                     # if there's only one name part
-                    if split_name[0] in single_first_names:
+                    if split_name[0] == "Connor" and "Detroit" in fandom:
+                        given_name = "Connor (RK800)"
+                    elif split_name[0] in single_first_names:
                         given_name = split_name[0]
                     elif split_name[0] in single_aliases:
                         alias = split_name[0]
@@ -615,6 +617,7 @@ def categorise_names(char_by_fandom_dict):
                         surname = split_name[0]
                     elif "Venom" in split_name[0]:
                         alias = "Venom (Symbiote)"
+                    
 
                 elif len(split_name) == 3:
                     if split_name in surname_given_alias_E:

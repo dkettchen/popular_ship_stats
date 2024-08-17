@@ -1,5 +1,5 @@
 {
-    "completed_characters": {
+    "unique_characters": {
         "RPF": {
             "5 Seconds of Summer": {
                 "Luke Hemmings": {
@@ -3811,8 +3811,8 @@
                 }
             },
             "Detroit: Become Human": {
-                "Connor": {
-                    "given_name": "Connor",
+                "Connor (RK800)": {
+                    "given_name": "Connor (RK800)",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": null,
@@ -3821,7 +3821,7 @@
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": null,
-                    "full_name": "Connor",
+                    "full_name": "Connor (RK800)",
                     "fandom": "Detroit: Become Human",
                     "op_versions": [
                         "Connor"
@@ -9378,22 +9378,6 @@
                         "Bakugou Katsuki"
                     ]
                 },
-                "Dabi": {
-                    "given_name": null,
-                    "middle_name": null,
-                    "maiden_name": null,
-                    "surname": null,
-                    "alias": "Dabi",
-                    "nickname": null,
-                    "title (prefix)": null,
-                    "title (suffix)": null,
-                    "name_order": null,
-                    "full_name": "Dabi",
-                    "fandom": "My Hero Academia | \u50d5\u306e\u30d2\u30fc\u30ed\u30fc\u30a2\u30ab\u30c7\u30df\u30a2",
-                    "op_versions": [
-                        "Dabi"
-                    ]
-                },
                 "Touya Todoroki | Dabi": {
                     "given_name": "Touya",
                     "middle_name": null,
@@ -9407,6 +9391,7 @@
                     "full_name": "Touya Todoroki | Dabi",
                     "fandom": "My Hero Academia | \u50d5\u306e\u30d2\u30fc\u30ed\u30fc\u30a2\u30ab\u30c7\u30df\u30a2",
                     "op_versions": [
+                        "Dabi",
                         "Dabi | Todoroki Touya"
                     ]
                 },
