@@ -1,5 +1,5 @@
 {
-    "unique_characters": {
+    "complete_characters": {
         "RPF": {
             "5 Seconds of Summer": {
                 "Luke Hemmings": {
@@ -120,17 +120,17 @@
                 }
             },
             "Bangtan Boys / BTS": {
-                "Jeon Jungkook": {
+                "Jeon Jungkook | Jungkook": {
                     "given_name": "Jungkook",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Jeon",
-                    "alias": null,
+                    "alias": "Jungkook",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "E",
-                    "full_name": "Jeon Jungkook",
+                    "full_name": "Jeon Jungkook | Jungkook",
                     "fandom": "Bangtan Boys / BTS",
                     "op_versions": [
                         "Jeon Jungkook"
@@ -217,17 +217,17 @@
                         "Min Yoongi | Suga"
                     ]
                 },
-                "Park Jimin": {
+                "Park Jimin | Jimin": {
                     "given_name": "Jimin",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Park",
-                    "alias": null,
+                    "alias": "Jimin",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "E",
-                    "full_name": "Park Jimin",
+                    "full_name": "Park Jimin | Jimin",
                     "fandom": "Bangtan Boys / BTS",
                     "op_versions": [
                         "Park Jimin"
@@ -335,17 +335,17 @@
                 }
             },
             "EXO": {
-                "Byun Baekhyun": {
+                "Byun Baekhyun | Baekhyun": {
                     "given_name": "Baekhyun",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Byun",
-                    "alias": null,
+                    "alias": "Baekhyun",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "E",
-                    "full_name": "Byun Baekhyun",
+                    "full_name": "Byun Baekhyun | Baekhyun",
                     "fandom": "EXO",
                     "op_versions": [
                         "Byun Baekhyun"
@@ -383,17 +383,17 @@
                         "Kim Jongin | Kai"
                     ]
                 },
-                "Park Chanyeol": {
+                "Park Chanyeol | Chanyeol": {
                     "given_name": "Chanyeol",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Park",
-                    "alias": null,
+                    "alias": "Chanyeol",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "E",
-                    "full_name": "Park Chanyeol",
+                    "full_name": "Park Chanyeol | Chanyeol",
                     "fandom": "EXO",
                     "op_versions": [
                         "Park Chanyeol"
@@ -760,49 +760,49 @@
                         "Lee Donghyuck | Haechan"
                     ]
                 },
-                "Lee Jeno": {
+                "Lee Jeno | Jeno": {
                     "given_name": "Jeno",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Lee",
-                    "alias": null,
+                    "alias": "Jeno",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "E",
-                    "full_name": "Lee Jeno",
+                    "full_name": "Lee Jeno | Jeno",
                     "fandom": "NCT",
                     "op_versions": [
                         "Lee Jeno"
                     ]
                 },
-                "Mark Lee": {
+                "Mark Lee | Mark": {
                     "given_name": "Mark",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Lee",
-                    "alias": null,
+                    "alias": "Mark",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Mark Lee",
+                    "full_name": "Mark Lee | Mark",
                     "fandom": "NCT",
                     "op_versions": [
                         "Mark Lee"
                     ]
                 },
-                "Na Jaemin": {
+                "Na Jaemin | Jaemin": {
                     "given_name": "Jaemin",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Na",
-                    "alias": null,
+                    "alias": "Jaemin",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "E",
-                    "full_name": "Na Jaemin",
+                    "full_name": "Na Jaemin | Jaemin",
                     "fandom": "NCT",
                     "op_versions": [
                         "Na Jaemin"
@@ -958,17 +958,17 @@
                         "Bae Joohyun | Irene"
                     ]
                 },
-                "Kang Seulgi": {
+                "Kang Seulgi | Seulgi": {
                     "given_name": "Seulgi",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Kang",
-                    "alias": null,
+                    "alias": "Seulgi",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "E",
-                    "full_name": "Kang Seulgi",
+                    "full_name": "Kang Seulgi | Seulgi",
                     "fandom": "Red Velvet",
                     "op_versions": [
                         "Kang Seulgi"
@@ -1026,33 +1026,33 @@
                         "Han Jisung | Han"
                     ]
                 },
-                "Hwang Hyunjin": {
+                "Hwang Hyunjin | Hyunjin": {
                     "given_name": "Hyunjin",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Hwang",
-                    "alias": null,
+                    "alias": "Hyunjin",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "E",
-                    "full_name": "Hwang Hyunjin",
+                    "full_name": "Hwang Hyunjin | Hyunjin",
                     "fandom": "Stray Kids",
                     "op_versions": [
                         "Hwang Hyunjin"
                     ]
                 },
-                "Felix Lee": {
+                "Felix Lee | Felix": {
                     "given_name": "Felix",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Lee",
-                    "alias": null,
+                    "alias": "Felix",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Felix Lee",
+                    "full_name": "Felix Lee | Felix",
                     "fandom": "Stray Kids",
                     "op_versions": [
                         "Lee Felix"
@@ -1144,33 +1144,33 @@
                 }
             },
             "TOMORROW X TOGETHER / TXT": {
-                "Choi Soobin": {
+                "Choi Soobin | Soobin": {
                     "given_name": "Soobin",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Choi",
-                    "alias": null,
+                    "alias": "Soobin",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "E",
-                    "full_name": "Choi Soobin",
+                    "full_name": "Choi Soobin | Soobin",
                     "fandom": "TOMORROW X TOGETHER / TXT",
                     "op_versions": [
                         "Choi Soobin"
                     ]
                 },
-                "Choi Yeonjun": {
+                "Choi Yeonjun | Yeonjun": {
                     "given_name": "Yeonjun",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Choi",
-                    "alias": null,
+                    "alias": "Yeonjun",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "E",
-                    "full_name": "Choi Yeonjun",
+                    "full_name": "Choi Yeonjun | Yeonjun",
                     "fandom": "TOMORROW X TOGETHER / TXT",
                     "op_versions": [
                         "Choi Yeonjun"
@@ -1374,33 +1374,33 @@
                         "Clay | Dream"
                     ]
                 },
-                "Dan Howell": {
+                "Dan Howell | danisnotonfire": {
                     "given_name": "Dan",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Howell",
-                    "alias": null,
+                    "alias": "danisnotonfire",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Dan Howell",
+                    "full_name": "Dan Howell | danisnotonfire",
                     "fandom": "Youtube",
                     "op_versions": [
                         "Dan Howell"
                     ]
                 },
-                "Darryl Noveschosch": {
+                "Darryl Noveschosch | BadBoyHalo": {
                     "given_name": "Darryl",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Noveschosch",
-                    "alias": null,
+                    "alias": "BadBoyHalo",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Darryl Noveschosch",
+                    "full_name": "Darryl Noveschosch | BadBoyHalo",
                     "fandom": "Youtube",
                     "op_versions": [
                         "Darryl Noveschosch"
@@ -1422,17 +1422,17 @@
                         "Gavin Free"
                     ]
                 },
-                "GeorgeNotFound": {
-                    "given_name": null,
+                "George Davidson | GeorgeNotFound": {
+                    "given_name": "George",
                     "middle_name": null,
                     "maiden_name": null,
-                    "surname": null,
+                    "surname": "Davidson",
                     "alias": "GeorgeNotFound",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
-                    "name_order": null,
-                    "full_name": "GeorgeNotFound",
+                    "name_order": "W",
+                    "full_name": "George Davidson | GeorgeNotFound",
                     "fandom": "Youtube",
                     "op_versions": [
                         "GeorgeNotFound",
@@ -1471,17 +1471,17 @@
                         "Kristin Rosales Watson"
                     ]
                 },
-                "Mark Fischbach": {
+                "Mark Fischbach | Markiplier": {
                     "given_name": "Mark",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Fischbach",
-                    "alias": null,
+                    "alias": "Markiplier",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Mark Fischbach",
+                    "full_name": "Mark Fischbach | Markiplier",
                     "fandom": "Youtube",
                     "op_versions": [
                         "Mark Fischbach"
@@ -1503,17 +1503,17 @@
                         "Michael Jones"
                     ]
                 },
-                "Phil Lester": {
+                "Phil Lester | AmazingPhil": {
                     "given_name": "Phil",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Lester",
-                    "alias": null,
+                    "alias": "AmazingPhil",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Phil Lester",
+                    "full_name": "Phil Lester | AmazingPhil",
                     "fandom": "Youtube",
                     "op_versions": [
                         "Phil Lester"
@@ -1568,54 +1568,37 @@
                         "Ryan | GoodTimesWithScar"
                     ]
                 },
-                "Sapnap": {
-                    "given_name": null,
+                "Nicholas Armstrong | Sapnap": {
+                    "given_name": "Nicholas",
                     "middle_name": null,
                     "maiden_name": null,
-                    "surname": null,
+                    "surname": "Armstrong",
                     "alias": "Sapnap",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
-                    "name_order": null,
-                    "full_name": "Sapnap",
+                    "name_order": "W",
+                    "full_name": "Nicholas Armstrong | Sapnap",
                     "fandom": "Youtube",
                     "op_versions": [
                         "Sapnap",
                         "Sapnap (Video Blogging RPF)"
                     ]
                 },
-                "Sean McLoughlin": {
+                "Sean McLoughlin | Jacksepticeye": {
                     "given_name": "Sean",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "McLoughlin",
-                    "alias": null,
+                    "alias": "Jacksepticeye",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Sean McLoughlin",
+                    "full_name": "Sean McLoughlin | Jacksepticeye",
                     "fandom": "Youtube",
                     "op_versions": [
                         "Sean McLoughlin"
-                    ]
-                },
-                "Technoblade": {
-                    "given_name": null,
-                    "middle_name": null,
-                    "maiden_name": null,
-                    "surname": null,
-                    "alias": "Technoblade",
-                    "nickname": null,
-                    "title (prefix)": null,
-                    "title (suffix)": null,
-                    "name_order": null,
-                    "full_name": "Technoblade",
-                    "fandom": "Youtube",
-                    "op_versions": [
-                        "Technoblade",
-                        "Technoblade (Video Blogging RPF)"
                     ]
                 },
                 "Toby Smith | Tubbo": {
@@ -1634,50 +1617,17 @@
                         "Toby Smith | Tubbo"
                     ]
                 },
-                "TommyInnit": {
-                    "given_name": null,
-                    "middle_name": null,
-                    "maiden_name": null,
-                    "surname": null,
-                    "alias": "TommyInnit",
-                    "nickname": null,
-                    "title (prefix)": null,
-                    "title (suffix)": null,
-                    "name_order": null,
-                    "full_name": "TommyInnit",
-                    "fandom": "Youtube",
-                    "op_versions": [
-                        "TommyInnit",
-                        "TommyInnit (Video Blogging RPF)"
-                    ]
-                },
-                "Wilbur Soot": {
-                    "given_name": null,
-                    "middle_name": null,
-                    "maiden_name": null,
-                    "surname": null,
-                    "alias": "Wilbur Soot",
-                    "nickname": null,
-                    "title (prefix)": null,
-                    "title (suffix)": null,
-                    "name_order": null,
-                    "full_name": "Wilbur Soot",
-                    "fandom": "Youtube",
-                    "op_versions": [
-                        "Wilbur Soot"
-                    ]
-                },
-                "Zak Ahmed": {
+                "Zak Ahmed | Skeppy": {
                     "given_name": "Zak",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Ahmed",
-                    "alias": null,
+                    "alias": "Skeppy",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Zak Ahmed",
+                    "full_name": "Zak Ahmed | Skeppy",
                     "fandom": "Youtube",
                     "op_versions": [
                         "Zak Ahmed"
@@ -2081,17 +2031,17 @@
                 }
             },
             "American Horror Story": {
-                "Cordelia Foxx/Goode": {
+                "Cordelia Foxx/Goode | The Supreme": {
                     "given_name": "Cordelia",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Foxx/Goode",
-                    "alias": null,
+                    "alias": "The Supreme",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Cordelia Foxx/Goode",
+                    "full_name": "Cordelia Foxx/Goode | The Supreme",
                     "fandom": "American Horror Story",
                     "op_versions": [
                         "Cordelia Foxx | Cordelia Goode"
@@ -3277,81 +3227,81 @@
                 }
             },
             "DC": {
-                "Alex Danvers": {
-                    "given_name": "Alex",
+                "Alexandra 'Alex' Danvers | Supergirl/Sentinel": {
+                    "given_name": "Alexandra",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Danvers",
-                    "alias": null,
-                    "nickname": null,
+                    "alias": "Supergirl/Sentinel",
+                    "nickname": "Alex",
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Alex Danvers",
+                    "full_name": "Alexandra 'Alex' Danvers | Supergirl/Sentinel",
                     "fandom": "DC",
                     "op_versions": [
                         "Alex Danvers"
                     ]
                 },
-                "Astra": {
+                "Astra In-Ze": {
                     "given_name": "Astra",
                     "middle_name": null,
                     "maiden_name": null,
-                    "surname": null,
+                    "surname": "In-Ze",
                     "alias": null,
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
-                    "name_order": null,
-                    "full_name": "Astra",
+                    "name_order": "W",
+                    "full_name": "Astra In-Ze",
                     "fandom": "DC",
                     "op_versions": [
                         "Astra"
                     ]
                 },
-                "Ava Sharpe": {
+                "Ava Sharpe |  Roundhouse": {
                     "given_name": "Ava",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Sharpe",
-                    "alias": null,
+                    "alias": " Roundhouse",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Ava Sharpe",
+                    "full_name": "Ava Sharpe |  Roundhouse",
                     "fandom": "DC",
                     "op_versions": [
                         "Ava Sharpe"
                     ]
                 },
-                "Barry Allen": {
+                "Barry Allen | The Flash": {
                     "given_name": "Barry",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Allen",
-                    "alias": null,
+                    "alias": "The Flash",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Barry Allen",
+                    "full_name": "Barry Allen | The Flash",
                     "fandom": "DC",
                     "op_versions": [
                         "Barry Allen"
                     ]
                 },
-                "Bruce Wayne": {
+                "Bruce Wayne | Batman": {
                     "given_name": "Bruce",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Wayne",
-                    "alias": null,
+                    "alias": "Batman",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Bruce Wayne",
+                    "full_name": "Bruce Wayne | Batman",
                     "fandom": "DC",
                     "op_versions": [
                         "Bruce Wayne"
@@ -3373,49 +3323,49 @@
                         "Cat Grant"
                     ]
                 },
-                "Clark Kent": {
+                "Clark Kent | Superman": {
                     "given_name": "Clark",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Kent",
-                    "alias": null,
+                    "alias": "Superman",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Clark Kent",
+                    "full_name": "Clark Kent | Superman",
                     "fandom": "DC",
                     "op_versions": [
                         "Clark Kent"
                     ]
                 },
-                "Dick Grayson": {
-                    "given_name": "Dick",
+                "Nicholas 'Dick' Grayson | Robin/Nightwing": {
+                    "given_name": "Nicholas",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Grayson",
-                    "alias": null,
-                    "nickname": null,
+                    "alias": "Robin/Nightwing",
+                    "nickname": "Dick",
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Dick Grayson",
+                    "full_name": "Nicholas 'Dick' Grayson | Robin/Nightwing",
                     "fandom": "DC",
                     "op_versions": [
                         "Dick Grayson"
                     ]
                 },
-                "Edward Nygma": {
+                "Edward Nygma | The Riddler": {
                     "given_name": "Edward",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Nygma",
-                    "alias": null,
+                    "alias": "The Riddler",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Edward Nygma",
+                    "full_name": "Edward Nygma | The Riddler",
                     "fandom": "DC",
                     "op_versions": [
                         "Edward Nygma"
@@ -3437,132 +3387,116 @@
                         "Felicity Smoak"
                     ]
                 },
-                "Harleen Quinzel": {
+                "Harleen Quinzel | Harley Quinn": {
                     "given_name": "Harleen",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Quinzel",
-                    "alias": null,
+                    "alias": "Harley Quinn",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Harleen Quinzel",
+                    "full_name": "Harleen Quinzel | Harley Quinn",
                     "fandom": "DC",
                     "op_versions": [
                         "Harleen Quinzel"
                     ]
                 },
-                "Jason Todd": {
+                "Jason Peter Todd | Robin/Red Hood": {
                     "given_name": "Jason",
-                    "middle_name": null,
+                    "middle_name": "Peter",
                     "maiden_name": null,
                     "surname": "Todd",
-                    "alias": null,
+                    "alias": "Robin/Red Hood",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Jason Todd",
+                    "full_name": "Jason Peter Todd | Robin/Red Hood",
                     "fandom": "DC",
                     "op_versions": [
                         "Jason Todd"
                     ]
                 },
-                "Kara Danvers": {
+                "Kara Danvers/Zor-El | Supergirl": {
                     "given_name": "Kara",
                     "middle_name": null,
                     "maiden_name": null,
-                    "surname": "Danvers",
-                    "alias": null,
+                    "surname": "Danvers/Zor-El",
+                    "alias": "Supergirl",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Kara Danvers",
+                    "full_name": "Kara Danvers/Zor-El | Supergirl",
                     "fandom": "DC",
                     "op_versions": [
                         "Kara Danvers"
                     ]
                 },
-                "Kelly Olsen": {
+                "Kelly Olsen | Guardian": {
                     "given_name": "Kelly",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Olsen",
-                    "alias": null,
+                    "alias": "Guardian",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Kelly Olsen",
+                    "full_name": "Kelly Olsen | Guardian",
                     "fandom": "DC",
                     "op_versions": [
                         "Kelly Olsen"
                     ]
                 },
-                "'Kon-El'": {
-                    "given_name": null,
+                "Connor 'Kon-El' Kent | Superboy": {
+                    "given_name": "Connor",
                     "middle_name": null,
                     "maiden_name": null,
-                    "surname": null,
-                    "alias": null,
+                    "surname": "Kent",
+                    "alias": "Superboy",
                     "nickname": "Kon-El",
                     "title (prefix)": null,
                     "title (suffix)": null,
-                    "name_order": null,
-                    "full_name": "'Kon-El'",
+                    "name_order": "W",
+                    "full_name": "Connor 'Kon-El' Kent | Superboy",
                     "fandom": "DC",
                     "op_versions": [
                         "Kon-El"
                     ]
                 },
-                "Lena Luthor": {
+                "Lena Luthor | Ultrawoman": {
                     "given_name": "Lena",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Luthor",
-                    "alias": null,
+                    "alias": "Ultrawoman",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Lena Luthor",
+                    "full_name": "Lena Luthor | Ultrawoman",
                     "fandom": "DC",
                     "op_versions": [
                         "Lena Luthor"
                     ]
                 },
-                "Leonard Snart": {
+                "Leonard Snart | Captain Cold": {
                     "given_name": "Leonard",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Snart",
-                    "alias": null,
+                    "alias": "Captain Cold",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Leonard Snart",
+                    "full_name": "Leonard Snart | Captain Cold",
                     "fandom": "DC",
                     "op_versions": [
                         "Leonard Snart"
-                    ]
-                },
-                "Lex Luthor": {
-                    "given_name": "Lex",
-                    "middle_name": null,
-                    "maiden_name": null,
-                    "surname": "Luthor",
-                    "alias": null,
-                    "nickname": null,
-                    "title (prefix)": null,
-                    "title (suffix)": null,
-                    "name_order": "W",
-                    "full_name": "Lex Luthor",
-                    "fandom": "DC",
-                    "op_versions": [
-                        "Lex Luthor"
                     ]
                 },
                 "Lois Lane": {
@@ -3597,113 +3531,113 @@
                         "Maggie Sawyer"
                     ]
                 },
-                "Nyssa al Ghul": {
+                "Nyssa Raatko/al Ghul": {
                     "given_name": "Nyssa",
                     "middle_name": null,
                     "maiden_name": null,
-                    "surname": "al Ghul",
+                    "surname": "Raatko/al Ghul",
                     "alias": null,
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Nyssa al Ghul",
+                    "full_name": "Nyssa Raatko/al Ghul",
                     "fandom": "DC",
                     "op_versions": [
                         "Nyssa al Ghul"
                     ]
                 },
-                "Oliver Queen": {
+                "Oliver Queen | Green Arrow": {
                     "given_name": "Oliver",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Queen",
-                    "alias": null,
+                    "alias": "Green Arrow",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Oliver Queen",
+                    "full_name": "Oliver Queen | Green Arrow",
                     "fandom": "DC",
                     "op_versions": [
                         "Oliver Queen"
                     ]
                 },
-                "Oswald Cobblepot": {
+                "Oswald Cobblepot | The Penguin": {
                     "given_name": "Oswald",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Cobblepot",
-                    "alias": null,
+                    "alias": "The Penguin",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Oswald Cobblepot",
+                    "full_name": "Oswald Cobblepot | The Penguin",
                     "fandom": "DC",
                     "op_versions": [
                         "Oswald Cobblepot"
                     ]
                 },
-                "Pamela Isley": {
+                "Pamela Isley | Poison Ivy": {
                     "given_name": "Pamela",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Isley",
-                    "alias": null,
+                    "alias": "Poison Ivy",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Pamela Isley",
+                    "full_name": "Pamela Isley | Poison Ivy",
                     "fandom": "DC",
                     "op_versions": [
                         "Pamela Isley"
                     ]
                 },
-                "Samantha 'Sam' Arias": {
+                "Samantha 'Sam' Arias | Reign": {
                     "given_name": "Samantha",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Arias",
-                    "alias": null,
+                    "alias": "Reign",
                     "nickname": "Sam",
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Samantha 'Sam' Arias",
+                    "full_name": "Samantha 'Sam' Arias | Reign",
                     "fandom": "DC",
                     "op_versions": [
                         "Samantha 'Sam' Arias"
                     ]
                 },
-                "Sara Lance": {
+                "Sara Lance | White Canary": {
                     "given_name": "Sara",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Lance",
-                    "alias": null,
+                    "alias": "White Canary",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Sara Lance",
+                    "full_name": "Sara Lance | White Canary",
                     "fandom": "DC",
                     "op_versions": [
                         "Sara Lance"
                     ]
                 },
-                "Tim Drake": {
+                "Tim Drake | Robin/Red Robin": {
                     "given_name": "Tim",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Drake",
-                    "alias": null,
+                    "alias": "Robin/Red Robin",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Tim Drake",
+                    "full_name": "Tim Drake | Robin/Red Robin",
                     "fandom": "DC",
                     "op_versions": [
                         "Tim Drake"
@@ -7226,17 +7160,17 @@
                         "Kakyoin Noriaki"
                     ]
                 },
-                "Kujo Jotaro": {
+                "Kujo 'Jojo' Jotaro": {
                     "given_name": "Jotaro",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Kujo",
                     "alias": null,
-                    "nickname": null,
+                    "nickname": "Jojo",
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "E",
-                    "full_name": "Kujo Jotaro",
+                    "full_name": "Kujo 'Jojo' Jotaro",
                     "fandom": "JoJo's Bizarre Adventure | \u30b8\u30e7\u30b8\u30e7\u306e\u5947\u5999\u306a\u5192\u967a",
                     "op_versions": [
                         "Kujo Jotaro"
@@ -8379,17 +8313,17 @@
                 }
             },
             "Marvel": {
-                "America Chavez": {
+                "America Chavez | Ms. America": {
                     "given_name": "America",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Chavez",
-                    "alias": null,
+                    "alias": "Ms. America",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "America Chavez",
+                    "full_name": "America Chavez | Ms. America",
                     "fandom": "Marvel",
                     "op_versions": [
                         "America Chavez"
@@ -8411,81 +8345,81 @@
                         "Angie Martinelli"
                     ]
                 },
-                "Billy Kaplan": {
+                "Billy Kaplan | Wiccan": {
                     "given_name": "Billy",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Kaplan",
-                    "alias": null,
+                    "alias": "Wiccan",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Billy Kaplan",
+                    "full_name": "Billy Kaplan | Wiccan",
                     "fandom": "Marvel",
                     "op_versions": [
                         "Billy Kaplan"
                     ]
                 },
-                "Bruce Banner": {
+                "Bruce Banner | Hulk": {
                     "given_name": "Bruce",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Banner",
-                    "alias": null,
+                    "alias": "Hulk",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Bruce Banner",
+                    "full_name": "Bruce Banner | Hulk",
                     "fandom": "Marvel",
                     "op_versions": [
                         "Bruce Banner"
                     ]
                 },
-                "Carol Danvers": {
+                "Carol Danvers | Ms. Marvel/Captain Marvel": {
                     "given_name": "Carol",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Danvers",
-                    "alias": null,
+                    "alias": "Ms. Marvel/Captain Marvel",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Carol Danvers",
+                    "full_name": "Carol Danvers | Ms. Marvel/Captain Marvel",
                     "fandom": "Marvel",
                     "op_versions": [
                         "Carol Danvers"
                     ]
                 },
-                "Charles Xavier": {
+                "Charles Xavier | Professor X": {
                     "given_name": "Charles",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Xavier",
-                    "alias": null,
+                    "alias": "Professor X",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Charles Xavier",
+                    "full_name": "Charles Xavier | Professor X",
                     "fandom": "Marvel",
                     "op_versions": [
                         "Charles Xavier"
                     ]
                 },
-                "Clint Barton": {
+                "Clint Barton | Hawkeye": {
                     "given_name": "Clint",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Barton",
-                    "alias": null,
+                    "alias": "Hawkeye",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Clint Barton",
+                    "full_name": "Clint Barton | Hawkeye",
                     "fandom": "Marvel",
                     "op_versions": [
                         "Clint Barton"
@@ -8507,33 +8441,33 @@
                         "Darcy Lewis"
                     ]
                 },
-                "Eddie Brock": {
+                "Eddie Brock | Venom": {
                     "given_name": "Eddie",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Brock",
-                    "alias": null,
+                    "alias": "Venom",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Eddie Brock",
+                    "full_name": "Eddie Brock | Venom",
                     "fandom": "Marvel",
                     "op_versions": [
                         "Eddie Brock"
                     ]
                 },
-                "Erik Lehnsherr": {
+                "Erik Lehnsherr | Magneto": {
                     "given_name": "Erik",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Lehnsherr",
-                    "alias": null,
+                    "alias": "Magneto",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Erik Lehnsherr",
+                    "full_name": "Erik Lehnsherr | Magneto",
                     "fandom": "Marvel",
                     "op_versions": [
                         "Erik Lehnsherr"
@@ -8555,33 +8489,33 @@
                         "Grant Ward"
                     ]
                 },
-                "James 'Bucky' Barnes": {
+                "James Buchanan 'Bucky' Barnes | Winter Soldier/Captain America": {
                     "given_name": "James",
-                    "middle_name": null,
+                    "middle_name": "Buchanan",
                     "maiden_name": null,
                     "surname": "Barnes",
-                    "alias": null,
+                    "alias": "Winter Soldier/Captain America",
                     "nickname": "Bucky",
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "James 'Bucky' Barnes",
+                    "full_name": "James Buchanan 'Bucky' Barnes | Winter Soldier/Captain America",
                     "fandom": "Marvel",
                     "op_versions": [
                         "James 'Bucky' Barnes"
                     ]
                 },
-                "Jane Foster": {
+                "Jane Foster | Thor": {
                     "given_name": "Jane",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Foster",
-                    "alias": null,
+                    "alias": "Thor",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Jane Foster",
+                    "full_name": "Jane Foster | Thor",
                     "fandom": "Marvel",
                     "op_versions": [
                         "Jane Foster"
@@ -8603,49 +8537,33 @@
                         "Jemma Simmons"
                     ]
                 },
-                "Kate Bishop": {
+                "Kate Bishop | Hawkeye": {
                     "given_name": "Kate",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Bishop",
-                    "alias": null,
+                    "alias": "Hawkeye",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Kate Bishop",
+                    "full_name": "Kate Bishop | Hawkeye",
                     "fandom": "Marvel",
                     "op_versions": [
                         "Kate Bishop"
                     ]
                 },
-                "Leo Fitz": {
-                    "given_name": "Leo",
+                "Loki Laufeyson/Odinson": {
+                    "given_name": "Loki",
                     "middle_name": null,
                     "maiden_name": null,
-                    "surname": "Fitz",
+                    "surname": "Laufeyson/Odinson",
                     "alias": null,
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Leo Fitz",
-                    "fandom": "Marvel",
-                    "op_versions": [
-                        "Leo Fitz"
-                    ]
-                },
-                "Loki": {
-                    "given_name": "Loki",
-                    "middle_name": null,
-                    "maiden_name": null,
-                    "surname": null,
-                    "alias": null,
-                    "nickname": null,
-                    "title (prefix)": null,
-                    "title (suffix)": null,
-                    "name_order": null,
-                    "full_name": "Loki",
+                    "full_name": "Loki Laufeyson/Odinson",
                     "fandom": "Marvel",
                     "op_versions": [
                         "Loki",
@@ -8668,65 +8586,65 @@
                         "Maria Hill"
                     ]
                 },
-                "Maria Rambeau": {
+                "Maria Rambeau | Photon": {
                     "given_name": "Maria",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Rambeau",
-                    "alias": null,
+                    "alias": "Photon",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Maria Rambeau",
+                    "full_name": "Maria Rambeau | Photon",
                     "fandom": "Marvel",
                     "op_versions": [
                         "Maria Rambeau"
                     ]
                 },
-                "Michelle Jones": {
+                "Michelle 'MJ' Jones": {
                     "given_name": "Michelle",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Jones",
                     "alias": null,
-                    "nickname": null,
+                    "nickname": "MJ",
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Michelle Jones",
+                    "full_name": "Michelle 'MJ' Jones",
                     "fandom": "Marvel",
                     "op_versions": [
                         "Michelle Jones"
                     ]
                 },
-                "Mobius M. Mobius": {
+                "Mobius M. 'Moby' Mobius": {
                     "given_name": "Mobius",
                     "middle_name": "M.",
                     "maiden_name": null,
                     "surname": "Mobius",
                     "alias": null,
-                    "nickname": null,
+                    "nickname": "Moby",
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Mobius M. Mobius",
+                    "full_name": "Mobius M. 'Moby' Mobius",
                     "fandom": "Marvel",
                     "op_versions": [
                         "Mobius M. Mobius"
                     ]
                 },
-                "Natasha Romanov": {
-                    "given_name": "Natasha",
-                    "middle_name": null,
+                "Natalia Alianovna 'Natasha' Romanova | Black Widow": {
+                    "given_name": "Natalia",
+                    "middle_name": "Alianovna",
                     "maiden_name": null,
-                    "surname": "Romanov",
-                    "alias": null,
-                    "nickname": null,
+                    "surname": "Romanova",
+                    "alias": "Black Widow",
+                    "nickname": "Natasha",
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Natasha Romanov",
+                    "full_name": "Natalia Alianovna 'Natasha' Romanova | Black Widow",
                     "fandom": "Marvel",
                     "op_versions": [
                         "Natasha Romanov"
@@ -8748,33 +8666,33 @@
                         "Peggy Carter"
                     ]
                 },
-                "Pepper Potts": {
-                    "given_name": "Pepper",
+                "Virginia 'Pepper' Potts | Rescue": {
+                    "given_name": "Virginia",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Potts",
-                    "alias": null,
-                    "nickname": null,
+                    "alias": "Rescue",
+                    "nickname": "Pepper",
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Pepper Potts",
+                    "full_name": "Virginia 'Pepper' Potts | Rescue",
                     "fandom": "Marvel",
                     "op_versions": [
                         "Pepper Potts"
                     ]
                 },
-                "Peter Parker": {
+                "Peter Parker | Spiderman": {
                     "given_name": "Peter",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Parker",
-                    "alias": null,
+                    "alias": "Spiderman",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Peter Parker",
+                    "full_name": "Peter Parker | Spiderman",
                     "fandom": "Marvel",
                     "op_versions": [
                         "Peter Parker"
@@ -8812,23 +8730,23 @@
                         "Reader"
                     ]
                 },
-                "Sam Wilson": {
-                    "given_name": "Sam",
+                "Samuel 'Sam' Wilson | Falcon/Captain America": {
+                    "given_name": "Samuel",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Wilson",
-                    "alias": null,
-                    "nickname": null,
+                    "alias": "Falcon/Captain America",
+                    "nickname": "Sam",
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Sam Wilson",
+                    "full_name": "Samuel 'Sam' Wilson | Falcon/Captain America",
                     "fandom": "Marvel",
                     "op_versions": [
                         "Sam Wilson"
                     ]
                 },
-                "Daisy Johnson | Skye": {
+                "Daisy Johnson": {
                     "given_name": "Daisy",
                     "middle_name": null,
                     "maiden_name": null,
@@ -8838,89 +8756,89 @@
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Daisy Johnson | Skye",
+                    "full_name": "Daisy Johnson",
                     "fandom": "Marvel",
                     "op_versions": [
                         "Skye",
                         "Skye | Daisy Johnson"
                     ]
                 },
-                "Stephen Strange": {
+                "Stephen Strange | Doctor Strange": {
                     "given_name": "Stephen",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Strange",
-                    "alias": null,
+                    "alias": "Doctor Strange",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Stephen Strange",
+                    "full_name": "Stephen Strange | Doctor Strange",
                     "fandom": "Marvel",
                     "op_versions": [
                         "Stephen Strange"
                     ]
                 },
-                "Steve Rogers": {
+                "Steve Rogers | Captain America": {
                     "given_name": "Steve",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Rogers",
-                    "alias": null,
+                    "alias": "Captain America",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Steve Rogers",
+                    "full_name": "Steve Rogers | Captain America",
                     "fandom": "Marvel",
                     "op_versions": [
                         "Steve Rogers"
                     ]
                 },
-                "Teddy Altman": {
+                "Teddy Altman | Hulkling": {
                     "given_name": "Teddy",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Altman",
-                    "alias": null,
+                    "alias": "Hulkling",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Teddy Altman",
+                    "full_name": "Teddy Altman | Hulkling",
                     "fandom": "Marvel",
                     "op_versions": [
                         "Teddy Altman"
                     ]
                 },
-                "Thor": {
+                "Thor Odinson": {
                     "given_name": "Thor",
                     "middle_name": null,
                     "maiden_name": null,
-                    "surname": null,
+                    "surname": "Odinson",
                     "alias": null,
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
-                    "name_order": null,
-                    "full_name": "Thor",
+                    "name_order": "W",
+                    "full_name": "Thor Odinson",
                     "fandom": "Marvel",
                     "op_versions": [
                         "Thor",
                         "Thor (Marvel)"
                     ]
                 },
-                "Tony Stark": {
+                "Tony Stark | Iron Man": {
                     "given_name": "Tony",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Stark",
-                    "alias": null,
+                    "alias": "Iron Man",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Tony Stark",
+                    "full_name": "Tony Stark | Iron Man",
                     "fandom": "Marvel",
                     "op_versions": [
                         "Tony Stark"
@@ -8942,49 +8860,49 @@
                         "Venom Symbiote"
                     ]
                 },
-                "Wade Wilson": {
+                "Wade Wilson | Deadpool": {
                     "given_name": "Wade",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Wilson",
-                    "alias": null,
+                    "alias": "Deadpool",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Wade Wilson",
+                    "full_name": "Wade Wilson | Deadpool",
                     "fandom": "Marvel",
                     "op_versions": [
                         "Wade Wilson"
                     ]
                 },
-                "Wanda Maximoff": {
+                "Wanda Maximoff | Scarlet Witch": {
                     "given_name": "Wanda",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Maximoff",
-                    "alias": null,
+                    "alias": "Scarlet Witch",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Wanda Maximoff",
+                    "full_name": "Wanda Maximoff | Scarlet Witch",
                     "fandom": "Marvel",
                     "op_versions": [
                         "Wanda Maximoff"
                     ]
                 },
-                "Yelena Belova": {
+                "Yelena Belova | Black Widow/White Widow": {
                     "given_name": "Yelena",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Belova",
-                    "alias": null,
+                    "alias": "Black Widow/White Widow",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Yelena Belova",
+                    "full_name": "Yelena Belova | Black Widow/White Widow",
                     "fandom": "Marvel",
                     "op_versions": [
                         "Yelena Belova"
@@ -9177,17 +9095,17 @@
                         "Adrien Agreste | Chat Noir"
                     ]
                 },
-                "Juleka Couffaine": {
+                "Juleka Couffaine | Reflekta": {
                     "given_name": "Juleka",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Couffaine",
-                    "alias": null,
+                    "alias": "Reflekta",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Juleka Couffaine",
+                    "full_name": "Juleka Couffaine | Reflekta",
                     "fandom": "Miraculous: Tales of Ladybug & Cat Noir | Miraculous: Les Aventures de Ladybug et Chat Noir",
                     "op_versions": [
                         "Juleka Couffaine"
@@ -9210,17 +9128,17 @@
                         "Marinette Dupain-Cheng | Ladybug"
                     ]
                 },
-                "Rose Lavillant": {
+                "Rose Lavillant | Princess Fragrance": {
                     "given_name": "Rose",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Lavillant",
-                    "alias": null,
+                    "alias": "Princess Fragrance",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Rose Lavillant",
+                    "full_name": "Rose Lavillant | Princess Fragrance",
                     "fandom": "Miraculous: Tales of Ladybug & Cat Noir | Miraculous: Les Aventures de Ladybug et Chat Noir",
                     "op_versions": [
                         "Rose Lavillant"
@@ -9346,17 +9264,17 @@
                         "Aizawa Shouta | Eraserhead"
                     ]
                 },
-                "Asui Tsuyu": {
+                "Asui Tsuyu | Froppy": {
                     "given_name": "Tsuyu",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Asui",
-                    "alias": null,
+                    "alias": "Froppy",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "E",
-                    "full_name": "Asui Tsuyu",
+                    "full_name": "Asui Tsuyu | Froppy",
                     "fandom": "My Hero Academia | \u50d5\u306e\u30d2\u30fc\u30ed\u30fc\u30a2\u30ab\u30c7\u30df\u30a2",
                     "op_versions": [
                         "Asui Tsuyu"
@@ -9395,65 +9313,65 @@
                         "Dabi | Todoroki Touya"
                     ]
                 },
-                "Jirou Kyouka": {
+                "Jirou Kyouka | Earphone Jack": {
                     "given_name": "Kyouka",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Jirou",
-                    "alias": null,
+                    "alias": "Earphone Jack",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "E",
-                    "full_name": "Jirou Kyouka",
+                    "full_name": "Jirou Kyouka | Earphone Jack",
                     "fandom": "My Hero Academia | \u50d5\u306e\u30d2\u30fc\u30ed\u30fc\u30a2\u30ab\u30c7\u30df\u30a2",
                     "op_versions": [
                         "Jirou Kyouka"
                     ]
                 },
-                "Kaminari Denki": {
+                "Kaminari Denki | Chargebolt": {
                     "given_name": "Denki",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Kaminari",
-                    "alias": null,
+                    "alias": "Chargebolt",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "E",
-                    "full_name": "Kaminari Denki",
+                    "full_name": "Kaminari Denki | Chargebolt",
                     "fandom": "My Hero Academia | \u50d5\u306e\u30d2\u30fc\u30ed\u30fc\u30a2\u30ab\u30c7\u30df\u30a2",
                     "op_versions": [
                         "Kaminari Denki"
                     ]
                 },
-                "Kirishima Eijirou": {
+                "Kirishima Eijirou | Red Riot": {
                     "given_name": "Eijirou",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Kirishima",
-                    "alias": null,
+                    "alias": "Red Riot",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "E",
-                    "full_name": "Kirishima Eijirou",
+                    "full_name": "Kirishima Eijirou | Red Riot",
                     "fandom": "My Hero Academia | \u50d5\u306e\u30d2\u30fc\u30ed\u30fc\u30a2\u30ab\u30c7\u30df\u30a2",
                     "op_versions": [
                         "Kirishima Eijirou"
                     ]
                 },
-                "Midoriya Izuku": {
+                "Midoriya Izuku | Deku": {
                     "given_name": "Izuku",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Midoriya",
-                    "alias": null,
+                    "alias": "Deku",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "E",
-                    "full_name": "Midoriya Izuku",
+                    "full_name": "Midoriya Izuku | Deku",
                     "fandom": "My Hero Academia | \u50d5\u306e\u30d2\u30fc\u30ed\u30fc\u30a2\u30ab\u30c7\u30df\u30a2",
                     "op_versions": [
                         "Midoriya Izuku"
@@ -9507,33 +9425,33 @@
                         "Takami Keigo | Hawks"
                     ]
                 },
-                "Todoroki Shouto": {
+                "Todoroki Shouto | Shoto": {
                     "given_name": "Shouto",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Todoroki",
-                    "alias": null,
+                    "alias": "Shoto",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "E",
-                    "full_name": "Todoroki Shouto",
+                    "full_name": "Todoroki Shouto | Shoto",
                     "fandom": "My Hero Academia | \u50d5\u306e\u30d2\u30fc\u30ed\u30fc\u30a2\u30ab\u30c7\u30df\u30a2",
                     "op_versions": [
                         "Todoroki Shouto"
                     ]
                 },
-                "Uraraka Ochako": {
+                "Uraraka Ochako | Uravity": {
                     "given_name": "Ochako",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Uraraka",
-                    "alias": null,
+                    "alias": "Uravity",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "E",
-                    "full_name": "Uraraka Ochako",
+                    "full_name": "Uraraka Ochako | Uravity",
                     "fandom": "My Hero Academia | \u50d5\u306e\u30d2\u30fc\u30ed\u30fc\u30a2\u30ab\u30c7\u30df\u30a2",
                     "op_versions": [
                         "Uraraka Ochako"
@@ -9571,17 +9489,17 @@
                         "Yamada Hizashi | Present Mic"
                     ]
                 },
-                "Yaoyorozu Momo": {
+                "Yaoyorozu Momo | Creati": {
                     "given_name": "Momo",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Yaoyorozu",
-                    "alias": null,
+                    "alias": "Creati",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "E",
-                    "full_name": "Yaoyorozu Momo",
+                    "full_name": "Yaoyorozu Momo | Creati",
                     "fandom": "My Hero Academia | \u50d5\u306e\u30d2\u30fc\u30ed\u30fc\u30a2\u30ab\u30c7\u30df\u30a2",
                     "op_versions": [
                         "Yaoyorozu Momo"
@@ -9953,33 +9871,33 @@
                 }
             },
             "One Piece | \u30ef\u30f3\u30d4\u30fc\u30b9": {
-                "Roronoa Zoro": {
+                "Roronoa Zoro | Pirate Hunter Zoro": {
                     "given_name": "Zoro",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Roronoa",
-                    "alias": null,
+                    "alias": "Pirate Hunter",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "E",
-                    "full_name": "Roronoa Zoro",
+                    "full_name": "Roronoa Zoro | Pirate Hunter Zoro",
                     "fandom": "One Piece | \u30ef\u30f3\u30d4\u30fc\u30b9",
                     "op_versions": [
                         "Roronoa Zoro"
                     ]
                 },
-                "Sanji Vinsmoke": {
+                "Sanji Vinsmoke | Black-Leg Sanji": {
                     "given_name": "Sanji",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Vinsmoke",
-                    "alias": null,
+                    "alias": "Black-Leg",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Sanji Vinsmoke",
+                    "full_name": "Sanji Vinsmoke | Black-Leg Sanji",
                     "fandom": "One Piece | \u30ef\u30f3\u30d4\u30fc\u30b9",
                     "op_versions": [
                         "Vinsmoke Sanji"
@@ -9987,33 +9905,33 @@
                 }
             },
             "One-Punch Man | \u30ef\u30f3\u30d1\u30f3\u30de\u30f3": {
-                "Genos": {
+                "Genos | Demon Cyborg": {
                     "given_name": "Genos",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": null,
-                    "alias": null,
+                    "alias": "Demon Cyborg",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": null,
-                    "full_name": "Genos",
+                    "full_name": "Genos | Demon Cyborg",
                     "fandom": "One-Punch Man | \u30ef\u30f3\u30d1\u30f3\u30de\u30f3",
                     "op_versions": [
                         "Genos"
                     ]
                 },
-                "Saitama": {
+                "Saitama | One Punch Man/Caped Baldy": {
                     "given_name": "Saitama",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": null,
-                    "alias": null,
+                    "alias": "One Punch Man/Caped Baldy",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": null,
-                    "full_name": "Saitama",
+                    "full_name": "Saitama | One Punch Man/Caped Baldy",
                     "fandom": "One-Punch Man | \u30ef\u30f3\u30d1\u30f3\u30de\u30f3",
                     "op_versions": [
                         "Saitama (One-Punch Man)"
@@ -10233,22 +10151,6 @@
                     "fandom": "Overwatch",
                     "op_versions": [
                         "Hanzo Shimada"
-                    ]
-                },
-                "Jesse McCree": {
-                    "given_name": "Jesse",
-                    "middle_name": null,
-                    "maiden_name": null,
-                    "surname": "McCree",
-                    "alias": null,
-                    "nickname": null,
-                    "title (prefix)": null,
-                    "title (suffix)": null,
-                    "name_order": "W",
-                    "full_name": "Jesse McCree",
-                    "fandom": "Overwatch",
-                    "op_versions": [
-                        "Jesse McCree"
                     ]
                 },
                 "Lena Oxton | Tracer": {
@@ -10652,33 +10554,33 @@
                 }
             },
             "Pretty Guardian Sailor Moon | \u7f8e\u5c11\u5973\u6226\u58eb\u30bb\u30fc\u30e9\u30fc\u30e0\u30fc\u30f3": {
-                "Kaiou Michiru": {
+                "Kaiou Michiru | Sailor Neptune": {
                     "given_name": "Michiru",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Kaiou",
-                    "alias": null,
+                    "alias": "Sailor Neptune",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "E",
-                    "full_name": "Kaiou Michiru",
+                    "full_name": "Kaiou Michiru | Sailor Neptune",
                     "fandom": "Pretty Guardian Sailor Moon | \u7f8e\u5c11\u5973\u6226\u58eb\u30bb\u30fc\u30e9\u30fc\u30e0\u30fc\u30f3",
                     "op_versions": [
                         "Kaiou Michiru"
                     ]
                 },
-                "Tenoh Haruka": {
+                "Tenoh Haruka | Sailor Uranus": {
                     "given_name": "Haruka",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Tenoh",
-                    "alias": null,
+                    "alias": "Sailor Uranus",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "E",
-                    "full_name": "Tenoh Haruka",
+                    "full_name": "Tenoh Haruka | Sailor Uranus",
                     "fandom": "Pretty Guardian Sailor Moon | \u7f8e\u5c11\u5973\u6226\u58eb\u30bb\u30fc\u30e9\u30fc\u30e0\u30fc\u30f3",
                     "op_versions": [
                         "Tenoh Haruka"
@@ -14192,17 +14094,17 @@
                 }
             },
             "The Witcher | Wied\u017amin": {
-                "Geralt of Rivia": {
+                "Geralt of Rivia | The Witcher": {
                     "given_name": "Geralt",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": null,
-                    "alias": null,
+                    "alias": "The Witcher",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": "of Rivia",
                     "name_order": "W",
-                    "full_name": "Geralt of Rivia",
+                    "full_name": "Geralt of Rivia | The Witcher",
                     "fandom": "The Witcher | Wied\u017amin",
                     "op_versions": [
                         "Geralt z Rivii | Geralt of Rivia"

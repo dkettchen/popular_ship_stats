@@ -378,7 +378,6 @@ def categorise_names(char_by_fandom_dict):
         ['Kim', 'Dokja'],
         ['Yoo', 'Joonghyuk'],
         ['Roronoa', 'Zoro'],
-        ['Vinsmoke', 'Sanji'],
         ['Akechi', 'Goro'],
         ['Amagi', 'Yukiko'],
         ['Satonaka', 'Chie'],
@@ -576,8 +575,10 @@ def categorise_names(char_by_fandom_dict):
                             surname = split_name[0]
                             given_name = split_name[1]
                             order = "E"
-                        elif split_name == ['Lee', 'Felix']: 
-                            # man's australian, if we have mark in western order, felix should be too
+                        elif split_name in [
+                            ['Lee', 'Felix'], # man's australian, if we have mark in western order, felix should be too
+                            ["Vinsmoke", "Sanji"], # man's literally white
+                        ]:
                             surname = split_name[0]
                             given_name = split_name[1]
                             order = "W"
