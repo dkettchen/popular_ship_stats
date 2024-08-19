@@ -1,16 +1,47 @@
 #TODO:
-    # check that bracket caused doubles have been removed ✅
-    # separate & collect name parts ✅
-        # split at " | " for aliases ✅
-        # split at white spaces afterwards ✅
-    # categorise name parts
-        # if split item starts & ends on ' -> it's a nickname
-        # figure out which bits are first names, last names & aliases
-    # complete name parts where missing
-        # complete first/last names where missing from one double but present in the other
-        # add aliases where obviously missing
-        # add translations if you can find a reliable way to scrape the info 
-        #   cause fucking hell it'd be a lot of work otherwise ToT
+-testing for our cleaned data!
+    -each dict is a new item, not mutated (check for each stage of running)
+        -this should not fuck with our files as majority of them only run in main file
+            -> comment out the ones that don't??
+    -read from our finished list & check that the data is in the format we expected
+        -at least one name part value is populated
+        -full name is a string that isn't empty or all white spaces
+        -there are no brackets in any of the full names other than in the connor & venom ones
+        -there is only one version per name (how do we check that? maybe list vs set?)
+        -there is 1 or more old version in op versions
+        -op versions are unique values
+        -format of final dict? just to make sure
+        -we didn't lose any fandoms (check against clean fandoms list)
+        -we didn't lose any characters (check against old versions I guess)
+    -test our util func too ✅
+        -mock data to feed in
+        -test that exceptions are being formatted correctly
+        -test that it didn't mutate input, output is new
+        -test that it returns any non-used key unchanged
+        -test that it returns any used key other than nick & full unchanged
+        -test that it removes single quotes from nick where present
+            -and that it leaves quote-less nicks as is
+        -test that it retains same amount & names of keys in output as in input (no keys lost or added)
+
+-collect each character's listed og fandom names (ONLY ONES *THEY SPECIFICALLY* ARE LISTED WITH)
+    -make new key for each character dict for op fandoms (possibly rename op version to op names)
+    -where og character name is in op versions of our character -> add og fandom
+        -compare against fandoms w their og versions list (make sure is up to date)
+        to cut down on running time needed for iterations
+
+-spring clean ref folder
+    -make a copy of em? or at least move/relabel em to be easier to find as our main ref for later
+    rather than a working inbetween -> this may require renaming file paths in running order files
+    -> make a version that has a RPF or Fic attribute on each char profile instead of two categories?
+    (generally have a clean-up of your ref folder incl refactoring filepaths where needed in files)
+
+-clean main files for this stage 
+    -AFTER we've collected all the names & fandoms & stored them in other files
+    -go through each main data set
+    -replace fandom values w clean fandom equivalent using ref list
+    -replace characters (keep in order) w clean full names (details can stay in other file)
+    -create new files to store the cleaned main files
+    
 
 
 # pandas will be hecking useful for some of this current shuffling things about!
@@ -20,60 +51,26 @@
 # where I feel like I can have more control (with my current skills) and flexibility
 
 
-#things to fix at a glance:
-    # fix misattributed late-addition music groups ✅
-
-    # RM form bts is doubled
-    # so is xiao zhan/sean from untamed
-    # mcr is both doubled up
-    # the expected first name/last name order inconsistency issue w a lot of names
-    # a buncha doubles among the youtubers
-
-    # there's a few doubles in AoT
-    # critical role has doubles
-    # DC has a suspicious lack of aliases, pls fix in formatting later
-    # dragon age has doubles
-    # elsa frozen is double
-    # crowley good omens is double
-    # america hetalia is double
-    # les mis has doubles
-    # lost girl lauren is double
-    # of course there's marvel doubles, and same as w dc a sus lack of aliases
-    # mass effect has male & female & non-specified shepard 
-    #   -> figure out what regular shepard was classed as gender-wise
-    # merlin has doubles
-    # as does miraculous ladybug
-    # mha has doubles & lacks some aliases
-    # naruto has a double
-    # rumpelstiltskin once upon a time still misspellt & therefore double
-    # zosan one piece lacking their aliases
-    # pretty sure mccree's dead name in overwatch, also missing aliases
-    # person of interest has a double
-    # pitch perfect has a double
-    # as does power rangers
-    # and queer as folk
-    # are jim & james moriarity the same person in sherlock holmes? if so they're double
-    # star trek has double
-    # star wars has kylo double
-    # so many steven universe doubles
-    # reader & you doubled up in supernatural
-    # tmnt have doubles
-    # the 100 has doubles
-    # last of us ellie is double
-    # undyne undertale is double
-    # as is lance voltron
-# the rest looks fine but we'll have to see if everyone is accounted for later    
-
-
 #TODO:
-# remove doubles
+# remove doubles ✅
     #doubles are generally caused by:
         # missing parts of names vs present ones
         # brackets specifying property we don't need to specify
     # -> remove brackets ✅
-    # for missing name parts more formatting is needed (see above)
+    # for missing name parts more formatting is needed (see below) ✅
+        # check that bracket caused doubles have been removed ✅
+        # separate & collect name parts ✅
+            # split at " | " for aliases ✅
+            # split at white spaces afterwards ✅
+        # categorise name parts ✅
+            # if split item starts & ends on ' -> it's a nickname ✅
+            # figure out which bits are first names, last names & aliases ✅
+        # complete name parts where missing ✅
+            # complete first/last names where missing from one double but present in the other ✅
+            # add aliases where obviously missing ✅
 
 # add original fandom instances to character profiles
+    # ONLY THE INSTANCES *THIS CHARACTER* IS LISTED WITH -> consult main data sets
     # eg their fandom may have many instances but they were only listed for these ones specifically
     # -> to keep track of that as we clean, same as w fandoms
 # make a file that contains 
@@ -88,6 +85,10 @@
     #   with all RPF & fictional fandoms mixed in
     #   w the respective fandom's details in one line
     # and then another one to do the same w characters & their details
+
+
+stage 5: adding additional info 
+(gender, race, media types, important dates, canon pairings, family relations)
 
 # add gender where same-sex slash pairings
     # start from latest info
@@ -151,7 +152,12 @@
     # base the related column on
 
 
-    source venv/bin/activate && export PYTHONPATH=$(pwd)
+
+
+source venv/bin/activate && export PYTHONPATH=$(pwd)
+
+
+file running order to update stage 4 helper files:
 
     python src/fourth_stage_fixing_values_code/unify_fandoms.py
     python src/fourth_stage_fixing_values_code/updating_fandom_characters.py
@@ -159,7 +165,6 @@
     python src/fourth_stage_fixing_values_code/categorise_character_names.py
     python src/fourth_stage_fixing_values_code/complete_character_names.py
 
-    file running order to update helper files:
     -unify_fandoms.py
         - reads from:
             third_clean_up_data_json_lines_version folder   <- dependant on json lines files

@@ -57,7 +57,7 @@ def add_full_name(name_dict):
     if title_suffix:
         full_name += " " + title_suffix
     if alias:
-        if full_name == "":
+        if full_name == "" or alias == "Doctor":
             full_name += " " + alias
         else: full_name += " | " + alias
 
