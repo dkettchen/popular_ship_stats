@@ -1,3 +1,124 @@
+from src.fourth_stage_fixing_values_code.separate_names_into_parts import gather_all_raw_characters, remove_brackets, separate_name_parts
+from src.fourth_stage_fixing_values_code.categorise_character_names import group_split_names_by_fandom, categorise_names
+from src.fourth_stage_fixing_values_code.complete_character_names import make_unique_characters, complete_character_names
+import pytest
+
+@pytest.fixture(scope="class") # only running this mess once for this whole test suite bc heck
+def complete_chars():
+    all_raw_chars = gather_all_raw_characters()
+    no_brackets = remove_brackets(all_raw_chars)
+    separated_chars = separate_name_parts(no_brackets)
+    grouped_chars = group_split_names_by_fandom(separated_chars)
+    categorised_chars = categorise_names(grouped_chars)
+    unique_chars = make_unique_characters(categorised_chars)
+    complete_chars = complete_character_names(unique_chars)
+
+    return complete_chars
+
+@pytest.fixture(scope="class")
+def rpf_fic(complete_chars):
+    rpf = complete_chars["RPF"]
+    fic = complete_chars["fictional"]
+    return (rpf, fic)
+
+
+@pytest.mark.skip
+def test_does_not_mutate_inputs():
+    all_raw_chars = gather_all_raw_characters()
+    no_brackets = remove_brackets(all_raw_chars)
+    separated_chars = separate_name_parts(no_brackets)
+    grouped_chars = group_split_names_by_fandom(separated_chars)
+    categorised_chars = categorise_names(grouped_chars)
+    unique_chars = make_unique_characters(categorised_chars)
+
+    assert all_raw_chars == gather_all_raw_characters()
+    assert no_brackets == remove_brackets(all_raw_chars)
+    assert separated_chars == separate_name_parts(no_brackets)
+    assert grouped_chars == group_split_names_by_fandom(separated_chars)
+    assert categorised_chars == categorise_names(grouped_chars)
+    assert unique_chars == make_unique_characters(categorised_chars)
+
+class TestOutputDict:
+
+    def test_at_least_one_name_part_is_populated(self, rpf_fic):
+        rpf_dict, fic_dict = rpf_fic
+        name_parts = [
+            "given_name", 
+            "middle_name", 
+            "maiden_name", 
+            "surname", 
+            "alias", 
+            "nickname", 
+            "title (prefix)", 
+            "title (suffix)"
+        ]
+        for category in [rpf_dict, fic_dict]:
+            for fandom in category:
+                for character in category[fandom]:
+                    has_name = False
+                    for key in name_parts:
+                        if category[fandom][character][key]:
+                            has_name = True
+                    assert has_name
+
+    def test_full_name_string_is_present_and_not_empty(self, rpf_fic):
+        rpf_dict, fic_dict = rpf_fic
+        for category in [rpf_dict, fic_dict]:
+            for fandom in category:
+                for character in category[fandom]:
+                    full_name = category[fandom][character]["full_name"]
+                    assert type(full_name) == str
+                    assert len(full_name) > 0
+
+    def test_no_brackets_left_in_name(self, rpf_fic):
+        rpf_dict, fic_dict = rpf_fic
+        for category in [rpf_dict, fic_dict]:
+            for fandom in category:
+                for character in category[fandom]:
+                    full_name = category[fandom][character]["full_name"]
+                    if full_name not in [
+                        "Connor (RK800)",
+                        "Connor (RK900)",
+                        "Venom (Symbiote)"
+                    ]:
+                        assert "(" not in full_name and ")" not in full_name
+
+    def test_no_obvious_double_names_left(self, rpf_fic):
+        rpf_dict, fic_dict = rpf_fic
+        for category in [rpf_dict, fic_dict]:
+            for fandom in category:
+                key_list = list(category[fandom].keys())
+                key_set = set(key_list)
+                assert len(key_list) == len(key_set)
+
+    def test_collects_unique_original_versions(self, rpf_fic):
+        rpf_dict, fic_dict = rpf_fic
+        for category in [rpf_dict, fic_dict]:
+            for fandom in category:
+                for character in category[fandom]:
+                    op_versions = category[fandom][character]["op_versions"]
+                    assert type(op_versions) == list
+                    assert len(op_versions) >= 1
+                    assert len(op_versions) == len(set(op_versions))
+
+# -testing for our cleaned data!
+#     -each dict is a new item, not mutated (check for each stage of running) ✅
+#     -read from our finished list & check that the data is in the format we expected
+#         -at least one name part value is populated ✅
+#         -full name is a string that isn't empty or all white spaces ✅
+#         -there are no brackets in any of the full names other than in the connor & venom ones ✅
+#         -there is only one version per name (how do we check that? maybe list vs set?) ✅
+#         -there is 1 or more old version in op versions ✅
+#         -op versions are unique values ✅
+#         -format of final dict? just to make sure
+#         -we didn't lose any fandoms (check against clean fandoms list)
+#         -we didn't lose any characters (check against old versions I guess)
+
+
+
+
+# boo boring, no, later maybe:
+
 # test output data rather than individual functions leading to it
 # get data from files to test
 

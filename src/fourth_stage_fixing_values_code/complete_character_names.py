@@ -12,26 +12,30 @@ from json import dump, load
 from copy import deepcopy
 
 
-def make_unique_characters(data_dict):
+def make_unique_characters(input_data):
     """
     takes nested dict with keys "RPF" and "fictional" as output by categorise_names function
 
-    also contains code to update the abbreviated cleaned_characters_list_3 & _4
+    also contains code to update the abbreviated cleaned_characters_list_3 & _4 that only runs if 
+    you run the actual file itself
 
     returns a dict where within each fandom, there is a unique character name key (per character) 
     holding a dict of the most complete version of that character's name parts, a list of their 
     originally listed names that have been unified, and their cleaned fandom name 
     """
 
-    categorised_characters_abbreviated = {"RPF": {},"fictional": {}}
-    for category in ["RPF", "fictional"]:
-        for fandom in data_dict[category]: # list of dicts
-            # let's start by seeing what we have:
-            all_characters = [character["full_name"] for character in data_dict[category][fandom]]
-            categorised_characters_abbreviated[category][fandom] = sorted(all_characters)
+    data_dict = deepcopy(input_data)
 
-    with open("data/reference_and_test_files/cleaned_characters_list_3_abbreviated.json", "w") as file:
-        dump(categorised_characters_abbreviated, file, indent=4)
+    if __name__ == "__main__":
+        categorised_characters_abbreviated = {"RPF": {},"fictional": {}}
+        for category in ["RPF", "fictional"]:
+            for fandom in data_dict[category]: # list of dicts
+                # let's start by seeing what we have:
+                all_characters = [character["full_name"] for character in data_dict[category][fandom]]
+                categorised_characters_abbreviated[category][fandom] = sorted(all_characters)
+
+        with open("data/reference_and_test_files/cleaned_characters_list_3_abbreviated.json", "w") as file:
+            dump(categorised_characters_abbreviated, file, indent=4)
 
 
     unique_characters = {
@@ -202,16 +206,16 @@ def make_unique_characters(data_dict):
                 
                 character_value["op_versions"].extend(char["op_versions"])
 
+    if __name__ == "__main__":
+        unique_characters_abbreviated = {"RPF": {},"fictional": {}}
+        for category in ["RPF", "fictional"]:
+            for fandom in unique_characters[category]: # list of dicts
+                # let's start by seeing what we have:
+                all_characters = sorted(list(unique_characters[category][fandom].keys()))
+                unique_characters_abbreviated[category][fandom] = all_characters
 
-    unique_characters_abbreviated = {"RPF": {},"fictional": {}}
-    for category in ["RPF", "fictional"]:
-        for fandom in unique_characters[category]: # list of dicts
-            # let's start by seeing what we have:
-            all_characters = sorted(list(unique_characters[category][fandom].keys()))
-            unique_characters_abbreviated[category][fandom] = all_characters
-
-    with open("data/reference_and_test_files/cleaned_characters_list_4_abbreviated.json", "w") as file:
-        dump(unique_characters_abbreviated, file, indent=4)
+        with open("data/reference_and_test_files/cleaned_characters_list_4_abbreviated.json", "w") as file:
+            dump(unique_characters_abbreviated, file, indent=4)
 
     return unique_characters
 
