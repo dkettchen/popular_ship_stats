@@ -4,7 +4,7 @@ def add_full_name(name_dict):
     """
     Takes a name dictionary with (at least) the following keys: ["given_name", 
     "middle_name", "maiden_name", "surname", "alias", "nickname", "title (prefix)", 
-    "title (suffix)", "name_order", "full_name", "fandom] which should be set to None 
+    "title (suffix)", "name_order", "full_name", "fandom"] which should be set to None 
     or a string value.
     
     Returns that a new version of that same dictionary with a full name string 
@@ -57,24 +57,7 @@ def add_full_name(name_dict):
     if title_suffix:
         full_name += " " + title_suffix
     if alias:
-        if (alias in [
-            "Player Character", 
-            "Root", 
-            "Dabi", 
-            "Venom (Symbiote)",
-            "Q", 
-            "America",
-            "England", 
-            "Lightning",
-            "Iron Bull", 
-            "TommyInnit",
-            "Technoblade",
-            "Sapnap",
-            "Ranboo",
-            "GeorgeNotFound",
-            "Ayanga",
-            "Wilbur Soot",
-        ] and not given_name) or alias == "Doctor":
+        if full_name == "":
             full_name += " " + alias
         else: full_name += " | " + alias
 
