@@ -1,15 +1,15 @@
 #TODO:
--testing for our cleaned data!
-    -each dict is a new item, not mutated (check for each stage of running)
+-testing for our cleaned data! ✅
+    -each dict is a new item, not mutated (check for each stage of running) ✅
         -this should not fuck with our files as majority of them only run in main file
             -> comment out the ones that don't??
-    -read from our finished list & check that the data is in the format we expected
-        -at least one name part value is populated
-        -full name is a string that isn't empty or all white spaces
-        -there are no brackets in any of the full names other than in the connor & venom ones
-        -there is only one version per name (how do we check that? maybe list vs set?)
-        -there is 1 or more old version in op versions
-        -op versions are unique values
+    -read from our finished list & check that the data is in the format we expected ✅
+        -at least one name part value is populated ✅
+        -full name is a string that isn't empty or all white spaces ✅
+        -there are no brackets in any of the full names other than in the connor & venom ones ✅
+        -there is only one version per name (how do we check that? maybe list vs set?) ✅
+        -there is 1 or more old version in op versions ✅
+        -op versions are unique values ✅
         -format of final dict? just to make sure
         -we didn't lose any fandoms (check against clean fandoms list)
         -we didn't lose any characters (check against old versions I guess)
@@ -22,6 +22,12 @@
         -test that it removes single quotes from nick where present
             -and that it leaves quote-less nicks as is
         -test that it retains same amount & names of keys in output as in input (no keys lost or added)
+
+-relabel alicia what's her face from the 100 to walking dead (cause I know we have that fandom), 
+cause she's a wd character, even tho she's being used by the the 100 shippers ✅
+    -she's still in the 100 fandom group atm
+    -I've also labelled the fanon character as The 100 / The Walking Dead - crossover fanon"
+    -> we'll be able to label their ship that later
 
 -collect each character's listed og fandom names (ONLY ONES *THEY SPECIFICALLY* ARE LISTED WITH)
     -make new key for each character dict for op fandoms (possibly rename op version to op names)
@@ -42,6 +48,8 @@
     -replace characters (keep in order) w clean full names (details can stay in other file)
     -create new files to store the cleaned main files
     
+
+
 
 
 # pandas will be hecking useful for some of this current shuffling things about!

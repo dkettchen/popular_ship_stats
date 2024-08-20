@@ -101,18 +101,10 @@ class TestOutputDict:
                     assert len(op_versions) >= 1
                     assert len(op_versions) == len(set(op_versions))
 
-# -testing for our cleaned data!
-#     -each dict is a new item, not mutated (check for each stage of running) ✅
-#     -read from our finished list & check that the data is in the format we expected
-#         -at least one name part value is populated ✅
-#         -full name is a string that isn't empty or all white spaces ✅
-#         -there are no brackets in any of the full names other than in the connor & venom ones ✅
-#         -there is only one version per name (how do we check that? maybe list vs set?) ✅
-#         -there is 1 or more old version in op versions ✅
-#         -op versions are unique values ✅
-#         -format of final dict? just to make sure
-#         -we didn't lose any fandoms (check against clean fandoms list)
-#         -we didn't lose any characters (check against old versions I guess)
+
+# format of final dict? just to make sure
+# we didn't lose any fandoms (check against clean fandoms list)
+# we didn't lose any characters (check against old versions I guess)
 
 
 

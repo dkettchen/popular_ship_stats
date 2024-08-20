@@ -629,6 +629,11 @@ def complete_character_names(data_dict):
                     continue
                     # custom cases
 
+                if fandom == "The 100" and new_char_value["given_name"] == "Alicia":
+                    new_char_value["fandom"] = "The Walking Dead"
+                elif fandom == "The 100" and new_char_value["given_name"] == "Elyza":
+                    new_char_value["fandom"] = "The 100 / The Walking Dead - crossover fanon"
+
                 # recompile full name
                 complete_char_value = add_full_name(new_char_value)
                 new_dict[category][fandom][complete_char_value["full_name"]] = complete_char_value
