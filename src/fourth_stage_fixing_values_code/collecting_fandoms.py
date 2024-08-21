@@ -3,7 +3,7 @@ from src.util_functions.get_file_paths import find_paths
 from json import dump, load
 
 def collect_all_fandoms():
-    all_paths = find_paths("data/third_clean_up_data/")
+    all_paths = find_paths("data/third_clean_up_data_json_lines_version/")
 
     fandom_list = []
 
@@ -15,11 +15,11 @@ def collect_all_fandoms():
     fandom_set = set(fandom_list)
     all_fandoms = {"all_unformated_fandoms" : sorted(list(fandom_set))}
 
-    with open("data/reference_and_test_files/full_fandoms_list.json", "w") as json_file:
+    with open("data/reference_and_test_files/cleaning_fandoms/full_fandoms_list.json", "w") as json_file:
         dump(all_fandoms, json_file, indent=4)
 
 def collect_all_characters():
-    all_paths = find_paths("data/third_clean_up_data/")
+    all_paths = find_paths("data/third_clean_up_data_json_lines_version/")
 
     character_list = []
 
@@ -32,13 +32,13 @@ def collect_all_characters():
     character_set = set(character_list)
     all_characters = {"all_unformated_characters" : sorted(list(character_set))}
 
-    with open("data/reference_and_test_files/full_characters_list.json", "w") as json_file:
+    with open("data/reference_and_test_files/cleaning_characters/full_characters_list.json", "w") as json_file:
         dump(all_characters, json_file, indent=4)
 
 def collect_characters_by_fandoms():
-    all_paths = find_paths("data/third_clean_up_data/")
+    all_paths = find_paths("data/third_clean_up_data_json_lines_version/")
 
-    with open("data/reference_and_test_files/full_fandoms_list.json", "r") as fandoms_file:
+    with open("data/reference_and_test_files/cleaning_fandoms/full_fandoms_list.json", "r") as fandoms_file:
         loaded_fandom_dict = load(fandoms_file) # loading list of all fandoms
 
     fandom_characters = {}
@@ -65,7 +65,7 @@ def collect_characters_by_fandoms():
         fandom_characters[fandom] = sorted(list(fandom_characters[fandom])) 
                                     # converting sets to sorted lists
 
-    with open("data/reference_and_test_files/full_characters_per_fandom.json", "w") as json_file:
+    with open("data/reference_and_test_files/cleaning_characters/full_characters_per_fandom.json", "w") as json_file:
         dump(fandom_characters, json_file, indent=4)
 
 

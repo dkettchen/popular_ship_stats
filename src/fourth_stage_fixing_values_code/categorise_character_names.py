@@ -22,7 +22,7 @@ def group_split_names_by_fandom(character_dict):
         }, ...
     }
     """
-    with open("data/reference_and_test_files/full_characters_per_fandom.json") as char_per_fandom_file:
+    with open("data/reference_and_test_files/cleaning_characters/full_characters_per_fandom.json") as char_per_fandom_file:
         char_per_fandom_data = load(char_per_fandom_file)
     RPF_dict = char_per_fandom_data["RPF"]
     fic_dict = char_per_fandom_data["fictional"]
@@ -878,5 +878,5 @@ if __name__ == "__main__":
 
     categorised_names = categorise_names(grouped_by_fandom)
     character_dict = {"categorised_name_characters": categorised_names}
-    with open("data/reference_and_test_files/cleaned_characters_list_3_categorised_names.json", "w") as file:
+    with open("data/reference_and_test_files/cleaning_characters/cleaned_characters_list_3_categorised_names.json", "w") as file:
         dump(character_dict, file, indent=4)

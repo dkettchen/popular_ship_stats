@@ -9,7 +9,7 @@ def collect_characters_by_unified_fandoms():
 
     all_paths = find_paths("data/third_clean_up_data_json_lines_version/")
 
-    with open("data/reference_and_test_files/unified_full_fandoms_list.json", "r") as fandoms_file:
+    with open("data/reference_and_test_files/cleaning_fandoms/unified_full_fandoms_list.json", "r") as fandoms_file:
         loaded_fandom_dict = load(fandoms_file) # loading dict of all unified fandoms
     
     # separating out the two new categories
@@ -52,7 +52,7 @@ def collect_characters_by_unified_fandoms():
     for fandom_key in fic_dict:
         fandom_characters["fictional"][fandom_key] = sorted(list(fandom_characters["fictional"][fandom_key]))
 
-    with open("data/reference_and_test_files/full_characters_per_fandom.json", "w") as json_file:
+    with open("data/reference_and_test_files/cleaning_characters/full_characters_per_fandom.json", "w") as json_file:
         dump(fandom_characters, json_file, indent=4)
 
 

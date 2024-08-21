@@ -503,17 +503,16 @@ def unify_fandoms():
         "fictional" : new_fic_dict
     }
 
-    with open("data/reference_and_test_files/unified_full_fandoms_list.json", "w") as file:
+    with open("data/reference_and_test_files/cleaning_fandoms/unified_full_fandoms_list.json", "w") as file:
         dump(output_dict, file, indent=4)
 
     list_dict = {
         "RPF" : [key for key in new_RPF_dict],
         "fictional" : [key for key in new_fic_dict]
     }
-    with open("data/reference_and_test_files/full_fandoms_list.json", "w") as fandom_list_file:
+    with open("data/reference_and_test_files/cleaning_fandoms/full_fandoms_list.json", "w") as fandom_list_file:
         dump(list_dict, fandom_list_file, indent=4)
 
-    pass
 
 
 if __name__ == "__main__":

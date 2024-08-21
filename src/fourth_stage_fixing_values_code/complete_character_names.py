@@ -34,7 +34,7 @@ def make_unique_characters(input_data):
                 all_characters = [character["full_name"] for character in data_dict[category][fandom]]
                 categorised_characters_abbreviated[category][fandom] = sorted(all_characters)
 
-        with open("data/reference_and_test_files/cleaned_characters_list_3_abbreviated.json", "w") as file:
+        with open("data/reference_and_test_files/cleaning_characters/cleaned_characters_list_3_abbreviated.json", "w") as file:
             dump(categorised_characters_abbreviated, file, indent=4)
 
 
@@ -214,7 +214,7 @@ def make_unique_characters(input_data):
                 all_characters = sorted(list(unique_characters[category][fandom].keys()))
                 unique_characters_abbreviated[category][fandom] = all_characters
 
-        with open("data/reference_and_test_files/cleaned_characters_list_4_abbreviated.json", "w") as file:
+        with open("data/reference_and_test_files/cleaning_characters/cleaned_characters_list_4_abbreviated.json", "w") as file:
             dump(unique_characters_abbreviated, file, indent=4)
 
     return unique_characters
@@ -650,10 +650,10 @@ if __name__ == "__main__":
 
     unique_characters = make_unique_characters(categorised_names)
     character1_dict = {"unique_characters": unique_characters}
-    with open("data/reference_and_test_files/cleaned_characters_list_4_unique_character_names.json", "w") as file:
+    with open("data/reference_and_test_files/cleaning_characters/cleaned_characters_list_4_unique_character_names.json", "w") as file:
         dump(character1_dict, file, indent=4)
 
     complete_characters = complete_character_names(unique_characters)
     character2_dict = {"complete_characters": complete_characters}
-    with open("data/reference_and_test_files/cleaned_characters_list_5_complete_character_names.json", "w") as file:
+    with open("data/reference_and_test_files/cleaning_characters/cleaned_characters_list_5_complete_character_names.json", "w") as file:
         dump(character2_dict, file, indent=4)
