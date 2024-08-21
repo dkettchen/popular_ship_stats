@@ -1055,10 +1055,33 @@
             ],
             "rpf_or_fic": "RPF"
         },
+        "Alexander | Technoblade": {
+            "full_name": "Alexander | Technoblade",
+            "op_versions": [
+                "Technoblade",
+                "Technoblade (Video Blogging RPF)"
+            ],
+            "rpf_or_fic": "RPF"
+        },
         "Toby Smith | Tubbo": {
             "full_name": "Toby Smith | Tubbo",
             "op_versions": [
                 "Toby Smith | Tubbo"
+            ],
+            "rpf_or_fic": "RPF"
+        },
+        "Thomas Michael Simons | TommyInnit": {
+            "full_name": "Thomas Michael Simons | TommyInnit",
+            "op_versions": [
+                "TommyInnit",
+                "TommyInnit (Video Blogging RPF)"
+            ],
+            "rpf_or_fic": "RPF"
+        },
+        "William Patrick Spencer Gold | Wilbur Soot": {
+            "full_name": "William Patrick Spencer Gold | Wilbur Soot",
+            "op_versions": [
+                "Wilbur Soot"
             ],
             "rpf_or_fic": "RPF"
         },
@@ -1913,6 +1936,13 @@
             "full_name": "Leonard Snart | Captain Cold",
             "op_versions": [
                 "Leonard Snart"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "Alexander Joseph 'Lex' Luthor": {
+            "full_name": "Alexander Joseph 'Lex' Luthor",
+            "op_versions": [
+                "Lex Luthor"
             ],
             "rpf_or_fic": "fictional"
         },
@@ -4076,6 +4106,13 @@
             ],
             "rpf_or_fic": "fictional"
         },
+        "Leopold 'Leo' Fitz": {
+            "full_name": "Leopold 'Leo' Fitz",
+            "op_versions": [
+                "Leo Fitz"
+            ],
+            "rpf_or_fic": "fictional"
+        },
         "Loki Laufeyson/Odinson": {
             "full_name": "Loki Laufeyson/Odinson",
             "op_versions": [
@@ -4754,6 +4791,13 @@
             "full_name": "Shimada Hanzo",
             "op_versions": [
                 "Hanzo Shimada"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "Jesse McCree | McCree": {
+            "full_name": "Jesse McCree | McCree",
+            "op_versions": [
+                "Jesse McCree"
             ],
             "rpf_or_fic": "fictional"
         },
@@ -5528,11 +5572,32 @@
             ],
             "rpf_or_fic": "fictional"
         },
+        "Baze Malbus": {
+            "full_name": "Baze Malbus",
+            "op_versions": [
+                "Baze Malbus Rogue One: A"
+            ],
+            "rpf_or_fic": "fictional"
+        },
         "Ben Solo | Kylo Ren": {
             "full_name": "Ben Solo | Kylo Ren",
             "op_versions": [
                 "Ben Solo | Kylo Ren",
                 "Kylo Ren"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "Cassian Andor": {
+            "full_name": "Cassian Andor",
+            "op_versions": [
+                "Cassian Andor"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "Chirrut \u00cemwe": {
+            "full_name": "Chirrut \u00cemwe",
+            "op_versions": [
+                "Chirrut \u00cemwe"
             ],
             "rpf_or_fic": "fictional"
         },
@@ -5554,6 +5619,13 @@
             "full_name": "Jessika Pava",
             "op_versions": [
                 "Jessika Pava"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "Jyn Erso": {
+            "full_name": "Jyn Erso",
+            "op_versions": [
+                "Jyn Erso Rogue One: A"
             ],
             "rpf_or_fic": "fictional"
         },

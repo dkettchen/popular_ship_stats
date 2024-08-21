@@ -735,6 +735,7 @@
             null
         ],
         "Relationship": [
+            "Jesse McCree | McCree",
             "Shimada Hanzo"
         ],
         "Fandom": "Overwatch",
@@ -942,7 +943,10 @@
             "New",
             null
         ],
-        "Relationship": [],
+        "Relationship": [
+            "Cassian Andor",
+            "Jyn Erso"
+        ],
         "Fandom": "Star Wars",
         "New Works": 2138,
         "Total Works": 2138,
@@ -956,7 +960,8 @@
         "Old Characters": [
             "Cassian Andor",
             "Jyn Erso Rogue One: A"
-        ]
+        ],
+        "RPF or Fic": "fictional"
     },
     {
         "Rank": [
@@ -2150,7 +2155,8 @@
             28
         ],
         "Relationship": [
-            "Jemma Simmons"
+            "Jemma Simmons",
+            "Leopold 'Leo' Fitz"
         ],
         "Fandom": "Marvel",
         "New Works": 1253,
@@ -2729,7 +2735,10 @@
             "New",
             null
         ],
-        "Relationship": [],
+        "Relationship": [
+            "Baze Malbus",
+            "Chirrut \u00cemwe"
+        ],
         "Fandom": "Star Wars",
         "New Works": 1101,
         "Total Works": 1101,
@@ -2743,7 +2752,8 @@
         "Old Characters": [
             "Chirrut \u00cemwe",
             "Baze Malbus Rogue One: A"
-        ]
+        ],
+        "RPF or Fic": "fictional"
     },
     {
         "Rank": [

@@ -621,12 +621,12 @@ def complete_character_names(data_dict):
                         ]:
                             new_char_value["middle_name"] = other_name_parts[fandom][character]["middle_name"]
                         if character in [ # ppl with a nickname
-                            "Lex Luther",
+                            "Lex Luthor",
                             "Leo Fitz",
                         ]:
                             new_char_value["nickname"] = other_name_parts[fandom][character]["nickname"]
 
-                    continue
+                    #continue
                     # custom cases
 
                 if fandom == "The 100" and new_char_value["given_name"] == "Alicia":

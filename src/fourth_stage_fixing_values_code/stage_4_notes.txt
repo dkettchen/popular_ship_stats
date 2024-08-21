@@ -175,6 +175,7 @@ file running order to update stage 4 helper files:
     python src/fourth_stage_fixing_values_code/categorise_character_names.py
     python src/fourth_stage_fixing_values_code/complete_character_names.py
     python src/fourth_stage_fixing_values_code/extracting_clean_abbr_name_lists.py
+    python src/fourth_stage_fixing_values_code/run_stage_4_cleaning.py
 
     -unify_fandoms.py
         - reads from:

@@ -26,9 +26,9 @@ def run_stage_4_cleaning():
                     new_row["Old Fandom"] = new_row["Fandom"] # storing prior version
                     new_row["Fandom"] = fandom # replacing fandom
                     break # we found fandom, we don't need to keep looking
-                elif row["Fandom"] == 'Star Wars Story (2016)':
-                    new_row["Old Fandom"] = "Rogue One: A Star Wars Story (2016)"
-                    new_row["Fandom"] = "Star Wars"
+                # elif row["Fandom"] == 'Star Wars Story (2016)':
+                #     new_row["Old Fandom"] = "Rogue One: A Star Wars Story (2016)"
+                #     new_row["Fandom"] = "Star Wars"
                     
             
             new_row["Old Characters"] = new_row["Relationship"] # renaming, keeping order intact
@@ -44,6 +44,8 @@ def run_stage_4_cleaning():
                         break # should only break innermost loop, so continue to next char
         
             new_row["Relationship"] = sorted(new_row["Relationship"]) # sorting alphabetically
+            if new_row["Old Fandom"] == 'Star Wars Story (2016)':
+                new_row["Old Fandom"] = "Rogue One: A Star Wars Story (2016)"
 
             new_list.append(new_row)
         

@@ -36,9 +36,9 @@ def separate_RPF_from_fictional():
                 or "Super-Vocal" in row["Fandom"]:
                 RPF_list.append(row["Fandom"])
 
-            elif row["Fandom"] == "Star Wars Story (2016)":
-                fandom = "Rogue One: A Star Wars Story (2016)"
-                fictional_list.append(fandom)
+            # elif row["Fandom"] == "Star Wars Story (2016)":
+            #     fandom = "Rogue One: A Star Wars Story (2016)"
+            #     fictional_list.append(fandom)
             else: 
                 fictional_list.append(row["Fandom"])
 

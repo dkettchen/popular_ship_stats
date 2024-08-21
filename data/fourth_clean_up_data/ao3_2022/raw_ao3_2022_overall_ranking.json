@@ -1378,7 +1378,11 @@
             "New",
             null
         ],
-        "Relationship": [],
+        "Relationship": [
+            "Alexander | Technoblade",
+            "Thomas Michael Simons | TommyInnit",
+            "William Patrick Spencer Gold | Wilbur Soot"
+        ],
         "Fandom": "Youtube",
         "New Works": null,
         "Total Works": 15929,
@@ -1394,7 +1398,8 @@
             "Technoblade",
             "TommyInnit",
             "Phil Watson"
-        ]
+        ],
+        "RPF or Fic": "RPF"
     },
     {
         "Rank": [
@@ -1437,7 +1442,10 @@
             "New",
             null
         ],
-        "Relationship": [],
+        "Relationship": [
+            "Thomas Michael Simons | TommyInnit",
+            "William Patrick Spencer Gold | Wilbur Soot"
+        ],
         "Fandom": "Youtube",
         "New Works": null,
         "Total Works": 15564,
@@ -1451,7 +1459,8 @@
         "Old Characters": [
             "Wilbur Soot",
             "TommyInnit"
-        ]
+        ],
+        "RPF or Fic": "RPF"
     },
     {
         "Rank": [
@@ -2062,6 +2071,7 @@
             null
         ],
         "Relationship": [
+            "Thomas Michael Simons | TommyInnit",
             "Toby Smith | Tubbo"
         ],
         "Fandom": "Youtube",
@@ -2784,7 +2794,10 @@
             "New",
             null
         ],
-        "Relationship": [],
+        "Relationship": [
+            "Alexander | Technoblade",
+            "Thomas Michael Simons | TommyInnit"
+        ],
         "Fandom": "Youtube",
         "New Works": null,
         "Total Works": 9901,
@@ -2798,7 +2811,8 @@
         "Old Characters": [
             "Technoblade",
             "TommyInnit (Video Blogging RPF)"
-        ]
+        ],
+        "RPF or Fic": "RPF"
     },
     {
         "Rank": [

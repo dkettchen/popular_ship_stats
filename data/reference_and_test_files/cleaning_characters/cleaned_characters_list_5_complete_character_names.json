@@ -1601,6 +1601,23 @@
                         "Sean McLoughlin"
                     ]
                 },
+                "Alexander | Technoblade": {
+                    "given_name": "Alexander",
+                    "middle_name": null,
+                    "maiden_name": null,
+                    "surname": null,
+                    "alias": "Technoblade",
+                    "nickname": null,
+                    "title (prefix)": null,
+                    "title (suffix)": null,
+                    "name_order": null,
+                    "full_name": "Alexander | Technoblade",
+                    "fandom": "Youtube",
+                    "op_versions": [
+                        "Technoblade",
+                        "Technoblade (Video Blogging RPF)"
+                    ]
+                },
                 "Toby Smith | Tubbo": {
                     "given_name": "Toby",
                     "middle_name": null,
@@ -1615,6 +1632,39 @@
                     "fandom": "Youtube",
                     "op_versions": [
                         "Toby Smith | Tubbo"
+                    ]
+                },
+                "Thomas Michael Simons | TommyInnit": {
+                    "given_name": "Thomas",
+                    "middle_name": "Michael",
+                    "maiden_name": null,
+                    "surname": "Simons",
+                    "alias": "TommyInnit",
+                    "nickname": null,
+                    "title (prefix)": null,
+                    "title (suffix)": null,
+                    "name_order": "W",
+                    "full_name": "Thomas Michael Simons | TommyInnit",
+                    "fandom": "Youtube",
+                    "op_versions": [
+                        "TommyInnit",
+                        "TommyInnit (Video Blogging RPF)"
+                    ]
+                },
+                "William Patrick Spencer Gold | Wilbur Soot": {
+                    "given_name": "William",
+                    "middle_name": "Patrick Spencer",
+                    "maiden_name": null,
+                    "surname": "Gold",
+                    "alias": "Wilbur Soot",
+                    "nickname": null,
+                    "title (prefix)": null,
+                    "title (suffix)": null,
+                    "name_order": "W",
+                    "full_name": "William Patrick Spencer Gold | Wilbur Soot",
+                    "fandom": "Youtube",
+                    "op_versions": [
+                        "Wilbur Soot"
                     ]
                 },
                 "Zak Ahmed | Skeppy": {
@@ -3497,6 +3547,22 @@
                     "fandom": "DC",
                     "op_versions": [
                         "Leonard Snart"
+                    ]
+                },
+                "Alexander Joseph 'Lex' Luthor": {
+                    "given_name": "Alexander",
+                    "middle_name": "Joseph",
+                    "maiden_name": null,
+                    "surname": "Luthor",
+                    "alias": null,
+                    "nickname": "Lex",
+                    "title (prefix)": null,
+                    "title (suffix)": null,
+                    "name_order": "W",
+                    "full_name": "Alexander Joseph 'Lex' Luthor",
+                    "fandom": "DC",
+                    "op_versions": [
+                        "Lex Luthor"
                     ]
                 },
                 "Lois Lane": {
@@ -8553,6 +8619,22 @@
                         "Kate Bishop"
                     ]
                 },
+                "Leopold 'Leo' Fitz": {
+                    "given_name": "Leopold",
+                    "middle_name": null,
+                    "maiden_name": null,
+                    "surname": "Fitz",
+                    "alias": null,
+                    "nickname": "Leo",
+                    "title (prefix)": null,
+                    "title (suffix)": null,
+                    "name_order": "W",
+                    "full_name": "Leopold 'Leo' Fitz",
+                    "fandom": "Marvel",
+                    "op_versions": [
+                        "Leo Fitz"
+                    ]
+                },
                 "Loki Laufeyson/Odinson": {
                     "given_name": "Loki",
                     "middle_name": null,
@@ -10151,6 +10233,22 @@
                     "fandom": "Overwatch",
                     "op_versions": [
                         "Hanzo Shimada"
+                    ]
+                },
+                "Jesse McCree | McCree": {
+                    "given_name": "Jesse",
+                    "middle_name": null,
+                    "maiden_name": null,
+                    "surname": "McCree",
+                    "alias": "McCree",
+                    "nickname": null,
+                    "title (prefix)": null,
+                    "title (suffix)": null,
+                    "name_order": "W",
+                    "full_name": "Jesse McCree | McCree",
+                    "fandom": "Overwatch",
+                    "op_versions": [
+                        "Jesse McCree"
                     ]
                 },
                 "Lena Oxton | Tracer": {
@@ -11964,6 +12062,22 @@
                         "Armitage Hux"
                     ]
                 },
+                "Baze Malbus": {
+                    "given_name": "Baze",
+                    "middle_name": null,
+                    "maiden_name": null,
+                    "surname": "Malbus",
+                    "alias": null,
+                    "nickname": null,
+                    "title (prefix)": null,
+                    "title (suffix)": null,
+                    "name_order": "W",
+                    "full_name": "Baze Malbus",
+                    "fandom": "Star Wars",
+                    "op_versions": [
+                        "Baze Malbus Rogue One: A"
+                    ]
+                },
                 "Ben Solo | Kylo Ren": {
                     "given_name": "Ben",
                     "middle_name": null,
@@ -11979,6 +12093,38 @@
                     "op_versions": [
                         "Ben Solo | Kylo Ren",
                         "Kylo Ren"
+                    ]
+                },
+                "Cassian Andor": {
+                    "given_name": "Cassian",
+                    "middle_name": null,
+                    "maiden_name": null,
+                    "surname": "Andor",
+                    "alias": null,
+                    "nickname": null,
+                    "title (prefix)": null,
+                    "title (suffix)": null,
+                    "name_order": "W",
+                    "full_name": "Cassian Andor",
+                    "fandom": "Star Wars",
+                    "op_versions": [
+                        "Cassian Andor"
+                    ]
+                },
+                "Chirrut \u00cemwe": {
+                    "given_name": "Chirrut",
+                    "middle_name": null,
+                    "maiden_name": null,
+                    "surname": "\u00cemwe",
+                    "alias": null,
+                    "nickname": null,
+                    "title (prefix)": null,
+                    "title (suffix)": null,
+                    "name_order": "W",
+                    "full_name": "Chirrut \u00cemwe",
+                    "fandom": "Star Wars",
+                    "op_versions": [
+                        "Chirrut \u00cemwe"
                     ]
                 },
                 "Finn": {
@@ -12027,6 +12173,22 @@
                     "fandom": "Star Wars",
                     "op_versions": [
                         "Jessika Pava"
+                    ]
+                },
+                "Jyn Erso": {
+                    "given_name": "Jyn",
+                    "middle_name": null,
+                    "maiden_name": null,
+                    "surname": "Erso",
+                    "alias": null,
+                    "nickname": null,
+                    "title (prefix)": null,
+                    "title (suffix)": null,
+                    "name_order": "W",
+                    "full_name": "Jyn Erso",
+                    "fandom": "Star Wars",
+                    "op_versions": [
+                        "Jyn Erso Rogue One: A"
                     ]
                 },
                 "Leia Organa": {

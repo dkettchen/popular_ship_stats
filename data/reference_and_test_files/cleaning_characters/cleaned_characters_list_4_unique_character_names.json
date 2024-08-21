@@ -12062,6 +12062,22 @@
                         "Armitage Hux"
                     ]
                 },
+                "Baze Malbus": {
+                    "given_name": "Baze",
+                    "middle_name": null,
+                    "maiden_name": null,
+                    "surname": "Malbus",
+                    "alias": null,
+                    "nickname": null,
+                    "title (prefix)": null,
+                    "title (suffix)": null,
+                    "name_order": "W",
+                    "full_name": "Baze Malbus",
+                    "fandom": "Star Wars",
+                    "op_versions": [
+                        "Baze Malbus Rogue One: A"
+                    ]
+                },
                 "Ben Solo | Kylo Ren": {
                     "given_name": "Ben",
                     "middle_name": null,
@@ -12077,6 +12093,38 @@
                     "op_versions": [
                         "Ben Solo | Kylo Ren",
                         "Kylo Ren"
+                    ]
+                },
+                "Cassian Andor": {
+                    "given_name": "Cassian",
+                    "middle_name": null,
+                    "maiden_name": null,
+                    "surname": "Andor",
+                    "alias": null,
+                    "nickname": null,
+                    "title (prefix)": null,
+                    "title (suffix)": null,
+                    "name_order": "W",
+                    "full_name": "Cassian Andor",
+                    "fandom": "Star Wars",
+                    "op_versions": [
+                        "Cassian Andor"
+                    ]
+                },
+                "Chirrut \u00cemwe": {
+                    "given_name": "Chirrut",
+                    "middle_name": null,
+                    "maiden_name": null,
+                    "surname": "\u00cemwe",
+                    "alias": null,
+                    "nickname": null,
+                    "title (prefix)": null,
+                    "title (suffix)": null,
+                    "name_order": "W",
+                    "full_name": "Chirrut \u00cemwe",
+                    "fandom": "Star Wars",
+                    "op_versions": [
+                        "Chirrut \u00cemwe"
                     ]
                 },
                 "Finn": {
@@ -12125,6 +12173,22 @@
                     "fandom": "Star Wars",
                     "op_versions": [
                         "Jessika Pava"
+                    ]
+                },
+                "Jyn Erso": {
+                    "given_name": "Jyn",
+                    "middle_name": null,
+                    "maiden_name": null,
+                    "surname": "Erso",
+                    "alias": null,
+                    "nickname": null,
+                    "title (prefix)": null,
+                    "title (suffix)": null,
+                    "name_order": "W",
+                    "full_name": "Jyn Erso",
+                    "fandom": "Star Wars",
+                    "op_versions": [
+                        "Jyn Erso Rogue One: A"
                     ]
                 },
                 "Leia Organa": {
