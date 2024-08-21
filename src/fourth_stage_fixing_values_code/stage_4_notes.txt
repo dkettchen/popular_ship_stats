@@ -35,19 +35,21 @@ cause she's a wd character, even tho she's being used by the the 100 shippers �
         -compare against fandoms w their og versions list (make sure is up to date)
         to cut down on running time needed for iterations
 
--spring clean ref folder
+-spring clean ref folder ✅
     -make a copy of em? or at least move/relabel em to be easier to find as our main ref for later
     rather than a working inbetween -> this may require renaming file paths in running order files
     -> make a version that has a RPF or Fic attribute on each char profile instead of two categories?
     (generally have a clean-up of your ref folder incl refactoring filepaths where needed in files)
 
--clean main files for this stage 
+-clean main files for this stage ✅
     -AFTER we've collected all the names & fandoms & stored them in other files
     -go through each main data set
     -replace fandom values w clean fandom equivalent using ref list
     -replace characters (keep in order) w clean full names (details can stay in other file)
     -create new files to store the cleaned main files
     
+-test new files to make sure data is correct/nothing was lost
+    # I can already see we're missing minecrafter rpf from our abbr char list :l
 
 
 
@@ -172,6 +174,7 @@ file running order to update stage 4 helper files:
     python src/fourth_stage_fixing_values_code/separate_names_into_parts.py
     python src/fourth_stage_fixing_values_code/categorise_character_names.py
     python src/fourth_stage_fixing_values_code/complete_character_names.py
+    python src/fourth_stage_fixing_values_code/extracting_clean_abbr_name_lists.py
 
     -unify_fandoms.py
         - reads from:
@@ -205,3 +208,13 @@ file running order to update stage 4 helper files:
             categorise_character_names.py                   <- dependant on categorise_character_names
         - updates:
             cleaned_characters_list_3_abbreviated.json
+            cleaned_characters_list_4_abbreviated.json
+            cleaned_characters_list_4_unique_character_names.json
+            cleaned_characters_list_5_complete_character_names.json
+    -extracting_clean_abbr_name_lists.py
+        -reads from:
+            cleaned_characters_list_5_complete_character_names.json <- dependant on complete_character_names
+            unified_full_fandoms_list.json                          <- dependant on unify_fandoms
+        -updates:
+            unified_abbr_characters_list.json
+            unified_abbr_fandoms_list.json
