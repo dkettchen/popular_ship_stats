@@ -48,7 +48,14 @@ def make_unique_characters(input_data):
         for char in data_dict["RPF"][fandom]:
             if char["full_name"] not in unique_characters["RPF"][fandom].keys():
                 if "Phil Watson" in char["full_name"]:
-                    unique_characters["RPF"][fandom]['Phil Watson | Philza'] = char
+                    if 'Phil Watson | Philza' not in unique_characters["RPF"][fandom].keys():
+                        unique_characters["RPF"][fandom]['Phil Watson | Philza'] = char
+                    else:
+                        character_value = unique_characters["RPF"][fandom]['Phil Watson | Philza']
+                        if char["alias"]:
+                            character_value["alias"] = char["alias"]
+                        character_value["full_name"] = 'Phil Watson | Philza'
+                        character_value["op_versions"].extend(char["op_versions"])
                 elif fandom == "My Chemical Romance":
                     if "Gerard" in char["full_name"]:
                         unique_characters["RPF"][fandom]['Gerard Way'] = char
@@ -509,8 +516,6 @@ def complete_character_names(data_dict):
     for category in ["RPF", "fictional"]:
         new_dict[category] = {}
         for fandom in data_dict[category]:
-            # if "|" in fandom:
-            #     print(fandom)
             new_dict[category][fandom] = {}
             for character in data_dict[category][fandom]:
                 new_char_value = deepcopy(data_dict[category][fandom][character])
