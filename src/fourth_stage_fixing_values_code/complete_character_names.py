@@ -280,6 +280,10 @@ def complete_character_names(data_dict):
             "Sean McLoughlin": "Jacksepticeye",
             "Zak Ahmed": "Skeppy",
         },
+        "A Song of Ice and Fire / Game of Thrones Universe": {
+            "Daenerys Targaryen": "Khaleesi",
+            "Sandor Clegane": "The Hound"
+        },
         "American Horror Story": {
             "Cordelia Foxx/Goode": "The Supreme"
         },
@@ -380,6 +384,9 @@ def complete_character_names(data_dict):
         "Marvel": {
             "Michelle Jones": "MJ",
             "Mobius M. Mobius": "Moby"
+        },
+        "A Song of Ice and Fire / Game of Thrones Universe": {
+            "Lucerys Velaryon": "Luke"
         },
     }
     name_and_alias_W = { # various configs
@@ -484,6 +491,12 @@ def complete_character_names(data_dict):
     }
     other_name_parts = {
         "Youtube": {
+            "Alexis | Quackity": {
+                "given_name": "Alexis", 
+                "nickname": "Alex", 
+                "surname": "Maldonado",
+                "name_order": "W",
+            },
             "Technoblade": "Alexander", # add given name
             "TommyInnit": {
                 "given_name": "Thomas", 
@@ -518,7 +531,20 @@ def complete_character_names(data_dict):
         "Overwatch": {
             "Jesse McCree" # use last name
         },
+        "The Big Bang Theory": {
+            "Penny": {
+                "given_name":"Penelope", 
+                "nickname":"Penny", 
+                "surname":"Hofstadter",
+                "name_order":"W"
+            }, 
+        },
+        "White Collar": { # add maiden name
+            "Elizabeth Burke": "Mitchell"
+        },
     }
+
+
 
     for category in ["RPF", "fictional"]:
         new_dict[category] = {}
@@ -617,11 +643,15 @@ def complete_character_names(data_dict):
                         new_char_value["given_name"] = other_name_parts[fandom][character]
                     elif character == "Jesse McCree":
                         new_char_value["alias"] = new_char_value["surname"]
+                    elif character == "Elizabeth Burke":
+                        new_char_value["maiden_name"] = other_name_parts[fandom][character]
                     elif character in [ # adding multiple name parts
                         "TommyInnit",
                         "Wilbur Soot",
                         "Lex Luthor",
                         "Leo Fitz",
+                        "Penny",
+                        "Alexis | Quackity"
                     ]:
                         new_char_value["given_name"] = other_name_parts[fandom][character]["given_name"]
                         new_char_value["surname"] = other_name_parts[fandom][character]["surname"]
@@ -635,11 +665,10 @@ def complete_character_names(data_dict):
                         if character in [ # ppl with a nickname
                             "Lex Luthor",
                             "Leo Fitz",
+                            "Penny",
+                            "Alexis | Quackity"
                         ]:
                             new_char_value["nickname"] = other_name_parts[fandom][character]["nickname"]
-
-                    #continue
-                    # custom cases
 
                 if fandom == "The 100" and new_char_value["given_name"] == "Alicia":
                     new_char_value["fandom"] = "The Walking Dead"

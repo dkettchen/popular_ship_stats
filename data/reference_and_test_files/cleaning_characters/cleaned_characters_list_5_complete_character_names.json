@@ -1326,17 +1326,17 @@
                 }
             },
             "Youtube": {
-                "Alexis | Quackity": {
+                "Alexis 'Alex' Maldonado | Quackity": {
                     "given_name": "Alexis",
                     "middle_name": null,
                     "maiden_name": null,
-                    "surname": null,
+                    "surname": "Maldonado",
                     "alias": "Quackity",
-                    "nickname": null,
+                    "nickname": "Alex",
                     "title (prefix)": null,
                     "title (suffix)": null,
-                    "name_order": null,
-                    "full_name": "Alexis | Quackity",
+                    "name_order": "W",
+                    "full_name": "Alexis 'Alex' Maldonado | Quackity",
                     "fandom": "Youtube",
                     "op_versions": [
                         "Alexis | Quackity"
@@ -1834,17 +1834,17 @@
                         "Daemon Targaryen"
                     ]
                 },
-                "Daenerys Targaryen": {
+                "Daenerys Targaryen | Khaleesi": {
                     "given_name": "Daenerys",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Targaryen",
-                    "alias": null,
+                    "alias": "Khaleesi",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Daenerys Targaryen",
+                    "full_name": "Daenerys Targaryen | Khaleesi",
                     "fandom": "A Song of Ice and Fire / Game of Thrones Universe",
                     "op_versions": [
                         "Daenerys Targaryen"
@@ -1898,17 +1898,17 @@
                         "Jon Snow"
                     ]
                 },
-                "Lucerys Velaryon": {
+                "Lucerys 'Luke' Velaryon": {
                     "given_name": "Lucerys",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Velaryon",
                     "alias": null,
-                    "nickname": null,
+                    "nickname": "Luke",
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Lucerys Velaryon",
+                    "full_name": "Lucerys 'Luke' Velaryon",
                     "fandom": "A Song of Ice and Fire / Game of Thrones Universe",
                     "op_versions": [
                         "Lucerys Velaryon (Son of Rhaenyra)"
@@ -1946,17 +1946,17 @@
                         "Rhaenyra Targaryen"
                     ]
                 },
-                "Sandor Clegane": {
+                "Sandor Clegane | The Hound": {
                     "given_name": "Sandor",
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Clegane",
-                    "alias": null,
+                    "alias": "The Hound",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Sandor Clegane",
+                    "full_name": "Sandor Clegane | The Hound",
                     "fandom": "A Song of Ice and Fire / Game of Thrones Universe",
                     "op_versions": [
                         "Sandor Clegane"
@@ -13567,17 +13567,17 @@
                 }
             },
             "The Big Bang Theory": {
-                "Penny": {
-                    "given_name": "Penny",
+                "Penelope 'Penny' Hofstadter": {
+                    "given_name": "Penelope",
                     "middle_name": null,
                     "maiden_name": null,
-                    "surname": null,
+                    "surname": "Hofstadter",
                     "alias": null,
-                    "nickname": null,
+                    "nickname": "Penny",
                     "title (prefix)": null,
                     "title (suffix)": null,
-                    "name_order": null,
-                    "full_name": "Penny",
+                    "name_order": "W",
+                    "full_name": "Penelope 'Penny' Hofstadter",
                     "fandom": "The Big Bang Theory",
                     "op_versions": [
                         "Penny"
@@ -13988,17 +13988,17 @@
                         "Eda Clawthorne"
                     ]
                 },
-                "Hunter The Golden Guard": {
+                "Hunter | The Golden Guard": {
                     "given_name": "Hunter",
                     "middle_name": null,
                     "maiden_name": null,
-                    "surname": "The Golden Guard",
-                    "alias": null,
+                    "surname": null,
+                    "alias": "The Golden Guard",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
-                    "name_order": "W",
-                    "full_name": "Hunter The Golden Guard",
+                    "name_order": null,
+                    "full_name": "Hunter | The Golden Guard",
                     "fandom": "The Owl House",
                     "op_versions": [
                         "Hunter | The Golden Guard"
@@ -14932,17 +14932,17 @@
                 }
             },
             "White Collar": {
-                "Elizabeth Burke": {
+                "Elizabeth Burke, n\u00e9e Mitchell": {
                     "given_name": "Elizabeth",
                     "middle_name": null,
-                    "maiden_name": null,
+                    "maiden_name": "Mitchell",
                     "surname": "Burke",
                     "alias": null,
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": "W",
-                    "full_name": "Elizabeth Burke",
+                    "full_name": "Elizabeth Burke, n\u00e9e Mitchell",
                     "fandom": "White Collar",
                     "op_versions": [
                         "Elizabeth Burke"

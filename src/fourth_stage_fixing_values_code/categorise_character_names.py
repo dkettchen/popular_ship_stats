@@ -418,6 +418,7 @@ def categorise_names(char_by_fandom_dict):
         ["Charles", "Grian"],
         ['Xiao', 'Alatus'],
         ["Tartaglia", "Childe"],
+        ["Hunter","The Golden Guard"]
     ]
     given_suffix = [
         ['Ymir', 'of the 104th'],
@@ -433,6 +434,7 @@ def categorise_names(char_by_fandom_dict):
         ["Alexis", "Quackity"],
         ["Charles", "Grian"],
         ["Tartaglia", "Childe"],
+        ["Hunter","The Golden Guard"]
     ]
 
     # 3 part names

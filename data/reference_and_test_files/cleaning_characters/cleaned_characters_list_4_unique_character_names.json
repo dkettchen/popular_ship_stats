@@ -13988,17 +13988,17 @@
                         "Eda Clawthorne"
                     ]
                 },
-                "Hunter The Golden Guard": {
+                "Hunter | The Golden Guard": {
                     "given_name": "Hunter",
                     "middle_name": null,
                     "maiden_name": null,
-                    "surname": "The Golden Guard",
-                    "alias": null,
+                    "surname": null,
+                    "alias": "The Golden Guard",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
-                    "name_order": "W",
-                    "full_name": "Hunter The Golden Guard",
+                    "name_order": null,
+                    "full_name": "Hunter | The Golden Guard",
                     "fandom": "The Owl House",
                     "op_versions": [
                         "Hunter | The Golden Guard"

@@ -1,6 +1,13 @@
 from json import load, dump
 
 def collect_gender_tags():
+    """
+    reads from fourth_clean_up_data files and cleaned_characters_list_5_complete_character_names
+
+    returns a nested dict with "RPF" and "fictional" keys, ordered by fandoms and characters, with 
+    new gender tag keys (latest tag, latest same sex tag, all tags) added to the versions from list_5
+    """
+
     all_ordered_paths = { 
         2023: [
             'data/fourth_clean_up_data/ao3_2023/raw_ao3_2023_femslash_ranking.json', 
@@ -117,18 +124,18 @@ def collect_gender_tags():
 
     # we seem to have some ppl who are only in het ships & gen/other -> don't have a same sex value
         # but everyone has a latest value! :)
-    # for fandom in rpf_dict:
-    #     for character in rpf_dict[fandom]:
-    #         rpf_dict[fandom][character]["all_gender_tags"] = sorted(list(rpf_dict[fandom][character]["all_gender_tags"]))
-    #         if not rpf_dict[fandom][character]["most_recent_gender_tag"]:
-    #             print("RPF:", rpf_dict[fandom][character], "\n")
-    #         #if not rpf_dict[fandom][character]["most_recent_same_sex_tag"]:
-    # for fandom in fic_dict:
-    #     for character in fic_dict[fandom]:
-    #         fic_dict[fandom][character]["all_gender_tags"] = sorted(list(fic_dict[fandom][character]["all_gender_tags"]))
-    #         if not fic_dict[fandom][character]["most_recent_gender_tag"]:
-    #             print("fic:", fic_dict[fandom][character], "\n")
-    #         #if not fic_dict[fandom][character]["most_recent_same_sex_tag"]:
+    for fandom in rpf_dict:
+        for character in rpf_dict[fandom]:
+            rpf_dict[fandom][character]["all_gender_tags"] = sorted(list(rpf_dict[fandom][character]["all_gender_tags"]))
+            # if not rpf_dict[fandom][character]["most_recent_gender_tag"]:
+            #     print("RPF:", rpf_dict[fandom][character], "\n")
+            #if not rpf_dict[fandom][character]["most_recent_same_sex_tag"]:
+    for fandom in fic_dict:
+        for character in fic_dict[fandom]:
+            fic_dict[fandom][character]["all_gender_tags"] = sorted(list(fic_dict[fandom][character]["all_gender_tags"]))
+            # if not fic_dict[fandom][character]["most_recent_gender_tag"]:
+            #     print("fic:", fic_dict[fandom][character], "\n")
+            #if not fic_dict[fandom][character]["most_recent_same_sex_tag"]:
             
     output_dict = {
         "RPF": rpf_dict,
