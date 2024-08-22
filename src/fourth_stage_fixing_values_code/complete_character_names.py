@@ -135,7 +135,14 @@ def make_unique_characters(input_data):
                         character_value = unique_characters["fictional"][fandom]['Ben Solo | Kylo Ren']
                         character_value["op_versions"].extend(char["op_versions"])
                 elif fandom == 'Steven Universe' and "Rose Quartz" in char["full_name"]:
-                    unique_characters["fictional"][fandom]['Rose Quartz | Pink Diamond'] = char
+                    if 'Rose Quartz | Pink Diamond' not in unique_characters["fictional"][fandom].keys():
+                        unique_characters["fictional"][fandom]['Rose Quartz | Pink Diamond'] = char
+                    else:
+                        character_value = unique_characters["fictional"][fandom]['Rose Quartz | Pink Diamond']
+                        if char["alias"]:
+                            character_value["alias"] = char["alias"]
+                        character_value["full_name"] = 'Rose Quartz | Pink Diamond'
+                        character_value["op_versions"].extend(char["op_versions"])
                 elif "My Hero Academia" in fandom and "Dabi" in char["full_name"]:
                     unique_characters["fictional"][fandom]["Touya Todoroki | Dabi"] = char
                 else:
