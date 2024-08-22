@@ -1,6 +1,5 @@
 from src.fifth_cleaning_stage_code.collect_gender_tags_per_character import collect_gender_tags
 from json import dump
-from copy import deepcopy
 
 def assign_gender(data_dict):
     """
@@ -131,11 +130,37 @@ def assign_gender(data_dict):
     ]
     actual_nbs = [
         "Raine Whispers",
+        "Venom (Symbiote)"
+    ]
+    male_aligned_gender_questionables = [
+        "Gerard Way",
+        "Ranboo",
+        "Anthony J. Crowley",
+        "Loki Laufeyson/Odinson", 
+        "Dream of the Endless",
+    ]
+    female_aligned_gender_questionables = [
+        "Amethyst",
+        "Garnet",
+        "Jasper",
+        "Lapis Lazuli",
+        "Pearl",
+        "Peridot",
+        "Rose Quartz | Pink Diamond",
+        "Ruby",
+        "Sapphire"
+    ]
+    cis_male_drag_queens = [
+        "Brooke Lynn Hytes", # she/her in drag, he/they out of drag
+        "Katya Zamolodchikova", # she/her in drag, he/him out of drag
+        "Trixie Mattel", # she/her in drag, he/him out of drag
+        "Vanessa Vanjie Mateo" # she/her in drag, he/him out of drag
+    ]
+    players_and_readers = [
+        "Y/N | Reader",
+        "Player Character",
     ]
 
-    gender_questionables = [
-
-    ]
 
     for category in ["RPF", "fictional"]:
         for fandom in data_dict[category]:
@@ -144,14 +169,7 @@ def assign_gender(data_dict):
             for character in data_dict[category][fandom]:
                 gender = None
 
-                if input_character_dict["full_name"] in [
-                    "Y/N | Reader",
-                    "Player Character",
-                ]:
-                    gender = "Ambig." # player chars & readers are ambig
-                    # we may want to change this for where it was specified
-
-                elif character not in new_dict[category][fandom].keys():
+                if character not in new_dict[category][fandom].keys():
                     new_dict[category][fandom][character] = {}
                 input_character_dict = data_dict[category][fandom][character]
 
@@ -181,8 +199,6 @@ def assign_gender(data_dict):
                             gender = "M"
                         elif input_character_dict["full_name"] in other_ladies:
                             gender = "F"
-                        elif input_character_dict["full_name"] in actual_nbs:
-                            gender = "Other" # we have exactly one(1) explicit, undeniable nb
 
                     elif "Quackity" in input_character_dict["full_name"]:
                         gender = "M"
@@ -193,23 +209,44 @@ def assign_gender(data_dict):
                 elif input_character_dict["most_recent_same_sex_tag"]:
                     gender = input_character_dict["most_recent_same_sex_tag"][0]
 
-                if not gender: # everyone has received gender!
-                    print(f'"{input_character_dict["full_name"]}",')
+                # fixing gender questionables
+                if input_character_dict["full_name"] in actual_nbs:
+                    gender = "Other" # only venom & owl house nb
+                elif input_character_dict["full_name"] in male_aligned_gender_questionables:
+                    gender = "M | Other"
+                elif input_character_dict["full_name"] in female_aligned_gender_questionables:
+                    gender = "F | Other"
+                elif input_character_dict["full_name"] in cis_male_drag_queens:
+                    gender = "M | F | Other"
+                elif input_character_dict["full_name"] in players_and_readers:
+                    gender = "Ambig"
                 
+                # if not gender: # everyone has received gender!
+                #     print(f'"{input_character_dict["full_name"]}",')
+                
+                for key in [
+                    "given_name",
+                    "middle_name",
+                    "maiden_name",
+                    "surname",
+                    "alias",
+                    "nickname",
+                    "title (prefix)",
+                    "title (suffix)",
+                    "name_order",
+                    "full_name",
+                    "fandom",
+                    "op_versions",
+                ]:
+                    new_dict[category][fandom][character][key] = input_character_dict[key]
+                new_dict[category][fandom][character]["gender"] = gender
 
-
-
-
-
-
-
-
-    pass
+    return new_dict
 
 
 if __name__ == "__main__":
     collected_dict = collect_gender_tags()
     gendered_dict = assign_gender(collected_dict)
-    # filepath = "data/reference_and_test_files/assigning_demographic_info/assigning_gender_2_assigning_gender.json"
-    # with open(filepath, "w") as file_1:
-    #     dump(gendered_dict, file_1, indent=4)
+    filepath = "data/reference_and_test_files/assigning_demographic_info/assigning_gender_2_assigning_gender.json"
+    with open(filepath, "w") as file_2:
+        dump(gendered_dict, file_2, indent=4)
