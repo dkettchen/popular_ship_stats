@@ -43,7 +43,8 @@ def run_stage_4_cleaning():
                             # should be same label for all char involved if I did my job right
                         break # should only break innermost loop, so continue to next char
         
-            new_row["Relationship"] = sorted(new_row["Relationship"]) # sorting alphabetically
+            new_row["Relationship"] = new_row["Relationship"] 
+                # keeping same order until we've assigned other stats
             if new_row["Old Fandom"] == 'Star Wars Story (2016)':
                 new_row["Old Fandom"] = "Rogue One: A Star Wars Story (2016)"
 
