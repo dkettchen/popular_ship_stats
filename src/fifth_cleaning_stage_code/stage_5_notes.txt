@@ -1,0 +1,22 @@
+
+# goals for this:
+    # have a list of dicts of character info per character, which contains correct gender value
+        # go through sets in reverse order ✅
+            # most recent to oldest, femslash, then yearly, then overall ✅
+            # -> make a list of file paths in order ✅
+        # collect gender values per character ✅
+            # capture latest same-sex value separately (so if it's f/f or m/m) ✅
+            # capture latest (in general) value too (if it is diff from same sex) ✅
+            # capture all unique values in a collection ✅
+        # if both latest value are (same) same sex, they can be assigned that one as their current gender
+        # go through all where at least one latest value is not same sex
+            # manually assign them as appropriate
+        # verify any Other characters you know of 
+        #   (angels, gems, canon gender queers, shapeshifters, player characters, drags, etc)
+    # remove gender column from main data set when running next stage file creation
+
+
+
+
+
+source venv/bin/activate && export PYTHONPATH=$(pwd)
