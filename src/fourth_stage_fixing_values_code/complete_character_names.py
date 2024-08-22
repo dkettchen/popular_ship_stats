@@ -288,7 +288,7 @@ def complete_character_names(data_dict):
             "Cordelia Foxx/Goode": "The Supreme"
         },
         "DC": {
-            "Ava Sharpe": " Roundhouse",
+            "Ava Sharpe": "Roundhouse",
             "Barry Allen": "The Flash",
             "Bruce Wayne": "Batman",
             "Clark Kent": "Superman",
@@ -375,6 +375,9 @@ def complete_character_names(data_dict):
         "Marvel": {
             "Loki": "Laufeyson/Odinson",
             "Thor": "Odinson",
+        },
+        "Critical Role": {
+            "Yasha": "Nydoorin"
         },
     }
     add_nick = {

@@ -5320,17 +5320,17 @@
                     "F/F"
                 ]
             },
-            "Yasha": {
+            "Yasha Nydoorin": {
                 "given_name": "Yasha",
                 "middle_name": null,
                 "maiden_name": null,
-                "surname": null,
+                "surname": "Nydoorin",
                 "alias": null,
                 "nickname": null,
                 "title (prefix)": null,
                 "title (suffix)": null,
-                "name_order": null,
-                "full_name": "Yasha",
+                "name_order": "W",
+                "full_name": "Yasha Nydoorin",
                 "fandom": "Critical Role",
                 "op_versions": [
                     "Yasha",
@@ -5404,17 +5404,17 @@
                     "F/F"
                 ]
             },
-            "Ava Sharpe |  Roundhouse": {
+            "Ava Sharpe | Roundhouse": {
                 "given_name": "Ava",
                 "middle_name": null,
                 "maiden_name": null,
                 "surname": "Sharpe",
-                "alias": " Roundhouse",
+                "alias": "Roundhouse",
                 "nickname": null,
                 "title (prefix)": null,
                 "title (suffix)": null,
                 "name_order": "W",
-                "full_name": "Ava Sharpe |  Roundhouse",
+                "full_name": "Ava Sharpe | Roundhouse",
                 "fandom": "DC",
                 "op_versions": [
                     "Ava Sharpe"
@@ -14501,17 +14501,17 @@
                     "M/M"
                 ]
             },
-            "Daisy Johnson": {
+            "Daisy Johnson | Skye": {
                 "given_name": "Daisy",
                 "middle_name": null,
                 "maiden_name": null,
                 "surname": "Johnson",
-                "alias": null,
+                "alias": "Skye",
                 "nickname": null,
                 "title (prefix)": null,
                 "title (suffix)": null,
                 "name_order": "W",
-                "full_name": "Daisy Johnson",
+                "full_name": "Daisy Johnson | Skye",
                 "fandom": "Marvel",
                 "op_versions": [
                     "Skye",

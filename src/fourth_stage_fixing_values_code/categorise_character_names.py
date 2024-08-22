@@ -206,7 +206,6 @@ def categorise_names(char_by_fandom_dict):
         'Sera', 
         'Shego', 
         'Shiro', 
-        'Skye', 
         'Sokka', 
         'Solas',  
         'Thoma', 
@@ -271,6 +270,7 @@ def categorise_names(char_by_fandom_dict):
         'Ayanga',
         "Iron Bull",
         "Wilbur Soot",
+        'Skye', 
     ]
     single_nicknames = [
         'Spike',
