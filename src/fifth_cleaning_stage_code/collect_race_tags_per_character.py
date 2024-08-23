@@ -1,7 +1,12 @@
 from json import load, dump
 
 def collect_race_tags():
+    """
+    reads from fourth_clean_up_data files and assigning_gender_2_assigning_gender
 
+    returns a nested dict with "RPF" and "fictional" keys, ordered by fandoms and characters, with 
+    new race tag keys (latest tag, latest same race tag, all tags) added to the versions from gender_2
+    """
     
     all_ordered_paths = { 
         2023: [
@@ -63,7 +68,7 @@ def collect_race_tags():
 
     untagged_white_characters = [
         'Aaron Hotchner', 
-        'Abby Sciuto', # Abigail Beethoven "Abby" Sciuto
+        "Abigail Beethoven 'Abby' Sciuto",
         'Agron', 
         'Alex Kingston', 
         'Alison Hendrix', 
@@ -72,7 +77,7 @@ def collect_race_tags():
         'Aurora', 
         'Bella Swan', 
         'Beth Childs', 
-        'Billy Kaplan | Wiccan', # technically william
+        "William 'Billy' Kaplan | Wiccan",
         'Brad Colbert', 
         'Bradley James', 
         'Bruce Wayne | Batman', 
@@ -101,10 +106,10 @@ def collect_race_tags():
         'John Reese', 
         'Kara Thrace', 
         'Kate Beckett', 
-        'Ken Hutchinson', # technically kenneth
+        "Kenneth 'Ken' Hutchinson",
         'Kim Possible', 
         'Laura Roslin', 
-        'Lee Adama', # nickname Apollo
+        "Lee 'Apollo' Adama",
         'Lightning', 
         'Lizzie Bennet', 
         'Lois Lane', 
@@ -117,7 +122,7 @@ def collect_race_tags():
         'Neal Caffrey', 
         'Noah Puckerman', 
         'Pavel Chekov', 
-        "Penelope 'Penny' Hofstadter", # she wasn't hofstadter by here, so maybe let's revert to just penny
+        "Penny", # she wasn't married to leonard yet here I think, so no last name
         'Peter Burke', 
         'Qui-Gon Jinn', 
         'Richard Castle', 
@@ -174,7 +179,7 @@ def collect_race_tags():
     untagged_other_characters = {
         'Ziva David': "MENA",
         'Clara': "Unknown",
-        'Harry Watson': "Unknown", # Harriet "Harry" Watson
+        "Harriet 'Harry' Watson": "Unknown",
         'Piper McLean': "Indig",
         'Nasir': "MENA", 
         'Derek Morgan': "Black", 
@@ -248,8 +253,23 @@ def collect_race_tags():
                             character_dict["most_recent_race_tag"] = untagged_other_characters[character]
                         elif character in untagged_amb_characters:
                             character_dict["most_recent_race_tag"] = "Ambig"
-                    #else: print(character_dict)
+
+    for fandom in rpf_dict:
+        for character in rpf_dict[fandom]:
+            rpf_dict[fandom][character]["all_race_tags"] = sorted(list(rpf_dict[fandom][character]["all_race_tags"]))
+    for fandom in fic_dict:
+        for character in fic_dict[fandom]:
+            fic_dict[fandom][character]["all_race_tags"] = sorted(list(fic_dict[fandom][character]["all_race_tags"]))
+            
+    output_dict = {
+        "RPF": rpf_dict,
+        "fictional": fic_dict
+    }
+    return output_dict
     
 
 if __name__ == "__main__":
     collected_race_tags = collect_race_tags()
+    filepath = "data/reference_and_test_files/assigning_demographic_info/assigning_race_3_raw_tag_collection.json"
+    with open(filepath, "w") as file_3:
+        dump(collected_race_tags, file_3, indent=4)

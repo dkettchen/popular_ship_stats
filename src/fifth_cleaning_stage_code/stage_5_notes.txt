@@ -58,17 +58,18 @@ maybe we can have a "mixed White" tag or something for these cases?
         like if you asked me what brendan urie or hob's actor are, I'd say white
         -> if someone's less than 1/2 non-white and not obviously non-white-passing, 
         we'll consider them mixed-white instead of mixed-non-white
-ok so: *my* methodology:
+
+ok so: *my* methodology*:
     - use op's method for the most part (so we can reuse their tags)
     - if real human being is 
-        -majority white & not obviously non-white-passing, 
-        -or not obviously non-white-passing and playing a character who is *heavily* implied 
+        -*majority* white (more than 1/2) & not obviously non-white-passing, 
+        -OR not obviously non-white-passing and playing a character who is *heavily* implied 
         to be only white in context with no evidence otherwise, even if not explicitly stated 
             (ex. fantasy contexts where you couldn't explicitly state real world racial 
             alignment as such bc it isn't labelled like that, 
             ex. historical contexts where it would be highly unlikely for this person to be their 
             actor's mixed config), 
-        they are tagged as mixed-white instead of their non-white heritage
+    they are tagged as mixed-white instead of their non-white heritage
             -bc I don't think it's helpful, diversity-statistically, to imply 
             someone is more explicit minority rep than they are
             -> by still tagging them as not straight up white, 
@@ -86,6 +87,11 @@ ok so: *my* methodology:
     - if there are multiple main canon adaptations of a thing, even if op's data mostly was 
     tagged as one over the rest, we will still consider the rest unlike op
         (eg including comic canon not just more popular live action version)
+
+*there may remain inaccuracies in the data as it's a shitton of characters 
+and while I looked up most of them & combed their wikis for relevant info
+I'm just one guy (same as op is just one person) and I may have overlooked some details
+in any info I added/relabelled/completed
 
 
 source venv/bin/activate && export PYTHONPATH=$(pwd)
