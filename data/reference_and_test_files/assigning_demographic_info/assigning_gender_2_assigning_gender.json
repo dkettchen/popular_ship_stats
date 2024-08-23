@@ -2728,22 +2728,22 @@
                 ],
                 "gender": "F"
             },
-            "Lee Adama": {
+            "Lee 'Apollo' Adama": {
                 "given_name": "Lee",
                 "middle_name": null,
                 "maiden_name": null,
                 "surname": "Adama",
                 "alias": null,
-                "nickname": null,
+                "nickname": "Apollo",
                 "title (prefix)": null,
                 "title (suffix)": null,
                 "name_order": "W",
-                "full_name": "Lee Adama",
+                "full_name": "Lee 'Apollo' Adama",
                 "fandom": "Battlestar Galactica",
                 "op_versions": [
                     "Lee Adama"
                 ],
-                "gender": "M"
+                "gender": null
             },
             "William Adama": {
                 "given_name": "William",
@@ -10151,17 +10151,17 @@
             }
         },
         "NCIS": {
-            "Abby Sciuto": {
-                "given_name": "Abby",
-                "middle_name": null,
+            "Abigail Beethoven 'Abby' Sciuto": {
+                "given_name": "Abigail",
+                "middle_name": "Beethoven",
                 "maiden_name": null,
                 "surname": "Sciuto",
                 "alias": null,
-                "nickname": null,
+                "nickname": "Abby",
                 "title (prefix)": null,
                 "title (suffix)": null,
                 "name_order": "W",
-                "full_name": "Abby Sciuto",
+                "full_name": "Abigail Beethoven 'Abby' Sciuto",
                 "fandom": "NCIS",
                 "op_versions": [
                     "Abby Sciuto"
@@ -12233,17 +12233,17 @@
                 ],
                 "gender": "M"
             },
-            "Harry Watson": {
-                "given_name": "Harry",
+            "Harriet 'Harry' Watson": {
+                "given_name": "Harriet",
                 "middle_name": null,
                 "maiden_name": null,
                 "surname": "Watson",
                 "alias": null,
-                "nickname": null,
+                "nickname": "Harry",
                 "title (prefix)": null,
                 "title (suffix)": null,
                 "name_order": "W",
-                "full_name": "Harry Watson",
+                "full_name": "Harriet 'Harry' Watson",
                 "fandom": "Sherlock",
                 "op_versions": [
                     "Harry Watson"
@@ -13152,17 +13152,17 @@
                 ],
                 "gender": "M"
             },
-            "Ken Hutchinson": {
-                "given_name": "Ken",
+            "Kenneth 'Ken' Hutchinson": {
+                "given_name": "Kenneth",
                 "middle_name": null,
                 "maiden_name": null,
                 "surname": "Hutchinson",
                 "alias": null,
-                "nickname": null,
+                "nickname": "Ken",
                 "title (prefix)": null,
                 "title (suffix)": null,
                 "name_order": "W",
-                "full_name": "Ken Hutchinson",
+                "full_name": "Kenneth 'Ken' Hutchinson",
                 "fandom": "Starsky & Hutch",
                 "op_versions": [
                     "Ken Hutchinson"
@@ -14369,22 +14369,22 @@
             }
         },
         "The Big Bang Theory": {
-            "Penelope 'Penny' Hofstadter": {
-                "given_name": "Penelope",
+            "Penny": {
+                "given_name": "Penny",
                 "middle_name": null,
                 "maiden_name": null,
-                "surname": "Hofstadter",
+                "surname": null,
                 "alias": null,
-                "nickname": "Penny",
+                "nickname": null,
                 "title (prefix)": null,
                 "title (suffix)": null,
-                "name_order": "W",
-                "full_name": "Penelope 'Penny' Hofstadter",
+                "name_order": null,
+                "full_name": "Penny",
                 "fandom": "The Big Bang Theory",
                 "op_versions": [
                     "Penny"
                 ],
-                "gender": "F"
+                "gender": null
             },
             "Sheldon Cooper": {
                 "given_name": "Sheldon",

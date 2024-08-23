@@ -391,6 +391,9 @@ def complete_character_names(data_dict):
         "A Song of Ice and Fire / Game of Thrones Universe": {
             "Lucerys Velaryon": "Luke"
         },
+        "Battlestar Galactica": {
+            'Lee Adama': "Apollo"
+        }
     }
     name_and_alias_W = { # various configs
         "DC": {
@@ -530,23 +533,45 @@ def complete_character_names(data_dict):
                 "surname":"Fitz",
                 "name_order":"W"
             },
+            'Billy Kaplan | Wiccan': {
+                "given_name": "William",
+                "nickname": "Billy",
+                "surname": "Kaplan",
+                "name_order": "W",
+            },
         },
         "Overwatch": {
             "Jesse McCree" # use last name
         },
-        "The Big Bang Theory": {
-            "Penny": {
-                "given_name":"Penelope", 
-                "nickname":"Penny", 
-                "surname":"Hofstadter",
-                "name_order":"W"
-            }, 
-        },
         "White Collar": { # add maiden name
             "Elizabeth Burke": "Mitchell"
         },
+        "NCIS": {
+            'Abby Sciuto': {
+                "given_name":"Abigail", 
+                "middle_name":"Beethoven", 
+                "nickname":"Abby", 
+                "surname":"Sciuto",
+                "name_order": "W"
+            }
+        },
+        "Sherlock": {
+            'Harry Watson': {
+                "given_name": "Harriet",
+                "nickname": "Harry",
+                "surname": "Watson",
+                "name_order": "W"
+            }
+        },
+        "Starsky & Hutch": {
+            'Ken Hutchinson': {
+                "given_name": "Kenneth",
+                "nickname": "Ken",
+                "surname": "Hutchinson",
+                "name_order": "W"
+            }
+        },
     }
-
 
 
     for category in ["RPF", "fictional"]:
@@ -653,8 +678,11 @@ def complete_character_names(data_dict):
                         "Wilbur Soot",
                         "Lex Luthor",
                         "Leo Fitz",
-                        "Penny",
-                        "Alexis | Quackity"
+                        "Alexis | Quackity",
+                        'Billy Kaplan | Wiccan',
+                        'Abby Sciuto',
+                        'Harry Watson',
+                        'Ken Hutchinson',
                     ]:
                         new_char_value["given_name"] = other_name_parts[fandom][character]["given_name"]
                         new_char_value["surname"] = other_name_parts[fandom][character]["surname"]
@@ -663,13 +691,17 @@ def complete_character_names(data_dict):
                             "TommyInnit",
                             "Wilbur Soot",
                             "Lex Luthor",
+                            'Abby Sciuto',
                         ]:
                             new_char_value["middle_name"] = other_name_parts[fandom][character]["middle_name"]
                         if character in [ # ppl with a nickname
                             "Lex Luthor",
                             "Leo Fitz",
-                            "Penny",
-                            "Alexis | Quackity"
+                            "Alexis | Quackity",
+                            'Billy Kaplan | Wiccan',
+                            'Abby Sciuto',
+                            'Harry Watson',
+                            'Ken Hutchinson',
                         ]:
                             new_char_value["nickname"] = other_name_parts[fandom][character]["nickname"]
 
