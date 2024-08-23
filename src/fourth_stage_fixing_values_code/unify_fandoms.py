@@ -100,7 +100,7 @@ def format_unified_labels(data_dict):
             new_rpf_fandom = "Drag"
         elif "(Band)" in rpf_fandom:
             new_rpf_fandom = rpf_fandom[:-7]
-        elif "Adam Lambert" in rpf_fandom:
+        elif "Adam Lambert" in rpf_fandom or "American Idol" in rpf_fandom:
             new_rpf_fandom = "Adam Lambert"
         elif 'My Chemical Romance' in rpf_fandom:
             new_rpf_fandom = 'My Chemical Romance'
@@ -162,12 +162,13 @@ def format_unified_labels(data_dict):
             "Fall Out Boy",
             "Panic! at the Disco",
             "Twenty One Pilots",
-            '声入人心 | Super-Vocal'
+            '声入人心 | Super-Vocal', 
+            "American Idol"
         ]:
             rpf_dict["Type"] = "Music RPF"
         elif rpf_dict["Fandom"] not in ["Drag", "Youtube", "Minecraft", "American Idol"]:
             rpf_dict["Type"] = "Actor RPF"
-        elif rpf_dict["Fandom"] in ["Drag", "American Idol"]:
+        elif rpf_dict["Fandom"] in ["Drag"]:
             rpf_dict["Type"] = "Unscripted TV RPF"
         else: 
             rpf_dict["Type"] = "Online Creator RPF"

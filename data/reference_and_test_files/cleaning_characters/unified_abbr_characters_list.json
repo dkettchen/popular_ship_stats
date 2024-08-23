@@ -23,6 +23,13 @@
             ],
             "rpf_or_fic": "RPF"
         },
+        "Kris Allen": {
+            "full_name": "Kris Allen",
+            "op_versions": [
+                "Kris Allen"
+            ],
+            "rpf_or_fic": "RPF"
+        },
         "Sauli Koskinen": {
             "full_name": "Sauli Koskinen",
             "op_versions": [
@@ -34,22 +41,6 @@
             "full_name": "Tommy Ratliff",
             "op_versions": [
                 "Tommy Ratliff"
-            ],
-            "rpf_or_fic": "RPF"
-        }
-    },
-    "American Idol": {
-        "Adam Lambert": {
-            "full_name": "Adam Lambert",
-            "op_versions": [
-                "Adam Lambert"
-            ],
-            "rpf_or_fic": "RPF"
-        },
-        "Kris Allen": {
-            "full_name": "Kris Allen",
-            "op_versions": [
-                "Kris Allen"
             ],
             "rpf_or_fic": "RPF"
         }
