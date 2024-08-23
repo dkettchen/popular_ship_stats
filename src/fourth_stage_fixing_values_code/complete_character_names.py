@@ -306,7 +306,6 @@ def complete_character_names(data_dict):
         },
         "Marvel": {
             "America Chavez": "Ms. America",
-            "Billy Kaplan": "Wiccan",
             "Bruce Banner": "Hulk",
             "Carol Danvers": "Ms. Marvel/Captain Marvel",
             "Charles Xavier": "Professor X",
@@ -533,11 +532,12 @@ def complete_character_names(data_dict):
                 "surname":"Fitz",
                 "name_order":"W"
             },
-            'Billy Kaplan | Wiccan': {
+            'Billy Kaplan': {
                 "given_name": "William",
                 "nickname": "Billy",
                 "surname": "Kaplan",
                 "name_order": "W",
+                "alias": "Wiccan",
             },
         },
         "Overwatch": {
@@ -679,10 +679,10 @@ def complete_character_names(data_dict):
                         "Lex Luthor",
                         "Leo Fitz",
                         "Alexis | Quackity",
-                        'Billy Kaplan | Wiccan',
                         'Abby Sciuto',
                         'Harry Watson',
                         'Ken Hutchinson',
+                        "Billy Kaplan",
                     ]:
                         new_char_value["given_name"] = other_name_parts[fandom][character]["given_name"]
                         new_char_value["surname"] = other_name_parts[fandom][character]["surname"]
@@ -698,12 +698,14 @@ def complete_character_names(data_dict):
                             "Lex Luthor",
                             "Leo Fitz",
                             "Alexis | Quackity",
-                            'Billy Kaplan | Wiccan',
                             'Abby Sciuto',
                             'Harry Watson',
                             'Ken Hutchinson',
+                            "Billy Kaplan",
                         ]:
                             new_char_value["nickname"] = other_name_parts[fandom][character]["nickname"]
+                        if character in ["Billy Kaplan"]:
+                            new_char_value["alias"] = other_name_parts[fandom][character]["alias"]
 
                 if fandom == "The 100" and new_char_value["given_name"] == "Alicia":
                     new_char_value["fandom"] = "The Walking Dead"
