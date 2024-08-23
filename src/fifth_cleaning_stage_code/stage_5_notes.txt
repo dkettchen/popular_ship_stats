@@ -21,6 +21,16 @@ goals for this:
                 most recent value (whole list or str) ✅
                 if list: 
                     index in pairing
+                        -guess who just learned that sometimes it's the wrong way around smh
+                            - power ranger girlies are wrong way around for one
+                            - so is ruby rose rwby- or wait no op notes said she's implied 
+                                to be half-asian hence is now labelled as asian huh
+                                -which also means our same-race labels aren't reliable 
+                                bc in her case those will be the old one fuck
+                                -> go in order
+                                    -if most recent value is same-race -> use
+                                    -else use most recent value w index (and we'll just have to double check em all)
+                                    -and then we need to verify any old labels anyway
                     if pairing has more than 2 ppl:
                         a note abt that
                 all unique values (make lists into strings again??)

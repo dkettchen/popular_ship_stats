@@ -212,22 +212,31 @@ def collect_race_tags():
                     category_dict = rpf_dict
                 elif rpf_or_fic == "fictional":
                     category_dict = fic_dict
-                
-                for character in row["Relationship"]:
+
+                for index in range(len(row["Relationship"])):
+                    character = row["Relationship"][index]
+                    length = len(row["Relationship"])
+                    
                     character_dict = category_dict[fandom][character]
 
                     # if keys don't exist yet, add them (empty) first
                     if "most_recent_race_tag" not in character_dict.keys():
                         character_dict["most_recent_race_tag"] = None
+                        character_dict["most_recent_pairing_length"] = None
+                        character_dict["most_recent_pairing_index"] = None
                     if "most_recent_same_race_tag" not in character_dict.keys():
                         character_dict["most_recent_same_race_tag"] = None
                     if "all_race_tags" not in character_dict.keys():
                         character_dict["all_race_tags"] = set()
 
-                    if row["Race"] != [None, None]: # if there is a race tag in the row (cause some sets don't have one)
+                    # if there is a race tag in the row (cause some sets don't have one)
+                    if row["Race"] != [None, None]: 
                         # if we don't have a tag yet
                         if not character_dict["most_recent_race_tag"]: 
                             character_dict["most_recent_race_tag"] = row["Race"]
+                            character_dict["most_recent_pairing_length"] = length
+                            character_dict["most_recent_pairing_index"] = index
+                            # we only need to track order for this one bc same_race is two of same tag
 
                         # if we don't have a same race tag yet, and it is a same race tag
                         if not character_dict["most_recent_same_race_tag"] \
@@ -235,12 +244,15 @@ def collect_race_tags():
                             character_dict["most_recent_same_race_tag"] = row["Race"]
 
                         if type(row["Race"]) == list:
-                            tag_string = row["Race"][0] + "/" + row["Race"][1]
+                            tag_string = row["Race"][0] + "/" + row["Race"][1] + \
+                                ", index: " + str(index) + ", length: " + str(length)
+                                # tracking order & length for these too
                         elif type(row["Race"]) == str:
-                            tag_string = row["Race"]
+                            tag_string = row["Race"] # don't need to add index cause index may be wrong
                         character_dict["all_race_tags"].add(tag_string)
                     
-                    elif not character_dict["most_recent_race_tag"]: # if it still hasn't been assigned
+                    # if it still hasn't been assigned -> if it didn't have a race tag
+                    elif not character_dict["most_recent_race_tag"]: 
                         if character in untagged_white_characters:
                             character_dict["most_recent_race_tag"] = "White"
                         elif character in untagged_asian_character:
