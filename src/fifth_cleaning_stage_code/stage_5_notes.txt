@@ -16,9 +16,9 @@ goals for this:
     remove gender column from main data set when running next stage file creation
 
     have a list of dicts of character info per character, which ALSO contains correct race value
-        go through sets in order again
+        go through sets in order again ✅
             to collect:
-                most recent value (whole list or str)
+                most recent value (whole list or str) ✅
                 if list: 
                     index in pairing
                     if pairing has more than 2 ppl:
@@ -35,63 +35,85 @@ goals for this:
     remove race column from main data set when running next stage file creation
 
 notes:
-TECHNICALLY sanji should be tagged as MENA bc Taz is half-arab acc to op's methodology, 
-    despite every not-technically-explicit but like very clear coding in any adaptation 
-    (and to my understanding word of god too) evidence points to him being canonically white
-    bc live action actor takes precedence over everything other than explicit statements within canon
-    (which obv there isn't any in this case cause they're in a fantasy world) acc to op's method
-but they have continued to tag him as white in the 2024 set (which, again, *I* agree with)
--> I will not be retagging him cause I think it's silly of them to count ppl who are majority 
-white or white passing and playing a heavily implied to only be white character as the tiny bit 
-of their heritage that isn't white
-        I am however tempted to retag Hob Sandman (whose actor is 1/4 south asian, 
-        but whose character was some rando white dude in medieval britain) and Brendan Urie
-        who apparently is 1/4 polynesian/hawaiian
-    cause I don't think it's useful to count ppl as rep who are not (easily/obviously) 
-    identifyable as the rep they technically are 
-        -> same as I refuse to tag someone like crowley or loki as nb when they are clearly male-aligned
-maybe we can have a "mixed White" tag or something for these cases?
-        -> to acknowledge they're not ONLY white, 
-        but that they are very much perceived to be that rather than their other heritage
-        op said they're prioritising non-white heritage bc of the american system, 
-        but if someone's majority white & passing the american system tends to treat them as white
-        like if you asked me what brendan urie or hob's actor are, I'd say white
-        -> if someone's less than 1/2 non-white and not obviously non-white-passing, 
-        we'll consider them mixed-white instead of mixed-non-white
+    TECHNICALLY sanji should be tagged as MENA bc Taz is half-arab acc to op's methodology, 
+        despite every not-technically-explicit but like very clear coding in any adaptation 
+        (and to my understanding word of god too) evidence points to him being canonically white
+        bc live action actor takes precedence over everything other than explicit statements within canon
+        (which obv there isn't any in this case cause they're in a fantasy world) acc to op's method
+    but they have continued to tag him as white in the 2024 set (which, again, *I* agree with)
+    -> I will not be retagging him cause I think it's silly of them to count ppl who are majority 
+    white or white passing and playing a heavily implied to only be white character as the tiny bit 
+    of their heritage that isn't white
+            I am however tempted to retag Hob Sandman (whose actor is 1/4 south asian, 
+            but whose character was some rando white dude in medieval britain) and Brendan Urie
+            who apparently is 1/4 polynesian/hawaiian
+        cause I don't think it's useful to count ppl as rep who are not (easily/obviously) 
+        identifyable as the rep they technically are 
+            -> same as I refuse to tag someone like crowley or loki as nb when they are clearly male-aligned
+    maybe we can have a "mixed White" tag or something for these cases?
+            -> to acknowledge they're not ONLY white, 
+            but that they are very much perceived to be that rather than their other heritage
+            op said they're prioritising non-white heritage bc of the american system, 
+            but if someone's majority white & passing the american system tends to treat them as white
+            like if you asked me what brendan urie or hob's actor are, I'd say white
+            -> if someone's less than 1/2 non-white and not obviously non-white-passing, 
+            we'll consider them mixed-white instead of mixed-non-white
 
 ok so: *my* methodology*:
     - use op's method for the most part (so we can reuse their tags)
-    - if real human being is 
-        -*majority* white (more than 1/2) & not obviously non-white-passing, 
-        -OR not obviously non-white-passing and playing a character who is *heavily* implied 
-        to be only white in context with no evidence otherwise, even if not explicitly stated 
-            (ex. fantasy contexts where you couldn't explicitly state real world racial 
-            alignment as such bc it isn't labelled like that, 
-            ex. historical contexts where it would be highly unlikely for this person to be their 
-            actor's mixed config), 
-    they are tagged as mixed-white instead of their non-white heritage
-            -bc I don't think it's helpful, diversity-statistically, to imply 
-            someone is more explicit minority rep than they are
-            -> by still tagging them as not straight up white, 
-            we can acknowledge that other heritage without overstating it
+    - if there are multiple main canon adaptations of a thing, even if op's data mostly was 
+    tagged as one over the rest, we will still consider the rest, unlike op
+        (ex including comic canon info rather than prioritising more popular live action version)
+
+    - I don't think it's useful/helpful, diversity-statistically, 
+    to imply someone is more explicit minority rep than they actually are:
+        - if a real human being is *majority* white (ie more than 1/2) and not obviously 
+        non-white-passing, I will tag them as "White (mixed)" instead of their non-white group
+        - if someone is genderqueer but generally aligned with one gender over the other, 
+        I will mark them as their gender leaning as well as Other (ie "M | Other")
+            (ex. technically genderless but strongly male/female coded characters)
+            (ex. shapeshifters who usually go by one gender over the other)
+            (ex. characters who are treated as male/female in one adaptation while more nb in another)
+            (ex. characters or rl people who use biased multi-pronoun sets in english 
+            (ie they/he, she/they, etc) or have otherwise stated to be binary-leaning nbs)
+        - the implied context of the character takes priority over the actor's attribute, 
+        reversing the order of op's priority list, where reasonable to
+            - ie if a white-passing biracial actor plays a character strongly implied & generally 
+            accepted to be white in canon but not explicitly stated to be 
+                (ex. real world historical context where it'd be highly unlikely for them to be 
+                the actor's specific config) 
+                (ex. fantasy setting where it's hard to explicitly state real world racial alignments), 
+            Imma tag that character as white rather than *the actor's* minority ethnicity
+        - if that actor is themself in the ranking, they'd be tagged according to the usual rules 
+        (hence may differ from their character's tags)
+    -> by using tags like "White (mixed)" or "M | Other" I can mark diversity where it exists 
+    without misrepresenting/overstating it (as I, as a minority person myself, do not appreciate 
+    when ppl do that while I'm still over here with no actual rep for the thing I am smh)
+
+    - only if a character is canonically/a person irl is currently IDed (middle-spec/non-leaning) 
+    nonbinary/genderless will I only tag them as "Other" 
+        (ex. character or rl person who only uses they/them/other languages' neutral pronouns/
+        consistently omits gendered language (like some anime characters do in japanese))
+        (ex. character who is canonically nb/gender-questionable/genderless and played by a nb actor)
+        (ex. non-human character of a species without gender)
+    - if it is a reader or player character they are tagged as "Ambig" unless op's data 
+    specifies one gender over another for a rank (ex "Female Shepard" in og rankings)
+    - if both male and female could be argued to be a correct labelling based on context (ex cis 
+    male drag queens in the femslash ranking), they will be labelled as "M | F | Other"
+
     - if race isn't explicitly stated, there isn't a relevant live action adaptation, 
     and context, voice actors etc are conflicting to the point of me not knowing what to go with, 
-    the character will be tagged as ambiguous
-    - if the character has never been portrayed in live action 
-    and is not clearly implied or established to be of a specific group, 
-    they will be tagged as unknown
-    - acc to oxford dict latin includes anyone from latin-language countries, 
+    the character's race will be tagged as "Ambig"
+    - if the character has never been portrayed in visual media and is not clearly implied or 
+    established to be of a specific group, their race will be tagged as "Unknown"
+    - according to oxford dictionary "Latin" includes anyone from latin-language countries, 
     so I'm including the south european ones in that (eg portugal, italy, etc)
 
-    # this one applies to gender-difference & race
-    - if there are multiple main canon adaptations of a thing, even if op's data mostly was 
-    tagged as one over the rest, we will still consider the rest unlike op
-        (eg including comic canon not just more popular live action version)
-
-*there may remain inaccuracies in the data as it's a shitton of characters 
-and while I looked up most of them & combed their wikis for relevant info
-I'm just one guy (same as op is just one person) and I may have overlooked some details
-in any info I added/relabelled/completed
+    *there may remain inaccuracies in the data as it's a shitton of characters 
+    and while I looked up most of them & combed their wikis for relevant info
+    I'm just one guy (same as op is just one person) and I may have overlooked some details
+    in any info I added/relabelled/completed
+    -> however hopefully these discrepencies should be minor and not scew the general trends of the data
 
 
 source venv/bin/activate && export PYTHONPATH=$(pwd)

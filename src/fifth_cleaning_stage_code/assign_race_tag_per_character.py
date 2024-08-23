@@ -3,9 +3,10 @@
 # op has labelled spock as white despite zachary quinto being half italian
 
 characters_to_retag = {
-    "Sanji Vinsmoke | Black-Leg Sanji": "White (mixed)", # Taz is british-arab but playing a white char
+    # "Sanji Vinsmoke | Black-Leg Sanji": "White", # Taz is british-arab but playing a white char
+        # is already tagged correctly cause op don't follow their own method lol
     "Elizabeth Burke, née Mitchell": "White (mixed)", # turkish & greek in there
-    "Hob Gadling": "White (mixed)", # 3/4 white and the character is a random medieval white man
+    "Hob Gadling": "White", # actor is 3/4 white and the character is a random medieval white man
     'Brendon Urie': "White (mixed)", # 3/4 white
     "Anna": "Eu Ind", # same format as "As Ind"
     "Elsa": "Eu Ind", # ""
