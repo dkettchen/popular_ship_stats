@@ -1,6 +1,6 @@
 
 # goals for this:
-    # have a list of dicts of character info per character, which contains correct gender value
+    # have a list of dicts of character info per character, which contains correct gender value ✅
         # go through sets in reverse order ✅
             # most recent to oldest, femslash, then yearly, then overall ✅
             # -> make a list of file paths in order ✅
@@ -15,8 +15,25 @@
             # (angels, gems, canon gender queers, shapeshifters, player characters, drags, etc)
     # remove gender column from main data set when running next stage file creation
 
+    # have a list of dicts of character info per character, which ALSO contains correct race value
+        # go through sets in order again
+            # to collect:
+                # most recent value (whole list or str)
+                # if list: 
+                    # index in pairing
+                    # if pairing has more than 2 ppl:
+                        # a note abt that
+                # all unique values (make lists into strings again??)
+            # if they're white they should be able to be assigned no problem
+            # if they're poc in recent sets they will also be assigned properly 
+                # see who's leftover in old values
+                    # look em up
+        # research & replace asian labels w more cardinal direction specificity
+        # add correct labels to everyone's gender assigned dicts
+            # have a cursory look at some of em to verify 
+                # (ie all the things we know have poc vs only white ppl in em)
+    # remove race column from main data set when running next stage file creation
 
-# I just realised adam lambert is in the american idol pairing, we gotta fix that fandom name then smh
 
 
 source venv/bin/activate && export PYTHONPATH=$(pwd)

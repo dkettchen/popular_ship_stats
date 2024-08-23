@@ -84,6 +84,33 @@
                     "M/M"
                 ]
             },
+            "Kris Allen": {
+                "given_name": "Kris",
+                "middle_name": null,
+                "maiden_name": null,
+                "surname": "Allen",
+                "alias": null,
+                "nickname": null,
+                "title (prefix)": null,
+                "title (suffix)": null,
+                "name_order": "W",
+                "full_name": "Kris Allen",
+                "fandom": "Adam Lambert",
+                "op_versions": [
+                    "Kris Allen"
+                ],
+                "most_recent_gender_tag": [
+                    "M",
+                    "M"
+                ],
+                "most_recent_same_sex_tag": [
+                    "M",
+                    "M"
+                ],
+                "all_gender_tags": [
+                    "M/M"
+                ]
+            },
             "Sauli Koskinen": {
                 "given_name": "Sauli",
                 "middle_name": null,
@@ -125,62 +152,6 @@
                 "fandom": "Adam Lambert",
                 "op_versions": [
                     "Tommy Ratliff"
-                ],
-                "most_recent_gender_tag": [
-                    "M",
-                    "M"
-                ],
-                "most_recent_same_sex_tag": [
-                    "M",
-                    "M"
-                ],
-                "all_gender_tags": [
-                    "M/M"
-                ]
-            }
-        },
-        "American Idol": {
-            "Adam Lambert": {
-                "given_name": "Adam",
-                "middle_name": null,
-                "maiden_name": null,
-                "surname": "Lambert",
-                "alias": null,
-                "nickname": null,
-                "title (prefix)": null,
-                "title (suffix)": null,
-                "name_order": "W",
-                "full_name": "Adam Lambert",
-                "fandom": "American Idol",
-                "op_versions": [
-                    "Adam Lambert"
-                ],
-                "most_recent_gender_tag": [
-                    "M",
-                    "M"
-                ],
-                "most_recent_same_sex_tag": [
-                    "M",
-                    "M"
-                ],
-                "all_gender_tags": [
-                    "M/M"
-                ]
-            },
-            "Kris Allen": {
-                "given_name": "Kris",
-                "middle_name": null,
-                "maiden_name": null,
-                "surname": "Allen",
-                "alias": null,
-                "nickname": null,
-                "title (prefix)": null,
-                "title (suffix)": null,
-                "name_order": "W",
-                "full_name": "Kris Allen",
-                "fandom": "American Idol",
-                "op_versions": [
-                    "Kris Allen"
                 ],
                 "most_recent_gender_tag": [
                     "M",

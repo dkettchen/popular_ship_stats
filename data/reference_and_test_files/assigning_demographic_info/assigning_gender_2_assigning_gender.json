@@ -54,6 +54,23 @@
                 ],
                 "gender": "M"
             },
+            "Kris Allen": {
+                "given_name": "Kris",
+                "middle_name": null,
+                "maiden_name": null,
+                "surname": "Allen",
+                "alias": null,
+                "nickname": null,
+                "title (prefix)": null,
+                "title (suffix)": null,
+                "name_order": "W",
+                "full_name": "Kris Allen",
+                "fandom": "Adam Lambert",
+                "op_versions": [
+                    "Kris Allen"
+                ],
+                "gender": "M"
+            },
             "Sauli Koskinen": {
                 "given_name": "Sauli",
                 "middle_name": null,
@@ -85,42 +102,6 @@
                 "fandom": "Adam Lambert",
                 "op_versions": [
                     "Tommy Ratliff"
-                ],
-                "gender": "M"
-            }
-        },
-        "American Idol": {
-            "Adam Lambert": {
-                "given_name": "Adam",
-                "middle_name": null,
-                "maiden_name": null,
-                "surname": "Lambert",
-                "alias": null,
-                "nickname": null,
-                "title (prefix)": null,
-                "title (suffix)": null,
-                "name_order": "W",
-                "full_name": "Adam Lambert",
-                "fandom": "American Idol",
-                "op_versions": [
-                    "Adam Lambert"
-                ],
-                "gender": "M"
-            },
-            "Kris Allen": {
-                "given_name": "Kris",
-                "middle_name": null,
-                "maiden_name": null,
-                "surname": "Allen",
-                "alias": null,
-                "nickname": null,
-                "title (prefix)": null,
-                "title (suffix)": null,
-                "name_order": "W",
-                "full_name": "Kris Allen",
-                "fandom": "American Idol",
-                "op_versions": [
-                    "Kris Allen"
                 ],
                 "gender": "M"
             }
