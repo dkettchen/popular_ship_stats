@@ -145,6 +145,16 @@ def make_unique_characters(input_data):
                         character_value["op_versions"].extend(char["op_versions"])
                 elif "My Hero Academia" in fandom and "Dabi" in char["full_name"]:
                     unique_characters["fictional"][fandom]["Touya Todoroki | Dabi"] = char
+                elif fandom == "Merlin" and char["full_name"] in ["Gwen", "Guinevere"]:
+                    if "Guinevere 'Gwen' Pendragon" not in unique_characters["fictional"][fandom].keys():
+                        unique_characters["fictional"][fandom]["Guinevere 'Gwen' Pendragon"] = char
+                        char_value = unique_characters["fictional"][fandom]["Guinevere 'Gwen' Pendragon"]
+                        char_value["given_name"] = "Guinevere"
+                        char_value["nickname"] = "Gwen"
+                        char_value["surname"] = "Pendragon"
+                        char_value["full_name"] = "Guinevere 'Gwen' Pendragon"
+                    else:
+                        unique_characters["fictional"][fandom]["Guinevere 'Gwen' Pendragon"]["op_versions"].extend(char["op_versions"])
                 else:
                     unique_characters["fictional"][fandom][char["full_name"]] = char
             else:
@@ -571,6 +581,7 @@ def complete_character_names(data_dict):
                 "name_order": "W"
             }
         },
+
     }
 
 

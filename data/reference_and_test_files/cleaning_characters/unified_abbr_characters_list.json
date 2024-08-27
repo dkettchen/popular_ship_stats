@@ -452,16 +452,10 @@
             ],
             "rpf_or_fic": "fictional"
         },
-        "Guinevere": {
-            "full_name": "Guinevere",
+        "Guinevere 'Gwen' Pendragon": {
+            "full_name": "Guinevere 'Gwen' Pendragon",
             "op_versions": [
-                "Guinevere"
-            ],
-            "rpf_or_fic": "fictional"
-        },
-        "Gwen": {
-            "full_name": "Gwen",
-            "op_versions": [
+                "Guinevere",
                 "Gwen"
             ],
             "rpf_or_fic": "fictional"

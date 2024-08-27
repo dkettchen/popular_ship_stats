@@ -14891,43 +14891,20 @@
                     "M/M"
                 ]
             },
-            "Guinevere": {
+            "Guinevere 'Gwen' Pendragon": {
                 "given_name": "Guinevere",
                 "middle_name": null,
                 "maiden_name": null,
-                "surname": null,
+                "surname": "Pendragon",
                 "alias": null,
-                "nickname": null,
+                "nickname": "Gwen",
                 "title (prefix)": null,
                 "title (suffix)": null,
                 "name_order": null,
-                "full_name": "Guinevere",
+                "full_name": "Guinevere 'Gwen' Pendragon",
                 "fandom": "Merlin",
                 "op_versions": [
-                    "Guinevere"
-                ],
-                "most_recent_gender_tag": [
-                    "F",
-                    "M"
-                ],
-                "most_recent_same_sex_tag": null,
-                "all_gender_tags": [
-                    "F/M"
-                ]
-            },
-            "Gwen": {
-                "given_name": "Gwen",
-                "middle_name": null,
-                "maiden_name": null,
-                "surname": null,
-                "alias": null,
-                "nickname": null,
-                "title (prefix)": null,
-                "title (suffix)": null,
-                "name_order": null,
-                "full_name": "Gwen",
-                "fandom": "Merlin",
-                "op_versions": [
+                    "Guinevere",
                     "Gwen"
                 ],
                 "most_recent_gender_tag": [
