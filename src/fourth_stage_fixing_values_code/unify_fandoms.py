@@ -325,6 +325,11 @@ def format_unified_labels(data_dict):
             "The Lord of the Rings",
         ]:
             fandom = "Lord of the Rings Universe"
+        elif key in [
+            "Mortal Instruments",
+            "Shadowhunters",
+        ]:
+            fandom = "Mortal Instruments | Shadowhunters"
         elif "Witcher" in key:
             fandom = "Wiedźmin | The Witcher"
         elif key == "Avatar":

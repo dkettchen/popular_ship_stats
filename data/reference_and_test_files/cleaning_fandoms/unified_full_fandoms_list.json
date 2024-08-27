@@ -916,13 +916,6 @@
                 "Gundam Wing"
             ]
         },
-        "Mortal Instruments": {
-            "Fandom": "Mortal Instruments",
-            "Author Name": "Cassandra Clare",
-            "OP Versions": [
-                "Mortal Instruments Series - Cassandra Clare"
-            ]
-        },
         "Motherland": {
             "Fandom": "Motherland",
             "Author Name": null,
@@ -1166,10 +1159,11 @@
                 "Shadow and Bone (TV)"
             ]
         },
-        "Shadowhunters": {
-            "Fandom": "Shadowhunters",
-            "Author Name": null,
+        "Shadowhunters | Mortal Instruments": {
+            "Fandom": "Shadowhunters | Mortal Instruments",
+            "Author Name": "Cassandra Clare",
             "OP Versions": [
+                "Mortal Instruments Series - Cassandra Clare",
                 "Shadowhunters (TV)"
             ]
         },

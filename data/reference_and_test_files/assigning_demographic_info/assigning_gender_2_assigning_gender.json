@@ -9803,42 +9803,6 @@
                 "gender": "M"
             }
         },
-        "Mortal Instruments": {
-            "Alec Lightwood": {
-                "given_name": "Alec",
-                "middle_name": null,
-                "maiden_name": null,
-                "surname": "Lightwood",
-                "alias": null,
-                "nickname": null,
-                "title (prefix)": null,
-                "title (suffix)": null,
-                "name_order": "W",
-                "full_name": "Alec Lightwood",
-                "fandom": "Mortal Instruments",
-                "op_versions": [
-                    "Alec Lightwood"
-                ],
-                "gender": "M"
-            },
-            "Magnus Bane": {
-                "given_name": "Magnus",
-                "middle_name": null,
-                "maiden_name": null,
-                "surname": "Bane",
-                "alias": null,
-                "nickname": null,
-                "title (prefix)": null,
-                "title (suffix)": null,
-                "name_order": "W",
-                "full_name": "Magnus Bane",
-                "fandom": "Mortal Instruments",
-                "op_versions": [
-                    "Magnus Bane"
-                ],
-                "gender": "M"
-            }
-        },
         "Motherland": {
             "Raelle Collar": {
                 "given_name": "Raelle",
@@ -12005,7 +11969,7 @@
                 "gender": "M"
             }
         },
-        "Shadowhunters": {
+        "Shadowhunters | Mortal Instruments": {
             "Alec Lightwood": {
                 "given_name": "Alec",
                 "middle_name": null,
@@ -12017,7 +11981,7 @@
                 "title (suffix)": null,
                 "name_order": "W",
                 "full_name": "Alec Lightwood",
-                "fandom": "Shadowhunters",
+                "fandom": "Shadowhunters | Mortal Instruments",
                 "op_versions": [
                     "Alec Lightwood"
                 ],
@@ -12034,7 +11998,7 @@
                 "title (suffix)": null,
                 "name_order": "W",
                 "full_name": "Clary Fray",
-                "fandom": "Shadowhunters",
+                "fandom": "Shadowhunters | Mortal Instruments",
                 "op_versions": [
                     "Clary Fray"
                 ],
@@ -12051,7 +12015,7 @@
                 "title (suffix)": null,
                 "name_order": "W",
                 "full_name": "Isabelle Lightwood",
-                "fandom": "Shadowhunters",
+                "fandom": "Shadowhunters | Mortal Instruments",
                 "op_versions": [
                     "Isabelle Lightwood"
                 ],
@@ -12068,7 +12032,7 @@
                 "title (suffix)": null,
                 "name_order": "W",
                 "full_name": "Magnus Bane",
-                "fandom": "Shadowhunters",
+                "fandom": "Shadowhunters | Mortal Instruments",
                 "op_versions": [
                     "Magnus Bane"
                 ],
