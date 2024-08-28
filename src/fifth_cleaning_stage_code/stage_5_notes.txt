@@ -131,3 +131,4 @@ source venv/bin/activate && export PYTHONPATH=$(pwd)
 python src/fifth_cleaning_stage_code/collect_gender_tags_per_character.py
 python src/fifth_cleaning_stage_code/assign_gender_per_character.py
 python src/fifth_cleaning_stage_code/collect_race_tags_per_character.py
+python src/fifth_cleaning_stage_code/assign_race_tag_per_character.py
