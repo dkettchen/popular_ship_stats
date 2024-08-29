@@ -236,6 +236,13 @@ def assign_race_tag(data_dict):
                 if race_tag == "White (mixed)":
                     race_tag = "White (Multi)" 
                     # easier than going back through all previous mentions
+                if "Player Character" in input_character_dict["full_name"]:
+                    if input_character_dict["full_name"] == "Amamiya Ren | Player Character":
+                        race_tag = "Asian"
+                    elif input_character_dict["full_name"] == "Byleth Eisner | Player Character":
+                        race_tag = "MENA"
+                    elif "Traveler" not in input_character_dict["full_name"]:
+                        race_tag = "Ambig"
                 
                 new_character = new_dict[category][fandom][character]
                 for key in [

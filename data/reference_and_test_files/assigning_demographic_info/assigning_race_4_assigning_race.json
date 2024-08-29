@@ -4634,28 +4634,59 @@
                 "gender": "M",
                 "race": "Asian (Multi)"
             },
-            "Player Character": {
+            "Hawke (Female) | Player Character": {
+                "given_name": null,
+                "middle_name": null,
+                "maiden_name": null,
+                "surname": "Hawke",
+                "alias": "Player Character",
+                "nickname": null,
+                "title (prefix)": null,
+                "title (suffix)": "(Female)",
+                "name_order": null,
+                "full_name": "Hawke (Female) | Player Character",
+                "fandom": "Dragon Age",
+                "op_versions": [
+                    "Female Hawke"
+                ],
+                "gender": "F",
+                "race": "Ambig"
+            },
+            "Inquisitor (Female) | Player Character": {
                 "given_name": null,
                 "middle_name": null,
                 "maiden_name": null,
                 "surname": null,
                 "alias": "Player Character",
                 "nickname": null,
-                "title (prefix)": null,
-                "title (suffix)": null,
+                "title (prefix)": "Inquisitor",
+                "title (suffix)": "(Female)",
                 "name_order": null,
-                "full_name": "Player Character",
+                "full_name": "Inquisitor (Female) | Player Character",
                 "fandom": "Dragon Age",
                 "op_versions": [
-                    "Female Hawke",
-                    "Female Inquisitor",
-                    "Female Warden",
-                    "Female Warden (Dragon Age)",
-                    "Hawke",
-                    "Inquisitor",
-                    "Warden (Dragon Age)"
+                    "Female Inquisitor"
                 ],
-                "gender": "Ambig",
+                "gender": "F",
+                "race": "Ambig"
+            },
+            "Warden (Female) | Player Character": {
+                "given_name": null,
+                "middle_name": null,
+                "maiden_name": null,
+                "surname": null,
+                "alias": "Player Character",
+                "nickname": null,
+                "title (prefix)": "Warden",
+                "title (suffix)": "(Female)",
+                "name_order": null,
+                "full_name": "Warden (Female) | Player Character",
+                "fandom": "Dragon Age",
+                "op_versions": [
+                    "Female Warden",
+                    "Female Warden (Dragon Age)"
+                ],
+                "gender": "F",
                 "race": "Ambig"
             },
             "Fenris": {
@@ -4675,6 +4706,42 @@
                 ],
                 "gender": "M",
                 "race": "White"
+            },
+            "Hawke | Player Character": {
+                "given_name": null,
+                "middle_name": null,
+                "maiden_name": null,
+                "surname": "Hawke",
+                "alias": "Player Character",
+                "nickname": null,
+                "title (prefix)": null,
+                "title (suffix)": null,
+                "name_order": null,
+                "full_name": "Hawke | Player Character",
+                "fandom": "Dragon Age",
+                "op_versions": [
+                    "Hawke"
+                ],
+                "gender": "Ambig",
+                "race": "Ambig"
+            },
+            "Inquisitor | Player Character": {
+                "given_name": null,
+                "middle_name": null,
+                "maiden_name": null,
+                "surname": null,
+                "alias": "Player Character",
+                "nickname": null,
+                "title (prefix)": "Inquisitor",
+                "title (suffix)": null,
+                "name_order": null,
+                "full_name": "Inquisitor | Player Character",
+                "fandom": "Dragon Age",
+                "op_versions": [
+                    "Inquisitor"
+                ],
+                "gender": "Ambig",
+                "race": "Ambig"
             },
             "Iron Bull": {
                 "given_name": null,
@@ -4784,6 +4851,24 @@
                 ],
                 "gender": "M",
                 "race": "White"
+            },
+            "Warden | Player Character": {
+                "given_name": null,
+                "middle_name": null,
+                "maiden_name": null,
+                "surname": null,
+                "alias": "Player Character",
+                "nickname": null,
+                "title (prefix)": "Warden",
+                "title (suffix)": null,
+                "name_order": null,
+                "full_name": "Warden | Player Character",
+                "fandom": "Dragon Age",
+                "op_versions": [
+                    "Warden (Dragon Age)"
+                ],
+                "gender": "Ambig",
+                "race": "Ambig"
             }
         },
         "Due South": {
@@ -5083,23 +5168,23 @@
                 "gender": "M",
                 "race": "White"
             },
-            "Player Character": {
-                "given_name": null,
+            "Byleth Eisner | Player Character": {
+                "given_name": "Byleth",
                 "middle_name": null,
                 "maiden_name": null,
-                "surname": null,
+                "surname": "Eisner",
                 "alias": "Player Character",
                 "nickname": null,
                 "title (prefix)": null,
                 "title (suffix)": null,
-                "name_order": null,
-                "full_name": "Player Character",
+                "name_order": "W",
+                "full_name": "Byleth Eisner | Player Character",
                 "fandom": "Fire Emblem | \u30d5\u30a1\u30a4\u30a2\u30fc\u30a8\u30e0\u30d6\u30ec\u30e0",
                 "op_versions": [
                     "My Unit | Byleth"
                 ],
                 "gender": "Ambig",
-                "race": "White"
+                "race": "MENA"
             },
             "Sylvain Jose Gautier": {
                 "given_name": "Sylvain",
@@ -5652,17 +5737,17 @@
                 "gender": "M",
                 "race": "MENA"
             },
-            "Player Character": {
+            "Traveler | Player Character": {
                 "given_name": null,
                 "middle_name": null,
                 "maiden_name": null,
                 "surname": null,
                 "alias": "Player Character",
                 "nickname": null,
-                "title (prefix)": null,
+                "title (prefix)": "Traveler",
                 "title (suffix)": null,
                 "name_order": null,
-                "full_name": "Player Character",
+                "full_name": "Traveler | Player Character",
                 "fandom": "Genshin Impact | \u539f\u795e",
                 "op_versions": [
                     "Traveler (Genshin Impact)"
@@ -10062,24 +10147,22 @@
             }
         },
         "Mass Effect": {
-            "Player Character": {
+            "Shepard (Female) | Player Character": {
                 "given_name": null,
                 "middle_name": null,
                 "maiden_name": null,
-                "surname": null,
+                "surname": "Shepard",
                 "alias": "Player Character",
                 "nickname": null,
                 "title (prefix)": null,
-                "title (suffix)": null,
+                "title (suffix)": "(Female)",
                 "name_order": null,
-                "full_name": "Player Character",
+                "full_name": "Shepard (Female) | Player Character",
                 "fandom": "Mass Effect",
                 "op_versions": [
-                    "Female Shepard",
-                    "Male Shepard",
-                    "Shepard"
+                    "Female Shepard"
                 ],
-                "gender": "Ambig",
+                "gender": "F",
                 "race": "Ambig"
             },
             "Garrus Vakarian": {
@@ -10135,6 +10218,42 @@
                 ],
                 "gender": "F",
                 "race": "N.H."
+            },
+            "Shepard (Male) | Player Character": {
+                "given_name": null,
+                "middle_name": null,
+                "maiden_name": null,
+                "surname": "Shepard",
+                "alias": "Player Character",
+                "nickname": null,
+                "title (prefix)": null,
+                "title (suffix)": "(Male)",
+                "name_order": null,
+                "full_name": "Shepard (Male) | Player Character",
+                "fandom": "Mass Effect",
+                "op_versions": [
+                    "Male Shepard"
+                ],
+                "gender": "M",
+                "race": "Ambig"
+            },
+            "Shepard | Player Character": {
+                "given_name": null,
+                "middle_name": null,
+                "maiden_name": null,
+                "surname": "Shepard",
+                "alias": "Player Character",
+                "nickname": null,
+                "title (prefix)": null,
+                "title (suffix)": null,
+                "name_order": null,
+                "full_name": "Shepard | Player Character",
+                "fandom": "Mass Effect",
+                "op_versions": [
+                    "Shepard"
+                ],
+                "gender": "Ambig",
+                "race": "Ambig"
             }
         },
         "Merlin": {
@@ -11751,22 +11870,22 @@
                 "gender": "F",
                 "race": "E Asian"
             },
-            "Player Character": {
-                "given_name": null,
+            "Amamiya Ren | Player Character": {
+                "given_name": "Ren",
                 "middle_name": null,
                 "maiden_name": null,
-                "surname": null,
+                "surname": "Amamiya",
                 "alias": "Player Character",
                 "nickname": null,
                 "title (prefix)": null,
                 "title (suffix)": null,
-                "name_order": null,
-                "full_name": "Player Character",
+                "name_order": "E",
+                "full_name": "Amamiya Ren | Player Character",
                 "fandom": "Persona",
                 "op_versions": [
                     "Persona 5 Protagonist"
                 ],
-                "gender": "Ambig",
+                "gender": "M",
                 "race": "E Asian"
             },
             "Satonaka Chie": {
@@ -11900,7 +12019,7 @@
                 "op_versions": [
                     "Tenoh Haruka"
                 ],
-                "gender": "F",
+                "gender": "F | Other",
                 "race": "E Asian"
             }
         },

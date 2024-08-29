@@ -148,7 +148,8 @@ def assign_gender(data_dict):
         "Peridot",
         "Rose Quartz | Pink Diamond",
         "Ruby",
-        "Sapphire"
+        "Sapphire",
+        "Tenoh Haruka | Sailor Uranus",
     ]
     cis_male_drag_queens = [
         "Brooke Lynn Hytes", # she/her in drag, he/they out of drag
@@ -156,9 +157,24 @@ def assign_gender(data_dict):
         "Trixie Mattel", # she/her in drag, he/him out of drag
         "Vanessa Vanjie Mateo" # she/her in drag, he/him out of drag
     ]
-    players_and_readers = [
+    ambig_players_and_readers = [
         "Y/N | Reader",
-        "Player Character",
+        "Hawke | Player Character",
+        "Inquisitor | Player Character",
+        "Warden | Player Character",
+        "Traveler | Player Character",
+        "Shepard | Player Character",
+        "Byleth Eisner | Player Character",
+    ]
+    female_player_chars = [
+        "Hawke (Female) | Player Character",
+        "Inquisitor (Female) | Player Character",
+        "Warden (Female) | Player Character",
+        "Shepard (Female) | Player Character",
+    ]
+    male_player_chars = [
+        "Shepard (Male) | Player Character",
+        "Amamiya Ren | Player Character",
     ]
 
 
@@ -218,8 +234,12 @@ def assign_gender(data_dict):
                     gender = "F | Other"
                 elif input_character_dict["full_name"] in cis_male_drag_queens:
                     gender = "M | F | Other"
-                elif input_character_dict["full_name"] in players_and_readers:
+                elif input_character_dict["full_name"] in ambig_players_and_readers:
                     gender = "Ambig"
+                elif input_character_dict["full_name"] in female_player_chars:
+                    gender = "F"
+                elif input_character_dict["full_name"] in male_player_chars:
+                    gender = "M"
                 
                 # if not gender: # everyone has received gender!
                 #     print(f'"{input_character_dict["full_name"]}",')
