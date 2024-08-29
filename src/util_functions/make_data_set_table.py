@@ -1,4 +1,5 @@
 from json import dump
+from write_csv_file import make_csv_file
 
 def make_data_set_table(ordered_path_dict):
     """
@@ -42,6 +43,19 @@ def make_data_set_table(ordered_path_dict):
 
     return sorted_data_sets
 
+def prep_data_set_table_for_csv(ordered_dict):
+    csv_list = [["data_set", "website", "year", "type"]] # adding column names
+
+    for key in ordered_dict:
+        website = ordered_dict[key]["website"]
+        year = ordered_dict[key]["year"]
+        set_type = ordered_dict[key]["type"]
+        values_list = [key, website, year, set_type]
+
+        csv_list.append(values_list)
+    
+    return csv_list
+        
 
 
 if __name__ == "__main__":
@@ -97,3 +111,6 @@ if __name__ == "__main__":
     filepath = "data/reference_and_test_files/data_sets.json"
     with open(filepath, "w") as file:
         dump(data_set_dict, file, indent=4)
+    csv_data = prep_data_set_table_for_csv(data_set_dict)
+    csv_path = "data/reference_and_test_files/data_sets.csv"
+    make_csv_file(csv_data, csv_path)
