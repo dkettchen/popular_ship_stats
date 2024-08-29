@@ -44,9 +44,10 @@ goals for this:
                 (ie all the things we know have poc vs only white ppl in em)
     remove race column from main data set when running next stage file creation
 
-more todo:
-- fix player characters that can be gendered/have been specified in sets
-- fix persona guy too
+- fix player characters that can be gendered/have been specified in sets ✅
+- fix persona guy too ✅
+
+
 
 source venv/bin/activate && export PYTHONPATH=$(pwd)
 
@@ -54,3 +55,5 @@ python src/fifth_cleaning_stage_code/collect_gender_tags_per_character.py
 python src/fifth_cleaning_stage_code/assign_gender_per_character.py
 python src/fifth_cleaning_stage_code/collect_race_tags_per_character.py
 python src/fifth_cleaning_stage_code/assign_race_tag_per_character.py
+
+python src/fifth_cleaning_stage_code/make_data_set_table.py
