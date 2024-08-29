@@ -324,7 +324,7 @@ def complete_character_names(data_dict):
             "Erik Lehnsherr": "Magneto",
             "Jane Foster": "Thor",
             "Kate Bishop": "Hawkeye",
-            "Maria Rambeau": "Photon",
+            "Maria Rambeau": "Binary",
             "Peter Parker": "Spiderman",
             "Stephen Strange": "Doctor Strange",
             "Steve Rogers": "Captain America",

@@ -175,6 +175,8 @@ def assign_race_tag(data_dict):
                                               # sometimes she's just a ginger white woman
         'Willie': "Asian | Am Ind", # man's east asian AND native american, 
                                       # not asian indigenous
+        "Venti": "Ambig", # boychild is not obviously white-looking enough for me to make that call
+                          # plus name implies italian, and like- there are german poc
     }
 
     for category in ["RPF", "fictional"]:
@@ -256,107 +258,257 @@ def assign_race_tag(data_dict):
     return new_dict
 
 def retag_for_specificity(data_dict):
+    """
+    takes a data_dict as output by assign_race_data
+
+    returns a copy of it with asian, indigenous, and multiracial characters retagged 
+    with slightly more specificity
+    """
 
     new_dict = deepcopy(data_dict)
 
-    #TODO: retagging section
+    east_asian_fandoms = [
+        "Bangtan Boys / BTS",
+        "EXO",
+        "Grandmaster of Demonic Cultivation / The Untamed | 魔道祖师 / 陈情令",
+        "KAT-TUN", # japanese boy group
+        "MIRROR", # hong kong "cantopop" boy group
+        "NCT",
+        "Red Velvet",
+        "Stray Kids",
+        "Super-Vocal | 声入人心",
+        "TOMORROW X TOGETHER / TXT",
+        "Attack on Titan | 進撃の巨人", # mikasa is half-white
+        "BLUELOCK | ブルーロック",
+        "Bungou Stray Dogs | 文豪ストレイドッグス",
+        "Dangan Ronpa",
+        "Final Fantasy | ファイナルファンタジー",
+        "Fire Emblem | ファイアーエムブレム",
+        "Free!",
+        "Fullmetal Alchemist | 鋼の錬金術師",
+        "Genshin Impact | 原神",
+        "Haikyuu!! | ハイキュー!!",
+        "Hatsune Miku / ボーカロイド | 初音ミク",
+        "Heaven Official's Blessing | 天官赐福",
+        "Hetalia | ヘタリア",
+        "JoJo's Bizarre Adventure | ジョジョの奇妙な冒険",
+        "Journey to the West Universe",
+        "Jujutsu Kaisen | 呪術廻戦",
+        "Kill la Kill | キルラキル",
+        "Little Witch Academia | リトルウィッチアカデミア",
+        "Love Live! | ラブライブ!",
+        "Mobile Suit Gundam Wing | 新機動戦記ガンダム W",
+        "My Hero Academia | 僕のヒーローアカデミア",
+        "Naruto",
+        "New Gods | 新神榜",
+        "Omniscient Reader | 전지적 독자 시점",
+        "One Piece | ワンピース",
+        "One-Punch Man | ワンパンマン",
+        "Persona",
+        "Pretty Guardian Sailor Moon | 美少女戦士セーラームーン",
+        "Puella Magi Madoka Magica | 魔法少女まどか☆マギカ",
+        "RWBY",
+        "SK8 the Infinity | SK∞ エスケーエイト",
+        "Seraph of the End | 終わりのセラフ",
+        "Tokyo Ghoul | 東京喰種",
+        "Tokyo Revengers | 東京卍リベンジャーズ",
+        "Trigun Universe | トライガン",
+        "Word of Honor | 山河令",
+        "Yuri!!! on ICE | ユーリ!!! on ICE",
+    ]
 
-    multiracial_folks = {
-
+    east_asian_folks = {
+        "Shimada Hanzo",
+        "Mulan",
+        "Eve Polastri",
+        "Hikaru Sulu",
+        "Boyang Jin",
+        "Yuzuru Hanyu",
+        "Marcy Wu", # taiwanese
+        "Asami Sato",
+        "Azula",
+        "Lin Beifong",
+        "Ty Lee",
+        "Zuko",
+        "Elizabeth 'Eliza' Schuyler",
+        "Magnus Bane",
+        "Baze Malbus",
+        "Chirrut Îmwe",
+        "Kira Yukimura",
+        "Willow Park",
+        "Shiro", # canon gay let's fucking go
+    }
+    multi_east_asian_folks = {
+        "Mark Fischbach | Markiplier",
+        "Marinette Dupain-Cheng | Ladybug",
+        "Daisy Johnson | Skye",
+        "Sister Beatrice",
+        "Alina Starkov",
+        "Glimmer",
+        "Lucy Chen",
     }
     south_asian_folks = {
-
+        "Yasmin Khan",
+        "Zayn Malik",
+        "Kalinda Sharma",
     }
-    east_asian_folks = {
-
+    multi_south_asian_folks = {
+        "Anya", # actress' mom is tibetan
     }
-    sea_folks = {
+    south_east_asian_folks = {
+        "Trini Kwan | Yellow Ranger", # vietnamese actress
+        "Anne Boonchuy", # thai
+        "Quỳnh/Noriko", # actress is vietnamese (unclear where comic version noriko is from 
+                        # originally, only that she *went to japan and started beef*)
+                        # also canon wlw w andy!
+    }
+    multi_south_east_asian_folks = {
+        "Penelope Park",
+        "Blaine Anderson", # actor's mom is filipina-chinese-spanish but born in the philipines 
+                           # so I'm counting him as that part
+        "Jessika Pava",
+        "Bellamy Blake", # actor's mom is filipina
+    }
+    multi_asian_folks = { # as in not specified further in context & do not have live action actor
+        "Scorpia": "Asian (Multi)",
+        "Caitlyn": "Asian (Multi)", # her mom's white, dad's asian, but western-insp 
+                                    # fantasy world ain't gonna give us specifics
+        "Dorian Pavus": "Asian (Multi)", # VA is malaysian & indo-fijian
+    }
+    biracial_folks_from_EA_fandoms = [ # all of these are specifically white-japanese, also
+       "Hasegawa Langa",
+       "Ruby Rose",
+       "Ayase Eli",
+       "Kujo 'Jojo' Jotaro",
+       "Thoma",
+       "Mikasa Ackerman",
+    ]
 
+    american_indig_folks = {
+        "Trixie Mattel", # ojibwe, single mom no bio-dad mention
+        "Piper McLean", # canon cherokee descent on dad's (human) side
+        "Theo Raeken", # actor's mom is penobscot & grew up on a reservation
     }
     asian_indig_folks = {
-
+        "Katara",
+        "Korra",
+        "Sokka",
     }
-    american_indig_folks = {
-
+    maori_folks = {
+        "Toni Shalifoe",
     }
-    other_folks_to_be_retagged = {
-
+    multi_maori_folks = { # where I explicitly know they got other stuff going on too
+        "Edward Teach | Blackbeard": "Poly Ind (Multi)", # Taika's half jewish
+        "Gideon Nav": "Poly Ind (Multi)",
+        "Harrowhark Nonagesimus": "Poly Ind (Multi)",
     }
-    east_asian_fandoms = [
-        
-    ]
+    multi_ind_folks = {
+        "Anna": "Eu Ind (Multi)",
+        "Elsa": "Eu Ind (Multi)",
+        "Kya II": "As Ind / S Asian (Multi)", # cause isn't aang like tibetan-coded? so she'd be both
+    }
+
+    multi_black_folks = {
+        "Pete Wentz",
+        "Christen Press",
+        "Michelle 'MJ' Jones",
+        "Toni Topaz",
+        "Lincoln",
+    }
+    multi_latin_folks = {
+        "Zachary Quinto",
+        "Cassian Andor",
+        "Gilda",
+        "Scott McCall",
+        "Raven Reyes",
+        "Tori Vega",
+        "Simon Eriksson",
+    }
+    multi_mena_folks = {
+        "Tyrannus Basilton 'Baz' Grimm-Pitch",
+        "Sameen Shaw",
+    }
+    af_latin_folks = {
+        "Santana Lopez",
+        "America Chavez | Ms. America",
+        "Gabriel Reyes | Reaper",
+        "Luz Noceda",
+    }
+    unknown_folks = {
+        "Evan Rosier",
+        "Mary Macdonald",
+    }
+    ambig_folks = {
+        "Kimberly Ann 'Kim' Hart | Pink Ranger", # differing castings
+        "Isabelle Lightwood", # differing castings
+    }
 
     for category in ["RPF", "fictional"]:
         for fandom in new_dict[category]:
             for character in new_dict[category][fandom]:
-                # if we know whole fandom will be one thing (ex anime being east-asian)
-                # we can reassign it by that
+                character_dict = new_dict[category][fandom][character]
+                race_tag = character_dict["race"] 
+                
+                if race_tag == "Asian":
+                    if character == "Otabek Altin":
+                        race_tag = "Central As"
+                    elif character in east_asian_folks \
+                    or fandom in east_asian_fandoms:
+                        if fandom in east_asian_fandoms:
+                            if character == "Nicholas D. Wolfwood":
+                                race_tag = "Ambig"
+                            elif character in biracial_folks_from_EA_fandoms:
+                                race_tag = "E Asian (Multi)"
+                            else: race_tag = "E Asian"
+                        else: race_tag = "E Asian"
+                    elif character in multi_east_asian_folks:
+                        race_tag = "E Asian (Multi)"
+                    elif character in south_asian_folks:
+                        race_tag = "S Asian"
+                    elif character in multi_south_asian_folks:
+                        race_tag = "S Asian (Multi)"
+                    elif character in south_east_asian_folks \
+                    or fandom == "KinnPorsche | คินน์พอร์ช เดอะ ซีรีส์":
+                        race_tag = "SE Asian"
+                    elif character in multi_south_east_asian_folks:
+                        race_tag = "SE Asian (Multi)"
+                    elif character in multi_asian_folks:
+                        race_tag = "Asian (Multi)"
+                elif "Ind" in race_tag:
+                    if race_tag == "Asian | Am Ind" and character == "Willie":
+                        race_tag = "Am Ind / E Asian (Multi)"
+                    elif character in american_indig_folks:
+                        race_tag = "Am Ind"
+                    elif character in asian_indig_folks:
+                        race_tag = "As Ind"
+                    elif character in maori_folks:
+                        race_tag = "Māori Ind"
+                    elif character in multi_maori_folks:
+                        race_tag = "Māori Ind (Multi)"
+                    elif character in multi_ind_folks:
+                        race_tag = multi_ind_folks[character]
+                elif character in multi_black_folks:
+                    race_tag = "Black (Multi)"
+                elif character in multi_latin_folks:
+                    race_tag = "Latin (Multi)"
+                elif character in multi_mena_folks:
+                    race_tag = "MENA (Multi)"
+                elif character in unknown_folks:
+                    race_tag = "Unknown"
+                elif character in ambig_folks:
+                    race_tag = "Ambig"
+                elif character == "Michael Guerin": 
+                    race_tag = "SE Eu (Multi)" # because it's specifically roswell new mexico version
+                
+                new_dict[category][fandom][character]["race"] = race_tag
 
-                # otherwise we can have our specific cases
-                pass
-
-
-    # retag all indig characters w continent/region specification pls 
-        # bc we have "As Ind" & "Eu Ind" now
-    # retag all asian characters w cardinal direction specification 
-        # ("S Asian", "SEA", "E Asian", "Central As")
-    # verify any "Ambig" tagged characters
-    # if we do end up making multiracial tags to use 
-        # (maybe as a stat outside of their main grouping??)
-        # we should also go through all, at least POC, again 
-            # (we'll have to comb through the asians anyway for specificity)
-        # I think a multiracial tag would be useful:
-            # bc we got some very light-skinned mixed-black folks that it seems silly to 
-            # equate with their more obviously-identifiable-as-black peers
-                # like Christen Press and Pete Wentz
-            # and to highlight diverse rep in non-white-majority countries like asian ones
-                # like for asian-white characters in those media properties who are Different 
-                # BECAUSE they're part white 
-                # -> I'm not gonna make asian media's ethnic diversity out to be worse than 
-                # it is just cause anime needs everyone to also be half-japanese
-                # (as I plan on visualising the diversity by media's country or origin 
-                # and all that later)
-        # how to determine who qualifies?
-            # only tryna determine this where we have available info 
-                # (eg established for character, real person's wikipedia, etc)
-            # do we want to specify details? or just tag as multiracial/mixed/smth along those lines?
-                # we likely want to be able to query by specifics tho, so should include them
-            # put tags in alphabetical order to avoid having to figure out an order individually
-            # I'm only including shit that can be traced to grandparental ancestry -> 1/4 min
-                # nothing further back than that
-            # maybe format like (f.e.) "Multi (Asian, Black)" 
-                # -> can query by "Multi", "Asian" and "Black"
-                # always starts in same bit regardless of details, so can be grouped by that
-            # this also solves for folks with tags like "Af Lat" etc 
-                # -> can just be tagged as "Multi (Black, Latin)" instead
-            
-            # where info is available:
-            # if someone is white + POC biracial and the POC part is >= 1/2 
-                # and/or they're easily identifyable as their POC group
-                    # -> they will be tagged as "<poc group> (Multi)"
-                    # -> obama example stays intact
-            # if someone is white + POC biracial, but the white part is more than 1/2
-                # -> they will be tagged as "White (Multi)"
-                # my "it's unreasonable to tag these ppl as more rep than they are" examples 
-                # stay intact
-            # if we only know of one group & that they are mixed, 
-                # we will tag them as that group + (Multi), same as above
-            # if someone is of two groups neither of which is white
-                # we will tag them as "<group a> <group b> (Multi)"
-                # like f.e. Af Lat (we can keep these labels this way)
-            # if someone is less than 1/4 of a different group than their main one 
-                # I'm not counting it
-            # if someone is of more groups than 2, they are tagged as just "Multi"
-                # possibly with another bit for details?
-
-    pass
-
-
+    return new_dict
 
 
 if __name__ == "__main__":
     collected_dict = collect_race_tags()
     race_tagged_dict = assign_race_tag(collected_dict)
+    specific_tagged_dict = retag_for_specificity(race_tagged_dict)
     filepath = "data/reference_and_test_files/assigning_demographic_info/assigning_race_4_assigning_race.json"
     with open(filepath, "w") as file_4:
-        dump(race_tagged_dict, file_4, indent=4)
+        dump(specific_tagged_dict, file_4, indent=4)

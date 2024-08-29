@@ -90,17 +90,17 @@ Work in progress!
 
 - I don't think it's useful/helpful, diversity-statistically, to imply someone is more explicit minority rep than they actually are
 
-    - If a real human being is *majority* white (ie more than 1/2) and not obviously non-white-passing or (publicly visibly) very involved in the relevant community's advocacy/cultural practices/etc, I will tag them as "White (mixed)" instead of their non-white group.
-
     - If someone is genderqueer/genderquestionable but generally aligned with one gender over the other, I will mark them as their gender leaning as well as Other (ie "M | Other").
 
         > Ex. Technically genderless but strongly male/female coded characters (like the Crystal Gems from Steven Universe).
 
-        > Ex. Shapeshifters who usually go by one gender over the other (like Crowley from Good Omens).
+        > Ex. Casual gender switchers who usually go by one gender over the other (like Crowley from Good Omens or Sailor Uranus from Sailor Moon).
 
         > Ex. Characters who are treated as male/female in one adaptation while more nb in another (like Loki from Marvel).
 
         > Ex. Characters or real life people who use biased multi-pronoun sets in english (ie they/he, she/they, etc) or have otherwise stated to be binary-leaning nbs (like Gerard Way).
+
+    - If a real human being is *majority* white (ie more than 1/2) and not obviously non-white-passing or (publicly visibly) very involved in the relevant community's advocacy/cultural practices/etc, I will tag them as "White (Multi)" instead of their non-white group.
 
     - The implied context of the character takes priority over the actor's attribute, reversing the order of OP's priority list, *where reasonable to.*
 
@@ -114,32 +114,71 @@ Work in progress!
         
             > Ex. If the story implies that a character is white but they are played by an obviously non-white actor (like say in Hamilton), the actor's race obviously still takes priority.
 
-    - If that actor is themself in the ranking, they'd be tagged according to the usual rules 
-    (hence may differ from their character's tags).
+    - If that actor is themself in the ranking, they'd be tagged according to the usual rules (hence may differ from their character's tags).
 
-    > -> by using tags like "White (mixed)" or "M | Other" I can mark diversity where it exists without misrepresenting/overstating it (as I, as a minority person myself, do not appreciate when ppl do that while I'm still over here with no actual rep for the thing I am smh)
+    > -> by using tags like "White (Multi)" or "M | Other" I can mark diversity where it exists without misrepresenting/overstating it (as I, as a minority person myself, do not appreciate when ppl do that while I'm still over here with no actual rep for the thing I am smh)
 
 - Only if a character is canonically/a person irl is currently IDed as (middle-spec/non-leaning) nonbinary/genderless will I only tag them as "Other".
 
-    > Ex. A character or real life person who only uses they/them / other languages' neutral pronouns / consistently omits gendered language (like some anime characters do in japanese) - (like Raine Whispers (they/them) from Owlhouse).
+    > Ex. A character or real life person who only uses they/them / other languages' neutral pronouns / consistently omits gendered language (like some anime characters do in japanese) - (like Raine Whispers from Owl House).
 
     > Ex. A character who is canonically nb/gender-questionable/genderless and played by a nb-IDed actor (like Desire from Sandman).
 
     > Ex. A non-human character of a species without gender (like the Venom Symbiote).
 
-- If it is a reader or player character they are tagged as "Ambig" unless OP's data specifies one gender over another for a rank.
+- If it is a reader or player character they are tagged as "Ambig" unless OP's data or available wiki info specifies one gender over another.
 
-    > Ex. "Female Shepard" in the original data set.
+    > Ex. "Female Shepard" for some ranks in the original data set.
+
+    > Ex. The protagonist/player character of Persona 5 is male.
 
 - If both male and female could be argued to be a correct labelling based on context they will be labelled as "M | F | Other".
 
     > Ex. Cis male drag queens in the femslash ranking.
 
+- I added specificity for Asian and Indigenous folks.
+
+    - For asian folks I differentiated between East ("E Asian"), South East ("SE Asian"), South ("S Asian"), and Central asians ("Central As") (as I think it's highly relevant to track this difference with this many east asian properties in the set).
+
+    - For indigenous folks I differentiated between peoples from (so far I believe only north) America ("Am Ind"), Asia ("As Ind"), Europe ("Eu Ind"), and Polynesia ("Māori Ind", as they were all specifically Māori so far and I couldn't find a good way to shorten polynesian 😅).
+
+- I relabelled "Latino" to "Latin" to make it genderneutral, as there are plenty of latin women in the set.
+
+- According to the Oxford dictionary "Latin" as a group includes anyone from latin-language countries, so I'm including the south european ones in that (eg Portugal, Italy, etc).
+
+- I also added "Romani" as a label, for our romani characters, namely one of DC's Robins (who I believe was only in one of the early sets where race was not tracked yet) and Marvel's Scarlet Witch (who OP had tagged as white due to MCU casting).
+
+- I also added "SE Eu" as a label, for the region around Greece, Turkey, etc, as they are not latin-language countries, but also not in the middle east yet, but they are like right in between those other two mediterranean regions, and we have some folks with that ancestry in the set.
+
+- For multiracial folks *(where information on their racial background is available)*:
+    
+    - If someone is white + non-white, and the non-white part is >= 1/2, and/or they are easily identifyable as their non-white group, they will be tagged as "< non-white group > (multi)", staying in line with OP's original method prioritising non-white ancestry.
+
+        > Ex. The MCU's MJ (played by Zendaya) would be "Black (Multi)", because she is biracial (black & white).
+
+    - If someone is majority white, they will be tagged as "White (multi)" (see above for more details).
+
+    - If someone is less than 1/4 of a different group than their main one I am not counting it.
+
+        > Ex. Josh Dun's great-great-great-grandmother was japanese. I am tagging him as "White", cause that is too many generations removed.
+
+    - If we only know of one group and that they are multiracial of some variety, they will be tagged as "< group in question > (Multi)", same as above.
+
+    - If someone is of multiple non-white groups (that can't reasonably be grouped together), they will be tagged as "< group a > / < group b > (Multi)", groups listed in alphabetical order.
+
+        > Ex. "Am Ind / E Asian (Multi)", because those ancestries are from fully different continents.
+
+    - If they can reasonably be grouped together under an umbrella term, they will be tagged as such instead of listing each group separately.
+        
+        > Ex. "Asian (Multi)" instead of say "E Asian / SE Asian / S Asian (Multi)".
+    
+    - I am leaving "Af Lat" folks as such, as to my understanding Latin is a largely cultural label encompassing lots of different ancestries, so someone who is afro-latin may just be black (ancestry-wise) & *from a latin country*, same as white latin folks, hence can't inherently be assumed to be multiracial.
+
+        > For this same reason I also didn't add specifics to the Latin label, as I did with the Asian and Indig ones, as I couldn't come up with any meaningful logic by which to separate it into subgroups (with the available info), unlike region-specific asian & indigenous subgroups.
+
 - If race isn't explicitly stated, there isn't a relevant live action adaptation, and context, voice actors, etc are conflicting to the point of me not knowing what to go with, the character's race will be tagged as "Ambig".
 
 - If the character has never been portrayed in visual media and is not clearly implied or established to be of a specific group, their race will be tagged as "Unknown".
-
-- According to oxford dictionary "Latin" includes anyone from latin-language countries, so I'm including the south european ones in that (eg Portugal, Italy, etc).
 
 
 ## N.B.: 
