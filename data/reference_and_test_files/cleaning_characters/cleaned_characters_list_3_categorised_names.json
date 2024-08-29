@@ -4364,13 +4364,13 @@
                     "given_name": null,
                     "middle_name": null,
                     "maiden_name": null,
-                    "surname": null,
+                    "surname": "Hawke",
                     "alias": "Player Character",
                     "nickname": null,
                     "title (prefix)": null,
-                    "title (suffix)": null,
+                    "title (suffix)": "(Female)",
                     "name_order": null,
-                    "full_name": "Player Character",
+                    "full_name": "Hawke (Female) | Player Character",
                     "fandom": "Dragon Age",
                     "op_versions": [
                         "Female Hawke"
@@ -4383,10 +4383,10 @@
                     "surname": null,
                     "alias": "Player Character",
                     "nickname": null,
-                    "title (prefix)": null,
-                    "title (suffix)": null,
+                    "title (prefix)": "Inquisitor",
+                    "title (suffix)": "(Female)",
                     "name_order": null,
-                    "full_name": "Player Character",
+                    "full_name": "Inquisitor (Female) | Player Character",
                     "fandom": "Dragon Age",
                     "op_versions": [
                         "Female Inquisitor"
@@ -4399,10 +4399,10 @@
                     "surname": null,
                     "alias": "Player Character",
                     "nickname": null,
-                    "title (prefix)": null,
-                    "title (suffix)": null,
+                    "title (prefix)": "Warden",
+                    "title (suffix)": "(Female)",
                     "name_order": null,
-                    "full_name": "Player Character",
+                    "full_name": "Warden (Female) | Player Character",
                     "fandom": "Dragon Age",
                     "op_versions": [
                         "Female Warden"
@@ -4415,10 +4415,10 @@
                     "surname": null,
                     "alias": "Player Character",
                     "nickname": null,
-                    "title (prefix)": null,
-                    "title (suffix)": null,
+                    "title (prefix)": "Warden",
+                    "title (suffix)": "(Female)",
                     "name_order": null,
-                    "full_name": "Player Character",
+                    "full_name": "Warden (Female) | Player Character",
                     "fandom": "Dragon Age",
                     "op_versions": [
                         "Female Warden (Dragon Age)"
@@ -4444,13 +4444,13 @@
                     "given_name": null,
                     "middle_name": null,
                     "maiden_name": null,
-                    "surname": null,
+                    "surname": "Hawke",
                     "alias": "Player Character",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": null,
-                    "full_name": "Player Character",
+                    "full_name": "Hawke | Player Character",
                     "fandom": "Dragon Age",
                     "op_versions": [
                         "Hawke"
@@ -4463,10 +4463,10 @@
                     "surname": null,
                     "alias": "Player Character",
                     "nickname": null,
-                    "title (prefix)": null,
+                    "title (prefix)": "Inquisitor",
                     "title (suffix)": null,
                     "name_order": null,
-                    "full_name": "Player Character",
+                    "full_name": "Inquisitor | Player Character",
                     "fandom": "Dragon Age",
                     "op_versions": [
                         "Inquisitor"
@@ -4591,10 +4591,10 @@
                     "surname": null,
                     "alias": "Player Character",
                     "nickname": null,
-                    "title (prefix)": null,
+                    "title (prefix)": "Warden",
                     "title (suffix)": null,
                     "name_order": null,
-                    "full_name": "Player Character",
+                    "full_name": "Warden | Player Character",
                     "fandom": "Dragon Age",
                     "op_versions": [
                         "Warden (Dragon Age)"
@@ -4867,16 +4867,16 @@
                     ]
                 },
                 {
-                    "given_name": null,
+                    "given_name": "Byleth",
                     "middle_name": null,
                     "maiden_name": null,
-                    "surname": null,
+                    "surname": "Eisner",
                     "alias": "Player Character",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
-                    "name_order": null,
-                    "full_name": "Player Character",
+                    "name_order": "W",
+                    "full_name": "Byleth Eisner | Player Character",
                     "fandom": "Fire Emblem | \u30d5\u30a1\u30a4\u30a2\u30fc\u30a8\u30e0\u30d6\u30ec\u30e0",
                     "op_versions": [
                         "My Unit | Byleth"
@@ -5395,10 +5395,10 @@
                     "surname": null,
                     "alias": "Player Character",
                     "nickname": null,
-                    "title (prefix)": null,
+                    "title (prefix)": "Traveler",
                     "title (suffix)": null,
                     "name_order": null,
-                    "full_name": "Player Character",
+                    "full_name": "Traveler | Player Character",
                     "fandom": "Genshin Impact | \u539f\u795e",
                     "op_versions": [
                         "Traveler (Genshin Impact)"
@@ -9444,13 +9444,13 @@
                     "given_name": null,
                     "middle_name": null,
                     "maiden_name": null,
-                    "surname": null,
+                    "surname": "Shepard",
                     "alias": "Player Character",
                     "nickname": null,
                     "title (prefix)": null,
-                    "title (suffix)": null,
+                    "title (suffix)": "(Female)",
                     "name_order": null,
-                    "full_name": "Player Character",
+                    "full_name": "Shepard (Female) | Player Character",
                     "fandom": "Mass Effect",
                     "op_versions": [
                         "Female Shepard"
@@ -9508,13 +9508,13 @@
                     "given_name": null,
                     "middle_name": null,
                     "maiden_name": null,
-                    "surname": null,
+                    "surname": "Shepard",
                     "alias": "Player Character",
                     "nickname": null,
                     "title (prefix)": null,
-                    "title (suffix)": null,
+                    "title (suffix)": "(Male)",
                     "name_order": null,
-                    "full_name": "Player Character",
+                    "full_name": "Shepard (Male) | Player Character",
                     "fandom": "Mass Effect",
                     "op_versions": [
                         "Male Shepard"
@@ -9524,13 +9524,13 @@
                     "given_name": null,
                     "middle_name": null,
                     "maiden_name": null,
-                    "surname": null,
+                    "surname": "Shepard",
                     "alias": "Player Character",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
                     "name_order": null,
-                    "full_name": "Player Character",
+                    "full_name": "Shepard | Player Character",
                     "fandom": "Mass Effect",
                     "op_versions": [
                         "Shepard"
@@ -11113,16 +11113,16 @@
                     ]
                 },
                 {
-                    "given_name": null,
+                    "given_name": "Ren",
                     "middle_name": null,
                     "maiden_name": null,
-                    "surname": null,
+                    "surname": "Amamiya",
                     "alias": "Player Character",
                     "nickname": null,
                     "title (prefix)": null,
                     "title (suffix)": null,
-                    "name_order": null,
-                    "full_name": "Player Character",
+                    "name_order": "E",
+                    "full_name": "Amamiya Ren | Player Character",
                     "fandom": "Persona",
                     "op_versions": [
                         "Persona 5 Protagonist"

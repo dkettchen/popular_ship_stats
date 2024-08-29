@@ -1076,18 +1076,23 @@
             "Fraldarius"
         ],
         "Female Hawke": [
+            "Female",
             "Hawke"
         ],
         "Female Inquisitor": [
+            "Female",
             "Inquisitor"
         ],
         "Female Shepard": [
+            "Female",
             "Shepard"
         ],
         "Female Warden": [
+            "Female",
             "Warden"
         ],
         "Female Warden (Dragon Age)": [
+            "Female",
             "Warden"
         ],
         "Fenris": [
@@ -2224,6 +2229,7 @@
             "Mal"
         ],
         "Male Shepard": [
+            "Male",
             "Shepard"
         ],
         "Maleficent": [

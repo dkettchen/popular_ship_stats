@@ -370,13 +370,18 @@
             "Cullen Rutherford",
             "Dorian Pavus",
             "Fenris",
+            "Hawke (Female) | Player Character",
+            "Hawke | Player Character",
+            "Inquisitor (Female) | Player Character",
+            "Inquisitor | Player Character",
             "Iron Bull",
             "Isabela",
             "Josephine Montilyet",
             "Leliana",
-            "Player Character",
             "Sera",
-            "Solas"
+            "Solas",
+            "Warden (Female) | Player Character",
+            "Warden | Player Character"
         ],
         "Due South": [
             "Benton Fraser",
@@ -400,10 +405,10 @@
             "Prompto Argentum"
         ],
         "Fire Emblem | \u30d5\u30a1\u30a4\u30a2\u30fc\u30a8\u30e0\u30d6\u30ec\u30e0": [
+            "Byleth Eisner | Player Character",
             "Dimitri Alexandre Blaiddyd",
             "Edelgard von Hresvelg",
             "Felix Hugo Fraldarius",
-            "Player Character",
             "Sylvain Jose Gautier"
         ],
         "Free!": [
@@ -440,12 +445,12 @@
             "Keqing",
             "Lisa",
             "Ningguang",
-            "Player Character",
             "Raiden Ei",
             "Scaramouche",
             "Tartaglia | Childe",
             "Thoma",
             "Tighnari",
+            "Traveler | Player Character",
             "Venti",
             "Yae Miko",
             "Zhongli"
@@ -786,7 +791,9 @@
             "Garrus Vakarian",
             "Kaidan Alenko",
             "Liara T'Soni",
-            "Player Character"
+            "Shepard (Female) | Player Character",
+            "Shepard (Male) | Player Character",
+            "Shepard | Player Character"
         ],
         "Merlin": [
             "Arthur Pendragon",
@@ -914,7 +921,7 @@
         "Persona": [
             "Akechi Goro",
             "Amagi Yukiko",
-            "Player Character",
+            "Amamiya Ren | Player Character",
             "Satonaka Chie"
         ],
         "Pitch Perfect": [

@@ -753,7 +753,7 @@
             null
         ],
         "Relationship": [
-            "Player Character",
+            "Inquisitor | Player Character",
             "Cullen Rutherford"
         ],
         "Fandom": "Dragon Age",
@@ -901,7 +901,7 @@
             null
         ],
         "Relationship": [
-            "Player Character",
+            "Inquisitor | Player Character",
             "Solas"
         ],
         "Fandom": "Dragon Age",
@@ -2171,7 +2171,7 @@
         ],
         "Relationship": [
             "Fenris",
-            "Player Character"
+            "Hawke | Player Character"
         ],
         "Fandom": "Dragon Age",
         "New Works": 1264,
@@ -2690,7 +2690,7 @@
             null
         ],
         "Relationship": [
-            "Player Character",
+            "Inquisitor | Player Character",
             "Dorian Pavus"
         ],
         "Fandom": "Dragon Age",

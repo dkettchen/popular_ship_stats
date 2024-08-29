@@ -2094,16 +2094,25 @@
             ],
             "rpf_or_fic": "fictional"
         },
-        "Player Character": {
-            "full_name": "Player Character",
+        "Hawke (Female) | Player Character": {
+            "full_name": "Hawke (Female) | Player Character",
             "op_versions": [
-                "Female Hawke",
-                "Female Inquisitor",
+                "Female Hawke"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "Inquisitor (Female) | Player Character": {
+            "full_name": "Inquisitor (Female) | Player Character",
+            "op_versions": [
+                "Female Inquisitor"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "Warden (Female) | Player Character": {
+            "full_name": "Warden (Female) | Player Character",
+            "op_versions": [
                 "Female Warden",
-                "Female Warden (Dragon Age)",
-                "Hawke",
-                "Inquisitor",
-                "Warden (Dragon Age)"
+                "Female Warden (Dragon Age)"
             ],
             "rpf_or_fic": "fictional"
         },
@@ -2111,6 +2120,20 @@
             "full_name": "Fenris",
             "op_versions": [
                 "Fenris"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "Hawke | Player Character": {
+            "full_name": "Hawke | Player Character",
+            "op_versions": [
+                "Hawke"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "Inquisitor | Player Character": {
+            "full_name": "Inquisitor | Player Character",
+            "op_versions": [
+                "Inquisitor"
             ],
             "rpf_or_fic": "fictional"
         },
@@ -2154,6 +2177,13 @@
             "op_versions": [
                 "Solas",
                 "Solas (Dragon Age)"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "Warden | Player Character": {
+            "full_name": "Warden | Player Character",
+            "op_versions": [
+                "Warden (Dragon Age)"
             ],
             "rpf_or_fic": "fictional"
         }
@@ -2279,8 +2309,8 @@
             ],
             "rpf_or_fic": "fictional"
         },
-        "Player Character": {
-            "full_name": "Player Character",
+        "Byleth Eisner | Player Character": {
+            "full_name": "Byleth Eisner | Player Character",
             "op_versions": [
                 "My Unit | Byleth"
             ],
@@ -2507,8 +2537,8 @@
             ],
             "rpf_or_fic": "fictional"
         },
-        "Player Character": {
-            "full_name": "Player Character",
+        "Traveler | Player Character": {
+            "full_name": "Traveler | Player Character",
             "op_versions": [
                 "Traveler (Genshin Impact)"
             ],
@@ -4258,12 +4288,10 @@
         }
     },
     "Mass Effect": {
-        "Player Character": {
-            "full_name": "Player Character",
+        "Shepard (Female) | Player Character": {
+            "full_name": "Shepard (Female) | Player Character",
             "op_versions": [
-                "Female Shepard",
-                "Male Shepard",
-                "Shepard"
+                "Female Shepard"
             ],
             "rpf_or_fic": "fictional"
         },
@@ -4285,6 +4313,20 @@
             "full_name": "Liara T'Soni",
             "op_versions": [
                 "Liara T'Soni"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "Shepard (Male) | Player Character": {
+            "full_name": "Shepard (Male) | Player Character",
+            "op_versions": [
+                "Male Shepard"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "Shepard | Player Character": {
+            "full_name": "Shepard | Player Character",
+            "op_versions": [
+                "Shepard"
             ],
             "rpf_or_fic": "fictional"
         }
@@ -4906,8 +4948,8 @@
             ],
             "rpf_or_fic": "fictional"
         },
-        "Player Character": {
-            "full_name": "Player Character",
+        "Amamiya Ren | Player Character": {
+            "full_name": "Amamiya Ren | Player Character",
             "op_versions": [
                 "Persona 5 Protagonist"
             ],

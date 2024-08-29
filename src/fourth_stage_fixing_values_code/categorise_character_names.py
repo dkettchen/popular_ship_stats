@@ -121,12 +121,17 @@ def categorise_names(char_by_fandom_dict):
 
     # various lengths
     player_characters = [
-        'Hawke',
-        'Inquisitor',
-        'Traveler',
-        'Shepard',
-        "Warden",
-        'Persona 5 Protagonist',
+        ["Female","Hawke"],
+        ["Female","Inquisitor"],
+        ["Female","Shepard"],
+        ["Female","Warden"], 
+        ["Male","Shepard"],
+        ['Hawke'],
+        ['Inquisitor'],
+        ['Shepard'],
+        ["Warden"],
+        ['Traveler'], # genshin
+        ['Persona 5 Protagonist'], # this man has a name & race & gender!!
         ['My Unit', 'Byleth'],
     ]
 
@@ -570,7 +575,7 @@ def categorise_names(char_by_fandom_dict):
                 title_suffix = None
                 order = None
                 og_name = name["og_name"]
-                
+
                 if len(split_name) == 2 \
                 and split_name not in player_characters:
                     if split_name not in non_double_names: 
@@ -623,7 +628,7 @@ def categorise_names(char_by_fandom_dict):
                 elif len(split_name) == 1 \
                 and split_name[0] != "Reader" \
                 and "Doctor" not in split_name[0] \
-                and split_name[0] not in player_characters:
+                and split_name not in player_characters:
                     # if there's only one name part
                     if split_name[0] == "Connor" and "Detroit" in fandom:
                         given_name = "Connor (RK800)"
@@ -852,7 +857,35 @@ def categorise_names(char_by_fandom_dict):
                 elif "Reader" in split_name[0] or "Reader" in split_name:
                     alias = "Reader"
                     given_name = "Y/N"
-                else: alias = "Player Character"
+                elif "Shepard" in split_name \
+                or "Hawke" in split_name:
+                    if len(split_name) == 2:
+                        title_suffix = "(" + split_name[0] + ")"
+                        surname = split_name[1]
+                    else: surname = split_name[0]
+                elif "Warden" in split_name \
+                or "Inquisitor" in split_name \
+                or "Traveler" in split_name:
+                    if len(split_name) == 2:
+                        title_suffix = "(" + split_name[0] + ")"
+                        title_prefix = split_name[1]
+                    else: title_prefix = split_name[0]
+                elif split_name == ['Persona 5 Protagonist']:
+                    given_name = "Ren"
+                    surname = "Amamiya"
+                    order = "E"
+                    # japanese -> E Asian
+                    # male
+                elif split_name == ['My Unit', 'Byleth']:
+                    given_name = "Byleth"
+                    surname = "Eisner"
+                    order = "W"
+                    # of fantasy people likely named after an ancient arab people, 
+                    # so we will tag as MENA
+                    # gender can be chosen by player
+
+                if split_name in player_characters: 
+                    alias = "Player Character"
 
                 default_dict = {
                     "given_name": given_name,

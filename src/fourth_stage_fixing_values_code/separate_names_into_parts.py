@@ -96,10 +96,12 @@ def separate_name_parts(character_dict):
                 new_part = [new_split[0], "the " + new_split[1]]
             elif part == "Helena 'H. G.' Wells":
                 new_part = ["Helena","'H. G.'","Wells"]
-            elif "Female " in part:
-                new_part = [part[7:]]
-            elif "Male " in part:
-                new_part = [part[5:]]
+            # elif "Female " in part:
+            #     new_part = [part[7:]]
+            # elif "Male " in part:
+            #     new_part = [part[5:]]
+            elif "Female " in part or "Male " in part:
+                new_part = split(r"\s", part)
             elif part == "You":
                 new_part = ["Reader"]
             elif "Rogue One" in part:

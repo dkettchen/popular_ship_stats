@@ -1431,7 +1431,7 @@
             17
         ],
         "Relationship": [
-            "Player Character",
+            "Inquisitor | Player Character",
             "Cullen Rutherford"
         ],
         "Fandom": "Dragon Age",
@@ -2218,7 +2218,7 @@
             null
         ],
         "Relationship": [
-            "Player Character",
+            "Inquisitor | Player Character",
             "Solas"
         ],
         "Fandom": "Dragon Age",
@@ -2800,7 +2800,7 @@
         ],
         "Relationship": [
             "Fenris",
-            "Player Character"
+            "Hawke | Player Character"
         ],
         "Fandom": "Dragon Age",
         "New Works": null,
@@ -3044,7 +3044,7 @@
         ],
         "Relationship": [
             "Kaidan Alenko",
-            "Player Character"
+            "Shepard | Player Character"
         ],
         "Fandom": "Mass Effect",
         "New Works": null,
@@ -3070,7 +3070,7 @@
         ],
         "Relationship": [
             "Alistair",
-            "Player Character"
+            "Warden | Player Character"
         ],
         "Fandom": "Dragon Age",
         "New Works": null,

@@ -1957,7 +1957,7 @@
             null
         ],
         "Relationship": [
-            "Player Character",
+            "Inquisitor | Player Character",
             "Cullen Rutherford"
         ],
         "Fandom": "Dragon Age",
@@ -2821,7 +2821,7 @@
         ],
         "Relationship": [
             "Kaidan Alenko",
-            "Player Character"
+            "Shepard | Player Character"
         ],
         "Fandom": "Mass Effect",
         "New Works": null,
