@@ -177,6 +177,7 @@ def assign_race_tag(data_dict):
                                       # not asian indigenous
         "Venti": "Ambig", # boychild is not obviously white-looking enough for me to make that call
                           # plus name implies italian, and like- there are german poc
+        "Sara Crispino": "Latin", # she's italian
     }
 
     for category in ["RPF", "fictional"]:
