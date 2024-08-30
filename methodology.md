@@ -144,11 +144,19 @@ Work in progress!
 
 - I relabelled "Latino" to "Latin" to make it genderneutral, as there are plenty of latin women in the set.
 
-- According to the Oxford dictionary "Latin" as a group includes anyone from latin-language countries, so I'm including the south european ones in that (eg Portugal, Italy, etc).
+- According to the Oxford dictionary "Latin" as a group includes anyone from latin-language countries, so I'm including the south european ones in that (eg Portugal, Italy, etc), with the exception of the non-southern-aligned parts of say France and Switzerland.
 
-- I also added "Romani" as a label, for our romani characters, namely one of DC's Robins (who I believe was only in one of the early sets where race was not tracked yet) and Marvel's Scarlet Witch (who OP had tagged as white due to MCU casting).
+    > Ex. Italian figure skater Sara from Yuri On ICE!! will be tagged as Latin (OP had tagged her as White).
 
-- I also added "SE Eu" as a label, for the region around Greece, Turkey, etc, as they are not latin-language countries, but also not in the middle east yet, but they are like right in between those other two mediterranean regions, and we have some folks with that ancestry in the set.
+    > Ex. Parisian Chat Noir from Miraculous will still be tagged as White as Paris is in northern France.
+
+- I also added "Romani" as a label, for our romani characters.
+
+    > Those being one of DC's Robins (who I believe was only in one of the early sets where race was not tracked yet) and Marvel's Scarlet Witch (who OP had tagged as white due to MCU casting).
+
+- I also added "SE Eu" as a label, for the region around Greece, Turkey, etc.
+
+    > As they are not latin-language countries, but also not in the middle east yet, but they are like right in between those other two mediterranean regions, and we have some folks with that ancestry in the set.
 
 - For multiracial folks *(where information on their racial background is available)*:
     

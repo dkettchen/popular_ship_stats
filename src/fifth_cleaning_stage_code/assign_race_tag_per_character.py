@@ -158,7 +158,6 @@ def assign_race_tag(data_dict):
         "Cecil Palmer": "Ambig", # I don't think there's a canon race & this is audio only 
             # canon husband of carlos
             # full name is Cecil Gershwin Palmer
-
     }
     characters_to_retag = {
         # "Sanji Vinsmoke | Black-Leg Sanji": "White", # Taz is british-arab but playing a white char
@@ -178,6 +177,8 @@ def assign_race_tag(data_dict):
         "Venti": "Ambig", # boychild is not obviously white-looking enough for me to make that call
                           # plus name implies italian, and like- there are german poc
         "Sara Crispino": "Latin", # she's italian
+        "Bruno Buccellati": "Latin", # more italians
+        "Leone Abbacchio": "Latin", #
     }
 
     for category in ["RPF", "fictional"]:
