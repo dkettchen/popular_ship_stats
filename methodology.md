@@ -132,11 +132,11 @@ Work in progress!
 
     > Ex. The protagonist/player character of Persona 5 is male.
 
-- The same logic applies to player characters' race: If their appearance can be customised, they will be tagged as Ambig, if they have a set appearance, they will be tagged as appropriate.
+- The same logic applies to player characters' race: If their appearance can be customised, they will be tagged as "Ambig", if they have a set appearance, they will be tagged as appropriate.
 
     > Ex. Genshin Impact's Traveler, Fire Emblem's Byleth, and Persona 5's Amamiya Ren's appearances cannot be customised, hence are tagged according to the usual rules.
 
-    > Ex. Dragon Age and Mass Effect's player characters can be customised, so they are tagged as Ambig.
+    > Ex. Dragon Age and Mass Effect's player characters can be customised, so they are tagged as "Ambig".
 
 - If both male and female could be argued to be a correct labelling based on context they will be labelled as "M | F | Other".
 
