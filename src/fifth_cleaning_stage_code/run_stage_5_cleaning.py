@@ -8,22 +8,13 @@
 # possibly convert to a csv file instead of json due to no collection values or anything? ✅
     # use util ✅
 
-# characters table:
-# (they all have their fandom in their dicts, so don't need to be classified by those)
-# - un-categorise them -> we want a list of char names (as keys w dict values)
-    # - I think we have a few names that are doubled (like "Ruby"), 
-    # so maybe have the keys as like "name from fandom" or something
-    # -> we can then either split by " from " or simply query the 
-    # full_name/fandom key inside the value
-# - add rpf or fic value
-# - if we extract & save op versions in a separate file we can save this as a csv o.o
-    # - extract op versions & save separately under same key names!
-    # as in like {fandom_character_key: [op_version, op_version_2, ...], ...}
-    # -> save as json
-    # - find longest list in this dict
-    # - make a list of lists w key + that many columns (possibly new name & fandom in there too)
-    # -> insert none values for any that have less than max
-    # -> make old names csv
+# characters table: ✅
+    # (they all have their fandom in their dicts, so don't need to be classified by those)
+    # - un-categorise them -> we want a list of char names (as keys w dict values) ✅
+    # - add rpf or fic value ✅
+# - if we extract & save op versions in a separate file we can save this as a csv o.o ✅
+    # - extract op versions & save separately under same key names! ✅
+    # -> make old names csv ✅
 
 # main sets:
 # - sort characters in relationship alphabetically
@@ -40,3 +31,24 @@
 # this file should be the one running the functions & creating all the files in question
 # rather than each file its own files
 # -> so we only have to run this file
+
+from json import dump
+from src.fifth_cleaning_stage_code.make_character_table import make_sorted_char_dict, prep_characters_for_csv
+from src.fifth_cleaning_stage_code.make_old_names_table import make_old_names_dict, prep_old_names_for_csv
+from src.util_functions.write_csv_file import make_csv_file
+
+
+if __name__ == "__main__":
+    sorted_char_dict = make_sorted_char_dict()
+    json_chars_filepath = "data/fifth_clean_up_data/stage_5_characters.json"
+    with open(json_chars_filepath, "w") as char_file:
+        dump(sorted_char_dict, char_file, indent=4)
+    
+    csv_char_list = prep_characters_for_csv(sorted_char_dict)
+    csv_chars_filepath = "data/fifth_clean_up_data/stage_5_characters.csv"
+    make_csv_file(csv_char_list, csv_chars_filepath)
+
+    old_dict = make_old_names_dict(sorted_char_dict)
+    prepped_old_names = prep_old_names_for_csv(old_dict)
+    csv_old_names_filepath = "data/fifth_clean_up_data/stage_5_old_names.csv"
+    make_csv_file(prepped_old_names, csv_old_names_filepath)

@@ -1,26 +1,67 @@
-from json import dump
+from json import load
 
-# first func:
-# read from:
-base_demographics_filepath = "data/reference_and_test_files/assigning_demographic_info/assigning_race_4_assigning_race.json"
-    # pass in for possible reusability? nah, cause we're adding specific keys hm
+def make_sorted_char_dict():
+    """
+    reads the assigning_race_4_assigning_race.json file
 
-# iterate through chars
-# add rpf or fic key 
-    # assign based on category
-# make key names after format "name from fandom" 
-    # or "name (fandom)"?? 
-    # "fandom's name"?? <- would be able to still group by fandom 🤔
-# assign them dict value
+    returns a sorted unnested dict of its values with keys made up of "fandom - character", 
+    values of the character dicts with an added rpf_or_fic key
+    """
 
-# then sort initial dict alphabetically
-    # get sorted key list
-    # for key in sorted keys
-    # sorted dict[key] = old dict[key]
+    base_demographics_filepath = "data/reference_and_test_files/assigning_demographic_info/assigning_race_4_assigning_race.json"
+    with open(base_demographics_filepath, "r") as demo_file:
+        loaded_chars = load(demo_file)
 
-# return the sorted one
+    new_dict = {}
 
-# print dict to a json file -> this can be moved to running file later for all of these
+    for category in ["RPF", "fictional"]:
+        for fandom in loaded_chars[category]:
+            for character in loaded_chars[category][fandom]:
+                key_name = f"{fandom} - {character}" # alternatively change this format around idk
+                new_dict[key_name] = loaded_chars[category][fandom][character]
+                new_dict[key_name]["rpf_or_fic"] = category
+
+    sorted_keys = sorted(list(new_dict.keys()))
+    sorted_dict = {}
+
+    for key in sorted_keys:
+        sorted_dict[key] = new_dict[key]
+
+    return sorted_dict
+
+def prep_characters_for_csv(sorted_dict):
+    """
+    takes sorted dict from make sorted char dict
+
+    returns a nested list of the column names and the relevant values except for op_versions
+    """
+
+    columns = [
+        "given_name",
+        "middle_name",
+        "maiden_name",
+        "surname",
+        "alias",
+        "nickname",
+        "title (prefix)",
+        "title (suffix)",
+        "name_order",
+        "full_name",
+        "fandom",
+        "gender",
+        "race",
+        "rpf_or_fic"
+    ]
+    new_list = [columns]
+
+    for key in sorted_dict:
+        temp_list = []
+        for column in columns:
+            temp_list.append(sorted_dict[key][column])
+        new_list.append(temp_list)
+    
+    return new_list
+
 
 
 # second char func:

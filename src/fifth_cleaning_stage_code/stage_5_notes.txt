@@ -68,3 +68,5 @@ python src/fifth_cleaning_stage_code/collect_race_tags_per_character.py
 python src/fifth_cleaning_stage_code/assign_race_tag_per_character.py
 
 python src/util_functions/make_data_set_table.py
+
+python src/fifth_cleaning_stage_code/run_stage_5_cleaning.py
