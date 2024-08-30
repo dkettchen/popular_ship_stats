@@ -108,9 +108,9 @@ if __name__ == "__main__":
             ],
     }
     data_set_dict = make_data_set_table(all_ordered_paths)
-    filepath = "data/reference_and_test_files/data_sets.json"
-    with open(filepath, "w") as file:
-        dump(data_set_dict, file, indent=4)
+    # filepath = "data/reference_and_test_files/data_sets.json"
+    # with open(filepath, "w") as file:
+    #     dump(data_set_dict, file, indent=4)
     csv_data = prep_data_set_table_for_csv(data_set_dict)
     csv_path = "data/reference_and_test_files/data_sets.csv"
     make_csv_file(csv_data, csv_path)

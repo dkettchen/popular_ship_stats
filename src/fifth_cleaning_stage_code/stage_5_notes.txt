@@ -47,6 +47,17 @@ goals for this:
 - fix player characters that can be gendered/have been specified in sets ✅
 - fix persona guy too ✅
 
+- make a buncha makefile commands to run stage 4 & stage 5 fandoms, name, & demographics updates ✅
+    - make update_fandoms ✅
+    - make update_names ✅
+    - make update_demographics ✅
+    - make update_characters -> which runs the two previous ones together ✅
+    - make update_characters_and_fandoms -> which runs all of them ✅
+    (names are wt)
+    -> will need a venv command too to use
+    -> add to this as we continue making other files etc
+-> cause after this stage if I need to correct or add something to these fuckers (such as for 
+tumblr data sets) we'll have to rerun EVERYTHING, and it'll become too many things to copy paste
 
 
 source venv/bin/activate && export PYTHONPATH=$(pwd)
@@ -56,4 +67,4 @@ python src/fifth_cleaning_stage_code/assign_gender_per_character.py
 python src/fifth_cleaning_stage_code/collect_race_tags_per_character.py
 python src/fifth_cleaning_stage_code/assign_race_tag_per_character.py
 
-python src/fifth_cleaning_stage_code/make_data_set_table.py
+python src/util_functions/make_data_set_table.py
