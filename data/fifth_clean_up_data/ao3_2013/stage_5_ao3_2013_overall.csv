@@ -1,25 +1,25 @@
 rank_id,data_set,rank_no,change,ship,members_num,fic_type,new_works,total_works,old_fandom,release_date
-AO3_2013_overall-0,AO3_2013_overall,1,None,Sherlock Holmes x John Watson,2,slash,None,20415,Sherlock (TV),None
+AO3_2013_overall-0,AO3_2013_overall,1,None,John Watson x Sherlock Holmes,2,slash,None,20415,Sherlock (TV),None
 AO3_2013_overall-1,AO3_2013_overall,2,None,Castiel x Dean Winchester,2,slash,None,15307,Supernatural,None
 AO3_2013_overall-2,AO3_2013_overall,3,None,Derek Hale x Stiles Stilinski,2,slash,None,15162,Teen Wolf (TV),None
 AO3_2013_overall-3,AO3_2013_overall,4,None,Dean Winchester x Sam Winchester,2,slash,None,7959,Supernatural,None
-AO3_2013_overall-4,AO3_2013_overall,5,None,Merlin x Arthur Pendragon,2,slash,None,7838,Merlin (TV),None
-AO3_2013_overall-5,AO3_2013_overall,6,None,Rodney McKay x John Sheppard,2,slash,None,7021,Stargate Atlantis,None
+AO3_2013_overall-4,AO3_2013_overall,5,None,Arthur Pendragon x Merlin,2,slash,None,7838,Merlin (TV),None
+AO3_2013_overall-5,AO3_2013_overall,6,None,John Sheppard x Rodney McKay,2,slash,None,7021,Stargate Atlantis,None
 AO3_2013_overall-6,AO3_2013_overall,7,None,Harry Styles x Louis Tomlinson,2,slash,None,6809,One Direction (Band),None
 AO3_2013_overall-7,AO3_2013_overall,8,None,Steve Rogers | Captain America x Tony Stark | Iron Man,2,slash,None,6681,The Avengers (Marvel Movies),None
-AO3_2013_overall-8,AO3_2013_overall,9,None,Jim Ellison x Blair Sandburg,2,slash,None,6660,The Sentinel,None
+AO3_2013_overall-8,AO3_2013_overall,9,None,Blair Sandburg x Jim Ellison,2,slash,None,6660,The Sentinel,None
 AO3_2013_overall-9,AO3_2013_overall,10,None,Draco Malfoy x Harry Potter,2,slash,None,6107,Harry Potter - J. K. Rowling,None
-AO3_2013_overall-10,AO3_2013_overall,11,None,Clark Kent | Superman x Alexander Joseph 'Lex' Luthor,2,slash,None,5879,Smallville,None
+AO3_2013_overall-10,AO3_2013_overall,11,None,Alexander Joseph 'Lex' Luthor x Clark Kent | Superman,2,slash,None,5879,Smallville,None
 AO3_2013_overall-11,AO3_2013_overall,12,None,Blaine Anderson x Kurt Hummel,2,slash,None,5483,Glee,None
-AO3_2013_overall-12,AO3_2013_overall,13,None,Sherlock Holmes & John Watson,2,gen,None,5072,Sherlock (TV),None
-AO3_2013_overall-13,AO3_2013_overall,14,None,Erik Lehnsherr | Magneto x Charles Xavier | Professor X,2,slash,None,5017,X-Men: First Class (2011),None
-AO3_2013_overall-14,AO3_2013_overall,15,None,Steve McGarrett x Danny 'Danno' Williams,2,slash,None,4989,Hawaii Five-0 (2010),None
-AO3_2013_overall-15,AO3_2013_overall,16,None,Jensen Ackles x Jared Padalecki,2,slash,None,4721,Supernatural RPF,None
-AO3_2013_overall-16,AO3_2013_overall,17,None,Merlin x Arthur Pendragon,2,slash,None,4075,Merlin (TV),None
-AO3_2013_overall-17,AO3_2013_overall,18,None,Jack Harkness x Ianto Jones,2,slash,None,3796,Torchwood,None
+AO3_2013_overall-12,AO3_2013_overall,13,None,John Watson & Sherlock Holmes,2,gen,None,5072,Sherlock (TV),None
+AO3_2013_overall-13,AO3_2013_overall,14,None,Charles Xavier | Professor X x Erik Lehnsherr | Magneto,2,slash,None,5017,X-Men: First Class (2011),None
+AO3_2013_overall-14,AO3_2013_overall,15,None,Danny 'Danno' Williams x Steve McGarrett,2,slash,None,4989,Hawaii Five-0 (2010),None
+AO3_2013_overall-15,AO3_2013_overall,16,None,Jared Padalecki x Jensen Ackles,2,slash,None,4721,Supernatural RPF,None
+AO3_2013_overall-16,AO3_2013_overall,17,None,Arthur Pendragon x Merlin,2,slash,None,4075,Merlin (TV),None
+AO3_2013_overall-17,AO3_2013_overall,18,None,Ianto Jones x Jack Harkness,2,slash,None,3796,Torchwood,None
 AO3_2013_overall-18,AO3_2013_overall,19,None,Clint Barton | Hawkeye x Phil Coulson,2,slash,None,3721,The Avengers (Marvel Movies),None
 AO3_2013_overall-19,AO3_2013_overall,20,None,Arthur x Eames,2,slash,None,3645,Inception (2010),None
-AO3_2013_overall-20,AO3_2013_overall,21,None,Sirius Black x Remus Lupin,2,slash,None,3334,Harry Potter - J. K. Rowling,None
+AO3_2013_overall-20,AO3_2013_overall,21,None,Remus Lupin x Sirius Black,2,slash,None,3334,Harry Potter - J. K. Rowling,None
 AO3_2013_overall-21,AO3_2013_overall,22,None,James T. Kirk x Leonard 'Bones' McCoy,2,slash,None,3140,Star Trek: Alternate Original Series (Movies),None
 AO3_2013_overall-22,AO3_2013_overall,23,None,Enjolras x Grantaire,2,slash,None,3041,Les Misérables - All Media Types,None
 AO3_2013_overall-23,AO3_2013_overall,24,None,Clint Barton | Hawkeye x Natalia Alianovna 'Natasha' Romanova | Black Widow,2,slash,None,3017,The Avengers (Marvel Movies),None
@@ -30,117 +30,117 @@ AO3_2013_overall-27,AO3_2013_overall,28,None,Allison Argent x Scott McCall,2,sla
 AO3_2013_overall-28,AO3_2013_overall,29,None,Gabriel x Sam Winchester,2,slash,None,2730,Supernatural,None
 AO3_2013_overall-29,AO3_2013_overall,30,None,Benton Fraser x Ray Kowalski,2,slash,None,2624,due South,None
 AO3_2013_overall-30,AO3_2013_overall,31,None,Frank Iero x Gerard Way,2,slash,None,2593,My Chemical Romance,None
-AO3_2013_overall-31,AO3_2013_overall,32,None,Virginia 'Pepper' Potts | Rescue x Tony Stark | Iron Man,2,slash,None,2475,The Avengers (Marvel Movies),None
+AO3_2013_overall-31,AO3_2013_overall,32,None,Tony Stark | Iron Man x Virginia 'Pepper' Potts | Rescue,2,slash,None,2475,The Avengers (Marvel Movies),None
 AO3_2013_overall-32,AO3_2013_overall,33,None,Daniel Jackson x Jack O'Neill,2,slash,None,2436,Stargate SG-1,None
 AO3_2013_overall-33,AO3_2013_overall,34,None,Frank Iero x Gerard Way,2,slash,None,2414,My Chemical Romance,None
-AO3_2013_overall-34,AO3_2013_overall,35,None,Zayn Malik x Liam Payne,2,slash,None,2301,One Direction (Band),None
-AO3_2013_overall-35,AO3_2013_overall,36,None,Mycroft Holmes x Lestrade,2,slash,None,2281,Sherlock (TV),None
+AO3_2013_overall-34,AO3_2013_overall,35,None,Liam Payne x Zayn Malik,2,slash,None,2301,One Direction (Band),None
+AO3_2013_overall-35,AO3_2013_overall,36,None,Lestrade x Mycroft Holmes,2,slash,None,2281,Sherlock (TV),None
 AO3_2013_overall-36,AO3_2013_overall,37,None,Loki Laufeyson/Odinson x Tony Stark | Iron Man,2,slash,None,2209,The Avengers (Marvel Movies),None
-AO3_2013_overall-37,AO3_2013_overall,38,None,John Egbert x Dave Strider,2,slash,None,2200,Homestuck,None
+AO3_2013_overall-37,AO3_2013_overall,38,None,Dave Strider x John Egbert,2,slash,None,2200,Homestuck,None
 AO3_2013_overall-38,AO3_2013_overall,39,None,Bilbo Baggins x Thorin Oakenshield,2,slash,None,1973,The Hobbit (Jackson movies),None
-AO3_2013_overall-39,AO3_2013_overall,40,None,The Doctor x River Song,2,slash,None,1925,Doctor Who (2005),None
+AO3_2013_overall-39,AO3_2013_overall,40,None,River Song x The Doctor,2,slash,None,1925,Doctor Who (2005),None
 AO3_2013_overall-40,AO3_2013_overall,41,None,Hermione Granger x Ron Weasley,2,slash,None,1845,Harry Potter - J. K. Rowling,None
-AO3_2013_overall-41,AO3_2013_overall,42,None,Spike x Buffy Summers,2,slash,None,1840,Buffy the Vampire Slayer,None
+AO3_2013_overall-41,AO3_2013_overall,42,None,Buffy Summers x Spike,2,slash,None,1840,Buffy the Vampire Slayer,None
 AO3_2013_overall-42,AO3_2013_overall,43,None,James Bond x Q,2,slash,None,1750,Skyfall (2012),None
 AO3_2013_overall-43,AO3_2013_overall,44,None,Adam Lambert x Tommy Ratliff,2,slash,None,1746,Adam Lambert (Musician),None
-AO3_2013_overall-44,AO3_2013_overall,45,None,Sam Carter x Jack O'Neill,2,slash,None,1716,Stargate SG-1,None
-AO3_2013_overall-45,AO3_2013_overall,46,None,The Eleventh Doctor x River Song,2,slash,None,1701,Doctor Who (2005),None
+AO3_2013_overall-44,AO3_2013_overall,45,None,Jack O'Neill x Sam Carter,2,slash,None,1716,Stargate SG-1,None
+AO3_2013_overall-45,AO3_2013_overall,46,None,River Song x The Eleventh Doctor,2,slash,None,1701,Doctor Who (2005),None
 AO3_2013_overall-46,AO3_2013_overall,47,None,Belle x Mr. Gold | Rumpelstiltskin,2,slash,None,1628,Once Upon a Time (TV),None
-AO3_2013_overall-47,AO3_2013_overall,48,None,Mycroft Holmes x Greg Lestrade,2,slash,None,1555,Sherlock (TV),None
+AO3_2013_overall-47,AO3_2013_overall,48,None,Greg Lestrade x Mycroft Holmes,2,slash,None,1555,Sherlock (TV),None
 AO3_2013_overall-48,AO3_2013_overall,49,None,Bruce Banner | Hulk x Tony Stark | Iron Man,2,slash,None,1554,The Avengers (Marvel Movies),None
-AO3_2013_overall-49,AO3_2013_overall,50,None,Kris Allen x Adam Lambert,2,slash,None,1550,American Idol RPF,None
-AO3_2013_overall-50,AO3_2013_overall,51,None,Lydia Martin x Jackson Whittemore,2,slash,None,1539,Teen Wolf (TV),None
-AO3_2013_overall-51,AO3_2013_overall,52,None,Sebastian Moran x Jim Moriarty,2,slash,None,1516,Sherlock (TV),None
+AO3_2013_overall-49,AO3_2013_overall,50,None,Adam Lambert x Kris Allen,2,slash,None,1550,American Idol RPF,None
+AO3_2013_overall-50,AO3_2013_overall,51,None,Jackson Whittemore x Lydia Martin,2,slash,None,1539,Teen Wolf (TV),None
+AO3_2013_overall-51,AO3_2013_overall,52,None,Jim Moriarty x Sebastian Moran,2,slash,None,1516,Sherlock (TV),None
 AO3_2013_overall-52,AO3_2013_overall,53,None,Katniss Everdeen x Peeta Mellark,2,slash,None,1432,Hunger Games Trilogy - Suzanne Collins,None
-AO3_2013_overall-53,AO3_2013_overall,54,None,Harry Potter x Ginny Weasley,2,slash,None,1380,Harry Potter - J. K. Rowling,None
+AO3_2013_overall-53,AO3_2013_overall,54,None,Ginny Weasley x Harry Potter,2,slash,None,1380,Harry Potter - J. K. Rowling,None
 AO3_2013_overall-54,AO3_2013_overall,55,None,Anthony DiNozzo x Jethro Gibbs,2,slash,None,1362,NCIS,None
-AO3_2013_overall-55,AO3_2013_overall,56,None,Hermione Granger x Draco Malfoy,2,slash,None,1345,Harry Potter - J. K. Rowling,None
-AO3_2013_overall-56,AO3_2013_overall,57,None,Santana Lopez x Brittany S. Pierce,2,slash,None,1344,Glee,None
+AO3_2013_overall-55,AO3_2013_overall,56,None,Draco Malfoy x Hermione Granger,2,slash,None,1345,Harry Potter - J. K. Rowling,None
+AO3_2013_overall-56,AO3_2013_overall,57,None,Brittany S. Pierce x Santana Lopez,2,slash,None,1344,Glee,None
 AO3_2013_overall-57,AO3_2013_overall,58,None,Brian Kinney x Justin Taylor,2,slash,None,1316,Queer as Folk (US),None
-AO3_2013_overall-58,AO3_2013_overall,59,None,The Tenth Doctor x Rose Tyler,2,slash,None,1294,Doctor Who (2005),None
+AO3_2013_overall-58,AO3_2013_overall,59,None,Rose Tyler x The Tenth Doctor,2,slash,None,1294,Doctor Who (2005),None
 AO3_2013_overall-59,AO3_2013_overall,60,None,Niall Horan x Zayn Malik,2,slash,None,1291,One Direction (Band),None
-AO3_2013_overall-60,AO3_2013_overall,61,None,Will Graham x Hannibal Lecter,2,slash,None,1287,Hannibal (TV),None
-AO3_2013_overall-61,AO3_2013_overall,62,None,Rose Lalonde x Kanaya Maryam,2,slash,None,1261,Homestuck,None
+AO3_2013_overall-60,AO3_2013_overall,61,None,Hannibal Lecter x Will Graham,2,slash,None,1287,Hannibal (TV),None
+AO3_2013_overall-61,AO3_2013_overall,62,None,Kanaya Maryam x Rose Lalonde,2,slash,None,1261,Homestuck,None
 AO3_2013_overall-62,AO3_2013_overall,63,None,Jane Foster | Thor x Thor Odinson,2,slash,None,1243,The Avengers (Marvel Movies),None
 AO3_2013_overall-63,AO3_2013_overall,64,None,Isaac Lahey x Scott McCall,2,slash,None,1205,Teen Wolf (TV),None
-AO3_2013_overall-64,AO3_2013_overall,65,None,Xander Harris x Spike,2,slash,None,1133,Buffy the Vampire Slayer,None
+AO3_2013_overall-64,AO3_2013_overall,65,None,Spike x Xander Harris,2,slash,None,1133,Buffy the Vampire Slayer,None
 AO3_2013_overall-65,AO3_2013_overall,66,None,Greg House x James Wilson,2,slash,None,1126,House M.D.,None
 AO3_2013_overall-66,AO3_2013_overall,67,None,Amy Pond x Rory Williams,2,slash,None,1123,Doctor Who (2005),None
-AO3_2013_overall-67,AO3_2013_overall,68,None,Vernon Boyd x Erica Reyes,2,slash,None,1080,Teen Wolf (TV),None
-AO3_2013_overall-68,AO3_2013_overall,69,None,William Bodie x Ray Doyle,2,slash,None,1078,The Professionals,None
-AO3_2013_overall-69,AO3_2013_overall,70,None,Mike Ross x Harvey Specter,2,slash,None,1072,Suits (TV),None
+AO3_2013_overall-67,AO3_2013_overall,68,None,Erica Reyes x Vernon Boyd,2,slash,None,1080,Teen Wolf (TV),None
+AO3_2013_overall-68,AO3_2013_overall,69,None,Ray Doyle x William Bodie,2,slash,None,1078,The Professionals,None
+AO3_2013_overall-69,AO3_2013_overall,70,None,Harvey Specter x Mike Ross,2,slash,None,1072,Suits (TV),None
 AO3_2013_overall-70,AO3_2013_overall,71,None,Dean Winchester & Sam Winchester,2,gen,None,1067,Supernatural,None
-AO3_2013_overall-71,AO3_2013_overall,72,None,`Lily Potter, née Evans x James Potter`,2,slash,None,1049,Harry Potter - J. K. Rowling,None
-AO3_2013_overall-72,AO3_2013_overall,73,None,Niall Horan x Harry Styles,2,slash,None,1037,One Direction (Band),None
+AO3_2013_overall-71,AO3_2013_overall,72,None,`James Potter x Lily Potter, née Evans`,2,slash,None,1049,Harry Potter - J. K. Rowling,None
+AO3_2013_overall-72,AO3_2013_overall,73,None,Harry Styles x Niall Horan,2,slash,None,1037,One Direction (Band),None
 AO3_2013_overall-73,AO3_2013_overall,74,None,John Egbert x Karkat Vantas,2,slash,None,1032,Homestuck,None
-AO3_2013_overall-74,AO3_2013_overall,75,None,Edward Cullen x Bella Swan,2,slash,None,1027,Twilight Series - Stephenie Meyer,None
+AO3_2013_overall-74,AO3_2013_overall,75,None,Bella Swan x Edward Cullen,2,slash,None,1027,Twilight Series - Stephenie Meyer,None
 AO3_2013_overall-75,AO3_2013_overall,76,None,James Buchanan 'Bucky' Barnes | Winter Soldier/Captain America x Steve Rogers | Captain America,2,slash,None,1016,Captain America (Movies),None
-AO3_2013_overall-76,AO3_2013_overall,77,None,Spock x Nyota Uhura,2,slash,None,1016,Star Trek: Alternate Original Series (Movies),None
-AO3_2013_overall-77,AO3_2013_overall,78,None,Regina Mills | Evil Queen x Emma Swan,2,slash,None,1005,Once Upon a Time (TV),None
-AO3_2013_overall-78,AO3_2013_overall,79,None,Jake English x Dirk Strider,2,slash,None,1001,Homestuck,None
+AO3_2013_overall-76,AO3_2013_overall,77,None,Nyota Uhura x Spock,2,slash,None,1016,Star Trek: Alternate Original Series (Movies),None
+AO3_2013_overall-77,AO3_2013_overall,78,None,Emma Swan x Regina Mills | Evil Queen,2,slash,None,1005,Once Upon a Time (TV),None
+AO3_2013_overall-78,AO3_2013_overall,79,None,Dirk Strider x Jake English,2,slash,None,1001,Homestuck,None
 AO3_2013_overall-79,AO3_2013_overall,80,None,Jessica Moore x Sam Winchester,2,slash,None,993,Supernatural,None
 AO3_2013_overall-80,AO3_2013_overall,81,None,Remus Lupin x Severus Snape,2,slash,None,971,Harry Potter - J. K. Rowling,None
-AO3_2013_overall-81,AO3_2013_overall,82,None,Mary Morstan x John Watson,2,slash,None,954,Sherlock (TV),None
+AO3_2013_overall-81,AO3_2013_overall,82,None,John Watson x Mary Morstan,2,slash,None,954,Sherlock (TV),None
 AO3_2013_overall-82,AO3_2013_overall,83,None,Hermione Granger x Severus Snape,2,slash,None,950,Harry Potter - J. K. Rowling,None
-AO3_2013_overall-83,AO3_2013_overall,84,None,Clark Kent | Superman x Bruce Wayne | Batman,2,slash,None,923,DCU (Comics),None
+AO3_2013_overall-83,AO3_2013_overall,84,None,Bruce Wayne | Batman x Clark Kent | Superman,2,slash,None,923,DCU (Comics),None
 AO3_2013_overall-84,AO3_2013_overall,85,None,Fíli x Kíli,2,slash,None,918,The Hobbit (Jackson movies),None
 AO3_2013_overall-85,AO3_2013_overall,86,None,Agron x Nasir,2,slash,None,890,Spartacus Series (TV),None
-AO3_2013_overall-86,AO3_2013_overall,87,None,Spencer Smith x Brendon Urie,2,slash,None,889,Panic! at the Disco,None
+AO3_2013_overall-86,AO3_2013_overall,87,None,Brendon Urie x Spencer Smith,2,slash,None,889,Panic! at the Disco,None
 AO3_2013_overall-87,AO3_2013_overall,88,None,Alfred F. Jones | America x Arthur Kirkland | England,2,slash,None,886,Hetalia: Axis Powers,None
-AO3_2013_overall-88,AO3_2013_overall,89,None,Rachel Berry x Quinn Fabray,2,slash,None,878,Glee,None
+AO3_2013_overall-88,AO3_2013_overall,89,None,Quinn Fabray x Rachel Berry,2,slash,None,878,Glee,None
 AO3_2013_overall-89,AO3_2013_overall,90,None,Patrick Stump x Pete Wentz,2,slash,None,877,Fall Out Boy,None
-AO3_2013_overall-90,AO3_2013_overall,91,None,Tim Drake | Robin/Red Robin x Connor 'Kon-El' Kent | Superboy,2,slash,None,872,DCU (Comics),None
+AO3_2013_overall-90,AO3_2013_overall,91,None,Connor 'Kon-El' Kent | Superboy x Tim Drake | Robin/Red Robin,2,slash,None,872,DCU (Comics),None
 AO3_2013_overall-91,AO3_2013_overall,92,None,Kurt Hummel x Noah Puckerman,2,slash,None,839,Glee,None
 AO3_2013_overall-92,AO3_2013_overall,93,None,Castiel x Sam Winchester,2,slash,None,827,Supernatural,None
-AO3_2013_overall-93,AO3_2013_overall,94,None,Guinevere 'Gwen' Pendragon x Arthur Pendragon,2,slash,None,822,Merlin (TV),None
+AO3_2013_overall-93,AO3_2013_overall,94,None,Arthur Pendragon x Guinevere 'Gwen' Pendragon,2,slash,None,822,Merlin (TV),None
 AO3_2013_overall-94,AO3_2013_overall,95,None,Uchiha Sasuke x Uzumaki Naruto,2,slash,None,819,Naruto,None
 AO3_2013_overall-95,AO3_2013_overall,96,None,Dave Strider x Karkat Vantas,2,slash,None,814,Homestuck,None
-AO3_2013_overall-96,AO3_2013_overall,97,None,Ryan Ross x Brendon Urie,2,slash,None,809,Panic! at the Disco,None
+AO3_2013_overall-96,AO3_2013_overall,97,None,Brendon Urie x Ryan Ross,2,slash,None,809,Panic! at the Disco,None
 AO3_2013_overall-97,AO3_2013_overall,98,None,Liam Payne x Louis Tomlinson,2,slash,None,801,One Direction (Band),None
 AO3_2013_overall-98,AO3_2013_overall,99,None,Ian Gallagher x Mickey Milkovich,2,slash,None,796,Shameless (US),None
 AO3_2013_overall-99,AO3_2013_overall,100,None,Lucifer x Sam Winchester,2,slash,None,791,Supernatural,None
 AO3_2013_overall-100,AO3_2013_overall,101,None,Courfeyrac x Jean Prouvaire,2,slash,None,782,Les Misérables - All Media Types,None
-AO3_2013_overall-101,AO3_2013_overall,102,None,Tim Drake | Robin/Red Robin x Jason Peter Todd | Robin/Red Hood,2,slash,None,755,DCU (Comics),None
+AO3_2013_overall-101,AO3_2013_overall,102,None,Jason Peter Todd | Robin/Red Hood x Tim Drake | Robin/Red Robin,2,slash,None,755,DCU (Comics),None
 AO3_2013_overall-102,AO3_2013_overall,103,None,Cosette Fauchelevent x Marius Pontmercy,2,slash,None,750,Les Misérables - All Media Types,None
-AO3_2013_overall-103,AO3_2013_overall,104,None,Sherlock Holmes x Molly Hooper,2,slash,None,748,Sherlock (TV),None
+AO3_2013_overall-103,AO3_2013_overall,104,None,Molly Hooper x Sherlock Holmes,2,slash,None,748,Sherlock (TV),None
 AO3_2013_overall-104,AO3_2013_overall,105,None,Frodo Baggins x Sam Gamgee,2,slash,None,742,The Lord of the Rings - J. R. R. Tolkien,None
 AO3_2013_overall-105,AO3_2013_overall,106,None,Castiel & Dean Winchester,2,gen,None,732,Supernatural,None
 AO3_2013_overall-106,AO3_2013_overall,107,None,Chris Pine x Zachary Quinto,2,slash,None,730,Star Trek RPF,None
 AO3_2013_overall-107,AO3_2013_overall,108,None,Hatake Kakashi x Umino Iruka,2,slash,None,728,Naruto,None
-AO3_2013_overall-108,AO3_2013_overall,109,None,Peter Burke x Neal Caffrey,2,slash,None,725,White Collar,None
-AO3_2013_overall-109,AO3_2013_overall,110,None,Zayn Malik x Harry Styles,2,slash,None,724,One Direction (Band),None
-AO3_2013_overall-110,AO3_2013_overall,111,None,John Sheppard x Elizabeth Weir,2,slash,None,710,Stargate Atlantis,None
+AO3_2013_overall-108,AO3_2013_overall,109,None,Neal Caffrey x Peter Burke,2,slash,None,725,White Collar,None
+AO3_2013_overall-109,AO3_2013_overall,110,None,Harry Styles x Zayn Malik,2,slash,None,724,One Direction (Band),None
+AO3_2013_overall-110,AO3_2013_overall,111,None,Elizabeth Weir x John Sheppard,2,slash,None,710,Stargate Atlantis,None
 AO3_2013_overall-111,AO3_2013_overall,112,None,Angel x Buffy Summers,2,slash,None,708,Buffy the Vampire Slayer,None
-AO3_2013_overall-112,AO3_2013_overall,113,None,Patrick Kane x Jonathan Toews,2,slash,None,706,Hockey RPF,None
+AO3_2013_overall-112,AO3_2013_overall,113,None,Jonathan Toews x Patrick Kane,2,slash,None,706,Hockey RPF,None
 AO3_2013_overall-113,AO3_2013_overall,114,None,Edward Elric x Roy Mustang,2,slash,None,704,Fullmetal Alchemist,None
-AO3_2013_overall-114,AO3_2013_overall,115,None,`Elizabeth Burke, née Mitchell x Peter Burke x Neal Caffrey`,3,slash,None,693,White Collar,None
-AO3_2013_overall-115,AO3_2013_overall,116,None,Fox Mulder x Dana Scully,2,slash,None,690,The X-Files,None
+AO3_2013_overall-114,AO3_2013_overall,115,None,`Elizabeth Burke, née Mitchell x Neal Caffrey x Peter Burke`,3,slash,None,693,White Collar,None
+AO3_2013_overall-115,AO3_2013_overall,116,None,Dana Scully x Fox Mulder,2,slash,None,690,The X-Files,None
 AO3_2013_overall-116,AO3_2013_overall,117,None,Kate Beckett x Richard Castle,2,slash,None,689,Castle,None
-AO3_2013_overall-117,AO3_2013_overall,118,None,Terezi Pyrope x Karkat Vantas,2,slash,None,683,Homestuck,None
-AO3_2013_overall-118,AO3_2013_overall,119,None,Kenneth 'Ken' Hutchinson x David Starsky,2,slash,None,677,Starsky & Hutch,None
+AO3_2013_overall-117,AO3_2013_overall,118,None,Karkat Vantas x Terezi Pyrope,2,slash,None,683,Homestuck,None
+AO3_2013_overall-118,AO3_2013_overall,119,None,David Starsky x Kenneth 'Ken' Hutchinson,2,slash,None,677,Starsky & Hutch,None
 AO3_2013_overall-119,AO3_2013_overall,120,None,Brad Colbert x Nate Fick,2,slash,None,675,Generation Kill,None
 AO3_2013_overall-120,AO3_2013_overall,121,None,Gamzee Makara x Tavros Nitram,2,slash,None,673,Homestuck,None
-AO3_2013_overall-121,AO3_2013_overall,122,None,Sauli Koskinen x Adam Lambert,2,slash,None,671,Adam Lambert (Musician),None
+AO3_2013_overall-121,AO3_2013_overall,122,None,Adam Lambert x Sauli Koskinen,2,slash,None,671,Adam Lambert (Musician),None
 AO3_2013_overall-122,AO3_2013_overall,123,None,Harry Potter x Ron Weasley,2,slash,None,663,Harry Potter - J. K. Rowling,None
-AO3_2013_overall-123,AO3_2013_overall,124,None,Kurt Hummel x David Karofsky,2,slash,None,662,Glee,None
+AO3_2013_overall-123,AO3_2013_overall,124,None,David Karofsky x Kurt Hummel,2,slash,None,662,Glee,None
 AO3_2013_overall-124,AO3_2013_overall,125,None,Duncan MacLeod x Methos,2,slash,None,657,Highlander: The Series,None
-AO3_2013_overall-125,AO3_2013_overall,126,None,Qui-Gon Jinn x Obi-Wan Kenobi,2,slash,None,656,Star Wars Episode I: The Phantom Menace,None
+AO3_2013_overall-125,AO3_2013_overall,126,None,Obi-Wan Kenobi x Qui-Gon Jinn,2,slash,None,656,Star Wars Episode I: The Phantom Menace,None
 AO3_2013_overall-126,AO3_2013_overall,127,None,Derek Morgan x Spencer Reid,2,slash,None,651,Criminal Minds,None
 AO3_2013_overall-127,AO3_2013_overall,128,None,Teddy Altman | Hulkling x William 'Billy' Kaplan | Wiccan,2,slash,None,651,Young Avengers,None
-AO3_2013_overall-128,AO3_2013_overall,129,None,Jade Harley x Dave Strider,2,slash,None,637,Homestuck,None
+AO3_2013_overall-128,AO3_2013_overall,129,None,Dave Strider x Jade Harley,2,slash,None,637,Homestuck,None
 AO3_2013_overall-129,AO3_2013_overall,130,None,Eridan Ampora x Sollux Captor,2,slash,None,631,Homestuck,None
-AO3_2013_overall-130,AO3_2013_overall,131,None,Shepard (Female) | Player Character x Garrus Vakarian,2,slash,None,627,Mass Effect,None
+AO3_2013_overall-130,AO3_2013_overall,131,None,Garrus Vakarian x Shepard (Female) | Player Character,2,slash,None,627,Mass Effect,None
 AO3_2013_overall-131,AO3_2013_overall,132,None,Arya Stark x Gendry Waters,2,slash,None,609,A Song of Ice and Fire - George R. R. Martin,None
 AO3_2013_overall-132,AO3_2013_overall,133,None,Harold Finch x John Reese,2,slash,None,609,Person of Interest (TV),None
-AO3_2013_overall-133,AO3_2013_overall,134,None,Niall Horan x Liam Payne,2,slash,None,609,One Direction (Band),None
-AO3_2013_overall-134,AO3_2013_overall,135,None,William Adama x Laura Roslin,2,slash,None,604,Battlestar Galactica (2003),None
+AO3_2013_overall-133,AO3_2013_overall,134,None,Liam Payne x Niall Horan,2,slash,None,609,One Direction (Band),None
+AO3_2013_overall-134,AO3_2013_overall,135,None,Laura Roslin x William Adama,2,slash,None,604,Battlestar Galactica (2003),None
 AO3_2013_overall-135,AO3_2013_overall,136,None,Gene Hunt x Sam Tyler,2,slash,None,601,Life on Mars (UK),None
 AO3_2013_overall-136,AO3_2013_overall,137,None,Lizzie Bennet x William Darcy,2,slash,None,599,Lizzie Bennet Diaries,None
-AO3_2013_overall-137,AO3_2013_overall,138,None,The Tenth Doctor x Rose Tyler,2,slash,None,596,Doctor Who (2005),None
-AO3_2013_overall-138,AO3_2013_overall,139,None,Aziraphale x Anthony J. Crowley,2,slash,None,593,Good Omens - Neil Gaiman & Terry Pratchett,None
+AO3_2013_overall-137,AO3_2013_overall,138,None,Rose Tyler x The Tenth Doctor,2,slash,None,596,Doctor Who (2005),None
+AO3_2013_overall-138,AO3_2013_overall,139,None,Anthony J. Crowley x Aziraphale,2,slash,None,593,Good Omens - Neil Gaiman & Terry Pratchett,None
 AO3_2013_overall-139,AO3_2013_overall,140,None,Aaron Hotchner x Spencer Reid,2,slash,None,590,Criminal Minds,None
 AO3_2013_overall-140,AO3_2013_overall,141,None,Bradley James x Colin Morgan,2,slash,None,588,Merlin (TV) RPF,None
-AO3_2013_overall-141,AO3_2013_overall,142,None,Lee 'Apollo' Adama x Kara Thrace,2,slash,None,572,Battlestar Galactica (2003),None
+AO3_2013_overall-141,AO3_2013_overall,142,None,Kara Thrace x Lee 'Apollo' Adama,2,slash,None,572,Battlestar Galactica (2003),None
 AO3_2013_overall-142,AO3_2013_overall,143,None,Angel x Spike,2,slash,None,569,Angel: the Series,None
 AO3_2013_overall-143,AO3_2013_overall,144,None,Sean Bean x Viggo Mortensen,2,slash,None,569,Lord of the Rings RPF,None
 AO3_2013_overall-144,AO3_2013_overall,145,None,Peter Hale x Stiles Stilinski,2,slash,None,562,Teen Wolf (TV),None
@@ -149,14 +149,14 @@ AO3_2013_overall-146,AO3_2013_overall,147,None,Clark Kent | Superman x Lois Lane
 AO3_2013_overall-147,AO3_2013_overall,148,None,Sandor Clegane | The Hound x Sansa Stark,2,slash,None,549,A Song of Ice and Fire - George R. R. Martin,None
 AO3_2013_overall-148,AO3_2013_overall,149,None,Kurt Hummel x Sebastian Smythe,2,slash,None,548,Glee,None
 AO3_2013_overall-149,AO3_2013_overall,150,None,Edward Elric x Winry Rockbell,2,slash,None,547,Fullmetal Alchemist,None
-AO3_2013_overall-150,AO3_2013_overall,151,None,Sheldon Cooper x Penny,2,slash,None,542,The Big Bang Theory (TV),None
+AO3_2013_overall-150,AO3_2013_overall,151,None,Penny x Sheldon Cooper,2,slash,None,542,The Big Bang Theory (TV),None
 AO3_2013_overall-151,AO3_2013_overall,152,None,Alex Kingston x Matt Smith,2,slash,None,540,Doctor Who RPF,None
 AO3_2013_overall-152,AO3_2013_overall,153,None,Axel x Roxas,2,slash,None,537,Kingdom Hearts,None
 AO3_2013_overall-153,AO3_2013_overall,154,None,Duo Maxwell x Heero Yuy,2,slash,None,527,Gundam Wing,None
 AO3_2013_overall-154,AO3_2013_overall,155,None,Akanishi Jin x Kamenashi Kazuya,2,slash,None,525,KAT-TUN (Band),None
 AO3_2013_overall-155,AO3_2013_overall,156,None,Javert x Jean Valjean,2,slash,None,525,Les Misérables - All Media Types,None
-AO3_2013_overall-156,AO3_2013_overall,157,None,Zayn Malik x Louis Tomlinson,2,slash,None,519,One Direction (Band),None
-AO3_2013_overall-157,AO3_2013_overall,158,None,The Ninth Doctor x Rose Tyler,2,slash,None,515,Doctor Who (2005),None
-AO3_2013_overall-158,AO3_2013_overall,159,None,Nicholas 'Dick' Grayson | Robin/Nightwing x Bruce Wayne | Batman,2,slash,None,511,Batman (Comics),None
-AO3_2013_overall-159,AO3_2013_overall,160,None,Rachel Berry x Finn Hudson,2,slash,None,509,Glee,None
-AO3_2013_overall-160,AO3_2013_overall,161,None,Pavel Chekov x Hikaru Sulu,2,slash,None,505,Star Trek: Alternate Original Series (Movies),None
+AO3_2013_overall-156,AO3_2013_overall,157,None,Louis Tomlinson x Zayn Malik,2,slash,None,519,One Direction (Band),None
+AO3_2013_overall-157,AO3_2013_overall,158,None,Rose Tyler x The Ninth Doctor,2,slash,None,515,Doctor Who (2005),None
+AO3_2013_overall-158,AO3_2013_overall,159,None,Bruce Wayne | Batman x Nicholas 'Dick' Grayson | Robin/Nightwing,2,slash,None,511,Batman (Comics),None
+AO3_2013_overall-159,AO3_2013_overall,160,None,Finn Hudson x Rachel Berry,2,slash,None,509,Glee,None
+AO3_2013_overall-160,AO3_2013_overall,161,None,Hikaru Sulu x Pavel Chekov,2,slash,None,505,Star Trek: Alternate Original Series (Movies),None

@@ -14,10 +14,10 @@ def make_ship_tag(member_list: str, fic_type):
 
     sorted_ship = sorted(member_list)
     length = len(sorted_ship)
-    ship = member_list[0] + separator + member_list[1]
+    ship = sorted_ship[0] + separator + sorted_ship[1]
     if length > 2:
-        ship += separator + member_list[2]
+        ship += separator + sorted_ship[2]
         if length == 4:
-            ship += separator + member_list[3]
+            ship += separator + sorted_ship[3]
 
     return ship

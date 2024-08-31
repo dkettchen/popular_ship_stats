@@ -1,7 +1,7 @@
 rank_id,data_set,rank_no,change,ship,members_num,fic_type,new_works,total_works,old_fandom,release_date
-AO3_2020_data-0,AO3_2020_data,1,15,Aziraphale x Anthony J. Crowley,2,slash,20298,28726,Good Omens (TV),None
+AO3_2020_data-0,AO3_2020_data,1,15,Anthony J. Crowley x Aziraphale,2,slash,20298,28726,Good Omens (TV),None
 AO3_2020_data-1,AO3_2020_data,2,72,Lán Zhàn | Lán Wàngjī x Wèi Yīng | Wèi Wúxiàn,2,slash,10671,13130,魔道祖师 - 墨香铜臭 | Módào Zǔshī - Mòxiāng Tóngxiù,None
-AO3_2020_data-2,AO3_2020_data,3,8,Rey x Ben Solo | Kylo Ren,2,slash,9076,21306,Star Wars Sequel Trilogy,None
+AO3_2020_data-2,AO3_2020_data,3,8,Ben Solo | Kylo Ren x Rey,2,slash,9076,21306,Star Wars Sequel Trilogy,None
 AO3_2020_data-3,AO3_2020_data,4,28,Eddie Kaspbrak x Richie Tozier,2,slash,8441,12227,IT (Movies – Muschietti),None
 AO3_2020_data-4,AO3_2020_data,5,new,Geralt of Rivia | The Witcher x Jaskier | Dandelion,2,slash,7573,7573,The Witcher (TV),None
 AO3_2020_data-5,AO3_2020_data,6,1,Draco Malfoy x Harry Potter,2,slash,7239,40312,Harry Potter - J. K. Rowling,None
@@ -10,65 +10,65 @@ AO3_2020_data-7,AO3_2020_data,8,0,Peter Parker | Spiderman & Tony Stark | Iron M
 AO3_2020_data-8,AO3_2020_data,9,-7,James Buchanan 'Bucky' Barnes | Winter Soldier/Captain America x Steve Rogers | Captain America,2,slash,6262,49659,Captain America (Movies),None
 AO3_2020_data-9,AO3_2020_data,10,4,Bakugou Katsuki x Kirishima Eijirou | Red Riot,2,slash,6141,15375,Boku no Hero Academia | My Hero Academia,None
 AO3_2020_data-10,AO3_2020_data,11,-5,Steve Rogers | Captain America x Tony Stark | Iron Man,2,slash,5613,36264,The Avengers (Marvel Movies),None
-AO3_2020_data-11,AO3_2020_data,12,68,Aziraphale & Anthony J. Crowley,2,gen,5503,7928,Good Omens (TV),None
+AO3_2020_data-11,AO3_2020_data,12,68,Anthony J. Crowley & Aziraphale,2,gen,5503,7928,Good Omens (TV),None
 AO3_2020_data-12,AO3_2020_data,13,-8,Jeon Jungkook | Jungkook x Kim Taehyung | V,2,slash,5254,23339,Bangtan Boys | BTS,None
 AO3_2020_data-13,AO3_2020_data,14,5,Adrien Agreste | Chat Noir x Marinette Dupain-Cheng | Ladybug,2,slash,5183,19631,Miraculous Ladybug,None
 AO3_2020_data-14,AO3_2020_data,15,5,Midoriya Izuku | Deku x Todoroki Shouto | Shoto,2,slash,5001,14073,Boku no Hero Academia | My Hero Academia,None
 AO3_2020_data-15,AO3_2020_data,16,-13,Castiel x Dean Winchester,2,slash,4927,84563,Supernatural,None
 AO3_2020_data-16,AO3_2020_data,17,1,Jeon Jungkook | Jungkook x Park Jimin | Jimin,2,slash,4596,17867,Bangtan Boys | BTS,None
-AO3_2020_data-17,AO3_2020_data,18,new,Evan 'Buck' Buckley x Eddie Diaz,2,slash,3716,3716,9-1-1 (TV),None
+AO3_2020_data-17,AO3_2020_data,18,new,Eddie Diaz x Evan 'Buck' Buckley,2,slash,3716,3716,9-1-1 (TV),None
 AO3_2020_data-18,AO3_2020_data,19,5,Kara Danvers/Zor-El | Supergirl x Lena Luthor | Ultrawoman,2,slash,3614,13048,Supergirl (TV 2015),None
-AO3_2020_data-19,AO3_2020_data,20,-16,Magnus Bane x Alec Lightwood,2,slash,3599,24787,Shadowhunters (TV),None
-AO3_2020_data-20,AO3_2020_data,21,2,Virginia 'Pepper' Potts | Rescue x Tony Stark | Iron Man,2,slash,3569,17384,Marvel Cinematic Universe,None
+AO3_2020_data-19,AO3_2020_data,20,-16,Alec Lightwood x Magnus Bane,2,slash,3599,24787,Shadowhunters (TV),None
+AO3_2020_data-20,AO3_2020_data,21,2,Tony Stark | Iron Man x Virginia 'Pepper' Potts | Rescue,2,slash,3569,17384,Marvel Cinematic Universe,None
 AO3_2020_data-21,AO3_2020_data,22,14,Aizawa Shouta | Eraserhead x Yamada Hizashi | Present Mic,2,slash,3565,7325,Boku no Hero Academia | My Hero Academia,None
 AO3_2020_data-22,AO3_2020_data,23,new,Adora x Catra,2,slash,3538,4919,She-Ra and the Princesses of Power (2018),None
 AO3_2020_data-23,AO3_2020_data,24,15,Dazai Osamu x Nakahara Chuuya,2,slash,3512,8768,文豪ストレイドッグス | Bungou Stray Dogs,None
 AO3_2020_data-24,AO3_2020_data,25,new,Wang Yi Bo x Xiao Zhan | Sean Xiao,2,slash,3446,3446,陈情令 | The Untamed (TV) RPF,None
 AO3_2020_data-25,AO3_2020_data,26,-12,Derek Hale x Stiles Stilinski,2,slash,3249,59286,Teen Wolf (TV),None
-AO3_2020_data-26,AO3_2020_data,27,10,Merlin x Arthur Pendragon,2,slash,3157,18688,Merlin (TV),None
+AO3_2020_data-26,AO3_2020_data,27,10,Arthur Pendragon x Merlin,2,slash,3157,18688,Merlin (TV),None
 AO3_2020_data-27,AO3_2020_data,28,-11,Kim Namjoon | Rap Monster/RM x Kim Seokjin | Jin,2,slash,3155,16682,Bangtan Boys | BTS,None
 AO3_2020_data-28,AO3_2020_data,29,66,Ayanga x Zhèng Yúnlóng,2,slash,3111,5285,声入人心 | Super-Vocal (TV),None
 AO3_2020_data-29,AO3_2020_data,30,-21,Min Yoongi | Suga x Park Jimin | Jimin,2,slash,3026,19851,Bangtan Boys | BTS,None
-AO3_2020_data-30,AO3_2020_data,31,-3,Sirius Black x Remus Lupin,2,slash,2958,17686,Harry Potter - J. K. Rowling,None
-AO3_2020_data-31,AO3_2020_data,32,new,Martin Blackwood x Jonathan 'Jon' Sims | The Archivist,2,slash,2917,3367,The Magnus Archives (Podcast),None
+AO3_2020_data-30,AO3_2020_data,31,-3,Remus Lupin x Sirius Black,2,slash,2958,17686,Harry Potter - J. K. Rowling,None
+AO3_2020_data-31,AO3_2020_data,32,new,Jonathan 'Jon' Sims | The Archivist x Martin Blackwood,2,slash,2917,3367,The Magnus Archives (Podcast),None
 AO3_2020_data-32,AO3_2020_data,33,60,Bakugou Katsuki & Midoriya Izuku | Deku,2,gen,2672,5023,Boku no Hero Academia | My Hero Academia,None
 AO3_2020_data-33,AO3_2020_data,34,12,Peter Parker | Spiderman x Tony Stark | Iron Man,2,slash,2623,6160,Marvel Cinematic Universe,None
 AO3_2020_data-34,AO3_2020_data,35,new,Hinata Shouyou x Kageyama Tobio,2,slash,2601,10485,Haikyuu!!,None
-AO3_2020_data-35,AO3_2020_data,36,22,Hermione Granger x Draco Malfoy,2,slash,2583,10171,Harry Potter - J. K. Rowling,None
+AO3_2020_data-35,AO3_2020_data,36,22,Draco Malfoy x Hermione Granger,2,slash,2583,10171,Harry Potter - J. K. Rowling,None
 AO3_2020_data-36,AO3_2020_data,37,-8,Kim Taehyung | V x Park Jimin | Jimin,2,slash,2507,9891,Bangtan Boys | BTS,None
 AO3_2020_data-37,AO3_2020_data,38,-37,Keith x Lance,2,slash,2480,30317,Voltron: Legendary Defender,None
 AO3_2020_data-38,AO3_2020_data,39,20,Billy Hargrove x Steve Harrington,2,slash,2438,5338,Stranger Things (TV 2016),None
 AO3_2020_data-39,AO3_2020_data,40,new,Akaashi Keiji x Bokuto Koutarou,2,slash,2387,7629,Haikyuu!!,None
-AO3_2020_data-40,AO3_2020_data,41,new,Patrick Brewer x David Rose,2,slash,2363,3150,Schitt's Creek,None
+AO3_2020_data-40,AO3_2020_data,41,new,David Rose x Patrick Brewer,2,slash,2363,3150,Schitt's Creek,None
 AO3_2020_data-41,AO3_2020_data,42,5,Lee Donghyuck | Haechan x Mark Lee | Mark,2,slash,2331,5854,NCT (Band),None
-AO3_2020_data-42,AO3_2020_data,43,8,Rey & Ben Solo | Kylo Ren,2,gen,2304,6506,Star Wars Sequel Trilogy,None
-AO3_2020_data-43,AO3_2020_data,44,new,Touya Todoroki | Dabi x Takami Keigo | Hawks,2,slash,2294,2930,Boku no Hero Academia | My Hero Academia,None
+AO3_2020_data-42,AO3_2020_data,43,8,Ben Solo | Kylo Ren & Rey,2,gen,2304,6506,Star Wars Sequel Trilogy,None
+AO3_2020_data-43,AO3_2020_data,44,new,Takami Keigo | Hawks x Touya Todoroki | Dabi,2,slash,2294,2930,Boku no Hero Academia | My Hero Academia,None
 AO3_2020_data-44,AO3_2020_data,45,new,Iwaizumi Hajime x Oikawa Tooru,2,slash,2272,11155,Haikyuu!!,None
 AO3_2020_data-45,AO3_2020_data,46,-24,Jung Hoseok | J-Hope x Min Yoongi | Suga,2,slash,2259,12668,Bangtan Boys | BTS,None
 AO3_2020_data-46,AO3_2020_data,47,new,Felix Hugo Fraldarius x Sylvain Jose Gautier,2,slash,2218,2218,Fire Emblem: Three Houses,None
-AO3_2020_data-47,AO3_2020_data,48,28,Jaime Lannister x Brienne of Tarth,2,slash,2186,7063,Game of Thrones (TV),None
+AO3_2020_data-47,AO3_2020_data,48,28,Brienne of Tarth x Jaime Lannister,2,slash,2186,7063,Game of Thrones (TV),None
 AO3_2020_data-48,AO3_2020_data,49,19,Bakugou Katsuki x Todoroki Shouto | Shoto,2,slash,2169,4991,Boku no Hero Academia | My Hero Academia,None
 AO3_2020_data-49,AO3_2020_data,50,new,Ben Hanscom x Beverly Marsh,2,slash,2163,3116,IT (Movies – Muschietti),None
 AO3_2020_data-50,AO3_2020_data,51,3,Hermione Granger x Ron Weasley,2,slash,2128,11699,Harry Potter - J. K. Rowling,None
-AO3_2020_data-51,AO3_2020_data,52,-31,Sherlock Holmes x John Watson,2,slash,2121,61544,Sherlock (TV),None
+AO3_2020_data-51,AO3_2020_data,52,-31,John Watson x Sherlock Holmes,2,slash,2121,61544,Sherlock (TV),None
 AO3_2020_data-52,AO3_2020_data,53,-5,`James Potter x Lily Potter, née Evans`,2,slash,2110,10125,Harry Potter - J. K. Rowling,None
 AO3_2020_data-53,AO3_2020_data,54,-28,Jeon Jungkook | Jungkook x Min Yoongi | Suga,2,slash,2074,9498,Bangtan Boys | BTS,None
 AO3_2020_data-54,AO3_2020_data,55,new,Jiāng Chéng | Jiāng Wǎnyín x Lán Huàn | Lán Xīchén,2,slash,2073,2494,魔道祖师 - 墨香铜臭 | Módào Zǔshī - Mòxiāng Tóngxiù,None
-AO3_2020_data-55,AO3_2020_data,56,-25,Will Graham x Hannibal Lecter,2,slash,2064,17257,Hannibal (TV),None
+AO3_2020_data-55,AO3_2020_data,56,-25,Hannibal Lecter x Will Graham,2,slash,2064,17257,Hannibal (TV),None
 AO3_2020_data-56,AO3_2020_data,57,new,Kakyoin Noriaki x Kujo 'Jojo' Jotaro,2,slash,1964,3580,JoJo no Kimyou na Bouken | JoJo's Bizarre Adventure,None
 AO3_2020_data-57,AO3_2020_data,58,new,Midoriya Izuku | Deku x Uraraka Ochako | Uravity,2,slash,1896,3983,Boku no Hero Academia | My Hero Academia,None
 AO3_2020_data-58,AO3_2020_data,59,-46,Katsuki Yuuri x Victor Nikiforov,2,slash,1843,24332,Yuri!!! on Ice (Anime),None
-AO3_2020_data-59,AO3_2020_data,60,15,Harry Potter x Ginny Weasley,2,slash,1838,9269,Harry Potter - J. K. Rowling,None
-AO3_2020_data-60,AO3_2020_data,61,new,Poe Dameron x Finn,2,slash,1806,7238,Star Wars Sequel Trilogy,None
+AO3_2020_data-59,AO3_2020_data,60,15,Ginny Weasley x Harry Potter,2,slash,1838,9269,Harry Potter - J. K. Rowling,None
+AO3_2020_data-60,AO3_2020_data,61,new,Finn x Poe Dameron,2,slash,1806,7238,Star Wars Sequel Trilogy,None
 AO3_2020_data-61,AO3_2020_data,62,new,Kaminari Denki | Chargebolt x Shinsou Hitoshi,2,slash,1791,2732,Boku no Hero Academia | My Hero Academia,None
 AO3_2020_data-62,AO3_2020_data,63,-38,Dan Howell | danisnotonfire x Phil Lester | AmazingPhil,2,slash,1782,17316,Phandom/The Fantastic Foursome (YouTube RPF),None
 AO3_2020_data-63,AO3_2020_data,64,-54,Keith x Shiro,2,slash,1764,13925,Voltron: Legendary Defender,None
-AO3_2020_data-64,AO3_2020_data,65,31,Virgil Sanders | Anxiety x Roman 'Princey' Sanders | Creativity,2,slash,1720,3917,Sanders Sides (Web Series),None
-AO3_2020_data-65,AO3_2020_data,66,new,Tyrannus Basilton 'Baz' Grimm-Pitch x Simon Snow,2,slash,1707,4803,Carry On Series - Rainbow Rowell,None
+AO3_2020_data-64,AO3_2020_data,65,31,Roman 'Princey' Sanders | Creativity x Virgil Sanders | Anxiety,2,slash,1720,3917,Sanders Sides (Web Series),None
+AO3_2020_data-65,AO3_2020_data,66,new,Simon Snow x Tyrannus Basilton 'Baz' Grimm-Pitch,2,slash,1707,4803,Carry On Series - Rainbow Rowell,None
 AO3_2020_data-66,AO3_2020_data,67,-33,Kim Taehyung | V x Min Yoongi | Suga,2,slash,1651,7176,Bangtan Boys | BTS,None
-AO3_2020_data-67,AO3_2020_data,67,new,Dimitri Alexandre Blaiddyd x Byleth Eisner | Player Character,2,slash,1651,1651,Fire Emblem: Three Houses,None
+AO3_2020_data-67,AO3_2020_data,67,new,Byleth Eisner | Player Character x Dimitri Alexandre Blaiddyd,2,slash,1651,1651,Fire Emblem: Three Houses,None
 AO3_2020_data-68,AO3_2020_data,69,new,Michelle 'MJ' Jones x Peter Parker | Spiderman,2,slash,1639,3692,Spider-Man (Tom Holland Movies),None
-AO3_2020_data-69,AO3_2020_data,70,new,Michael Guerin x Alex Manes,2,slash,1635,2746,Roswell New Mexico (TV 2019),None
+AO3_2020_data-69,AO3_2020_data,70,new,Alex Manes x Michael Guerin,2,slash,1635,2746,Roswell New Mexico (TV 2019),None
 AO3_2020_data-70,AO3_2020_data,71,28,Uchiha Sasuke x Uzumaki Naruto,2,slash,1625,7705,Naruto,None
 AO3_2020_data-71,AO3_2020_data,72,new,Bakugou Katsuki x Uraraka Ochako | Uravity,2,slash,1617,3776,Boku no Hero Academia | My Hero Academia,None
 AO3_2020_data-72,AO3_2020_data,73,-30,James Buchanan 'Bucky' Barnes | Winter Soldier/Captain America x Tony Stark | Iron Man,2,slash,1559,7456,Marvel Cinematic Universe,None
@@ -77,25 +77,25 @@ AO3_2020_data-74,AO3_2020_data,75,9,Connor (RK900) x Gavin Reed,2,slash,1534,392
 AO3_2020_data-75,AO3_2020_data,76,new,Harry Potter x Tom Riddle | Voldemort,2,slash,1511,6308,Harry Potter - J. K. Rowling,None
 AO3_2020_data-76,AO3_2020_data,77,new,Jeon Jungkook | Jungkook x Kim Namjoon | Rap Monster/RM,2,slash,1505,3911,Bangtan Boys | BTS,None
 AO3_2020_data-77,AO3_2020_data,78,new,Annabeth Chase x Percy Jackson,2,slash,1501,6017,Percy Jackson and the Olympians - Rick Riordan,None
-AO3_2020_data-78,AO3_2020_data,79,new,Edelgard von Hresvelg x Byleth Eisner | Player Character,2,slash,1495,1495,Fire Emblem: Three Houses,None
+AO3_2020_data-78,AO3_2020_data,79,new,Byleth Eisner | Player Character x Edelgard von Hresvelg,2,slash,1495,1495,Fire Emblem: Three Houses,None
 AO3_2020_data-79,AO3_2020_data,80,new,Dean Winchester & Sam Winchester,2,gen,1493,8791,Supernatural,None
 AO3_2020_data-80,AO3_2020_data,81,new,Aizawa Shouta | Eraserhead & Midoriya Izuku | Deku,2,gen,1487,2200,Boku no Hero Academia | My Hero Academia,None
-AO3_2020_data-81,AO3_2020_data,82,-37,Tony Stark | Iron Man x Stephen Strange | Doctor Strange,2,slash,1460,4912,Marvel Cinematic Universe,None
+AO3_2020_data-81,AO3_2020_data,82,-37,Stephen Strange | Doctor Strange x Tony Stark | Iron Man,2,slash,1460,4912,Marvel Cinematic Universe,None
 AO3_2020_data-82,AO3_2020_data,83,new,Akechi Goro x Amamiya Ren | Player Character,2,slash,1447,3285,Persona 5,None
 AO3_2020_data-83,AO3_2020_data,84,new,Kozume Kenma x Kuroo Tetsurou,2,slash,1444,4932,Haikyuu!!,None
 AO3_2020_data-84,AO3_2020_data,85,new,Han Jisung | Han x Lee Minho | Lee Know,2,slash,1440,3091,Stray Kids (Band),None
 AO3_2020_data-85,AO3_2020_data,86,-33,Byun Baekhyun | Baekhyun x Park Chanyeol | Chanyeol,2,slash,1431,6629,EXO (Band),None
 AO3_2020_data-86,AO3_2020_data,87,-45,Dean Winchester x Sam Winchester,2,slash,1416,27696,Supernatural,None
-AO3_2020_data-87,AO3_2020_data,88,new,Leone Abbacchio x Bruno Buccellati,2,slash,1415,2237,JoJo no Kimyou na Bouken | JoJo's Bizarre Adventure,None
+AO3_2020_data-87,AO3_2020_data,88,new,Bruno Buccellati x Leone Abbacchio,2,slash,1415,2237,JoJo no Kimyou na Bouken | JoJo's Bizarre Adventure,None
 AO3_2020_data-88,AO3_2020_data,89,new,Chloe Decker x Lucifer Morningstar,2,slash,1413,4165,Lucifer (TV),None
 AO3_2020_data-89,AO3_2020_data,90,new,Eddie Kaspbrak & Richie Tozier,2,gen,1396,2268,IT - Stephen King,None
-AO3_2020_data-90,AO3_2020_data,91,new,Neil Josten x Andrew Minyard,2,slash,1392,4681,All For The Game - Nora Sakavic,None
+AO3_2020_data-90,AO3_2020_data,91,new,Andrew Minyard x Neil Josten,2,slash,1392,4681,All For The Game - Nora Sakavic,None
 AO3_2020_data-91,AO3_2020_data,92,new,Blake Belladonna x Xiao Long Yang,2,slash,1390,4358,RWBY,None
 AO3_2020_data-92,AO3_2020_data,93,new,Midoriya Izuku | Deku & Todoroki Shouto | Shoto,2,gen,1378,2887,Boku no Hero Academia | My Hero Academia,None
-AO3_2020_data-93,AO3_2020_data,94,new,Padmé Amidala x Anakin Skywalker | Darth Vader,2,slash,1369,4112,Star Wars - All Media Types,None
+AO3_2020_data-93,AO3_2020_data,94,new,Anakin Skywalker | Darth Vader x Padmé Amidala,2,slash,1369,4112,Star Wars - All Media Types,None
 AO3_2020_data-94,AO3_2020_data,95,-8,Kim Namjoon | Rap Monster/RM x Park Jimin | Jimin,2,slash,1365,4728,Bangtan Boys | BTS,None
 AO3_2020_data-95,AO3_2020_data,95,new,Sokka x Zuko,2,slash,1365,1828,Avatar: The Last Airbender,None
 AO3_2020_data-96,AO3_2020_data,97,new,Lee Jeno | Jeno x Na Jaemin | Jaemin,2,slash,1360,3266,NCT (Band),None
-AO3_2020_data-97,AO3_2020_data,98,new,Erik Lehnsherr | Magneto x Charles Xavier | Professor X,2,slash,1333,14736,X-Men (Alternate Timeline Movies),None
+AO3_2020_data-97,AO3_2020_data,98,new,Charles Xavier | Professor X x Erik Lehnsherr | Magneto,2,slash,1333,14736,X-Men (Alternate Timeline Movies),None
 AO3_2020_data-98,AO3_2020_data,99,-72,Loki Laufeyson/Odinson x Thor Odinson,2,slash,1330,12863,Thor (Movies),None
 AO3_2020_data-99,AO3_2020_data,100,new,Logan Sanders | Logic x Patton Sanders | Morality,2,slash,1327,3132,Sanders Sides (Web Series),None

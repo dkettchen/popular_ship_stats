@@ -1,101 +1,101 @@
 rank_id,data_set,rank_no,change,ship,members_num,fic_type,new_works,total_works,old_fandom,release_date
-AO3_2014_overall-0,AO3_2014_overall,1,None,Sherlock Holmes x John Watson,2,slash,None,32111,Sherlock (TV),None
+AO3_2014_overall-0,AO3_2014_overall,1,None,John Watson x Sherlock Holmes,2,slash,None,32111,Sherlock (TV),None
 AO3_2014_overall-1,AO3_2014_overall,2,None,Castiel x Dean Winchester,2,slash,None,28851,Supernatural,None
 AO3_2014_overall-2,AO3_2014_overall,3,None,Derek Hale x Stiles Stilinski,2,slash,None,26793,Teen Wolf (TV),None
 AO3_2014_overall-3,AO3_2014_overall,4,None,Harry Styles x Louis Tomlinson,2,slash,None,14632,One Direction (Band),None
 AO3_2014_overall-4,AO3_2014_overall,5,None,Dean Winchester x Sam Winchester,2,slash,None,11074,Supernatural,None
-AO3_2014_overall-5,AO3_2014_overall,6,None,Merlin x Arthur Pendragon,2,slash,None,11006,Merlin (TV),None
+AO3_2014_overall-5,AO3_2014_overall,6,None,Arthur Pendragon x Merlin,2,slash,None,11006,Merlin (TV),None
 AO3_2014_overall-6,AO3_2014_overall,7,None,Draco Malfoy x Harry Potter,2,slash,None,9196,Harry Potter - J. K. Rowling,None
 AO3_2014_overall-7,AO3_2014_overall,8,None,Steve Rogers | Captain America x Tony Stark | Iron Man,2,slash,None,9193,The Avengers (Marvel Movies),None
-AO3_2014_overall-8,AO3_2014_overall,9,None,Sherlock Holmes & John Watson,2,gen,None,8413,Sherlock (TV),None
+AO3_2014_overall-8,AO3_2014_overall,9,None,John Watson & Sherlock Holmes,2,gen,None,8413,Sherlock (TV),None
 AO3_2014_overall-9,AO3_2014_overall,10,None,Blaine Anderson x Kurt Hummel,2,slash,None,8250,Glee,None
-AO3_2014_overall-10,AO3_2014_overall,11,None,Rodney McKay x John Sheppard,2,slash,None,8106,Stargate Atlantis,None
-AO3_2014_overall-11,AO3_2014_overall,12,None,Jim Ellison x Blair Sandburg,2,slash,None,7041,The Sentinel,None
-AO3_2014_overall-12,AO3_2014_overall,13,None,Erik Lehnsherr | Magneto x Charles Xavier | Professor X,2,slash,None,6472,X-Men: First Class (2011),None
-AO3_2014_overall-13,AO3_2014_overall,14,None,Jensen Ackles x Jared Padalecki,2,slash,None,6457,Supernatural RPF,None
-AO3_2014_overall-14,AO3_2014_overall,15,None,Clark Kent | Superman x Alexander Joseph 'Lex' Luthor,2,slash,None,6120,Smallville,None
-AO3_2014_overall-15,AO3_2014_overall,16,None,Steve McGarrett x Danny 'Danno' Williams,2,slash,None,5868,Hawaii Five-0,None
+AO3_2014_overall-10,AO3_2014_overall,11,None,John Sheppard x Rodney McKay,2,slash,None,8106,Stargate Atlantis,None
+AO3_2014_overall-11,AO3_2014_overall,12,None,Blair Sandburg x Jim Ellison,2,slash,None,7041,The Sentinel,None
+AO3_2014_overall-12,AO3_2014_overall,13,None,Charles Xavier | Professor X x Erik Lehnsherr | Magneto,2,slash,None,6472,X-Men: First Class (2011),None
+AO3_2014_overall-13,AO3_2014_overall,14,None,Jared Padalecki x Jensen Ackles,2,slash,None,6457,Supernatural RPF,None
+AO3_2014_overall-14,AO3_2014_overall,15,None,Alexander Joseph 'Lex' Luthor x Clark Kent | Superman,2,slash,None,6120,Smallville,None
+AO3_2014_overall-15,AO3_2014_overall,16,None,Danny 'Danno' Williams x Steve McGarrett,2,slash,None,5868,Hawaii Five-0,None
 AO3_2014_overall-16,AO3_2014_overall,17,None,Clint Barton | Hawkeye x Phil Coulson,2,slash,None,5840,The Avengers (Marvel Movies),None
 AO3_2014_overall-17,AO3_2014_overall,18,None,Enjolras x Grantaire,2,slash,None,5504,Les Misérables - All Media Types,None
 AO3_2014_overall-18,AO3_2014_overall,19,None,James T. Kirk x Spock,2,slash,None,5119,Star Trek: Alternate Original Series (Movies),None
-AO3_2014_overall-19,AO3_2014_overall,20,None,Jack Harkness x Ianto Jones,2,slash,None,5026,Torchwood,None
+AO3_2014_overall-19,AO3_2014_overall,20,None,Ianto Jones x Jack Harkness,2,slash,None,5026,Torchwood,None
 AO3_2014_overall-20,AO3_2014_overall,21,None,James T. Kirk x Leonard 'Bones' McCoy,2,slash,None,4795,Star Trek: Alternate Original Series (Movies),None
 AO3_2014_overall-21,AO3_2014_overall,22,None,James Buchanan 'Bucky' Barnes | Winter Soldier/Captain America x Steve Rogers | Captain America,2,slash,None,4614,Captain America (Movies),None
 AO3_2014_overall-22,AO3_2014_overall,23,None,Allison Argent x Scott McCall,2,slash,None,4600,Teen Wolf (TV),None
 AO3_2014_overall-23,AO3_2014_overall,24,None,Harry Potter x Severus Snape,2,slash,None,4540,Harry Potter - J. K. Rowling,None
 AO3_2014_overall-24,AO3_2014_overall,25,None,Clint Barton | Hawkeye x Natalia Alianovna 'Natasha' Romanova | Black Widow,2,slash,None,4518,The Avengers (Marvel Movies),None
 AO3_2014_overall-25,AO3_2014_overall,26,None,Loki Laufeyson/Odinson x Thor Odinson,2,slash,None,4494,Thor (Movies),None
-AO3_2014_overall-26,AO3_2014_overall,27,None,Zayn Malik x Liam Payne,2,slash,None,4462,One Direction (Band),None
+AO3_2014_overall-26,AO3_2014_overall,27,None,Liam Payne x Zayn Malik,2,slash,None,4462,One Direction (Band),None
 AO3_2014_overall-27,AO3_2014_overall,28,None,Gabriel x Sam Winchester,2,slash,None,4288,Supernatural,None
 AO3_2014_overall-28,AO3_2014_overall,29,None,Arthur x Eames,2,slash,None,4164,Inception (2010),None
-AO3_2014_overall-29,AO3_2014_overall,30,None,Sirius Black x Remus Lupin,2,slash,None,4144,Harry Potter - J. K. Rowling,None
-AO3_2014_overall-30,AO3_2014_overall,31,None,Virginia 'Pepper' Potts | Rescue x Tony Stark | Iron Man,2,slash,None,3876,The Avengers (Marvel Movies),None
+AO3_2014_overall-29,AO3_2014_overall,30,None,Remus Lupin x Sirius Black,2,slash,None,4144,Harry Potter - J. K. Rowling,None
+AO3_2014_overall-30,AO3_2014_overall,31,None,Tony Stark | Iron Man x Virginia 'Pepper' Potts | Rescue,2,slash,None,3876,The Avengers (Marvel Movies),None
 AO3_2014_overall-31,AO3_2014_overall,32,None,Loki Laufeyson/Odinson x Tony Stark | Iron Man,2,slash,None,3782,The Avengers (Marvel Movies),None
-AO3_2014_overall-32,AO3_2014_overall,33,new,Levi Ackerman x Eren Yeager,2,slash,None,3598,Shingeki no Kyojin | Attack on Titan,None
+AO3_2014_overall-32,AO3_2014_overall,33,new,Eren Yeager x Levi Ackerman,2,slash,None,3598,Shingeki no Kyojin | Attack on Titan,None
 AO3_2014_overall-33,AO3_2014_overall,34,None,Bilbo Baggins x Thorin Oakenshield,2,slash,None,3446,The Hobbit - All Media Types,None
 AO3_2014_overall-34,AO3_2014_overall,35,None,Frank Iero x Gerard Way,2,slash,None,3408,My Chemical Romance,None
-AO3_2014_overall-35,AO3_2014_overall,36,None,Will Graham x Hannibal Lecter,2,slash,None,3217,Hannibal (TV),None
-AO3_2014_overall-36,AO3_2014_overall,37,None,Mycroft Holmes x Greg Lestrade,2,slash,None,3000,Sherlock (TV),None
-AO3_2014_overall-37,AO3_2014_overall,38,None,John Egbert x Dave Strider,2,slash,None,2938,Homestuck,None
+AO3_2014_overall-35,AO3_2014_overall,36,None,Hannibal Lecter x Will Graham,2,slash,None,3217,Hannibal (TV),None
+AO3_2014_overall-36,AO3_2014_overall,37,None,Greg Lestrade x Mycroft Holmes,2,slash,None,3000,Sherlock (TV),None
+AO3_2014_overall-37,AO3_2014_overall,38,None,Dave Strider x John Egbert,2,slash,None,2938,Homestuck,None
 AO3_2014_overall-38,AO3_2014_overall,39,None,Ian Gallagher x Mickey Milkovich,2,slash,None,2930,Shameless (US),None
 AO3_2014_overall-39,AO3_2014_overall,40,None,Benton Fraser x Ray Kowalski,2,slash,None,2839,due South,None
 AO3_2014_overall-40,AO3_2014_overall,41,None,Daniel Jackson x Jack O'Neill,2,slash,None,2805,Stargate SG-1,None
 AO3_2014_overall-41,AO3_2014_overall,42,None,Hermione Granger x Ron Weasley,2,slash,None,2677,Harry Potter - J. K. Rowling,None
 AO3_2014_overall-42,AO3_2014_overall,43,None,Belle x Mr. Gold | Rumpelstiltskin,2,slash,None,2614,Once Upon a Time (TV),None
 AO3_2014_overall-43,AO3_2014_overall,44,None,James Bond x Q,2,slash,None,2560,Skyfall (2012),None
-AO3_2014_overall-44,AO3_2014_overall,45,None,Mary Morstan x John Watson,2,slash,None,2535,Sherlock (TV),None
-AO3_2014_overall-45,AO3_2014_overall,46,None,The Tenth Doctor x Rose Tyler,2,slash,None,2514,Doctor Who (2005),None
+AO3_2014_overall-44,AO3_2014_overall,45,None,John Watson x Mary Morstan,2,slash,None,2535,Sherlock (TV),None
+AO3_2014_overall-45,AO3_2014_overall,46,None,Rose Tyler x The Tenth Doctor,2,slash,None,2514,Doctor Who (2005),None
 AO3_2014_overall-46,AO3_2014_overall,47,new,Carlos x Cecil Palmer,2,slash,None,2464,Welcome to Night Vale,None
-AO3_2014_overall-47,AO3_2014_overall,48,None,The Eleventh Doctor x River Song,2,slash,None,2393,Doctor Who (2005),None
+AO3_2014_overall-47,AO3_2014_overall,48,None,River Song x The Eleventh Doctor,2,slash,None,2393,Doctor Who (2005),None
 AO3_2014_overall-48,AO3_2014_overall,49,None,Niall Horan x Zayn Malik,2,slash,None,2386,One Direction (Band),None
-AO3_2014_overall-49,AO3_2014_overall,50,None,Lydia Martin x Jackson Whittemore,2,slash,None,2372,Teen Wolf (TV),None
-AO3_2014_overall-50,AO3_2014_overall,51,None,Regina Mills | Evil Queen x Emma Swan,2,slash,None,2359,Once Upon a Time (TV),None
+AO3_2014_overall-49,AO3_2014_overall,50,None,Jackson Whittemore x Lydia Martin,2,slash,None,2372,Teen Wolf (TV),None
+AO3_2014_overall-50,AO3_2014_overall,51,None,Emma Swan x Regina Mills | Evil Queen,2,slash,None,2359,Once Upon a Time (TV),None
 AO3_2014_overall-51,AO3_2014_overall,52,None,Katniss Everdeen x Peeta Mellark,2,slash,None,2280,Hunger Games Trilogy - Suzanne Collins,None
-AO3_2014_overall-52,AO3_2014_overall,53,None,Niall Horan x Harry Styles,2,slash,None,2264,One Direction (Band),None
-AO3_2014_overall-53,AO3_2014_overall,54,None,Spike x Buffy Summers,2,slash,None,2232,Buffy the Vampire Slayer,None
-AO3_2014_overall-54,AO3_2014_overall,55,new,Sherlock Holmes x Molly Hooper,2,slash,None,2196,Sherlock (TV),None
-AO3_2014_overall-55,AO3_2014_overall,56,None,Sebastian Moran x Jim Moriarty,2,slash,None,2188,Sherlock (TV),None
-AO3_2014_overall-56,AO3_2014_overall,57,new,Marco Bott x Jean Kirstein,2,slash,None,2186,Shingeki no Kyojin | Attack on Titan,None
-AO3_2014_overall-57,AO3_2014_overall,58,None,Sam Carter x Jack O'Neill,2,slash,None,2185,Stargate SG-1,None
+AO3_2014_overall-52,AO3_2014_overall,53,None,Harry Styles x Niall Horan,2,slash,None,2264,One Direction (Band),None
+AO3_2014_overall-53,AO3_2014_overall,54,None,Buffy Summers x Spike,2,slash,None,2232,Buffy the Vampire Slayer,None
+AO3_2014_overall-54,AO3_2014_overall,55,new,Molly Hooper x Sherlock Holmes,2,slash,None,2196,Sherlock (TV),None
+AO3_2014_overall-55,AO3_2014_overall,56,None,Jim Moriarty x Sebastian Moran,2,slash,None,2188,Sherlock (TV),None
+AO3_2014_overall-56,AO3_2014_overall,57,new,Jean Kirstein x Marco Bott,2,slash,None,2186,Shingeki no Kyojin | Attack on Titan,None
+AO3_2014_overall-57,AO3_2014_overall,58,None,Jack O'Neill x Sam Carter,2,slash,None,2185,Stargate SG-1,None
 AO3_2014_overall-58,AO3_2014_overall,59,None,Jane Foster | Thor x Thor Odinson,2,slash,None,2158,The Avengers (Marvel Movies),None
 AO3_2014_overall-59,AO3_2014_overall,60,None,Bruce Banner | Hulk x Tony Stark | Iron Man,2,slash,None,2129,The Avengers (Marvel Movies),None
 AO3_2014_overall-60,AO3_2014_overall,61,None,Isaac Lahey x Scott McCall,2,slash,None,2060,Teen Wolf (TV),None
-AO3_2014_overall-61,AO3_2014_overall,62,None,Vernon Boyd x Erica Reyes,2,slash,None,1995,Teen Wolf (TV),None
-AO3_2014_overall-62,AO3_2014_overall,63,None,Harry Potter x Ginny Weasley,2,slash,None,1958,Harry Potter - J. K. Rowling,None
+AO3_2014_overall-61,AO3_2014_overall,62,None,Erica Reyes x Vernon Boyd,2,slash,None,1995,Teen Wolf (TV),None
+AO3_2014_overall-62,AO3_2014_overall,63,None,Ginny Weasley x Harry Potter,2,slash,None,1958,Harry Potter - J. K. Rowling,None
 AO3_2014_overall-63,AO3_2014_overall,64,None,Dean Winchester & Sam Winchester,2,gen,None,1944,Supernatural,None
 AO3_2014_overall-64,AO3_2014_overall,65,None,Adam Lambert x Tommy Ratliff,2,slash,None,1934,Adam Lambert (Musician),None
 AO3_2014_overall-65,AO3_2014_overall,66,None,Jessica Moore x Sam Winchester,2,slash,None,1885,Supernatural,None
-AO3_2014_overall-66,AO3_2014_overall,67,None,Rose Lalonde x Kanaya Maryam,2,slash,None,1838,Homestuck,None
-AO3_2014_overall-67,AO3_2014_overall,68,None,Hermione Granger x Draco Malfoy,2,slash,None,1834,Harry Potter - J. K. Rowling,None
-AO3_2014_overall-68,AO3_2014_overall,69,new,Oliver Queen | Green Arrow x Felicity Smoak,2,slash,None,1823,Arrow (TV 2012),None
+AO3_2014_overall-66,AO3_2014_overall,67,None,Kanaya Maryam x Rose Lalonde,2,slash,None,1838,Homestuck,None
+AO3_2014_overall-67,AO3_2014_overall,68,None,Draco Malfoy x Hermione Granger,2,slash,None,1834,Harry Potter - J. K. Rowling,None
+AO3_2014_overall-68,AO3_2014_overall,69,new,Felicity Smoak x Oliver Queen | Green Arrow,2,slash,None,1823,Arrow (TV 2012),None
 AO3_2014_overall-69,AO3_2014_overall,70,None,Anthony DiNozzo x Jethro Gibbs,2,slash,None,1693,NCIS,None
 AO3_2014_overall-70,AO3_2014_overall,71,new,Castiel & Dean Winchester,2,gen,None,1640,Supernatural,None
-AO3_2014_overall-71,AO3_2014_overall,72,None,Kris Allen x Adam Lambert,2,slash,None,1637,American Idol RPF,None
-AO3_2014_overall-72,AO3_2014_overall,73,None,Santana Lopez x Brittany S. Pierce,2,slash,None,1613,Glee,None
+AO3_2014_overall-71,AO3_2014_overall,72,None,Adam Lambert x Kris Allen,2,slash,None,1637,American Idol RPF,None
+AO3_2014_overall-72,AO3_2014_overall,73,None,Brittany S. Pierce x Santana Lopez,2,slash,None,1613,Glee,None
 AO3_2014_overall-73,AO3_2014_overall,74,None,Brian Kinney x Justin Taylor,2,slash,None,1598,Queer as Folk (US),None
 AO3_2014_overall-74,AO3_2014_overall,74,new,Gavin Free x Michael Jones,2,slash,None,1598,Rooster Teeth/Achievement Hunter RPF,None
-AO3_2014_overall-75,AO3_2014_overall,76,new,Killian Jones | Captain Hook x Emma Swan,2,slash,None,1551,Once Upon a Time (TV),None
+AO3_2014_overall-75,AO3_2014_overall,76,new,Emma Swan x Killian Jones | Captain Hook,2,slash,None,1551,Once Upon a Time (TV),None
 AO3_2014_overall-76,AO3_2014_overall,77,None,Amy Pond x Rory Williams,2,slash,None,1528,Doctor Who (2005),None
-AO3_2014_overall-77,AO3_2014_overall,78,None,Jake English x Dirk Strider,2,slash,None,1523,Homestuck,None
+AO3_2014_overall-77,AO3_2014_overall,78,None,Dirk Strider x Jake English,2,slash,None,1523,Homestuck,None
 AO3_2014_overall-78,AO3_2014_overall,79,None,Liam Payne x Louis Tomlinson,2,slash,None,1486,One Direction (Band),None
 AO3_2014_overall-79,AO3_2014_overall,80,None,Fíli x Kíli,2,slash,None,1480,The Hobbit (Jackson movies),None
 AO3_2014_overall-80,AO3_2014_overall,81,None,Alfred F. Jones | America x Arthur Kirkland | England,2,slash,None,1450,Hetalia: Axis Powers,None
-AO3_2014_overall-81,AO3_2014_overall,82,None,William Bodie x Ray Doyle,2,slash,None,1391,The Professionals,None
-AO3_2014_overall-82,AO3_2014_overall,83,new,Levi Ackerman x Erwin Smith,2,slash,None,1390,Shingeki no Kyojin | Attack on Titan,None
+AO3_2014_overall-81,AO3_2014_overall,82,None,Ray Doyle x William Bodie,2,slash,None,1391,The Professionals,None
+AO3_2014_overall-82,AO3_2014_overall,83,new,Erwin Smith x Levi Ackerman,2,slash,None,1390,Shingeki no Kyojin | Attack on Titan,None
 AO3_2014_overall-83,AO3_2014_overall,84,None,Castiel x Sam Winchester,2,slash,None,1387,Supernatural,None
-AO3_2014_overall-84,AO3_2014_overall,85,new,Zayn Malik x Harry Styles,2,slash,None,1375,One Direction (Band),None
-AO3_2014_overall-85,AO3_2014_overall,86,None,Xander Harris x Spike,2,slash,None,1371,Buffy the Vampire Slayer,None
+AO3_2014_overall-84,AO3_2014_overall,85,new,Harry Styles x Zayn Malik,2,slash,None,1375,One Direction (Band),None
+AO3_2014_overall-85,AO3_2014_overall,86,None,Spike x Xander Harris,2,slash,None,1371,Buffy the Vampire Slayer,None
 AO3_2014_overall-86,AO3_2014_overall,87,None,`James Potter x Lily Potter, née Evans`,2,slash,None,1366,Harry Potter - J. K. Rowling,None
 AO3_2014_overall-87,AO3_2014_overall,87,None,Remus Lupin x Severus Snape,2,slash,None,1366,Harry Potter - J. K. Rowling,None
 AO3_2014_overall-88,AO3_2014_overall,89,None,Patrick Stump x Pete Wentz,2,slash,None,1354,Fall Out Boy,None
-AO3_2014_overall-89,AO3_2014_overall,90,new,Patrick Kane x Jonathan Toews,2,slash,None,1348,Hockey RPF,None
+AO3_2014_overall-89,AO3_2014_overall,90,new,Jonathan Toews x Patrick Kane,2,slash,None,1348,Hockey RPF,None
 AO3_2014_overall-90,AO3_2014_overall,91,None,Dave Strider x Karkat Vantas,2,slash,None,1335,Homestuck,None
-AO3_2014_overall-91,AO3_2014_overall,92,None,Spock x Nyota Uhura,2,slash,None,1330,Star Trek: Alternate Original Series (Movies),None
+AO3_2014_overall-91,AO3_2014_overall,92,None,Nyota Uhura x Spock,2,slash,None,1330,Star Trek: Alternate Original Series (Movies),None
 AO3_2014_overall-92,AO3_2014_overall,93,None,Lucifer x Sam Winchester,2,slash,None,1329,Supernatural,None
 AO3_2014_overall-93,AO3_2014_overall,94,None,John Egbert x Karkat Vantas,2,slash,None,1328,Homestuck,None
 AO3_2014_overall-94,AO3_2014_overall,95,new,Peter Hale x Stiles Stilinski,2,slash,None,1313,Teen Wolf (TV),None
-AO3_2014_overall-95,AO3_2014_overall,96,None,Mike Ross x Harvey Specter,2,slash,None,1308,Suits (TV),None
+AO3_2014_overall-95,AO3_2014_overall,96,None,Harvey Specter x Mike Ross,2,slash,None,1308,Suits (TV),None
 AO3_2014_overall-96,AO3_2014_overall,97,None,Greg House x James Wilson,2,slash,None,1281,House M.D.,None
-AO3_2014_overall-97,AO3_2014_overall,98,new,Niall Horan x Liam Payne,2,slash,None,1280,One Direction (Band),None
-AO3_2014_overall-98,AO3_2014_overall,99,new,Newton Geiszler x Hermann Gottlieb,2,slash,None,1277,Pacific Rim (2013),None
+AO3_2014_overall-97,AO3_2014_overall,98,new,Liam Payne x Niall Horan,2,slash,None,1280,One Direction (Band),None
+AO3_2014_overall-98,AO3_2014_overall,99,new,Hermann Gottlieb x Newton Geiszler,2,slash,None,1277,Pacific Rim (2013),None
 AO3_2014_overall-99,AO3_2014_overall,100,new,Scott McCall x Stiles Stilinski,2,slash,None,1250,Teen Wolf (TV),None
