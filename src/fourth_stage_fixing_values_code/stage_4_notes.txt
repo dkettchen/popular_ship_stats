@@ -48,7 +48,7 @@ cause she's a wd character, even tho she's being used by the the 100 shippers �
     -replace characters (keep in order) w clean full names (details can stay in other file)
     -create new files to store the cleaned main files
     
--test new files to make sure data is correct/nothing was lost
+-test new files to make sure data is correct/nothing was lost ✅
     # I can already see we're missing minecrafter rpf from our abbr char list :l
 
 
@@ -108,7 +108,7 @@ stage 5: adding additional info
 # same for race where in order or same
     # from most recent info, do not replace w older info
     # otherwise keep track of untouched labels for later research & categorisation
-
+✅
 
 # - adding types of media for fictional category
         # -many fandoms will have multiple adaptations

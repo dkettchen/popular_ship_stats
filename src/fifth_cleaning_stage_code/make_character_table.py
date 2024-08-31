@@ -62,16 +62,3 @@ def prep_characters_for_csv(sorted_dict):
     
     return new_list
 
-
-
-# second char func:
-# prep previous output dict for csv:
-    # remove op versions key
-    # make columns list
-    # make values lists for each key
-    # add to nested list
-    # return nested list
-
-# print to csv using util
-
-

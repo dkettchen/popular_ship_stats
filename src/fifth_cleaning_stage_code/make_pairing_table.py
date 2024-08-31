@@ -1,11 +1,3 @@
-# pairings table:
-    # - key of alphabetically sorted ship member names (to reuse in main sets later)
-    # - members of pairing (make into individual rows?)
-    # - num of members in pairing
-    # - gender info (either combo and/or per member?)
-    # - race info (either combo, whether it's interracial or no, and/or per member?)
-
-
 from src.util_functions.make_ship_tag import make_ship_tag
 from json import load
 
