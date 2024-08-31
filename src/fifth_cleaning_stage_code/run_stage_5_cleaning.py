@@ -66,11 +66,13 @@ if __name__ == "__main__":
     json_ships_filepath = "data/fifth_clean_up_data/stage_5_ships.json"
     with open(json_ships_filepath, "w") as json_ship_file:
         dump(ship_dict, json_ship_file, indent=4)
-    
+
     ship_list = prep_ships_for_csv(ship_dict)
     csv_ship_filepath = "data/fifth_clean_up_data/stage_5_ships.csv"
     make_csv_file(ship_list, csv_ship_filepath)
 
-    # for data_set_name in all_main_data_sets:
-    #     data = all_main_data_sets[data_set_name]
-    #     ranking = make_ranking_table(data, data_set_name)
+    for data_set_name in all_main_data_sets:
+        data = all_main_data_sets[data_set_name]
+        ranking = make_ranking_table(data, data_set_name)
+        ranking_filepath = f'data/fifth_clean_up_data/{data_set_name[:8].lower()}/stage_5_{data_set_name.lower()}.csv'
+        make_csv_file(ranking, ranking_filepath)
