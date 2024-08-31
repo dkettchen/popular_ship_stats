@@ -85,3 +85,74 @@ def make_ships_dict(all_data_sets):
 
     return all_ships_dict
 
+def prep_ships_for_csv(ship_dict):
+    """
+    takes the output of make_ships_dict
+
+    returns a nested list with the following column names and associated values: ["slash_ship", 
+    "gen_ship", "members_no", "fandom", "rpf_or_fic", "gender_combo", "race_combo", "member_1", 
+    "member_2", "member_3", "member_4",]
+
+    The gender combos have been made into one value with 2-3 gender labels. 
+    The race combos have been made into one value with either one (where everyone was the same 
+    label) or all labels.
+    The members list has been disassembled into the individual members' key names. Where less than 
+    4 members are in the ship, the remaining member values are None.
+    """
+
+    columns = [
+        "slash_ship",
+        "gen_ship",
+        "members_no",
+        "fandom",
+        "rpf_or_fic",
+        "gender_combo",
+        "race_combo",
+        "member_1",
+        "member_2",
+        "member_3",
+        "member_4",
+    ]
+
+    new_list = [columns]
+
+    for ship in ship_dict:
+        temp_list = []
+        for key in [
+            "slash_ship",
+            "gen_ship",
+            "members_no",
+            "fandom",
+            "rpf_or_fic",
+        ]:
+            temp_list.append(ship_dict[ship][key])
+
+        if len(set(ship_dict[ship]["gender_combo"])) == 2 and ship_dict[ship]["members_no"] == 3:
+            # if there are 3 ppl and there are two different gender tags 
+            # -> we want to capture all of em to see who is in the minority
+            gender_combo = f'{ship_dict[ship]["gender_combo"][0]} / {ship_dict[ship]["gender_combo"][1]} / {ship_dict[ship]["gender_combo"][2]}'
+        else: 
+            # all 4-way ones are same-sex, everyone else will either be 2 ppl or same-sex 3-way
+            gender_combo = f'{ship_dict[ship]["gender_combo"][0]} / {ship_dict[ship]["gender_combo"][1]}'
+
+        race_combo = f'{ship_dict[ship]["race_combo"][0]}'
+        if len(set(ship_dict[ship]["race_combo"])) != 1:
+            # if they're all the same, why bother listing em all
+            # if they're diff we will list em all
+            for tag in ship_dict[ship]["race_combo"][1:]:
+                race_combo += " / " + tag
+
+        member_1 = ship_dict[ship]["members_list"][0]["member_key"]
+        member_2 = ship_dict[ship]["members_list"][1]["member_key"]
+        member_3 = None
+        member_4 = None
+        if ship_dict[ship]["members_no"] > 2:
+            member_3 = ship_dict[ship]["members_list"][2]["member_key"]
+            if ship_dict[ship]["members_no"] == 4:
+                member_4 = ship_dict[ship]["members_list"][3]["member_key"]
+
+        temp_list.extend([gender_combo, race_combo, member_1, member_2, member_3, member_4])
+
+        new_list.append(temp_list)
+
+    return new_list

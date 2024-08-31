@@ -43,7 +43,7 @@ from src.fifth_cleaning_stage_code.make_old_names_table import make_old_names_di
 from src.util_functions.write_csv_file import make_csv_file
 from src.util_functions.get_all_main_data_sets import get_all_main_sets
 from src.fifth_cleaning_stage_code.make_main_tables import make_ranking_table
-from src.fifth_cleaning_stage_code.make_pairing_table import make_ships_dict
+from src.fifth_cleaning_stage_code.make_pairing_table import make_ships_dict, prep_ships_for_csv
 
 
 if __name__ == "__main__":
@@ -66,6 +66,10 @@ if __name__ == "__main__":
     json_ships_filepath = "data/fifth_clean_up_data/stage_5_ships.json"
     with open(json_ships_filepath, "w") as json_ship_file:
         dump(ship_dict, json_ship_file, indent=4)
+    
+    ship_list = prep_ships_for_csv(ship_dict)
+    csv_ship_filepath = "data/fifth_clean_up_data/stage_5_ships.csv"
+    make_csv_file(ship_list, csv_ship_filepath)
 
     # for data_set_name in all_main_data_sets:
     #     data = all_main_data_sets[data_set_name]
