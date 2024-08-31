@@ -17401,7 +17401,7 @@
         "members_list": [
             {
                 "member_key": "The Big Bang Theory - Penny",
-                "member_gender": null,
+                "member_gender": "F",
                 "member_race": "White",
                 "member_name": "Penny"
             },
@@ -17413,7 +17413,7 @@
             }
         ],
         "gender_combo": [
-            null,
+            "F",
             "M"
         ],
         "race_combo": [

@@ -40,7 +40,7 @@ def assign_gender(data_dict):
         'Elizabeth Weir',
         'Joyce Byers',
         'Jessica Moore',
-        "Penelope 'Penny' Hofstadter",
+        "Penny",
         'Willow Park',
         'Lucy Chen',
         'Dana Scully',

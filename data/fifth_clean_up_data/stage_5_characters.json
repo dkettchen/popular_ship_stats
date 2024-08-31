@@ -15143,7 +15143,7 @@
         "op_versions": [
             "Penny"
         ],
-        "gender": null,
+        "gender": "F",
         "race": "White",
         "rpf_or_fic": "fictional"
     },

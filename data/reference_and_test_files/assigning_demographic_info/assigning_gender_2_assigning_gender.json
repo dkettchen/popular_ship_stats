@@ -14444,7 +14444,7 @@
                 "op_versions": [
                     "Penny"
                 ],
-                "gender": null
+                "gender": "F"
             },
             "Sheldon Cooper": {
                 "given_name": "Sheldon",

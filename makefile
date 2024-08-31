@@ -34,3 +34,7 @@ update-characters:
 # runs all fandom & character updates
 update-fandoms-and-characters:
 	make update-fandoms update-characters
+
+# runs stage 5 cleaning file
+run-cleaning-5:
+	python src/fifth_cleaning_stage_code/run_stage_5_cleaning.py
