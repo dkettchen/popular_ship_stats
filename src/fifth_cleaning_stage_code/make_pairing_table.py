@@ -36,7 +36,11 @@ def make_ships_dict(all_data_sets):
     
     all_ships_dict = {}
 
-    for fandom in pairings_dict:
+    sorted_fandoms = sorted(list(pairings_dict.keys()))
+
+    for fandom in sorted_fandoms:
+        fandom_ships = {}
+
         for pairing in pairings_dict[fandom]:
             slash_ship = make_ship_tag(pairing, "slash")
             gen_ship = make_ship_tag(pairing, "gen")
@@ -73,7 +77,11 @@ def make_ships_dict(all_data_sets):
                 "race_combo": race_combo,
             }
 
-            all_ships_dict[slash_ship] = ship_dict
+            fandom_ships[slash_ship] = ship_dict
+
+        sorted_pairings = sorted(list(fandom_ships.keys()))
+        for ship in sorted_pairings:
+            all_ships_dict[ship] = fandom_ships[ship]
 
     return all_ships_dict
 
