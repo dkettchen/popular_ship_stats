@@ -127,6 +127,9 @@ def format_unified_labels(data_dict):
             new_rpf_fandom = sub(r"\|", "/", rpf_fandom)
         else: new_rpf_fandom = rpf_fandom # it stays as is
         
+        if new_rpf_fandom == "Lord of the Rings":
+            new_rpf_fandom = "Lord of the Rings Universe"
+
         if new_rpf_fandom in list(new_dict["RPF"].keys()): # if we already got the fandom
             new_dict["RPF"][new_rpf_fandom]["OP Versions"].add(rpf_fandom) # we add to it
         else: # other wise add it

@@ -8164,44 +8164,6 @@
         "race": "White",
         "rpf_or_fic": "fictional"
     },
-    "Lord of the Rings - Sean Bean": {
-        "given_name": "Sean",
-        "middle_name": null,
-        "maiden_name": null,
-        "surname": "Bean",
-        "alias": null,
-        "nickname": null,
-        "title (prefix)": null,
-        "title (suffix)": null,
-        "name_order": "W",
-        "full_name": "Sean Bean",
-        "fandom": "Lord of the Rings",
-        "op_versions": [
-            "Sean Bean"
-        ],
-        "gender": "M",
-        "race": "White",
-        "rpf_or_fic": "RPF"
-    },
-    "Lord of the Rings - Viggo Mortensen": {
-        "given_name": "Viggo",
-        "middle_name": null,
-        "maiden_name": null,
-        "surname": "Mortensen",
-        "alias": null,
-        "nickname": null,
-        "title (prefix)": null,
-        "title (suffix)": null,
-        "name_order": "W",
-        "full_name": "Viggo Mortensen",
-        "fandom": "Lord of the Rings",
-        "op_versions": [
-            "Viggo Mortensen"
-        ],
-        "gender": "M",
-        "race": "White",
-        "rpf_or_fic": "RPF"
-    },
     "Lord of the Rings Universe - Bilbo Baggins": {
         "given_name": "Bilbo",
         "middle_name": null,
@@ -8297,6 +8259,25 @@
         "race": "White",
         "rpf_or_fic": "fictional"
     },
+    "Lord of the Rings Universe - Sean Bean": {
+        "given_name": "Sean",
+        "middle_name": null,
+        "maiden_name": null,
+        "surname": "Bean",
+        "alias": null,
+        "nickname": null,
+        "title (prefix)": null,
+        "title (suffix)": null,
+        "name_order": "W",
+        "full_name": "Sean Bean",
+        "fandom": "Lord of the Rings Universe",
+        "op_versions": [
+            "Sean Bean"
+        ],
+        "gender": "M",
+        "race": "White",
+        "rpf_or_fic": "RPF"
+    },
     "Lord of the Rings Universe - Thorin Oakenshield": {
         "given_name": "Thorin",
         "middle_name": null,
@@ -8315,6 +8296,25 @@
         "gender": "M",
         "race": "White",
         "rpf_or_fic": "fictional"
+    },
+    "Lord of the Rings Universe - Viggo Mortensen": {
+        "given_name": "Viggo",
+        "middle_name": null,
+        "maiden_name": null,
+        "surname": "Mortensen",
+        "alias": null,
+        "nickname": null,
+        "title (prefix)": null,
+        "title (suffix)": null,
+        "name_order": "W",
+        "full_name": "Viggo Mortensen",
+        "fandom": "Lord of the Rings Universe",
+        "op_versions": [
+            "Viggo Mortensen"
+        ],
+        "gender": "M",
+        "race": "White",
+        "rpf_or_fic": "RPF"
     },
     "Lost Girl - Bo": {
         "given_name": "Bo",

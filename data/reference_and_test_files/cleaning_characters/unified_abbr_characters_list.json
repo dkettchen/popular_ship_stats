@@ -397,7 +397,7 @@
             "rpf_or_fic": "RPF"
         }
     },
-    "Lord of the Rings": {
+    "Lord of the Rings Universe": {
         "Sean Bean": {
             "full_name": "Sean Bean",
             "op_versions": [
@@ -411,6 +411,48 @@
                 "Viggo Mortensen"
             ],
             "rpf_or_fic": "RPF"
+        },
+        "Bilbo Baggins": {
+            "full_name": "Bilbo Baggins",
+            "op_versions": [
+                "Bilbo Baggins"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "Frodo Baggins": {
+            "full_name": "Frodo Baggins",
+            "op_versions": [
+                "Frodo Baggins"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "F\u00edli": {
+            "full_name": "F\u00edli",
+            "op_versions": [
+                "F\u00edli"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "K\u00edli": {
+            "full_name": "K\u00edli",
+            "op_versions": [
+                "K\u00edli"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "Sam Gamgee": {
+            "full_name": "Sam Gamgee",
+            "op_versions": [
+                "Sam Gamgee"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "Thorin Oakenshield": {
+            "full_name": "Thorin Oakenshield",
+            "op_versions": [
+                "Thorin Oakenshield"
+            ],
+            "rpf_or_fic": "fictional"
         }
     },
     "MIRROR": {
@@ -3882,50 +3924,6 @@
             "full_name": "Lucy Carlyle",
             "op_versions": [
                 "Lucy Carlyle"
-            ],
-            "rpf_or_fic": "fictional"
-        }
-    },
-    "Lord of the Rings Universe": {
-        "Bilbo Baggins": {
-            "full_name": "Bilbo Baggins",
-            "op_versions": [
-                "Bilbo Baggins"
-            ],
-            "rpf_or_fic": "fictional"
-        },
-        "Frodo Baggins": {
-            "full_name": "Frodo Baggins",
-            "op_versions": [
-                "Frodo Baggins"
-            ],
-            "rpf_or_fic": "fictional"
-        },
-        "F\u00edli": {
-            "full_name": "F\u00edli",
-            "op_versions": [
-                "F\u00edli"
-            ],
-            "rpf_or_fic": "fictional"
-        },
-        "K\u00edli": {
-            "full_name": "K\u00edli",
-            "op_versions": [
-                "K\u00edli"
-            ],
-            "rpf_or_fic": "fictional"
-        },
-        "Sam Gamgee": {
-            "full_name": "Sam Gamgee",
-            "op_versions": [
-                "Sam Gamgee"
-            ],
-            "rpf_or_fic": "fictional"
-        },
-        "Thorin Oakenshield": {
-            "full_name": "Thorin Oakenshield",
-            "op_versions": [
-                "Thorin Oakenshield"
             ],
             "rpf_or_fic": "fictional"
         }

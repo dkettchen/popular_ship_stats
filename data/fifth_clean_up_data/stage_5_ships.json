@@ -7932,35 +7932,6 @@
             "White"
         ]
     },
-    "Sean Bean x Viggo Mortensen": {
-        "slash_ship": "Sean Bean x Viggo Mortensen",
-        "gen_ship": "Sean Bean & Viggo Mortensen",
-        "members_no": 2,
-        "fandom": "Lord of the Rings",
-        "rpf_or_fic": "RPF",
-        "members_list": [
-            {
-                "member_key": "Lord of the Rings - Sean Bean",
-                "member_gender": "M",
-                "member_race": "White",
-                "member_name": "Sean Bean"
-            },
-            {
-                "member_key": "Lord of the Rings - Viggo Mortensen",
-                "member_gender": "M",
-                "member_race": "White",
-                "member_name": "Viggo Mortensen"
-            }
-        ],
-        "gender_combo": [
-            "M",
-            "M"
-        ],
-        "race_combo": [
-            "White",
-            "White"
-        ]
-    },
     "Bilbo Baggins x Thorin Oakenshield": {
         "slash_ship": "Bilbo Baggins x Thorin Oakenshield",
         "gen_ship": "Bilbo Baggins & Thorin Oakenshield",
@@ -8037,6 +8008,35 @@
                 "member_gender": "M",
                 "member_race": "White",
                 "member_name": "K\u00edli"
+            }
+        ],
+        "gender_combo": [
+            "M",
+            "M"
+        ],
+        "race_combo": [
+            "White",
+            "White"
+        ]
+    },
+    "Sean Bean x Viggo Mortensen": {
+        "slash_ship": "Sean Bean x Viggo Mortensen",
+        "gen_ship": "Sean Bean & Viggo Mortensen",
+        "members_no": 2,
+        "fandom": "Lord of the Rings Universe",
+        "rpf_or_fic": "RPF",
+        "members_list": [
+            {
+                "member_key": "Lord of the Rings Universe - Sean Bean",
+                "member_gender": "M",
+                "member_race": "White",
+                "member_name": "Sean Bean"
+            },
+            {
+                "member_key": "Lord of the Rings Universe - Viggo Mortensen",
+                "member_gender": "M",
+                "member_race": "White",
+                "member_name": "Viggo Mortensen"
             }
         ],
         "gender_combo": [
