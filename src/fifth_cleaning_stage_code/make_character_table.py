@@ -14,12 +14,35 @@ def make_sorted_char_dict():
 
     new_dict = {}
 
+    og_keys = [
+        "given_name",
+        "middle_name",
+        "maiden_name",
+        "surname",
+        "alias",
+        "nickname",
+        "name_order",
+        "full_name",
+        "fandom",
+        "op_versions",
+        "gender",
+        "race"
+    ]
+    keys_to_rename = {
+        "title (prefix)": "title_prefix",
+        "title (suffix)": "title_suffix",
+    }
+
     for category in ["RPF", "fictional"]:
         for fandom in loaded_chars[category]:
             for character in loaded_chars[category][fandom]:
                 key_name = f"{fandom} - {character}" # alternatively change this format around idk
-                new_dict[key_name] = loaded_chars[category][fandom][character]
+                new_dict[key_name] = {}
+                for key in og_keys:
+                    new_dict[key_name][key] = loaded_chars[category][fandom][character][key]
                 new_dict[key_name]["rpf_or_fic"] = category
+                for key in keys_to_rename:
+                    new_dict[key_name][keys_to_rename[key]] = loaded_chars[category][fandom][character][key]
 
     sorted_keys = sorted(list(new_dict.keys()))
     sorted_dict = {}
@@ -43,8 +66,8 @@ def prep_characters_for_csv(sorted_dict):
         "surname",
         "alias",
         "nickname",
-        "title (prefix)",
-        "title (suffix)",
+        "title_prefix",
+        "title_suffix",
         "name_order",
         "full_name",
         "fandom",

@@ -1,4 +1,4 @@
-given_name,middle_name,maiden_name,surname,alias,nickname,title (prefix),title (suffix),name_order,full_name,fandom,gender,race,rpf_or_fic
+given_name,middle_name,maiden_name,surname,alias,nickname,title_prefix,title_suffix,name_order,full_name,fandom,gender,race,rpf_or_fic
 Luke,None,None,Hemmings,None,None,None,None,W,Luke Hemmings,5 Seconds of Summer,M,White,RPF
 Michael,None,None,Clifford,None,None,None,None,W,Michael Clifford,5 Seconds of Summer,M,White,RPF
 Carlos,None,None,Reyes,None,None,None,None,W,Carlos Reyes,9-1-1,M,Latin,fictional
