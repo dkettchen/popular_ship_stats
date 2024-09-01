@@ -6,8 +6,10 @@ def make_ship_tag(member_list: str, fic_type):
     separated by a " & " if the fic type is "gen",
     or by an " x " if it is anything else
     """
+    if len(member_list) == 1:
+        return member_list[0]
 
-    if fic_type == "gen":
+    if fic_type.lower() == "gen":
         separator = " & "
     else: 
         separator = " x "
