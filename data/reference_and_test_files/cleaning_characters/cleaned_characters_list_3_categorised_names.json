@@ -12211,16 +12211,16 @@
                     ]
                 },
                 {
-                    "given_name": "Jim",
+                    "given_name": null,
                     "middle_name": null,
                     "maiden_name": null,
                     "surname": "Moriarty",
                     "alias": null,
-                    "nickname": null,
+                    "nickname": "Jim",
                     "title (prefix)": null,
                     "title (suffix)": null,
-                    "name_order": "W",
-                    "full_name": "Jim Moriarty",
+                    "name_order": null,
+                    "full_name": "'Jim' Moriarty",
                     "fandom": "Sherlock",
                     "op_versions": [
                         "Jim Moriarty"

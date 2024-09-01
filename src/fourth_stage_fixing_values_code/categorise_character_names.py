@@ -424,7 +424,8 @@ def categorise_names(char_by_fandom_dict):
         ['Xiao', 'Alatus'],
         ["Tartaglia", "Childe"],
         ["Hunter","The Golden Guard"],
-        ["Quynh","Noriko"]
+        ["Quynh","Noriko"],
+        ["Jim", "Moriarty"],
     ]
     given_suffix = [
         ['Ymir', 'of the 104th'],
@@ -624,6 +625,9 @@ def categorise_names(char_by_fandom_dict):
                         given_name = split_name[1]
                     elif split_name == ["Quynh","Noriko"]:
                         given_name = "Quỳnh/Noriko"
+                    elif split_name == ["Jim", "Moriarty"]:
+                        nickname = split_name[0]
+                        surname = split_name[1]
 
                 elif len(split_name) == 1 \
                 and split_name[0] != "Reader" \

@@ -12340,47 +12340,18 @@
             "White"
         ]
     },
-    "James Moriarty x Sebastian Moran": {
-        "slash_ship": "James Moriarty x Sebastian Moran",
-        "gen_ship": "James Moriarty & Sebastian Moran",
+    "James 'Jim' Moriarty x Sebastian Moran": {
+        "slash_ship": "James 'Jim' Moriarty x Sebastian Moran",
+        "gen_ship": "James 'Jim' Moriarty & Sebastian Moran",
         "members_no": 2,
         "fandom": "Sherlock",
         "rpf_or_fic": "fictional",
         "members_list": [
             {
-                "member_key": "Sherlock - James Moriarty",
+                "member_key": "Sherlock - James 'Jim' Moriarty",
                 "member_gender": "M",
                 "member_race": "White",
-                "member_name": "James Moriarty"
-            },
-            {
-                "member_key": "Sherlock - Sebastian Moran",
-                "member_gender": "M",
-                "member_race": "White",
-                "member_name": "Sebastian Moran"
-            }
-        ],
-        "gender_combo": [
-            "M",
-            "M"
-        ],
-        "race_combo": [
-            "White",
-            "White"
-        ]
-    },
-    "Jim Moriarty x Sebastian Moran": {
-        "slash_ship": "Jim Moriarty x Sebastian Moran",
-        "gen_ship": "Jim Moriarty & Sebastian Moran",
-        "members_no": 2,
-        "fandom": "Sherlock",
-        "rpf_or_fic": "fictional",
-        "members_list": [
-            {
-                "member_key": "Sherlock - Jim Moriarty",
-                "member_gender": "M",
-                "member_race": "White",
-                "member_name": "Jim Moriarty"
+                "member_name": "James 'Jim' Moriarty"
             },
             {
                 "member_key": "Sherlock - Sebastian Moran",

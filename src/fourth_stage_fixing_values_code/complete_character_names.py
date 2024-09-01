@@ -155,6 +155,15 @@ def make_unique_characters(input_data):
                         char_value["full_name"] = "Guinevere 'Gwen' Pendragon"
                     else:
                         unique_characters["fictional"][fandom]["Guinevere 'Gwen' Pendragon"]["op_versions"].extend(char["op_versions"])
+                elif fandom == "Sherlock" and char["surname"] == "Moriarty":
+                    if "James 'Jim' Moriarty" not in unique_characters["fictional"][fandom].keys():
+                        unique_characters["fictional"][fandom]["James 'Jim' Moriarty"] = char
+                        if unique_characters["fictional"][fandom]["James 'Jim' Moriarty"]["nickname"]:
+                            unique_characters["fictional"][fandom]["James 'Jim' Moriarty"]["given_name"] = "James"
+                        elif unique_characters["fictional"][fandom]["James 'Jim' Moriarty"]["given_name"]:
+                            unique_characters["fictional"][fandom]["James 'Jim' Moriarty"]["nickname"] = "Jim"
+                    else:
+                        unique_characters["fictional"][fandom]["James 'Jim' Moriarty"]["op_versions"].extend(char["op_versions"])
                 else:
                     unique_characters["fictional"][fandom][char["full_name"]] = char
             else:

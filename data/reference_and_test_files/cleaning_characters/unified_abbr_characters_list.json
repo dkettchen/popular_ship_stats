@@ -5427,16 +5427,10 @@
             ],
             "rpf_or_fic": "fictional"
         },
-        "James Moriarty": {
-            "full_name": "James Moriarty",
+        "James 'Jim' Moriarty": {
+            "full_name": "James 'Jim' Moriarty",
             "op_versions": [
-                "James Moriarty"
-            ],
-            "rpf_or_fic": "fictional"
-        },
-        "Jim Moriarty": {
-            "full_name": "Jim Moriarty",
-            "op_versions": [
+                "James Moriarty",
                 "Jim Moriarty"
             ],
             "rpf_or_fic": "fictional"

@@ -660,8 +660,7 @@ Clara,None,None,None,None,None,None,None,None,Clara,Sherlock,F,Unknown,fictional
 Greg,None,None,Lestrade,None,None,None,None,W,Greg Lestrade,Sherlock,M,White,fictional
 Harriet,None,None,Watson,None,Harry,None,None,W,Harriet 'Harry' Watson,Sherlock,F,Unknown,fictional
 Irene,None,None,Adler,None,None,None,None,W,Irene Adler,Sherlock,F,White,fictional
-James,None,None,Moriarty,None,None,None,None,W,James Moriarty,Sherlock,M,White,fictional
-Jim,None,None,Moriarty,None,None,None,None,W,Jim Moriarty,Sherlock,M,White,fictional
+James,None,None,Moriarty,None,Jim,None,None,W,James 'Jim' Moriarty,Sherlock,M,White,fictional
 John,None,None,Watson,None,None,None,None,W,John Watson,Sherlock,M,White,fictional
 None,None,None,Lestrade,None,None,None,None,None,Lestrade,Sherlock,M,White,fictional
 Mary,None,None,Morstan,None,None,None,None,W,Mary Morstan,Sherlock,F,White,fictional

@@ -12590,38 +12590,20 @@
         "race": "White",
         "rpf_or_fic": "fictional"
     },
-    "Sherlock - James Moriarty": {
+    "Sherlock - James 'Jim' Moriarty": {
         "given_name": "James",
         "middle_name": null,
         "maiden_name": null,
         "surname": "Moriarty",
         "alias": null,
-        "nickname": null,
+        "nickname": "Jim",
         "title (prefix)": null,
         "title (suffix)": null,
         "name_order": "W",
-        "full_name": "James Moriarty",
+        "full_name": "James 'Jim' Moriarty",
         "fandom": "Sherlock",
         "op_versions": [
-            "James Moriarty"
-        ],
-        "gender": "M",
-        "race": "White",
-        "rpf_or_fic": "fictional"
-    },
-    "Sherlock - Jim Moriarty": {
-        "given_name": "Jim",
-        "middle_name": null,
-        "maiden_name": null,
-        "surname": "Moriarty",
-        "alias": null,
-        "nickname": null,
-        "title (prefix)": null,
-        "title (suffix)": null,
-        "name_order": "W",
-        "full_name": "Jim Moriarty",
-        "fandom": "Sherlock",
-        "op_versions": [
+            "James Moriarty",
             "Jim Moriarty"
         ],
         "gender": "M",
