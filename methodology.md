@@ -194,6 +194,47 @@ Work in progress!
 
 - If the character has never been portrayed in visual media and is not clearly implied or established to be of a specific group, their race will be tagged as "Unknown".
 
+## Ships:
+
+### Ship labels
+
+- I used "x" as a delimiter for slash ships rather than "/", because I ended up using slashes in my name formatting and I wanted to avoid confusion (and I personally am more used to the x notation than the slash one).
+
+- I am aware that some people use "x" as a means to indicate relationship dynamics via name order (ie who is a top or a bottom), I do not use it that way (Idk which order means which anyway 😅), so here they are all simply in alphabetical order, with no comment on dynamics intended by it.
+
+- I kept OP's "&" notation for general/non-slash ships and listed all ships in my ship table file with both their slash- and their general-formatted label.
+
+- I tagged all ships in the rankings with whether they were gen or slash ships, and extracted the eliminated gender combination to its own value on the ship table instead.
+
+### Combo labels
+
+- I collected the demographic combinations of the ships according to their new (alphabetical) order.
+
+- For two character ships I collected their gender labels, regardless of contents.
+
+    > Ex. Same-sex pairings are tagged as "M / M" or "F / F" and straight pairings as "F / M" or "M / F".
+
+    > Ex. Eddie Brock and Venom are tagged as "M / Other" rather than just "Other".
+
+    > Ex. Sailor Neptune and Sailor Uranus are tagged as "F / F | Other" rather than just "F / F" or "Other".
+
+- If all characters were of the same racial group, I only tagged them once.
+
+    > Ex. A 4-way ship of white minecraft youtubers will be tagged as "White", not "White / White / White / White" (cause that feels silly).
+
+    > Ex. Princess Bubblegum and Marceline are tagged as "N.H." rather than "N.H. / N.H.".
+
+- For same-sex poly ships, I kept it as "M / M" or "F / F".
+
+    > Ex. The Amphibia girls' 3-way ship is tagged as "F / F".
+
+- For any poly ships whose labels weren't all the same I collected all labels rather than consolidating repeats.
+
+    > Ex. "Black / White / White" rather than "Black / White".
+
+    > Ex. "M / M / F" rather than "Poly" or "M / F".
+
+
 
 ## N.B.: 
 
