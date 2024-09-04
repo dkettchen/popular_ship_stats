@@ -13979,14 +13979,14 @@
             },
             {
                 "member_key": "Supernatural - Ruby",
-                "member_gender": "F | Other",
+                "member_gender": "F",
                 "member_race": "White",
                 "member_name": "Ruby"
             }
         ],
         "gender_combo": [
             "F",
-            "F | Other"
+            "F"
         ],
         "race_combo": [
             "White",

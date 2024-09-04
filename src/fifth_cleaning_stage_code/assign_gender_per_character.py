@@ -231,7 +231,9 @@ def assign_gender(data_dict):
                 elif input_character_dict["full_name"] in male_aligned_gender_questionables:
                     gender = "M | Other"
                 elif input_character_dict["full_name"] in female_aligned_gender_questionables:
-                    gender = "F | Other"
+                    if input_character_dict["fandom"] == "Supernatural":
+                        gender = "F"
+                    else: gender = "F | Other"
                 elif input_character_dict["full_name"] in cis_male_drag_queens:
                     gender = "M | F | Other"
                 elif input_character_dict["full_name"] in ambig_players_and_readers:
