@@ -59,7 +59,6 @@ def assign_gender(data_dict):
         'Jaime Lannister',
         'Jon Snow',
         "Sandor Clegane | The Hound",
-        'Lee Adama',
         'William Adama',
         'Anthony Bridgerton',
         'Richard Castle',
@@ -101,6 +100,7 @@ def assign_gender(data_dict):
         'Tim Bradford',
         'Fox Mulder',
         'Edward Cullen',
+        "Lee 'Apollo' Adama"
     ]
     gen_lads = [
         "Ranboo",

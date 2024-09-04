@@ -1385,14 +1385,14 @@
             },
             {
                 "member_key": "Battlestar Galactica - Lee 'Apollo' Adama",
-                "member_gender": null,
+                "member_gender": "M",
                 "member_race": "White",
                 "member_name": "Lee 'Apollo' Adama"
             }
         ],
         "gender_combo": [
             "F",
-            null
+            "M"
         ],
         "race_combo": [
             "White",
