@@ -4,8 +4,6 @@ import plotly.graph_objects as go
 #import plotly.express as px
 #from plotly.subplots import make_subplots
 
-#TODO: see if you can tidy up these functions now that we are out of the jupyter notebook
-
 def make_full_chars_df(characters_df, ships_df):
     """
     takes input dataframes as read from our characters.csv & ships.csv (currently stage 5 versions)
@@ -42,7 +40,6 @@ def make_full_chars_df(characters_df, ships_df):
     character_columns_df["name_tag"] = character_columns_df["fandom"] + " - " \
         + character_columns_df["full_name"]
     character_columns_df = character_columns_df.set_index(character_columns_df["name_tag"])
-    #print(character_columns_df.head())
 
     # make temp df for each member position
     member_1_df = ship_columns_df.join(
@@ -78,9 +75,9 @@ def make_full_chars_df(characters_df, ships_df):
         columns={"fandom_left": "fandom"}
     ).sort_values(by="fandom")
 
-    #full_character_df.tail()
     return full_character_df
 
+#TODO: there's a potential refactor in this one
 def make_hottest_char_df(full_character_df):
     """
     takes output dataframe of make_full_chars_df
@@ -88,16 +85,26 @@ def make_hottest_char_df(full_character_df):
     returns a new df with the top hottest characters (characters who are in 3 or more ships) by fandom
     """
 
-    # hottest character (character in most ships in fandom)
-
     # we need: 
     hottest_df = full_character_df.copy().where(
-        cond=full_character_df["no_of_ships"] > 1
+        cond=full_character_df["no_of_ships"] > 1 # there needs to be multiple ships
     ).get(["fandom", "full_name", "slash_ship", "gender", "race"])
 
-    # renaming the doctor & gender diff player characters as they are the same character
+    # renaming & setting gender as ambig where relevant for the doctor & gender diff player 
+    # characters as they are the same character & we want to count them as one here
+
+    #setting genders
+    hottest_df["gender"] = hottest_df["gender"].mask(
+        cond=(
+            (hottest_df["full_name"].str.contains("Female", na=False)
+            ) | (hottest_df["full_name"].str.contains("Male", na=False)
+            ) | (hottest_df["full_name"].str.contains(" Doctor", na=False))
+            ),
+        other="Ambig"
+    )
+
+    # making renaming dict
     renaming_dict = {}
-    reassigning_dict = {}
     for doctor in [
         "The Eleventh Doctor",
         "The Ninth Doctor",
@@ -121,26 +128,15 @@ def make_hottest_char_df(full_character_df):
             renaming_dict[pc] = "Warden | Player Character"
         elif "Shepard" in pc:
             renaming_dict[pc] = "Shepard | Player Character"
-
-    # and setting their genders as ambig bc they vary but we want to count them as one here
-    hottest_df["gender"] = hottest_df["gender"].mask(
-        cond=(
-            (hottest_df["full_name"].str.contains("Female", na=False)
-            ) | (hottest_df["full_name"].str.contains("Male", na=False)
-            ) | (hottest_df["full_name"].str.contains(" Doctor", na=False))
-            ),
-        other="Ambig"
-    )
+    # renaming
     hottest_df["full_name"] = hottest_df["full_name"].replace(to_replace=renaming_dict)
 
     # group by fandom, by characters, count characters
-    hottest_df = hottest_df.groupby(
-        ["fandom", "full_name", "gender", "race"]
-    ).count().rename(
+    hottest_df = hottest_df.groupby(["fandom", "full_name", "gender", "race"]).count().rename(
         columns={"slash_ship":"no_of_ships_they_in"}
     ).reset_index().sort_values(by=["fandom", "no_of_ships_they_in"], ascending=False)
 
-    # figuring out which fandoms' characters are all tied for ship numbers
+    # # figuring out which fandoms' characters are all tied for ship numbers
     # unique_fandoms = hottest_df["fandom"].unique()
     # tied_fandoms = []
     # for fandom in unique_fandoms:
@@ -158,27 +154,30 @@ def make_hottest_char_df(full_character_df):
         hottest_df["fandom"] != 'Carmilla') & (
         hottest_df["fandom"] != 'Amphibia')
     ).dropna()
-    #hottest_df # currently only has 62 rows!
 
+    # ordering/grouping by fandom & number of ships
     unique_fandoms = hottest_df["fandom"].unique()
     hottest_chars_by_ship_no_dict = {}
-    for fandom in unique_fandoms:
+    for fandom in unique_fandoms: # for each fandom
         hottest_chars_by_ship_no_dict[fandom] = {}
-        fandom_group = hottest_df.where(
+        fandom_group = hottest_df.where( # making group of only this fandom's values
             cond=hottest_df["fandom"] == fandom
-        ).sort_values(by="no_of_ships_they_in").dropna()
-        for num in [3,4,5,6,7,8]:
-            char_rank_list = list(fandom_group["full_name"].where(
+        ).sort_values(by="no_of_ships_they_in").dropna() # sorting by number of ships
+        for num in [3,4,5,6,7,8]: # range of ships they can be in
+            char_rank_list = list(fandom_group["full_name"].where( # characters in that num of ships
                 fandom_group["no_of_ships_they_in"] == num
             ).dropna())
-            if len(char_rank_list) > 0:
+            if len(char_rank_list) > 0: # if there are characters with that num of ships
                 hottest_chars_by_ship_no_dict[fandom][num] = char_rank_list
 
+    # making dataframe where every row is one number of ships (index)
+    # and contains chars of that number by fandom (columns)
     hottest_chars_by_ship_no = pd.DataFrame(hottest_chars_by_ship_no_dict).sort_index(ascending=False)
 
+    # making a new dict with lists of ship numbers in order (TODO: maybe refactor w next one?)
     hottest_chars_dict = {}
     for fandom in hottest_chars_by_ship_no.columns:
-        all_chars = hottest_chars_by_ship_no[fandom].dropna()
+        all_chars = hottest_chars_by_ship_no[fandom].dropna() # getting all characters in fandom
         hottest_chars_dict[fandom] = []
         for index in all_chars.index:
             value = [
@@ -187,9 +186,7 @@ def make_hottest_char_df(full_character_df):
             ]
             hottest_chars_dict[fandom].append(value)
 
-    # hottest_chars_by_ship_no
-    hottest_chars_dict # first item in list is highest ranked!
-
+    # making a new dict with corresponding rank order
     rankings = {}
     rank_lookup_dict = {
         1: "1st",
@@ -198,28 +195,27 @@ def make_hottest_char_df(full_character_df):
         4: "4th",
     }
     for fandom in hottest_chars_dict:
-        count = 1
-        length = len(hottest_chars_dict[fandom])
+        count = 1 # first item will be highest num
         rankings[fandom] = {}
         for rank in hottest_chars_dict[fandom]:
-            rank_no = rank_lookup_dict[count]
-
-            names_list = sorted(rank[1])
-            no_of_ships = rank[0]
-            names_str = names_list[0]
-            if len(names_list) > 1:
+            names_list = sorted(rank[1]) # sorting names alphabetically
+            no_of_ships = rank[0] # retrieving number of ships
+            names_str = names_list[0] # getting first name
+            if len(names_list) > 1: # if there are more names
                 for name in names_list[1:]:
-                    names_str += " & " + name
-                names_str += " (tied)"
+                    names_str += " & " + name # add every name
+                names_str += " (tied)" # then tag them as tied
 
+            rank_no = rank_lookup_dict[count] # getting rank string
             rankings[fandom][rank_no] = {
                 "no_of_ships": no_of_ships,
                 "names": names_str,
             }
-            count += 1
+            count += 1 # incrementing count to move to next rank
 
+    # prepping columns & values for dataframe
     rankings_columns = ["fandom", "rank", "names", "no_of_ships"]
-    rankings_list = []
+    rankings_list = [] 
     for fandom in rankings:
         for rank in rankings[fandom]:
             temp_list = [
@@ -233,7 +229,7 @@ def make_hottest_char_df(full_character_df):
     hottest_rank_df = pd.DataFrame(
         data=rankings_list, 
         columns=rankings_columns
-    ).sort_values(by=["fandom", "rank"])
+    ).sort_values(by=["fandom", "rank"]) # ordering by fandom & rank therein
 
 def visualise_hottest_characters(hottest_rank_df):
     """
@@ -242,13 +238,17 @@ def visualise_hottest_characters(hottest_rank_df):
     returns a plotly table figure of it
     """
 
+    line_colour = 'slategrey'
+    header_fill_colour = 'skyblue'
+    body_fill_colour = 'aliceblue'
+
     fig = go.Figure(data=[
         go.Table(
             header=dict(
                 values=list(hottest_rank_df.columns),
                 align='left',
-                line_color='slategrey',
-                fill_color='skyblue',
+                line_color=line_colour,
+                fill_color=header_fill_colour,
             ),
             cells=dict(
                 values=[
@@ -258,8 +258,8 @@ def visualise_hottest_characters(hottest_rank_df):
                     hottest_rank_df["no_of_ships"],
                 ],
                 align='left',
-                line_color='slategrey',
-                fill_color='aliceblue',
+                line_color=line_colour,
+                fill_color=body_fill_colour,
             )
         )
     ])
@@ -276,6 +276,9 @@ if __name__ == "__main__":
     hottest_rank_df = make_hottest_char_df(full_character_df)
     hottest_rank_fig = visualise_hottest_characters(hottest_rank_df)
 
-    # I can't save the whole thing from here, 
     # TODO: will need to look into kaleido smh 
-    # (and then we might as well put all of this into python files smh)
+        # -figure out work flow & test w this file
+        # -make util for saving the image files
+        # -then put other notebook files into python files too & set up their work flows
+        # -store old notebook files in vis folder once they've been successfully 
+        #  transferred to python files
