@@ -274,14 +274,22 @@ if __name__ == "__main__":
     # available formats:  .png .jpeg .webp .svg .pdf 
     # gotta specify dimensions you want to make sure it prints it at the size you want
 
-    # TODO: will need to look into kaleido smh 
+    # look into kaleido smh 
         # -figure out work flow & test w this file ✅
         # (-make util for saving the image files)
-        # -then put other notebook files into python files too & set up their work flows
+        # -TODO:then put other notebook files into python files too & set up their work flows
         # -store old notebook files in vis folder once they've been successfully 
         #  transferred to python files
+    
     # currently kaleido can't do non-latin characters yet rip
         # https://github.com/plotly/Kaleido/issues/157 
         # possible workaround is to install language packages on the ubuntu
         # in this case language code would be ja for japanese
         # but there's others you can find at https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes 
+    # -> jupyter notebook version managed to do foreign characters tho!
+        # -> how about we put the code in py files & then import into a notebook to actually export?
+        # => try and see if the dimension specification works in notebook
+    # update: didn't solve the issue rip 
+        # -jupyter renders the characters but doesn't change size w specified dimensions 
+        # -image/bytes version changes size but still uses kaleido & doesn't render the characters
+        # -installing japanese language pack & fonts also didn't fix it for the latter
