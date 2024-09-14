@@ -4,22 +4,25 @@ import plotly.express as px
 import plotly.graph_objects as go
 #from plotly.subplots import make_subplots
 
-# read from char file make a df
-characters_df = df_from_csv("data/fifth_clean_up_data/stage_5_characters.csv")
-# characters_df.columns
 
 def total_chars_df(characters_df):
-    total_chars = characters_df.get(
-        ["full_name"]
-    ).count().rename(
+    """
+    takes read-in characters file dataframe
+
+    returns a dataframe with the total number of characters in the file/given df
+    """
+    total_chars = characters_df.get(["full_name"]).count().rename(
         index={"full_name":"total_num_of_characters"}
     )
-    # print(total_chars)
     return total_chars
 
 
 def all_characters_gender_df(characters_df):
-    # all-characters gender percentages (all time, entire set)
+    """
+    takes read-in characters file dataframe
+
+    returns a dataframe with the total numbers of characters of each gender tag
+    """
     total_gender_percentages = characters_df.get(
         ["full_name","gender"]
     ).groupby("gender").count().rename(
@@ -38,11 +41,15 @@ def all_characters_gender_df(characters_df):
         ]
     )
     total_gender_percentages = total_gender_percentages.sort_index()
-    # print(total_gender_percentages) # TO VISUALISE
+
     return total_gender_percentages
 
 def visualise_gender_totals(total_gender_percentages):
-    # visualising gender totals
+    """
+    takes output dataframe from all_characters_gender_df
+
+    returns a pie chart visualising it
+    """
     gender_distr_pie = go.Figure(
         data=[
             go.Pie(
@@ -69,11 +76,16 @@ def visualise_gender_totals(total_gender_percentages):
         title="Characters' gender distribution (AO3 2013-2023)",
         #showlegend=False, # if you want it to not show the legend
     )
-    # gender_distr_pie.show()
+
     return gender_distr_pie
 
 
 def average_gender_per_fandom_df(characters_df):
+    """
+    takes read-in characters file dataframe
+
+    returns a dataframe with the average number of male, female, and other characters in a fandom
+    """
     # how many male vs female vs other characters a fandom has on average
     average_gender_per_fandom = characters_df.copy().get(
         ["full_name","fandom","gender"]
@@ -96,22 +108,30 @@ def average_gender_per_fandom_df(characters_df):
     average_gender_per_fandom = average_gender_per_fandom.groupby(by="fandom", dropna=False).count().get(
         ["men","women","characters of other or ambiguous gender"]
     ).mean(0).round(2)
-    # print(average_gender_per_fandom) # TO VISUALISE
+
     return average_gender_per_fandom
 
 
 def all_characters_racial_groups_df(characters_df):
-    # all-characters race percentages (all time, entire set)
+    """
+    takes read-in characters file dataframe
+
+    returns a dataframe with the total numbers of characters of each race tag
+    """
     total_race_percentages = characters_df.get(
         ["full_name","race"]
     ).groupby("race").count().rename(
         columns={"full_name": "count"}
     ).sort_values(by="count", ascending=False) 
-    # print(total_race_percentages.sort_index().head(10)) # TO VISUALISE
+
     return total_race_percentages
 
 def visualise_racial_group_totals(total_race_percentages):
-    # pie chart
+    """
+    takes output dataframe from all_characters_racial_groups_df
+
+    returns a pie chart visualising it
+    """
     all_race_percent_pie = go.Figure(
         data=[
             go.Pie(
@@ -133,12 +153,13 @@ def visualise_racial_group_totals(total_race_percentages):
         uniformtext_mode='hide'
     )
 
-    # all_race_percent_pie.show()
     return all_race_percent_pie
 
 
 def make_all_groupings_dict():
-    # making all groupings dict
+    """
+    returns a dictionary of all racial groups roughly grouped by relevant umbrella group/region
+    """
     all_groupings = {
         "north, west, middle and eastern europe": [
             'White', 
@@ -187,10 +208,18 @@ def make_all_groupings_dict():
             'Unknown': "unknown",
         },
     }
+    
     return all_groupings
 
-def visualise_racial_minority_totals(total_race_percentages, all_groupings):
-    # bar stack
+def visualise_racial_minority_totals(total_race_percentages):
+    """
+    takes output dataframe from all_characters_racial_groups_df
+
+    returns a stacked bar diagram visualising all racial groups other than white people, 
+    east asians, and ambiguous, unknown and non-human characters
+    """
+    all_groupings = make_all_groupings_dict()
+
     other_racial_group_stacks=go.Figure()
 
     for index in total_race_percentages.index:
@@ -231,21 +260,32 @@ def visualise_racial_minority_totals(total_race_percentages, all_groupings):
         uniformtext_mode='hide',
         xaxis_tickangle=10,
     )
-    # other_racial_group_stacks.show()
+
     return other_racial_group_stacks
 
 
 def make_racial_diversity_df(characters_df):
-    # find fandoms with lowest (aka no) racial diversity
+    """
+    takes read-in characters file dataframe
+
+    returns a dataframe with the number of racial groups in each fandom
+    """
     racial_div_by_fandom = characters_df.copy().get(
         ["full_name","fandom","race"]
     ).groupby(
         ["fandom", "race"]
     ).count().rename(columns={"full_name": "count"})
+
     return racial_div_by_fandom
 
 
 def plural_vs_monoracial_fandoms_df(characters_df, racial_div_by_fandom):
+    """
+    takes read-in characters file dataframe and dataframe output by make_racial_diversity_df
+
+    returns a dataframe with the number of fandoms that contain only one racial group 
+    and the ones that contain more than one group
+    """
     plural_vs_monoracial_fandoms = pd.DataFrame([
         characters_df.get(["fandom"]).nunique().rename(index={"fandom":"total_fandoms"})
         # counting all unique fandom names for total
@@ -267,11 +307,14 @@ def plural_vs_monoracial_fandoms_df(characters_df, racial_div_by_fandom):
     )
     plural_vs_monoracial_fandoms = plural_vs_monoracial_fandoms.rename(index={0: "count"})
 
-    #print(plural_vs_monoracial_fandoms) # TO VISUALISE!
     return plural_vs_monoracial_fandoms
 
 def visualise_racial_diversity(plural_vs_monoracial_fandoms):
-    # mono vs multi group fandoms pie 
+    """
+    takes output dataframe from plural_vs_monoracial_fandoms_df
+
+    returns a pie chart visualising it
+    """
     # (dunno why this didn't wanna work without prep code in same cell smh)
 
     plural_vs_monoracial_fandoms = plural_vs_monoracial_fandoms.get(
@@ -300,24 +343,33 @@ def visualise_racial_diversity(plural_vs_monoracial_fandoms):
         title="Fandoms with one vs multiple racial groups (AO3 2013-2023)",
         showlegend=False, # if you want it to not show the legend
     )
-    # number_of_groups_by_fandom.show()
+
     return number_of_groups_by_fandom
 
 
 def highest_racial_diversity_df(racial_div_by_fandom):
-    # find fandoms with highest racial diversity (Genshin would likely be in here)
+    """
+    takes output dataframe from make_racial_diversity_df
+
+    returns a dataframe with the top 6 fandoms that contain the most different racial groups
+    """
+
     highest_racial_div = racial_div_by_fandom.where(
         racial_div_by_fandom.groupby(racial_div_by_fandom.index.droplevel(1)).count() > 1
     ).droplevel(1).dropna()
     highest_racial_div = highest_racial_div.groupby(highest_racial_div.index).count().sort_values(
         by="count", ascending=False
     ).head(6) # everything else was under 5
-    # print(highest_racial_div) # TO VISUALISE
+
     return highest_racial_div
 
 def visualise_highest_racial_diversity(highest_racial_div):
-    # top fandoms for racial diversity
-    basic_template_bar = px.bar(
+    """
+    takes output dataframe from highest_racial_diversity_df
+
+    returns a bar chart visualising it
+    """
+    highest_racial_div_fig = px.bar(
         data_frame=highest_racial_div,
         title="Top fandoms for racial diversity (AO3 2013-2023)",
         text=pd.Series(highest_racial_div.index).mask(
@@ -331,16 +383,21 @@ def visualise_highest_racial_diversity(highest_racial_div):
         color=highest_racial_div.index,
         color_discrete_sequence=px.colors.qualitative.Set1
     )
-    basic_template_bar.update_layout(
+    highest_racial_div_fig.update_layout(
         showlegend=False,
     ).update_xaxes(
         visible=False # to hide bottom axis annotations
     )
-    # basic_template_bar.show()
+
+    return highest_racial_div_fig
 
 
 def average_racial_diversity_df(racial_div_by_fandom):
-    # how much racial diversity a fandom has on average 
+    """
+    takes output dataframe from make_racial_diversity_df
+
+    returns a dataframe with the average number of racial groups per fandom
+    """
 
     average_racial_div = racial_div_by_fandom.groupby(
         racial_div_by_fandom.index.droplevel(1)
