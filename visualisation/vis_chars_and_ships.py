@@ -266,7 +266,7 @@ if __name__ == "__main__":
     hottest_rank_fig = visualise_hottest_characters(hottest_rank_df)
 
     hottest_rank_fig.write_image(
-        "visualisation/all_ao3_data_vis_charts/all_ao3_hottest_characters_ranking.png", 
+        "visualisation/all_ao3_data_vis_charts/all_ao3_hottest_characters_ranking_2013_2023.png", 
         width=800, 
         height=1400, 
         scale=2
@@ -293,3 +293,7 @@ if __name__ == "__main__":
         # -jupyter renders the characters but doesn't change size w specified dimensions 
         # -image/bytes version changes size but still uses kaleido & doesn't render the characters
         # -installing japanese language pack & fonts also didn't fix it for the latter
+        # -trying to export only the jupyter bit with the characters to try and manually 
+        # photoshop em together also didn't work, it defaults to only exporting the top bit
+        # -tried finding a way to make jupyter output bigger, but also not yet implemented 
+        # for non-text outputs smh
