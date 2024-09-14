@@ -156,7 +156,10 @@ def make_hottest_char_df(full_character_df):
     unique_fandoms = hottest_df["fandom"].unique()
     hottest_chars_by_ship_no_dict = {}
     for fandom in unique_fandoms: # for each fandom
-        hottest_chars_by_ship_no_dict[fandom] = {}
+        if "My Hero Academia" in fandom:
+            # couldn't figure out a way to render kana/kanji with kaleido, so getting rid of em
+            hottest_chars_by_ship_no_dict["My Hero Academia"] = {}
+        else: hottest_chars_by_ship_no_dict[fandom] = {}
         fandom_group = hottest_df.where( # making group of only this fandom's values
             cond=hottest_df["fandom"] == fandom
         ).sort_values(by="no_of_ships_they_in").dropna() # sorting by number of ships
@@ -165,7 +168,9 @@ def make_hottest_char_df(full_character_df):
                 fandom_group["no_of_ships_they_in"] == num
             ).dropna())
             if len(char_rank_list) > 0: # if there are characters with that num of ships
-                hottest_chars_by_ship_no_dict[fandom][num] = char_rank_list
+                if "My Hero Academia" in fandom:
+                    hottest_chars_by_ship_no_dict["My Hero Academia"][num] = char_rank_list
+                else: hottest_chars_by_ship_no_dict[fandom][num] = char_rank_list
 
     # making dataframe where every row is one number of ships (index)
     # and contains chars of that number by fandom (columns)
