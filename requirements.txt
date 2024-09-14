@@ -1,3 +1,5 @@
 pytest
+pandas
 plotly
 jupyter
+kaleido
