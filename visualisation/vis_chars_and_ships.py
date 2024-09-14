@@ -266,7 +266,7 @@ if __name__ == "__main__":
     hottest_rank_fig = visualise_hottest_characters(hottest_rank_df)
 
     hottest_rank_fig.write_image(
-        "visualisation/all_ao3_data_vis_charts/hottest_characters_ranking.png", 
+        "visualisation/all_ao3_data_vis_charts/all_ao3_hottest_characters_ranking.png", 
         width=800, 
         height=1400, 
         scale=2
