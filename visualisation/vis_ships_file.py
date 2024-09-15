@@ -6,12 +6,6 @@ from plotly.subplots import make_subplots
 from re import split
 from vis_utils.remove_translation import remove_translation
 
-# TODO: 
-# -add doc strings to all of these ✅
-# -add executable code at bottom ✅
-# -write & test util to remove translations ✅
-# -write file writing code ✅
-# -adjust visualisation code ✅
 
 def total_ships_df(ships_df): # util
     """
@@ -44,12 +38,6 @@ def total_gender_combo_percent_df(ships_df):
         total_gender_percentages.index
     ).aggregate("sum").rename(columns={"slash_ship": "count"}).sort_values(by="count")
 
-    # gender_combos_we_recognise = { # for annotation reference!
-    #     "F / Other": "owl house witches",
-    #     "F / F | Other": "sailor scouts",
-    #     "M / Other": "venom",
-    #     "M | Other / Ambig" : "loki x reader",
-    # }
     return total_gender_percentages
 
 def visualise_gender_combo_total(total_gender_percentages):
@@ -114,7 +102,84 @@ def visualise_gender_combo_total(total_gender_percentages):
 
     return gender_combo_fig
 
-# visualise gender label minorities too, like we did w race labels?
+def visualise_gender_combo_minorities(total_gender_percentages):
+    """
+    takes output dataframe from total_gender_combo_percent_df
+
+    returns a stacked bar chart of gender combos excluding standard m/m, f/f, and f/m pairings
+    """
+
+    gender_combo_fig=go.Figure()
+
+    gender_combos_we_recognise = {
+        "M | Other / M / M" : "Minecraft Youtubers ",
+        "F | Other / F | Other" : "Crystal Gems <br>", 
+        "F / F | Other" : "Sailor Neptune x Sailor Uranus ",
+        "F / Other" : "Eda Clawthorne x Raine Whispers ",
+        "M / Other" : "Eddie Brock x Venom ",
+        "M | Other / Ambig" : "Loki x Reader ", 
+        "M | F | Other / M | F | Other" : "Drag queens <br>",
+        "F / M / M": "White Collar characters "
+    }
+
+    wlw_count = 0
+    mlm_count = 0
+    het_count = 0
+    ambig_count = 0
+
+    combo_dict = {
+        "mlm": ["M / M | Other","M | Other / M / M",],
+        "wlw": ["F | Other / F | Other", "F / F | Other",],
+        "non-same-sex": ["F / Other","M / Other","F / M / M"],
+        "ambiguous": ["M / Ambig","M | Other / Ambig", "F / Ambig","M | F | Other / M | F | Other"]
+    }
+    for combo_type in combo_dict.keys():
+        if combo_type == "mlm":
+            colours = ["azure", "turquoise"]
+        elif combo_type == "wlw":
+            colours = ["red", "orange"]
+        elif combo_type == "non-same-sex":
+            colours = ["silver", "grey", "gainsboro"]
+        elif combo_type == "ambiguous":
+            colours = ["darkolivegreen", "limegreen", "mediumseagreen", "olive"]
+
+        for combo in combo_dict[combo_type]:
+            if combo_type == "mlm":
+                colour = colours[mlm_count]
+                mlm_count += 1
+            elif combo_type == "wlw":
+                colour = colours[wlw_count]
+                wlw_count += 1
+            elif combo_type == "non-same-sex":
+                colour = colours[het_count]
+                het_count += 1
+            elif combo_type == "ambiguous":
+                colour = colours[ambig_count]
+                ambig_count += 1
+
+            if combo in gender_combos_we_recognise:
+                label = gender_combos_we_recognise[combo] + f"({combo})"
+            else: label = combo
+
+            gender_combo_fig.add_trace(
+                go.Bar(
+                    x=[combo_type],
+                    y=total_gender_percentages.loc[combo],
+                    text=label,
+                    marker_color=colour,
+                    textposition="inside"
+                )
+            )
+
+    gender_combo_fig.update_layout(
+        barmode='stack', 
+        showlegend=False, 
+        title="Ship gender combinations excluding M/M, W/W, and M/F blocks (AO3 2013-2023)",
+        # uniformtext_minsize=8, 
+        # uniformtext_mode='hide'
+    )
+
+    return gender_combo_fig
 
 
 def get_ships_per_fandom(ships_df): # util
@@ -684,6 +749,14 @@ if __name__ == "__main__":
         scale=2
     )
 
+    minority_gender_combos_fig = visualise_gender_combo_minorities(total_gender_percentages)
+    minority_gender_combos_fig.write_image(
+        "visualisation/all_ao3_data_vis_charts/gender_diagrams/all_ao3_ranked_ships_minority_gender_combos_2013_2023.png", 
+        width=1300, 
+        height=600, 
+        scale=2
+    )
+
     fandom_market_share = fandom_market_share_srs(ships_df)
     fandom_market_share_fig = visualise_fandom_market_share(fandom_market_share)
     fandom_market_share_fig.write_image(
@@ -750,3 +823,4 @@ if __name__ == "__main__":
         height=400, 
         scale=2
     )
+
