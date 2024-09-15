@@ -1,6 +1,7 @@
 from visualisation.vis_utils.read_csv_to_df import df_from_csv
 import pandas as pd
 import plotly.graph_objects as go
+from vis_utils.remove_translation import remove_translation
 #import plotly.express as px
 #from plotly.subplots import make_subplots
 
@@ -156,9 +157,9 @@ def make_hottest_char_df(full_character_df):
     unique_fandoms = hottest_df["fandom"].unique()
     hottest_chars_by_ship_no_dict = {}
     for fandom in unique_fandoms: # for each fandom
-        if "My Hero Academia" in fandom:
+        if " | " in fandom:
             # couldn't figure out a way to render kana/kanji with kaleido, so getting rid of em
-            hottest_chars_by_ship_no_dict["My Hero Academia"] = {}
+            hottest_chars_by_ship_no_dict[remove_translation(fandom)] = {}
         else: hottest_chars_by_ship_no_dict[fandom] = {}
         fandom_group = hottest_df.where( # making group of only this fandom's values
             cond=hottest_df["fandom"] == fandom
@@ -168,8 +169,8 @@ def make_hottest_char_df(full_character_df):
                 fandom_group["no_of_ships_they_in"] == num
             ).dropna())
             if len(char_rank_list) > 0: # if there are characters with that num of ships
-                if "My Hero Academia" in fandom:
-                    hottest_chars_by_ship_no_dict["My Hero Academia"][num] = char_rank_list
+                if " | " in fandom:
+                    hottest_chars_by_ship_no_dict[remove_translation(fandom)][num] = char_rank_list
                 else: hottest_chars_by_ship_no_dict[fandom][num] = char_rank_list
 
     # making dataframe where every row is one number of ships (index)
@@ -260,7 +261,7 @@ def visualise_hottest_characters(hottest_rank_df):
 
     return fig
 
-
+# running file writing code
 if __name__ == "__main__":
     # read from ships file make a df
     characters_df = df_from_csv("data/fifth_clean_up_data/stage_5_characters.csv")
