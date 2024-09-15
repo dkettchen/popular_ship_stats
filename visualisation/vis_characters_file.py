@@ -79,6 +79,55 @@ def visualise_gender_totals(total_gender_percentages):
 
     return gender_distr_pie
 
+def visualise_gender_minorities(total_gender_percentages):
+    """
+    takes output dataframe from all_characters_gender_df
+
+    returns a stacked bar chart of gender tag numbers excluding M and F blocks
+    """
+
+    gender_list = [
+        "M | Other",
+        "F | Other",
+        "Other",
+        "M | F | Other",
+        "Ambig",
+    ]
+    colours = [
+        "darkturquoise",
+        "red",
+        "yellow",
+        "gold",
+        "green",
+    ]
+    values = [total_gender_percentages["count"].loc[tag] for tag in gender_list]
+    bar_text = [
+        "Crowley (Good Omens)<br>Dream (Sandman)<br>Loki (Marvel)<br>Gerard Way<br>Ranboo",
+        "Crystal Gems x9<br>Sailor Uranus",
+        "Venom Symbiote<br>Raine Whispers",
+        "Drag Queens x4",
+        "Player Character x6<br>Y/N | Reader x6"
+    ]
+
+    gender_minority_fig = px.bar(
+        x=gender_list,
+        y=values,
+        title="Characters' gender distribution excluding M and F (AO3 2013-2023)",
+        text=bar_text,
+        labels={
+            "x": "", # you can rename the axis titles
+            "y": "",
+        },
+        color=gender_list,
+        color_discrete_sequence=colours
+    )
+
+    gender_minority_fig.update_layout(
+        showlegend=False,
+    )
+
+    return gender_minority_fig
+
 
 def average_gender_per_fandom_df(characters_df):
     """
@@ -421,6 +470,14 @@ if __name__ == "__main__":
         "visualisation/all_ao3_data_vis_charts/gender_diagrams/all_ao3_characters_gender_distr_2013_2023.png", 
         width=800, 
         height=400, 
+        scale=2
+    )
+
+    minority_genders_fig = visualise_gender_minorities(total_gender_percentages)
+    minority_genders_fig.write_image(
+        "visualisation/all_ao3_data_vis_charts/gender_diagrams/all_ao3_characters_gender_minorities_2013_2023.png", 
+        width=1100, 
+        height=420, 
         scale=2
     )
 
