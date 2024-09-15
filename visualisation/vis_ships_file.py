@@ -10,7 +10,8 @@ from vis_utils.remove_translation import remove_translation
 # -add doc strings to all of these ✅
 # -add executable code at bottom ✅
 # -write & test util to remove translations ✅
-# -write file writing code
+# -write file writing code ✅
+# -adjust visualisation code ✅
 
 def total_ships_df(ships_df): # util
     """
@@ -64,44 +65,56 @@ def visualise_gender_combo_total(total_gender_percentages):
     het_count = 0
     ambig_count = 0
 
-    for combo in list(total_gender_percentages.index):
-        if combo in ["F / F","F | Other / F | Other", "F / F | Other",]:
-            label = "wlw"
-            colours = ["red", "orange", "tomato"]
-            colour = colours[wlw_count]
-            wlw_count += 1
-        elif combo in ["M / M", "M / M | Other","M | Other / M / M",]:
-            label = "mlm"
+    combo_dict = {
+        "mlm": ["M / M", "M / M | Other","M | Other / M / M",],
+        "wlw": ["F / F","F | Other / F | Other", "F / F | Other",],
+        "non-same-sex": ["M / F","F / Other","M / Other","F / M / M"],
+        "ambiguous": ["M / Ambig","M | Other / Ambig", "F / Ambig","M | F | Other / M | F | Other"]
+    }
+    for combo_type in combo_dict.keys():
+        if combo_type == "mlm":
             colours = ["azure", "turquoise", "steelblue"]
-            colour = colours[mlm_count]
-            mlm_count += 1
-        elif combo in ["M / F","F / Other","M / Other","F / M / M"]:
-            label = "non-same-sex"
+        elif combo_type == "wlw":
+            colours = ["red", "orange", "tomato"]
+        elif combo_type == "non-same-sex":
             colours = ["silver", "grey", "gainsboro", "black"]
-            colour = colours[het_count]
-            het_count += 1
-        elif combo in ["M / Ambig","M | Other / Ambig", "F / Ambig","M | F | Other / M | F | Other"]:
-            label = "ambiguous"
+        elif combo_type == "ambiguous":
             colours = ["darkolivegreen", "limegreen", "mediumseagreen", "olive"]
-            colour = colours[ambig_count]
-            ambig_count += 1
 
-        gender_combo_fig.add_trace(
-            go.Bar(
-                x=[label],
-                y=total_gender_percentages.loc[combo],
-                text=combo,
-                marker_color=colour
+        for combo in reversed(combo_dict[combo_type]):
+            if combo_type == "mlm":
+                colour = colours[mlm_count]
+                mlm_count += 1
+            elif combo_type == "wlw":
+                colour = colours[wlw_count]
+                wlw_count += 1
+            elif combo_type == "non-same-sex":
+                colour = colours[het_count]
+                het_count += 1
+            elif combo_type == "ambiguous":
+                colour = colours[ambig_count]
+                ambig_count += 1
+
+            gender_combo_fig.add_trace(
+                go.Bar(
+                    x=[combo_type],
+                    y=total_gender_percentages.loc[combo],
+                    text=combo,
+                    marker_color=colour
+                )
             )
-        )
 
     gender_combo_fig.update_layout(
         barmode='stack', 
         showlegend=False, 
-        title="Ship gender combinations (AO3 2013-2023)"
+        title="Ship gender combinations (AO3 2013-2023)",
+        uniformtext_minsize=8, 
+        uniformtext_mode='hide'
     )
 
     return gender_combo_fig
+
+# visualise gender label minorities too, like we did w race labels?
 
 
 def get_ships_per_fandom(ships_df): # util
@@ -152,7 +165,14 @@ def fandom_market_share_srs(ships_df):
     for fandom in fandom_market_share.index:
         if " | " in fandom:
             fandom = remove_translation(fandom)
+        elif "BTS" in fandom:
+            fandom = "BTS"
+        elif "Game of Thrones" in fandom:
+            fandom = "GoT"
+        elif "Universe" in fandom and fandom != "Steven Universe":
+            fandom = fandom[:-9]
         fandoms.append(fandom)
+
     english_titles_market_share = pd.Series(data=values, index=fandoms)
 
     return english_titles_market_share
@@ -169,7 +189,8 @@ def visualise_fandom_market_share(fandom_market_share):
                 labels=fandom_market_share.index,
                 values=fandom_market_share.values,
                 textinfo="label",
-                insidetextorientation="horizontal",
+                #textposition="outside",
+                #insidetextorientation="radial",
                 automargin=False,
                 marker=dict(
                     colors=[
@@ -385,7 +406,7 @@ def visualise_top_3_per_fandom_df(highest_of_type_df):
                 y=top_3_values_df.loc["2nd"],
                 text=top_3_fandoms_df.loc["2nd"].mask(
                     cond=top_3_fandoms_df.loc["2nd"] == "A Song of Ice and Fire / Game of Thrones Universe", 
-                    other="GoT"
+                    other="GoT (tied)"
                 ),
                 marker_color='slategrey',
             ),
@@ -397,7 +418,10 @@ def visualise_top_3_per_fandom_df(highest_of_type_df):
                     other="BTS"
                 ).mask(
                     cond=(top_3_fandoms_df.loc["3rd"] == "Homestuck") | (top_3_fandoms_df.loc["3rd"] == "Steven Universe"), 
-                    other="Homestuck & SU"
+                    other="Homestuck <br>& Steven <br>Universe <br>(tied)"
+                ).mask(
+                    cond=top_3_fandoms_df.loc["3rd"] == "Marvel", 
+                    other="Marvel (tied)"
                 ),
                 marker_color='chocolate',
             )
@@ -438,7 +462,11 @@ def visualise_average_ship_combos_per_fandom(average_gender_combo_per_fandom_ser
     average_ships_per_fandom_fig = px.bar(
         data_frame=average_gender_combo_per_fandom_series.get(["mlm", "wlw", "hets"]),
         title="Average ships of this type per fandom (AO3 2013-2023)",
-        text=["mlm", "wlw", "het"],
+        text=[
+            f"mlm ({average_gender_combo_per_fandom_series.loc['mlm']})", 
+            f"wlw ({average_gender_combo_per_fandom_series.loc['wlw']})", 
+            f"het ({average_gender_combo_per_fandom_series.loc['hets']})"
+        ],
         labels={
             "index": "",
             "value": "average ships per fandom",
@@ -648,37 +676,77 @@ if __name__ == "__main__":
     ships_df = df_from_csv("data/fifth_clean_up_data/stage_5_ships.csv")
 
     total_gender_percentages = total_gender_combo_percent_df(ships_df)
-    visualise_gender_combo_total(total_gender_percentages)
-    # visualisation/all_ao3_data_vis_charts/gender_diagrams/all_ao3_ranked_ships_gender_combos.png
+    total_gender_percent_fig = visualise_gender_combo_total(total_gender_percentages)
+    total_gender_percent_fig.write_image(
+        "visualisation/all_ao3_data_vis_charts/gender_diagrams/all_ao3_ranked_ships_gender_combos_2013_2023.png", 
+        width=600, 
+        height=400, 
+        scale=2
+    )
 
     fandom_market_share = fandom_market_share_srs(ships_df)
-    visualise_fandom_market_share(fandom_market_share)
-    # visualisation/all_ao3_data_vis_charts/all_ao3_ranked_ships_fandom_market_share.png
+    fandom_market_share_fig = visualise_fandom_market_share(fandom_market_share)
+    fandom_market_share_fig.write_image(
+        "visualisation/all_ao3_data_vis_charts/all_ao3_ranked_ships_fandom_market_share_2013_2023.png", 
+        width=800, 
+        height=650, 
+        scale=2
+    )
 
     ships_per_fandom_by_type = ship_per_fandom_by_type_df(ships_df)
 
     total_gender_combos_series = total_gender_combos_srs(ships_per_fandom_by_type)
-    visualise_no_half_only(total_gender_combos_series)
-    # visualisation/all_ao3_data_vis_charts/gender_diagrams/all_ao3_fandoms_with_no_over_half_only_by_ship_type.png
+    total_gender_combos_fig = visualise_no_half_only(total_gender_combos_series)
+    total_gender_combos_fig.write_image(
+        "visualisation/all_ao3_data_vis_charts/gender_diagrams/all_ao3_fandoms_with_no_over_half_only_by_ship_type_2013_2023.png", 
+        width=1200, 
+        height=600, 
+        scale=2
+    )
 
     highest_of_type_df = highest_of_this_type_df(ships_per_fandom_by_type)
-    visualise_top_3_per_fandom_df(highest_of_type_df)
-    # visualisation/all_ao3_data_vis_charts/gender_diagrams/all_ao3_fandoms_top_3_by_ship_type_no.png
+    highest_of_type_fig = visualise_top_3_per_fandom_df(highest_of_type_df)
+    highest_of_type_fig.write_image(
+        "visualisation/all_ao3_data_vis_charts/gender_diagrams/all_ao3_fandoms_top_3_by_ship_type_no_2013_2023.png", 
+        width=1200, 
+        height=600, 
+        scale=2
+    )
 
     average_gender_combo_per_fandom_series = average_gender_combo_srs(ships_per_fandom_by_type)
-    visualise_average_ship_combos_per_fandom(average_gender_combo_per_fandom_series)
-    # visualisation/all_ao3_data_vis_charts/gender_diagrams/all_ao3_fandoms_average_no_of_ships_by_type.png
+    average_gender_combo_fig = visualise_average_ship_combos_per_fandom(average_gender_combo_per_fandom_series)
+    average_gender_combo_fig.write_image(
+        "visualisation/all_ao3_data_vis_charts/gender_diagrams/all_ao3_fandoms_average_no_of_ships_by_type_2013_2023.png", 
+        width=800, 
+        height=400, 
+        scale=2
+    )
 
     total_race_combo_counts = total_race_combo_df(ships_df)
 
     interracial_ships_counts = interracial_srs(total_race_combo_counts)
-    visualise_interracial_ships(interracial_ships_counts)
-    # visualisation/all_ao3_data_vis_charts/racial_groups_diagrams/all_ao3_ranked_ships_interracial_percent.png
+    interracial_fig = visualise_interracial_ships(interracial_ships_counts)
+    interracial_fig.write_image(
+        "visualisation/all_ao3_data_vis_charts/racial_groups_diagrams/all_ao3_ranked_ships_interracial_percent_2013_2023.png", 
+        width=800, 
+        height=400, 
+        scale=2
+    )
 
     non_white_ships_counts = non_white_ships_srs(total_race_combo_counts)
-    visualise_non_white_ships(non_white_ships_counts)
-    # visualisation/all_ao3_data_vis_charts/racial_groups_diagrams/all_ao3_ranked_ships_non_white_ships.png
+    non_white_fig = visualise_non_white_ships(non_white_ships_counts)
+    non_white_fig.write_image(
+        "visualisation/all_ao3_data_vis_charts/racial_groups_diagrams/all_ao3_ranked_ships_non_white_ships_2013_2023.png", 
+        width=800, 
+        height=500, 
+        scale=2
+    )
 
     rpf_vs_fic_df = rpf_fic_df(ships_df)
-    visualise_rpf_fic(rpf_vs_fic_df)
-    # visualisation/all_ao3_data_vis_charts/all_ao3_ranked_ships_rpf_vs_fic.png
+    rpf_fig = visualise_rpf_fic(rpf_vs_fic_df)
+    rpf_fig.write_image(
+        "visualisation/all_ao3_data_vis_charts/all_ao3_ranked_ships_rpf_vs_fic_2013_2023.png", 
+        width=600, 
+        height=400, 
+        scale=2
+    )
