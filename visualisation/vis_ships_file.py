@@ -143,7 +143,7 @@ def visualise_gender_combo_minorities(total_gender_percentages):
         elif combo_type == "ambiguous":
             colours = ["darkolivegreen", "limegreen", "mediumseagreen", "olive"]
 
-        for combo in combo_dict[combo_type]:
+        for combo in reversed(combo_dict[combo_type]):
             if combo_type == "mlm":
                 colour = colours[mlm_count]
                 mlm_count += 1
