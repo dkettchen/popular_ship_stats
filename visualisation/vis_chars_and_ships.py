@@ -1,13 +1,14 @@
-from visualisation.vis_utils.read_csv_to_df import df_from_csv
+from visualisation.vis_utils.join_member_info import join_character_info_to_df
+from visualisation.vis_utils.make_file_dfs import make_ships_df
 import pandas as pd
 import plotly.graph_objects as go
 from vis_utils.remove_translation import remove_translation
 #import plotly.express as px
 #from plotly.subplots import make_subplots
 
-def make_full_chars_df(characters_df, ships_df):
+def make_full_chars_df():
     """
-    takes input dataframes as read from our characters.csv & ships.csv (currently stage 5 versions)
+    combines ships & characters file data
 
     returns a dataframe where all the members of the ships have had their full name, gender and race 
     columns joined to their ships, and arranged so every member has their own row per ship
@@ -20,9 +21,9 @@ def make_full_chars_df(characters_df, ships_df):
         row 4: ship | member_4
     )
     """
+    ships_df = make_ships_df()
 
     # getting only columns we need (for now)
-    character_columns_df = characters_df.copy().get(['full_name','fandom', 'gender', 'race'])
     ship_columns_df = ships_df.copy().get([
             'slash_ship', 'members_no', 'fandom', 'rpf_or_fic', 'gender_combo', 'race_combo', 
             'member_1', 'member_2', 'member_3', 'member_4'
@@ -37,42 +38,14 @@ def make_full_chars_df(characters_df, ships_df):
         rsuffix="_right", lsuffix="_left"
     )
 
-    # add a column to char df with concat tag!
-    character_columns_df["name_tag"] = character_columns_df["fandom"] + " - " \
-        + character_columns_df["full_name"]
-    character_columns_df = character_columns_df.set_index(character_columns_df["name_tag"])
+    # join members info 
+    full_character_df = join_character_info_to_df(ship_columns_df)
 
-    # make temp df for each member position
-    member_1_df = ship_columns_df.join(
-        other=character_columns_df, on="member_1", 
-        rsuffix="_right", lsuffix="_left"
-    )
-    member_2_df = ship_columns_df.join(
-        other=character_columns_df, on="member_2", 
-        rsuffix="_right", lsuffix="_left"
-    )
-    member_3_df = ship_columns_df.join(
-        other=character_columns_df, on="member_3", 
-        rsuffix="_right", lsuffix="_left"
-    )
-    member_4_df = ship_columns_df.join(
-        other=character_columns_df, on="member_4", 
-        rsuffix="_right", lsuffix="_left"
-    )
-
-    # -> combine all rows into one big df 
-    full_character_df = pd.concat([member_1_df, member_2_df, member_3_df, member_4_df])
-
-    # drop "member" columns now that they're joined
-    full_character_df.pop("member_1")
-    full_character_df.pop("member_2")
-    full_character_df.pop("member_3")
-    full_character_df.pop("member_4")
     # drop duplicate "fandom" column
     full_character_df.pop("fandom_right")
 
     # remove any none value rows from 3 & 4 if you haven't yet 
-    full_character_df = full_character_df.dropna().rename(
+    full_character_df = full_character_df.rename(
         columns={"fandom_left": "fandom"}
     ).sort_values(by="fandom")
 
@@ -263,11 +236,8 @@ def visualise_hottest_characters(hottest_rank_df):
 
 # running file writing code
 if __name__ == "__main__":
-    # read from ships file make a df
-    characters_df = df_from_csv("data/fifth_clean_up_data/stage_5_characters.csv")
-    ships_df = df_from_csv("data/fifth_clean_up_data/stage_5_ships.csv")
 
-    full_character_df = make_full_chars_df(characters_df, ships_df)
+    full_character_df = make_full_chars_df()
     hottest_rank_df = make_hottest_char_df(full_character_df)
     hottest_rank_fig = visualise_hottest_characters(hottest_rank_df)
 
