@@ -75,7 +75,7 @@ In the ambiguous stack, the vast majority is men (and male-aligned folks) being 
 
 This is the average number of ships of the given type per fandom:
 
-![alt text](all_ao3_data_vis_charts/gender_diagrams/all_ao3_fandoms_average_no_of_ships_by_type.png)
+![alt text](all_ao3_data_vis_charts/gender_diagrams/all_ao3_fandoms_average_no_of_ships_by_type_2013_2023.png)
 
 These are the fandoms with the most ships of the given type:
 
@@ -88,7 +88,7 @@ This chart shows the number of fandoms that either do not contain any ships of t
 
 ![alt text](all_ao3_data_vis_charts/gender_diagrams/all_ao3_fandoms_with_no_over_half_only_by_ship_type_2013_2023.png)
 
-The only two (2) fandoms that have more than 50% straight ships are Game of Thrones and Doctor Who, so congrats to them on having the best-written hets in media apparently. 👏
+The only two (2) fandoms (with multiple ship types) that have more than 50% straight ships are Game of Thrones and Doctor Who, so congrats to them on having the best-written hets and the least homoeroticism in media apparently. 👏
 
 ## Race statistics
 
@@ -106,7 +106,7 @@ These are the smaller groups without the white, east asian, and un-specified or 
 ![alt text](all_ao3_data_vis_charts/racial_groups_diagrams/all_ao3_characters_racial_groups_excl_white_n_ea_2013_2023.png)
 
 Latin folks make up the largest portion, followed by black folks.
-All other groups have less than 20 characters in the entire (922 character) set.
+All other groups have less than 15 characters in the entire (922 character) set.
 There are more indigenous folks in the set than there are south asians.
 
 ### Ships
@@ -131,10 +131,10 @@ The first one shows how many fandoms only have one racial group and how many hav
 
 ![alt text](all_ao3_data_vis_charts/racial_groups_diagrams/all_ao3_fandoms_with_one_v_multi_groups_2013_2023.png)
 
-It is more balanced than the interracial figure, pointing to there being a number of fandoms where there are multiple racial groups overall but the characters in question are only being shipped with characters of their own group.
+It is more balanced than the interracial figure, pointing to there being a number of fandoms where there are multiple racial groups overall but several characters are only being shipped with characters of their own group.
 
 The second diagram shows the fandoms with the highest number of different racial groups:
 
 ![alt text](all_ao3_data_vis_charts/racial_groups_diagrams/all_ao3_fandoms_top_racial_diversity_2013_2023.png)
 
-Marvel once again leads with 8 groups (due to its overall higher numbers of characters/ships). It is followed by The 100 and DC tied for second with 7 groups each, and Star Wars in third with 6. Teen Wolf and Genshin Impact follow in fourth with 5 groups respectively. All other fandoms had less than 5 groups represented.
+Marvel once again leads with 8 groups (due to its overall higher numbers of characters/ships). It is followed by The 100 and DC tied for second with 7 groups each, and Star Wars in third with 6. Teen Wolf and Genshin Impact follow in fourth with 5 groups respectively. All other fandoms had less than 5 racial groups represented.
