@@ -645,6 +645,7 @@ def non_white_ships_srs(total_race_combo_counts):
     non_white_ships["contains_e_asian_person"] = non_white_ships.index.str.contains("E Asian")
     non_white_ships["contains_ambig_person"] = non_white_ships.index.str.contains("Ambig")
     non_white_ships["contains_non_human"] = non_white_ships.index.str.contains("N.H.")
+    non_white_ships["contains_unknown"] = non_white_ships.index.str.contains("Unknown")
 
     non_white_ships_counts = pd.Series(
         {
@@ -657,11 +658,13 @@ def non_white_ships_srs(total_race_combo_counts):
             "non_white_pairings": non_white_ships["count"].where(
                 (non_white_ships.contains_ambig_person == False) & (
                 non_white_ships.contains_non_human == False) & (
+                non_white_ships.contains_unknown == False) & (
                 non_white_ships.contains_white_person == False)
             ).aggregate("sum"),
             "non_white_or_east_asian_pairings": non_white_ships["count"].where(
                 (non_white_ships.contains_ambig_person == False) & (
                 non_white_ships.contains_non_human == False) & (
+                non_white_ships.contains_unknown == False) & (
                 non_white_ships.contains_white_person == False) & (
                 non_white_ships.contains_e_asian_person == False)
             ).aggregate("sum"),
