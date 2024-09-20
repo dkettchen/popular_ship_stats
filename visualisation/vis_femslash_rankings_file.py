@@ -2,6 +2,7 @@ from visualisation.vis_utils.make_file_dfs import make_femslash_dfs, make_charac
 from visualisation.vis_utils.remove_member_columns import remove_members_from_df
 from visualisation.vis_utils.join_member_info import join_character_info_to_df
 from visualisation.vis_utils.invert_rank import invert_rank
+from visualisation.vis_utils.remove_translation import remove_translation
 
 from copy import deepcopy
 import pandas as pd
@@ -69,7 +70,7 @@ def join_ship_info_to_femslash(femslash_df_dict):
 
 ## general stats
 
-# marketshare of fandoms each year ✅
+# marketshare of fandoms each year
 def fandom_market_share_by_year(ship_info_df):
     """
     takes a dataframe that contains (at least) "year", "ship", and "fandom" columns
@@ -93,7 +94,7 @@ def fandom_market_share_by_year(ship_info_df):
         year_dict[int(year)] = year_df
 
     return year_dict
-# fandoms with most popular ships (add together rankings!) ✅
+# fandoms with most popular ships (add together rankings!)
 def fandoms_popularity_by_year(ship_info_df):
     """
     takes a dataframe that contains (at least) "year", "rank_no", and "fandom" columns
@@ -113,12 +114,12 @@ def fandoms_popularity_by_year(ship_info_df):
         ).groupby("fandom").agg("sum").rename(
             columns={"rank_no": "rank_sum"}
         )
-        year_df = year_df.sort_values(by="rank_sum", ascending=False)#.dropna()
+        year_df = year_df.head(15).sort_values(by="rank_sum", ascending=False)#.dropna()
         year_df["year"] = year
         year_dict[int(year)] = year_df
 
     return year_dict
-# fandoms with most ships in ranking each year and most popular fandoms ✅
+# fandoms with most ships in ranking each year and most popular fandoms
 def top_5_fandoms_by_year(market_share, popularity):
     """
     takes outputs from fandom_market_share_by_year and fandoms_popularity_by_year
@@ -144,7 +145,7 @@ def top_5_fandoms_by_year(market_share, popularity):
 
     return top_5_dict
 
-# how much rpf vs not ✅
+# how much rpf vs not
 def rpf_vs_fic(ship_info_df):
     """
     takes a dataframe that contains (at least) "year", "ship", and "rpf_or_fic" columns
@@ -166,7 +167,7 @@ def rpf_vs_fic(ship_info_df):
 
     return year_dict
 
-# top 5 wlw ships & their demo each year ✅
+# top 5 wlw ships & their demo each year
 def top_5_wlw(ship_info_df):
     """
     takes a dataframe that contains (at least) "year", "ship", "fandom", "race_combo", and "rpf_or_fic" 
@@ -240,7 +241,7 @@ def count_streaks(top_5):
     ).sort_values(by="longest_streak", ascending=False)
 
     return new_df.reset_index().rename(columns={"index": "ship"})
-# longest running top 5 femslash ship (longest streak & most appearances) ✅
+# longest running top 5 femslash ship (longest streak & most appearances)
 def longest_running_top_5_ships(appearances, streaks):
     """
     takes the output of count_appearances and count_streaks
@@ -263,8 +264,8 @@ def longest_running_top_5_ships(appearances, streaks):
 
     return new_df
 
-# no 1 hottest character each year (in most ships) ✅
-    # & their highest-ranked ship ✅
+# no 1 hottest character each year (in most ships)
+    # & their highest-ranked ship
 def hottest_sapphic(character_info_df):
     """
     takes dataframe that (at least) contains "year", "full_name", "ship", "rank_no", 
@@ -309,7 +310,7 @@ def hottest_sapphic(character_info_df):
     return year_dict
 # need to separate out chars we wanna visualise as a lot are tied & it's by year not fandom
 
-# character gender percentages (what gender weirds were in the femslash ranking) ✅
+# character gender percentages (what gender weirds were in the femslash ranking)
 def sapphic_gender_stats(character_info_df):
     """
     takes dataframe that (at least) contains "year" and "gender" columns
@@ -333,7 +334,7 @@ def sapphic_gender_stats(character_info_df):
 
 ## race stats:
 
-# character race percentages each year ✅
+# character race percentages each year
 def total_racial_group_nos_by_year(character_info_df):
     """
     takes dataframe that (at least) contains "year" and "race" columns
@@ -353,7 +354,7 @@ def total_racial_group_nos_by_year(character_info_df):
         year_dict[int(year)] = counted_df.sort_values(by="count", ascending=False)
 
     return year_dict
-# how many multiracial characters each year ✅
+# how many multiracial characters each year
 def total_multi_chars(race_percent):
     """
     takes output dict from total_racial_group_nos_by_year
@@ -371,7 +372,7 @@ def total_multi_chars(race_percent):
         temp_dict[year] = [multi, non_multi]
     new_df = pd.DataFrame(data=temp_dict, index=["multi_chars", "non-multi_chars"])
     return new_df
-# how many racial groups each year ✅
+# how many racial groups each year
 def total_racial_groups(race_percent):
     """
     takes output dict from total_racial_group_nos_by_year
@@ -386,7 +387,7 @@ def total_racial_groups(race_percent):
     new_df = pd.Series(data=temp_dict)
     return new_df
 
-# ship race combo percentages each year ✅
+# ship race combo percentages each year
 def total_racial_combo_nos_by_year(ship_info_df):
     """
     takes dataframe that (at least) contains "year" and "race_combo" columns
@@ -406,7 +407,7 @@ def total_racial_combo_nos_by_year(ship_info_df):
         year_dict[int(year)] = counted_df.sort_values(by="count", ascending=False)
 
     return year_dict
-# of which how many interracial vs same ✅
+# of which how many interracial vs same
 def total_interracial_ratio(race_combo_percent):
     """
     takes output dict from total_racial_combo_nos_by_year
@@ -424,7 +425,7 @@ def total_interracial_ratio(race_combo_percent):
         temp_dict[year] = [inter, non_inter]
     new_df = pd.DataFrame(data=temp_dict, index=["interracial_ships", "non-interracial_ships"])
     return new_df
-# of which how many involved multi chars vs non-multi ✅
+# of which how many involved multi chars vs non-multi
 def total_multi_involved_ratio(race_combo_percent):
     """
     takes output dict from total_racial_combo_nos_by_year
@@ -443,7 +444,7 @@ def total_multi_involved_ratio(race_combo_percent):
     new_df = pd.DataFrame(data=temp_dict, index=["with_multi_chars", "without_multi_chars"])
     return new_df
 
-# prep info df with true/false values ✅
+# prep info df with true/false values
 def prep_df_for_non_white_ship_comp(ship_info_df):
     """
     takes dataframe that (at least) contains "year", "ship", "fandom", "rank_no", "race_combo" columns
@@ -604,6 +605,141 @@ def average_non_white_ranking(separated_dict):
     return new_dict
 
 
+## vis
+
+def visualise_market_share_and_popularity(input_dict, colour_lookup):
+    """
+    visualise the femslash output from fandom_market_share_by_year 
+    or fandoms_popularity_by_year as pie charts
+    """
+    year_donuts_fig = make_subplots(rows=2, cols=5, specs=[[
+        {'type':'domain'}, {'type':'domain'}, {'type':'domain'}, {'type':'domain'}, {'type':'domain'}
+    ], [
+        {'type':'domain'}, {'type':'domain'}, {'type':'domain'}, {'type':'domain'}, {'type':'domain'}
+    ]],)
+
+    row_count = 1
+    col_count = 2
+
+    if "no_of_ships" in input_dict[2023].columns:
+        femslash_title = "Fandoms (> 1 ship) by market share by year (AO3 femslash ranking 2013-2023)"
+        column_name = "no_of_ships"
+    elif "rank_sum" in input_dict[2023].columns:
+        femslash_title = "Top 15 fandoms by popularity by year (AO3 femslash ranking 2013-2023)"
+        column_name = "rank_sum"
+
+    for year in input_dict:
+        year_df = input_dict[year]
+        fandoms = []
+        for fandom in year_df.index:
+            if " | " in fandom:
+                new_fandom = remove_translation(fandom) 
+                if "Madoka" in new_fandom:
+                    new_fandom = "Madoka"
+                elif new_fandom == "My Hero Academia":
+                    new_fandom = "MHA"
+            elif "Universe" in fandom and fandom != "Steven Universe":
+                new_fandom = fandom[:-9]
+                if "Avatar" in new_fandom:
+                    new_fandom = "ATLA"
+                elif "Game of Thrones" in new_fandom:
+                    new_fandom = "GoT"
+            elif "She-Ra" in fandom:
+                new_fandom = "She-Ra"
+            else: new_fandom = fandom
+            fandoms.append(new_fandom)
+
+        ships_no = year_df[column_name]
+
+        colours = list(year_df.reset_index()["fandom"].apply(lambda x: colour_lookup[x]))
+
+        year_donuts_fig.add_trace(go.Pie(
+            labels=fandoms, 
+            values=ships_no, 
+            hole=0.3, # determines hole size
+            title=year, # text that goes in the middle of the hole
+            sort=False, # if you want to keep it in its original order rather than sorting by size
+            titlefont_size=25, # to format title text
+            marker_colors=colours,
+            automargin=False,
+            textposition="inside"
+        ), row_count, col_count)
+
+        if col_count == 5:
+            col_count = 1
+            row_count += 1
+        else:
+            col_count += 1
+
+    year_donuts_fig.update_traces(
+        textinfo='label',
+        # marker=dict(
+        #     #colors=px.colors.qualitative.Bold + px.colors.qualitative.Bold, # to use colours
+        #     line=dict(color='#000000', width=2) # to add outline
+        # )
+    )
+    year_donuts_fig.update_layout(
+        title=femslash_title, 
+        uniformtext_minsize=12,
+        uniformtext_mode="hide",
+        showlegend=False,
+        # colorway=list(colour_lookup.values())
+        # px.colors.qualitative.Bold + \
+        #     px.colors.qualitative.Pastel + \
+        #     px.colors.qualitative.Prism + \
+        #     px.colors.qualitative.Vivid
+    )
+
+    return year_donuts_fig
+
+
+def visualise_top_5_fandoms(input_dict):
+    pass
+
+
+def make_colour_lookup(input_df):
+    """
+    takes a df that contains (at least) a "fandom" column
+
+    returns a dictionary with keys of all fandoms from input_df and colour values assigned to each
+    """
+
+    all_fandoms = sorted(list(input_df["fandom"].unique()))
+
+    colour_lookup = {}
+    colours = px.colors.qualitative.Bold + px.colors.qualitative.Bold + \
+        px.colors.qualitative.Bold + px.colors.qualitative.Bold + \
+        px.colors.qualitative.Bold + px.colors.qualitative.Bold + \
+        px.colors.qualitative.Bold + px.colors.qualitative.Bold + \
+        px.colors.qualitative.Bold + px.colors.qualitative.Bold
+    
+    colour_counter = 0
+    for fandom in all_fandoms:
+        colour_lookup[fandom] = colours[colour_counter]
+        colour_counter += 1
+    colour_lookup["Marvel"] = "crimson"
+    colour_lookup["DC"] = "dodgerblue"
+    colour_lookup["Harry Potter Universe"] = "green"
+    colour_lookup["Homestuck"] = "orange"
+    colour_lookup["Genshin Impact | 原神"] = "gold"
+    colour_lookup["Steven Universe"] = "deeppink"
+    colour_lookup["Once Upon a Time"] = "steelblue"
+    colour_lookup["Avatar: The last Airbender Universe"] = "tomato"
+    colour_lookup["Teen Wolf"] = "darkslateblue"
+    colour_lookup["Buffy Universe"] = "goldenrod"
+    colour_lookup["RWBY"] = "darkred"
+    colour_lookup["Vampire Diaries Universe"] = "darkmagenta"
+    colour_lookup["Stranger Things"] = "red"
+    colour_lookup["Amphibia"] = "lightgreen"
+    colour_lookup["Women's Soccer"] = "black"
+    colour_lookup["Doctor Who"] = "blue"
+    colour_lookup["Frozen"] = "paleturquoise"
+    colour_lookup["Carmilla"] = "red"
+
+
+    return colour_lookup
+
+
 if __name__ == "__main__":
 
     # get data
@@ -618,16 +754,33 @@ if __name__ == "__main__":
     femslash_ship_info_df = remove_members_from_df(ship_joined_femslash_df)
     femslash_character_info_df = join_character_info_to_df(ship_joined_femslash_df)
 
+    # make fandom colour dict:
+    colour_lookup_dict = make_colour_lookup(femslash_ship_info_df)
+
     # make items to be visualised:
 
     ## general stuff
 
-    # market_share_dict = fandom_market_share_by_year(femslash_ship_info_df) 
-    #     # make into pie charts
-    # popularity_dict = fandoms_popularity_by_year(femslash_ship_info_df) 
-    #     # make into pie charts
-    # top_5_fandoms_dict = top_5_fandoms_by_year(market_share_dict, popularity_dict) 
-    #     # make into tables
+    market_share_dict = fandom_market_share_by_year(femslash_ship_info_df) 
+    market_share_fig = visualise_market_share_and_popularity(market_share_dict, colour_lookup_dict)
+    market_share_fig.write_image(
+        "visualisation/femslash_ao3_data_vis_charts/fandom_market_share_2013_2023.png", 
+        width=2200, 
+        height=1000, 
+        scale=2
+    )
+
+    popularity_dict = fandoms_popularity_by_year(femslash_ship_info_df) 
+    popularity_fig = visualise_market_share_and_popularity(popularity_dict, colour_lookup_dict)
+    popularity_fig.write_image(
+        "visualisation/femslash_ao3_data_vis_charts/fandom_popularity_2013_2023.png", 
+        width=2200, 
+        height=1000, 
+        scale=2
+    )
+
+    top_5_fandoms_dict = top_5_fandoms_by_year(market_share_dict, popularity_dict) 
+        # make into tables
 
     # rpf_or_fic_dict = rpf_vs_fic(femslash_ship_info_df) 
     #     # make into pie charts
