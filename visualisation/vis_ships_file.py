@@ -641,7 +641,7 @@ def non_white_ships_srs(total_race_combo_counts):
     """
     # this one's the big oof
     non_white_ships = total_race_combo_counts.copy()
-    non_white_ships["contains_white_person"] = non_white_ships.index.str.contains("White")
+    non_white_ships["contains_white_person"] = non_white_ships.index.str.contains("White|Eu Ind")
     non_white_ships["contains_e_asian_person"] = non_white_ships.index.str.contains("E Asian")
     non_white_ships["contains_ambig_person"] = non_white_ships.index.str.contains("Ambig")
     non_white_ships["contains_non_human"] = non_white_ships.index.str.contains("N.H.")
