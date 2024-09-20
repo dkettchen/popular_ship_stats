@@ -20,19 +20,19 @@ def join_character_info_to_df(input_df):
     # make temp df for each member position
     member_1_df = input_df.join(
         other=character_columns_df, on="member_1", 
-        rsuffix="_right", lsuffix="_left"
+        lsuffix="_caller", rsuffix="_other"
     )
     member_2_df = input_df.join(
         other=character_columns_df, on="member_2", 
-        rsuffix="_right", lsuffix="_left"
+        lsuffix="_caller", rsuffix="_other"
     )
     member_3_df = input_df.join(
         other=character_columns_df, on="member_3", 
-        rsuffix="_right", lsuffix="_left"
+        lsuffix="_caller", rsuffix="_other"
     )
     member_4_df = input_df.join(
         other=character_columns_df, on="member_4", 
-        rsuffix="_right", lsuffix="_left"
+        lsuffix="_caller", rsuffix="_other"
     )
 
     # -> combine all rows into one big df 
@@ -41,4 +41,4 @@ def join_character_info_to_df(input_df):
     # drop "member" columns now that they're joined
     full_character_df = remove_members_from_df(full_character_df)
 
-    return full_character_df.dropna()
+    return full_character_df.dropna().rename(columns={"fandom_caller": "fandom", "fandom_other": "char_fandom"})
