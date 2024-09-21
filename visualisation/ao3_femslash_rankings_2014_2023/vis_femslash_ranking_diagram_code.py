@@ -25,7 +25,7 @@ def visualise_market_share_and_popularity(input_dict, colour_lookup):
         column_name = "rank_sum"
 
     for year in input_dict:
-        year_df = input_dict[year]
+        year_df = input_dict[year].copy()
         
         fandoms = clean_fandoms(year_df.index)
         ships_no = year_df[column_name]
@@ -96,7 +96,7 @@ def visualise_top_5_fandoms(input_dict):
     col_counter = 1
 
     for year in input_dict:
-        year_df = input_dict[year]
+        year_df = input_dict[year].copy()
 
         most_ships_fandoms = clean_fandoms(year_df["most_ships"])
         most_pop_fandoms = clean_fandoms(year_df["most_popular"])
@@ -134,4 +134,119 @@ def visualise_top_5_fandoms(input_dict):
     )
 
     return fig
+
+def visualise_rpf_vs_fic(input_dict):
+    """
+    visualise the femslash output from rpf_vs_fic as pie charts
+    """
+    year_donuts_fig = make_subplots(rows=3, cols=3, specs=[
+        [{'type':'domain'}, {'type':'domain'}, {'type':'domain'}], 
+        [{'type':'domain'}, {'type':'domain'}, {'type':'domain'}],
+        [{'type':'domain'}, {'type':'domain'}, {'type':'domain'}]
+    ],)
+
+    row_count = 1
+    col_count = 1
+
+    for year in input_dict:
+        year_df = input_dict[year].copy()
+
+        colours = ["deeppink", "darkred"]
+
+        year_donuts_fig.add_trace(go.Pie(
+            labels=["RPF", "fictional"], 
+            values=[year_df.loc["RPF"]["no_of_ships"], year_df.loc["fictional"]["no_of_ships"]], 
+            hole=0.3, # determines hole size
+            title=year, # text that goes in the middle of the hole
+            sort=False, # if you want to keep it in its original order rather than sorting by size
+            titlefont_size=10, # to format title text
+            marker_colors=colours,
+            automargin=False,
+            textposition="inside"
+        ), row_count, col_count)
+
+        if col_count == 3:
+            col_count = 1
+            row_count += 1
+        else:
+            col_count += 1
+
+    year_donuts_fig.update_traces(
+        textinfo='percent',
+    )
+    year_donuts_fig.update_layout(
+        title="Real Person Fic vs fictional ships by year (AO3 femslash ranking 2014-2023)", 
+        uniformtext_minsize=12,
+        uniformtext_mode="hide",
+        #showlegend=False,
+    )
+
+    return year_donuts_fig
+
+def visualise_top_5_pairings(input_dict):
+    """
+    takes the output from top_5_wlw
+
+    returns a figure visualising the data contained in lesbian flag coloured table format
+    """
+
+    fig = make_subplots(
+        rows=9, cols=1,
+        # shared_xaxes=True,
+        # vertical_spacing=0.03,
+        specs=[
+            [{"type": "table"}],[{"type": "table"}],[{"type": "table"}],
+            [{"type": "table"}],[{"type": "table"}],[{"type": "table"}],
+            [{"type": "table"}],[{"type": "table"}],[{"type": "table"}],
+        ]
+    )
+
+    line_colour = 'deeppink' # colour of lines
+    header_fill_colour = 'lightsalmon' # colour of header row
+    body_fill_colour = 'mistyrose' # colour of remaining rows
+
+    row_counter = 1
+    col_counter = 1
+
+    for year in input_dict:
+        year_df = input_dict[year].copy()
+
+        year_df["rank"] = ["1st", "2nd", "3rd", "4th", "5th"]
+        new_column_order = list(year_df.columns[-1:]) + list(year_df.columns[:-1])
+        year_df = year_df[new_column_order] # putting rank as first column
+
+        year_df["fandom"] = clean_fandoms(year_df["fandom"]) # cleaning/shortening fandoms
+        year_df.pop("rpf_or_fic") # removing unneeded columns
+        year_df.pop("year")
+
+        columns = [year] + list(year_df.columns[1:])
+        values = [year_df[column] for column in year_df.columns]
+
+        fig.add_trace(
+            go.Table(
+                header=dict(
+                    values=columns, # column names for header row
+                    align='left', # aligns header row text
+                    line_color=line_colour,
+                    fill_color=header_fill_colour,
+                ),
+                cells=dict(
+                    values=values, # values ordered by column
+                    align='left', # aligns body text
+                    line_color=line_colour,
+                    fill_color=body_fill_colour,
+                ),
+                columnwidth=[0.75,6.5,2.4,1.9] # sets column width ratios
+            ),
+            row=row_counter, col=col_counter
+        )
+
+        row_counter += 1
+
+    fig.update_layout(
+        title="Top 5 ships by year (AO3 femslash ranking 2014-2023)"
+    )
+
+    return fig
+
 

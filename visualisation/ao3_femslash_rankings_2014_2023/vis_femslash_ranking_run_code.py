@@ -1,4 +1,3 @@
-from visualisation.vis_utils.make_file_dfs import make_femslash_dfs
 from visualisation.vis_utils.remove_member_columns import remove_members_from_df
 from visualisation.vis_utils.join_member_info import join_character_info_to_df
 from visualisation.vis_utils.make_colour_lookup import make_colour_lookup
@@ -33,6 +32,8 @@ from visualisation.ao3_femslash_rankings_2014_2023.vis_femslash_ranking_race_sta
 from visualisation.ao3_femslash_rankings_2014_2023.vis_femslash_ranking_diagram_code import (
     visualise_market_share_and_popularity,
     visualise_top_5_fandoms,
+    visualise_rpf_vs_fic,
+    visualise_top_5_pairings,
 )
 
 # get data & turn into big df
@@ -50,43 +51,56 @@ colour_lookup_dict = make_colour_lookup(femslash_ship_info_df)
 
 ## general stuff
 
-market_share_dict = fandom_market_share_by_year(femslash_ship_info_df) 
-market_share_fig = visualise_market_share_and_popularity(market_share_dict, colour_lookup_dict)
-market_share_fig.write_image(
-    "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/fandom_market_share_2014_2023.png", 
-    width=1500, 
-    height=1500, 
-    scale=2
-)
+# market_share_dict = fandom_market_share_by_year(femslash_ship_info_df) 
+# market_share_fig = visualise_market_share_and_popularity(market_share_dict, colour_lookup_dict)
+# market_share_fig.write_image(
+#     "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/fandom_market_share_2014_2023.png", 
+#     width=1500, 
+#     height=1500, 
+#     scale=2
+# )
 
-popularity_dict = fandoms_popularity_by_year(femslash_ship_info_df) 
-popularity_fig = visualise_market_share_and_popularity(popularity_dict, colour_lookup_dict)
-popularity_fig.write_image(
-    "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/fandom_popularity_2014_2023.png", 
-    width=1500, 
-    height=1500, 
-    scale=2
-)
+# popularity_dict = fandoms_popularity_by_year(femslash_ship_info_df) 
+# popularity_fig = visualise_market_share_and_popularity(popularity_dict, colour_lookup_dict)
+# popularity_fig.write_image(
+#     "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/fandom_popularity_2014_2023.png", 
+#     width=1500, 
+#     height=1500, 
+#     scale=2
+# )
 
-top_5_fandoms_dict = top_5_fandoms_by_year(market_share_dict, popularity_dict) 
-top_5_fandoms_fig = visualise_top_5_fandoms(top_5_fandoms_dict)
-top_5_fandoms_fig.write_image(
-    "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/top_femslash_fandoms_2014_2023.png", 
-    width=1300, 
-    height=700, 
-    scale=2
-)
-    # make into tables
+# top_5_fandoms_dict = top_5_fandoms_by_year(market_share_dict, popularity_dict) 
+# top_5_fandoms_fig = visualise_top_5_fandoms(top_5_fandoms_dict)
+# top_5_fandoms_fig.write_image(
+#     "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/top_femslash_fandoms_2014_2023.png", 
+#     width=1300, 
+#     height=700, 
+#     scale=2
+# )
 
 # rpf_or_fic_dict = rpf_vs_fic(femslash_ship_info_df) 
-#     # make into pie charts
+# rpf_fig = visualise_rpf_vs_fic(rpf_or_fic_dict)
+# rpf_fig.write_image(
+#     "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/femslash_rpf_2014_2023.png", 
+#     width=700, 
+#     height=650, 
+#     scale=2
+# )
 
-# top_5_ships_dict = top_5_wlw(femslash_ship_info_df)
-#     # either tables or race categories as a diagram
-# appearances_ranking = count_appearances(top_5_ships_dict)
-# streak_ranking = count_streaks(top_5_ships_dict)
-# longest_running_top_5 = longest_running_top_5_ships(appearances_ranking, streak_ranking) 
-#     # make into table
+top_5_ships_dict = top_5_wlw(femslash_ship_info_df)
+top_5_ships_fig = visualise_top_5_pairings(top_5_ships_dict)
+    # either tables or race categories as a diagram
+top_5_ships_fig.write_image(
+    "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/top_femslash_ships_2014_2023.png", 
+    width=875, 
+    height=1770, 
+    scale=2
+)
+
+appearances_ranking = count_appearances(top_5_ships_dict)
+streak_ranking = count_streaks(top_5_ships_dict)
+longest_running_top_5 = longest_running_top_5_ships(appearances_ranking, streak_ranking) 
+    # make into table
 
 # hottest_wlw = hottest_sapphic(femslash_character_info_df)
 #     # needs more futzing before vis
