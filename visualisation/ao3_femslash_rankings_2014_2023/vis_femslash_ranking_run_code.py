@@ -2,10 +2,10 @@ from visualisation.vis_utils.make_file_dfs import make_femslash_dfs
 from visualisation.vis_utils.remove_member_columns import remove_members_from_df
 from visualisation.vis_utils.join_member_info import join_character_info_to_df
 from visualisation.vis_utils.make_colour_lookup import make_colour_lookup
-from visualisation.ao3_femslash_rankings_2013_2023.vis_femslash_ranking_utils import (
+from visualisation.ao3_femslash_rankings_2014_2023.vis_femslash_ranking_utils import (
     make_joined_femslash_df
 )
-from visualisation.ao3_femslash_rankings_2013_2023.vis_femslash_ranking_general_stat_code import (
+from visualisation.ao3_femslash_rankings_2014_2023.vis_femslash_ranking_general_stat_code import (
     fandom_market_share_by_year,
     fandoms_popularity_by_year,
     top_5_fandoms_by_year,
@@ -17,7 +17,7 @@ from visualisation.ao3_femslash_rankings_2013_2023.vis_femslash_ranking_general_
     hottest_sapphic,
     sapphic_gender_stats,
 )
-from visualisation.ao3_femslash_rankings_2013_2023.vis_femslash_ranking_race_stat_code import (
+from visualisation.ao3_femslash_rankings_2014_2023.vis_femslash_ranking_race_stat_code import (
     total_racial_group_nos_by_year,
     total_multi_chars,
     total_racial_groups,
@@ -30,7 +30,7 @@ from visualisation.ao3_femslash_rankings_2013_2023.vis_femslash_ranking_race_sta
     top_non_white_ships,
     average_non_white_ranking,
 )
-from visualisation.ao3_femslash_rankings_2013_2023.vis_femslash_ranking_diagram_code import (
+from visualisation.ao3_femslash_rankings_2014_2023.vis_femslash_ranking_diagram_code import (
     visualise_market_share_and_popularity,
     visualise_top_5_fandoms,
 )
@@ -53,7 +53,7 @@ colour_lookup_dict = make_colour_lookup(femslash_ship_info_df)
 market_share_dict = fandom_market_share_by_year(femslash_ship_info_df) 
 market_share_fig = visualise_market_share_and_popularity(market_share_dict, colour_lookup_dict)
 market_share_fig.write_image(
-    "visualisation/ao3_femslash_rankings_2013_2023/ao3_femslash_rankings_charts/fandom_market_share_2013_2023.png", 
+    "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/fandom_market_share_2014_2023.png", 
     width=1500, 
     height=1500, 
     scale=2
@@ -62,7 +62,7 @@ market_share_fig.write_image(
 popularity_dict = fandoms_popularity_by_year(femslash_ship_info_df) 
 popularity_fig = visualise_market_share_and_popularity(popularity_dict, colour_lookup_dict)
 popularity_fig.write_image(
-    "visualisation/ao3_femslash_rankings_2013_2023/ao3_femslash_rankings_charts/fandom_popularity_2013_2023.png", 
+    "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/fandom_popularity_2014_2023.png", 
     width=1500, 
     height=1500, 
     scale=2
@@ -71,7 +71,7 @@ popularity_fig.write_image(
 top_5_fandoms_dict = top_5_fandoms_by_year(market_share_dict, popularity_dict) 
 top_5_fandoms_fig = visualise_top_5_fandoms(top_5_fandoms_dict)
 top_5_fandoms_fig.write_image(
-    "visualisation/ao3_femslash_rankings_2013_2023/ao3_femslash_rankings_charts/top_femslash_fandoms_2013_2023.png", 
+    "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/top_femslash_fandoms_2014_2023.png", 
     width=1300, 
     height=700, 
     scale=2
