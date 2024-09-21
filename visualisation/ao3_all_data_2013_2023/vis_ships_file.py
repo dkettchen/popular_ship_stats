@@ -1,9 +1,8 @@
 from visualisation.vis_utils.read_csv_to_df import df_from_csv
-from visualisation.vis_utils.remove_translation import remove_translation
+from visualisation.vis_utils.clean_fandoms_for_vis import clean_fandoms
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
-from plotly.subplots import make_subplots
 from re import split
 
 
@@ -226,17 +225,7 @@ def fandom_market_share_srs(ships_df):
     )["slash_ship"].sort_values(ascending=False)
 
     values = fandom_market_share.values
-    fandoms = []
-    for fandom in fandom_market_share.index:
-        if " | " in fandom:
-            fandom = remove_translation(fandom)
-        elif "BTS" in fandom:
-            fandom = "BTS"
-        elif "Game of Thrones" in fandom:
-            fandom = "GoT"
-        elif "Universe" in fandom and fandom != "Steven Universe":
-            fandom = fandom[:-9]
-        fandoms.append(fandom)
+    fandoms = clean_fandoms(fandom_market_share.index)
 
     english_titles_market_share = pd.Series(data=values, index=fandoms)
 
