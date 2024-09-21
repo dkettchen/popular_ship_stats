@@ -1,34 +1,38 @@
-from visualisation.ao3_femslash_rankings_2013_2023.vis_femslash_rankings_file import (
-edit_femslash_df_columns,
-join_ship_info_to_femslash,
-fandom_market_share_by_year,
-fandoms_popularity_by_year,
-top_5_fandoms_by_year,
-rpf_vs_fic,
-top_5_wlw,
-count_appearances,
-count_streaks,
-longest_running_top_5_ships,
-hottest_sapphic,
-sapphic_gender_stats,
-total_racial_group_nos_by_year,
-total_multi_chars,
-total_racial_groups,
-total_racial_combo_nos_by_year,
-total_interracial_ratio,
-total_multi_involved_ratio,
-prep_df_for_non_white_ship_comp,
-count_non_white_ships,
-separate_out_non_white_ships_info,
-top_non_white_ships,
-average_non_white_ranking,
-visualise_market_share_and_popularity,
-make_colour_lookup,
-
-)
 from visualisation.vis_utils.make_file_dfs import make_femslash_dfs
 from visualisation.vis_utils.remove_member_columns import remove_members_from_df
 from visualisation.vis_utils.join_member_info import join_character_info_to_df
+from visualisation.vis_utils.make_colour_lookup import make_colour_lookup
+from visualisation.ao3_femslash_rankings_2013_2023.vis_femslash_ranking_utils import (
+    edit_femslash_df_columns, join_ship_info_to_femslash
+)
+from visualisation.ao3_femslash_rankings_2013_2023.vis_femslash_ranking_general_stat_code import (
+    fandom_market_share_by_year,
+    fandoms_popularity_by_year,
+    top_5_fandoms_by_year,
+    rpf_vs_fic,
+    top_5_wlw,
+    count_appearances,
+    count_streaks,
+    longest_running_top_5_ships,
+    hottest_sapphic,
+    sapphic_gender_stats,
+)
+from visualisation.ao3_femslash_rankings_2013_2023.vis_femslash_ranking_race_stat_code import (
+    total_racial_group_nos_by_year,
+    total_multi_chars,
+    total_racial_groups,
+    total_racial_combo_nos_by_year,
+    total_interracial_ratio,
+    total_multi_involved_ratio,
+    prep_df_for_non_white_ship_comp,
+    count_non_white_ships,
+    separate_out_non_white_ships_info,
+    top_non_white_ships,
+    average_non_white_ranking,
+)
+from visualisation.ao3_femslash_rankings_2013_2023.vis_femslash_ranking_diagram_code import (
+    visualise_market_share_and_popularity,
+)
 
 # get data
 femslash_df_dict = make_femslash_dfs()
