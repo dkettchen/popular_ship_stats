@@ -47,7 +47,7 @@ def fandoms_popularity_by_year(ship_info_df):
         ).groupby("fandom").agg("sum").rename(
             columns={"rank_no": "rank_sum"}
         )
-        year_df = year_df.head(15).sort_values(by="rank_sum", ascending=False)#.dropna()
+        year_df = year_df.sort_values(by="rank_sum", ascending=False).head(15)#.dropna()
         year_df["year"] = year
         year_dict[int(year)] = year_df
 
