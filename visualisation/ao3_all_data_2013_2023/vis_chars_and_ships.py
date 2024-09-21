@@ -42,7 +42,7 @@ def make_full_chars_df():
     full_character_df = join_character_info_to_df(ship_columns_df)
 
     # drop duplicate "fandom" column
-    full_character_df.pop("fandom_right")
+    full_character_df.pop("char_fandom")
 
     # remove any none value rows from 3 & 4 if you haven't yet 
     full_character_df = full_character_df.rename(
