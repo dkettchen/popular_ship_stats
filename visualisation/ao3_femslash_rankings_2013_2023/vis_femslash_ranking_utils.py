@@ -1,4 +1,4 @@
-from visualisation.vis_utils.make_file_dfs import make_ships_df
+from visualisation.vis_utils.make_file_dfs import make_ships_df, make_femslash_dfs
 import pandas as pd
 
 def edit_femslash_df_columns(femslash_df_dict):
@@ -58,3 +58,18 @@ def join_ship_info_to_femslash(femslash_df_dict):
     joined_df = full_femslash_df.join(other=ships_df, on="ship", lsuffix="_left", rsuffix="_right")
 
     return joined_df
+
+def make_joined_femslash_df():
+    """
+    returns a ship-joined femslash dataframe to be used to create ship & character info dfs
+    """
+    # get data
+    femslash_df_dict = make_femslash_dfs()
+
+    # fix columns
+    new_femslash_df_dict = edit_femslash_df_columns(femslash_df_dict)
+    # combine into one big df
+    ship_joined_femslash_df = join_ship_info_to_femslash(new_femslash_df_dict) 
+
+    return ship_joined_femslash_df
+
