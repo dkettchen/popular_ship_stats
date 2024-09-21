@@ -38,3 +38,11 @@ update-fandoms-and-characters:
 # runs stage 5 cleaning file
 run-cleaning-5:
 	python src/fifth_cleaning_stage_code/run_stage_5_cleaning.py
+
+# run all "ao3_all_data_2013_2023" vis files to (re)make diagrams
+make-ao3-overall-data-charts:
+	python visualisation/ao3_all_data_2013_2023/vis_characters_file.py && python visualisation/ao3_all_data_2013_2023/vis_ships_file.py && python visualisation/ao3_all_data_2013_2023/vis_chars_and_ships.py
+
+# run "ao3_femslash_rankings_2013_2023"'s vis file to (re)make diagrams
+make-ao3-femslash-charts:
+	python visualisation/ao3_femslash_rankings_2013_2023/vis_femslash_ranking_run_code.py
