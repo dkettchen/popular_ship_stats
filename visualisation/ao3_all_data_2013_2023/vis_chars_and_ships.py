@@ -1,8 +1,8 @@
 from visualisation.vis_utils.join_member_info import join_character_info_to_df
 from visualisation.vis_utils.make_file_dfs import make_ships_df
+from visualisation.vis_utils.remove_translation import remove_translation
 import pandas as pd
 import plotly.graph_objects as go
-from vis_utils.remove_translation import remove_translation
 #import plotly.express as px
 #from plotly.subplots import make_subplots
 
@@ -242,7 +242,7 @@ if __name__ == "__main__":
     hottest_rank_fig = visualise_hottest_characters(hottest_rank_df)
 
     hottest_rank_fig.write_image(
-        "visualisation/all_ao3_data_vis_charts/all_ao3_hottest_characters_ranking_2013_2023.png", 
+        "visualisation/ao3_all_data_2013_2023/ao3_all_data_charts/all_ao3_hottest_characters_ranking_2013_2023.png", 
         width=800, 
         height=1400, 
         scale=2

@@ -764,7 +764,7 @@ if __name__ == "__main__":
     market_share_dict = fandom_market_share_by_year(femslash_ship_info_df) 
     market_share_fig = visualise_market_share_and_popularity(market_share_dict, colour_lookup_dict)
     market_share_fig.write_image(
-        "visualisation/femslash_ao3_data_vis_charts/fandom_market_share_2013_2023.png", 
+        "visualisation/ao3_femslash_rankings_2013_2023/ao3_femslash_rankings_charts/fandom_market_share_2013_2023.png", 
         width=2200, 
         height=1000, 
         scale=2
@@ -773,7 +773,7 @@ if __name__ == "__main__":
     popularity_dict = fandoms_popularity_by_year(femslash_ship_info_df) 
     popularity_fig = visualise_market_share_and_popularity(popularity_dict, colour_lookup_dict)
     popularity_fig.write_image(
-        "visualisation/femslash_ao3_data_vis_charts/fandom_popularity_2013_2023.png", 
+        "visualisation/ao3_femslash_rankings_2013_2023/ao3_femslash_rankings_charts/fandom_popularity_2013_2023.png", 
         width=2200, 
         height=1000, 
         scale=2

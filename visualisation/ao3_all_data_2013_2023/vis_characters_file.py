@@ -467,7 +467,7 @@ if __name__ == "__main__":
     total_gender_percentages = all_characters_gender_df(characters_df)
     total_genders_fig = visualise_gender_totals(total_gender_percentages)
     total_genders_fig.write_image(
-        "visualisation/all_ao3_data_vis_charts/gender_diagrams/all_ao3_characters_gender_distr_2013_2023.png", 
+        "visualisation/ao3_all_data_2013_2023/ao3_all_data_charts/gender_diagrams/all_ao3_characters_gender_distr_2013_2023.png", 
         width=800, 
         height=400, 
         scale=2
@@ -475,7 +475,7 @@ if __name__ == "__main__":
 
     minority_genders_fig = visualise_gender_minorities(total_gender_percentages)
     minority_genders_fig.write_image(
-        "visualisation/all_ao3_data_vis_charts/gender_diagrams/all_ao3_characters_gender_minorities_2013_2023.png", 
+        "visualisation/ao3_all_data_2013_2023/ao3_all_data_charts/gender_diagrams/all_ao3_characters_gender_minorities_2013_2023.png", 
         width=1100, 
         height=420, 
         scale=2
@@ -486,7 +486,7 @@ if __name__ == "__main__":
     total_race_percentages = all_characters_racial_groups_df(characters_df)
     total_race_groups_fig = visualise_racial_group_totals(total_race_percentages)
     total_race_groups_fig.write_image(
-        "visualisation/all_ao3_data_vis_charts/racial_groups_diagrams/all_ao3_characters_all_racial_groups_2013_2023.png", 
+        "visualisation/ao3_all_data_2013_2023/ao3_all_data_charts/racial_groups_diagrams/all_ao3_characters_all_racial_groups_2013_2023.png", 
         width=800, 
         height=600, 
         scale=2
@@ -494,7 +494,7 @@ if __name__ == "__main__":
 
     total_racial_minority_fig = visualise_racial_minority_totals(total_race_percentages)
     total_racial_minority_fig.write_image(
-        "visualisation/all_ao3_data_vis_charts/racial_groups_diagrams/all_ao3_characters_racial_groups_excl_white_n_ea_2013_2023.png", 
+        "visualisation/ao3_all_data_2013_2023/ao3_all_data_charts/racial_groups_diagrams/all_ao3_characters_racial_groups_excl_white_n_ea_2013_2023.png", 
         width=1200, 
         height=600, 
         scale=2
@@ -505,7 +505,7 @@ if __name__ == "__main__":
     plural_vs_monoracial_fandoms = plural_vs_monoracial_fandoms_df(characters_df, racial_div_by_fandom)
     plural_vs_monoracial_fig = visualise_racial_diversity(plural_vs_monoracial_fandoms)
     plural_vs_monoracial_fig.write_image(
-        "visualisation/all_ao3_data_vis_charts/racial_groups_diagrams/all_ao3_fandoms_with_one_v_multi_groups_2013_2023.png", 
+        "visualisation/ao3_all_data_2013_2023/ao3_all_data_charts/racial_groups_diagrams/all_ao3_fandoms_with_one_v_multi_groups_2013_2023.png", 
         width=800, 
         height=400, 
         scale=2
@@ -514,7 +514,7 @@ if __name__ == "__main__":
     highest_racial_div = highest_racial_diversity_df(racial_div_by_fandom)
     highest_racial_div_fig = visualise_highest_racial_diversity(highest_racial_div)
     highest_racial_div_fig.write_image(
-        "visualisation/all_ao3_data_vis_charts/racial_groups_diagrams/all_ao3_fandoms_top_racial_diversity_2013_2023.png", 
+        "visualisation/ao3_all_data_2013_2023/ao3_all_data_charts/racial_groups_diagrams/all_ao3_fandoms_top_racial_diversity_2013_2023.png", 
         width=800, 
         height=400, 
         scale=2

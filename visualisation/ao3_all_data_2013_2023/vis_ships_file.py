@@ -1,10 +1,10 @@
 from visualisation.vis_utils.read_csv_to_df import df_from_csv
+from visualisation.vis_utils.remove_translation import remove_translation
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 from re import split
-from vis_utils.remove_translation import remove_translation
 
 
 def total_ships_df(ships_df): # util
@@ -746,7 +746,7 @@ if __name__ == "__main__":
     total_gender_percentages = total_gender_combo_percent_df(ships_df)
     total_gender_percent_fig = visualise_gender_combo_total(total_gender_percentages)
     total_gender_percent_fig.write_image(
-        "visualisation/all_ao3_data_vis_charts/gender_diagrams/all_ao3_ranked_ships_gender_combos_2013_2023.png", 
+        "visualisation/ao3_all_data_2013_2023/ao3_all_data_charts/gender_diagrams/all_ao3_ranked_ships_gender_combos_2013_2023.png", 
         width=600, 
         height=400, 
         scale=2
@@ -754,7 +754,7 @@ if __name__ == "__main__":
 
     minority_gender_combos_fig = visualise_gender_combo_minorities(total_gender_percentages)
     minority_gender_combos_fig.write_image(
-        "visualisation/all_ao3_data_vis_charts/gender_diagrams/all_ao3_ranked_ships_minority_gender_combos_2013_2023.png", 
+        "visualisation/ao3_all_data_2013_2023/ao3_all_data_charts/gender_diagrams/all_ao3_ranked_ships_minority_gender_combos_2013_2023.png", 
         width=1300, 
         height=600, 
         scale=2
@@ -763,7 +763,7 @@ if __name__ == "__main__":
     fandom_market_share = fandom_market_share_srs(ships_df)
     fandom_market_share_fig = visualise_fandom_market_share(fandom_market_share)
     fandom_market_share_fig.write_image(
-        "visualisation/all_ao3_data_vis_charts/all_ao3_ranked_ships_fandom_market_share_2013_2023.png", 
+        "visualisation/ao3_all_data_2013_2023/ao3_all_data_charts/all_ao3_ranked_ships_fandom_market_share_2013_2023.png", 
         width=800, 
         height=650, 
         scale=2
@@ -774,7 +774,7 @@ if __name__ == "__main__":
     total_gender_combos_series = total_gender_combos_srs(ships_per_fandom_by_type)
     total_gender_combos_fig = visualise_no_half_only(total_gender_combos_series)
     total_gender_combos_fig.write_image(
-        "visualisation/all_ao3_data_vis_charts/gender_diagrams/all_ao3_fandoms_with_no_over_half_only_by_ship_type_2013_2023.png", 
+        "visualisation/ao3_all_data_2013_2023/ao3_all_data_charts/gender_diagrams/all_ao3_fandoms_with_no_over_half_only_by_ship_type_2013_2023.png", 
         width=1200, 
         height=600, 
         scale=2
@@ -783,7 +783,7 @@ if __name__ == "__main__":
     highest_of_type_df = highest_of_this_type_df(ships_per_fandom_by_type)
     highest_of_type_fig = visualise_top_3_per_fandom_df(highest_of_type_df)
     highest_of_type_fig.write_image(
-        "visualisation/all_ao3_data_vis_charts/gender_diagrams/all_ao3_fandoms_top_3_by_ship_type_no_2013_2023.png", 
+        "visualisation/ao3_all_data_2013_2023/ao3_all_data_charts/gender_diagrams/all_ao3_fandoms_top_3_by_ship_type_no_2013_2023.png", 
         width=1200, 
         height=600, 
         scale=2
@@ -792,7 +792,7 @@ if __name__ == "__main__":
     average_gender_combo_per_fandom_series = average_gender_combo_srs(ships_per_fandom_by_type)
     average_gender_combo_fig = visualise_average_ship_combos_per_fandom(average_gender_combo_per_fandom_series)
     average_gender_combo_fig.write_image(
-        "visualisation/all_ao3_data_vis_charts/gender_diagrams/all_ao3_fandoms_average_no_of_ships_by_type_2013_2023.png", 
+        "visualisation/ao3_all_data_2013_2023/ao3_all_data_charts/gender_diagrams/all_ao3_fandoms_average_no_of_ships_by_type_2013_2023.png", 
         width=800, 
         height=400, 
         scale=2
@@ -803,7 +803,7 @@ if __name__ == "__main__":
     interracial_ships_counts = interracial_srs(total_race_combo_counts)
     interracial_fig = visualise_interracial_ships(interracial_ships_counts)
     interracial_fig.write_image(
-        "visualisation/all_ao3_data_vis_charts/racial_groups_diagrams/all_ao3_ranked_ships_interracial_percent_2013_2023.png", 
+        "visualisation/ao3_all_data_2013_2023/ao3_all_data_charts/racial_groups_diagrams/all_ao3_ranked_ships_interracial_percent_2013_2023.png", 
         width=800, 
         height=400, 
         scale=2
@@ -812,7 +812,7 @@ if __name__ == "__main__":
     non_white_ships_counts = non_white_ships_srs(total_race_combo_counts)
     non_white_fig = visualise_non_white_ships(non_white_ships_counts)
     non_white_fig.write_image(
-        "visualisation/all_ao3_data_vis_charts/racial_groups_diagrams/all_ao3_ranked_ships_non_white_ships_2013_2023.png", 
+        "visualisation/ao3_all_data_2013_2023/ao3_all_data_charts/racial_groups_diagrams/all_ao3_ranked_ships_non_white_ships_2013_2023.png", 
         width=800, 
         height=500, 
         scale=2
@@ -821,7 +821,7 @@ if __name__ == "__main__":
     rpf_vs_fic_df = rpf_fic_df(ships_df)
     rpf_fig = visualise_rpf_fic(rpf_vs_fic_df)
     rpf_fig.write_image(
-        "visualisation/all_ao3_data_vis_charts/all_ao3_ranked_ships_rpf_vs_fic_2013_2023.png", 
+        "visualisation/ao3_all_data_2013_2023/ao3_all_data_charts/all_ao3_ranked_ships_rpf_vs_fic_2013_2023.png", 
         width=600, 
         height=400, 
         scale=2
