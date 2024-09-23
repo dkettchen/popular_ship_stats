@@ -249,4 +249,100 @@ def visualise_top_5_pairings(input_dict):
 
     return fig
 
+def visualise_longest_running(input_df):
+    """
+    takes the output from longest_running_top_5_ships
+
+    returns a figure visualising the data contained in lesbian flag coloured table format
+    """
+
+    line_colour = 'deeppink' # colour of lines
+    header_fill_colour = 'lightsalmon' # colour of header row
+    body_fill_colour = 'mistyrose' # colour of remaining rows
+
+    headers = ["rank", "ship", "streak"]
+    values = [["1st", "2nd", "3rd", "4th", "5th"], input_df[input_df.columns[0]], [f"{value}/9 years" for value in input_df[input_df.columns[1]]]]
+
+    fig = go.Figure(
+        data=go.Table(
+            header=dict(
+                values=headers, # column names for header row
+                align='left', # aligns header row text
+                line_color=line_colour,
+                fill_color=header_fill_colour,
+            ),
+            cells=dict(
+                values=values, # values ordered by column
+                align='left', # aligns body text
+                line_color=line_colour,
+                fill_color=body_fill_colour,
+            ),
+            columnwidth=[0.1, 0.95, 0.2], # sets column width ratios
+        ),
+        layout={"title":"Longest running top 5 ships (AO3 femslash ranking 2014-2023)"}
+    )
+
+    return fig
+
+def visualise_hottest_sapphic(input_dict):
+    """
+    takes the output from hottest_sapphic
+
+    returns a figure visualising the data contained in lesbian flag coloured table format
+    """
+
+    fig = make_subplots(
+        rows=9, cols=1,
+        # shared_xaxes=True,
+        # vertical_spacing=0.03,
+        specs=[
+            [{"type": "table"}],[{"type": "table"}],[{"type": "table"}],
+            [{"type": "table"}],[{"type": "table"}],[{"type": "table"}],
+            [{"type": "table"}],[{"type": "table"}],[{"type": "table"}],
+        ]
+    )
+
+    line_colour = 'deeppink' # colour of lines
+    header_fill_colour = 'lightsalmon' # colour of header row
+    body_fill_colour = 'mistyrose' # colour of remaining rows
+
+    row_counter = 1
+    col_counter = 1
+
+    for year in input_dict:
+        year_df = input_dict[year]["over_3_ships"].copy()
+
+        year_df["fandom"] = clean_fandoms(year_df["fandom"]) # cleaning/shortening fandoms
+        year_df.pop("rpf_or_fic") # removing unneeded columns
+        year_df.pop("year")
+
+        columns = year_df.columns
+        values = [year_df[column] for column in year_df.columns]
+
+        fig.add_trace(
+            go.Table(
+                header=dict(
+                    values=columns, # column names for header row
+                    align='left', # aligns header row text
+                    line_color=line_colour,
+                    fill_color=header_fill_colour,
+                ),
+                cells=dict(
+                    values=values, # values ordered by column
+                    align='left', # aligns body text
+                    line_color=line_colour,
+                    fill_color=body_fill_colour,
+                ),
+                columnwidth=[1.9,0.7,0.6,0.2,3] # sets column width ratios
+            ),
+            row=row_counter, col=col_counter
+        )
+
+        row_counter += 1
+
+    fig.update_layout(
+        title="Hottest characters by year (in 3+ ships) (AO3 femslash ranking 2014-2023)"
+    )
+
+    return fig
 

@@ -34,6 +34,8 @@ from visualisation.ao3_femslash_rankings_2014_2023.vis_femslash_ranking_diagram_
     visualise_top_5_fandoms,
     visualise_rpf_vs_fic,
     visualise_top_5_pairings,
+    visualise_longest_running,
+    visualise_hottest_sapphic,
 )
 
 # get data & turn into big df
@@ -87,25 +89,40 @@ colour_lookup_dict = make_colour_lookup(femslash_ship_info_df)
 #     scale=2
 # )
 
-top_5_ships_dict = top_5_wlw(femslash_ship_info_df)
-top_5_ships_fig = visualise_top_5_pairings(top_5_ships_dict)
-    # either tables or race categories as a diagram
-top_5_ships_fig.write_image(
-    "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/top_femslash_ships_2014_2023.png", 
-    width=875, 
-    height=1770, 
+# top_5_ships_dict = top_5_wlw(femslash_ship_info_df)
+# top_5_ships_fig = visualise_top_5_pairings(top_5_ships_dict)
+#     # either tables or race categories as a diagram
+# top_5_ships_fig.write_image(
+#     "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/top_femslash_ships_2014_2023.png", 
+#     width=875, 
+#     height=1770, 
+#     scale=2
+# )
+
+# appearances_ranking = count_appearances(top_5_ships_dict)
+# streak_ranking = count_streaks(top_5_ships_dict)
+# longest_running_top_5 = longest_running_top_5_ships(appearances_ranking, streak_ranking) 
+# longest_running_fig = visualise_longest_running(longest_running_top_5)
+# longest_running_fig.write_image(
+#     "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/longest_running_femslash_ships_2014_2023.png", 
+#     width=680, 
+#     height=320, 
+#     scale=2
+# )
+
+
+hottest_wlw = hottest_sapphic(femslash_character_info_df)
+    # possibly a chart abt how many chars were in how many ships over the years
+    # make into tables
+    # (rank (all chars of top number or top 2 nums), char name, top ship, per each year)
+hottest_wlw_fig = visualise_hottest_sapphic(hottest_wlw)
+hottest_wlw_fig.write_image(
+    "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/hottest_femslash_characters_2014_2023.png", 
+    width=1350, 
+    height=2250, 
     scale=2
 )
 
-appearances_ranking = count_appearances(top_5_ships_dict)
-streak_ranking = count_streaks(top_5_ships_dict)
-longest_running_top_5 = longest_running_top_5_ships(appearances_ranking, streak_ranking) 
-    # make into table
-
-# hottest_wlw = hottest_sapphic(femslash_character_info_df)
-#     # needs more futzing before vis
-#     # make into tables 
-#     # (rank (all chars of top number or top 2 nums), char name, top ship, per each year)
 
 # sapphic_genders = sapphic_gender_stats(femslash_character_info_df)
 
