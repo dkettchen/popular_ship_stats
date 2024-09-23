@@ -1,4 +1,5 @@
 from visualisation.vis_utils.invert_rank import invert_rank
+from visualisation.vis_utils.make_name_string import make_name_string
 from copy import deepcopy
 import pandas as pd
 
@@ -206,7 +207,7 @@ def longest_running_top_5_ships(appearances, streaks):
 
 # no 1 hottest character each year (in most ships)
     # & their highest-ranked ship
-def hottest_sapphic(character_info_df):
+def hottest_sapphic_ranking(character_info_df):
     """
     takes dataframe that (at least) contains "year", "full_name", "ship", "rank_no", 
     "fandom", "race", "rpf_or_fic" columns
@@ -248,7 +249,57 @@ def hottest_sapphic(character_info_df):
         year_dict[int(year)] = hottest_df
     
     return year_dict
+
 # need to separate out chars we wanna visualise as a lot are tied & it's by year not fandom
+def hottest_sapphic(character_info_df):
+    """
+    takes dataframe that (at least) contains "year", "full_name", "ship", "rank_no", 
+    "fandom", "race", "rpf_or_fic" columns
+
+    returns a dict with year keys and dict values
+
+    each dict contains three keys: "ship_counts", "over_3_ships", and "ranking"
+
+    ship_counts contains a dataframe with how many characters were in each number of ships that year 
+    (ie x characters were in y ships)
+
+    over_3_ships contains a dataframe with all characters that were in 3 or more ships that year 
+    (including the info columns on highest ranked ship and demo as put out by hottest_sapphic_ranking)
+
+    ranking contains a list of dicts with "no" and "names" keys, whose values represent the number 
+    of ships (3+ only) and the names of all characters who tied for that number of ships that year
+    """
+
+    hottest_dict = hottest_sapphic_ranking(character_info_df)
+
+    hottest_data = {}
+    for year in hottest_dict:
+        hottest_df = hottest_dict[year].copy()
+
+        ship_count_df = hottest_df.copy().get(
+            ["ship", "full_name"]
+        ).groupby("ship").count().sort_index(ascending=False).reset_index().rename(
+            columns={"full_name": "count", "ship": "no_of_ships"}
+        ) # columns = ["no_of_ships", "count"]
+
+        over_3_ships_df = hottest_df.where(hottest_df["ship"] > 2).dropna()
+
+        year_ranking = []
+        for num in [3,4,5]:
+            rank_df = over_3_ships_df.copy().where(over_3_ships_df["ship"] == num).dropna()
+            if len(rank_df) > 0:
+                all_characters = sorted([character for character in rank_df["full_name"]])
+                char_string = make_name_string(all_characters)
+                year_ranking.append({"no": num, "names": char_string})
+        
+        hottest_data[year] = {
+            "ship_counts": ship_count_df,
+            "over_3_ships": over_3_ships_df,
+            "ranking": year_ranking
+        }
+
+    return hottest_data
+
 
 
 # character gender percentages (what gender weirds were in the femslash ranking)
