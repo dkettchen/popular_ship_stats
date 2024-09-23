@@ -288,26 +288,13 @@ def visualise_hottest_sapphic(input_dict):
     """
     takes the output from hottest_sapphic
 
-    returns a figure visualising the data contained in lesbian flag coloured table format
+    creates png files visualising the data contained in lesbian flag coloured table format 
+    for each year (ie a file per each year)
     """
-
-    fig = make_subplots(
-        rows=9, cols=1,
-        # shared_xaxes=True,
-        # vertical_spacing=0.03,
-        specs=[
-            [{"type": "table"}],[{"type": "table"}],[{"type": "table"}],
-            [{"type": "table"}],[{"type": "table"}],[{"type": "table"}],
-            [{"type": "table"}],[{"type": "table"}],[{"type": "table"}],
-        ]
-    )
 
     line_colour = 'deeppink' # colour of lines
     header_fill_colour = 'lightsalmon' # colour of header row
     body_fill_colour = 'mistyrose' # colour of remaining rows
-
-    row_counter = 1
-    col_counter = 1
 
     for year in input_dict:
         year_df = input_dict[year]["over_3_ships"].copy()
@@ -319,8 +306,8 @@ def visualise_hottest_sapphic(input_dict):
         columns = year_df.columns
         values = [year_df[column] for column in year_df.columns]
 
-        fig.add_trace(
-            go.Table(
+        fig = go.Figure(
+            data=go.Table(
                 header=dict(
                     values=columns, # column names for header row
                     align='left', # aligns header row text
@@ -335,14 +322,15 @@ def visualise_hottest_sapphic(input_dict):
                 ),
                 columnwidth=[1.9,0.7,0.6,0.2,3] # sets column width ratios
             ),
-            row=row_counter, col=col_counter
+            layout={
+                "title":f"Hottest characters (in 3+ ships) in {year} (AO3 femslash ranking 2014-2023)"
+            }
         )
 
-        row_counter += 1
-
-    fig.update_layout(
-        title="Hottest characters by year (in 3+ ships) (AO3 femslash ranking 2014-2023)"
-    )
-
-    return fig
+        fig.write_image(
+            f"visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/hottest_sapphics_by_year/hottest_femslash_characters_{year}_2014_2023.png", 
+            width=1350, 
+            height=350, 
+            scale=2
+        )
 

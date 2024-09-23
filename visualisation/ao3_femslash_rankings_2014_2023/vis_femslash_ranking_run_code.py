@@ -110,19 +110,9 @@ colour_lookup_dict = make_colour_lookup(femslash_ship_info_df)
 #     scale=2
 # )
 
-
 hottest_wlw = hottest_sapphic(femslash_character_info_df)
-    # possibly a chart abt how many chars were in how many ships over the years
-    # make into tables
-    # (rank (all chars of top number or top 2 nums), char name, top ship, per each year)
-hottest_wlw_fig = visualise_hottest_sapphic(hottest_wlw)
-hottest_wlw_fig.write_image(
-    "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/hottest_femslash_characters_2014_2023.png", 
-    width=1350, 
-    height=2250, 
-    scale=2
-)
-
+    # possibly another chart abt how many chars were in how many ships over the years
+visualise_hottest_sapphic(hottest_wlw) # writes its own files
 
 # sapphic_genders = sapphic_gender_stats(femslash_character_info_df)
 
