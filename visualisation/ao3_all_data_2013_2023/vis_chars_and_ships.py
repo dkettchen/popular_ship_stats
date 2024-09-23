@@ -1,6 +1,7 @@
 from visualisation.vis_utils.join_member_info import join_character_info_to_df
 from visualisation.vis_utils.make_file_dfs import make_ships_df
 from visualisation.vis_utils.remove_translation import remove_translation
+from visualisation.vis_utils.make_name_string import make_name_string
 import pandas as pd
 import plotly.graph_objects as go
 #import plotly.express as px
@@ -165,12 +166,7 @@ def make_hottest_char_df(full_character_df):
         for index in all_chars.index:
             names_list = sorted(all_chars.loc[index]) # sorting names alphabetically
             no_of_ships = index # retrieving number of ships
-            names_str = names_list[0] # getting first name
-
-            if len(names_list) > 1: # if there are more names
-                for name in names_list[1:]:
-                    names_str += " & " + name # add every name
-                names_str += " (tied)" # then tag them as tied
+            names_str = make_name_string(names_list)
 
             rank_no = rank_lookup_dict[count] # getting rank string
             hottest_chars_dict[fandom][rank_no] = {
