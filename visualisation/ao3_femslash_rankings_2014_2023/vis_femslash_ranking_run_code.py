@@ -29,7 +29,7 @@ from visualisation.ao3_femslash_rankings_2014_2023.vis_femslash_ranking_race_sta
     top_non_white_ships,
     average_non_white_ranking,
 )
-from visualisation.ao3_femslash_rankings_2014_2023.vis_femslash_ranking_diagram_code import (
+from visualisation.ao3_femslash_rankings_2014_2023.vis_femslash_ranking_general_diagram_code import (
     visualise_market_share_and_popularity,
     visualise_top_5_fandoms,
     visualise_rpf_vs_fic,
@@ -37,6 +37,10 @@ from visualisation.ao3_femslash_rankings_2014_2023.vis_femslash_ranking_diagram_
     visualise_longest_running,
     visualise_hottest_sapphic,
     visualise_sapphic_genders,
+)
+from visualisation.ao3_femslash_rankings_2014_2023.vis_femslash_ranking_race_stat_diagram_code import (
+    visualise_total_multi_chars,
+
 )
 
 # get data & turn into big df
@@ -115,22 +119,25 @@ colour_lookup_dict = make_colour_lookup(femslash_ship_info_df)
 #     # possibly another chart abt how many chars were in how many ships over the years
 # visualise_hottest_sapphic(hottest_wlw) # writes its own files
 
-sapphic_genders = sapphic_gender_stats(femslash_character_info_df)
-gender_fig = visualise_sapphic_genders(sapphic_genders)
-gender_fig.write_image(
-    "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/femslash_genders_2014_2023.png", 
-    width=700, 
-    height=650, 
-    scale=2
-)
+# sapphic_genders = sapphic_gender_stats(femslash_character_info_df)
+# gender_fig = visualise_sapphic_genders(sapphic_genders)
+# gender_fig.write_image(
+#     "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/femslash_genders_2014_2023.png", 
+#     width=700, 
+#     height=650, 
+#     scale=2
+# )
+
 
 # # race stats
 
-# femslash_race_percent = total_racial_group_nos_by_year(femslash_character_info_df)
+femslash_race_percent = total_racial_group_nos_by_year(femslash_character_info_df)
 # femslash_race_combo_percent = total_racial_combo_nos_by_year(femslash_ship_info_df)
 
-# total_multi = total_multi_chars(femslash_race_percent)
-# total_groups = total_racial_groups(femslash_race_percent)
+total_multi = total_multi_chars(femslash_race_percent)
+multi_fig = visualise_total_multi_chars(total_multi)
+
+total_groups = total_racial_groups(femslash_race_percent)
 
 # total_interracial = total_interracial_ratio(femslash_race_combo_percent)
 # total_multi_involved = total_multi_involved_ratio(femslash_race_combo_percent)

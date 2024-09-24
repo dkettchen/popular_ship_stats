@@ -336,7 +336,7 @@ def visualise_hottest_sapphic(input_dict):
 
 def visualise_sapphic_genders(input_dict):
     """
-    visualise the femslash output from rpf_vs_fic as pie charts
+    visualise the femslash output from sapphic_gender_stats as pie charts
     """
     year_donuts_fig = make_subplots(rows=3, cols=3, specs=[
         [{'type':'domain'}, {'type':'domain'}, {'type':'domain'}], 
