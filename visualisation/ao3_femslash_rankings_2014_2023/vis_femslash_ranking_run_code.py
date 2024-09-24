@@ -36,6 +36,7 @@ from visualisation.ao3_femslash_rankings_2014_2023.vis_femslash_ranking_diagram_
     visualise_top_5_pairings,
     visualise_longest_running,
     visualise_hottest_sapphic,
+    visualise_sapphic_genders,
 )
 
 # get data & turn into big df
@@ -110,11 +111,18 @@ colour_lookup_dict = make_colour_lookup(femslash_ship_info_df)
 #     scale=2
 # )
 
-hottest_wlw = hottest_sapphic(femslash_character_info_df)
-    # possibly another chart abt how many chars were in how many ships over the years
-visualise_hottest_sapphic(hottest_wlw) # writes its own files
+# hottest_wlw = hottest_sapphic(femslash_character_info_df)
+#     # possibly another chart abt how many chars were in how many ships over the years
+# visualise_hottest_sapphic(hottest_wlw) # writes its own files
 
-# sapphic_genders = sapphic_gender_stats(femslash_character_info_df)
+sapphic_genders = sapphic_gender_stats(femslash_character_info_df)
+gender_fig = visualise_sapphic_genders(sapphic_genders)
+gender_fig.write_image(
+    "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/femslash_genders_2014_2023.png", 
+    width=700, 
+    height=650, 
+    scale=2
+)
 
 # # race stats
 

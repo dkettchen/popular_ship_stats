@@ -334,3 +334,50 @@ def visualise_hottest_sapphic(input_dict):
             scale=2
         )
 
+def visualise_sapphic_genders(input_dict):
+    """
+    visualise the femslash output from rpf_vs_fic as pie charts
+    """
+    year_donuts_fig = make_subplots(rows=3, cols=3, specs=[
+        [{'type':'domain'}, {'type':'domain'}, {'type':'domain'}], 
+        [{'type':'domain'}, {'type':'domain'}, {'type':'domain'}],
+        [{'type':'domain'}, {'type':'domain'}, {'type':'domain'}]
+    ],)
+
+    row_count = 1
+    col_count = 1
+
+    for year in input_dict:
+        year_df = input_dict[year].copy().reset_index()
+
+        colours = ["deeppink", "violet", "darkorchid"]
+
+        year_donuts_fig.add_trace(go.Pie(
+            labels=year_df["gender"], 
+            values=year_df["count"], 
+            hole=0.3, # determines hole size
+            title=year, # text that goes in the middle of the hole
+            sort=False, # if you want to keep it in its original order rather than sorting by size
+            titlefont_size=10, # to format title text
+            marker_colors=colours,
+            automargin=False,
+            textposition="inside"
+        ), row_count, col_count)
+
+        if col_count == 3:
+            col_count = 1
+            row_count += 1
+        else:
+            col_count += 1
+
+    year_donuts_fig.update_traces(
+        textinfo='percent',
+    )
+    year_donuts_fig.update_layout(
+        title="Genders by year (AO3 femslash ranking 2014-2023)", 
+        uniformtext_minsize=12,
+        uniformtext_mode="hide",
+        #showlegend=False,
+    )
+
+    return year_donuts_fig
