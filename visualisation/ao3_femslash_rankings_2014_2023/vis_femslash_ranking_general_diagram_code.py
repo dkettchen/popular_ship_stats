@@ -1,4 +1,3 @@
-from visualisation.vis_utils.remove_translation import remove_translation
 from visualisation.vis_utils.clean_fandoms_for_vis import clean_fandoms
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
