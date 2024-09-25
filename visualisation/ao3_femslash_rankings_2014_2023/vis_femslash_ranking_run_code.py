@@ -42,6 +42,8 @@ from visualisation.ao3_femslash_rankings_2014_2023.vis_femslash_ranking_race_sta
     visualise_interracial_lines,
     visualise_pies,
     visualise_line,
+    visualise_non_white_counts,
+    visualise_top_non_white,
 )
 
 # get data & turn into big df
@@ -193,12 +195,27 @@ colour_lookup_dict = make_colour_lookup(femslash_ship_info_df)
 # )
 
 femslash_prepped_dict = prep_df_for_non_white_ship_comp(femslash_ship_info_df)
-non_white_counts = count_non_white_ships(femslash_prepped_dict)
+# non_white_counts = count_non_white_ships(femslash_prepped_dict)
+# non_white_count_fig = visualise_non_white_counts(non_white_counts)
+# non_white_count_fig.write_image(
+#     "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/sapphic_race_stats/femslash_non_white_counts_2014_2023.png", 
+#     width=1000, 
+#     height=400, 
+#     scale=2
+# )
 
-# femslash_separated_dict = separate_out_non_white_ships_info(femslash_prepped_dict)
-# top_non_white = top_non_white_ships(femslash_separated_dict)
-# average_non_white_rank = average_non_white_ranking(femslash_separated_dict)
-#     # in 2020 we have non-white-ea ranking highest bc there's a singular ship and they 
-#     # happened to be 47th in the ranking which was higher than everyone else's averages lmao
+femslash_separated_dict = separate_out_non_white_ships_info(femslash_prepped_dict)
+top_non_white = top_non_white_ships(femslash_separated_dict)
+# top_non_white_fig = visualise_top_non_white(top_non_white)
+# top_non_white_fig.write_image(
+#     "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/sapphic_race_stats/femslash_top_non_white_2014_2023.png", 
+#     width=3800, 
+#     height=1800, 
+#     scale=2
+# )
+
+average_non_white_rank = average_non_white_ranking(femslash_separated_dict)
+    # in 2020 we have non-white-ea ranking highest bc there's a singular ship and they 
+    # happened to be 47th in the ranking which was higher than everyone else's averages lmao
 
 
