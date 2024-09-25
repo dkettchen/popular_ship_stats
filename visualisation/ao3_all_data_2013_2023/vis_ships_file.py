@@ -4,6 +4,7 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 from re import split
+from visualisation.vis_utils.sort_race_combos import sort_race_combos
 
 
 def total_ships_df(ships_df): # util
@@ -546,14 +547,7 @@ def total_race_combo_df(ships_df):
     total_race_combo_counts = ships_df.get(["slash_ship","race_combo"])
 
     unique_combos = sorted(list(set(total_race_combo_counts.race_combo)))
-    rename_dict = {}
-    for combo in unique_combos:
-        sorted_split_version = sorted(split(r"\s\/\s", combo))
-        reconcat_version = sorted_split_version[0]
-        for item in sorted_split_version[1:]:
-            reconcat_version += " / " + item
-        if reconcat_version != combo:
-            rename_dict[combo] = reconcat_version
+    rename_dict = sort_race_combos(unique_combos)
 
     total_race_combo_counts = total_race_combo_counts.groupby("race_combo").count().rename(
         index=rename_dict,
