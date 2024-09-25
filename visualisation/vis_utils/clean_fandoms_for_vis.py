@@ -4,8 +4,8 @@ def clean_fandoms(input_list_or_array):
     """
     takes a series, list, or other array thingy containing fandom names
 
-    it removes the translations, shortens "ATLA", "BTS", "GoT", "MHA", "Madoka", "Sailor Moon", and "She-Ra", 
-    and removes the "Universe" suffix from anything other than Steven Universe 
+    it removes the translations, shortens "ATLA", "BTS", "GoT", "MHA", "Madoka", "Sailor Moon", "She-Ra", 
+    and "The Locked Tomb", and removes the "Universe" suffix from anything other than Steven Universe 
     for easier visualisation
 
     returns the updated list of fandoms 
@@ -31,6 +31,8 @@ def clean_fandoms(input_list_or_array):
                 new_fandom = "GoT"
         elif "She-Ra" in fandom:
             new_fandom = "She-Ra"
+        elif "The Locked Tomb" in fandom:
+            new_fandom = "The Locked Tomb"
         else: new_fandom = fandom
         fandoms.append(new_fandom)
 
