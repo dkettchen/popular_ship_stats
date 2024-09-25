@@ -11,5 +11,9 @@ Using the data from [AO3 user @centreoftheselights's](https://archiveofourown.or
 - Cleaned data files are in the `data` folder. 
 - Cleaning code is in the `src` folder. 
 - Tests are in the `test` folder.
-- Visualisation code is in the `visualisation` folder.
-- Visualised diagrams (so far) are in the `visualisation/all_ao3_data_vis_charts` folder.
+- Visualisation code and diagrams are in the `visualisation` folder.
+
+### Important documents:
+- [Methodology document](methodology.md)
+- [Overview analysis of all characters/ships/fandoms in the 2013-2023 AO3 data sets](visualisation/ao3_all_data_2013_2023/analysis_2013_2023_overall_data.md)
+- Analysis of the 2014-2023 AO3 femslash rankings (coming soon)
