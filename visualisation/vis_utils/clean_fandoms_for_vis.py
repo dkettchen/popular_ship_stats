@@ -4,7 +4,7 @@ def clean_fandoms(input_list_or_array):
     """
     takes a series, list, or other array thingy containing fandom names
 
-    it removes the translations, shortens "ATLA", "BTS", "GoT", "MHA", "Madoka", and "She-Ra", 
+    it removes the translations, shortens "ATLA", "BTS", "GoT", "MHA", "Madoka", "Sailor Moon", and "She-Ra", 
     and removes the "Universe" suffix from anything other than Steven Universe 
     for easier visualisation
 
@@ -19,6 +19,8 @@ def clean_fandoms(input_list_or_array):
                 new_fandom = "Madoka"
             elif new_fandom == "My Hero Academia":
                 new_fandom = "MHA"
+            elif "Sailor Moon" in new_fandom:
+                new_fandom = "Sailor Moon"
         elif "BTS" in fandom:
             new_fandom = "BTS"
         elif "Universe" in fandom and fandom != "Steven Universe":
