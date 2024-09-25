@@ -90,11 +90,18 @@ def total_interracial_ratio(race_combo_percent):
         df = race_combo_percent[year].reset_index()
         total = df["count"].sum()
         inter = df.where(
-            df["race_combo"].str.contains("/")
+            (df["race_combo"].str.contains("/")) & (df["race_combo"].str.contains("Ambig") == False)
         )["count"].sum()
-        non_inter = total - inter
-        temp_dict[year] = [inter, non_inter]
-    new_df = pd.DataFrame(data=temp_dict, index=["interracial_ships", "non-interracial_ships"])
+        ambig = df.where(
+            df["race_combo"].str.contains("Ambig")
+        )["count"].sum()
+        non_inter = total - inter - ambig
+        temp_dict[year] = [inter, ambig, non_inter]
+    new_df = pd.DataFrame(data=temp_dict, index=[
+        "interracial_ships", 
+        "ambiguous_ships", 
+        "non-interracial_ships"
+    ])
     return new_df
 
 # of which how many involved multi chars vs non-multi
