@@ -1,8 +1,75 @@
 from visualisation.vis_utils.clean_fandoms_for_vis import clean_fandoms
+from visualisation.vis_utils.sort_race_combos import sort_race_combos
 import pandas as pd
 import plotly.graph_objects as go
 import plotly.express as px
 from plotly.subplots import make_subplots
+
+def visualise_total_race_percent(input_dict):
+    """
+    visualise the femslash output from total_racial_group_nos_by_year as pie charts
+    """
+    year_donuts_fig = make_subplots(rows=3, cols=3, specs=[
+        [{'type':'domain'}, {'type':'domain'}, {'type':'domain'}], 
+        [{'type':'domain'}, {'type':'domain'}, {'type':'domain'}],
+        [{'type':'domain'}, {'type':'domain'}, {'type':'domain'}]
+    ],)
+
+    if "E Asian / White" in input_dict[2023].index:
+        title = "Pairing race combinations by year (AO3 femslash ranking 2014-2023)"
+        labels = "label"
+        is_combos = True
+    else: 
+        title = "Racial groups by year (AO3 femslash ranking 2014-2023)"
+        labels = "label+percent"
+        is_combos = False
+
+    row_count = 1
+    col_count = 1
+
+    for year in input_dict:
+        year_srs = input_dict[year].copy()
+        if is_combos:
+            rename_dict = sort_race_combos(year_srs.index)
+            year_srs = year_srs.rename(index=rename_dict)
+            year_srs = year_srs.groupby(
+                year_srs.index
+            ).aggregate("sum").sort_values(
+                by="count", ascending=False
+            )
+
+        values = [value[0] for value in year_srs.values]
+
+        year_donuts_fig.add_trace(go.Pie(
+            labels=year_srs.index, 
+            values=values, 
+            hole=0.3, # determines hole size
+            title=year, # text that goes in the middle of the hole
+            sort=False, # if you want to keep it in its original order rather than sorting by size
+            titlefont_size=25, # to format title text
+            automargin=False,
+            textposition="inside"
+        ), row_count, col_count)
+
+        if col_count == 3:
+            col_count = 1
+            row_count += 1
+        else:
+            col_count += 1
+
+    year_donuts_fig.update_traces(
+        textinfo=labels,
+    )
+    year_donuts_fig.update_layout(
+        title=title, 
+        uniformtext_minsize=8,
+        uniformtext_mode="hide",
+        colorway=px.colors.qualitative.Pastel + px.colors.qualitative.Prism + \
+            px.colors.qualitative.Vivid + px.colors.qualitative.Bold,
+        #showlegend=False,
+    )
+
+    return year_donuts_fig
 
 
 def visualise_interracial_lines(input_df):
