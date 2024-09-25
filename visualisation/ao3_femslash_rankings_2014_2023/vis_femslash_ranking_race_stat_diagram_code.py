@@ -7,7 +7,8 @@ from plotly.subplots import make_subplots
 
 def visualise_total_race_percent(input_dict):
     """
-    visualise the femslash output from total_racial_group_nos_by_year as pie charts
+    visualise the femslash output from total_racial_group_nos_by_year and 
+    total_racial_combo_nos_by_year as pie charts
     """
     year_donuts_fig = make_subplots(rows=3, cols=3, specs=[
         [{'type':'domain'}, {'type':'domain'}, {'type':'domain'}], 
