@@ -132,56 +132,68 @@ colour_lookup_dict = make_colour_lookup(femslash_ship_info_df)
 
 # # race stats
 
-femslash_race_percent = total_racial_group_nos_by_year(femslash_character_info_df)
-femslash_race_combo_percent = total_racial_combo_nos_by_year(femslash_ship_info_df)
+# femslash_race_percent = total_racial_group_nos_by_year(femslash_character_info_df)
+# femslash_race_combo_percent = total_racial_combo_nos_by_year(femslash_ship_info_df)
 
-total_multi = total_multi_chars(femslash_race_percent)
-multi_fig = visualise_pies(total_multi)
-multi_fig.write_image(
-    "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/sapphic_race_stats/femslash_multiracial_chars_pies_2014_2023.png", 
-    width=700, 
-    height=650, 
-    scale=2
-)
-multi_line = visualise_line(total_multi)
-multi_line.write_image(
-    "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/sapphic_race_stats/femslash_multiracial_chars_line_2014_2023.png", 
-    width=700, 
-    height=600, 
-    scale=2
-)
+# total_multi = total_multi_chars(femslash_race_percent)
+# multi_fig = visualise_pies(total_multi)
+# multi_fig.write_image(
+#     "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/sapphic_race_stats/femslash_multiracial_chars_pies_2014_2023.png", 
+#     width=700, 
+#     height=650, 
+#     scale=2
+# )
+# multi_line = visualise_line(total_multi)
+# multi_line.write_image(
+#     "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/sapphic_race_stats/femslash_multiracial_chars_line_2014_2023.png", 
+#     width=700, 
+#     height=600, 
+#     scale=2
+# )
 
-total_groups = total_racial_groups(femslash_race_percent)
-total_group_fig = visualise_line(total_groups)
-total_group_fig.write_image(
-    "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/sapphic_race_stats/femslash_racial_groups_2014_2023.png", 
-    width=700, 
-    height=600, 
-    scale=2
-)
+# total_groups = total_racial_groups(femslash_race_percent)
+# total_group_fig = visualise_line(total_groups)
+# total_group_fig.write_image(
+#     "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/sapphic_race_stats/femslash_racial_groups_2014_2023.png", 
+#     width=700, 
+#     height=600, 
+#     scale=2
+# )
 
-total_interracial = total_interracial_ratio(femslash_race_combo_percent)
-interracial_fig = visualise_pies(total_interracial)
-interracial_fig.write_image(
-    "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/sapphic_race_stats/femslash_interracial_pies_2014_2023.png", 
-    width=700, 
-    height=650, 
-    scale=2
-)
-interracial_line = visualise_interracial_lines(total_interracial)
-interracial_line.write_image(
-    "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/sapphic_race_stats/femslash_interracial_lines_2014_2023.png", 
-    width=700, 
-    height=600, 
-    scale=2
-)
+# total_interracial = total_interracial_ratio(femslash_race_combo_percent)
+# interracial_fig = visualise_pies(total_interracial)
+# interracial_fig.write_image(
+#     "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/sapphic_race_stats/femslash_interracial_pies_2014_2023.png", 
+#     width=700, 
+#     height=650, 
+#     scale=2
+# )
+# interracial_line = visualise_interracial_lines(total_interracial)
+# interracial_line.write_image(
+#     "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/sapphic_race_stats/femslash_interracial_lines_2014_2023.png", 
+#     width=700, 
+#     height=600, 
+#     scale=2
+# )
 
-total_multi_involved = total_multi_involved_ratio(femslash_race_combo_percent)
+# total_multi_involved = total_multi_involved_ratio(femslash_race_combo_percent)
 # multi_involved_fig = visualise_pies(total_multi_involved)
+# multi_involved_fig.write_image(
+#     "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/sapphic_race_stats/femslash_multi_involved_ships_2014_2023.png", 
+#     width=700, 
+#     height=650, 
+#     scale=2
+# )
 # multi_involved_lines = visualise_line(total_multi_involved)
+# multi_involved_lines.write_image(
+#     "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/sapphic_race_stats/femslash_multi_involved_ships_line_2014_2023.png", 
+#     width=700, 
+#     height=600, 
+#     scale=2
+# )
 
-# femslash_prepped_dict = prep_df_for_non_white_ship_comp(femslash_ship_info_df)
-# non_white_counts = count_non_white_ships(femslash_prepped_dict)
+femslash_prepped_dict = prep_df_for_non_white_ship_comp(femslash_ship_info_df)
+non_white_counts = count_non_white_ships(femslash_prepped_dict)
 
 # femslash_separated_dict = separate_out_non_white_ships_info(femslash_prepped_dict)
 # top_non_white = top_non_white_ships(femslash_separated_dict)

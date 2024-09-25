@@ -72,6 +72,10 @@ def visualise_pies(input_df):
             labels = year_series.index
             title = "Interracial ships by year (AO3 femslash ranking 2014-2023)"
             items = 3
+        elif "with_multi_chars" in year_series.index:
+            labels = ["with multiracial characters", "w/out multiracial characters"]
+            title = "Ships with multiracial characters by year (AO3 femslash ranking 2014-2023)"
+            items = 2
         else: print(input_df)
 
         if items == 2:
@@ -122,6 +126,10 @@ def visualise_line(input_item):
         x = input_item.index
         y = input_item.values
         title = 'Number of racial groups over the years (AO3 femslash ranking 2014-2023)'
+    elif "with_multi_chars" in input_item.index:
+        x = input_item.columns
+        y = input_item.loc["with_multi_chars"]
+        title = "Ships with multiracial characters by year (AO3 femslash ranking 2014-2023)"
 
     fig = go.Figure(
         data=go.Scatter(
