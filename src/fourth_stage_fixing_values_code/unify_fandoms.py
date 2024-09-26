@@ -372,7 +372,7 @@ def format_unified_labels(data_dict):
         elif "Love Live!" in key:
             fandom = "ラブライブ! | Love Live!"
         elif key == "Project SEKAI COLORFUL STAGE!":
-            fandom = "初音ミク | Hatsune Miku / ボーカロイド | Vocaloid"
+            fandom = "初音ミク / ボーカロイド | Hatsune Miku / Vocaloid"
         elif key == "Blue Lock":
             fandom = "ブルーロック | BLUELOCK"
         elif key == "Fire Emblem":

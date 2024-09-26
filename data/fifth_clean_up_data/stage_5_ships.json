@@ -6138,19 +6138,19 @@
         "slash_ship": "Aoyagi Touya x Shinonome Akito",
         "gen_ship": "Aoyagi Touya & Shinonome Akito",
         "members_no": 2,
-        "fandom": "Hatsune Miku / \u30dc\u30fc\u30ab\u30ed\u30a4\u30c9 | \u521d\u97f3\u30df\u30af",
+        "fandom": "Hatsune Miku / Vocaloid | \u521d\u97f3\u30df\u30af / \u30dc\u30fc\u30ab\u30ed\u30a4\u30c9",
         "rpf_or_fic": "fictional",
         "members_list": [
             {
-                "member_key": "Hatsune Miku / \u30dc\u30fc\u30ab\u30ed\u30a4\u30c9 | \u521d\u97f3\u30df\u30af - Aoyagi Touya",
+                "member_key": "Hatsune Miku / Vocaloid | \u521d\u97f3\u30df\u30af / \u30dc\u30fc\u30ab\u30ed\u30a4\u30c9 - Aoyagi Touya",
                 "member_gender": "M",
-                "member_race": "E Asian",
+                "member_race": "Asian",
                 "member_name": "Aoyagi Touya"
             },
             {
-                "member_key": "Hatsune Miku / \u30dc\u30fc\u30ab\u30ed\u30a4\u30c9 | \u521d\u97f3\u30df\u30af - Shinonome Akito",
+                "member_key": "Hatsune Miku / Vocaloid | \u521d\u97f3\u30df\u30af / \u30dc\u30fc\u30ab\u30ed\u30a4\u30c9 - Shinonome Akito",
                 "member_gender": "M",
-                "member_race": "E Asian",
+                "member_race": "Asian",
                 "member_name": "Shinonome Akito"
             }
         ],
@@ -6159,27 +6159,27 @@
             "M"
         ],
         "race_combo": [
-            "E Asian",
-            "E Asian"
+            "Asian",
+            "Asian"
         ]
     },
     "Kamishiro Rui x Tenma Tsukasa": {
         "slash_ship": "Kamishiro Rui x Tenma Tsukasa",
         "gen_ship": "Kamishiro Rui & Tenma Tsukasa",
         "members_no": 2,
-        "fandom": "Hatsune Miku / \u30dc\u30fc\u30ab\u30ed\u30a4\u30c9 | \u521d\u97f3\u30df\u30af",
+        "fandom": "Hatsune Miku / Vocaloid | \u521d\u97f3\u30df\u30af / \u30dc\u30fc\u30ab\u30ed\u30a4\u30c9",
         "rpf_or_fic": "fictional",
         "members_list": [
             {
-                "member_key": "Hatsune Miku / \u30dc\u30fc\u30ab\u30ed\u30a4\u30c9 | \u521d\u97f3\u30df\u30af - Kamishiro Rui",
+                "member_key": "Hatsune Miku / Vocaloid | \u521d\u97f3\u30df\u30af / \u30dc\u30fc\u30ab\u30ed\u30a4\u30c9 - Kamishiro Rui",
                 "member_gender": "M",
-                "member_race": "E Asian",
+                "member_race": "Asian",
                 "member_name": "Kamishiro Rui"
             },
             {
-                "member_key": "Hatsune Miku / \u30dc\u30fc\u30ab\u30ed\u30a4\u30c9 | \u521d\u97f3\u30df\u30af - Tenma Tsukasa",
+                "member_key": "Hatsune Miku / Vocaloid | \u521d\u97f3\u30df\u30af / \u30dc\u30fc\u30ab\u30ed\u30a4\u30c9 - Tenma Tsukasa",
                 "member_gender": "M",
-                "member_race": "E Asian",
+                "member_race": "Asian",
                 "member_name": "Tenma Tsukasa"
             }
         ],
@@ -6188,8 +6188,8 @@
             "M"
         ],
         "race_combo": [
-            "E Asian",
-            "E Asian"
+            "Asian",
+            "Asian"
         ]
     },
     "Danny 'Danno' Williams x Steve McGarrett": {
