@@ -179,6 +179,8 @@ def assign_race_tag(data_dict):
         "Sara Crispino": "Latin", # she's italian
         "Bruno Buccellati": "Latin", # more italians
         "Leone Abbacchio": "Latin", #
+        "Jasper": "N.H.", # these two were tagged as ambig rather than non human
+        "Garnet": "N.H.", #
     }
 
     for category in ["RPF", "fictional"]:
