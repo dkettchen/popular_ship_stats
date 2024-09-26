@@ -7,6 +7,8 @@ def make_name_string(names_list):
 
     if there's only one name it returns that name string
     """
+    if len(names_list) == 0:
+        return ""
 
     names_str = names_list[0] # getting first name
 
