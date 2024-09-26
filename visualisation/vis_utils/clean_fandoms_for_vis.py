@@ -1,40 +1,71 @@
 from visualisation.vis_utils.remove_translation import remove_translation
 
+def iterate_cases_and_replace(input_string, input_list, replacement_list):
+    """
+    iterates over list of options, 
+    if string contains or is one of the options, it returns the replacement, 
+    otherwise it returns the original string
+    """
+    for index in range(len(input_list)):
+        item = input_list[index]
+        if item in input_string or item == input_string:
+            return replacement_list[index]
+
+    return input_string
+
 def clean_fandoms(input_list_or_array):
     """
     takes a series, list, or other array thingy containing fandom names
 
-    it removes the translations, shortens "ATLA", "BTS", "GoT", "MHA", "Madoka", "Sailor Moon", "She-Ra", 
-    and "The Locked Tomb", and removes the "Universe" suffix from anything other than Steven Universe 
-    for easier visualisation
+    it removes the translations, shortens relevant fandoms to recognisable short forms, 
+    and removes the "Universe" suffix from anything other than Steven Universe for easier visualisation
 
     returns the updated list of fandoms 
     """
     fandoms = []
 
+    lookup_dict = { # and then we can simply add to here if we want to add any others! :) 
+        "Madoka": "Madoka",
+        "Sailor Moon": "Sailor Moon",
+        "The Untamed": "The Untamed",
+        "Vocaloid": "Vocaloid",
+        "Miraculous": "Miraculous",
+        "Gundam": "Gundam",
+        "Hunger Games": "Hunger Games",
+        "BTS": "BTS",
+        "She-Ra": "She-Ra",
+        "The Locked Tomb": "The Locked Tomb",
+        "TXT": "TXT",
+        "Sabrina": "Sabrina",
+        "My Hero Academia": "MHA",
+        "JoJo's Bizarre Adventure": "JJBA",
+        "Game of Thrones": "GoT",
+        "Lord of the Rings": "LotR",
+        "Avatar": "ATLA",
+        "Teenage Mutant Ninja Turtles": "TMNT",
+        "American Horror Story": "AHS"
+    }
+
     for fandom in list(input_list_or_array):
         if " | " in fandom:
             new_fandom = remove_translation(fandom)
-            if "Madoka" in new_fandom:
-                new_fandom = "Madoka"
-            elif new_fandom == "My Hero Academia":
-                new_fandom = "MHA"
-            elif "Sailor Moon" in new_fandom:
-                new_fandom = "Sailor Moon"
-        elif "BTS" in fandom:
-            new_fandom = "BTS"
+            new_fandom = iterate_cases_and_replace(
+                new_fandom, 
+                list(lookup_dict.keys()), 
+                list(lookup_dict.values())
+            )
         elif "Universe" in fandom and fandom != "Steven Universe":
             new_fandom = fandom[:-9]
-            if "Avatar" in new_fandom:
-                new_fandom = "ATLA"
-            elif "Game of Thrones" in new_fandom:
-                new_fandom = "GoT"
-        elif "She-Ra" in fandom:
-            new_fandom = "She-Ra"
-        elif "The Locked Tomb" in fandom:
-            new_fandom = "The Locked Tomb"
-        else: new_fandom = fandom
+            new_fandom = iterate_cases_and_replace(
+                new_fandom, 
+                list(lookup_dict.keys()), 
+                list(lookup_dict.values())
+            )
+        else: new_fandom = iterate_cases_and_replace(
+            fandom, 
+            list(lookup_dict.keys()), 
+            list(lookup_dict.values())
+        )
         fandoms.append(new_fandom)
 
     return fandoms
-
