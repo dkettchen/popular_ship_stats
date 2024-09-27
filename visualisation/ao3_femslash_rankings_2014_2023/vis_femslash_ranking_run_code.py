@@ -9,12 +9,12 @@ from visualisation.ao3_femslash_rankings_2014_2023.vis_femslash_ranking_general_
     fandoms_popularity_by_year,
     top_5_fandoms_by_year,
     rpf_vs_fic,
-    top_5_wlw,
+    top_5_ships,
     count_appearances,
     count_streaks,
     longest_running_top_5_ships,
-    hottest_sapphic,
-    sapphic_gender_stats,
+    hottest_char,
+    gender_stats,
 )
 from visualisation.ao3_femslash_rankings_2014_2023.vis_femslash_ranking_race_stat_code import (
     total_racial_group_nos_by_year,
@@ -99,7 +99,7 @@ rpf_fig.write_image(
     scale=2
 )
 
-top_5_ships_dict = top_5_wlw(femslash_ship_info_df)
+top_5_ships_dict = top_5_ships(femslash_ship_info_df)
 top_5_ships_fig = visualise_top_5_pairings(top_5_ships_dict)
     # either tables or race categories as a diagram
 top_5_ships_fig.write_image(
@@ -120,11 +120,11 @@ longest_running_fig.write_image(
     scale=2
 )
 
-hottest_wlw = hottest_sapphic(femslash_character_info_df)
+hottest_wlw = hottest_char(femslash_character_info_df)
     # possibly another chart abt how many chars were in how many ships over the years
 visualise_hottest_sapphic(hottest_wlw) # writes its own files
 
-sapphic_genders = sapphic_gender_stats(femslash_character_info_df)
+sapphic_genders = gender_stats(femslash_character_info_df)
 gender_fig = visualise_sapphic_genders(sapphic_genders)
 gender_fig.write_image(
     "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/femslash_genders_2014_2023.png", 

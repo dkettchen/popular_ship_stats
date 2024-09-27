@@ -104,8 +104,8 @@ def rpf_vs_fic(ship_info_df):
     return year_dict
 
 
-# top 5 wlw ships & their demo each year
-def top_5_wlw(ship_info_df):
+# top 5 ships & their demo each year
+def top_5_ships(ship_info_df):
     """
     takes a dataframe that contains (at least) "year", "ship", "fandom", "race_combo", and "rpf_or_fic" 
     columns and is sorted by ranks already
@@ -127,7 +127,7 @@ def top_5_wlw(ship_info_df):
 
 def count_appearances(top_5):
     """
-    takes output from top_5_wlw
+    takes output from top_5_ships
 
     returns a dataframe with the count of number of appearances of each ship in the top 5
     """
@@ -140,7 +140,7 @@ def count_appearances(top_5):
 
 def count_streaks(top_5):
     """
-    takes output from top_5_wlw
+    takes output from top_5_ships
 
     returns a dataframe with the longest streak of each ship in the top 5
     """
@@ -207,7 +207,7 @@ def longest_running_top_5_ships(appearances, streaks):
 
 # no 1 hottest character each year (in most ships)
     # & their highest-ranked ship
-def hottest_sapphic_ranking(character_info_df):
+def hottest_char_ranking(character_info_df):
     """
     takes dataframe that (at least) contains "year", "full_name", "ship", "rank_no", 
     "fandom", "race", "rpf_or_fic" columns
@@ -251,7 +251,7 @@ def hottest_sapphic_ranking(character_info_df):
     return year_dict
 
 # need to separate out chars we wanna visualise as a lot are tied & it's by year not fandom
-def hottest_sapphic(character_info_df):
+def hottest_char(character_info_df):
     """
     takes dataframe that (at least) contains "year", "full_name", "ship", "rank_no", 
     "fandom", "race", "rpf_or_fic" columns
@@ -264,13 +264,13 @@ def hottest_sapphic(character_info_df):
     (ie x characters were in y ships)
 
     over_3_ships contains a dataframe with all characters that were in 3 or more ships that year 
-    (including the info columns on highest ranked ship and demo as put out by hottest_sapphic_ranking)
+    (including the info columns on highest ranked ship and demo as put out by hottest_char_ranking)
 
     ranking contains a list of dicts with "no" and "names" keys, whose values represent the number 
     of ships (3+ only) and the names of all characters who tied for that number of ships that year
     """
 
-    hottest_dict = hottest_sapphic_ranking(character_info_df)
+    hottest_dict = hottest_char_ranking(character_info_df)
 
     hottest_data = {}
     for year in hottest_dict:
@@ -303,7 +303,7 @@ def hottest_sapphic(character_info_df):
 
 
 # character gender percentages (what gender weirds were in the femslash ranking)
-def sapphic_gender_stats(character_info_df):
+def gender_stats(character_info_df):
     """
     takes dataframe that (at least) contains "year" and "gender" columns
 

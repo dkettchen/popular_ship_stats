@@ -142,7 +142,7 @@ def prep_df_for_non_white_ship_comp(ship_info_df):
         year_df = new_df.where(
             new_df["year"] == year
         ).dropna()
-        year_df["contains_white_person"] = year_df["race_combo"].str.contains("White|Eu")
+        year_df["contains_white_person"] = year_df["race_combo"].str.contains("White|Eu Ind")
             # I want to catch anna and elsa cause like they are white even if 
             # they're also european-indigenous (they can be both!), 
             # they're not a "non-white/non-ea" pairing, that's silly
