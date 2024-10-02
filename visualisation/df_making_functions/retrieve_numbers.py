@@ -54,6 +54,11 @@ def sum_label_nums(df:pd.DataFrame, label_column:str, sum_column:str=None):
 
     return summed_df
 
+#TODO get average per each label
+def get_average_num(df:pd.DataFrame, column_name:str, labels_list:str=None):
+    
+    pass
+
 
 
 # make list of unique values in column
@@ -64,7 +69,7 @@ def get_unique_values_list(df:pd.DataFrame, column_name:str):
     returns a list of all unique items in that column
     """
 
-    values_list = list(df[column_name].unique)
+    values_list = list(df[column_name].unique())
 
     return values_list
 
@@ -84,3 +89,52 @@ def find_full_column(df:pd.DataFrame, column_name:str):
         if len(temp_df[column].dropna()) == len(temp_df[column]): # if there are no null values
             return column
     
+# make y/n columns
+def add_true_false_column(
+        df:pd.DataFrame, 
+        column_name:str, operator:str, value_label, 
+        new_column_name:str="new_column"
+    ):
+    """
+    takes a dataframe, the column to check, one of the following operators: 
+    ["==", "!=", "<", "<=", ">", ">="], 
+    and a value or label to check the values in the column against, 
+    as well as an optional name for the new column
+
+    returns a new dataframe that's a copy of the given one with an added new column of retained values 
+    where the condition was true, and null values where it was false
+    """
+
+    new_df = df.copy()
+
+    #conditions are formatted as <column> <operator> <value/label>
+    if operator == "==":
+        new_df[new_column_name] = new_df[column_name].where(new_df[column_name] == value_label)
+    elif operator == "!=":
+        new_df[new_column_name] = new_df[column_name].where(new_df[column_name] != value_label)
+    elif operator == "<":
+        new_df[new_column_name] = new_df[column_name].where(new_df[column_name] < value_label)
+    elif operator == "<=":
+        new_df[new_column_name] = new_df[column_name].where(new_df[column_name] <= value_label)
+    elif operator == ">":
+        new_df[new_column_name] = new_df[column_name].where(new_df[column_name] > value_label)
+    elif operator == ">=":
+        new_df[new_column_name] = new_df[column_name].where(new_df[column_name] >= value_label)
+
+    # we want the output to be the same df, but with added column w true/false values based on condition
+    return new_df
+
+#TODO combine y/n column info (WIP)
+def combine_true_false_column_info(
+        df:pd.DataFrame, operator:str, 
+        true_columns:list=[], false_columns:list=[]
+    ):
+
+    is_or = False
+    is_and = False
+    if operator.lower() == "or" or operator == "|":
+        is_or = True
+    elif operator.lower() == "and" or operator == "&":
+        is_and = True
+
+    # if I can't figure out a way to make it work for more than 2 items, lists may only be 0-2 items long
