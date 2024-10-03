@@ -1,6 +1,6 @@
 import pandas as pd
 
-# total items(rows) in df (ie characters or ships)
+# total items(rows) in df (ie characters or ships) - tested
 def get_total_items(df:pd.DataFrame, column_name:str):
     """
     takes a dataframe and column name
@@ -13,7 +13,7 @@ def get_total_items(df:pd.DataFrame, column_name:str):
 
     return number_of_items
 
-# count x labels (ie gender, race, combos, rpf, etc)
+# count x labels (ie gender, race, combos, rpf, etc) - tested
 def get_label_counts(df:pd.DataFrame, column_name:str, count_column:str=None):
     """
     takes a dataframe, column name, and optionally a count column that must not contain null values
@@ -23,18 +23,23 @@ def get_label_counts(df:pd.DataFrame, column_name:str, count_column:str=None):
     returns a series that contains the number of items for each unique label in that column
     """
 
-    counted_df = df.copy().groupby(column_name).count()
+    counted_df = df.copy()
 
-    if not count_column:
+    if not count_column or len(df[count_column]) != len(df[count_column].dropna()):
         count_column = find_full_column(df, column_name)
 
-    counted_df = counted_df.rename(
-        columns={count_column: "count"}
-    )
+    if not count_column: # if there was no other full column
+        counted_df["count"] = 1 # we make one
+    else: # if there is a count_column now
+        counted_df = counted_df.rename(
+            columns={count_column: "count"} # we rename it to count
+        )
 
-    return counted_df[count_column]
+    counted_df = counted_df.groupby(column_name).count()
 
-# sum x labels (ie combine a few labels)
+    return counted_df["count"]
+
+# sum x labels (ie combine a few labels) TODO: test
 def sum_label_nums(df:pd.DataFrame, label_column:str, sum_column:str=None):
     """
     takes a dataframe and column name by which to group the sums
@@ -61,7 +66,7 @@ def get_average_num(df:pd.DataFrame, column_name:str, labels_list:str=None):
 
 
 
-# make list of unique values in column
+# make list of unique values in column - tested
 def get_unique_values_list(df:pd.DataFrame, column_name:str):
     """
     takes a dataframe and column name
@@ -73,7 +78,7 @@ def get_unique_values_list(df:pd.DataFrame, column_name:str):
 
     return values_list
 
-# finding a column without null values
+# finding a column without null values - tested
 def find_full_column(df:pd.DataFrame, column_name:str):
     """
     takes a dataframe and column name
@@ -89,7 +94,7 @@ def find_full_column(df:pd.DataFrame, column_name:str):
         if len(temp_df[column].dropna()) == len(temp_df[column]): # if there are no null values
             return column
     
-# make y/n columns
+# make y/n columns TODO: test
 def add_true_false_column(
         df:pd.DataFrame, 
         column_name:str, operator:str, value_label, 
