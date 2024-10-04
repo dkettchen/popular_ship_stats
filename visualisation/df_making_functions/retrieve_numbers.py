@@ -39,7 +39,7 @@ def get_label_counts(df:pd.DataFrame, column_name:str, count_column:str=None):
 
     return counted_df["count"]
 
-# sum x labels (ie combine a few labels) TODO: test
+# sum x labels (ie combine a few labels) - tested
 def sum_label_nums(df:pd.DataFrame, label_column:str, sum_column:str=None):
     """
     takes a dataframe and column name by which to group the sums
@@ -53,9 +53,17 @@ def sum_label_nums(df:pd.DataFrame, label_column:str, sum_column:str=None):
     summed_df = df.copy().groupby(label_column).agg("sum")
 
     if sum_column: 
+        if sum_column not in summed_df.columns:
+            raise KeyError
+        
         summed_df = summed_df.rename(
             columns={sum_column: "sum"}
-        ).get([sum_column])
+        ).get(["sum"])
+    
+    for column in summed_df.columns:
+        if summed_df[column].dtype != "int64" and summed_df[column].dtype != "float64":
+            # removing non-numerical columns
+            summed_df.pop(column)
 
     return summed_df
 
