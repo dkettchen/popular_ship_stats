@@ -1,4 +1,4 @@
-from visualisation.df_making_functions.retrieve_numbers import sum_label_nums
+from visualisation.vis_utils.df_utils.retrieve_numbers import sum_label_nums
 import pandas as pd
 import pytest
 

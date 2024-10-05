@@ -1,4 +1,4 @@
-from visualisation.df_making_functions.retrieve_numbers import add_true_false_column, get_unique_values_list
+from visualisation.vis_utils.df_utils.retrieve_numbers import add_true_false_column, get_unique_values_list
 import pandas as pd
 import pytest
 
