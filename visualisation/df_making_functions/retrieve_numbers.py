@@ -1,6 +1,6 @@
 import pandas as pd
 
-# total items(rows) in df (ie characters or ships) - tested
+# total items(rows) in df (ie characters or ships)
 def get_total_items(df:pd.DataFrame, column_name:str):
     """
     takes a dataframe and column name
@@ -13,12 +13,14 @@ def get_total_items(df:pd.DataFrame, column_name:str):
 
     return number_of_items
 
-# count x labels (ie gender, race, combos, rpf, etc) - tested
-def get_label_counts(df:pd.DataFrame, column_name:str, count_column:str=None):
+# count x labels (ie gender, race, combos, rpf, etc)
+def get_label_counts(df:pd.DataFrame, column_name:str, count_column:str=None, dropna:bool=False):
     """
     takes a dataframe, column name, and optionally a count column that must not contain null values
 
     if the latter is not provided it will use the first column that does not contain null values instead
+
+    it can also take an argument to drop null values, which defaults to false
 
     returns a series that contains the number of items for each unique label in that column
     """
@@ -35,11 +37,11 @@ def get_label_counts(df:pd.DataFrame, column_name:str, count_column:str=None):
             columns={count_column: "count"} # we rename it to count
         )
 
-    counted_df = counted_df.groupby(column_name).count()
+    counted_df = counted_df.groupby(by=column_name, dropna=dropna).count()
 
     return counted_df["count"]
 
-# sum x labels (ie combine a few labels) - tested
+# sum x labels (ie combine a few labels)
 def sum_label_nums(df:pd.DataFrame, label_column:str, sum_column:str=None):
     """
     takes a dataframe and column name by which to group the sums
@@ -67,14 +69,21 @@ def sum_label_nums(df:pd.DataFrame, label_column:str, sum_column:str=None):
 
     return summed_df
 
-#TODO get average per each label
-def get_average_num(df:pd.DataFrame, column_name:str, labels_list:str=None):
-    
-    pass
+# get average per each label
+def get_average_num(df:pd.DataFrame):
+    """
+    takes a dataframe with columns containing numbers to take the average of
+
+    returns a new dataframe that contains one row, with the average of each column's numbers, 
+    rounded to two decimal numbers
+    """
+
+    new_df = df.copy().mean(0).round(2)
+
+    return new_df
 
 
-
-# make list of unique values in column - tested
+# make list of unique values in column
 def get_unique_values_list(df:pd.DataFrame, column_name:str):
     """
     takes a dataframe and column name
@@ -86,7 +95,7 @@ def get_unique_values_list(df:pd.DataFrame, column_name:str):
 
     return values_list
 
-# finding a column without null values - tested
+# finding a column without null values
 def find_full_column(df:pd.DataFrame, column_name:str):
     """
     takes a dataframe and column name
@@ -102,7 +111,7 @@ def find_full_column(df:pd.DataFrame, column_name:str):
         if len(temp_df[column].dropna()) == len(temp_df[column]): # if there are no null values
             return column
     
-# make y/n columns TODO: test
+# make y/n columns
 def add_true_false_column(
         df:pd.DataFrame, 
         column_name:str, operator:str, value_label, 
@@ -144,17 +153,3 @@ def add_true_false_column(
     # we want the output to be the same df, but with added column w true/false values based on condition
     return new_df
 
-#TODO combine y/n column info (WIP)
-def combine_true_false_column_info(
-        df:pd.DataFrame, operator:str, 
-        true_columns:list=[], false_columns:list=[]
-    ):
-
-    is_or = False
-    is_and = False
-    if operator.lower() == "or" or operator == "|":
-        is_or = True
-    elif operator.lower() == "and" or operator == "&":
-        is_and = True
-
-    # if I can't figure out a way to make it work for more than 2 items, lists may only be 0-2 items long
