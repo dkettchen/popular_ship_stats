@@ -133,6 +133,13 @@ def add_true_false_column(
         new_df[new_column_name] = new_df[column_name].where(new_df[column_name] > value_label)
     elif operator == ">=":
         new_df[new_column_name] = new_df[column_name].where(new_df[column_name] >= value_label)
+    else: raise KeyError
+
+    with pd.option_context('future.no_silent_downcasting', True): 
+        # why is there warnings I need to work around ToT
+        new_df[new_column_name] = new_df[new_column_name].mask(
+            cond=pd.notna(new_df[new_column_name]), other=True
+        )
 
     # we want the output to be the same df, but with added column w true/false values based on condition
     return new_df
