@@ -64,9 +64,9 @@ class TestFullColumn:
             assert find_full_column(test_df, "who?")
 
 class TestLabelCounts:
-    def test_returns_series(self, test_df):
+    def test_returns_dataframe(self, test_df):
         result = get_label_counts(test_df, "strings")
-        assert type(result) == pd.Series
+        assert type(result) == pd.DataFrame
 
     def test_does_not_mutate_input(self, test_df):
         copy_df = test_df.copy()
@@ -83,7 +83,7 @@ class TestLabelCounts:
 
     def test_returns_numerical_values(self, test_df):
         result = get_label_counts(test_df, "strings")
-        assert result.dtype == "int64"
+        assert result["count"].dtype == "int64"
     
     def test_counts_each_label(self, test_df):
         result = get_label_counts(test_df, "strings")
@@ -92,22 +92,22 @@ class TestLabelCounts:
             data={"black":1, "e asian":2, "s asian":1, "white":3}
         )
         assert list(result.index) == list(count_series.index)
-        assert list(result.values) == list(count_series.values)
+        assert list(result["count"]) == list(count_series.values)
     
     def test_works_with_given_count_column(self, test_df):
         result = get_label_counts(test_df, "strings")
         result_2 = get_label_counts(test_df, "strings", "another_full_column")
         result_3 = get_label_counts(test_df, "strings", "year")
         assert list(result.index) == list(result_2.index)
-        assert list(result.values) == list(result_2.values)
+        assert list(result["count"]) == list(result_2["count"])
         assert list(result.index) == list(result_3.index)
-        assert list(result.values) == list(result_3.values)
+        assert list(result["count"]) == list(result_3["count"])
     
     def test_finds_different_column_if_given_count_column_contains_null_values(self, test_df):
         result = get_label_counts(test_df, "strings")
         result_2 = get_label_counts(test_df, "strings", "other_values")
         assert list(result.index) == list(result_2.index)
-        assert list(result.values) == list(result_2.values)
+        assert list(result["count"]) == list(result_2["count"])
 
     def test_returns_accurate_counts_even_if_no_full_columns_outside_of_given_column(self, test_df):
         result = get_label_counts(test_df, "strings")
@@ -119,7 +119,7 @@ class TestLabelCounts:
 
         assert type(result) == type(result_2)
         assert list(result.index) == list(result_2.index)
-        assert list(result.values) == list(result_2.values)
+        assert list(result["count"]) == list(result_2["count"])
     
     def test_raises_keyerror_if_passed_key_not_in_df(self, test_df):
         with pytest.raises(KeyError):
@@ -129,5 +129,5 @@ class TestLabelCounts:
         result = get_label_counts(test_df, "index", "strings")
         assert len(result) == 4
         assert list(result.index) == [0,1,2,3]
-        assert list(result.values) == [2,2,2,1]
+        assert list(result["count"]) == [2,2,2,1]
     

@@ -22,7 +22,8 @@ def get_label_counts(df:pd.DataFrame, column_name:str | list, count_column:str=N
 
     it can also take an argument to drop null values, which defaults to false
 
-    returns a series that contains the number of items for each unique label in that column
+    returns a dataframe that contains the number of items for each unique label in that column in each
+    column, including one column named "count" (either newly added by default or count_column renamed)
     """
 
     counted_df = df.copy()
@@ -42,7 +43,7 @@ def get_label_counts(df:pd.DataFrame, column_name:str | list, count_column:str=N
     else:
         counted_df = counted_df.groupby(by=column_name, dropna=dropna).count()
 
-    return counted_df["count"]
+    return counted_df
 
 # sum x labels (ie combine a few labels)
 def sum_label_nums(df:pd.DataFrame, label_column:str, sum_column:str=None):
