@@ -23,6 +23,10 @@ def sort_df(df:pd.DataFrame, column_name:str=None, asc:bool=False):
     otherwise it'll be sorted by index
 
     if asc is True, it will be sorted in ascending order, otherwise it'll be sorted in descending order
+
+    this helper function is not compatible with pandas.Categorical() 
+    (which is used to set a custom index order), as it specifies an ascending/descending order 
+    (please just use the plain .sort_index() instead in such a case)
     """
 
     if type(column_name) == str:
