@@ -14,7 +14,7 @@ def get_total_items(df:pd.DataFrame, column_name:str):
     return number_of_items
 
 # count x labels (ie gender, race, combos, rpf, etc)
-def get_label_counts(df:pd.DataFrame, column_name:str, count_column:str=None, dropna:bool=False):
+def get_label_counts(df:pd.DataFrame, column_name:str | list, count_column:str=None, dropna:bool=False):
     """
     takes a dataframe, column name, and optionally a count column that must not contain null values
 
@@ -36,8 +36,11 @@ def get_label_counts(df:pd.DataFrame, column_name:str, count_column:str=None, dr
         counted_df = counted_df.rename(
             columns={count_column: "count"} # we rename it to count
         )
-
-    counted_df = counted_df.groupby(by=column_name, dropna=dropna).count()
+    
+    if column_name == "index":
+        counted_df = counted_df.groupby(by=df.index, dropna=dropna).count()
+    else:
+        counted_df = counted_df.groupby(by=column_name, dropna=dropna).count()
 
     return counted_df["count"]
 

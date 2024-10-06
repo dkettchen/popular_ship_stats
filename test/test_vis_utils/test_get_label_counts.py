@@ -18,7 +18,8 @@ def test_df():
             "strings": ["white", "black", "e asian", "white", "s asian", "e asian", "white"],
             "other_values": [2,3,4,5,None,2,None],
             "another_full_column": ["a", "b", "c", "d", "e", "f", "g"]
-        }
+        },
+        index=[0,0,1,1,2,2,3]
     )
 
     return df
@@ -124,4 +125,9 @@ class TestLabelCounts:
         with pytest.raises(KeyError):
             assert get_label_counts(test_df, "who?")
     
+    def test_groups_by_index_if_given_index_string(self, test_df):
+        result = get_label_counts(test_df, "index", "strings")
+        assert len(result) == 4
+        assert list(result.index) == [0,1,2,3]
+        assert list(result.values) == [2,2,2,1]
     
