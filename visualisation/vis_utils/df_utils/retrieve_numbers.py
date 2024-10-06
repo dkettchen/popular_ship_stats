@@ -29,7 +29,10 @@ def get_label_counts(df:pd.DataFrame, column_name:str | list, count_column:str=N
     counted_df = df.copy()
 
     if not count_column or len(df[count_column]) != len(df[count_column].dropna()):
-        count_column = find_full_column(df, column_name)
+        if column_name == "index":
+            count_column == None
+        else: 
+            count_column = find_full_column(df, column_name)
 
     if not count_column: # if there was no other full column
         counted_df["count"] = 1 # we make one
