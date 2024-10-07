@@ -15,9 +15,9 @@ def get_year_df(df:pd.DataFrame, year:int|float):
     return year_df
 
 # sort df ascending
-def sort_df(df:pd.DataFrame, column_name:str=None, asc:bool=False):
+def sort_df(df:pd.DataFrame, column_name:str | list=None, asc:bool=False):
     """
-    takes a dataframe, and optional arguments column_name (str) and asc (bool)
+    takes a dataframe, and optional arguments column_name string (or a list of column names) and asc (bool)
 
     if a column name string is given, the dataframe will be sorted by that column's values, 
     otherwise it'll be sorted by index
@@ -29,7 +29,7 @@ def sort_df(df:pd.DataFrame, column_name:str=None, asc:bool=False):
     (please just use the plain .sort_index() instead in such a case)
     """
 
-    if type(column_name) == str:
+    if type(column_name) == str or type(column_name) == list: # TODO: test
         new_df = df.sort_values(by=column_name, ascending=asc)
     else:
         new_df = df.sort_index(ascending=asc)

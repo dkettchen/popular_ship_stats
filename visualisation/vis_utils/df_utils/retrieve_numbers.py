@@ -59,7 +59,10 @@ def sum_label_nums(df:pd.DataFrame, label_column:str, sum_column:str=None):
     if a sum_column was provided it will return a df containing only this column, renamed as "sum"
     """
 
-    summed_df = df.copy().groupby(label_column).agg("sum")
+    if label_column == "index":
+        summed_df = df.copy().groupby(df.index).agg("sum") # TODO: test
+    else:
+        summed_df = df.copy().groupby(label_column).agg("sum")
 
     if sum_column: 
         if sum_column not in summed_df.columns:
