@@ -257,7 +257,7 @@ if __name__ == "__main__":
     hottest_rank_fig.write_image(
         "visualisation/ao3_all_data_2013_2023/ao3_all_data_charts/all_ao3_hottest_characters_ranking_2013_2023.png", 
         width=1000, 
-        height=1300, 
+        height=1200, 
         scale=2
     )
 
