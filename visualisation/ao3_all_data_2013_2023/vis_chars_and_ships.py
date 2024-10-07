@@ -1,11 +1,16 @@
 from visualisation.vis_utils.join_member_info import join_character_info_to_df
 from visualisation.vis_utils.make_file_dfs import make_ships_df
-from visualisation.vis_utils.remove_translation import remove_translation
 from visualisation.vis_utils.make_name_string import make_name_string
+from visualisation.vis_utils.clean_fandoms_for_vis import clean_fandoms
+from visualisation.vis_utils.df_utils.retrieve_numbers import (
+    get_label_counts, 
+    get_unique_values_list
+)
+from visualisation.vis_utils.df_utils.make_dfs import sort_df
 import pandas as pd
 import plotly.graph_objects as go
-#import plotly.express as px
-#from plotly.subplots import make_subplots
+
+# TODO: refactor using new utils
 
 def make_full_chars_df():
     """
@@ -33,7 +38,9 @@ def make_full_chars_df():
     # adding count of ships per fandom before joining characters
     ships_per_fandom_df = ship_columns_df.copy().get(
         ['fandom', 'slash_ship',]
-    ).groupby("fandom").count().rename(columns={"slash_ship":"no_of_ships"})
+    )
+    ships_per_fandom_df = get_label_counts(ships_per_fandom_df, "fandom", "slash_ship")
+
     ship_columns_df = ship_columns_df.join(
         other=ships_per_fandom_df, on="fandom", 
         rsuffix="_right", lsuffix="_left"
@@ -52,7 +59,8 @@ def make_full_chars_df():
 
     return full_character_df
 
-def make_hottest_char_df(full_character_df):
+# possibly also refactor this mess
+def make_hottest_char_df(full_character_df:pd.DataFrame):
     """
     takes output dataframe of make_full_chars_df
 
@@ -61,11 +69,12 @@ def make_hottest_char_df(full_character_df):
 
     # we need: 
     hottest_df = full_character_df.copy().where(
-        cond=full_character_df["no_of_ships"] > 1 # there needs to be multiple ships
-    ).get(["fandom", "full_name", "slash_ship", "gender", "race"])
+        cond=full_character_df["count"] > 1 # there needs to be multiple ships
+    ).get(["fandom", "full_name", "slash_ship", "gender", "race"]).dropna()
 
     # renaming & setting gender as ambig where relevant for the doctor & gender diff player 
     #   characters as they are the same character & we want to count them as one here
+    
     # setting genders
     hottest_df["gender"] = hottest_df["gender"].mask(
         cond=(
@@ -75,6 +84,7 @@ def make_hottest_char_df(full_character_df):
             ),
         other="Ambig"
     )
+    
     # making renaming dict
     renaming_dict = {}
     for doctor in [
@@ -100,16 +110,23 @@ def make_hottest_char_df(full_character_df):
             renaming_dict[pc] = "Warden | Player Character"
         elif "Shepard" in pc:
             renaming_dict[pc] = "Shepard | Player Character"
+    
     # renaming
     hottest_df["full_name"] = hottest_df["full_name"].replace(to_replace=renaming_dict)
 
+
+    hottest_df["fandom"] = clean_fandoms(hottest_df["fandom"]) # removing translations
+
     # group by fandom, by characters, count characters
-    hottest_df = hottest_df.groupby(["fandom", "full_name", "gender", "race"]).count().rename(
-        columns={"slash_ship":"no_of_ships_they_in"}
-    ).reset_index().sort_values(by=["fandom", "no_of_ships_they_in"], ascending=False)
+    hottest_df = get_label_counts(hottest_df, ["fandom", "full_name", "gender", "race"], "slash_ship")
+    hottest_df = hottest_df.rename(
+        columns={"count":"no_of_ships_they_in"}
+    ).reset_index()
+    hottest_df = sort_df(hottest_df, ["fandom", "no_of_ships_they_in"])
+    
 
     # # figuring out which fandoms' characters are all tied for ship numbers
-    # unique_fandoms = hottest_df["fandom"].unique()
+    # unique_fandoms = get_unique_values_list(hottest_df, "fandom")
     # tied_fandoms = []
     # for fandom in unique_fandoms:
     #     fandom_group = hottest_df.where(
@@ -128,28 +145,27 @@ def make_hottest_char_df(full_character_df):
     ).dropna()
 
     # ordering/grouping by fandom & number of ships
-    unique_fandoms = hottest_df["fandom"].unique()
+    unique_fandoms = get_unique_values_list(hottest_df, "fandom")
     hottest_chars_by_ship_no_dict = {}
     for fandom in unique_fandoms: # for each fandom
-        if " | " in fandom:
-            # couldn't figure out a way to render kana/kanji with kaleido, so getting rid of em
-            hottest_chars_by_ship_no_dict[remove_translation(fandom)] = {}
-        else: hottest_chars_by_ship_no_dict[fandom] = {}
+        hottest_chars_by_ship_no_dict[fandom] = {}
+
         fandom_group = hottest_df.where( # making group of only this fandom's values
             cond=hottest_df["fandom"] == fandom
         ).sort_values(by="no_of_ships_they_in").dropna() # sorting by number of ships
+
         for num in [3,4,5,6,7,8]: # range of ships they can be in
             char_rank_list = list(fandom_group["full_name"].where( # characters in that num of ships
                 fandom_group["no_of_ships_they_in"] == num
             ).dropna())
+
             if len(char_rank_list) > 0: # if there are characters with that num of ships
-                if " | " in fandom:
-                    hottest_chars_by_ship_no_dict[remove_translation(fandom)][num] = char_rank_list
-                else: hottest_chars_by_ship_no_dict[fandom][num] = char_rank_list
+                hottest_chars_by_ship_no_dict[fandom][num] = char_rank_list
 
     # making dataframe where every row is one number of ships (index)
     # and contains chars of that number by fandom (columns)
-    hottest_chars_by_ship_no = pd.DataFrame(hottest_chars_by_ship_no_dict).sort_index(ascending=False)
+    hottest_chars_by_ship_no = pd.DataFrame(hottest_chars_by_ship_no_dict)
+    hottest_chars_by_ship_no = sort_df(hottest_chars_by_ship_no)
 
     # making a new dict for ranking order
     hottest_chars_dict = {}
@@ -192,9 +208,10 @@ def make_hottest_char_df(full_character_df):
         data=rankings_list, 
         columns=rankings_columns
     ).sort_values(by=["fandom", "rank"]) # ordering by fandom & rank therein
+
     return hottest_rank_df
 
-def visualise_hottest_characters(hottest_rank_df):
+def visualise_hottest_characters(hottest_rank_df:pd.DataFrame):
     """
     takes output dataframe of make_hottest_char_df
 
@@ -224,7 +241,7 @@ def visualise_hottest_characters(hottest_rank_df):
                 line_color=line_colour,
                 fill_color=body_fill_colour,
             ),
-            columnwidth=[0.5,0.15,1,0.1] # setting column width ratios
+            columnwidth=[0.3,0.1,1.4,0.07] # setting column width ratios
         )
     ])
 
@@ -239,10 +256,11 @@ if __name__ == "__main__":
 
     hottest_rank_fig.write_image(
         "visualisation/ao3_all_data_2013_2023/ao3_all_data_charts/all_ao3_hottest_characters_ranking_2013_2023.png", 
-        width=800, 
-        height=1400, 
+        width=1000, 
+        height=1300, 
         scale=2
     )
+
     # available formats:  .png .jpeg .webp .svg .pdf 
     # gotta specify dimensions you want to make sure it prints it at the size you want
 
