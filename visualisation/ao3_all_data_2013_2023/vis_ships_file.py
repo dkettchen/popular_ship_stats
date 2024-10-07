@@ -1,13 +1,17 @@
 from visualisation.vis_utils.read_csv_to_df import df_from_csv
 from visualisation.vis_utils.clean_fandoms_for_vis import clean_fandoms
+from visualisation.vis_utils.sort_race_combos import sort_race_combos
+from visualisation.vis_utils.df_utils.retrieve_numbers import (
+    get_label_counts, 
+    sum_label_nums
+)
+from visualisation.vis_utils.df_utils.make_dfs import sort_df
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
-from re import split
-from visualisation.vis_utils.sort_race_combos import sort_race_combos
 
 
-def total_ships_df(ships_df): # util
+def total_ships_df(ships_df:pd.DataFrame): # util
     """
     takes read-in dataframe from ships file
 
@@ -20,7 +24,7 @@ def total_ships_df(ships_df): # util
     return total_ships
 
 
-def total_gender_combo_percent_df(ships_df):
+def total_gender_combo_percent_df(ships_df:pd.DataFrame):
     """
     takes read-in dataframe from ships file
 
@@ -28,19 +32,22 @@ def total_gender_combo_percent_df(ships_df):
     """
     total_gender_percentages = ships_df.copy().get(
         ["slash_ship","gender_combo"]
-    ).groupby("gender_combo").count().rename(index={
+    )
+
+    total_gender_percentages = get_label_counts(total_gender_percentages, "gender_combo", "slash_ship")
+    total_gender_percentages = total_gender_percentages.rename(index={
         "F / M": "M / F",
         "Ambig / M": "M / Ambig",
         "Ambig / F": "F / Ambig",
         "M | Other / M": "M / M | Other"
     })
-    total_gender_percentages = total_gender_percentages.groupby(
-        total_gender_percentages.index
-    ).aggregate("sum").rename(columns={"slash_ship": "count"}).sort_values(by="count")
+
+    total_gender_percentages = sum_label_nums(total_gender_percentages, "index")
+    total_gender_percentages = sort_df(total_gender_percentages, "count", asc=True) # asc??
 
     return total_gender_percentages
 
-def visualise_gender_combo_total(total_gender_percentages):
+def visualise_gender_combo_total(total_gender_percentages:pd.DataFrame):
     """
     takes output dataframe from total_gender_combo_percent_df
 
@@ -102,7 +109,7 @@ def visualise_gender_combo_total(total_gender_percentages):
 
     return gender_combo_fig
 
-def visualise_gender_combo_minorities(total_gender_percentages):
+def visualise_gender_combo_minorities(total_gender_percentages:pd.DataFrame):
     """
     takes output dataframe from total_gender_combo_percent_df
 
@@ -182,7 +189,7 @@ def visualise_gender_combo_minorities(total_gender_percentages):
     return gender_combo_fig
 
 
-def get_ships_per_fandom(ships_df): # util
+def get_ships_per_fandom(ships_df:pd.DataFrame): # util
     """
     takes read-in dataframe from ships file
 
@@ -191,27 +198,28 @@ def get_ships_per_fandom(ships_df): # util
     ships_per_fandom = ships_df.copy().get(["fandom", "slash_ship", "gender_combo", "race_combo"])
     return ships_per_fandom
 
-def make_ships_per_fandom_df(ships_df): # util
+def make_ships_per_fandom_df(ships_df:pd.DataFrame): # util
     """
     takes read-in dataframe from ships file
 
     returns a dataframe with the number of ships per fandom
     """
     ships_per_fandom = get_ships_per_fandom(ships_df)
+    ships_counts = get_label_counts(ships_per_fandom, "fandom", "slash_ship")
+
     ships_per_fandom = ships_per_fandom.join(
-        other=ships_per_fandom.copy().groupby("fandom").count()["slash_ship"], 
+        other=ships_counts["count"], 
         on=ships_per_fandom.fandom, 
         how="inner", 
-        rsuffix="_count"
     ).rename(
-        columns={"slash_ship_count": "total_ships"}
+        columns={"count": "total_ships"}
     )
     ships_per_fandom.pop("key_0")
 
     return ships_per_fandom
 
 
-def fandom_market_share_srs(ships_df):
+def fandom_market_share_srs(ships_df:pd.DataFrame):
     """
     takes read-in dataframe from ships file
 
@@ -220,10 +228,11 @@ def fandom_market_share_srs(ships_df):
     ships_per_fandom = get_ships_per_fandom(ships_df)
     total_ships = total_ships_df(ships_df)
 
-    fandom_market_share = ships_per_fandom.copy().groupby("fandom").count()
+    fandom_market_share = get_label_counts(ships_per_fandom, "fandom", "slash_ship")
+    
     fandom_market_share = fandom_market_share.where(
-        (fandom_market_share["slash_ship"] / total_ships["total_num_of_ships"]) >= 0.01
-    )["slash_ship"].sort_values(ascending=False)
+        (fandom_market_share["count"] / total_ships["total_num_of_ships"]) >= 0.01
+    )["count"].sort_values(ascending=False)
 
     values = fandom_market_share.values
     fandoms = clean_fandoms(fandom_market_share.index)
@@ -232,7 +241,7 @@ def fandom_market_share_srs(ships_df):
 
     return english_titles_market_share
 
-def visualise_fandom_market_share(fandom_market_share):
+def visualise_fandom_market_share(fandom_market_share:pd.Series):
     """
     takes output series from fandom_market_share_srs
 
@@ -263,7 +272,7 @@ def visualise_fandom_market_share(fandom_market_share):
     return market_share_fig
 
 
-def ship_per_fandom_by_type_df(ships_df):
+def ship_per_fandom_by_type_df(ships_df:pd.DataFrame):
     """
     takes read-in dataframe from ships file
 
@@ -292,20 +301,20 @@ def ship_per_fandom_by_type_df(ships_df):
         ) | (ships_per_fandom_by_type.gender_combo == "M / F")
     )
     ships_per_fandom_by_type.pop("gender_combo")
-    ships_per_fandom_by_type = ships_per_fandom_by_type.groupby(["fandom"]).count() 
+    ships_per_fandom_by_type = get_label_counts(ships_per_fandom_by_type, "fandom")
         # this makes fandom the index/columns -> no longer counted for length
 
     for ship_type in ["mlm", "wlw", "het"]:
         # percent of total that is
         ships_per_fandom_by_type[f"%_of_{ship_type}_ships"] = (
-            ships_per_fandom_by_type[f"{ship_type}_ships"] / ships_per_fandom_by_type["total_ships"] * 100
+            ships_per_fandom_by_type[f"{ship_type}_ships"] / ships_per_fandom_by_type["count"] * 100
         ).round(2)
 
         # diff conditions it fulfills
-        ships_per_fandom_by_type[f"no_{ship_type}"] = ships_per_fandom_by_type["total_ships"].where(
+        ships_per_fandom_by_type[f"no_{ship_type}"] = ships_per_fandom_by_type["count"].where(
             ships_per_fandom_by_type[f"%_of_{ship_type}_ships"] == 0
         )
-        ships_per_fandom_by_type[f"all_{ship_type}"] = ships_per_fandom_by_type["total_ships"].where(
+        ships_per_fandom_by_type[f"all_{ship_type}"] = ships_per_fandom_by_type["count"].where(
             ships_per_fandom_by_type[f"%_of_{ship_type}_ships"] == 100
         )
         ships_per_fandom_by_type[f"more_than_50%_{ship_type}"] = ships_per_fandom_by_type[f"%_of_{ship_type}_ships"].where(
@@ -317,7 +326,7 @@ def ship_per_fandom_by_type_df(ships_df):
     return ships_per_fandom_by_type
 
 
-def total_gender_combos_srs(ships_per_fandom_by_type):
+def total_gender_combos_srs(ships_per_fandom_by_type:pd.DataFrame):
     """
     takes output dataframe from ship_per_fandom_by_type_df
 
@@ -338,7 +347,7 @@ def total_gender_combos_srs(ships_per_fandom_by_type):
 
     return total_gender_combos_series
 
-def visualise_no_half_only(total_gender_combos_series):
+def visualise_no_half_only(total_gender_combos_series:pd.Series):
     """
     takes output series from total_gender_combos_srs
 
@@ -403,15 +412,21 @@ def visualise_no_half_only(total_gender_combos_series):
     return no_half_only_fig
 
 
-def highest_of_this_type_df(ships_per_fandom_by_type):
+def highest_of_this_type_df(ships_per_fandom_by_type:pd.DataFrame):
     """
     takes output dataframe from ship_per_fandom_by_type_df
 
     returns a dataframe with the top 3 fandoms for number of ships of each type
     """
-    most_wlw = ships_per_fandom_by_type["wlw_ships"].where(ships_per_fandom_by_type["wlw_ships"] > 1).sort_values(ascending=False).dropna()
-    most_mlm = ships_per_fandom_by_type["mlm_ships"].where(ships_per_fandom_by_type["mlm_ships"] > 1).sort_values(ascending=False).dropna()
-    most_het = ships_per_fandom_by_type["het_ships"].where(ships_per_fandom_by_type["het_ships"] > 1).sort_values(ascending=False).dropna()
+    most_wlw = ships_per_fandom_by_type["wlw_ships"].where(
+        ships_per_fandom_by_type["wlw_ships"] > 1
+    ).sort_values(ascending=False).dropna()
+    most_mlm = ships_per_fandom_by_type["mlm_ships"].where(
+        ships_per_fandom_by_type["mlm_ships"] > 1
+    ).sort_values(ascending=False).dropna()
+    most_het = ships_per_fandom_by_type["het_ships"].where(
+        ships_per_fandom_by_type["het_ships"] > 1
+    ).sort_values(ascending=False).dropna()
 
     highest_of_type = {
         "highest num of mlm ships": [most_mlm.head(3).values[num] for num in [0,1,2]],
@@ -430,7 +445,7 @@ def highest_of_this_type_df(ships_per_fandom_by_type):
 
     return highest_of_type_df
 
-def visualise_top_3_per_fandom_df(highest_of_type_df):
+def visualise_top_3_per_fandom_df(highest_of_type_df:pd.DataFrame):
     """
     takes output dataframe from highest_of_this_type_df
 
@@ -492,14 +507,14 @@ def visualise_top_3_per_fandom_df(highest_of_type_df):
     return top_3_fandoms_for_ships_by_type_fig
 
 
-def average_gender_combo_srs(ships_per_fandom_by_type):
+def average_gender_combo_srs(ships_per_fandom_by_type:pd.DataFrame):
     """
     takes output dataframe from ship_per_fandom_by_type_df
 
     returns a series with the average number of ships of each gender combo in a fandom
     """
     average_gender_combo_dict = {
-        "ships": ships_per_fandom_by_type["total_ships"].mean().round(2),
+        "ships": ships_per_fandom_by_type["count"].mean().round(2),
         "mlm": ships_per_fandom_by_type["mlm_ships"].mean().round(2),
         "wlw": ships_per_fandom_by_type["wlw_ships"].mean().round(2),
         "hets": ships_per_fandom_by_type["het_ships"].mean().round(2)
@@ -508,7 +523,7 @@ def average_gender_combo_srs(ships_per_fandom_by_type):
 
     return average_gender_combo_per_fandom_series
 
-def visualise_average_ship_combos_per_fandom(average_gender_combo_per_fandom_series):
+def visualise_average_ship_combos_per_fandom(average_gender_combo_per_fandom_series:pd.Series):
     """
     takes output series from average_gender_combo_srs
 
@@ -538,7 +553,7 @@ def visualise_average_ship_combos_per_fandom(average_gender_combo_per_fandom_ser
     return average_ships_per_fandom_fig
 
 
-def total_race_combo_df(ships_df):
+def total_race_combo_df(ships_df:pd.DataFrame):
     """
     takes read-in dataframe from ships file
 
@@ -549,20 +564,17 @@ def total_race_combo_df(ships_df):
     unique_combos = sorted(list(set(total_race_combo_counts.race_combo)))
     rename_dict = sort_race_combos(unique_combos)
 
-    total_race_combo_counts = total_race_combo_counts.groupby("race_combo").count().rename(
+    total_race_combo_counts = get_label_counts(total_race_combo_counts, "race_combo", "slash_ship")
+    total_race_combo_counts = total_race_combo_counts.rename(
         index=rename_dict,
-        columns={"slash_ship": "count"}
     )
-    total_race_combo_counts = total_race_combo_counts.groupby(
-        total_race_combo_counts.index
-    ).aggregate("sum").sort_values(
-        by="count", ascending=False
-    )
+    total_race_combo_counts = sum_label_nums(total_race_combo_counts, "index")
+    total_race_combo_counts = sort_df(total_race_combo_counts, "count")
 
     return total_race_combo_counts
 
 
-def interracial_srs(total_race_combo_counts):
+def interracial_srs(total_race_combo_counts:pd.DataFrame):
     """
     takes output dataframe from total_race_combo_df
 
@@ -585,7 +597,7 @@ def interracial_srs(total_race_combo_counts):
 
     return interracial_ships_counts
 
-def visualise_interracial_ships(interracial_ships_counts):
+def visualise_interracial_ships(interracial_ships_counts:pd.Series):
     """
     takes output series from interracial_srs
 
@@ -615,7 +627,7 @@ def visualise_interracial_ships(interracial_ships_counts):
     return interracial_pie
 
 
-def non_white_ships_srs(total_race_combo_counts): 
+def non_white_ships_srs(total_race_combo_counts:pd.DataFrame): 
     """
     takes output dataframe from total_race_combo_df
 
@@ -656,7 +668,7 @@ def non_white_ships_srs(total_race_combo_counts):
 
     return non_white_ships_counts
 
-def visualise_non_white_ships(non_white_ships_counts):
+def visualise_non_white_ships(non_white_ships_counts:pd.Series):
     """
     takes output series from non_white_ships_srs
 
@@ -683,7 +695,7 @@ def visualise_non_white_ships(non_white_ships_counts):
     return non_white_ships_fig
 
 
-def rpf_fic_df(ships_df):
+def rpf_fic_df(ships_df:pd.DataFrame):
     """
     takes read-in dataframe from ships file
 
@@ -691,11 +703,12 @@ def rpf_fic_df(ships_df):
     """
     rpf_vs_fic_df = ships_df.get(
         ["slash_ship", "rpf_or_fic"]
-    ).groupby("rpf_or_fic").count().rename(columns={"slash_ship": "count"})
+    )
+    rpf_vs_fic_df = get_label_counts(rpf_vs_fic_df, "rpf_or_fic", "slash_ship")
 
     return rpf_vs_fic_df
 
-def visualise_rpf_fic(rpf_vs_fic_df):
+def visualise_rpf_fic(rpf_vs_fic_df:pd.DataFrame):
     """
     takes output dataframe from rpf_fic_df
 
