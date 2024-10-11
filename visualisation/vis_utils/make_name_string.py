@@ -1,4 +1,4 @@
-def make_name_string(names_list):
+def make_name_string(names_list:list):
     """
     takes a list of names
 

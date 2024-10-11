@@ -1,7 +1,7 @@
 from visualisation.vis_utils.df_utils.retrieve_numbers import get_unique_values_list
 import pandas as pd
 
-def unify_doctors_and_PCs(input_df:pd.DataFrame): # TODO test
+def unify_doctors_and_PCs(input_df:pd.DataFrame):
     """
     takes a dataframe with (at least) the columns: "gender" and "full_name"
 
@@ -63,7 +63,7 @@ def unify_doctors_and_PCs(input_df:pd.DataFrame): # TODO test
 
     return new_df
 
-def find_tied_fandoms(input_df:pd.DataFrame): # TODO test
+def find_tied_fandoms(input_df:pd.DataFrame):
     """
     takes a dataframe containing (at least) the columns: "fandom" & "no_of_ships_they_in"
 

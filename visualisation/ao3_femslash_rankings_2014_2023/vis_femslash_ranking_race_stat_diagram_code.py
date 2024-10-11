@@ -6,10 +6,10 @@ import plotly.express as px
 from plotly.subplots import make_subplots
 
 # multi plots
-def visualise_total_race_percent(input_dict):
+def visualise_total_race_percent(input_dict:dict):
     """
-    visualise the femslash output from total_racial_group_nos_by_year and 
-    total_racial_combo_nos_by_year as pie charts
+    visualise the femslash output from total_race_nos_by_year ("race" and 
+    "race_combo" version) as pie charts
     """
     year_donuts_fig = make_subplots(rows=3, cols=3, specs=[
         [{'type':'domain'}, {'type':'domain'}, {'type':'domain'}], 
@@ -74,7 +74,7 @@ def visualise_total_race_percent(input_dict):
     return year_donuts_fig
 
 # no multi plots cause line
-def visualise_interracial_lines(input_df):
+def visualise_interracial_lines(input_df:pd.DataFrame):
     """
     visualise the femslash output from total_interracial_ratio as a line chart
     """
@@ -117,9 +117,10 @@ def visualise_interracial_lines(input_df):
     return fig
 
 # multi plots and currently only accounting for two inputs
-def visualise_pies(input_df):
+def visualise_pies(input_df:pd.DataFrame):
     """
-    visualise the femslash output from total_multi_chars, total_interracial_ratio as pie charts
+    visualise the femslash output from total_multi_nos_by_year ("race" version), 
+    total_interracial_ratio as pie charts
     """
     year_donuts_fig = make_subplots(rows=3, cols=3, specs=[
         [{'type':'domain'}, {'type':'domain'}, {'type':'domain'}], 
@@ -183,9 +184,10 @@ def visualise_pies(input_df):
     return year_donuts_fig
 
 # no multi plots but "" -> would need titles etc adjusted
-def visualise_line(input_item):
+def visualise_line(input_item:dict|pd.Series):
     """
-    visualise the femslash output from total_multi_chars, total_racial_groups as line charts
+    visualise the femslash output from total_multi_nos_by_year ("race" version), 
+    total_racial_groups as line charts
     """
 
     if "multi_chars" in input_item.index: # total_multi_chars
@@ -222,7 +224,7 @@ def visualise_line(input_item):
     return fig
 
 # no multi plots but would need title adjusted
-def visualise_non_white_counts(input_df):
+def visualise_non_white_counts(input_df:pd.DataFrame):
     """
     visualises the output from count_non_white_ships as a grouped bar chart
     """
@@ -257,7 +259,7 @@ def visualise_non_white_counts(input_df):
     return fig
 
 # so many multi plots oh god but hopefully salvageable o.o
-def visualise_top_non_white(input_dict):
+def visualise_top_non_white(input_dict:dict):
     """
     takes the output from top_non_white_ships
 
@@ -358,7 +360,7 @@ def visualise_top_non_white(input_dict):
     return fig
 
 # no multi plots but needs some adjustments to be reusable
-def visualise_average_non_white(input_dict):
+def visualise_average_non_white(input_dict:dict):
     """
     visualise the femslash output from average_non_white_ranking as a line chart
     """

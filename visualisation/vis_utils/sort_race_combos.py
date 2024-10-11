@@ -1,6 +1,6 @@
 from re import split
 
-def sort_race_combos(input_list):
+def sort_race_combos(input_list:list):
     """
     takes a list of unique race tag combos (ie "White / E Asian")
 

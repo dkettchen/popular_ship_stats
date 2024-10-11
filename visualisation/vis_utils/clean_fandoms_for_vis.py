@@ -1,6 +1,6 @@
 from visualisation.vis_utils.remove_translation import remove_translation
 
-def iterate_cases_and_replace(input_string, input_list, replacement_list):
+def iterate_cases_and_replace(input_string:str, input_list:list, replacement_list:list):
     """
     iterates over list of options, 
     if string contains or is one of the options, it returns the replacement, 

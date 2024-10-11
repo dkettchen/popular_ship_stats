@@ -1,4 +1,4 @@
-def invert_rank(num):
+def invert_rank(num:int):
     """
     takes a number <= 100
 

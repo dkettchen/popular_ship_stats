@@ -1,6 +1,6 @@
 from re import split
 
-def remove_translation(fandom_string):
+def remove_translation(fandom_string:str):
     """
     takes a fandom string containing a "|" separator (= that has a translation)
 

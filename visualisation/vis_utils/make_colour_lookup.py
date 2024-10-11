@@ -1,6 +1,7 @@
 import plotly.express as px
+from pandas import DataFrame
 
-def make_colour_lookup(input_df):
+def make_colour_lookup(input_df:DataFrame):
     """
     takes a df that contains (at least) a "fandom" column
 

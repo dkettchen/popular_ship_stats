@@ -1,6 +1,6 @@
 import pandas as pd
 
-def add_name_tag(input_df):
+def add_name_tag(input_df:pd.DataFrame):
     """
     input df must have "fandom" and "full_name" columns
 

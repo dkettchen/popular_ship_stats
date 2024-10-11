@@ -1,6 +1,6 @@
 import pandas as pd
 
-def remove_members_from_df(input_df):
+def remove_members_from_df(input_df:pd.DataFrame):
     """
     takes a df with "member_1" through "member_4" columns (+ any other columns)
 

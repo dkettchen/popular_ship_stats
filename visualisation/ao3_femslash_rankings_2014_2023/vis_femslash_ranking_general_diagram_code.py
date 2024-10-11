@@ -1,9 +1,10 @@
 from visualisation.vis_utils.clean_fandoms_for_vis import clean_fandoms
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
+from pandas import DataFrame
 
 # multi plots -> not adjustable without a buncha work
-def visualise_market_share_and_popularity(input_dict, colour_lookup):
+def visualise_market_share_and_popularity(input_dict:dict, colour_lookup:dict):
     """
     visualise the femslash output from fandom_market_share_by_year 
     or fandoms_popularity_by_year as pie charts
@@ -72,7 +73,7 @@ def visualise_market_share_and_popularity(input_dict, colour_lookup):
     return year_donuts_fig
 
 #
-def visualise_top_5_fandoms(input_dict):
+def visualise_top_5_fandoms(input_dict:dict):
     """
     takes the output from top_5_fandoms_by_year
 
@@ -137,7 +138,7 @@ def visualise_top_5_fandoms(input_dict):
     return fig
 
 #
-def visualise_rpf_vs_fic(input_dict):
+def visualise_rpf_vs_fic(input_dict:dict):
     """
     visualise the femslash output from rpf_vs_fic as pie charts
     """
@@ -186,7 +187,7 @@ def visualise_rpf_vs_fic(input_dict):
     return year_donuts_fig
 
 #
-def visualise_top_5_pairings(input_dict):
+def visualise_top_5_pairings(input_dict:dict):
     """
     takes the output from top_5_wlw
 
@@ -253,7 +254,7 @@ def visualise_top_5_pairings(input_dict):
     return fig
 
 # no multi plots! but would need colour, title & year number adjusted
-def visualise_longest_running(input_df):
+def visualise_longest_running(input_df:DataFrame):
     """
     takes the output from longest_running_top_5_ships
 
@@ -289,7 +290,7 @@ def visualise_longest_running(input_df):
     return fig
 
 # also no multi plots, but would need title & file paths adjusted
-def visualise_hottest_sapphic(input_dict):
+def visualise_hottest_sapphic(input_dict:dict):
     """
     takes the femslash output from hottest_char
 
@@ -340,7 +341,7 @@ def visualise_hottest_sapphic(input_dict):
         )
 
 # this one has multi plots
-def visualise_sapphic_genders(input_dict):
+def visualise_sapphic_genders(input_dict:dict):
     """
     visualise the femslash output from sapphic_gender_stats as pie charts
     """
