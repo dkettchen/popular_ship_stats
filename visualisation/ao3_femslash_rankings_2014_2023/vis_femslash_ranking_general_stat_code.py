@@ -1,10 +1,16 @@
 from visualisation.vis_utils.invert_rank import invert_rank
 from visualisation.vis_utils.make_name_string import make_name_string
+from visualisation.vis_utils.df_utils.retrieve_numbers import (
+    get_label_counts, 
+    get_unique_values_list,
+    sum_label_nums
+)
+from visualisation.vis_utils.df_utils.make_dfs import sort_df, get_year_df
 from copy import deepcopy
 import pandas as pd
 
 # marketshare of fandoms each year
-def fandom_market_share_by_year(ship_info_df):
+def fandom_market_share_by_year(ship_info_df:pd.DataFrame):
     """
     takes a dataframe that contains (at least) "year", "ship", and "fandom" columns
 
@@ -14,22 +20,27 @@ def fandom_market_share_by_year(ship_info_df):
     new_df = ship_info_df.copy().get(["year", "ship", "fandom"])
 
     year_dict = {}
-    for year in list(new_df["year"].unique()):
-        year_df = new_df.where(
-            new_df["year"] == year
-        ).groupby("fandom").count().rename(
-            columns={"ship": "no_of_ships"}
+    unique_year_list = get_unique_values_list(new_df, "year")
+    for year in unique_year_list:
+        year_df = get_year_df(new_df, year)
+        year_df = get_label_counts(year_df, "fandom", "ship")
+        year_df = year_df.rename(
+            columns={"count": "no_of_ships"}
         )
+
         year_df = year_df.where(
             year_df["no_of_ships"] > 1
-        ).sort_values(by="no_of_ships", ascending=False).dropna()
+        )
+        year_df = sort_df(year_df, "no_of_ships")
+        year_df = year_df.dropna()
+
         year_df["year"] = year
         year_dict[int(year)] = year_df
 
     return year_dict
 
 # fandoms with most popular ships (add together rankings!)
-def fandoms_popularity_by_year(ship_info_df):
+def fandoms_popularity_by_year(ship_info_df:pd.DataFrame):
     """
     takes a dataframe that contains (at least) "year", "rank_no", and "fandom" columns
 
@@ -42,20 +53,23 @@ def fandoms_popularity_by_year(ship_info_df):
     new_df["rank_no"] = new_df["rank_no"].apply(invert_rank)
 
     year_dict = {}
-    for year in list(new_df["year"].unique()):
-        year_df = new_df.where(
-            new_df["year"] == year
-        ).groupby("fandom").agg("sum").rename(
-            columns={"rank_no": "rank_sum"}
+    unique_year_list = get_unique_values_list(new_df, "year")
+    for year in unique_year_list:
+        year_df = get_year_df(new_df, year)
+        year_df = sum_label_nums(year_df, "fandom", "rank_no")
+        year_df = year_df.rename(
+            columns={"sum": "rank_sum"}
         )
-        year_df = year_df.sort_values(by="rank_sum", ascending=False).head(15)#.dropna()
+        year_df = sort_df(year_df, "rank_sum")
+        year_df = year_df.head(15)
+
         year_df["year"] = year
         year_dict[int(year)] = year_df
 
     return year_dict
 
 # fandoms with most ships in ranking each year and most popular fandoms
-def top_5_fandoms_by_year(market_share, popularity):
+def top_5_fandoms_by_year(market_share:dict, popularity:dict):
     """
     takes outputs from fandom_market_share_by_year and fandoms_popularity_by_year
 
@@ -71,8 +85,9 @@ def top_5_fandoms_by_year(market_share, popularity):
     for year in market_share:
         market_share_top = market_share[year].head().index
         popularity_top = popularity[year].head().index
+
         new_df = pd.DataFrame(
-            data={columns[0]:market_share_top,columns[1]:popularity_top},
+            data={columns[0]: market_share_top, columns[1]: popularity_top},
             index=index
         )
         new_df["year"] = year
@@ -82,7 +97,7 @@ def top_5_fandoms_by_year(market_share, popularity):
 
 
 # how much rpf vs not
-def rpf_vs_fic(ship_info_df):
+def rpf_vs_fic(ship_info_df:pd.DataFrame):
     """
     takes a dataframe that contains (at least) "year", "ship", and "rpf_or_fic" columns
 
@@ -92,12 +107,14 @@ def rpf_vs_fic(ship_info_df):
     new_df = ship_info_df.copy().get(["year", "ship", "rpf_or_fic"])
 
     year_dict = {}
-    for year in list(new_df["year"].unique()):
-        year_df = new_df.where(
-            new_df["year"] == year
-        ).groupby("rpf_or_fic").count().rename(
-            columns={"ship": "no_of_ships"}
+    unique_year_list = get_unique_values_list(new_df, "year")
+    for year in unique_year_list:
+        year_df = get_year_df(new_df, year)
+        year_df = get_label_counts(year_df, "rpf_or_fic", "ship")
+        year_df = year_df.rename(
+            columns={"count": "no_of_ships"}
         )
+
         year_df["year"] = year
         year_dict[int(year)] = year_df
 
@@ -105,7 +122,7 @@ def rpf_vs_fic(ship_info_df):
 
 
 # top 5 ships & their demo each year
-def top_5_ships(ship_info_df):
+def top_5_ships(ship_info_df:pd.DataFrame):
     """
     takes a dataframe that contains (at least) "year", "ship", "fandom", "race_combo", and "rpf_or_fic" 
     columns and is sorted by ranks already
@@ -116,16 +133,16 @@ def top_5_ships(ship_info_df):
     # leaving out gender combo cause all of em seem to be F / F
 
     year_dict = {}
-    for year in list(new_df["year"].unique()):
-        year_df = new_df.where(
-            new_df["year"] == year
-        ).dropna().head()
+    unique_year_list = get_unique_values_list(new_df, "year")
+    for year in unique_year_list:
+        year_df = get_year_df(new_df, year)
+        year_df = year_df.dropna().head()
         year_dict[int(year)] = year_df
     
     return year_dict
 
 
-def count_appearances(top_5):
+def count_appearances(top_5:dict):
     """
     takes output from top_5_ships
 
@@ -133,12 +150,11 @@ def count_appearances(top_5):
     """
     all_year_dfs = list(top_5.values())
     new_df = pd.concat(all_year_dfs)
-    most_appearances = new_df.groupby(
-        ["ship", "fandom", "race_combo", "rpf_or_fic"]
-    ).count().sort_values(by="year", ascending=False)
-    return most_appearances.reset_index().rename(columns={"year": "no_of_appearances"})
+    most_appearances = get_label_counts(new_df, ["ship", "fandom", "race_combo", "rpf_or_fic"], "year")
+    most_appearances = sort_df(most_appearances, "count")
+    return most_appearances.reset_index().rename(columns={"count": "no_of_appearances"})
 
-def count_streaks(top_5):
+def count_streaks(top_5:dict):
     """
     takes output from top_5_ships
 
@@ -177,12 +193,13 @@ def count_streaks(top_5):
         data=final_ranking.values(), 
         index=final_ranking.keys(), 
         columns=["longest_streak"]
-    ).sort_values(by="longest_streak", ascending=False)
+    )
+    new_df = sort_df(new_df, "longest_streak")
 
     return new_df.reset_index().rename(columns={"index": "ship"})
 
 # longest running top 5 femslash ship (longest streak & most appearances)
-def longest_running_top_5_ships(appearances, streaks):
+def longest_running_top_5_ships(appearances:pd.DataFrame, streaks:pd.DataFrame):
     """
     takes the output of count_appearances and count_streaks
 
@@ -207,7 +224,7 @@ def longest_running_top_5_ships(appearances, streaks):
 
 # no 1 hottest character each year (in most ships)
     # & their highest-ranked ship
-def hottest_char_ranking(character_info_df):
+def hottest_char_ranking(character_info_df:pd.DataFrame):
     """
     takes dataframe that (at least) contains "year", "full_name", "ship", "rank_no", 
     "fandom", "race", "rpf_or_fic" columns
@@ -223,20 +240,23 @@ def hottest_char_ranking(character_info_df):
 
     # group by years
     year_dict = {}
-    for year in list(new_df["year"].unique()):
-        year_df = new_df.where(
-            new_df["year"] == year
-        ).dropna()
+    unique_year_list = get_unique_values_list(new_df, "year")
+    for year in unique_year_list:
+        year_df = get_year_df(new_df, year)
+        year_df = year_df.dropna()
 
         # group by characters
         # count
-        hottest_df = year_df.groupby(
-            ["year", "full_name", "fandom", "race", "rpf_or_fic"]
-        ).count().sort_values(by="ship", ascending=False).reset_index()
+        hottest_df = get_label_counts(
+            year_df, ["year", "full_name", "fandom", "race", "rpf_or_fic"], "ship"
+        )
+        hottest_df = sort_df(hottest_df, "count")
+        hottest_df = hottest_df.reset_index()
 
         # finding highest ranked ship per character per year
         highest_ships_by_char = {}
-        for character in list(year_df["full_name"].unique()):
+        unique_char_list = get_unique_values_list(year_df, "full_name")
+        for character in unique_char_list:
             char_df = year_df.where(
                 year_df["full_name"] == character
             ).sort_values(by="rank_no").head(1)
@@ -251,7 +271,7 @@ def hottest_char_ranking(character_info_df):
     return year_dict
 
 # need to separate out chars we wanna visualise as a lot are tied & it's by year not fandom
-def hottest_char(character_info_df):
+def hottest_char(character_info_df:pd.DataFrame):
     """
     takes dataframe that (at least) contains "year", "full_name", "ship", "rank_no", 
     "fandom", "race", "rpf_or_fic" columns
@@ -277,16 +297,16 @@ def hottest_char(character_info_df):
         hottest_df = hottest_dict[year].copy()
 
         ship_count_df = hottest_df.copy().get(
-            ["ship", "full_name"]
-        ).groupby("ship").count().sort_index(ascending=False).reset_index().rename(
-            columns={"full_name": "count", "ship": "no_of_ships"}
-        ) # columns = ["no_of_ships", "count"]
-
-        over_3_ships_df = hottest_df.where(hottest_df["ship"] > 2).dropna()
+            ["highest_ship", "full_name"]
+        )
+        ship_count_df = get_label_counts(ship_count_df, "highest_ship", "full_name")
+        ship_count_df = sort_df(ship_count_df)
+        ship_count_df = ship_count_df.reset_index()
+        over_3_ships_df = hottest_df.where(hottest_df["count"] > 2).dropna()
 
         year_ranking = []
         for num in [3,4,5]:
-            rank_df = over_3_ships_df.copy().where(over_3_ships_df["ship"] == num).dropna()
+            rank_df = over_3_ships_df.copy().where(over_3_ships_df["count"] == num).dropna()
             if len(rank_df) > 0:
                 all_characters = sorted([character for character in rank_df["full_name"]])
                 char_string = make_name_string(all_characters)
@@ -301,9 +321,8 @@ def hottest_char(character_info_df):
     return hottest_data
 
 
-
 # character gender percentages (what gender weirds were in the femslash ranking)
-def gender_stats(character_info_df):
+def gender_stats(character_info_df:pd.DataFrame):
     """
     takes dataframe that (at least) contains "year" and "gender" columns
 
@@ -314,12 +333,12 @@ def gender_stats(character_info_df):
     new_df = character_info_df.copy().get(["year", "gender"])
 
     year_dict = {}
-    for year in list(new_df["year"].unique()):
-        year_df = new_df.where(
-            new_df["year"] == year
-        ).dropna()
-        counted_df = year_df.groupby("gender").count().rename(columns={"year": "count"})
-        year_dict[int(year)] = counted_df.sort_values(by="count", ascending=False)
+    unique_year_list = get_unique_values_list(new_df, "year")
+    for year in unique_year_list:
+        year_df = get_year_df(new_df, year)
+        year_df = year_df.dropna()
+        counted_df = get_label_counts(year_df, "gender", "year")
+        year_dict[int(year)] = sort_df(counted_df, "count")
 
     return year_dict
 

@@ -326,7 +326,7 @@ def visualise_hottest_sapphic(input_dict:dict):
                     line_color=line_colour,
                     fill_color=body_fill_colour,
                 ),
-                columnwidth=[1.9,0.7,0.6,0.2,3] # sets column width ratios
+                columnwidth=[1.9,0.7,0.5,0.3,3] # sets column width ratios
             ),
             layout={
                 "title":f"Hottest characters (in 3+ ships) in {year} (AO3 femslash ranking 2014-2023)"
