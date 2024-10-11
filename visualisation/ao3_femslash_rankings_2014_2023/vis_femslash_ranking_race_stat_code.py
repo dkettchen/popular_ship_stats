@@ -1,93 +1,91 @@
 from visualisation.vis_utils.invert_rank import invert_rank
+from visualisation.vis_utils.df_utils.retrieve_numbers import (
+    get_label_counts, 
+    get_unique_values_list
+)
+from visualisation.vis_utils.df_utils.make_dfs import sort_df, get_year_df
 import pandas as pd
 
-# character race percentages each year
-def total_racial_group_nos_by_year(character_info_df):
+# character race & race_combo percentages each year
+def total_race_nos_by_year(character_info_df:pd.DataFrame, column_name:str): 
     """
-    takes dataframe that (at least) contains "year" and "race" columns
+    takes dataframe that (at least) contains "year" and "race"/"race_combo" columns
 
     returns a dict with year keys and dataframe values
 
-    the dataframes contain the numbers of characters of each race tag represented that year
+    the dataframes contain the numbers of characters of each race/race_combo tag represented that year
     """
-    new_df = character_info_df.copy().get(["year", "race"])
+    new_df = character_info_df.copy().get(["year", column_name])
 
     year_dict = {}
-    for year in list(new_df["year"].unique()):
-        year_df = new_df.where(
-            new_df["year"] == year
-        ).dropna()
-        counted_df = year_df.groupby("race").count().rename(columns={"year": "count"})
-        year_dict[int(year)] = counted_df.sort_values(by="count", ascending=False)
+    
+    unique_year_list = get_unique_values_list(new_df, "year")
+    for year in unique_year_list:
+
+        year_df = get_year_df(new_df, year)
+        year_df = year_df.dropna()
+
+        counted_df = get_label_counts(year_df, column_name, "year")
+
+        year_dict[int(year)] = sort_df(counted_df, "count")
 
     return year_dict
 
 # how many multiracial characters each year
-def total_multi_chars(race_percent):
+def total_multi_nos_by_year(input_dict:dict, column_name:str):
     """
-    takes output dict from total_racial_group_nos_by_year
+    takes output dict from total_race_nos_by_year & a column name ("race" or "race_combo")
 
-    returns a dataframe with the total no of multiracial and non-multiracial characters per year
+    returns a dataframe with the total no of multiracial and non-multiracial characters 
+    or ships containing or not containing multiracial characters per year
     """
     temp_dict = {}
-    for year in race_percent:
-        df = race_percent[year].reset_index()
+    for year in input_dict:
+        df = input_dict[year].copy().reset_index()
+
         total = df["count"].sum()
         multi = df.where(
-            df["race"].str.contains("(Multi)", regex=False) # regex false suppressed the warning!
+            df[column_name].str.contains("(Multi)", regex=False) # regex false suppressed the warning!
         )["count"].sum()
         non_multi = total - multi
+
         temp_dict[year] = [multi, non_multi]
-    new_df = pd.DataFrame(data=temp_dict, index=["multi_chars", "non-multi_chars"])
+
+    if column_name == "race":
+        index_list = ["multi_chars", "non-multi_chars"]
+    elif column_name == "race_combo":
+        index_list = ["with_multi_chars", "without_multi_chars"]
+
+    new_df = pd.DataFrame(data=temp_dict, index=index_list)
     return new_df
 
 # how many racial groups each year
-def total_racial_groups(race_percent):
+def total_racial_groups(race_percent:dict):
     """
-    takes output dict from total_racial_group_nos_by_year
+    takes output dict from total_race_nos_by_year ("race" version)
 
     returns a series with the total no of racial groups represented each year
     """
     temp_dict = {}
     for year in race_percent:
-        df = race_percent[year].reset_index()
+        df = race_percent[year].copy().reset_index()
         total = df["count"].count()
         temp_dict[year] = total
-    new_df = pd.Series(data=temp_dict)
-    return new_df
+    new_srs = pd.Series(data=temp_dict)
+    return new_srs
 
 
-# ship race combo percentages each year
-def total_racial_combo_nos_by_year(ship_info_df):
+# race_combos of which how many interracial vs same
+def total_interracial_ratio(race_combo_percent:dict):
     """
-    takes dataframe that (at least) contains "year" and "race_combo" columns
-
-    returns a dict with year keys and dataframe values
-
-    the dataframes contain the numbers of ships of each race combo represented that year
-    """
-    new_df = ship_info_df.copy().get(["year", "race_combo"])
-
-    year_dict = {}
-    for year in list(new_df["year"].unique()):
-        year_df = new_df.where(
-            new_df["year"] == year
-        ).dropna()
-        counted_df = year_df.groupby("race_combo").count().rename(columns={"year": "count"})
-        year_dict[int(year)] = counted_df.sort_values(by="count", ascending=False)
-
-    return year_dict
-
-# of which how many interracial vs same
-def total_interracial_ratio(race_combo_percent):
-    """
-    takes output dict from total_racial_combo_nos_by_year
+    takes output dict from total_race_nos_by_year ("race_combo" version)
 
     returns a dataframe with the total no of interracial and non-interracial ships per year
     """
     temp_dict = {}
     for year in race_combo_percent:
-        df = race_combo_percent[year].reset_index()
+        df = race_combo_percent[year].copy().reset_index()
+
         total = df["count"].sum()
         inter = df.where(
             (df["race_combo"].str.contains("/")) & (df["race_combo"].str.contains("Ambig") == False)
@@ -96,7 +94,9 @@ def total_interracial_ratio(race_combo_percent):
             df["race_combo"].str.contains("Ambig")
         )["count"].sum()
         non_inter = total - inter - ambig
+
         temp_dict[year] = [inter, ambig, non_inter]
+
     new_df = pd.DataFrame(data=temp_dict, index=[
         "interracial_ships", 
         "ambiguous_ships", 
@@ -104,28 +104,9 @@ def total_interracial_ratio(race_combo_percent):
     ])
     return new_df
 
-# of which how many involved multi chars vs non-multi
-def total_multi_involved_ratio(race_combo_percent):
-    """
-    takes output dict from total_racial_combo_nos_by_year
-
-    returns a dataframe with the total no of ships that involve multiracial chars vs not each year
-    """
-    temp_dict = {}
-    for year in race_combo_percent:
-        df = race_combo_percent[year].reset_index()
-        total = df["count"].sum()
-        multi = df.where(
-            df["race_combo"].str.contains("(Multi)", regex=False) # regex false suppressed the warning!
-        )["count"].sum()
-        non_multi = total - multi
-        temp_dict[year] = [multi, non_multi]
-    new_df = pd.DataFrame(data=temp_dict, index=["with_multi_chars", "without_multi_chars"])
-    return new_df
-
 
 # prep info df with true/false values
-def prep_df_for_non_white_ship_comp(ship_info_df):
+def prep_df_for_non_white_ship_comp(ship_info_df:pd.DataFrame):
     """
     takes dataframe that (at least) contains "year", "ship", "fandom", "rank_no", "race_combo" columns
 
@@ -138,14 +119,14 @@ def prep_df_for_non_white_ship_comp(ship_info_df):
     new_df = ship_info_df.copy().get(["year", "ship", "fandom", "rank_no", "race_combo"])
 
     year_dict = {}
-    for year in list(new_df["year"].unique()):
-        year_df = new_df.where(
-            new_df["year"] == year
-        ).dropna()
+    unique_year_list = get_unique_values_list(new_df, "year")
+    for year in unique_year_list:
+
+        year_df = get_year_df(new_df, year)
+        year_df = year_df.dropna()
+
         year_df["contains_white_person"] = year_df["race_combo"].str.contains("White|Eu Ind")
-            # I want to catch anna and elsa cause like they are white even if 
-            # they're also european-indigenous (they can be both!), 
-            # they're not a "non-white/non-ea" pairing, that's silly
+            # I want to catch anna and elsa cause they're not a "non-white/non-ea" pairing, that's silly
         year_df["contains_e_asian_person"] = year_df["race_combo"].str.contains("E Asian")
         year_df["contains_ambig_person"] = year_df["race_combo"].str.contains("Ambig")
         year_df["contains_non_human"] = year_df["race_combo"].str.contains("N.H.")
@@ -178,7 +159,7 @@ def prep_df_for_non_white_ship_comp(ship_info_df):
     return year_dict
 
 # how many ships involving {same racial combos as previously} made the wlw ranking each year
-def count_non_white_ships(prepped_dict):
+def count_non_white_ships(prepped_dict:dict): # should be throwing an error
     """
     takes output from prep_df_for_non_white_ship_comp
 
@@ -194,13 +175,14 @@ def count_non_white_ships(prepped_dict):
         "non_white_or_ea_ship"
     ])
     
-    new_df = new_df.groupby("year").count()
+    new_df = get_label_counts(new_df, "year") # to be seen if "count" will throw an error (probably)
+    new_df.pop("count")
 
     return new_df
 
 
 # separate out the diff ship info
-def separate_out_non_white_ships_info(prepped_dict): # (util)
+def separate_out_non_white_ships_info(prepped_dict:dict): # (util)
     """
     takes output from prep_df_for_non_white_ship_comp
 
@@ -233,7 +215,7 @@ def separate_out_non_white_ships_info(prepped_dict): # (util)
     return year_dict
 
 # top (1-5) ranked ship(s) of “” racial group combos as above each year
-def top_non_white_ships(separated_dict):
+def top_non_white_ships(separated_dict:dict):
     """
     takes output from separate_out_non_white_ships_info
 
@@ -258,7 +240,7 @@ def top_non_white_ships(separated_dict):
     return new_dict
 
 # average rank of “” racial group combos as above each year vs average white-only & white-involved rank
-def average_non_white_ranking(separated_dict):
+def average_non_white_ranking(separated_dict:dict):
     """
     takes output from separate_out_non_white_ships_info
 
@@ -278,12 +260,13 @@ def average_non_white_ranking(separated_dict):
         year_dict = separated_dict[year]
         concat_list = [year_dict[item] for item in lookup_list]
         new_df = pd.concat(concat_list)
+
         new_df["rank_no"] = new_df["rank_no"].apply(invert_rank)
         new_df = new_df.get(
             ["ship_type", "rank_no"]
         ).groupby("ship_type").aggregate("mean").round(2)
         new_df["rank_no"] = new_df["rank_no"].apply(invert_rank)
         new_df["year"] = year
-        new_dict[year] = new_df.sort_values(by="rank_no")
+        new_dict[year] = sort_df(new_df, "rank_no", asc=True)
     
     return new_dict

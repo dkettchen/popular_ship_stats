@@ -17,12 +17,10 @@ from visualisation.ao3_femslash_rankings_2014_2023.vis_femslash_ranking_general_
     gender_stats,
 )
 from visualisation.ao3_femslash_rankings_2014_2023.vis_femslash_ranking_race_stat_code import (
-    total_racial_group_nos_by_year,
-    total_multi_chars,
+    total_race_nos_by_year,
+    total_multi_nos_by_year,
     total_racial_groups,
-    total_racial_combo_nos_by_year,
     total_interracial_ratio,
-    total_multi_involved_ratio,
     prep_df_for_non_white_ship_comp,
     count_non_white_ships,
     separate_out_non_white_ships_info,
@@ -136,7 +134,7 @@ gender_fig.write_image(
 
 ## race stats
 
-femslash_race_percent = total_racial_group_nos_by_year(femslash_character_info_df)
+femslash_race_percent = total_race_nos_by_year(femslash_character_info_df, "race")
 femslash_race_fig = visualise_total_race_percent(femslash_race_percent)
 femslash_race_fig.write_image(
     "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/sapphic_race_stats/femslash_racial_groups_percent_2014_2023.png", 
@@ -145,7 +143,7 @@ femslash_race_fig.write_image(
     scale=2
 )
 
-femslash_race_combo_percent = total_racial_combo_nos_by_year(femslash_ship_info_df)
+femslash_race_combo_percent = total_race_nos_by_year(femslash_ship_info_df, "race_combo")
 femslash_race_combo_fig = visualise_total_race_percent(femslash_race_combo_percent)
 femslash_race_combo_fig.write_image(
     "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/sapphic_race_stats/femslash_racial_groups_combo_percent_2014_2023.png", 
@@ -154,7 +152,7 @@ femslash_race_combo_fig.write_image(
     scale=2
 )
 
-total_multi = total_multi_chars(femslash_race_percent)
+total_multi = total_multi_nos_by_year(femslash_race_percent, "race")
 multi_fig = visualise_pies(total_multi)
 multi_fig.write_image(
     "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/sapphic_race_stats/femslash_multiracial_chars_pies_2014_2023.png", 
@@ -195,7 +193,7 @@ interracial_line.write_image(
     scale=2
 )
 
-total_multi_involved = total_multi_involved_ratio(femslash_race_combo_percent)
+total_multi_involved = total_multi_nos_by_year(femslash_race_combo_percent, "race_combo")
 multi_involved_fig = visualise_pies(total_multi_involved)
 multi_involved_fig.write_image(
     "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/sapphic_race_stats/femslash_multi_involved_ships_2014_2023.png", 
