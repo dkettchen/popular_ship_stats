@@ -7,10 +7,9 @@ from visualisation.vis_utils.df_utils.retrieve_numbers import (
     get_unique_values_list
 )
 from visualisation.vis_utils.df_utils.make_dfs import sort_df
+from visualisation.vis_utils.df_utils.hottest_char_utils import unify_doctors_and_PCs, find_tied_fandoms
 import pandas as pd
 import plotly.graph_objects as go
-
-# TODO: refactor using new utils
 
 def make_full_chars_df():
     """
@@ -72,48 +71,7 @@ def make_hottest_char_df(full_character_df:pd.DataFrame):
         cond=full_character_df["count"] > 1 # there needs to be multiple ships
     ).get(["fandom", "full_name", "slash_ship", "gender", "race"]).dropna()
 
-    # renaming & setting gender as ambig where relevant for the doctor & gender diff player 
-    #   characters as they are the same character & we want to count them as one here
-    
-    # setting genders
-    hottest_df["gender"] = hottest_df["gender"].mask(
-        cond=(
-            (hottest_df["full_name"].str.contains("Female", na=False)
-            ) | (hottest_df["full_name"].str.contains("Male", na=False)
-            ) | (hottest_df["full_name"].str.contains(" Doctor", na=False))
-            ),
-        other="Ambig"
-    )
-    
-    # making renaming dict
-    renaming_dict = {}
-    for doctor in [
-        "The Eleventh Doctor",
-        "The Ninth Doctor",
-        "The Tenth Doctor",
-        "The Thirteenth Doctor",
-        "The Twelfth Doctor",
-    ]:
-        renaming_dict[doctor] = "The Doctor"
-    for pc in [
-        "Hawke (Female) | Player Character",
-        "Inquisitor (Female) | Player Character",
-        "Warden (Female) | Player Character",
-        "Shepard (Female) | Player Character",
-        "Shepard (Male) | Player Character",
-    ]:
-        if "Hawke" in pc:
-            renaming_dict[pc] = "Hawke | Player Character"
-        elif "Inquisitor" in pc:
-            renaming_dict[pc] = "Inquisitor | Player Character"
-        elif "Warden" in pc:
-            renaming_dict[pc] = "Warden | Player Character"
-        elif "Shepard" in pc:
-            renaming_dict[pc] = "Shepard | Player Character"
-    
-    # renaming
-    hottest_df["full_name"] = hottest_df["full_name"].replace(to_replace=renaming_dict)
-
+    hottest_df = unify_doctors_and_PCs(hottest_df) # unifying doctor whos & player characters
 
     hottest_df["fandom"] = clean_fandoms(hottest_df["fandom"]) # removing translations
 
@@ -124,18 +82,9 @@ def make_hottest_char_df(full_character_df:pd.DataFrame):
     ).reset_index()
     hottest_df = sort_df(hottest_df, ["fandom", "no_of_ships_they_in"])
     
-
     # # figuring out which fandoms' characters are all tied for ship numbers
-    # unique_fandoms = get_unique_values_list(hottest_df, "fandom")
-    # tied_fandoms = []
-    # for fandom in unique_fandoms:
-    #     fandom_group = hottest_df.where(
-    #         cond=hottest_df["fandom"] == fandom
-    #     ).sort_values(by="no_of_ships_they_in").dropna()
-    #     if fandom_group["no_of_ships_they_in"].max() == fandom_group["no_of_ships_they_in"].min() and \
-    #     fandom_group.shape[0] > 1 and fandom_group["no_of_ships_they_in"].max() > 1:
-    #         tied_fandoms.append(fandom)
-    # print(tied_fandoms) # -> only ['Carmilla', 'Amphibia']
+    # tied_fandoms = find_tied_fandoms(hottest_df)
+    # print(tied_fandoms) # -> should be only ['Carmilla', 'Amphibia']
 
     # removing all chars that are in less than 3 ships, and any fandoms where all chars are tied
     hottest_df = hottest_df.where(
