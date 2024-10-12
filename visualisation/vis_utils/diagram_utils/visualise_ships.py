@@ -11,7 +11,7 @@ def visualise_top_5_pairings(input_dict:dict):
     returns a figure visualising the data contained in lesbian flag coloured table format
     """
     num_of_years = len(input_dict.keys)
-    fig = make_subplots_by_year(num_of_years, True)
+    fig = make_subplots_by_year(num_of_years, 1)
 
     line_colour = 'deeppink' # colour of lines
     header_fill_colour = 'lightsalmon' # colour of header row
