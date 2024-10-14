@@ -3,25 +3,31 @@ import plotly.graph_objects as go
 import visualisation.vis_utils.diagram_utils.labels as lbls
 import visualisation.vis_utils.diagram_utils.colour_palettes as colour_palettes
 
-# no multi plots but "" -> would need titles etc adjusted
-def visualise_line(input_item:dict|pd.Series):
+def visualise_line(input_item:dict|pd.Series, data_case:str, ranking:str):
     """
-    visualise the femslash output from total_multi_nos_by_year ("race" version), 
-    total_racial_groups as line charts
+    visualise the output (ranking=(currently implemented:)"femslash") from 
+    - total_multi_nos_by_year ("race" (data_case="multi_chars") 
+    & "race_combo" (data_case="multi_char_ships") version), 
+    - total_racial_groups (data_case="total_racial_groups")
+    
+    as single line charts
     """
+    suffix = lbls.suffixes[ranking]
+    if ranking == "femslash":
+        bg_colour = colour_palettes.sapphic_table["body_2"]
 
-    if "multi_chars" in input_item.index: # total_multi_chars
+    if data_case == "multi_chars":
         x = input_item.columns
         y = input_item.loc["multi_chars"]
-        title = 'Multiracial characters by year (AO3 femslash ranking 2014-2023)'
-    elif type(input_item) == pd.Series: # total_racial_groups
+        title = f'Multiracial characters by year{suffix}'
+    elif data_case == "total_racial_groups":
         x = input_item.index
         y = input_item.values
-        title = 'Number of racial groups over the years (AO3 femslash ranking 2014-2023)'
-    elif "with_multi_chars" in input_item.index:
+        title = f'Number of racial groups over the years{suffix}'
+    elif data_case == "multi_char_ships":
         x = input_item.columns
         y = input_item.loc["with_multi_chars"]
-        title = "Ships with multiracial characters by year (AO3 femslash ranking 2014-2023)"
+        title = f"Ships with multiracial characters by year{suffix}"
 
     fig = go.Figure(
         data=go.Scatter(
@@ -30,11 +36,11 @@ def visualise_line(input_item:dict|pd.Series):
             text=y,
             textposition="top center",
             mode="lines+text+markers",
-            line={"color": "orangered"}
+            line={"color": colour_palettes.oranges[0]}
         ),
         layout={
             "title": title,
-            "plot_bgcolor": "papayawhip",
+            "plot_bgcolor": bg_colour,
             "yaxis_rangemode": "tozero",
             "yaxis_tickmode": "linear",
             "xaxis_tickmode": "linear"
