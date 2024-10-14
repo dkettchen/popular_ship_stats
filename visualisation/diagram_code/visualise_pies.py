@@ -15,14 +15,17 @@ def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str):
     & "race_combo" (data_case="multi_char_ships") version), 
     - total_interracial_ratio (data_case="interracial_ships")
     - rpf_vs_fic (data_case="rpf")
+    - sapphic_gender_stats (data_case="gender", ranking="femslash")
+    - total_race_nos_by_year ("race" (data_case="race") & "race_combo" 
+    (data_case="race_combos") version)
     
     as pie charts
     """
     suffix = lbls.suffixes[ranking]
 
-    if data_case in ["multi_chars", "multi_char_ships", "interracial_ships"]:
+    if data_case in ["multi_chars", "multi_char_ships", "interracial_ships"]: # dfs
         years = input_item.columns
-    elif data_case in ["rpf"]:
+    elif data_case in ["rpf", "gender", "race", "race_combos"]: # dict
         years = input_item.keys()
 
     num_of_years = len(years)
@@ -32,45 +35,80 @@ def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str):
     row_count = 1
     col_count = 1
 
-    for year in years:
-        if data_case == "rpf":
-            year_series = input_item[year]["no_of_items"]
-        else:    
-            year_series = input_item[year]
+    text_info = 'percent'
+    colours = None # ⭕ will this work idk
+    colourway = None # ⭕ will this work idk
+    title_size = 10
+    min_size = 12
 
+    if data_case in ["multi_chars", "multi_char_ships",]: 
+        colours = [colour_palettes.oranges[0], colour_palettes.oranges[2]]
         if data_case == "multi_chars":
             labels = ["multiracial characters", "non-multiracial characters"]
             title = f"Multiracial characters by year{suffix}"
-            items = 2
         elif data_case == "multi_char_ships":
             labels = ["with multiracial characters", "w/out multiracial characters"]
             title = f"Ships with multiracial characters by year{suffix}"
-            items = 2
-        elif data_case == "interracial_ships":
-            labels = year_series.index
-            title = f"Interracial ships by year{suffix}"
-            items = 3
-        elif data_case == "rpf":
-            labels = ["RPF", "fictional"]
-            title = f"Real Person Fic vs fictional ships by year{suffix}"
-            items = 2
-        else: print(input_item)
+    elif data_case == "interracial_ships":
+        title = f"Interracial ships by year{suffix}"
+        colours = colour_palettes.oranges
+    elif data_case == "rpf":
+        labels = ["RPF", "fictional"]
+        title = f"Real Person Fic vs fictional ships by year{suffix}"
+        colours = ["deeppink", "darkred"]
+    elif data_case == "gender":
+        title = f"Genders by year{suffix}"
+        colours = colour_palettes.violets
+    elif data_case in ["race", "race_combos"]:
+        colourway = px.colors.qualitative.Pastel + px.colors.qualitative.Prism + \
+        px.colors.qualitative.Vivid + px.colors.qualitative.Bold
+        if data_case == "race":
+            title = f"Racial groups by year{suffix}"
+            text_info = "label+percent"
+        elif data_case == "race_combos":
+            title = f"Pairing race combinations by year{suffix}"
+            text_info = "label"
+            title_size = 25
+            min_size = 8
+    else: print(input_item)
 
-        if items == 2:
-            if data_case == "rpf":
-                colours = ["deeppink", "darkred"]
-            else: 
-                colours = [colour_palettes.oranges[0], colour_palettes.oranges[2]]
-        elif items == 3:
-            colours = colour_palettes.oranges
+    for year in years:
+        if data_case == "gender":
+            year_df = input_item[year].copy().reset_index()
+            year_series = year_df["count"]
+        elif data_case == "race_combos":
+            year_series = input_item[year].copy()
+            rename_dict = sort_race_combos(year_series.index)
+            year_series = year_series.rename(index=rename_dict)
+            year_series = year_series.groupby(
+                year_series.index
+            ).aggregate("sum").sort_values(
+                by="count", ascending=False
+            )
+        else:    
+            year_series = input_item[year].copy()
+
+        # defaults to replace for certain cases
+        values = year_series.values
+
+        if data_case == "interracial_ships":
+            labels = year_series.index
+        elif data_case == "rpf":
+            values = year_series["no_of_items"]
+        elif data_case == "gender":
+            labels = year_df["gender"]
+            values = year_series
+        elif data_case in ["race", "race_combos"]:
+            labels = year_series.index
+            values = [value[0] for value in year_series.values]
 
         fig.add_trace(go.Pie(
             labels=labels, 
-            values=year_series.values, # ⭕ check that this is the right way around for rpf
+            values=values,
             hole=0.3, # determines hole size
             title=year, # text that goes in the middle of the hole
             sort=False, # if you want to keep it in its original order rather than sorting by size
-            titlefont_size=10, # to format title text
+            titlefont_size=title_size, # to format title text
             marker_colors=colours,
             automargin=False,
             textposition="inside"
@@ -83,12 +121,13 @@ def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str):
             col_count += 1
 
     fig.update_traces(
-        textinfo='percent',
+        textinfo=text_info,
     )
     fig.update_layout(
         title=title, 
-        uniformtext_minsize=12,
+        uniformtext_minsize=min_size,
         uniformtext_mode="hide",
+        colorway=colourway
     )
 
     return fig
@@ -156,120 +195,3 @@ def visualise_market_share_and_popularity(input_dict:dict, colour_lookup:dict, r
 
     return fig
 
-
-
-#TODO: refactor these two to be added to visualise_pies ideally, 
-# or to be unified in one func if that's not possible
-
-# this one has multi plots
-def visualise_sapphic_genders(input_dict:dict):
-    """
-    visualise the femslash output from sapphic_gender_stats as pie charts
-    """
-    num_of_years = len(input_dict.keys)
-    year_donuts_fig = make_subplots_by_year(num_of_years)
-    max_count = make_max_count(num_of_years)
-
-    row_count = 1
-    col_count = 1
-
-    for year in input_dict:
-        year_df = input_dict[year].copy().reset_index()
-
-        colours = ["deeppink", "violet", "darkorchid"]
-
-        year_donuts_fig.add_trace(go.Pie(
-            labels=year_df["gender"], 
-            values=year_df["count"], 
-            hole=0.3, # determines hole size
-            title=year, # text that goes in the middle of the hole
-            sort=False, # if you want to keep it in its original order rather than sorting by size
-            titlefont_size=10, # to format title text
-            marker_colors=colours,
-            automargin=False,
-            textposition="inside"
-        ), row_count, col_count)
-
-        if col_count == max_count:
-            col_count = 1
-            row_count += 1
-        else:
-            col_count += 1
-
-    year_donuts_fig.update_traces(
-        textinfo='percent',
-    )
-    year_donuts_fig.update_layout(
-        title="Genders by year (AO3 femslash ranking 2014-2023)", 
-        uniformtext_minsize=12,
-        uniformtext_mode="hide",
-        #showlegend=False,
-    )
-
-    return year_donuts_fig
-
-# multi plots
-def visualise_total_race_percent(input_dict:dict):
-    """
-    visualise the femslash output from total_race_nos_by_year ("race" and 
-    "race_combo" version) as pie charts
-    """
-    num_of_years = len(input_dict.keys)
-    year_donuts_fig = make_subplots_by_year(num_of_years)
-    max_count = make_max_count(num_of_years)
-
-    if "E Asian / White" in input_dict[2023].index:
-        title = "Pairing race combinations by year (AO3 femslash ranking 2014-2023)"
-        labels = "label"
-        is_combos = True
-    else: 
-        title = "Racial groups by year (AO3 femslash ranking 2014-2023)"
-        labels = "label+percent"
-        is_combos = False
-
-    row_count = 1
-    col_count = 1
-
-    for year in input_dict:
-        year_srs = input_dict[year].copy()
-        if is_combos:
-            rename_dict = sort_race_combos(year_srs.index)
-            year_srs = year_srs.rename(index=rename_dict)
-            year_srs = year_srs.groupby(
-                year_srs.index
-            ).aggregate("sum").sort_values(
-                by="count", ascending=False
-            )
-
-        values = [value[0] for value in year_srs.values]
-
-        year_donuts_fig.add_trace(go.Pie(
-            labels=year_srs.index, 
-            values=values, 
-            hole=0.3, # determines hole size
-            title=year, # text that goes in the middle of the hole
-            sort=False, # if you want to keep it in its original order rather than sorting by size
-            titlefont_size=25, # to format title text
-            automargin=False,
-            textposition="inside"
-        ), row_count, col_count)
-
-        if col_count == max_count:
-            col_count = 1
-            row_count += 1
-        else:
-            col_count += 1
-
-    year_donuts_fig.update_traces(
-        textinfo=labels,
-    )
-    year_donuts_fig.update_layout(
-        title=title, 
-        uniformtext_minsize=8,
-        uniformtext_mode="hide",
-        colorway=px.colors.qualitative.Pastel + px.colors.qualitative.Prism + \
-            px.colors.qualitative.Vivid + px.colors.qualitative.Bold,
-        #showlegend=False,
-    )
-
-    return year_donuts_fig
