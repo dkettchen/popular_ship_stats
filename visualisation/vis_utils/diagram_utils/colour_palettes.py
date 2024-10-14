@@ -1,5 +1,5 @@
 sapphic_table = { # full sapphic tables
-    "line": 'deeppink', # colour of lines
+    "lines": 'deeppink', # colour of lines
     "header": 'lightsalmon', # colour of header row
     "body": 'mistyrose', # colour of remaining rows
     "body_2": 'papayawhip', # to go with non_white header colours
