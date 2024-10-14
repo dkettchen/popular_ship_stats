@@ -36,7 +36,7 @@ def visualise_top_5(input_dict:dict, data_case:str, ranking:str):
         max_count = 1
         column_width = [0.75,6.5,2.4,1.9]
 
-    num_of_years = len(input_dict.keys)
+    num_of_years = len(input_dict.keys())
     fig = make_subplots_by_year(num_of_years, no_of_columns)
     
     line_colour = colours["lines"] # colour of lines
@@ -148,7 +148,7 @@ def visualise_top_non_white_ships(input_dict:dict, ranking:str):
 
     returns a multi-plot figure visualising the data contained in table format
     """
-    num_of_years = len(input_dict.keys)
+    num_of_years = len(input_dict.keys())
     fig = make_subplots_by_year(num_of_years, num_of_columns=4)
     suffix = lbls.suffixes[ranking]
 

@@ -143,7 +143,7 @@ def visualise_market_share_and_popularity(input_dict:dict, colour_lookup:dict, r
     """
     suffix = lbls.suffixes[ranking]
 
-    num_of_years = len(input_dict.keys)
+    num_of_years = len(input_dict.keys())
     fig = make_subplots_by_year(num_of_years)
     max_count = make_max_count(num_of_years)
 
