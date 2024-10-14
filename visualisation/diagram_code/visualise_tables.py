@@ -9,9 +9,9 @@ import visualisation.vis_utils.diagram_utils.labels as lbls
 
 def visualise_top_5(input_dict:dict, data_case:str, ranking:str):
     """
-    takes the output from 
-        top_5_wlw (data_case="pairings", ranking="femslash"), 
-        top_5_fandoms_by_year (data_case="fandoms", ranking=(currently implemented:)"femslash")
+    takes the output (ranking=(currently implemented:)"femslash") from 
+    - top_5_ships (data_case="pairings"), 
+    - top_5_fandoms_by_year (data_case="fandoms")
 
     returns a multi-plot figure visualising the data contained in table format
 
