@@ -1,5 +1,7 @@
 import pandas as pd
 import plotly.graph_objects as go
+import visualisation.vis_utils.diagram_utils.labels as lbls
+import visualisation.vis_utils.diagram_utils.colour_palettes as colour_palettes
 
 # no multi plots but "" -> would need titles etc adjusted
 def visualise_line(input_item:dict|pd.Series):
@@ -41,58 +43,14 @@ def visualise_line(input_item:dict|pd.Series):
 
     return fig
 
-# no multi plots cause line
-def visualise_interracial_lines(input_df:pd.DataFrame):
-    """
-    visualise the femslash output from total_interracial_ratio as a line chart
-    """
-    fig = go.Figure(
-        data=go.Scatter(
-            x=input_df.columns, 
-            y=input_df.loc["interracial_ships"],
-            text=input_df.loc["interracial_ships"],
-            textposition="top center",
-            mode="lines+text+markers",
-            line={"color": "orangered"},
-            name="interracial ships"
-        ),
-        layout={
-            "title": 'Interracial ships by year (AO3 femslash ranking 2014-2023)',
-            "plot_bgcolor": "papayawhip",
-            "yaxis_rangemode": "tozero",
-            "xaxis_tickmode": "linear"
-        }
-    )
-    fig.add_trace(go.Scatter(
-        x=input_df.columns, 
-        y=input_df.loc["ambiguous_ships"],
-        text=input_df.loc["ambiguous_ships"],
-        textposition="top center",
-        mode="lines+text+markers",
-        line={"color": "gold"},
-        name="ambiguous ships"
-    ))
-    fig.add_trace(go.Scatter(
-        x=input_df.columns, 
-        y=input_df.loc["non-interracial_ships"],
-        text=input_df.loc["non-interracial_ships"],
-        textposition="top center",
-        mode="lines+text+markers",
-        line={"color": "orange"},
-        name="non-interracial ships"
-    ))
 
-    return fig
-
-# no multi plots but needs some adjustments to be reusable
-def visualise_average_non_white(input_dict:dict):
+def make_average_non_white_df(input_dict:dict): # util
     """
-    visualise the femslash output from average_non_white_ranking as a line chart
+    takes input from average_non_white_ranking, turns it into a dataframe ready for visualisation
     """
 
     years = list(input_dict.keys())
-    colours = ["skyblue", "lightseagreen", "teal", "darkslategrey"]
-    labels = ["white_involved_ship", "e_asian_involved_ship", "non_white_ship", "non_white_or_ea_ship"]
+    labels = lbls.non_white_categories
 
     values = []
     for ship_type in labels:
@@ -109,49 +67,101 @@ def visualise_average_non_white(input_dict:dict):
 
     new_df["average"] = new_df.mean(axis=1)
 
-    fig = go.Figure(
-        data=go.Scatter(
-            x=years, 
-            y=new_df.loc["white_involved_ship"][:-1],
-            mode="lines+markers",
-            line={"color": colours[0]},
-            name="white_involved_ship"
-        ),
-        layout={
-            "title": 'Average rank by race-combo type by year (AO3 femslash ranking 2014-2023)',
-            "plot_bgcolor": "papayawhip",
-            "yaxis_autorange": "reversed",
-            "yaxis_rangemode": "tozero",
-            "xaxis_tickmode": "linear"
-        }
-    )
+    return new_df
+
+def visualise_multi_lines(input_item:pd.DataFrame|dict, ranking:str):
+    """
+    visualise the output (ranking=(currently implemented:)"femslash") from 
+    - total_interracial_ratio (line for interracial, ambig, & non-interracial pairings)
+    - average_non_white_ranking (actual values + average line per each category)
+    
+    as a line chart with multiple lines
+    """
+
+    suffix = lbls.suffixes[ranking]
+    if ranking == "femslash":
+        bg_colour = colour_palettes.sapphic_table["body_2"]
+
+    if type(input_item) == pd.DataFrame: # if it's interracial ships case
+        new_df = input_item.copy()
+        years = new_df.columns
+
+        data_case = "interracial_ships"
+
+        categories = lbls.interracial_categories
+        labels = ["interracial ships", "ambiguous ships", "non-interracial ships"]
+        colours = colour_palettes.oranges
+        title = f'Interracial ships by year{suffix}'
+
+        mode = "lines+text+markers"
+        auto_range = "reversed"
+    elif type(input_item) == dict: # if it's non-white ships case
+        years = list(input_item.keys())
+        new_df = make_average_non_white_df(input_item)
+
+        data_case = "non_white_ships"
+
+        labels = lbls.non_white_categories
+        colours = colour_palettes.non_white_colours
+        title =  f'Average rank by race-combo type by year{suffix}'
+
+        mode = "lines+markers"
+        auto_range = True
 
     counter = 0
     for label in labels:
-        if counter > 0:
+        # determining y values
+        if data_case == "non_white_ships":
+            y = new_df.loc[label][:-1]
+        elif data_case == "interracial_ships":
+            y = new_df.loc[categories[0]] # also text
+
+        if counter == 0: # starting figure on first label
+            fig = go.Figure(
+                data=go.Scatter(
+                    x=years, 
+                    y=y,
+                    text=y,
+                    mode=mode,
+                    line={"color": colours[counter]},
+                    name=label
+                ),
+                layout={
+                    "title": title,
+                    "plot_bgcolor": bg_colour,
+                    "yaxis_autorange": auto_range,
+                    "yaxis_rangemode": "tozero",
+                    "xaxis_tickmode": "linear"
+                }
+            )
+        elif counter > 0: # adding traces for each subsequent label
             fig.add_trace(go.Scatter(
                 x=years, 
-                y=new_df.loc[label][:-1],
-                mode="lines+markers",
+                y=y,
+                text=y,
+                textposition="top center",
+                mode=mode,
                 line={"color": colours[counter]},
                 name=label
             ))
 
-        fig.add_trace(go.Scatter(
-            x=years, 
-            y=[new_df["average"].loc[label] for year in years],
-            mode="lines",
-            line={"color": colours[counter]},
-            opacity=0.5,
-            name=label + " (average)"
-        ))
+        if data_case == "non_white_ships": # adding the average line for each label
+            fig.add_trace(go.Scatter(
+                x=years, 
+                y=[new_df["average"].loc[label] for year in years],
+                mode="lines",
+                line={"color": colours[counter]},
+                opacity=0.5,
+                name=label + " (average)"
+            ))
 
         counter += 1
 
-    fig.add_annotation(
-        x=2020, y=47,
-        text="Single ship that <br>ranked 47th that year",
-        showarrow=True,
-        arrowhead=1)
+    if data_case == "non_white_ships": # adding custom annotation for this case
+        fig.add_annotation(
+            x=2020, y=47,
+            text="Single ship that <br>ranked 47th that year",
+            showarrow=True,
+            arrowhead=1)
 
     return fig
