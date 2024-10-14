@@ -50,7 +50,7 @@ All of the drag queens represented explicitly use she/her in drag and he/him (x3
 
 All of these are out-numbered by ambiguously-gendered self-insert characters like player characters and "x Reader".
 
-There are no (binary(-aligned) or explicitly medically) trans characters in the set, as (as far as I can find on the wiki) the Owl House nonbinary one does not have in-universe transition portrayed or birth assignment specified (they are voiced by transmasc nonbinary actors). This is in spite of canon trans characters and real life trans people, who didn't make the ranking, existing in the fandoms represented, like in DC's Supergirl, My Hero Academia, RuPaul's Drag Race, One Piece, Marvel Comics, etc.
+There are no (binary(-aligned) or explicitly medically) trans characters in the set, as (as far as I can find on the wiki) the Owl House nonbinary one does not have in-universe transition portrayed or birth assignment specified (they are voiced by transmasc nonbinary actors). This is in spite of canon trans characters and real life trans people, who didn't make the ranking, existing (some of whom even have canon love interests) in the fandoms represented, like in DC's Supergirl, My Hero Academia, RuPaul's Drag Race, One Piece, Marvel Comics, Heartstopper, etc.
 There are no explicitly intersex characters/people represented either (as far as I'm aware).
 
 ### Ships Overview
