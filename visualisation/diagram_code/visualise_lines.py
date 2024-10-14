@@ -12,6 +12,10 @@ def visualise_line(input_item:dict|pd.Series, data_case:str, ranking:str):
     
     as single line charts
     """
+    #making input case insensitive
+    data_case = data_case.lower()
+    ranking = ranking.lower()
+
     suffix = lbls.suffixes[ranking]
     if ranking == "femslash":
         bg_colour = colour_palettes.sapphic_table["body_2"]
@@ -83,6 +87,8 @@ def visualise_multi_lines(input_item:pd.DataFrame|dict, ranking:str):
     
     as a line chart with multiple lines
     """
+    #making input case insensitive
+    ranking = ranking.lower()
 
     suffix = lbls.suffixes[ranking]
     if ranking == "femslash":

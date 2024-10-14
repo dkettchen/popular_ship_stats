@@ -21,6 +21,9 @@ def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str):
     
     as pie charts
     """
+    #making input case insensitive
+    data_case = data_case.lower()
+    ranking = ranking.lower()
     suffix = lbls.suffixes[ranking]
 
     if data_case in ["multi_chars", "multi_char_ships", "interracial_ships"]: # dfs
@@ -141,6 +144,8 @@ def visualise_market_share_and_popularity(input_dict:dict, colour_lookup:dict, r
     
     as pie charts
     """
+    #making input case insensitive
+    ranking = ranking.lower()
     suffix = lbls.suffixes[ranking]
 
     num_of_years = len(input_dict.keys())

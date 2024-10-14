@@ -8,6 +8,9 @@ def visualise_non_white_counts(input_df:pd.DataFrame, ranking:str):
     visualises the output from count_non_white_ships (ranking=(currently implemented:)"femslash") 
     as a grouped bar chart
     """
+    #making input case insensitive
+    ranking = ranking.lower()
+
     fig = go.Figure()
 
     text = ["involve white ppl", "involve east asians", "non-white ships", "non-white & non-EA"]

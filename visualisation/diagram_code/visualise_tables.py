@@ -20,9 +20,12 @@ def visualise_top_5(input_dict:dict, data_case:str, ranking:str):
     #making input case insensitive
     data_case = data_case.lower()
     ranking = ranking.lower()
+    suffix = lbls.suffixes[ranking]
 
+    num_of_years = len(input_dict.keys())
+    fig = make_subplots_by_year(num_of_years, no_of_columns)
+    
     if ranking == "femslash":
-        suffix = " (AO3 femslash ranking 2014-2023)"
         colours = colour_palettes.sapphic_table
 
     if data_case == "fandoms":
@@ -36,9 +39,6 @@ def visualise_top_5(input_dict:dict, data_case:str, ranking:str):
         max_count = 1
         column_width = [0.75,6.5,2.4,1.9]
 
-    num_of_years = len(input_dict.keys())
-    fig = make_subplots_by_year(num_of_years, no_of_columns)
-    
     line_colour = colours["lines"] # colour of lines
     header_fill_colour = colours["header"] # colour of header row
     body_fill_colour = colours["body"] # colour of remaining rows
@@ -104,8 +104,11 @@ def visualise_longest_running(input_df:DataFrame, ranking:str):
 
     the table will be in sapphic/lesbian flag colours if ranking is "femslash"
     """
+    #making input case insensitive
+    ranking = ranking.lower()
+    suffix = lbls.suffixes[ranking]
+
     if ranking == "femslash":
-        suffix = " (AO3 femslash ranking 2014-2023)"
         colours = colour_palettes.sapphic_table
         num_of_years = 9
         column_width = [0.1, 0.95, 0.2]
@@ -148,6 +151,9 @@ def visualise_top_non_white_ships(input_dict:dict, ranking:str):
 
     returns a multi-plot figure visualising the data contained in table format
     """
+    #making input case insensitive
+    ranking = ranking.lower()
+
     num_of_years = len(input_dict.keys())
     fig = make_subplots_by_year(num_of_years, num_of_columns=4)
     suffix = lbls.suffixes[ranking]
