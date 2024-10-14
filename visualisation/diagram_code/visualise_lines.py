@@ -106,7 +106,6 @@ def visualise_multi_lines(input_item:pd.DataFrame|dict, ranking:str):
         title = f'Interracial ships by year{suffix}'
 
         mode = "lines+text+markers"
-        auto_range = "reversed"
     elif type(input_item) == dict: # if it's non-white ships case
         years = list(input_item.keys())
         new_df = make_average_non_white_df(input_item)
@@ -118,7 +117,6 @@ def visualise_multi_lines(input_item:pd.DataFrame|dict, ranking:str):
         title =  f'Average rank by race-combo type by year{suffix}'
 
         mode = "lines+markers"
-        auto_range = True
 
     counter = 0
     for label in labels:
@@ -126,7 +124,7 @@ def visualise_multi_lines(input_item:pd.DataFrame|dict, ranking:str):
         if data_case == "non_white_ships":
             y = new_df.loc[label][:-1]
         elif data_case == "interracial_ships":
-            y = new_df.loc[categories[0]] # also text
+            y = new_df.loc[categories[counter]] # also text
 
         if counter == 0: # starting figure on first label
             fig = go.Figure(
@@ -134,6 +132,7 @@ def visualise_multi_lines(input_item:pd.DataFrame|dict, ranking:str):
                     x=years, 
                     y=y,
                     text=y,
+                    textposition="top center",
                     mode=mode,
                     line={"color": colours[counter]},
                     name=label
@@ -141,7 +140,7 @@ def visualise_multi_lines(input_item:pd.DataFrame|dict, ranking:str):
                 layout={
                     "title": title,
                     "plot_bgcolor": bg_colour,
-                    "yaxis_autorange": auto_range,
+                    #"yaxis_autorange": auto_range,
                     "yaxis_rangemode": "tozero",
                     "xaxis_tickmode": "linear"
                 }
@@ -170,6 +169,9 @@ def visualise_multi_lines(input_item:pd.DataFrame|dict, ranking:str):
         counter += 1
 
     if data_case == "non_white_ships": # adding custom annotation for this case
+        fig.update_layout(
+            yaxis_autorange = "reversed"
+        )
         fig.add_annotation(
             x=2020, y=47,
             text="Single ship that <br>ranked 47th that year",
