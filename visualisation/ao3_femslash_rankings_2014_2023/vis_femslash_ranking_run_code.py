@@ -27,23 +27,16 @@ from visualisation.ao3_femslash_rankings_2014_2023.vis_femslash_ranking_race_sta
     top_non_white_ships,
     average_non_white_ranking,
 )
-from visualisation.ao3_femslash_rankings_2014_2023.vis_femslash_ranking_general_diagram_code import (
-    visualise_market_share_and_popularity,
-    visualise_top_5_fandoms,
-    visualise_rpf_vs_fic,
-    visualise_top_5_pairings,
-    visualise_longest_running,
-    visualise_hottest_sapphic,
-    visualise_sapphic_genders,
+from visualisation.diagram_code.visualise_bars import visualise_non_white_counts
+from visualisation.diagram_code.visualise_lines import visualise_line, visualise_multi_lines
+from visualisation.diagram_code.visualise_pies import visualise_pies, visualise_market_share_and_popularity
+from visualisation.diagram_code.visualise_tables import (
+    visualise_longest_running, 
+    visualise_top_5, 
+    visualise_top_non_white_ships
 )
-from visualisation.ao3_femslash_rankings_2014_2023.vis_femslash_ranking_race_stat_diagram_code import (
-    visualise_total_race_percent,
-    visualise_interracial_lines,
-    visualise_pies,
-    visualise_line,
-    visualise_non_white_counts,
-    visualise_top_non_white,
-    visualise_average_non_white,
+from visualisation.ao3_femslash_rankings_2014_2023.vis_femslash_ranking_general_diagram_code import (
+    visualise_hottest_sapphic,
 )
 
 # get data & turn into big df
@@ -62,7 +55,7 @@ colour_lookup_dict = make_colour_lookup(femslash_ship_info_df)
 ## general stuff
 
 market_share_dict = fandom_market_share_by_year(femslash_ship_info_df) 
-market_share_fig = visualise_market_share_and_popularity(market_share_dict, colour_lookup_dict)
+market_share_fig = visualise_market_share_and_popularity(market_share_dict, colour_lookup_dict, "femslash")
 market_share_fig.write_image(
     "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/fandom_market_share_2014_2023.png", 
     width=1500, 
@@ -71,7 +64,7 @@ market_share_fig.write_image(
 )
 
 popularity_dict = fandoms_popularity_by_year(femslash_ship_info_df) 
-popularity_fig = visualise_market_share_and_popularity(popularity_dict, colour_lookup_dict)
+popularity_fig = visualise_market_share_and_popularity(popularity_dict, colour_lookup_dict, "femslash")
 popularity_fig.write_image(
     "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/fandom_popularity_2014_2023.png", 
     width=1500, 
@@ -80,7 +73,7 @@ popularity_fig.write_image(
 )
 
 top_5_fandoms_dict = top_5_fandoms_by_year(market_share_dict, popularity_dict) 
-top_5_fandoms_fig = visualise_top_5_fandoms(top_5_fandoms_dict)
+top_5_fandoms_fig = visualise_top_5(top_5_fandoms_dict, "fandoms", "femslash")
 top_5_fandoms_fig.write_image(
     "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/top_femslash_fandoms_2014_2023.png", 
     width=1300, 
@@ -89,7 +82,7 @@ top_5_fandoms_fig.write_image(
 )
 
 rpf_or_fic_dict = rpf_vs_fic(femslash_ship_info_df) 
-rpf_fig = visualise_rpf_vs_fic(rpf_or_fic_dict)
+rpf_fig = visualise_pies(rpf_or_fic_dict, "rpf", "femslash")
 rpf_fig.write_image(
     "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/femslash_rpf_2014_2023.png", 
     width=700, 
@@ -98,7 +91,7 @@ rpf_fig.write_image(
 )
 
 top_5_ships_dict = top_5_ships(femslash_ship_info_df)
-top_5_ships_fig = visualise_top_5_pairings(top_5_ships_dict)
+top_5_ships_fig = visualise_top_5(top_5_ships_dict, "pairings", "femslash")
     # either tables or race categories as a diagram
 top_5_ships_fig.write_image(
     "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/top_femslash_ships_2014_2023.png", 
@@ -110,7 +103,7 @@ top_5_ships_fig.write_image(
 appearances_ranking = count_appearances(top_5_ships_dict)
 streak_ranking = count_streaks(top_5_ships_dict)
 longest_running_top_5 = longest_running_top_5_ships(appearances_ranking, streak_ranking) 
-longest_running_fig = visualise_longest_running(longest_running_top_5)
+longest_running_fig = visualise_longest_running(longest_running_top_5, "femslash")
 longest_running_fig.write_image(
     "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/longest_running_femslash_ships_2014_2023.png", 
     width=680, 
@@ -123,7 +116,7 @@ hottest_wlw = hottest_char(femslash_character_info_df)
 visualise_hottest_sapphic(hottest_wlw) # writes its own files
 
 sapphic_genders = gender_stats(femslash_character_info_df)
-gender_fig = visualise_sapphic_genders(sapphic_genders)
+gender_fig = visualise_pies(sapphic_genders, "gender", "femslash")
 gender_fig.write_image(
     "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/femslash_genders_2014_2023.png", 
     width=700, 
@@ -135,7 +128,7 @@ gender_fig.write_image(
 ## race stats
 
 femslash_race_percent = total_race_nos_by_year(femslash_character_info_df, "race")
-femslash_race_fig = visualise_total_race_percent(femslash_race_percent)
+femslash_race_fig = visualise_pies(femslash_race_percent, "race", "femslash")
 femslash_race_fig.write_image(
     "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/sapphic_race_stats/femslash_racial_groups_percent_2014_2023.png", 
     width=1500, 
@@ -144,7 +137,7 @@ femslash_race_fig.write_image(
 )
 
 femslash_race_combo_percent = total_race_nos_by_year(femslash_ship_info_df, "race_combo")
-femslash_race_combo_fig = visualise_total_race_percent(femslash_race_combo_percent)
+femslash_race_combo_fig = visualise_pies(femslash_race_combo_percent, "race_combos", "femslash")
 femslash_race_combo_fig.write_image(
     "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/sapphic_race_stats/femslash_racial_groups_combo_percent_2014_2023.png", 
     width=1500, 
@@ -153,14 +146,14 @@ femslash_race_combo_fig.write_image(
 )
 
 total_multi = total_multi_nos_by_year(femslash_race_percent, "race")
-multi_fig = visualise_pies(total_multi)
+multi_fig = visualise_pies(total_multi, "multi_chars", "femslash")
 multi_fig.write_image(
     "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/sapphic_race_stats/femslash_multiracial_chars_pies_2014_2023.png", 
     width=700, 
     height=650, 
     scale=2
 )
-multi_line = visualise_line(total_multi)
+multi_line = visualise_line(total_multi, "multi_chars", "femslash")
 multi_line.write_image(
     "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/sapphic_race_stats/femslash_multiracial_chars_line_2014_2023.png", 
     width=700, 
@@ -169,7 +162,7 @@ multi_line.write_image(
 )
 
 total_groups = total_racial_groups(femslash_race_percent)
-total_group_fig = visualise_line(total_groups)
+total_group_fig = visualise_line(total_groups, "total_racial_groups", "femslash")
 total_group_fig.write_image(
     "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/sapphic_race_stats/femslash_racial_groups_2014_2023.png", 
     width=700, 
@@ -178,14 +171,14 @@ total_group_fig.write_image(
 )
 
 total_interracial = total_interracial_ratio(femslash_race_combo_percent)
-interracial_fig = visualise_pies(total_interracial)
+interracial_fig = visualise_pies(total_interracial, "interracial_ships", "femslash")
 interracial_fig.write_image(
     "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/sapphic_race_stats/femslash_interracial_pies_2014_2023.png", 
     width=700, 
     height=650, 
     scale=2
 )
-interracial_line = visualise_interracial_lines(total_interracial)
+interracial_line = visualise_multi_lines(total_interracial, "femslash")
 interracial_line.write_image(
     "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/sapphic_race_stats/femslash_interracial_lines_2014_2023.png", 
     width=700, 
@@ -194,14 +187,14 @@ interracial_line.write_image(
 )
 
 total_multi_involved = total_multi_nos_by_year(femslash_race_combo_percent, "race_combo")
-multi_involved_fig = visualise_pies(total_multi_involved)
+multi_involved_fig = visualise_pies(total_multi_involved, "multi_char_ships", "femslash")
 multi_involved_fig.write_image(
     "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/sapphic_race_stats/femslash_multi_involved_ships_2014_2023.png", 
     width=700, 
     height=650, 
     scale=2
 )
-multi_involved_lines = visualise_line(total_multi_involved)
+multi_involved_lines = visualise_line(total_multi_involved, "multi_char_ships", "femslash")
 multi_involved_lines.write_image(
     "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/sapphic_race_stats/femslash_multi_involved_ships_line_2014_2023.png", 
     width=700, 
@@ -211,7 +204,7 @@ multi_involved_lines.write_image(
 
 femslash_prepped_dict = prep_df_for_non_white_ship_comp(femslash_ship_info_df)
 non_white_counts = count_non_white_ships(femslash_prepped_dict)
-non_white_count_fig = visualise_non_white_counts(non_white_counts)
+non_white_count_fig = visualise_non_white_counts(non_white_counts, "femslash")
 non_white_count_fig.write_image(
     "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/sapphic_race_stats/femslash_non_white_counts_2014_2023.png", 
     width=1000, 
@@ -221,7 +214,7 @@ non_white_count_fig.write_image(
 
 femslash_separated_dict = separate_out_non_white_ships_info(femslash_prepped_dict)
 top_non_white = top_non_white_ships(femslash_separated_dict)
-top_non_white_fig = visualise_top_non_white(top_non_white)
+top_non_white_fig = visualise_top_non_white_ships(top_non_white, "femslash")
 top_non_white_fig.write_image(
     "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/sapphic_race_stats/femslash_top_non_white_2014_2023.png", 
     width=3800, 
@@ -230,7 +223,7 @@ top_non_white_fig.write_image(
 )
 
 average_non_white_rank = average_non_white_ranking(femslash_separated_dict)
-average_non_white_fig = visualise_average_non_white(average_non_white_rank)
+average_non_white_fig = visualise_multi_lines(average_non_white_rank, "femslash")
 average_non_white_fig.write_image(
     "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/sapphic_race_stats/femslash_avg_non_white_2014_2023.png", 
     width=800, 
