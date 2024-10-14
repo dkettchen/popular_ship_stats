@@ -3,45 +3,68 @@ import plotly.graph_objects as go
 from visualisation.vis_utils.clean_fandoms_for_vis import clean_fandoms
 from visualisation.vis_utils.diagram_utils.make_subplots_by_year import make_subplots_by_year
 from visualisation.vis_utils.diagram_utils.make_max_count import make_max_count
+import visualisation.vis_utils.diagram_utils.colour_palettes as colour_palettes
+import visualisation.vis_utils.diagram_utils.labels as lbls
 
-# multi plots and currently only accounting for two inputs
-def visualise_pies(input_df:pd.DataFrame):
+def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str):
     """
-    visualise the femslash output from total_multi_nos_by_year ("race" version), 
-    total_interracial_ratio as pie charts
+    visualise the output (ranking=(currently implemented:)"femslash") from 
+    - total_multi_nos_by_year ("race" (data_case="multi_chars") 
+    & "race_combo" (data_case="multi_char_ships") version), 
+    - total_interracial_ratio (data_case="interracial_ships")
+    - rpf_vs_fic (data_case="rpf")
+    
+    as pie charts
     """
-    num_of_years = len(input_df.columns)
+    suffix = lbls.suffixes[ranking]
+
+    if data_case in ["multi_chars", "multi_char_ships", "interracial_ships"]:
+        years = input_item.columns
+    elif data_case in ["rpf"]:
+        years = input_item.keys()
+
+    num_of_years = len(years)
     fig = make_subplots_by_year(num_of_years) # making appropriate amount of subplots
     max_count = make_max_count(num_of_years)
 
     row_count = 1
     col_count = 1
 
-    for year in input_df.columns:
-        year_series = input_df[year]
+    for year in years:
+        if data_case == "rpf":
+            year_series = input_item[year]["no_of_items"]
+        else:    
+            year_series = input_item[year]
 
-        if "multi_chars" in year_series.index:
+        if data_case == "multi_chars":
             labels = ["multiracial characters", "non-multiracial characters"]
-            title = "Multiracial characters by year (AO3 femslash ranking 2014-2023)"
+            title = f"Multiracial characters by year{suffix}"
             items = 2
-        elif "interracial_ships" in year_series.index:
-            labels = year_series.index
-            title = "Interracial ships by year (AO3 femslash ranking 2014-2023)"
-            items = 3
-        elif "with_multi_chars" in year_series.index:
+        elif data_case == "multi_char_ships":
             labels = ["with multiracial characters", "w/out multiracial characters"]
-            title = "Ships with multiracial characters by year (AO3 femslash ranking 2014-2023)"
+            title = f"Ships with multiracial characters by year{suffix}"
             items = 2
-        else: print(input_df)
+        elif data_case == "interracial_ships":
+            labels = year_series.index
+            title = f"Interracial ships by year{suffix}"
+            items = 3
+        elif data_case == "rpf":
+            labels = ["RPF", "fictional"]
+            title = f"Real Person Fic vs fictional ships by year{suffix}"
+            items = 2
+        else: print(input_item)
 
         if items == 2:
-            colours = ["orangered", "orange"]
+            if data_case == "rpf":
+                colours = ["deeppink", "darkred"]
+            else: 
+                colours = [colour_palettes.oranges[0], colour_palettes.oranges[2]]
         elif items == 3:
-            colours = ["orangered", "gold", "orange"]
+            colours = colour_palettes.oranges
 
         fig.add_trace(go.Pie(
             labels=labels, 
-            values=year_series.values, 
+            values=year_series.values, # ⭕ check that this is the right way around for rpf
             hole=0.3, # determines hole size
             title=year, # text that goes in the middle of the hole
             sort=False, # if you want to keep it in its original order rather than sorting by size
@@ -64,64 +87,21 @@ def visualise_pies(input_df:pd.DataFrame):
         title=title, 
         uniformtext_minsize=12,
         uniformtext_mode="hide",
-        #showlegend=False,
     )
 
     return fig
 
-#
-def visualise_rpf_vs_fic(input_dict:dict):
+# leaving this one separate due to different sizing & more complicated colouring process
+def visualise_market_share_and_popularity(input_dict:dict, colour_lookup:dict, ranking:str):
     """
-    visualise the femslash output from rpf_vs_fic as pie charts
+    visualise the output (ranking=(currently implemented:)"femslash") from
+    - fandom_market_share_by_year 
+    - fandoms_popularity_by_year 
+    
+    as pie charts
     """
-    num_of_years = len(input_dict.keys)
-    fig = make_subplots_by_year(num_of_years)
-    max_count = make_max_count(num_of_years)
+    suffix = lbls.suffixes[ranking]
 
-    row_count = 1
-    col_count = 1
-
-    for year in input_dict:
-        year_df = input_dict[year].copy()
-
-        colours = ["deeppink", "darkred"]
-
-        fig.add_trace(go.Pie(
-            labels=["RPF", "fictional"], 
-            values=[year_df.loc["RPF"]["no_of_ships"], year_df.loc["fictional"]["no_of_ships"]], 
-            hole=0.3, # determines hole size
-            title=year, # text that goes in the middle of the hole
-            sort=False, # if you want to keep it in its original order rather than sorting by size
-            titlefont_size=10, # to format title text
-            marker_colors=colours,
-            automargin=False,
-            textposition="inside"
-        ), row_count, col_count)
-
-        if col_count == max_count:
-            col_count = 1
-            row_count += 1
-        else:
-            col_count += 1
-
-    fig.update_traces(
-        textinfo='percent',
-    )
-    fig.update_layout(
-        title="Real Person Fic vs fictional ships by year (AO3 femslash ranking 2014-2023)", 
-        uniformtext_minsize=12,
-        uniformtext_mode="hide",
-        #showlegend=False,
-    )
-
-    return fig
-
-# multi plots -> not adjustable without a buncha work
-def visualise_market_share_and_popularity(input_dict:dict, colour_lookup:dict):
-    """
-    visualise the femslash output from fandom_market_share_by_year 
-    or fandoms_popularity_by_year as pie charts
-    """
     num_of_years = len(input_dict.keys)
     fig = make_subplots_by_year(num_of_years)
     max_count = make_max_count(num_of_years)
@@ -130,10 +110,10 @@ def visualise_market_share_and_popularity(input_dict:dict, colour_lookup:dict):
     col_count = 1
 
     if "no_of_ships" in input_dict[2023].columns:
-        femslash_title = "Fandoms (> 1 ship) by market share by year (AO3 femslash ranking 2014-2023)"
+        femslash_title = f"Fandoms (> 1 ship) by market share by year{suffix}"
         column_name = "no_of_ships"
     elif "rank_sum" in input_dict[2023].columns:
-        femslash_title = "Top 15 fandoms by popularity by year (AO3 femslash ranking 2014-2023)"
+        femslash_title = f"Top 15 fandoms by popularity by year{suffix}"
         column_name = "rank_sum"
 
     for year in input_dict:
