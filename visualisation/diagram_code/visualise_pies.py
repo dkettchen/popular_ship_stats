@@ -8,6 +8,10 @@ from visualisation.vis_utils.diagram_utils.make_max_count import make_max_count
 import visualisation.vis_utils.diagram_utils.colour_palettes as colour_palettes
 import visualisation.vis_utils.diagram_utils.labels as lbls
 
+# TODO: on racial groups percent figure, it seems to have not taken over the correct font sizes 
+# (years too small, minsize too big) 
+# -> I'm guessing it didn't do the case where it would be changing that one from default
+
 def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str):
     """
     visualise the output (ranking=(currently implemented:)"femslash") from 
@@ -39,8 +43,8 @@ def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str):
     col_count = 1
 
     text_info = 'percent'
-    colours = None # ⭕ will this work idk
-    colourway = None # ⭕ will this work idk
+    colours = None
+    colourway = None
     title_size = 10
     min_size = 12
 
@@ -65,14 +69,14 @@ def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str):
     elif data_case in ["race", "race_combos"]:
         colourway = px.colors.qualitative.Pastel + px.colors.qualitative.Prism + \
         px.colors.qualitative.Vivid + px.colors.qualitative.Bold
+        title_size = 25
+        min_size = 8
         if data_case == "race":
             title = f"Racial groups by year{suffix}"
             text_info = "label+percent"
         elif data_case == "race_combos":
             title = f"Pairing race combinations by year{suffix}"
             text_info = "label"
-            title_size = 25
-            min_size = 8
     else: print(input_item)
 
     for year in years:
@@ -97,7 +101,7 @@ def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str):
         if data_case == "interracial_ships":
             labels = year_series.index
         elif data_case == "rpf":
-            values = year_series["no_of_items"]
+            values = year_series["no_of_ships"]
         elif data_case == "gender":
             labels = year_df["gender"]
             values = year_series
