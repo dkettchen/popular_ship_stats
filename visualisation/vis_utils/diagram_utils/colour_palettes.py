@@ -8,3 +8,5 @@ sapphic_table = { # full sapphic tables
 non_white_colours = ["skyblue", "lightseagreen", "teal", "darkslategrey"]
 
 oranges = ["orangered", "gold", "orange"]
+
+violets = ["deeppink", "violet", "darkorchid"]
