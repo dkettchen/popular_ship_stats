@@ -4,6 +4,7 @@ from visualisation.vis_utils.df_utils.retrieve_numbers import (
     get_unique_values_list
 )
 from visualisation.vis_utils.df_utils.make_dfs import sort_df, get_year_df
+import visualisation.vis_utils.diagram_utils.labels as lbls
 import pandas as pd
 
 # character race & race_combo percentages each year
@@ -97,11 +98,7 @@ def total_interracial_ratio(race_combo_percent:dict):
 
         temp_dict[year] = [inter, ambig, non_inter]
 
-    new_df = pd.DataFrame(data=temp_dict, index=[
-        "interracial_ships", 
-        "ambiguous_ships", 
-        "non-interracial_ships"
-    ])
+    new_df = pd.DataFrame(data=temp_dict, index=lbls.interracial_categories)
     return new_df
 
 
@@ -133,19 +130,19 @@ def prep_df_for_non_white_ship_comp(ship_info_df:pd.DataFrame):
         year_df["contains_unknown"] = year_df["race_combo"].str.contains("Unknown")
 
         year_df["true"] = True
-        year_df["white_involved_ship"] = year_df["true"].where(
+        year_df[lbls.non_white_categories[0]] = year_df["true"].where(
             year_df["contains_white_person"] == True
         )
-        year_df["e_asian_involved_ship"] = year_df["true"].where(
+        year_df[lbls.non_white_categories[1]] = year_df["true"].where(
             year_df["contains_e_asian_person"] == True
         )
-        year_df["non_white_ship"] = year_df["true"].where(
+        year_df[lbls.non_white_categories[2]] = year_df["true"].where(
             cond= (year_df["contains_white_person"] == False) & (
                 year_df["contains_ambig_person"] == False) & (
                 year_df["contains_non_human"] == False) & (
                 year_df["contains_unknown"] == False)
         )
-        year_df["non_white_or_ea_ship"] = year_df["true"].where(
+        year_df[lbls.non_white_categories[3]] = year_df["true"].where(
             cond= (year_df["contains_white_person"] == False) & (
                 year_df["contains_e_asian_person"] == False) & (
                 year_df["contains_ambig_person"] == False) & (
@@ -167,13 +164,8 @@ def count_non_white_ships(prepped_dict:dict): # should be throwing an error
     asian people, did not involve white people, and did not involve white or east asian people
     """
     concat_list = [prepped_dict[year] for year in prepped_dict]
-    new_df = pd.concat(concat_list).get([
-        "year", 
-        "white_involved_ship", 
-        "e_asian_involved_ship", 
-        "non_white_ship", 
-        "non_white_or_ea_ship"
-    ])
+    get_list = ["year"] + lbls.non_white_categories
+    new_df = pd.concat(concat_list).get(get_list)
     
     new_df = get_label_counts(new_df, "year") # to be seen if "count" will throw an error (probably)
     new_df.pop("count")
@@ -193,18 +185,11 @@ def separate_out_non_white_ships_info(prepped_dict:dict): # (util)
     "rank_no", "race_combo" & "ship_type"
     """
     year_dict = {}
-    lookup_list = [
-        "white_involved_ship",
-        "e_asian_involved_ship",
-        "non_white_ship",
-        "non_white_or_ea_ship"
-    ]
-
     for year in prepped_dict:
         year_dict[year] = {}
         year_df = prepped_dict[year]
 
-        for item in lookup_list:
+        for item in lbls.non_white_categories:
             temp_df = year_df.copy().get(
                 ["year", "ship", "fandom", "rank_no", "race_combo", item]
             ).dropna().rename(columns={item: "ship_type"})
@@ -225,15 +210,9 @@ def top_non_white_ships(separated_dict:dict):
     "white_involved_ship", "e_asian_involved_ship", "non_white_ship", "non_white_or_ea_ship"
     """
     new_dict = {}
-    lookup_list = [
-        "white_involved_ship",
-        "e_asian_involved_ship",
-        "non_white_ship",
-        "non_white_or_ea_ship"
-    ]
     for year in separated_dict:
         year_dict = separated_dict[year]
-        concat_list = [year_dict[item].head(3) for item in lookup_list]
+        concat_list = [year_dict[item].head(3) for item in lbls.non_white_categories]
         new_df = pd.concat(concat_list)
         new_dict[year] = new_df
     
@@ -250,15 +229,9 @@ def average_non_white_ranking(separated_dict:dict):
     "white_involved_ship", "e_asian_involved_ship", "non_white_ship", "non_white_or_ea_ship"
     """
     new_dict = {}
-    lookup_list = [
-        "white_involved_ship",
-        "e_asian_involved_ship",
-        "non_white_ship",
-        "non_white_or_ea_ship"
-    ]
     for year in separated_dict:
         year_dict = separated_dict[year]
-        concat_list = [year_dict[item] for item in lookup_list]
+        concat_list = [year_dict[item] for item in lbls.non_white_categories]
         new_df = pd.concat(concat_list)
 
         new_df["rank_no"] = new_df["rank_no"].apply(invert_rank)
