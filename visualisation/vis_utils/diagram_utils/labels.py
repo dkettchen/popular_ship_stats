@@ -5,6 +5,12 @@ non_white_categories = [
     "non_white_or_ea_ship"
 ]
 
+interracial_categories = [
+    "interracial_ships", 
+    "ambiguous_ships", 
+    "non-interracial_ships"
+]
+
 suffixes = {
     "femslash" : " (AO3 femslash ranking 2014-2023)",
     "total": " (AO3 2013-2023)"
