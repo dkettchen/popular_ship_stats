@@ -23,7 +23,6 @@ def visualise_top_5(input_dict:dict, data_case:str, ranking:str):
     suffix = lbls.suffixes[ranking]
 
     num_of_years = len(input_dict.keys())
-    fig = make_subplots_by_year(num_of_years, no_of_columns)
     
     if ranking == "femslash":
         colours = colour_palettes.sapphic_table
@@ -38,6 +37,8 @@ def visualise_top_5(input_dict:dict, data_case:str, ranking:str):
         title = f"Top 5 ships by year{suffix}"
         max_count = 1
         column_width = [0.75,6.5,2.4,1.9]
+
+    fig = make_subplots_by_year(num_of_years, no_of_columns)
 
     line_colour = colours["lines"] # colour of lines
     header_fill_colour = colours["header"] # colour of header row
