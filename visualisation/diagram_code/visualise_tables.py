@@ -2,7 +2,7 @@ from visualisation.vis_utils.clean_fandoms_for_vis import clean_fandoms
 from visualisation.vis_utils.diagram_utils.make_subplots_by_year import make_subplots_by_year
 from visualisation.vis_utils.diagram_utils.make_max_count import make_max_count
 import plotly.graph_objects as go
-from pandas import DataFrame
+import pandas as pd
 import visualisation.vis_utils.diagram_utils.colour_palettes as colour_palettes
 import visualisation.vis_utils.diagram_utils.ranks as ranks
 import visualisation.vis_utils.diagram_utils.labels as lbls
@@ -97,7 +97,7 @@ def visualise_top_5(input_dict:dict, data_case:str, ranking:str):
 
     return fig
 
-def visualise_longest_running(input_df:DataFrame, ranking:str):
+def visualise_longest_running(input_df:pd.DataFrame, ranking:str):
     """
     takes the output from longest_running_top_5_ships (ranking=(currently implemented:)"femslash")
 
@@ -232,8 +232,6 @@ def visualise_top_non_white_ships(input_dict:dict, ranking:str):
 
     return fig
 
-# TODO: refactor this one too
-# also no multi plots, but would need title & file paths adjusted
 def visualise_hottest_chars(input_dict:dict, ranking:str):
     """
     takes the output (ranking=(currently implemented:)"femslash") from hottest_char
@@ -297,3 +295,43 @@ def visualise_hottest_chars(input_dict:dict, ranking:str):
             height=height, 
             scale=2
         )
+
+
+
+# all data functions
+
+def visualise_hottest_characters(hottest_rank_df:pd.DataFrame):
+    """
+    takes output dataframe of make_hottest_char_df
+
+    returns a plotly table figure of it
+    """
+
+    line_colour = 'slategrey'
+    header_fill_colour = 'skyblue'
+    body_fill_colour = 'aliceblue'
+
+    fig = go.Figure(data=[
+        go.Table(
+            header=dict(
+                values=list(hottest_rank_df.columns),
+                align='left',
+                line_color=line_colour,
+                fill_color=header_fill_colour,
+            ),
+            cells=dict(
+                values=[
+                    hottest_rank_df["fandom"], 
+                    hottest_rank_df["rank"], 
+                    hottest_rank_df["names"], 
+                    hottest_rank_df["no"],
+                ],
+                align='left',
+                line_color=line_colour,
+                fill_color=body_fill_colour,
+            ),
+            columnwidth=[0.3,0.1,1.4,0.07] # setting column width ratios
+        )
+    ])
+
+    return fig

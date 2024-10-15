@@ -200,3 +200,192 @@ def visualise_market_share_and_popularity(input_dict:dict, colour_lookup:dict, r
 
     return fig
 
+
+# single pies
+
+def visualise_gender_totals(total_gender_percentages:pd.DataFrame):
+    """
+    takes output dataframe from all_characters_gender_df
+
+    returns a pie chart visualising it
+    """
+    gender_distr_pie = go.Figure(
+        data=[
+            go.Pie(
+                labels=total_gender_percentages.index,
+                values=total_gender_percentages["count"],
+                textinfo="label+value",
+                textposition="outside",
+                sort=False,
+                marker=dict(
+                    colors=[
+                        "darkturquoise",
+                        "red",
+                        "hotpink",
+                        "yellow",
+                        "gold",
+                        "green",
+                        "cornflowerblue",
+                    ]
+                )
+            )
+        ]
+    )
+    gender_distr_pie.update_layout(
+        title="Characters' gender distribution (AO3 2013-2023)",
+        #showlegend=False, # if you want it to not show the legend
+    )
+
+    return gender_distr_pie
+
+# could colour code this one still/apply a buildin colour thing that looks better than default
+def visualise_racial_group_totals(total_race_percentages:pd.DataFrame):
+    """
+    takes output dataframe from all_characters_racial_groups_df
+
+    returns a pie chart visualising it
+    """
+    all_race_percent_pie = go.Figure(
+        data=[
+            go.Pie(
+                labels=total_race_percentages.index,
+                values=total_race_percentages["count"],
+                textinfo="label",
+                insidetextorientation="horizontal",
+                automargin=False,
+                # marker=dict(
+                    # colors=template colours or builtin colour sequence
+                # )
+            )
+        ]
+    )
+    all_race_percent_pie.update_traces(textposition='inside')
+    all_race_percent_pie.update_layout(
+        title="Characters' racial groups distribution (AO3 2013-2023)",
+        uniformtext_minsize=10, 
+        uniformtext_mode='hide'
+    )
+
+    return all_race_percent_pie
+
+def visualise_racial_diversity(plural_vs_monoracial_fandoms:pd.DataFrame):
+    """
+    takes output dataframe from plural_vs_monoracial_fandoms_df
+
+    returns a pie chart visualising it
+    """
+    # (dunno why this didn't wanna work without prep code in same cell smh)
+
+    plural_vs_monoracial_fandoms = plural_vs_monoracial_fandoms.get(
+        ["fandoms_with_only_one_racial_group", "fandoms_with_multiple_racial_groups"]
+    ).transpose().rename(index={
+        "fandoms_with_only_one_racial_group": "one group", 
+        "fandoms_with_multiple_racial_groups": "multiple groups"
+    })
+
+    number_of_groups_by_fandom = go.Figure(
+        data=[
+            go.Pie(
+                labels=plural_vs_monoracial_fandoms.index,
+                values=plural_vs_monoracial_fandoms["count"],
+                textinfo="label+percent",
+                insidetextorientation="horizontal",
+                automargin=False,
+                marker=dict(
+                    colors=["turquoise", "teal"]
+                )
+            )
+        ]
+    )
+
+    number_of_groups_by_fandom.update_layout(
+        title="Fandoms with one vs multiple racial groups (AO3 2013-2023)",
+        showlegend=False, # if you want it to not show the legend
+    )
+
+    return number_of_groups_by_fandom
+
+def visualise_fandom_market_share(fandom_market_share:pd.Series):
+    """
+    takes output series from fandom_market_share_srs
+
+    returns a pie chart of all fandoms that account for more than 1% of total fandoms
+    """
+    market_share_fig = go.Figure(
+        data=[
+            go.Pie(
+                labels=fandom_market_share.index,
+                values=fandom_market_share.values,
+                textinfo="label",
+                #textposition="outside",
+                #insidetextorientation="radial",
+                automargin=False,
+                marker=dict(
+                    colors=[
+                        "crimson", "red", "green", "dodgerblue", "orange", "gold"
+                    ] + px.colors.qualitative.Bold + px.colors.qualitative.Bold
+                )
+            )
+        ]
+    )
+    market_share_fig.update_layout(
+        title="Fandoms accounting for more than 1% of ships (AO3 2013-2023)",
+        showlegend=False,
+    )
+
+    return market_share_fig
+
+def visualise_interracial_ships(interracial_ships_counts:pd.Series):
+    """
+    takes output series from interracial_srs
+
+    returns a pie chart visualising the ratio of interracial, non-interracial and ambiguous ships
+    """
+    interracial_labels = ["non-interracial", "interracial", "ambiguous"]
+    interracial_values = interracial_ships_counts.values
+
+    interracial_pie = go.Figure(
+        data=[
+            go.Pie(
+                labels=interracial_labels,
+                values=interracial_values,
+                textinfo="label+percent",
+                textposition="outside",
+                marker=dict(
+                    colors=px.colors.qualitative.Prism
+                )
+            )
+        ]
+    )
+    interracial_pie.update_layout(
+        title="Interracial vs other ships (AO3 2013-2023)",
+        showlegend=False, # if you want it to not show the legend
+    )
+
+    return interracial_pie
+
+def visualise_rpf_fic(rpf_vs_fic_df:pd.DataFrame):
+    """
+    takes output dataframe from rpf_fic_df
+
+    returns a pie chart showing the ratio of rpf to non-rpf ships
+    """
+    rpf_pie = go.Figure(
+        data=[
+            go.Pie(
+                labels=rpf_vs_fic_df["count"].index,
+                values=rpf_vs_fic_df["count"].values,
+                textinfo="label+percent",
+                textposition="inside",
+                marker=dict(
+                    colors=["deeppink", "purple", ]
+                )
+            )
+        ]
+    )
+    rpf_pie.update_layout(
+        title="Real Person Fic vs Fictional Ships (AO3 2013-2023)",
+        showlegend=False, # if you want it to not show the legend
+    )
+    return rpf_pie
+
