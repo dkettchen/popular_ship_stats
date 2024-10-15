@@ -8,10 +8,6 @@ from visualisation.vis_utils.diagram_utils.make_max_count import make_max_count
 import visualisation.vis_utils.diagram_utils.colour_palettes as colour_palettes
 import visualisation.vis_utils.diagram_utils.labels as lbls
 
-# TODO: on racial groups percent figure, it seems to have not taken over the correct font sizes 
-# (years too small, minsize too big) 
-# -> I'm guessing it didn't do the case where it would be changing that one from default
-
 def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str):
     """
     visualise the output (ranking=(currently implemented:)"femslash") from 
