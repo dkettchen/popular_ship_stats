@@ -10,3 +10,13 @@ non_white_colours = ["skyblue", "lightseagreen", "teal", "darkslategrey"]
 oranges = ["orangered", "gold", "orange"]
 
 violets = ["deeppink", "violet", "darkorchid"]
+
+gender_colours = {
+    "M | Other": "darkturquoise",
+    "F | Other": "red",
+    "F": "hotpink",
+    "Other": "yellow",
+    "M | F | Other": "gold",
+    "Ambig": "green",
+    "M": "cornflowerblue",
+}
