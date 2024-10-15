@@ -231,3 +231,69 @@ def visualise_top_non_white_ships(input_dict:dict, ranking:str):
     )
 
     return fig
+
+# TODO: refactor this one too
+# also no multi plots, but would need title & file paths adjusted
+def visualise_hottest_chars(input_dict:dict, ranking:str):
+    """
+    takes the output (ranking=(currently implemented:)"femslash") from hottest_char
+
+    creates png files visualising the data contained in table format 
+    for each year (ie a file per each year)
+
+    the table will be in sapphic/lesbian flag colours if ranking is "femslash"
+    """
+    #making input case insensitive
+    ranking = ranking.lower()
+    suffix = lbls.suffixes[ranking]
+    
+    if ranking == "femslash":
+        colours = colour_palettes.sapphic_table
+        column_width = [1.9,0.7,0.5,0.3,3]
+        width = 1350
+        height = 350
+
+    line_colour = colours["lines"] # colour of lines
+    header_fill_colour = colours["header"] # colour of header row
+    body_fill_colour = colours["body"] # colour of remaining rows
+
+    for year in input_dict:
+        year_df = input_dict[year]["over_3_ships"].copy()
+
+        year_df["fandom"] = clean_fandoms(year_df["fandom"]) # cleaning/shortening fandoms
+        year_df.pop("rpf_or_fic") # removing unneeded columns
+        year_df.pop("year")
+
+        columns = year_df.columns
+        values = [year_df[column] for column in year_df.columns]
+
+        fig = go.Figure(
+            data=go.Table(
+                header=dict(
+                    values=columns, # column names for header row
+                    align='left', # aligns header row text
+                    line_color=line_colour,
+                    fill_color=header_fill_colour,
+                ),
+                cells=dict(
+                    values=values, # values ordered by column
+                    align='left', # aligns body text
+                    line_color=line_colour,
+                    fill_color=body_fill_colour,
+                ),
+                columnwidth=column_width # sets column width ratios
+            ),
+            layout={
+                "title":f"Hottest characters (in 3+ ships) in {year}{suffix}"
+            }
+        )
+
+        if ranking == "femslash":
+            filepath = f"visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/hottest_sapphics_by_year/hottest_femslash_characters_{year}_2014_2023.png"
+
+        fig.write_image(
+            filepath,
+            width=width, 
+            height=height, 
+            scale=2
+        )

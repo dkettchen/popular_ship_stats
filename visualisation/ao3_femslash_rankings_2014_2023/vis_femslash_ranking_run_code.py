@@ -33,10 +33,8 @@ from visualisation.diagram_code.visualise_pies import visualise_pies, visualise_
 from visualisation.diagram_code.visualise_tables import (
     visualise_longest_running, 
     visualise_top_5, 
-    visualise_top_non_white_ships
-)
-from visualisation.ao3_femslash_rankings_2014_2023.vis_femslash_ranking_general_diagram_code import (
-    visualise_hottest_sapphic,
+    visualise_top_non_white_ships,
+    visualise_hottest_chars
 )
 
 # get data & turn into big df
@@ -113,7 +111,7 @@ longest_running_fig.write_image(
 
 hottest_wlw = hottest_char(femslash_character_info_df)
     # possibly another chart abt how many chars were in how many ships over the years
-visualise_hottest_sapphic(hottest_wlw) # writes its own files
+visualise_hottest_chars(hottest_wlw, "femslash") # writes its own files
 
 sapphic_genders = gender_stats(femslash_character_info_df)
 gender_fig = visualise_pies(sapphic_genders, "gender", "femslash")
