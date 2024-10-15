@@ -41,7 +41,7 @@ run-cleaning-5:
 
 # run all "ao3_all_data_2013_2023" vis files to (re)make diagrams
 make-ao3-overall-data-charts:
-	python visualisation/ao3_all_data_2013_2023/vis_characters_file.py && python visualisation/ao3_all_data_2013_2023/vis_ships_file.py && python visualisation/ao3_all_data_2013_2023/vis_chars_and_ships.py
+	python visualisation/ao3_all_data_2013_2023/vis_total_data_run_code.py
 
 # run "ao3_femslash_rankings_2013_2023"'s vis file to (re)make diagrams
 make-ao3-femslash-charts:
