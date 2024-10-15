@@ -196,43 +196,31 @@ def visualise_hottest_characters(hottest_rank_df:pd.DataFrame):
 
     return fig
 
-# running file writing code
-if __name__ == "__main__":
 
-    full_character_df = make_full_chars_df()
-    hottest_rank_df = make_hottest_char_df(full_character_df)
-    hottest_rank_fig = visualise_hottest_characters(hottest_rank_df)
+#notes:
+# available formats:  .png .jpeg .webp .svg .pdf 
+# gotta specify dimensions you want to make sure it prints it at the size you want
 
-    hottest_rank_fig.write_image(
-        "visualisation/ao3_all_data_2013_2023/ao3_all_data_charts/all_ao3_hottest_characters_ranking_2013_2023.png", 
-        width=1000, 
-        height=1200, 
-        scale=2
-    )
+# look into kaleido smh 
+    # -figure out work flow & test w this file ✅
+    # (-make util for saving the image files)
+    # -TODO:then put other notebook files into python files too & set up their work flows
+    # -store old notebook files in vis folder once they've been successfully 
+    #  transferred to python files
 
-    # available formats:  .png .jpeg .webp .svg .pdf 
-    # gotta specify dimensions you want to make sure it prints it at the size you want
-
-    # look into kaleido smh 
-        # -figure out work flow & test w this file ✅
-        # (-make util for saving the image files)
-        # -TODO:then put other notebook files into python files too & set up their work flows
-        # -store old notebook files in vis folder once they've been successfully 
-        #  transferred to python files
-    
-    # currently kaleido can't do non-latin characters yet rip
-        # https://github.com/plotly/Kaleido/issues/157 
-        # possible workaround is to install language packages on the ubuntu
-        # in this case language code would be ja for japanese
-        # but there's others you can find at https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes 
-    # -> jupyter notebook version managed to do foreign characters tho!
-        # -> how about we put the code in py files & then import into a notebook to actually export?
-        # => try and see if the dimension specification works in notebook
-    # update: didn't solve the issue rip 
-        # -jupyter renders the characters but doesn't change size w specified dimensions 
-        # -image/bytes version changes size but still uses kaleido & doesn't render the characters
-        # -installing japanese language pack & fonts also didn't fix it for the latter
-        # -trying to export only the jupyter bit with the characters to try and manually 
-        # photoshop em together also didn't work, it defaults to only exporting the top bit
-        # -tried finding a way to make jupyter output bigger, but also not yet implemented 
-        # for non-text outputs smh
+# currently kaleido can't do non-latin characters yet rip
+    # https://github.com/plotly/Kaleido/issues/157 
+    # possible workaround is to install language packages on the ubuntu
+    # in this case language code would be ja for japanese
+    # but there's others you can find at https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes 
+# -> jupyter notebook version managed to do foreign characters tho!
+    # -> how about we put the code in py files & then import into a notebook to actually export?
+    # => try and see if the dimension specification works in notebook
+# update: didn't solve the issue rip 
+    # -jupyter renders the characters but doesn't change size w specified dimensions 
+    # -image/bytes version changes size but still uses kaleido & doesn't render the characters
+    # -installing japanese language pack & fonts also didn't fix it for the latter
+    # -trying to export only the jupyter bit with the characters to try and manually 
+    # photoshop em together also didn't work, it defaults to only exporting the top bit
+    # -tried finding a way to make jupyter output bigger, but also not yet implemented 
+    # for non-text outputs smh
