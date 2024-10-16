@@ -16,4 +16,4 @@ Using the data from [AO3 user @centreoftheselights's](https://archiveofourown.or
 ### Important documents:
 - [Methodology document](methodology.md)
 - [Overview analysis of all characters/ships/fandoms in the 2013-2023 AO3 data sets](visualisation/ao3_all_data_2013_2023/analysis_2013_2023_overall_data.md)
-- [Analysis of the 2014-2023 AO3 femslash rankings](visualisation/ao3_all_data_2013_2023/analysis_2013_2023_overall_data.md)
+- [Analysis of the 2014-2023 AO3 femslash rankings](visualisation/ao3_femslash_rankings_2014_2023/analysis_2014_2023_femslash_data.md)
