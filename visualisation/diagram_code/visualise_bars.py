@@ -3,7 +3,7 @@ import plotly.graph_objects as go
 import visualisation.vis_utils.diagram_utils.colour_palettes as colour_palettes
 import visualisation.vis_utils.diagram_utils.labels as lbls
 import plotly.express as px
-from visualisation.ao3_all_data_2013_2023.vis_characters_file import make_all_groupings_dict
+from visualisation.vis_utils.remove_translation import remove_translation
 
 
 def visualise_non_white_counts(input_df:pd.DataFrame, ranking:str):
@@ -50,461 +50,393 @@ def visualise_non_white_counts(input_df:pd.DataFrame, ranking:str):
 
 
 # stacked bars
-
-def visualise_gender_minorities(total_gender_percentages:pd.DataFrame):
+def visualise_stacked_bars(input_df:pd.DataFrame, data_case:str, ranking:str):
     """
-    takes output dataframe from all_characters_gender_df
+    visualises output from 
+    - all_characters_racial_groups_df (data_case="minority_racial_groups")
+    - total_gender_combo_percent_df (data_case="gender_combos")
+    - total_gender_combo_percent_df (data_case="minority_gender_combos") #TODO
 
-    returns a stacked bar chart of gender tag numbers excluding M and F blocks
+    as grouped bar charts with 3 bars in each group
     """
+    suffix = lbls.suffixes[ranking]
 
-    gender_list = [
-        "M | Other",
-        "F | Other",
-        "Other",
-        "M | F | Other",
-        "Ambig",
-    ]
-    colours = [
-        "darkturquoise",
-        "red",
-        "yellow",
-        "gold",
-        "green",
-    ]
-    values = [total_gender_percentages["count"].loc[tag] for tag in gender_list]
-    bar_text = [
-        "Crowley (Good Omens)<br>Dream (Sandman)<br>Loki (Marvel)<br>Gerard Way<br>Ranboo",
-        "Crystal Gems x9<br>Sailor Uranus",
-        "Venom Symbiote<br>Raine Whispers",
-        "Drag Queens x4",
-        "Player Character x6<br>Y/N | Reader x6"
-    ]
+    # defaults to replace
+    uniformtext_minsize = 8
+    uniformtext_mode = 'hide'
+    text_position = None
+    x_ticks = None
+    marker_color = None
 
-    gender_minority_fig = px.bar(
-        x=gender_list,
-        y=values,
-        title="Characters' gender distribution excluding M and F (AO3 2013-2023)",
-        text=bar_text,
-        labels={
-            "x": "", # you can rename the axis titles
-            "y": "",
-        },
-        color=gender_list,
-        color_discrete_sequence=colours
-    )
+    if data_case == "minority_racial_groups":
+        title = f"Racial groups excl. white people, east asians, and ambiguous, unknown and non-human characters{suffix}"
+        x_ticks = 10
+        text_position = "inside"
 
-    gender_minority_fig.update_layout(
-        showlegend=False,
-    )
+        iterable_1 = input_df.index
+        iterable_2 = lbls.racial_group_umbrellas
+    elif data_case in ["gender_combos", "minority_gender_combos"]:
+        if data_case == "gender_combos":
+            title = f"Ship gender combinations{suffix}"
+            iterable_1 = lbls.gender_combo_umbrellas
+        elif data_case == "minority_gender_combos":
+            title = f"Ship gender combinations excluding M/M, W/W, and M/F blocks{suffix}"
+            uniformtext_minsize = None 
+            uniformtext_mode = None
+            text_position = "inside"
 
-    return gender_minority_fig
+            gender_combos_we_recognise = {
+                "M | Other / M / M" : "Minecraft Youtubers ",
+                "F | Other / F | Other" : "Crystal Gems <br>", 
+                "F / F | Other" : "Sailor Neptune x Sailor Uranus ",
+                "F / Other" : "Eda Clawthorne x Raine Whispers ",
+                "M / Other" : "Eddie Brock x Venom ",
+                "M | Other / Ambig" : "Loki x Reader ", 
+                "M | F | Other / M | F | Other" : "Drag queens <br>",
+                "F / M / M": "White Collar characters "
+            }
 
-def visualise_racial_minority_totals(total_race_percentages:pd.DataFrame):
-    """
-    takes output dataframe from all_characters_racial_groups_df
+            combo_dict = lbls.gender_combo_umbrellas
+            # removing majority labels
+            combo_dict["mlm"] = combo_dict["mlm"][1:]
+            combo_dict["wlw"] = combo_dict["wlw"][1:]
+            combo_dict["non-same-sex"] = combo_dict["non-same-sex"][1:]
 
-    returns a stacked bar diagram visualising all racial groups other than white people, 
-    east asians, and ambiguous, unknown and non-human characters
-    """
-    all_groupings = make_all_groupings_dict()
+            iterable_1 = combo_dict
+        iterable_2 = [reversed(iterable_1[item]) for item in iterable_1]
+        wlw_count = 0
+        mlm_count = 0
+        het_count = 0
+        ambig_count = 0
 
-    other_racial_group_stacks=go.Figure()
+    stacked_bars = go.Figure()
 
-    for index in total_race_percentages.index:
-        if "White" in index or (
-            "E Asian" in index and "Ind" not in index
-        ) or index in all_groupings["other"].keys():
-            continue
+    for item in iterable_1:
+        if data_case == "minority_racial_groups":
 
-        for group in all_groupings:
-            if index in all_groupings[group]:
-                if group == "north, west, middle and eastern europe":
-                    stack_label = "romani & european indigenous"
-                else:
-                    stack_label = group
+            if "White" in item or \
+            ("E Asian" in item and "Ind" not in item) \
+            or item in iterable_2["other"].keys():
+                continue
 
+        for instance in iterable_2:
+            if data_case == "minority_racial_groups":
+                # instance is umbrella group
+                # item is specific group
 
-        # add trace to figure
-        other_racial_group_stacks.add_trace(
-            go.Bar(
-                x=[stack_label], 
-                    # stack_label needs to be an array/series/etc of some kind
-                    # should only be one value per stack, this is what groups the stacks!
-                y=total_race_percentages.loc[index], 
-                    # value you want to portray in each portion of the stack
-                text=index,
-                textposition="inside",
-                    # what you want this value to be labelled as
-                #marker_color=portion_colour
-                    # what colour you want this value to be
+                if item in iterable_2[instance]:
+                    if instance == "north, west, middle and eastern europe":
+                        stack_label = "romani & european indigenous"
+                    else:
+                        stack_label = instance
+
+                    x = [stack_label]
+                    y = input_df.loc[item]
+                    text = item
+                else: continue # if the group is not in the umbrella group, we check the next one
+            elif data_case in ["gender_combos", "minority_gender_combos"]:
+            # item is umbrella type
+            # instance is specific combo
+
+                colours = colour_palettes.gender_combo_colours[item]
+
+                # setting colours & ticking up counters
+                if item == "mlm":
+                    colour = colours[mlm_count]
+                    mlm_count += 1
+                elif item == "wlw":
+                    colour = colours[wlw_count]
+                    wlw_count += 1
+                elif item == "non-same-sex":
+                    colour = colours[het_count]
+                    het_count += 1
+                elif item == "ambiguous":
+                    colour = colours[ambig_count]
+                    ambig_count += 1
+
+                if data_case == "minority_gender_combos":
+                    if instance in gender_combos_we_recognise:
+                        text = gender_combos_we_recognise[instance] + f"({instance})"
+                    else: text = instance
+                else: text = instance
+
+                x = [item]
+                y = input_df.loc[instance]
+
+                marker_color = colour
+
+            # add trace to figure
+            stacked_bars.add_trace(
+                go.Bar(
+                    x=x, 
+                    y=y, 
+                    text=text,
+                    marker_color=marker_color # this one varies, so how to make the other one do default?
+                )
             )
+
+    stacked_bars.update_layout(
+        barmode='stack', 
+        showlegend=False, 
+        title=title,
+    )
+
+    if uniformtext_minsize: # setting uniform text
+        stacked_bars.update_layout(
+            uniformtext_minsize=uniformtext_minsize, 
+            uniformtext_mode=uniformtext_mode,
+        )
+    if x_ticks: # setting tick angle
+        stacked_bars.update_layout(
+            xaxis_tickangle=x_ticks,
+        )
+    if text_position: # setting text position
+        stacked_bars.update_traces(
+            textposition=text_position,
         )
 
-    other_racial_group_stacks.update_layout(
-        barmode='stack', 
-        showlegend=False, 
-        title="Racial groups excl. white people, east asians, and ambiguous, unknown and non-human characters (AO3 2013-2023)",
-        uniformtext_minsize=8, 
-        uniformtext_mode='hide',
-        xaxis_tickangle=10,
-    )
-
-    return other_racial_group_stacks
-
-def visualise_gender_combo_total(total_gender_percentages:pd.DataFrame):
-    """
-    takes output dataframe from total_gender_combo_percent_df
-
-    returns a stacked bar chart of gender combos grouped by mlm, wlw, non-same-sex and ambiguous
-    """
-    gender_combo_fig=go.Figure()
-
-    wlw_count = 0
-    mlm_count = 0
-    het_count = 0
-    ambig_count = 0
-
-    combo_dict = {
-        "mlm": ["M / M", "M / M | Other","M | Other / M / M",],
-        "wlw": ["F / F","F | Other / F | Other", "F / F | Other",],
-        "non-same-sex": ["M / F","F / Other","M / Other","F / M / M"],
-        "ambiguous": ["M / Ambig","M | Other / Ambig", "F / Ambig","M | F | Other / M | F | Other"]
-    }
-    for combo_type in combo_dict.keys():
-        if combo_type == "mlm":
-            colours = ["azure", "turquoise", "steelblue"]
-        elif combo_type == "wlw":
-            colours = ["red", "orange", "tomato"]
-        elif combo_type == "non-same-sex":
-            colours = ["silver", "grey", "gainsboro", "black"]
-        elif combo_type == "ambiguous":
-            colours = ["darkolivegreen", "limegreen", "mediumseagreen", "olive"]
-
-        for combo in reversed(combo_dict[combo_type]):
-            if combo_type == "mlm":
-                colour = colours[mlm_count]
-                mlm_count += 1
-            elif combo_type == "wlw":
-                colour = colours[wlw_count]
-                wlw_count += 1
-            elif combo_type == "non-same-sex":
-                colour = colours[het_count]
-                het_count += 1
-            elif combo_type == "ambiguous":
-                colour = colours[ambig_count]
-                ambig_count += 1
-
-            gender_combo_fig.add_trace(
-                go.Bar(
-                    x=[combo_type],
-                    y=total_gender_percentages.loc[combo],
-                    text=combo,
-                    marker_color=colour
-                )
-            )
-
-    gender_combo_fig.update_layout(
-        barmode='stack', 
-        showlegend=False, 
-        title="Ship gender combinations (AO3 2013-2023)",
-        uniformtext_minsize=8, 
-        uniformtext_mode='hide'
-    )
-
-    return gender_combo_fig
-
-def visualise_gender_combo_minorities(total_gender_percentages:pd.DataFrame):
-    """
-    takes output dataframe from total_gender_combo_percent_df
-
-    returns a stacked bar chart of gender combos excluding standard m/m, f/f, and f/m pairings
-    """
-
-    gender_combo_fig=go.Figure()
-
-    gender_combos_we_recognise = {
-        "M | Other / M / M" : "Minecraft Youtubers ",
-        "F | Other / F | Other" : "Crystal Gems <br>", 
-        "F / F | Other" : "Sailor Neptune x Sailor Uranus ",
-        "F / Other" : "Eda Clawthorne x Raine Whispers ",
-        "M / Other" : "Eddie Brock x Venom ",
-        "M | Other / Ambig" : "Loki x Reader ", 
-        "M | F | Other / M | F | Other" : "Drag queens <br>",
-        "F / M / M": "White Collar characters "
-    }
-
-    wlw_count = 0
-    mlm_count = 0
-    het_count = 0
-    ambig_count = 0
-
-    combo_dict = {
-        "mlm": ["M / M | Other","M | Other / M / M",],
-        "wlw": ["F | Other / F | Other", "F / F | Other",],
-        "non-same-sex": ["F / Other","M / Other","F / M / M"],
-        "ambiguous": ["M / Ambig","M | Other / Ambig", "F / Ambig","M | F | Other / M | F | Other"]
-    }
-    for combo_type in combo_dict.keys():
-        if combo_type == "mlm":
-            colours = ["azure", "turquoise"]
-        elif combo_type == "wlw":
-            colours = ["red", "orange"]
-        elif combo_type == "non-same-sex":
-            colours = ["silver", "grey", "gainsboro"]
-        elif combo_type == "ambiguous":
-            colours = ["darkolivegreen", "limegreen", "mediumseagreen", "olive"]
-
-        for combo in reversed(combo_dict[combo_type]):
-            if combo_type == "mlm":
-                colour = colours[mlm_count]
-                mlm_count += 1
-            elif combo_type == "wlw":
-                colour = colours[wlw_count]
-                wlw_count += 1
-            elif combo_type == "non-same-sex":
-                colour = colours[het_count]
-                het_count += 1
-            elif combo_type == "ambiguous":
-                colour = colours[ambig_count]
-                ambig_count += 1
-
-            if combo in gender_combos_we_recognise:
-                label = gender_combos_we_recognise[combo] + f"({combo})"
-            else: label = combo
-
-            gender_combo_fig.add_trace(
-                go.Bar(
-                    x=[combo_type],
-                    y=total_gender_percentages.loc[combo],
-                    text=label,
-                    marker_color=colour,
-                    textposition="inside"
-                )
-            )
-
-    gender_combo_fig.update_layout(
-        barmode='stack', 
-        showlegend=False, 
-        title="Ship gender combinations excluding M/M, W/W, and M/F blocks (AO3 2013-2023)",
-        # uniformtext_minsize=8, 
-        # uniformtext_mode='hide'
-    )
-
-    return gender_combo_fig
-
-
-# non stacked, non grouped bars
-
-def visualise_highest_racial_diversity(highest_racial_div:pd.DataFrame):
-    """
-    takes output dataframe from highest_racial_diversity_df
-
-    returns a bar chart visualising it
-    """
-    highest_racial_div_fig = px.bar(
-        data_frame=highest_racial_div,
-        title="Top fandoms for racial diversity (AO3 2013-2023)",
-        text=pd.Series(highest_racial_div.index).mask(
-            cond=highest_racial_div.index == 'Genshin Impact | 原神', 
-            other="Genshin"
-        ),
-        labels={
-            "index": "", # you can rename the axis titles
-            "value": "",
-        },
-        color=highest_racial_div.index,
-        color_discrete_sequence=px.colors.qualitative.Set1
-    )
-    highest_racial_div_fig.update_layout(
-        showlegend=False,
-    ).update_xaxes(
-        visible=False # to hide bottom axis annotations
-    )
-
-    return highest_racial_div_fig
-
-def visualise_average_ship_combos_per_fandom(average_gender_combo_per_fandom_series:pd.Series):
-    """
-    takes output series from average_gender_combo_srs
-
-    returns a bar chart visualising the average number of ships by type in a fandom
-    """
-    average_ships_per_fandom_fig = px.bar(
-        data_frame=average_gender_combo_per_fandom_series.get(["mlm", "wlw", "hets"]),
-        title="Average ships of this type per fandom (AO3 2013-2023)",
-        text=[
-            f"mlm ({average_gender_combo_per_fandom_series.loc['mlm']})", 
-            f"wlw ({average_gender_combo_per_fandom_series.loc['wlw']})", 
-            f"het ({average_gender_combo_per_fandom_series.loc['hets']})"
-        ],
-        labels={
-            "index": "",
-            "value": "average ships per fandom",
-        },
-    )
-    average_ships_per_fandom_fig.update_xaxes(
-        visible=False
-    ).update_traces(
-        marker_color='indianred'
-    ).update_layout(
-        showlegend=False,
-    )
-
-    return average_ships_per_fandom_fig
-
-def visualise_non_white_ships(non_white_ships_counts:pd.Series):
-    """
-    takes output series from non_white_ships_srs
-
-    returns a bar chart visualising the number of ships involving white ppl, involving east 
-    asian ppl, non-white ships and ships that involve neither white nor east asian ppl
-    """
-    non_white_ships_fig = px.bar(
-        data_frame=non_white_ships_counts,
-        title="Pairings with and without white and east asian characters (AO3 2013-2023)",
-        text=["involve white ppl", "involve east asians", "non-white ships", "non-white & non-EA"],
-        labels={
-            "index": "characters involved",
-            "value": "no of ships",
-        }
-    )
-    non_white_ships_fig.update_traces(
-        marker_color='green' # update colour here -> for all bars tho
-    ).update_layout(
-        showlegend=False,
-    ).update_xaxes(
-        visible=False, # to hide bottom axis annotations
-    )
-
-    return non_white_ships_fig
-
-
+    return stacked_bars
 
 # grouped bars
-
-def visualise_no_half_only(total_gender_combos_series:pd.Series):
+def visualise_3_grouped_bars(input_item:pd.DataFrame|pd.Series, data_case:str, ranking:str):
     """
-    takes output series from total_gender_combos_srs
+    visualises output from 
+    - total_gender_combos_srs (data_case="no_half_only")
+    - highest_of_this_type_df (data_case="top_fandoms")
 
-    returns a grouped bar chart with two y axes visualising how many fandoms had no, 
-    only, or over 50% ships of each type
+    as grouped bar charts with 3 bars in each group
     """
-    no_half_only_labels = ["mlm ships", "wlw ships", "het ships"]
-    no_ships_values = total_gender_combos_series.get([
-        "no_mlm_ship_fandoms", 
-        "no_wlw_ship_fandoms", 
-        "no_het_ship_fandoms"
-    ])
-    over_half_values = total_gender_combos_series.get([
-        "more_than_50%_mlm", 
-        "more_than_50%_wlw", 
-        "more_than_50%_het"
-    ])
-    only_ships_values = total_gender_combos_series.get([
-        "only_mlm_ship_fandoms", 
-        "only_wlw_ship_fandoms", 
-        "only_het_ship_fandoms"
-    ])
+    suffix = lbls.suffixes[ranking]
 
-    no_half_only_fig = go.Figure(
-        data=[
-            go.Bar( #no
-                x=no_half_only_labels,
-                y=no_ships_values,
-                text="no",
-                marker_color='darkmagenta',
-                yaxis='y', 
-                offsetgroup=1,
-            ),
-            go.Bar( #over half
-                x=no_half_only_labels,
-                y=over_half_values,
-                text="over 50%",
-                marker_color='indigo',
-                yaxis='y2', 
-                offsetgroup=2,
-            ),
-            go.Bar( #only
-                x=no_half_only_labels,
-                y=only_ships_values,
-                text="only",
-                marker_color='darkorchid',
-                yaxis='y', 
-                offsetgroup=3,
-            )
-        ],
-        layout={
+    if data_case == "no_half_only":
+        title = f"Fandoms with no, over half, or only ships of this type{suffix}"
+
+        # no
+        values_1 = input_item.get([
+            "no_mlm_ship_fandoms", 
+            "no_wlw_ship_fandoms", 
+            "no_het_ship_fandoms"
+        ])
+        # half
+        values_2 = input_item.get([
+            "more_than_50%_mlm", 
+            "more_than_50%_wlw", 
+            "more_than_50%_het"
+        ])
+        # only
+        values_3 = input_item.get([
+            "only_mlm_ship_fandoms", 
+            "only_wlw_ship_fandoms", 
+            "only_het_ship_fandoms"
+        ])
+
+        labels = ["mlm ships", "wlw ships", "het ships"]
+        text = ["no", "over 50%", "only"]
+        colours = ['darkmagenta', 'indigo', 'darkorchid']
+
+        y_axes = ['y', 'y2', 'y']
+        layout = {
             'yaxis': {'title': 'no/only'},
             'yaxis2': {'title': 'over 50%', 'overlaying': 'y', 'side': 'right'}
         }
-    )
+    elif data_case == "top_fandoms":
+        title = f"Top 3 fandoms with most ships of this type{suffix}"
+        top_3_values_df = input_item.copy().get([
+            "highest num of mlm ships", 
+            "highest num of wlw ships", 
+            "highest num of het ships"
+        ])
+        top_3_fandoms_df = input_item.copy().get([
+            "highest mlm fandom", 
+            "highest wlw fandom", 
+            "highest het fandom"
+        ])
 
-    no_half_only_fig.update_layout(
-        barmode='group', 
-        showlegend=False, 
-        title="Fandoms with no, over half, or only ships of this type (AO3 2013-2023)")
+        # 1st
+        values_1 = top_3_values_df.loc["1st"]
+        # 2nd
+        values_2 = top_3_values_df.loc["2nd"]
+        # 3rd
+        values_3 = top_3_values_df.loc["3rd"]
 
-    return no_half_only_fig
-
-def visualise_top_3_per_fandom_df(highest_of_type_df:pd.DataFrame):
-    """
-    takes output dataframe from highest_of_this_type_df
-
-    returns a grouped bar chart of the top 3 fandoms for number of ships of each type
-    """
-    type_labels = ["mlm", "wlw", "het"] 
-    top_3_values_df = highest_of_type_df.copy().get([
-        "highest num of mlm ships", 
-        "highest num of wlw ships", 
-        "highest num of het ships"
-    ])
-    top_3_fandoms_df = highest_of_type_df.copy().get([
-        "highest mlm fandom", 
-        "highest wlw fandom", 
-        "highest het fandom"
-    ])
-
-    top_3_fandoms_for_ships_by_type_fig = go.Figure(
-        data=[
-            go.Bar(
-                x=type_labels,
-                y=top_3_values_df.loc["1st"],
-                text=top_3_fandoms_df.loc["1st"], # text that goes on each bar
-                marker_color='gold',
+        labels = ["mlm", "wlw", "het"] 
+        text = [
+            top_3_fandoms_df.loc["1st"],
+            top_3_fandoms_df.loc["2nd"].mask(
+                cond=top_3_fandoms_df.loc["2nd"] == "A Song of Ice and Fire / Game of Thrones Universe", 
+                other="GoT (tied)"
             ),
-            go.Bar(
-                x=type_labels,
-                y=top_3_values_df.loc["2nd"],
-                text=top_3_fandoms_df.loc["2nd"].mask(
-                    cond=top_3_fandoms_df.loc["2nd"] == "A Song of Ice and Fire / Game of Thrones Universe", 
-                    other="GoT (tied)"
-                ),
-                marker_color='slategrey',
-            ),
-            go.Bar(
-                x=type_labels,
-                y=top_3_values_df.loc["3rd"],
-                text=top_3_fandoms_df.loc["3rd"].mask(
-                    cond=top_3_fandoms_df.loc["3rd"] == "Bangtan Boys / BTS", 
-                    other="BTS"
-                ).mask(
-                    cond=(top_3_fandoms_df.loc["3rd"] == "Homestuck") | (top_3_fandoms_df.loc["3rd"] == "Steven Universe"), 
-                    other="Homestuck <br>& Steven <br>Universe <br>(tied)"
-                ).mask(
-                    cond=top_3_fandoms_df.loc["3rd"] == "Marvel", 
-                    other="Marvel (tied)"
-                ),
-                marker_color='chocolate',
+            top_3_fandoms_df.loc["3rd"].mask(
+                cond=top_3_fandoms_df.loc["3rd"] == "Bangtan Boys / BTS", 
+                other="BTS"
+            ).mask(
+                cond=(top_3_fandoms_df.loc["3rd"] == "Homestuck") | (
+                    top_3_fandoms_df.loc["3rd"] == "Steven Universe"), 
+                other="Homestuck <br>& Steven <br>Universe <br>(tied)"
+            ).mask(
+                cond=top_3_fandoms_df.loc["3rd"] == "Marvel", 
+                other="Marvel (tied)"
             )
         ]
+        colours = colour_palettes.medals
+
+        y_axes = ['y', 'y', 'y']
+        layout = {}
+
+    grouped_bars = go.Figure(
+        data=[
+            go.Bar( 
+                x=labels,
+                y=values_1,
+                text=text[0],
+                marker_color=colours[0],
+                yaxis=y_axes[0], 
+                offsetgroup=1,
+            ),
+            go.Bar( 
+                x=labels,
+                y=values_2,
+                text=text[1],
+                marker_color=colours[1],
+                yaxis=y_axes[1], 
+                offsetgroup=2,
+            ),
+            go.Bar( 
+                x=labels,
+                y=values_3,
+                text=text[2],
+                marker_color=colours[2],
+                yaxis=y_axes[2], 
+                offsetgroup=3,
+            )
+        ],
+        layout=layout
     )
 
-    top_3_fandoms_for_ships_by_type_fig.update_layout(
+    grouped_bars.update_layout(
         barmode='group', 
         showlegend=False, 
-        title="Top 3 fandoms with most ships of this type (AO3 2013-2023)", 
+        title=title)
+
+    return grouped_bars
+
+# non stacked, non grouped bars
+def visualise_simple_bar(input_item:pd.DataFrame|pd.Series, data_case:str, ranking:str):
+    """
+    visualises output from 
+    - highest_racial_diversity_df (data_case="racial_diversity")
+    - average_gender_combo_srs (data_case="average_ship_combo")
+    - non_white_ships_srs (data_case="non_white_ships")
+    - all_characters_gender_df (data_case="minority_genders")
+    
+    as simple bar charts (not stacked or grouped)
+    """
+    suffix = lbls.suffixes[ranking]
+
+    # defaults to replace
+    df = input_item
+    labels = {
+            "index": "", # you can rename the axis titles
+            "value": "",
+        }
+    show_legend = False
+    x_axis_visible = False # to hide bottom axis annotations
+    colour_guide = input_item.index
+    colours = None
+    traces_marker_colour = None
+    y_values = None
+    x_values = None
+
+    if data_case == "racial_diversity":
+        title = f"Top fandoms for racial diversity{suffix}"
+        text = pd.Series(input_item.index).apply(remove_translation)
+        colours = px.colors.qualitative.Set1
+
+    elif data_case == "average_ship_combo":
+        df = input_item.get(["mlm", "wlw", "hets"])
+        title = f"Average ships of this type per fandom{suffix}"
+        text = [
+            f"mlm ({input_item.loc['mlm']})", 
+            f"wlw ({input_item.loc['wlw']})", 
+            f"het ({input_item.loc['hets']})"
+        ]
+        labels["value"] = "average ships per fandom"
+        traces_marker_colour = 'indianred'
+
+    elif data_case == "non_white_ships":
+        title = f"Pairings with and without white and east asian characters{suffix}"
+        text = ["involve white ppl", "involve east asians", "non-white ships", "non-white & non-EA"]
+        labels = {
+            "index": "characters involved",
+            "value": "no of ships",
+        }
+        #traces_marker_colour = 'green' # update colour here -> for all bars tho
+            # replace colours w our new ones?
+        colours = colour_palettes.non_white_colours
+
+    elif data_case == "minority_genders":
+        title = f"Characters' gender distribution excluding M and F{suffix}"
+
+        gender_list = [
+            "M | Other",
+            "F | Other",
+            "Other",
+            "M | F | Other",
+            "Ambig",
+        ]
+
+        text = [
+            "Crowley (Good Omens)<br>Dream (Sandman)<br>Loki (Marvel)<br>Gerard Way<br>Ranboo",
+            "Crystal Gems x9<br>Sailor Uranus",
+            "Venom Symbiote<br>Raine Whispers",
+            "Drag Queens x4",
+            "Player Character x6<br>Y/N | Reader x6"
+        ]
+        labels = {
+            "x": "", # you can rename the axis titles
+            "y": "",
+        }
+        y_values = [input_item["count"].loc[tag] for tag in gender_list]
+        x_values = gender_list
+        colour_guide = gender_list
+        colours = [colour_palettes.gender_colours[gender] for gender in gender_list]
+
+        x_axis_visible = True # cause we don't want to remove it here
+
+    if y_values: # if we have specified the values separately
+        simple_bars = px.bar(
+            x=x_values,
+            y=y_values,
+            title=title,
+            text=text,
+            labels=labels
+        )
+    else: # otherwise just use the automatic dataframe one
+        simple_bars = px.bar(
+            data_frame=df,
+            title=title,
+            text=text,
+            labels=labels
+        )
+
+    simple_bars.update_layout( # hiding legend
+        showlegend=show_legend,
     )
+    
+    if not x_axis_visible: # if we want to hide the x_axis
+        simple_bars.update_xaxes(
+            visible=x_axis_visible
+        )
 
-    return top_3_fandoms_for_ships_by_type_fig
+    # adding colours
+    if traces_marker_colour: # if it will all be one colour
+        simple_bars.update_traces(
+            marker_color=traces_marker_colour
+        )
+    else: # if we have specified a colour sequence
+        simple_bars.update_traces(
+            color=colour_guide,
+            color_discrete_sequence=colours
+        )
 
+    return simple_bars
