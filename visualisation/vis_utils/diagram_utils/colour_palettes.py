@@ -20,3 +20,12 @@ gender_colours = {
     "Ambig": "green",
     "M": "cornflowerblue",
 }
+
+gender_combo_colours = {
+    "mlm": ["azure", "turquoise", "steelblue"],
+    "wlw": ["red", "orange", "tomato"],
+    "non-same-sex": ["silver", "grey", "gainsboro", "black"],
+    "ambiguous": ["darkolivegreen", "limegreen", "mediumseagreen", "olive"],
+}
+
+medals = ['gold', 'slategrey', 'chocolate']
