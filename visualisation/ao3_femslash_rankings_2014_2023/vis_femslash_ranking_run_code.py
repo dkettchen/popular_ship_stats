@@ -31,7 +31,7 @@ from visualisation.diagram_code.visualise_bars import visualise_non_white_counts
 from visualisation.diagram_code.visualise_lines import visualise_line, visualise_multi_lines
 from visualisation.diagram_code.visualise_pies import visualise_pies, visualise_market_share_and_popularity
 from visualisation.diagram_code.visualise_tables import (
-    visualise_longest_running, 
+    visualise_single_table, 
     visualise_top_5, 
     visualise_top_non_white_ships,
     visualise_hottest_chars
@@ -101,7 +101,7 @@ top_5_ships_fig.write_image(
 appearances_ranking = count_appearances(top_5_ships_dict)
 streak_ranking = count_streaks(top_5_ships_dict)
 longest_running_top_5 = longest_running_top_5_ships(appearances_ranking, streak_ranking) 
-longest_running_fig = visualise_longest_running(longest_running_top_5, "femslash")
+longest_running_fig = visualise_single_table(longest_running_top_5, "femslash")
 longest_running_fig.write_image(
     "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/longest_running_femslash_ships_2014_2023.png", 
     width=680, 
