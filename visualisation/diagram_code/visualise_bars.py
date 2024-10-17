@@ -55,7 +55,7 @@ def visualise_stacked_bars(input_df:pd.DataFrame, data_case:str, ranking:str):
     visualises output (ranking=(currently implemented:)"total") from 
     - all_characters_racial_groups_df (data_case="minority_racial_groups")
     - total_gender_combo_percent_df (data_case="gender_combos")
-    - total_gender_combo_percent_df (data_case="minority_gender_combos") #TODO
+    - total_gender_combo_percent_df (data_case="minority_gender_combos")
 
     as grouped bar charts with 3 bars in each group
     """
