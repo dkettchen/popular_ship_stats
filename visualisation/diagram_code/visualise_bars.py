@@ -358,7 +358,10 @@ def visualise_simple_bar(input_item:pd.DataFrame|pd.Series, data_case:str, ranki
 
     if data_case == "racial_diversity":
         title = f"Top fandoms for racial diversity{suffix}"
-        text = pd.Series(input_item.index).apply(remove_translation)
+        text = pd.Series(input_item.index).mask(
+            cond=input_item.index == 'Genshin Impact | 原神', 
+            other="Genshin"
+        )
         colours = px.colors.qualitative.Set1
 
     elif data_case == "average_ship_combo":
