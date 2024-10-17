@@ -97,55 +97,6 @@ def visualise_top_5(input_dict:dict, data_case:str, ranking:str):
 
     return fig
 
-def visualise_longest_running(input_df:pd.DataFrame, ranking:str):
-    """
-    takes the output from longest_running_top_5_ships (ranking=(currently implemented:)"femslash")
-
-    returns a single-plot figure visualising the data contained in table format
-
-    the table will be in sapphic/lesbian flag colours if ranking is "femslash"
-    """
-    #making input case insensitive
-    ranking = ranking.lower()
-    suffix = lbls.suffixes[ranking]
-
-    if ranking == "femslash":
-        colours = colour_palettes.sapphic_table
-        num_of_years = 9
-        column_width = [0.1, 0.95, 0.2]
-
-    line_colour = colours["lines"] # colour of lines
-    header_fill_colour = colours["header"] # colour of header row
-    body_fill_colour = colours["body"] # colour of remaining rows
-
-    headers = ["rank", "ship", "streak"]
-    values = [
-        ranks.top_10_list[:5], 
-        input_df[input_df.columns[0]], 
-        [f"{value}/{num_of_years} years" for value in input_df[input_df.columns[1]]]
-    ]
-
-    fig = go.Figure(
-        data=go.Table(
-            header=dict(
-                values=headers, # column names for header row
-                align='left', # aligns header row text
-                line_color=line_colour,
-                fill_color=header_fill_colour,
-            ),
-            cells=dict(
-                values=values, # values ordered by column
-                align='left', # aligns body text
-                line_color=line_colour,
-                fill_color=body_fill_colour,
-            ),
-            columnwidth=column_width, # sets column width ratios
-        ),
-        layout={"title":f"Longest running top 5 ships{suffix}"}
-    )
-
-    return fig
-
 def visualise_top_non_white_ships(input_dict:dict, ranking:str):
     """
     takes the output from top_non_white_ships (ranking=(currently implemented:)"femslash")
@@ -296,42 +247,67 @@ def visualise_hottest_chars(input_dict:dict, ranking:str):
             scale=2
         )
 
-
-
-# all data functions
-
-def visualise_hottest_characters(hottest_rank_df:pd.DataFrame):
+# make single table
+def visualise_single_table(input_df:pd.DataFrame, ranking:str):
     """
-    takes output dataframe of make_hottest_char_df
+    takes the output from 
+    - longest_running_top_5_ships (ranking="femslash")
+    - make_hottest_char_df (ranking="total")
 
-    returns a plotly table figure of it
+    returns a single table visualising the data contained
+
+    the table will be in sapphic/lesbian flag colours if ranking is "femslash"
+
+    it will be in blue colours if ranking is "total"
     """
+    #making input case insensitive
+    ranking = ranking.lower()
+    suffix = lbls.suffixes[ranking]
 
-    line_colour = 'slategrey'
-    header_fill_colour = 'skyblue'
-    body_fill_colour = 'aliceblue'
+    if ranking == "femslash":
+        colours = colour_palettes.sapphic_table
+        column_width = [0.1, 0.95, 0.2]
+        title = f"Longest running top 5 ships{suffix}"
+        headers = ["rank", "ship", "streak"]
+        num_of_years = 9
+        values = [
+            ranks.top_10_list[:5], 
+            input_df[input_df.columns[0]], 
+            [f"{value}/{num_of_years} years" for value in input_df[input_df.columns[1]]]
+        ]
+    elif ranking == "total":
+        colours = colour_palettes.blue_table
+        column_width = [0.3,0.1,1.4,0.07]
+        title = f"Hottest characters (in 3+ ships){suffix}"
+        headers = list(input_df.columns)
+        values = [
+            input_df["fandom"], 
+            input_df["rank"], 
+            input_df["names"], 
+            input_df["no"],
+        ]
 
-    fig = go.Figure(data=[
-        go.Table(
+    line_colour = colours["lines"] # colour of lines
+    header_fill_colour = colours["header"] # colour of header row
+    body_fill_colour = colours["body"] # colour of remaining rows
+
+    fig = go.Figure(
+        data=go.Table(
             header=dict(
-                values=list(hottest_rank_df.columns),
-                align='left',
+                values=headers, # column names for header row
+                align='left', # aligns header row text
                 line_color=line_colour,
                 fill_color=header_fill_colour,
             ),
             cells=dict(
-                values=[
-                    hottest_rank_df["fandom"], 
-                    hottest_rank_df["rank"], 
-                    hottest_rank_df["names"], 
-                    hottest_rank_df["no"],
-                ],
-                align='left',
+                values=values, # values ordered by column
+                align='left', # aligns body text
                 line_color=line_colour,
                 fill_color=body_fill_colour,
             ),
-            columnwidth=[0.3,0.1,1.4,0.07] # setting column width ratios
-        )
-    ])
+            columnwidth=column_width, # sets column width ratios
+        ),
+        layout={"title":title}
+    )
 
     return fig
