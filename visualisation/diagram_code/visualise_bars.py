@@ -418,14 +418,18 @@ def visualise_simple_bar(input_item:pd.DataFrame|pd.Series, data_case:str, ranki
             y=y_values,
             title=title,
             text=text,
-            labels=labels
+            labels=labels,
+            color=colour_guide,
+            color_discrete_sequence=colours,
         )
     else: # otherwise just use the automatic dataframe one
         simple_bars = px.bar(
             data_frame=df,
             title=title,
             text=text,
-            labels=labels
+            labels=labels,
+            color=colour_guide,
+            color_discrete_sequence=colours,
         )
 
     simple_bars.update_layout( # hiding legend
@@ -437,15 +441,10 @@ def visualise_simple_bar(input_item:pd.DataFrame|pd.Series, data_case:str, ranki
             visible=x_axis_visible
         )
 
-    # adding colours
+    # replacing colours where relevant
     if traces_marker_colour: # if it will all be one colour
         simple_bars.update_traces(
             marker_color=traces_marker_colour
-        )
-    else: # if we have specified a colour sequence
-        simple_bars.update_traces(
-            color=colour_guide,
-            color_discrete_sequence=colours
         )
 
     return simple_bars
