@@ -205,8 +205,8 @@ def visualise_single_pie(input_item:pd.DataFrame|pd.Series, data_case:str, ranki
     """
     visualise the output (ranking=(currently implemented:)"total") from 
     - all_characters_gender_df (data_case="gender")
-    - all_characters_racial_groups_df (data_case="racial_diversity")
-    - plural_vs_monoracial_fandoms_df (data_case="racial_groups")
+    - all_characters_racial_groups_df (data_case="racial_groups")
+    - plural_vs_monoracial_fandoms_df (data_case="racial_diversity")
     - fandom_market_share_srs (data_case="market_share")
     - interracial_srs (data_case="interracial_ships")
     - rpf_fic_df (data_case="rpf")
@@ -219,7 +219,7 @@ def visualise_single_pie(input_item:pd.DataFrame|pd.Series, data_case:str, ranki
     suffix = lbls.suffixes[ranking]
 
     if data_case == "racial_diversity": # prepping stuff
-        plural_vs_monoracial_fandoms = plural_vs_monoracial_fandoms.get(
+        input_item = input_item.get(
             ["fandoms_with_only_one_racial_group", "fandoms_with_multiple_racial_groups"]
         ).transpose().rename(index={
             "fandoms_with_only_one_racial_group": "one group", 
@@ -230,6 +230,7 @@ def visualise_single_pie(input_item:pd.DataFrame|pd.Series, data_case:str, ranki
     text_info = "label"
     text_position = None
     auto_margin = None
+    inside_text = None
     show_legend = None
     colours = None
     labels = input_item.index
@@ -264,7 +265,7 @@ def visualise_single_pie(input_item:pd.DataFrame|pd.Series, data_case:str, ranki
         colours = list(colour_palettes.gender_colours.values())
         title = f"Characters' gender distribution{suffix}"
     elif data_case == "racial_diversity":
-        text_position = "horizontal"
+        inside_text = "horizontal"
         colours = ["turquoise", "teal"]
         title = f"Fandoms with one vs multiple racial groups{suffix}"
     elif data_case == "rpf":
@@ -300,6 +301,8 @@ def visualise_single_pie(input_item:pd.DataFrame|pd.Series, data_case:str, ranki
     # updating stuff where needed
     if text_position:
         pie.update_traces(textposition=text_position)
+    if inside_text:
+        pie.update_traces(insidetextorientation=inside_text)
     if auto_margin != None:
         pie.update_traces(automargin=auto_margin)
     if show_legend != None:
