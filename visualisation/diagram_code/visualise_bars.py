@@ -106,7 +106,7 @@ def visualise_stacked_bars(input_df:pd.DataFrame, data_case:str, ranking:str):
             combo_dict["non-same-sex"] = combo_dict["non-same-sex"][1:]
 
             iterable_1 = combo_dict
-        iterable_2 = [reversed(iterable_1[item]) for item in iterable_1]
+        
         wlw_count = 0
         mlm_count = 0
         het_count = 0
@@ -116,11 +116,12 @@ def visualise_stacked_bars(input_df:pd.DataFrame, data_case:str, ranking:str):
 
     for item in iterable_1:
         if data_case == "minority_racial_groups":
-
             if "White" in item or \
             ("E Asian" in item and "Ind" not in item) \
             or item in iterable_2["other"].keys():
                 continue
+        elif data_case in ["gender_combos", "minority_gender_combos"]:
+            iterable_2 = list(reversed(iterable_1[item]))
 
         for instance in iterable_2:
             if data_case == "minority_racial_groups":
@@ -138,11 +139,9 @@ def visualise_stacked_bars(input_df:pd.DataFrame, data_case:str, ranking:str):
                     text = item
                 else: continue # if the group is not in the umbrella group, we check the next one
             elif data_case in ["gender_combos", "minority_gender_combos"]:
-            # item is umbrella type
-            # instance is specific combo
-
+                # item is umbrella type
+                # instance is specific combo
                 colours = colour_palettes.gender_combo_colours[item]
-
                 # setting colours & ticking up counters
                 if item == "mlm":
                     colour = colours[mlm_count]
@@ -374,6 +373,7 @@ def visualise_simple_bar(input_item:pd.DataFrame|pd.Series, data_case:str, ranki
         ]
         labels["value"] = "average ships per fandom"
         traces_marker_colour = 'indianred'
+        colour_guide = None
 
     elif data_case == "non_white_ships":
         title = f"Pairings with and without white and east asian characters{suffix}"
