@@ -7,9 +7,8 @@ from visualisation.vis_utils.df_utils.retrieve_numbers import (
     get_unique_values_list
 )
 from visualisation.vis_utils.df_utils.make_dfs import sort_df
-from visualisation.vis_utils.df_utils.hottest_char_utils import unify_doctors_and_PCs, find_tied_fandoms
+from visualisation.vis_utils.df_utils.hottest_char_utils import unify_doctors_and_PCs
 import pandas as pd
-import plotly.graph_objects as go
 
 def make_full_chars_df():
     """
@@ -159,43 +158,6 @@ def make_hottest_char_df(full_character_df:pd.DataFrame):
     ).sort_values(by=["fandom", "rank"]) # ordering by fandom & rank therein
 
     return hottest_rank_df
-
-def visualise_hottest_characters(hottest_rank_df:pd.DataFrame):
-    """
-    takes output dataframe of make_hottest_char_df
-
-    returns a plotly table figure of it
-    """
-
-    line_colour = 'slategrey'
-    header_fill_colour = 'skyblue'
-    body_fill_colour = 'aliceblue'
-
-    fig = go.Figure(data=[
-        go.Table(
-            header=dict(
-                values=list(hottest_rank_df.columns),
-                align='left',
-                line_color=line_colour,
-                fill_color=header_fill_colour,
-            ),
-            cells=dict(
-                values=[
-                    hottest_rank_df["fandom"], 
-                    hottest_rank_df["rank"], 
-                    hottest_rank_df["names"], 
-                    hottest_rank_df["no"],
-                ],
-                align='left',
-                line_color=line_colour,
-                fill_color=body_fill_colour,
-            ),
-            columnwidth=[0.3,0.1,1.4,0.07] # setting column width ratios
-        )
-    ])
-
-    return fig
-
 
 #notes:
 # available formats:  .png .jpeg .webp .svg .pdf 
