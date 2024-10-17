@@ -8,6 +8,7 @@ from visualisation.vis_utils.df_utils.retrieve_numbers import (
 )
 from visualisation.vis_utils.df_utils.make_dfs import sort_df
 from visualisation.vis_utils.df_utils.hottest_char_utils import unify_doctors_and_PCs
+import visualisation.vis_utils.diagram_utils.ranks as ranks
 import pandas as pd
 
 def make_full_chars_df():
@@ -57,28 +58,37 @@ def make_full_chars_df():
 
     return full_character_df
 
-# possibly also refactor this mess
 def make_hottest_char_df(full_character_df:pd.DataFrame):
     """
     takes output dataframe of make_full_chars_df
 
     returns a new df with the top hottest characters (characters who are in 3 or more ships) by fandom
     """
-
     # we need: 
-    hottest_df = full_character_df.copy().where(
+    hottest_df = full_character_df.copy()
+    
+    # getting columns & rows with multiple ships
+    hottest_df = hottest_df.where(
         cond=full_character_df["count"] > 1 # there needs to be multiple ships
-    ).get(["fandom", "full_name", "slash_ship", "gender", "race"]).dropna()
+    ).get([
+        "fandom", 
+        "full_name",
+        "slash_ship", 
+        "gender", 
+        # "race"
+    ]).dropna()
 
     hottest_df = unify_doctors_and_PCs(hottest_df) # unifying doctor whos & player characters
-
     hottest_df["fandom"] = clean_fandoms(hottest_df["fandom"]) # removing translations
 
     # group by fandom, by characters, count characters
-    hottest_df = get_label_counts(hottest_df, ["fandom", "full_name", "gender", "race"], "slash_ship")
-    hottest_df = hottest_df.rename(
-        columns={"count":"no_of_ships_they_in"}
-    ).reset_index()
+    hottest_df = get_label_counts(hottest_df, [
+        "fandom", 
+        "full_name", 
+        "gender", 
+        # "race"
+    ], "slash_ship")
+    hottest_df = hottest_df.rename(columns={"count":"no_of_ships_they_in"}).reset_index()
     hottest_df = sort_df(hottest_df, ["fandom", "no_of_ships_they_in"])
     
     # # figuring out which fandoms' characters are all tied for ship numbers
@@ -93,71 +103,53 @@ def make_hottest_char_df(full_character_df:pd.DataFrame):
     ).dropna()
 
     # ordering/grouping by fandom & number of ships
-    unique_fandoms = get_unique_values_list(hottest_df, "fandom")
-    hottest_chars_by_ship_no_dict = {}
-    for fandom in unique_fandoms: # for each fandom
-        hottest_chars_by_ship_no_dict[fandom] = {}
 
+    unique_fandoms = sorted(get_unique_values_list(hottest_df, "fandom"))
+    num_dict = {}
+    rankings_columns = ["fandom", "rank", "names", "no"]
+    rankings_list = [] 
+    for fandom in unique_fandoms: # for each fandom (in alphabetical order)
         fandom_group = hottest_df.where( # making group of only this fandom's values
             cond=hottest_df["fandom"] == fandom
         ).sort_values(by="no_of_ships_they_in").dropna() # sorting by number of ships
 
-        for num in [3,4,5,6,7,8]: # range of ships they can be in
-            char_rank_list = list(fandom_group["full_name"].where( # characters in that num of ships
-                fandom_group["no_of_ships_they_in"] == num
-            ).dropna())
+        num_dict[fandom] = []
+        for num in [8,7,6,5,4,3]: # range of ships they can be in
 
-            if len(char_rank_list) > 0: # if there are characters with that num of ships
-                hottest_chars_by_ship_no_dict[fandom][num] = char_rank_list
+            # characters in that num of ships
+            char_rank_list = list(
+                fandom_group["full_name"].where(fandom_group["no_of_ships_they_in"] == num).dropna()
+            )
+            # if any
+            if len(char_rank_list) > 0: 
+                # concat into str
+                names_list = sorted(char_rank_list) # sorting names alphabetically
+                names_str = make_name_string(names_list)
+                temp_dict = {
+                    "no_of_ships":num, 
+                    "names":names_str
+                }
+                num_dict[fandom].append(temp_dict)
 
-    # making dataframe where every row is one number of ships (index)
-    # and contains chars of that number by fandom (columns)
-    hottest_chars_by_ship_no = pd.DataFrame(hottest_chars_by_ship_no_dict)
-    hottest_chars_by_ship_no = sort_df(hottest_chars_by_ship_no)
-
-    # making a new dict for ranking order
-    hottest_chars_dict = {}
-    rank_lookup_dict = {
-        1: "1st",
-        2: "2nd",
-        3: "3rd",
-        4: "4th",
-    }
-    for fandom in hottest_chars_by_ship_no.columns:
-        all_chars = hottest_chars_by_ship_no[fandom].dropna() # getting all characters in fandom
-        hottest_chars_dict[fandom] = {}
-        count = 1
-        for index in all_chars.index:
-            names_list = sorted(all_chars.loc[index]) # sorting names alphabetically
-            no_of_ships = index # retrieving number of ships
-            names_str = make_name_string(names_list)
-
-            rank_no = rank_lookup_dict[count] # getting rank string
-            hottest_chars_dict[fandom][rank_no] = {
-                "no_of_ships": no_of_ships,
-                "names": names_str,
-            }
-            count += 1
-
-    # prepping columns & values for dataframe
-    rankings_columns = ["fandom", "rank", "names", "no"]
-    rankings_list = [] 
-    for fandom in hottest_chars_dict:
-        for rank in hottest_chars_dict[fandom]:
+        counter = 0
+        for rank in num_dict[fandom]: # adding rank numbers
             temp_list = [
                 fandom, 
-                rank,
-                hottest_chars_dict[fandom][rank]["names"],
-                hottest_chars_dict[fandom][rank]["no_of_ships"]
+                ranks.top_10_list[counter],
+                rank["names"],
+                rank["no_of_ships"]
             ]
             rankings_list.append(temp_list)
+
+            counter += 1
 
     hottest_rank_df = pd.DataFrame(
         data=rankings_list, 
         columns=rankings_columns
-    ).sort_values(by=["fandom", "rank"]) # ordering by fandom & rank therein
+    )#.sort_values(by=["fandom", "rank"]) # ordering by fandom & rank therein
 
     return hottest_rank_df
+
 
 #notes:
 # available formats:  .png .jpeg .webp .svg .pdf 
