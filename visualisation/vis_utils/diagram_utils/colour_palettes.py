@@ -5,6 +5,12 @@ sapphic_table = { # full sapphic tables
     "body_2": 'papayawhip', # to go with non_white header colours
 }
 
+blue_table = {
+    "lines": 'slategrey', # colour of lines
+    "header": 'skyblue', # colour of header row
+    "body": 'aliceblue', # colour of remaining rows
+}
+
 non_white_colours = ["skyblue", "lightseagreen", "teal", "darkslategrey"]
 
 oranges = ["orangered", "gold", "orange"]
