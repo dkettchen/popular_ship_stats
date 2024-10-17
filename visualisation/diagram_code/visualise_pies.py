@@ -213,6 +213,9 @@ def visualise_single_pie(input_item:pd.DataFrame|pd.Series, data_case:str, ranki
     
     as a single pie chart
     """
+    #making input case insensitive
+    data_case = data_case.lower()
+    ranking = ranking.lower()
     suffix = lbls.suffixes[ranking]
 
     if data_case == "racial_diversity": # prepping stuff

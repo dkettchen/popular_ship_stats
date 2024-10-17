@@ -52,13 +52,16 @@ def visualise_non_white_counts(input_df:pd.DataFrame, ranking:str):
 # stacked bars
 def visualise_stacked_bars(input_df:pd.DataFrame, data_case:str, ranking:str):
     """
-    visualises output from 
+    visualises output (ranking=(currently implemented:)"total") from 
     - all_characters_racial_groups_df (data_case="minority_racial_groups")
     - total_gender_combo_percent_df (data_case="gender_combos")
     - total_gender_combo_percent_df (data_case="minority_gender_combos") #TODO
 
     as grouped bar charts with 3 bars in each group
     """
+    #making input case insensitive
+    data_case = data_case.lower()
+    ranking = ranking.lower()
     suffix = lbls.suffixes[ranking]
 
     # defaults to replace
@@ -200,12 +203,15 @@ def visualise_stacked_bars(input_df:pd.DataFrame, data_case:str, ranking:str):
 # grouped bars
 def visualise_3_grouped_bars(input_item:pd.DataFrame|pd.Series, data_case:str, ranking:str):
     """
-    visualises output from 
+    visualises output (ranking=(currently implemented:)"total") from 
     - total_gender_combos_srs (data_case="no_half_only")
     - highest_of_this_type_df (data_case="top_fandoms")
 
     as grouped bar charts with 3 bars in each group
     """
+    #making input case insensitive
+    data_case = data_case.lower()
+    ranking = ranking.lower()
     suffix = lbls.suffixes[ranking]
 
     if data_case == "no_half_only":
@@ -323,7 +329,7 @@ def visualise_3_grouped_bars(input_item:pd.DataFrame|pd.Series, data_case:str, r
 # non stacked, non grouped bars
 def visualise_simple_bar(input_item:pd.DataFrame|pd.Series, data_case:str, ranking:str):
     """
-    visualises output from 
+    visualises output (ranking=(currently implemented:)"total") from 
     - highest_racial_diversity_df (data_case="racial_diversity")
     - average_gender_combo_srs (data_case="average_ship_combo")
     - non_white_ships_srs (data_case="non_white_ships")
@@ -331,6 +337,9 @@ def visualise_simple_bar(input_item:pd.DataFrame|pd.Series, data_case:str, ranki
     
     as simple bar charts (not stacked or grouped)
     """
+    #making input case insensitive
+    data_case = data_case.lower()
+    ranking = ranking.lower()
     suffix = lbls.suffixes[ranking]
 
     # defaults to replace
