@@ -1,10 +1,6 @@
 from visualisation.vis_utils.read_csv_to_df import df_from_csv
 from visualisation.ao3_all_data_2013_2023.vis_characters_file import (
-    total_chars_df,
-    all_characters_gender_df,
     average_gender_per_fandom_df,
-    all_characters_racial_groups_df,
-    make_racial_diversity_df,
     plural_vs_monoracial_fandoms_df,
     highest_racial_diversity_df,
     average_racial_diversity_df,
@@ -14,16 +10,13 @@ from visualisation.ao3_all_data_2013_2023.vis_chars_and_ships import (
     make_hottest_char_df,
 )
 from visualisation.ao3_all_data_2013_2023.vis_ships_file import (
-    total_gender_combo_percent_df,
     fandom_market_share_srs,
     ship_per_fandom_by_type_df,
     total_gender_combos_srs,
     highest_of_this_type_df,
     average_gender_combo_srs,
-    total_race_combo_df,
     interracial_srs,
     non_white_ships_srs,
-    rpf_fic_df,
 )
 from visualisation.input_data_code.get_data_df import get_data_df
 from visualisation.diagram_code.visualise_bars import (

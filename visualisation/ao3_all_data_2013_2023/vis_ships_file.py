@@ -1,75 +1,7 @@
 from visualisation.vis_utils.clean_fandoms_for_vis import clean_fandoms
-from visualisation.vis_utils.sort_race_combos import sort_race_combos
-from visualisation.vis_utils.df_utils.retrieve_numbers import (
-    get_label_counts, 
-    sum_label_nums
-)
-from visualisation.vis_utils.df_utils.make_dfs import sort_df
+from visualisation.vis_utils.df_utils.retrieve_numbers import get_label_counts
+from visualisation.input_data_code.get_data_df import get_data_df
 import pandas as pd
-
-def total_ships_df(ships_df:pd.DataFrame): # util
-    """
-    takes read-in dataframe from ships file
-
-    returns a dataframe with the total number of ships in the file
-    """
-    total_ships = ships_df.copy().get(["slash_ship"]).count().rename(
-        index={"slash_ship":"total_num_of_ships"}
-    )
-
-    return total_ships
-
-def total_gender_combo_percent_df(ships_df:pd.DataFrame):
-    """
-    takes read-in dataframe from ships file
-
-    returns a dataframe with the total numbers of ships of each gender combo
-    """
-    total_gender_percentages = ships_df.copy().get(
-        ["slash_ship","gender_combo"]
-    )
-
-    total_gender_percentages = get_label_counts(total_gender_percentages, "gender_combo", "slash_ship")
-    total_gender_percentages = total_gender_percentages.rename(index={
-        "F / M": "M / F",
-        "Ambig / M": "M / Ambig",
-        "Ambig / F": "F / Ambig",
-        "M | Other / M": "M / M | Other"
-    })
-
-    total_gender_percentages = sum_label_nums(total_gender_percentages, "index")
-    total_gender_percentages = sort_df(total_gender_percentages, "count", asc=True) # asc??
-
-    return total_gender_percentages
-
-def get_ships_per_fandom(ships_df:pd.DataFrame): # util
-    """
-    takes read-in dataframe from ships file
-
-    returns a dataframe with only the fandom, slash_ship, gender_combo, and race_combo columns
-    """
-    ships_per_fandom = ships_df.copy().get(["fandom", "slash_ship", "gender_combo", "race_combo"])
-    return ships_per_fandom
-
-def make_ships_per_fandom_df(ships_df:pd.DataFrame): # util
-    """
-    takes read-in dataframe from ships file
-
-    returns a dataframe with the number of ships per fandom
-    """
-    ships_per_fandom = get_ships_per_fandom(ships_df)
-    ships_counts = get_label_counts(ships_per_fandom, "fandom", "slash_ship")
-
-    ships_per_fandom = ships_per_fandom.join(
-        other=ships_counts["count"], 
-        on=ships_per_fandom.fandom, 
-        how="inner", 
-    ).rename(
-        columns={"count": "total_ships"}
-    )
-    ships_per_fandom.pop("key_0")
-
-    return ships_per_fandom
 
 def fandom_market_share_srs(ships_df:pd.DataFrame):
     """
@@ -77,8 +9,8 @@ def fandom_market_share_srs(ships_df:pd.DataFrame):
 
     returns a series with the fandoms that account for more than 1% of total ships
     """
-    ships_per_fandom = get_ships_per_fandom(ships_df)
-    total_ships = total_ships_df(ships_df)
+    ships_per_fandom = get_data_df(ships_df, data_case="ships_per_fandom_util")
+    total_ships = get_data_df(ships_df, data_case="total_ships")
 
     fandom_market_share = get_label_counts(ships_per_fandom, "fandom", "slash_ship")
     
@@ -100,7 +32,7 @@ def ship_per_fandom_by_type_df(ships_df:pd.DataFrame):
     returns a dataframe with various stats on ships of different types by fandom
     (total number per fandom, % of fandom's ships, etc)
     """
-    ships_per_fandom = make_ships_per_fandom_df(ships_df)
+    ships_per_fandom = get_data_df(ships_df, data_case="ships_per_fandom")
     ships_per_fandom_by_type = ships_per_fandom.copy().get(
         ["fandom", "total_ships", "gender_combo"]
     )
@@ -216,29 +148,9 @@ def average_gender_combo_srs(ships_per_fandom_by_type:pd.DataFrame):
 
     return average_gender_combo_per_fandom_series
 
-def total_race_combo_df(ships_df:pd.DataFrame):
-    """
-    takes read-in dataframe from ships file
-
-    returns a dataframe with the total numbers of ships of each race combo
-    """
-    total_race_combo_counts = ships_df.get(["slash_ship","race_combo"])
-
-    unique_combos = sorted(list(set(total_race_combo_counts.race_combo)))
-    rename_dict = sort_race_combos(unique_combos)
-
-    total_race_combo_counts = get_label_counts(total_race_combo_counts, "race_combo", "slash_ship")
-    total_race_combo_counts = total_race_combo_counts.rename(
-        index=rename_dict,
-    )
-    total_race_combo_counts = sum_label_nums(total_race_combo_counts, "index")
-    total_race_combo_counts = sort_df(total_race_combo_counts, "count")
-
-    return total_race_combo_counts
-
 def interracial_srs(total_race_combo_counts:pd.DataFrame):
     """
-    takes output dataframe from total_race_combo_df
+    takes output dataframe from get_data_df (data_case="total_race_combos")
 
     returns a series with the total number of interracial, non-interracial and ambiguous ships
     """
@@ -261,7 +173,7 @@ def interracial_srs(total_race_combo_counts:pd.DataFrame):
 
 def non_white_ships_srs(total_race_combo_counts:pd.DataFrame): 
     """
-    takes output dataframe from total_race_combo_df
+    takes output dataframe from get_data_df (data_case="total_race_combos")
 
     returns a series with the total number of ships that involve white ppl, involve east asian ppl, 
     do not involve white ppl, and involve neither white nor east asian people
@@ -299,16 +211,3 @@ def non_white_ships_srs(total_race_combo_counts:pd.DataFrame):
     )
 
     return non_white_ships_counts
-
-def rpf_fic_df(ships_df:pd.DataFrame):
-    """
-    takes read-in dataframe from ships file
-
-    returns a dataframe with the number of rpf and non-rpf ships
-    """
-    rpf_vs_fic_df = ships_df.get(
-        ["slash_ship", "rpf_or_fic"]
-    )
-    rpf_vs_fic_df = get_label_counts(rpf_vs_fic_df, "rpf_or_fic", "slash_ship")
-
-    return rpf_vs_fic_df

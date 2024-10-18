@@ -6,42 +6,6 @@ from visualisation.vis_utils.df_utils.retrieve_numbers import (
 from visualisation.vis_utils.df_utils.make_dfs import sort_df
 import pandas as pd
 
-def total_chars_df(characters_df:pd.DataFrame):
-    """
-    takes read-in characters file dataframe
-
-    returns a dataframe with the total number of characters in the file/given df
-    """
-    total_chars = characters_df.get(["full_name"]).count().rename(
-        index={"full_name":"total_num_of_characters"}
-    )
-    return total_chars
-
-def all_characters_gender_df(characters_df:pd.DataFrame):
-    """
-    takes read-in characters file dataframe
-
-    returns a dataframe with the total numbers of characters of each gender tag
-    """
-    total_gender_percentages = characters_df.get(["full_name","gender"])
-    total_gender_percentages = get_label_counts(total_gender_percentages, "gender", "full_name")
-
-    total_gender_percentages.index = pd.Categorical( # to set a custom order!
-        total_gender_percentages.index, 
-        [
-            "M | Other",
-            "F | Other",
-            "F",
-            "Other",
-            "M | F | Other",
-            "Ambig",
-            "M",
-        ]
-    )
-    total_gender_percentages = total_gender_percentages.sort_index()
-
-    return total_gender_percentages
-
 def average_gender_per_fandom_df(characters_df:pd.DataFrame):
     """
     takes read-in characters file dataframe
@@ -73,42 +37,10 @@ def average_gender_per_fandom_df(characters_df:pd.DataFrame):
 
     return average_gender_per_fandom
 
-def all_characters_racial_groups_df(characters_df:pd.DataFrame):
+def plural_vs_monoracial_fandoms_df(characters_df:pd.DataFrame, racial_div_by_fandom:pd.DataFrame):
     """
-    takes read-in characters file dataframe
-
-    returns a dataframe with the total numbers of characters of each race tag
-    """
-    total_race_percentages = characters_df.get(
-        ["full_name","race"]
-    )
-    total_race_percentages = get_label_counts(total_race_percentages, "race", "full_name")
-    total_race_percentages = sort_df(total_race_percentages, "count")
-
-    return total_race_percentages
-
-def make_racial_diversity_df(characters_df:pd.DataFrame):
-    """
-    takes read-in characters file dataframe
-
-    returns a dataframe with the number of racial groups in each fandom
-    """
-    racial_div_by_fandom = characters_df.copy().get(
-        ["full_name","fandom","race"]
-    )
-    new_series = get_label_counts(racial_div_by_fandom, ["fandom", "race"], "full_name")
-
-    new_df = pd.DataFrame(
-        index=new_series.index,
-        columns=["count"],
-        data=new_series
-    )
-
-    return new_df
-
-def plural_vs_monoracial_fandoms_df(characters_df:pd.DataFrame, racial_div_by_fandom):
-    """
-    takes read-in characters file dataframe and dataframe output by make_racial_diversity_df
+    takes read-in characters file dataframe and dataframe output 
+    by get_data_df (data_case="racial_diversity")
 
     returns a dataframe with the number of fandoms that contain only one racial group 
     and the ones that contain more than one group
@@ -139,7 +71,7 @@ def plural_vs_monoracial_fandoms_df(characters_df:pd.DataFrame, racial_div_by_fa
 
 def highest_racial_diversity_df(racial_div_by_fandom:pd.DataFrame):
     """
-    takes output dataframe from make_racial_diversity_df
+    takes output dataframe from get_data_df (data_case="racial_diversity")
 
     returns a dataframe with the top 6 fandoms that contain the most different racial groups
     """
@@ -153,9 +85,9 @@ def highest_racial_diversity_df(racial_div_by_fandom:pd.DataFrame):
     
     return highest_racial_div.head(6) # everything else was under 5
 
-def average_racial_diversity_df(racial_div_by_fandom:pd.DataFrame): # TODO: fix series here too
+def average_racial_diversity_df(racial_div_by_fandom:pd.DataFrame):
     """
-    takes output dataframe from make_racial_diversity_df
+    takes output dataframe from get_data_df (data_case="racial_diversity")
 
     returns a dataframe with the average number of racial groups per fandom
     """
