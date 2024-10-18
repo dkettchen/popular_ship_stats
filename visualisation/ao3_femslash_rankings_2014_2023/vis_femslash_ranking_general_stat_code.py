@@ -8,6 +8,7 @@ from visualisation.vis_utils.df_utils.retrieve_numbers import (
 from visualisation.vis_utils.df_utils.make_dfs import sort_df, get_year_df
 from copy import deepcopy
 import pandas as pd
+import visualisation.vis_utils.diagram_utils.ranks as ranks
 
 # marketshare of fandoms each year
 def fandom_market_share_by_year(ship_info_df:pd.DataFrame):
@@ -78,7 +79,7 @@ def top_5_fandoms_by_year(market_share:dict, popularity:dict):
     """
     # make a df with 1st, 2nd, 3rd place as index
     # and top by number of ships and top by popularity as columns
-    index = ["1st", "2nd", "3rd", "4th", "5th"]
+    index = ranks.top_10_list[:5]
     columns = ["most_ships", "most_popular"]
 
     top_5_dict = {}
@@ -210,14 +211,14 @@ def longest_running_top_5_ships(appearances:pd.DataFrame, streaks:pd.DataFrame):
     top_5_for_appearances = appearances.head()
     top_5_for_streaks = streaks.head()
 
-    ranks = ["1st", "2nd", "3rd", "4th", "5th"]
+    rank_nos = ranks.top_10_list[:5]
     rank_dict = {
         "top_ships_by_appearances": top_5_for_appearances["ship"].values,
         "no_of_appearances": top_5_for_appearances["no_of_appearances"].values,
         "top_ships_by_streak": top_5_for_streaks["ship"].values,
         "longest_streak": top_5_for_streaks["longest_streak"].values
     }
-    new_df = pd.DataFrame(index=ranks, data=rank_dict)
+    new_df = pd.DataFrame(index=rank_nos, data=rank_dict)
 
     return new_df
 
