@@ -3,7 +3,8 @@ import plotly.graph_objects as go
 import visualisation.vis_utils.diagram_utils.colour_palettes as colour_palettes
 import visualisation.vis_utils.diagram_utils.labels as lbls
 import plotly.express as px
-from visualisation.vis_utils.remove_translation import remove_translation
+from visualisation.vis_utils.diagram_utils.make_subplots_by_year import make_subplots_by_year
+from visualisation.vis_utils.diagram_utils.make_max_count import make_max_count
 
 
 def visualise_non_white_counts(input_df:pd.DataFrame, ranking:str):
@@ -451,3 +452,53 @@ def visualise_simple_bar(input_item:pd.DataFrame|pd.Series, data_case:str, ranki
         )
 
     return simple_bars
+
+
+# could refactor this with non white counts?
+def visualise_grouped_bars(input_item:pd.DataFrame, ranking:str):
+    """
+    visualises 
+    as a grouped bar chart
+    """
+    #making input case insensitive
+    ranking = ranking.lower()
+
+    fig = go.Figure()
+
+    temp_df = pd.DataFrame()
+    for year in input_item:
+        temp_df[year] = input_item[year]
+
+    bg_colour = "turquoise"
+    text = temp_df.index
+    labels = [str(year) for year in temp_df.columns]
+
+    suffix = lbls.suffixes[ranking]
+
+    counter = 0
+    for combo in temp_df.index:
+        values = temp_df.loc[combo]
+        colour = colour_palettes.gender_combo_dict[combo]
+
+        fig.add_trace(
+            go.Bar(
+                x=labels,
+                y=values,
+                text=values,
+                textfont={"size": 8},
+                name=text[counter],
+                marker_color=colour
+            )
+        )
+
+        counter += 1
+
+    fig.update_layout(
+        barmode='group', 
+        title=f"Gender combos by year{suffix}",
+        plot_bgcolor=bg_colour,
+        barcornerradius=5
+    )
+    
+    return fig
+

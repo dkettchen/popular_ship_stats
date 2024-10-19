@@ -9,6 +9,7 @@ from visualisation.ao3_overall_rankings_2013_2023.vis_overall_ranking_general_st
     get_rpf
 )
 from visualisation.diagram_code.visualise_pies import visualise_pies
+from visualisation.diagram_code.visualise_bars import visualise_grouped_bars
 
 # get data & turn into big df
 ship_joined_overall_df = make_joined_ranking_df("overall")
@@ -81,6 +82,14 @@ gender_percent_pies.write_image(
 
 # gender combos total
 total_gender_combos = get_gender_combos(overall_ship_info_df)
+gender_combo_pies = visualise_grouped_bars(total_gender_combos, "overall")
+gender_combo_pies.write_image(
+    "visualisation/ao3_overall_rankings_2013_2023/ao3_overall_rankings_charts/overall_gender_combos_2013_2023.png", 
+    width=1300, 
+    height=600, 
+    scale=2
+)
+
 # gender combo minorities (same info, second diagram)
 
 # average rank by char gender
