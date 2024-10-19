@@ -28,6 +28,13 @@ colour_lookup_dict = make_colour_lookup(overall_ship_info_df)
 
 # how much gen vs slash (total)
 gen_vs_slash_total_dict = get_counts(overall_ship_info_df, "fic_type", "ship")
+gen_vs_slash_pies = visualise_pies(gen_vs_slash_total_dict, "fic_type", "overall")
+gen_vs_slash_pies.write_image(
+    "visualisation/ao3_overall_rankings_2013_2023/ao3_overall_rankings_charts/overall_fic_type_2013_2023.png", 
+    width=1300, 
+    height=600, 
+    scale=2
+)
 # how much gen vs slash (by gender combo)
 gen_vs_slash_by_gender_combo = get_by_gender_combo(overall_ship_info_df, "fic_type")
 
