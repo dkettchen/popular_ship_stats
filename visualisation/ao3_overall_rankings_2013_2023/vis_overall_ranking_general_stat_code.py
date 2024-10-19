@@ -40,15 +40,12 @@ def get_gender_combos(input_df:pd.DataFrame):
     for year in unique_year_list:
         year_df = get_year_df(new_df, year)
 
-        # this may be able to be implemented as a data_case in 
-        # get_data_df(data_case="total_gender_combos") instead 
-        # (currently uses "slash_ship" instead of "ship" -> would need to be adjusted
-        # also asc -> I don't think it needs to be asc)
-        year_df = get_label_counts(year_df, "gender_combo", "ship")
-        year_df = rename_gender_combos(year_df)
-        year_df = sum_label_nums(year_df, "index")
+        year_df = rename_gender_combos(year_df, column=True) # this should rename the labels first
+        year_df = get_label_counts(year_df, "gender_combo", "ship") # then counts them
         year_df = sort_df(year_df, "count")
 
         year_dict[int(year)] = year_df["count"]
 
     return year_dict
+
+# def fic_type_by_gender_combo(input_df:pd.DataFrame):
