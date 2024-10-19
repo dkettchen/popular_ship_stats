@@ -36,7 +36,7 @@ def edit_ranking_df_columns(input_df_dict:dict, ranking:str):
         
             if ranking == "overall":
                 # getting rid of extra ranks in 2013
-                new_df = new_df.where(new_df["rank"] <= 100).dropna()
+                new_df = new_df.where(new_df["rank_no"] <= 100).dropna()
 
         new_df_dict[year] = new_df
 
