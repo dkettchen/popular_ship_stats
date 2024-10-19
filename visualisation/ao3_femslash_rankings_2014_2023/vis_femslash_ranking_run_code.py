@@ -1,9 +1,7 @@
 from visualisation.vis_utils.remove_member_columns import remove_members_from_df
 from visualisation.vis_utils.join_member_info import join_character_info_to_df
 from visualisation.vis_utils.make_colour_lookup import make_colour_lookup
-from visualisation.ao3_femslash_rankings_2014_2023.vis_femslash_ranking_utils import (
-    make_joined_femslash_df
-)
+from visualisation.input_data_code.make_joined_ranking_df import make_joined_ranking_df
 from visualisation.ao3_femslash_rankings_2014_2023.vis_femslash_ranking_general_stat_code import (
     fandom_market_share_by_year,
     fandoms_popularity_by_year,
@@ -38,7 +36,7 @@ from visualisation.diagram_code.visualise_tables import (
 )
 
 # get data & turn into big df
-ship_joined_femslash_df = make_joined_femslash_df()
+ship_joined_femslash_df = make_joined_ranking_df("femslash")
 
 # make useable dfs
 femslash_ship_info_df = remove_members_from_df(ship_joined_femslash_df)
