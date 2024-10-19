@@ -30,3 +30,28 @@ def make_ships_df():
     df = df_from_csv("data/fifth_clean_up_data/stage_5_ships.csv")
     return df
 
+def make_yearly_df_dict(ranking:str):
+    """
+    returns a dictionary with year keys and dataframe values
+
+    each dataframe is the corresponding year's (currently implemented:) 
+    ao3 ranking data as read from the data/fifth_clean_up_data/ folder
+
+    - for femslash ranking: ranking="femslash"
+    - for overall ranking: ranking="overall"
+    - for annual ranking: ranking="annual"
+    """
+    if ranking == "femslash":
+        years = [2014,2015,2016,2017,2019,2020,2021,2022,2023]
+    elif ranking == "overall":
+        years = [2013,2014,2015,2016,2017,2019,2020,2021,2022,2023]
+    elif ranking == "annual":
+        years = [2016,2017,2019,2020,2021,2022,2023]
+        ranking = "data"
+
+    df_dict = {}
+    for year in years:
+        filepath = f"data/fifth_clean_up_data/ao3_{year}/stage_5_ao3_{year}_{ranking}.csv"
+        df_dict[year] = df_from_csv(filepath)
+
+    return df_dict
