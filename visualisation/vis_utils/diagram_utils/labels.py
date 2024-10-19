@@ -13,7 +13,8 @@ interracial_categories = [
 
 suffixes = {
     "femslash" : " (AO3 femslash ranking 2014-2023)",
-    "total": " (AO3 2013-2023)"
+    "total": " (AO3 2013-2023)",
+    "overall": " (AO3 overall ranking 2013-2023)"
 }
 
 racial_group_umbrellas = { # racial group umbrella groups
