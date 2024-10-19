@@ -62,7 +62,7 @@ def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str):
         colours = ["deeppink", "darkred"]
     elif data_case == "gender":
         title = f"Genders by year{suffix}"
-        colours = colour_palettes.violets
+        #colours = colour_palettes.violets
     elif data_case in ["race", "race_combos"]:
         colourway = px.colors.qualitative.Pastel + px.colors.qualitative.Prism + \
         px.colors.qualitative.Vivid + px.colors.qualitative.Bold
@@ -105,8 +105,7 @@ def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str):
         elif data_case == "gender":
             labels = year_df["gender"]
             values = year_series
-            if ranking == "overall":
-                colours = [colour_palettes.gender_colours[gender] for gender in year_df["gender"]]
+            colours = [colour_palettes.gender_colours[gender] for gender in labels]
         elif data_case in ["race", "race_combos"]:
             labels = year_series.index
             if ranking == "femslash":
