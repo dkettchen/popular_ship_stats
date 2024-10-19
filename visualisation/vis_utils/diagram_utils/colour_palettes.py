@@ -34,4 +34,21 @@ gender_combo_colours = {
     "ambiguous": ["darkolivegreen", "limegreen", "mediumseagreen", "olive"],
 }
 
+gender_combo_dict = {
+    "M / M | Other": "azure", 
+    "M | Other / M / M": "turquoise", 
+    "M / M": "steelblue",
+    "F / F | Other": "red", 
+    "F | Other / F | Other": "orange", 
+    "F / F": "tomato",
+    "F / Other": "silver", 
+    "M / Other": "grey", 
+    "F / M / M": "gainsboro", 
+    "M / F": "black",
+    "M | F | Other / M | F | Other": "darkolivegreen", 
+    "F / Ambig": "limegreen", 
+    "M | Other / Ambig": "mediumseagreen", 
+    "M / Ambig": "olive",
+}
+
 medals = ['gold', 'slategrey', 'chocolate']
