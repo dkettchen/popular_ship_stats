@@ -33,7 +33,7 @@ def get_rpf(input_df:pd.DataFrame):
     """
     takes a ship_info_df
 
-    returns a dict with series values containing the number of rpf and fictional ships that year
+    returns a dict with df values containing the number of rpf and fictional ships that year
     """
 
     new_df = input_df.copy()
@@ -45,7 +45,7 @@ def get_rpf(input_df:pd.DataFrame):
 
         year_df = get_data_df(year_df, "rpf", "overall")
         
-        year_dict[int(year)] = year_df["count"]
+        year_dict[int(year)] = year_df.rename(columns={"count":"no_of_ships"})
 
     return year_dict
 

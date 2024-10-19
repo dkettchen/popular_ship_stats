@@ -8,6 +8,7 @@ from visualisation.ao3_overall_rankings_2013_2023.vis_overall_ranking_general_st
     get_by_gender_combo,
     get_rpf
 )
+from visualisation.diagram_code.visualise_pies import visualise_pies
 
 # get data & turn into big df
 ship_joined_overall_df = make_joined_ranking_df("overall")
@@ -32,6 +33,14 @@ gen_vs_slash_by_gender_combo = get_by_gender_combo(overall_ship_info_df, "fic_ty
 
 # how much rpf vs fic (total)
 rpf_total_dict = get_rpf(overall_ship_info_df)
+rpf_fig = visualise_pies(rpf_total_dict, "rpf", "overall")
+rpf_fig.write_image(
+    "visualisation/ao3_overall_rankings_2013_2023/ao3_overall_rankings_charts/overall_rpf_2013_2023.png", 
+    width=1300, 
+    height=600, 
+    scale=2
+)
+
 # how much rpf vs fic (by gender combo)
 rpf_by_gender_combo = get_by_gender_combo(overall_ship_info_df, "rpf_or_fic")
 
@@ -55,7 +64,7 @@ rpf_by_gender_combo = get_by_gender_combo(overall_ship_info_df, "rpf_or_fic")
 
 # gender percentages total
 gender_percent_total = get_counts(overall_character_info_df, "gender", "full_name")
-# gender minorities
+# gender minorities (same info, second diagram)
 
 # gender combos total
 total_gender_combos = get_gender_combos(overall_ship_info_df)
@@ -71,10 +80,10 @@ total_gender_combos = get_gender_combos(overall_ship_info_df)
 
 # race percentages total
 race_percent_total = get_counts(overall_character_info_df, "race", "full_name")
-# race minorities
+# race minorities (same info, second diagram)
 
 # race combo totals
-# race combo minorities
+# race combo minorities (same info, second diagram)
 
 # multi racial characters totals
 # multi racial involved ships totals
