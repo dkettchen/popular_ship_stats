@@ -87,6 +87,13 @@ total_gender_combos = get_gender_combos(overall_ship_info_df)
 
 # race percentages total
 race_percent_total = get_counts(overall_character_info_df, "race", "full_name")
+race_percent_pies = visualise_pies(race_percent_total, "race", "overall")
+race_percent_pies.write_image(
+    "visualisation/ao3_overall_rankings_2013_2023/ao3_overall_rankings_charts/overall_racial_distr_2013_2023.png", 
+    width=1300, 
+    height=600, 
+    scale=2
+)
 # race minorities (same info, second diagram)
 
 # race combo totals
