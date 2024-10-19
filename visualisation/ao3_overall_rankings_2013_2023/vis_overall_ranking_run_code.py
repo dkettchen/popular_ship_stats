@@ -5,7 +5,7 @@ from visualisation.vis_utils.make_colour_lookup import make_colour_lookup
 from visualisation.ao3_overall_rankings_2013_2023.vis_overall_ranking_general_stat_code import (
     get_fic_type,
     get_gender_combos,
-    fic_type_by_gender_combo,
+    get_by_gender_combo,
     get_rpf
 )
 
@@ -28,11 +28,12 @@ colour_lookup_dict = make_colour_lookup(overall_ship_info_df)
 # how much gen vs slash (total)
 gen_vs_slash_total_dict = get_fic_type(overall_ship_info_df)
 # how much gen vs slash (by gender combo)
-gen_vs_slash_by_gender_combo = fic_type_by_gender_combo(overall_ship_info_df)
+gen_vs_slash_by_gender_combo = get_by_gender_combo(overall_ship_info_df, "fic_type")
 
 # how much rpf vs fic (total)
 rpf_total_dict = get_rpf(overall_ship_info_df)
 # how much rpf vs fic (by gender combo)
+rpf_by_gender_combo = get_by_gender_combo(overall_ship_info_df, "rpf_or_fic")
 
 # fandom market share by numbers
 # fandom market share by rank popularity
