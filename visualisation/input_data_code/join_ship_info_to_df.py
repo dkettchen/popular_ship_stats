@@ -34,7 +34,6 @@ def join_ship_info_to_df(input_df_dict:dict, ranking:str):
 
         # making a df that has a gen & a slash version of each ship
         ships_df = pd.concat([slash_df, gen_df])
-        print(slash_df.shape, gen_df.shape, ships_df.shape)
 
         ships_df = ships_df.get([
             "ship",
