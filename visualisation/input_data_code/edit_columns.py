@@ -10,7 +10,9 @@ def edit_ranking_df_columns(input_df_dict:dict, ranking:str):
     - if ranking="overall":
         the "new_works", "release_date", and "data_set" columns have been removed, 
         a "year" column has been added, and in the 2013 set, the "change" column has been 
-        filled with "new" rather than None values, and all ranks above 100 have been removed
+        filled with "new" rather than None values, and all ranks above 100 have been removed, 
+        and in the 2014 set, the "change" column has been filled with "old" values where there 
+        were None values ("new" values stay intact)
     """
 
     new_df_dict = {}
