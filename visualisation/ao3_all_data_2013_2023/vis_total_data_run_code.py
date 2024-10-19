@@ -30,9 +30,9 @@ from visualisation.diagram_code.visualise_tables import visualise_single_table
 # read from char file make a df
 characters_df = df_from_csv("data/fifth_clean_up_data/stage_5_characters.csv")
 
-total_characters = get_data_df(characters_df, "total_chars")
+total_characters = get_data_df(characters_df, "total_chars", "total")
 
-total_gender_percentages = get_data_df(characters_df, "total_genders")
+total_gender_percentages = get_data_df(characters_df, "total_genders", "total")
 total_genders_fig = visualise_single_pie(total_gender_percentages, "gender", "total")
 total_genders_fig.write_image(
     "visualisation/ao3_all_data_2013_2023/ao3_all_data_charts/gender_diagrams/all_ao3_characters_gender_distr_2013_2023.png", 
@@ -51,7 +51,7 @@ minority_genders_fig.write_image(
 
 average_gender_df = average_gender_per_fandom_df(characters_df)
 
-total_race_percentages = get_data_df(characters_df, "total_racial_groups")
+total_race_percentages = get_data_df(characters_df, "total_racial_groups", "total")
 total_race_groups_fig = visualise_single_pie(total_race_percentages, "racial_groups", "total")
 total_race_groups_fig.write_image(
     "visualisation/ao3_all_data_2013_2023/ao3_all_data_charts/racial_groups_diagrams/all_ao3_characters_all_racial_groups_2013_2023.png", 
@@ -68,7 +68,7 @@ total_racial_minority_fig.write_image(
     scale=2
 )
 
-racial_div_by_fandom = get_data_df(characters_df, "racial_diversity")
+racial_div_by_fandom = get_data_df(characters_df, "racial_diversity", "total")
 
 plural_vs_monoracial_fandoms = plural_vs_monoracial_fandoms_df(characters_df, racial_div_by_fandom)
 plural_vs_monoracial_fig = visualise_single_pie(plural_vs_monoracial_fandoms, "racial_diversity", "total")
@@ -103,7 +103,7 @@ hottest_rank_fig.write_image(
 # read from ships file make a df
 ships_df = df_from_csv("data/fifth_clean_up_data/stage_5_ships.csv")
 
-total_gender_combo_percentages = get_data_df(ships_df, "total_gender_combos")
+total_gender_combo_percentages = get_data_df(ships_df, "total_gender_combos", "total")
 total_gender_percent_fig = visualise_stacked_bars(total_gender_combo_percentages, "gender_combos", "total")
 total_gender_percent_fig.write_image(
     "visualisation/ao3_all_data_2013_2023/ao3_all_data_charts/gender_diagrams/all_ao3_ranked_ships_gender_combos_2013_2023.png", 
@@ -158,7 +158,7 @@ average_gender_combo_fig.write_image(
     scale=2
 )
 
-total_race_combo_counts = get_data_df(ships_df, "total_race_combos")
+total_race_combo_counts = get_data_df(ships_df, "total_race_combos", "total")
 
 interracial_ships_counts = interracial_srs(total_race_combo_counts)
 interracial_fig = visualise_single_pie(interracial_ships_counts, "interracial_ships", "total")
@@ -178,7 +178,7 @@ non_white_fig.write_image(
     scale=2
 )
 
-rpf_vs_fic_df = get_data_df(ships_df, "rpf")
+rpf_vs_fic_df = get_data_df(ships_df, "rpf", "total")
 rpf_fig = visualise_single_pie(rpf_vs_fic_df, "rpf", "total")
 rpf_fig.write_image(
     "visualisation/ao3_all_data_2013_2023/ao3_all_data_charts/all_ao3_ranked_ships_rpf_vs_fic_2013_2023.png", 

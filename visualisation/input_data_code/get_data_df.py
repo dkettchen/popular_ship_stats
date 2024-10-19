@@ -3,43 +3,52 @@ from visualisation.vis_utils.df_utils.retrieve_numbers import get_label_counts, 
 from visualisation.vis_utils.df_utils.make_dfs import sort_df
 import pandas as pd
 
-def get_data_df(input_df:pd.DataFrame, data_case:str):
+def get_data_df(input_df:pd.DataFrame, data_case:str, ranking:str):
     """
     takes output from (currently implemented:)
-    - df_from_csv("data/fifth_clean_up_data/stage_5_ships.csv") and returns
+    - df_from_csv("data/fifth_clean_up_data/stage_5_ships.csv") (ranking="total") and returns
         - total number of ships in file (data_case="total_ships")
         - total number of ships of each gender combo (data_case="total_gender_combos")
         - fandom, slash_ship, gender_combo, and race_combo columns (data_case="ships_per_fandom_util")
         - number of ships per fandom (data_case="ships_per_fandom")
         - total number of ships of each race combo (data_case="total_race_combos")
         - number of rpf and non-rpf ships (data_case="rpf")
-    - df_from_csv("data/fifth_clean_up_data/stage_5_characters.csv") and returns
+    - df_from_csv("data/fifth_clean_up_data/stage_5_characters.csv") (ranking="total") and returns
         - total number of characters in file (data_case="total_chars")
         - total number of characters of each gender tag 
         in custom order to be visualised (data_case="total_genders")
         - total number of characters of each race tag (data_case="total_racial_groups")
         - number of racial groups in each fandom (data_case="racial_diversity")
+    - when used with ranking="overall", it can be used as a util of the same functionality, 
+    but it uses "ship" rather than "slash_ship" where relevant
     
     as a dataframe
     """
+    ranking = ranking.lower()
+
+    if ranking == "total":
+        ship = "slash_ship"
+    elif ranking == "overall": 
+        ship = "ship"
+
     # making input case insensitive
     data_case = data_case.lower()
 
     # making lookup dicts
     column_lookup = {
-        "total_ships": ["slash_ship"],
-        "total_gender_combos": ["slash_ship","gender_combo"],
-        "ships_per_fandom_util": ["fandom", "slash_ship", "gender_combo", "race_combo"],
-        "ships_per_fandom": ["fandom", "slash_ship", "gender_combo", "race_combo"],
-        "total_race_combos": ["slash_ship","race_combo"],
-        "rpf": ["slash_ship", "rpf_or_fic"],
+        "total_ships": [ship],
+        "total_gender_combos": [ship,"gender_combo"],
+        "ships_per_fandom_util": ["fandom", ship, "gender_combo", "race_combo"],
+        "ships_per_fandom": ["fandom", ship, "gender_combo", "race_combo"],
+        "total_race_combos": [ship,"race_combo"],
+        "rpf": [ship, "rpf_or_fic"],
         "total_chars": ["full_name"],
         "total_genders": ["full_name","gender"],
         "total_racial_groups": ["full_name","race"],
         "racial_diversity": ["full_name","fandom","race"],
     }
     index_names_lookup = {
-        "total_ships": {"slash_ship":"total_num_of_ships"}, 
+        "total_ships": {ship:"total_num_of_ships"}, 
         "total_chars": {"full_name":"total_num_of_characters"},
         "total_gender_combos": {
             "F / M": "M / F",
@@ -54,7 +63,7 @@ def get_data_df(input_df:pd.DataFrame, data_case:str):
 
     # setting group_column & count_column for get_label_counts
     if data_case in ["total_gender_combos", "ships_per_fandom", "total_race_combos", "rpf"]:
-        count_column = "slash_ship"
+        count_column = ship
         if data_case == "total_gender_combos":
             group_column = "gender_combo"
         elif data_case == "ships_per_fandom":
