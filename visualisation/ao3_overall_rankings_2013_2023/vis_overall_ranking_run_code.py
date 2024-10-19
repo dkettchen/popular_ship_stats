@@ -40,7 +40,6 @@ rpf_fig.write_image(
     height=600, 
     scale=2
 )
-
 # how much rpf vs fic (by gender combo)
 rpf_by_gender_combo = get_by_gender_combo(overall_ship_info_df, "rpf_or_fic")
 
