@@ -19,6 +19,7 @@ def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str):
     - data_case="gender", ranking="femslash"|"overall"
     - data_case="race", ranking="femslash"|"overall"
     - data_case="race_combos", ranking="femslash"
+    - data_case="fic_type", ranking="overall"
     
     as pie charts
     """
@@ -27,9 +28,10 @@ def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str):
     ranking = ranking.lower()
     suffix = lbls.suffixes[ranking]
 
+    # retrieving years
     if data_case in ["multi_chars", "multi_char_ships", "interracial_ships"]: # dfs
         years = input_item.columns
-    elif data_case in ["rpf", "gender", "race", "race_combos"]: # dict
+    elif data_case in ["rpf", "gender", "race", "race_combos", "fic_type"]: # dict
         years = input_item.keys()
 
     num_of_years = len(years)
@@ -42,9 +44,13 @@ def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str):
     text_info = 'percent'
     colours = None
     colourway = None
-    title_size = 10
+    if num_of_years == 9:
+        title_size = 10
+    else: title_size = 12
     min_size = 12
 
+
+    # most titles & colours & any static labels
     if data_case in ["multi_chars", "multi_char_ships",]: 
         colours = [colour_palettes.oranges[0], colour_palettes.oranges[2]]
         if data_case == "multi_chars":
@@ -62,12 +68,9 @@ def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str):
         colours = ["deeppink", "darkred"]
     elif data_case == "gender":
         title = f"Genders by year{suffix}"
-        #colours = colour_palettes.violets
     elif data_case in ["race", "race_combos"]:
         if ranking == "femslash":
             title_size = 25
-        elif ranking == "overall":
-            title_size = 12
         min_size = 8
         if data_case == "race":
             title = f"Racial groups by year{suffix}"
@@ -78,9 +81,14 @@ def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str):
             text_info = "label"
             colourway = px.colors.qualitative.Pastel + px.colors.qualitative.Prism + \
             px.colors.qualitative.Vivid + px.colors.qualitative.Bold
+    elif data_case == "fic_type":
+        title = f"General vs slash ships by year{suffix}"
+        colours = ["hotpink", "yellowgreen"]
+        labels = ["slash", "gen"]
     else: print(input_item)
 
     for year in years:
+        # retrieving year data
         if data_case == "gender":
             year_df = input_item[year].copy().reset_index()
             year_series = year_df["count"]
@@ -98,7 +106,7 @@ def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str):
 
         # defaults to replace for certain cases
         values = year_series.values
-
+        # replacing values where needed
         if data_case == "interracial_ships":
             labels = year_series.index
         elif data_case == "rpf":
@@ -116,6 +124,7 @@ def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str):
             elif ranking == "overall":
                 values = year_series.values
 
+        # adding pie
         fig.add_trace(go.Pie(
             labels=labels, 
             values=values,
@@ -134,9 +143,11 @@ def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str):
         else:
             col_count += 1
 
+    # adding text info
     fig.update_traces(
         textinfo=text_info,
     )
+    # adding title, uniform text, and colourway if any
     fig.update_layout(
         title=title, 
         uniformtext_minsize=min_size,
