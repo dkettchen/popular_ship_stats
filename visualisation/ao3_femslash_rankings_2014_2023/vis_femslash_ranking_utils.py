@@ -1,4 +1,4 @@
-from visualisation.vis_utils.make_file_dfs import make_ships_df, make_yearly_df_dict
+from visualisation.input_data_code.make_file_dfs import make_ships_df, make_yearly_df_dict
 import pandas as pd
 
 def edit_femslash_df_columns(femslash_df_dict):
