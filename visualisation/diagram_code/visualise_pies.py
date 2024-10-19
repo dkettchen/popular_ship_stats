@@ -11,15 +11,14 @@ from visualisation.vis_utils.make_colour_lookup import make_colour_lookup_racial
 
 def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str):
     """
-    visualise the output (ranking=(currently implemented:)"femslash") from 
-    - total_multi_nos_by_year ("race" (data_case="multi_chars") 
-    & "race_combo" (data_case="multi_char_ships") version), 
-    - total_interracial_ratio (data_case="interracial_ships")
-    - rpf_vs_fic (data_case="rpf")
-    - sapphic_gender_stats (data_case="gender", ranking="femslash")
-    - (data_case="gender", ranking="overall")
-    - total_race_nos_by_year ("race" (data_case="race") & "race_combo" 
-    (data_case="race_combos") version)
+    visualise 
+    - data_case="multi_chars", ranking="femslash"
+    - data_case="multi_char_ships", ranking="femslash"
+    - data_case="interracial_ships", ranking="femslash"
+    - data_case="rpf", ranking="femslash"|"overall"
+    - data_case="gender", ranking="femslash"|"overall"
+    - data_case="race", ranking="femslash"|"overall"
+    - data_case="race_combos", ranking="femslash"
     
     as pie charts
     """
