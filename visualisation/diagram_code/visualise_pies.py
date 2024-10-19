@@ -66,7 +66,10 @@ def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str):
     elif data_case in ["race", "race_combos"]:
         colourway = px.colors.qualitative.Pastel + px.colors.qualitative.Prism + \
         px.colors.qualitative.Vivid + px.colors.qualitative.Bold
-        title_size = 25
+        if ranking == "femslash":
+            title_size = 25
+        elif ranking == "overall":
+            title_size = 12
         min_size = 8
         if data_case == "race":
             title = f"Racial groups by year{suffix}"
@@ -106,7 +109,10 @@ def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str):
                 colours = [colour_palettes.gender_colours[gender] for gender in year_df["gender"]]
         elif data_case in ["race", "race_combos"]:
             labels = year_series.index
-            values = [value[0] for value in year_series.values]
+            if ranking == "femslash":
+                values = [value[0] for value in year_series.values]
+            elif ranking == "overall":
+                values = year_series.values
 
         fig.add_trace(go.Pie(
             labels=labels, 
