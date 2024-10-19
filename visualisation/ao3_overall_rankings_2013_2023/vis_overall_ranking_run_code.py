@@ -3,7 +3,7 @@ from visualisation.vis_utils.remove_member_columns import remove_members_from_df
 from visualisation.vis_utils.join_member_info import join_character_info_to_df
 from visualisation.vis_utils.make_colour_lookup import make_colour_lookup
 from visualisation.ao3_overall_rankings_2013_2023.vis_overall_ranking_general_stat_code import (
-    get_fic_type,
+    get_counts,
     get_gender_combos,
     get_by_gender_combo,
     get_rpf
@@ -26,7 +26,7 @@ colour_lookup_dict = make_colour_lookup(overall_ship_info_df)
 ## general & intersectional stuff
 
 # how much gen vs slash (total)
-gen_vs_slash_total_dict = get_fic_type(overall_ship_info_df)
+gen_vs_slash_total_dict = get_counts(overall_ship_info_df, "fic_type", "ship")
 # how much gen vs slash (by gender combo)
 gen_vs_slash_by_gender_combo = get_by_gender_combo(overall_ship_info_df, "fic_type")
 
@@ -54,11 +54,12 @@ rpf_by_gender_combo = get_by_gender_combo(overall_ship_info_df, "rpf_or_fic")
 ## gender stuff
 
 # gender percentages total
+gender_percent_total = get_counts(overall_character_info_df, "gender", "full_name")
 # gender minorities
 
 # gender combos total
 total_gender_combos = get_gender_combos(overall_ship_info_df)
-# gender combo minorities
+# gender combo minorities (same info, second diagram)
 
 # average rank by char gender
 # average rank by ship gender combo
@@ -69,6 +70,7 @@ total_gender_combos = get_gender_combos(overall_ship_info_df)
 ## race stuff
 
 # race percentages total
+race_percent_total = get_counts(overall_character_info_df, "race", "full_name")
 # race minorities
 
 # race combo totals
