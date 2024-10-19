@@ -1,6 +1,6 @@
 import pandas as pd
 from visualisation.vis_utils.add_name_tag import add_name_tag
-from visualisation.vis_utils.make_file_dfs import make_characters_df
+from visualisation.input_data_code.make_file_dfs import make_characters_df
 from visualisation.vis_utils.remove_member_columns import remove_members_from_df
 
 def join_character_info_to_df(input_df:pd.DataFrame):
