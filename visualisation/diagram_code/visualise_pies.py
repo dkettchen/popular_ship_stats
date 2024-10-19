@@ -18,8 +18,9 @@ def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str):
     - data_case="rpf", ranking="femslash"|"overall"
     - data_case="gender", ranking="femslash"|"overall"
     - data_case="race", ranking="femslash"|"overall"
-    - data_case="race_combos", ranking="femslash"
+    - data_case="race_combos", ranking="femslash"|"overall"
     - data_case="fic_type", ranking="overall"
+    - data_case="gender_combos", ranking="overall"
     
     as pie charts
     """
@@ -31,7 +32,7 @@ def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str):
     # retrieving years
     if data_case in ["multi_chars", "multi_char_ships", "interracial_ships"]: # dfs
         years = input_item.columns
-    elif data_case in ["rpf", "gender", "race", "race_combos", "fic_type"]: # dict
+    elif data_case in ["rpf", "gender", "race", "race_combos", "fic_type", "gender_combos"]: # dict
         years = input_item.keys()
 
     num_of_years = len(years)
@@ -85,6 +86,8 @@ def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str):
         title = f"General vs slash ships by year{suffix}"
         colours = ["hotpink", "yellowgreen"]
         labels = ["slash", "gen"]
+    elif data_case == "gender_combos":
+        title = f"Gender combos by year{suffix}"
     else: print(input_item)
 
     for year in years:
@@ -104,7 +107,6 @@ def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str):
                     by="count", ascending=False
                 )
             else: year_series = year_series.sort_values(ascending=False)
-            
         else:    
             year_series = input_item[year].copy()
 
@@ -127,6 +129,9 @@ def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str):
                 values = [value[0] for value in year_series.values]
             elif ranking == "overall":
                 values = year_series.values
+        elif data_case == "gender_combos":
+            labels = year_series.index
+            colours = [colour_palettes.gender_combo_dict[combo] for combo in labels]
 
         # adding pie
         fig.add_trace(go.Pie(
