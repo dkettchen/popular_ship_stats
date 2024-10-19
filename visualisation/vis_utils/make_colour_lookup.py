@@ -1,7 +1,9 @@
 import plotly.express as px
 from pandas import DataFrame
+from visualisation.input_data_code.make_file_dfs import make_characters_df
+from visualisation.vis_utils.df_utils.retrieve_numbers import get_unique_values_list
 
-def make_colour_lookup(input_df:DataFrame):
+def make_colour_lookup(input_df:DataFrame): # for fandoms
     """
     takes a df that contains (at least) a "fandom" column
 
@@ -43,3 +45,42 @@ def make_colour_lookup(input_df:DataFrame):
 
     return colour_lookup
 
+def make_colour_lookup_racial_groups():
+    character_df = make_characters_df()
+    all_racial_groups = sorted(get_unique_values_list(character_df, "race"))
+
+    base_colours = px.colors.qualitative.Pastel + px.colors.qualitative.Prism + \
+    px.colors.qualitative.Vivid + px.colors.qualitative.Bold
+
+    look_up = {}
+
+    # making certain groups specific colours
+    look_up["White"] = "deepskyblue"
+    look_up["White (Multi)"] = "lightseagreen"
+    look_up["E Asian"] = "yellowgreen"
+    look_up["E Asian (Multi)"] = "mediumseagreen"
+    look_up["Latin"] = "hotpink"
+    look_up["Latin (Multi)"] = "pink"
+    look_up["Af Lat"] = "mediumvioletred"
+    look_up["Māori Ind"] = "firebrick"
+    look_up["Māori Ind (Multi)"] = "darkred"
+    look_up["Black"] = "rebeccapurple"
+    look_up["Black (Multi)"] = "mediumpurple"
+    look_up["MENA"] = "darkorange"
+    look_up["MENA (Multi)"] = "orange"
+    look_up["Ambig"] = "gold"
+    look_up["N.H."] = "orangered"
+    look_up["SE Asian"] = "darkolivegreen"
+    look_up["SE Asian (Multi)"] = "olive"
+    look_up["S Asian"] = "seagreen"
+    look_up["S Asian (Multi)"] = "olivedrab"
+    look_up["Central As"] = "darkgreen"
+    look_up["Unknown"] = "slategrey"
+
+    counter = 0
+    for item in all_racial_groups:
+        if item not in look_up.keys():
+            look_up[item] = base_colours[counter]
+            counter += 1
+
+    return look_up

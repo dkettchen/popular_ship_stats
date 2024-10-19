@@ -7,6 +7,7 @@ from visualisation.vis_utils.diagram_utils.make_subplots_by_year import make_sub
 from visualisation.vis_utils.diagram_utils.make_max_count import make_max_count
 import visualisation.vis_utils.diagram_utils.colour_palettes as colour_palettes
 import visualisation.vis_utils.diagram_utils.labels as lbls
+from visualisation.vis_utils.make_colour_lookup import make_colour_lookup_racial_groups
 
 def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str):
     """
@@ -64,8 +65,6 @@ def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str):
         title = f"Genders by year{suffix}"
         #colours = colour_palettes.violets
     elif data_case in ["race", "race_combos"]:
-        colourway = px.colors.qualitative.Pastel + px.colors.qualitative.Prism + \
-        px.colors.qualitative.Vivid + px.colors.qualitative.Bold
         if ranking == "femslash":
             title_size = 25
         elif ranking == "overall":
@@ -74,9 +73,12 @@ def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str):
         if data_case == "race":
             title = f"Racial groups by year{suffix}"
             text_info = "label+percent"
+            colour_palette = make_colour_lookup_racial_groups()
         elif data_case == "race_combos":
             title = f"Pairing race combinations by year{suffix}"
             text_info = "label"
+            colourway = px.colors.qualitative.Pastel + px.colors.qualitative.Prism + \
+            px.colors.qualitative.Vivid + px.colors.qualitative.Bold
     else: print(input_item)
 
     for year in years:
@@ -108,6 +110,8 @@ def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str):
             colours = [colour_palettes.gender_colours[gender] for gender in labels]
         elif data_case in ["race", "race_combos"]:
             labels = year_series.index
+            if data_case == "race":
+                colours = [colour_palette[label] for label in labels]
             if ranking == "femslash":
                 values = [value[0] for value in year_series.values]
             elif ranking == "overall":
