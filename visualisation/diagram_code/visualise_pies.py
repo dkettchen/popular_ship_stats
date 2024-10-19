@@ -16,6 +16,7 @@ def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str):
     - total_interracial_ratio (data_case="interracial_ships")
     - rpf_vs_fic (data_case="rpf")
     - sapphic_gender_stats (data_case="gender", ranking="femslash")
+    - (data_case="gender", ranking="overall")
     - total_race_nos_by_year ("race" (data_case="race") & "race_combo" 
     (data_case="race_combos") version)
     
@@ -101,6 +102,8 @@ def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str):
         elif data_case == "gender":
             labels = year_df["gender"]
             values = year_series
+            if ranking == "overall":
+                colours = [colour_palettes.gender_colours[gender] for gender in year_df["gender"]]
         elif data_case in ["race", "race_combos"]:
             labels = year_series.index
             values = [value[0] for value in year_series.values]
