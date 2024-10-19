@@ -64,6 +64,13 @@ rpf_by_gender_combo = get_by_gender_combo(overall_ship_info_df, "rpf_or_fic")
 
 # gender percentages total
 gender_percent_total = get_counts(overall_character_info_df, "gender", "full_name")
+gender_percent_pies = visualise_pies(gender_percent_total, "gender", "overall")
+gender_percent_pies.write_image(
+    "visualisation/ao3_overall_rankings_2013_2023/ao3_overall_rankings_charts/overall_gender_distr_2013_2023.png", 
+    width=1300, 
+    height=600, 
+    scale=2
+)
 # gender minorities (same info, second diagram)
 
 # gender combos total
