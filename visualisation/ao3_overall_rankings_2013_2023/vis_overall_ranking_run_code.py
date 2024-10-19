@@ -103,6 +103,14 @@ race_percent_pies.write_image(
 # race minorities (same info, second diagram)
 
 # race combo totals
+race_combo_total = get_counts(overall_ship_info_df, "race_combo", "ship")
+race_combo_pies = visualise_pies(race_combo_total, "race_combos", "overall")
+race_combo_pies.write_image(
+    "visualisation/ao3_overall_rankings_2013_2023/ao3_overall_rankings_charts/overall_racial_combos_2013_2023.png", 
+    width=1300, 
+    height=600, 
+    scale=2
+)
 # race combo minorities (same info, second diagram)
 
 # multi racial characters totals

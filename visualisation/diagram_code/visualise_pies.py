@@ -98,9 +98,13 @@ def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str):
             year_series = year_series.rename(index=rename_dict)
             year_series = year_series.groupby(
                 year_series.index
-            ).aggregate("sum").sort_values(
-                by="count", ascending=False
-            )
+            ).aggregate("sum")
+            if type(year_series) == pd.DataFrame:
+                year_series = year_series.sort_values(
+                    by="count", ascending=False
+                )
+            else: year_series = year_series.sort_values(ascending=False)
+            
         else:    
             year_series = input_item[year].copy()
 
