@@ -11,14 +11,14 @@ from visualisation.ao3_overall_rankings_2013_2023.vis_overall_ranking_general_st
 from visualisation.diagram_code.visualise_pies import visualise_pies
 from visualisation.diagram_code.visualise_bars import visualise_grouped_bars
 
-# get data & turn into big df
+# get data & turn into big df ✅
 ship_joined_overall_df = make_joined_ranking_df("overall")
 
-# make useable dfs
+# make useable dfs ✅
 overall_ship_info_df = remove_members_from_df(ship_joined_overall_df)
 overall_character_info_df = join_character_info_to_df(ship_joined_overall_df)
 
-# make fandom colour dict:
+# make fandom colour dict: ✅
 colour_lookup_dict = make_colour_lookup(overall_ship_info_df)
 
 
@@ -27,7 +27,7 @@ colour_lookup_dict = make_colour_lookup(overall_ship_info_df)
 
 ## general & intersectional stuff
 
-# how much gen vs slash (total)
+# how much gen vs slash (total) ✅
 gen_vs_slash_total_dict = get_counts(overall_ship_info_df, "fic_type", "ship")
 gen_vs_slash_pies = visualise_pies(gen_vs_slash_total_dict, "fic_type", "overall")
 gen_vs_slash_pies.write_image(
@@ -39,7 +39,7 @@ gen_vs_slash_pies.write_image(
 # how much gen vs slash (by gender combo)
 gen_vs_slash_by_gender_combo = get_by_gender_combo(overall_ship_info_df, "fic_type")
 
-# how much rpf vs fic (total)
+# how much rpf vs fic (total) ✅
 rpf_total_dict = get_rpf(overall_ship_info_df)
 rpf_fig = visualise_pies(rpf_total_dict, "rpf", "overall")
 rpf_fig.write_image(
@@ -69,7 +69,7 @@ rpf_by_gender_combo = get_by_gender_combo(overall_ship_info_df, "rpf_or_fic")
 
 ## gender stuff
 
-# gender percentages total
+# gender percentages total ✅
 gender_percent_total = get_counts(overall_character_info_df, "gender", "full_name")
 gender_percent_pies = visualise_pies(gender_percent_total, "gender", "overall")
 gender_percent_pies.write_image(
@@ -80,7 +80,7 @@ gender_percent_pies.write_image(
 )
 # gender minorities (same info, second diagram)
 
-# gender combos total
+# gender combos total ✅
 total_gender_combos = get_gender_combos(overall_ship_info_df)
 gender_combo_pies = visualise_grouped_bars(total_gender_combos, "gender_combos", "overall")
 gender_combo_pies.write_image(
@@ -89,8 +89,7 @@ gender_combo_pies.write_image(
     height=600, 
     scale=2
 )
-
-# gender combo minorities (same info, second diagram)
+# gender combo minorities (same info, second diagram) ✅
 gender_minority_combo_pies = visualise_grouped_bars(total_gender_combos, "minority_gender_combos", "overall")
 gender_minority_combo_pies.write_image(
     "visualisation/ao3_overall_rankings_2013_2023/ao3_overall_rankings_charts/overall_minority_gender_combos_2013_2023.png", 
@@ -108,7 +107,7 @@ gender_minority_combo_pies.write_image(
 
 ## race stuff
 
-# race percentages total
+# race percentages total ✅
 race_percent_total = get_counts(overall_character_info_df, "race", "full_name")
 race_percent_pies = visualise_pies(race_percent_total, "race", "overall")
 race_percent_pies.write_image(
@@ -119,7 +118,7 @@ race_percent_pies.write_image(
 )
 # race minorities (same info, second diagram)
 
-# race combo totals
+# race combo totals ✅
 race_combo_total = get_counts(overall_ship_info_df, "race_combo", "ship")
 race_combo_pies = visualise_pies(race_combo_total, "race_combos", "overall")
 race_combo_pies.write_image(
