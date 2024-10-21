@@ -5,6 +5,7 @@ import visualisation.vis_utils.diagram_utils.labels as lbls
 import plotly.express as px
 from visualisation.vis_utils.diagram_utils.make_subplots_by_year import make_subplots_by_year
 from visualisation.vis_utils.diagram_utils.make_max_count import make_max_count
+from visualisation.vis_utils.df_utils.make_dfs import sort_df
 
 
 def visualise_non_white_counts(input_df:pd.DataFrame, ranking:str):
@@ -457,17 +458,29 @@ def visualise_simple_bar(input_item:pd.DataFrame|pd.Series, data_case:str, ranki
 # could refactor this with non white counts?
 def visualise_grouped_bars(input_item:pd.DataFrame, ranking:str):
     """
-    visualises 
+    visualises (currently implemented:)
+    - gender combos (ranking="overall")
+
     as a grouped bar chart
     """
     #making input case insensitive
     ranking = ranking.lower()
 
-    fig = go.Figure()
+    years = list(input_item.keys())
 
-    temp_df = pd.DataFrame()
-    for year in input_item:
+    index_list = []
+    for year in years: # getting all index labels
+        index_list += list(input_item[year].index)
+    index_list = sorted(list(set(index_list)))
+
+    temp_df = pd.DataFrame(index=index_list)
+
+    for year in years: # adding a column for each year
         temp_df[year] = input_item[year]
+    
+    temp_df = sort_df(temp_df, years[-1]) # sorting values by latest year
+
+    fig = go.Figure()
 
     bg_colour = "turquoise"
     text = temp_df.index
