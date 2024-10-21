@@ -497,7 +497,11 @@ def visualise_grouped_bars(input_item:pd.DataFrame, data_case:str, ranking:str):
     elif data_case == "minority_genders":
         title = f"Genders excluding M and F by year{suffix}"
         temp_df = temp_df.transpose()
-        temp_df.pop("M")
+        if ranking != "femslash":
+            title = f"Genders excluding M and F by year{suffix}"
+            temp_df.pop("M")
+        else:
+            title = f"Genders excluding F by year{suffix}"
         temp_df.pop("F")
         temp_df = temp_df.transpose()
         text_size = 15

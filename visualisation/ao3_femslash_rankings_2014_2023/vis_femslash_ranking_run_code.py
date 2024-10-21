@@ -25,7 +25,7 @@ from visualisation.ao3_femslash_rankings_2014_2023.vis_femslash_ranking_race_sta
     top_non_white_ships,
     average_non_white_ranking,
 )
-from visualisation.diagram_code.visualise_bars import visualise_non_white_counts
+from visualisation.diagram_code.visualise_bars import visualise_non_white_counts, visualise_grouped_bars
 from visualisation.diagram_code.visualise_lines import visualise_line, visualise_multi_lines
 from visualisation.diagram_code.visualise_pies import visualise_pies, visualise_market_share_and_popularity
 from visualisation.diagram_code.visualise_tables import (
@@ -117,6 +117,15 @@ gender_fig.write_image(
     "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/femslash_genders_2014_2023.png", 
     width=700, 
     height=650, 
+    scale=2
+)
+
+sapphic_minority_genders = gender_stats(femslash_character_info_df)
+minority_gender_fig = visualise_grouped_bars(sapphic_genders, "minority_genders", "femslash")
+minority_gender_fig.write_image(
+    "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/femslash_minority_genders_2014_2023.png", 
+    width=1200, 
+    height=600, 
     scale=2
 )
 
