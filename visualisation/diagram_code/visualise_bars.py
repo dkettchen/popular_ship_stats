@@ -134,8 +134,11 @@ def visualise_stacked_bars(input_df:pd.DataFrame, data_case:str, ranking:str):
                 # item is specific group
 
                 if item in iterable_2[instance] or type(input_df) == pd.Series or ranking == "femslash":
-                    if instance == "north, west, middle and eastern europe":
+                    if instance == "north, west, middle and eastern europe" \
+                    and item in ["Eu Ind", "Romani"]:
                         stack_label = "romani & european indigenous"
+                    elif instance in ["east asia", "other", "north, west, middle and eastern europe"]:
+                        continue
                     else:
                         stack_label = instance
 
