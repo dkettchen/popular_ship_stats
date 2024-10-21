@@ -82,7 +82,7 @@ gender_percent_pies.write_image(
 
 # gender combos total
 total_gender_combos = get_gender_combos(overall_ship_info_df)
-gender_combo_pies = visualise_grouped_bars(total_gender_combos, "overall")
+gender_combo_pies = visualise_grouped_bars(total_gender_combos, "gender_combos", "overall")
 gender_combo_pies.write_image(
     "visualisation/ao3_overall_rankings_2013_2023/ao3_overall_rankings_charts/overall_gender_combos_2013_2023.png", 
     width=1300, 
@@ -91,6 +91,14 @@ gender_combo_pies.write_image(
 )
 
 # gender combo minorities (same info, second diagram)
+gender_minority_combo_pies = visualise_grouped_bars(total_gender_combos, "minority_gender_combos", "overall")
+gender_minority_combo_pies.write_image(
+    "visualisation/ao3_overall_rankings_2013_2023/ao3_overall_rankings_charts/overall_minority_gender_combos_2013_2023.png", 
+    width=1300, 
+    height=600, 
+    scale=2
+)
+
 
 # average rank by char gender
 # average rank by ship gender combo
