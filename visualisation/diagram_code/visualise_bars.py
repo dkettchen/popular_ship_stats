@@ -53,7 +53,7 @@ def visualise_non_white_counts(input_df:pd.DataFrame, ranking:str):
 
 
 # stacked bars
-def visualise_stacked_bars(input_df:pd.DataFrame, data_case:str, ranking:str):
+def visualise_stacked_bars(input_item:pd.DataFrame, data_case:str, ranking:str):
     """
     visualises output (ranking=(currently implemented:)"total") from 
     - all_characters_racial_groups_df (data_case="minority_racial_groups")
@@ -79,7 +79,7 @@ def visualise_stacked_bars(input_df:pd.DataFrame, data_case:str, ranking:str):
         x_ticks = 10
         text_position = "inside"
 
-        iterable_1 = input_df.index
+        iterable_1 = input_item.index
         iterable_2 = lbls.racial_group_umbrellas
 
         colour_lookup = make_colour_lookup_racial_groups()
@@ -133,12 +133,14 @@ def visualise_stacked_bars(input_df:pd.DataFrame, data_case:str, ranking:str):
                 # instance is umbrella group
                 # item is specific group
 
-                if item in iterable_2[instance] or type(input_df) == pd.Series or ranking == "femslash":
-                    if instance == "north, west, middle and eastern europe" \
-                    and item in ["Eu Ind", "Romani"]:
-                        stack_label = "romani & european indigenous"
-                    elif instance in ["east asia", "other", "north, west, middle and eastern europe"]:
-                        continue
+                if item in iterable_2[instance] \
+                or type(input_item) == pd.Series \
+                or ranking == "femslash":
+                    if instance in ["east asia", "other", "north, west, middle and eastern europe"]:
+                        if item not in ["Eu Ind (Multi)", "Romani"]:
+                            continue
+                        elif instance == "north, west, middle and eastern europe":
+                            stack_label = "romani & european indigenous"
                     else:
                         stack_label = instance
 
@@ -149,15 +151,15 @@ def visualise_stacked_bars(input_df:pd.DataFrame, data_case:str, ranking:str):
                     marker_color = colour_lookup[item]
 
                     # setting y
-                    if type(input_df) == pd.Series:
+                    if type(input_item) == pd.Series:
                         if item in iterable_2[instance]:
-                            value = input_df.loc[item]
+                            value = input_item.loc[item]
                             y = [value]
                         else:
                             y = [0]
                     elif ranking == "femslash" and item not in iterable_2[instance]:
                         y = [0]
-                    else: y = input_df.loc[item]
+                    else: y = input_item.loc[item]
 
                 else: continue # if the group is not in the umbrella group, we check the next one
             elif data_case in ["gender_combos", "minority_gender_combos"]:
@@ -185,7 +187,7 @@ def visualise_stacked_bars(input_df:pd.DataFrame, data_case:str, ranking:str):
                 else: text = instance
 
                 x = [item]
-                y = input_df.loc[instance]
+                y = input_item.loc[instance]
 
                 marker_color = colour
 
