@@ -38,6 +38,13 @@ gen_vs_slash_pies.write_image(
 )
 # how much gen vs slash (by gender combo)
 gen_vs_slash_by_gender_combo = get_by_gender_combo(overall_ship_info_df, "fic_type")
+gen_by_combo_fig = visualise_grouped_bars(gen_vs_slash_by_gender_combo, "gen", "overall")
+gen_by_combo_fig.write_image(
+    "visualisation/ao3_overall_rankings_2013_2023/ao3_overall_rankings_charts/overall_general_fic_by_gender_combo_2013_2023.png", 
+    width=1300, 
+    height=600, 
+    scale=2
+)
 
 # how much rpf vs fic (total) ✅
 rpf_total_dict = get_rpf(overall_ship_info_df)
@@ -48,7 +55,7 @@ rpf_fig.write_image(
     height=600, 
     scale=2
 )
-# how much rpf vs fic (by gender combo)
+# how much rpf vs fic (by gender combo) ✅
 rpf_by_gender_combo = get_by_gender_combo(overall_ship_info_df, "rpf_or_fic")
 rpf_by_combo_fig = visualise_grouped_bars(rpf_by_gender_combo, "rpf", "overall")
 rpf_by_combo_fig.write_image(

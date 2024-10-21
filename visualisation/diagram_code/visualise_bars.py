@@ -462,7 +462,8 @@ def visualise_grouped_bars(input_item:dict, data_case:str, ranking:str):
     - gender combos (data_case="gender_combos", ranking="overall")
     - minority gender combos (data_case="minority_gender_combos", ranking="overall")
     - minority genders (data_case="minority_genders", ranking="overall"|"femslash")
-    - RPF (data_case="rpf", ranking="overall"|"femslash")
+    - RPF by gender combo (data_case="rpf", ranking="overall"|"femslash")
+    - gen ships by gender combo (data_case="gen", ranking="overall")
 
     as a grouped bar chart
     """
@@ -475,7 +476,7 @@ def visualise_grouped_bars(input_item:dict, data_case:str, ranking:str):
 
     index_list = []
     for year in years: # getting all index labels
-        if data_case == "rpf":
+        if data_case in ["rpf", "gen"]:
             item = input_item[year].reset_index()
             item = item.set_index("gender_combo")
         else: item = input_item[year]
@@ -484,11 +485,19 @@ def visualise_grouped_bars(input_item:dict, data_case:str, ranking:str):
 
     temp_df = pd.DataFrame(index=index_list)
 
+    # setting values for operation in loop below
+    if data_case == "rpf":
+        column_name = "rpf_or_fic"
+        index_name = "RPF"
+    elif data_case == "gen":
+        column_name = "fic_type"
+        index_name = data_case
+
     for year in years: # adding a column for each year
-        if data_case == "rpf":
+        if data_case in ["rpf", "gen"]:
             item = input_item[year].reset_index()
-            item = item.set_index("rpf_or_fic")
-            temp_df[year] = item.loc[["RPF"]].set_index("gender_combo")
+            item = item.set_index(column_name)
+            temp_df[year] = item.loc[[index_name]].set_index("gender_combo")
         else:
             temp_df[year] = input_item[year]
     
@@ -521,15 +530,18 @@ def visualise_grouped_bars(input_item:dict, data_case:str, ranking:str):
     elif data_case == "rpf":
         title = f"Real Person Fic ships by gender combo by year{suffix}"
         text_size = 10
+    elif data_case == "gen":
+        title = f"Non-slash-fic ships by gender combo by year{suffix}"
+        text_size = 10
 
     # setting bg colour
-    if data_case in ["gender_combos", "minority_gender_combos", "rpf"]:
+    if data_case in ["gender_combos", "minority_gender_combos", "rpf", "gen"]:
         bg_colour = colour_palettes.bg_colours[ranking][1]
     elif data_case == "minority_genders":
         bg_colour = colour_palettes.bg_colours[ranking][0]
 
-    if data_case == "rpf": # dropping empty rows
-        temp_df = temp_df.dropna(how="all")
+    # dropping empty rows
+    temp_df = temp_df.dropna(how="all")
 
     # setting text labels
     if list(temp_df.index) == ["F / F", "M | F | Other / M | F | Other"]:
@@ -541,7 +553,7 @@ def visualise_grouped_bars(input_item:dict, data_case:str, ranking:str):
     counter = 0
     for index_label in temp_df.index:
         values = temp_df.loc[index_label]
-        if data_case in ["gender_combos", "minority_gender_combos", "rpf"]:
+        if data_case in ["gender_combos", "minority_gender_combos", "rpf", "gen"]:
             colour = colour_palettes.gender_combo_dict[index_label]
         elif data_case == "minority_genders":
             colour = colour_palettes.gender_colours[index_label]
