@@ -503,9 +503,9 @@ def visualise_grouped_bars(input_item:pd.DataFrame, data_case:str, ranking:str):
         text_size = 15
 
     if data_case in ["gender_combos", "minority_gender_combos"]:
-        bg_colour = "turquoise"
+        bg_colour = colour_palettes.bg_colours[ranking][1]
     elif data_case == "minority_genders":
-        bg_colour = "aliceblue"
+        bg_colour = colour_palettes.bg_colours[ranking][0]
     text = temp_df.index
     labels = [str(year) for year in temp_df.columns]
 

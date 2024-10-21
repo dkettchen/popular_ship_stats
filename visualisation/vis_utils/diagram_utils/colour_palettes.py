@@ -52,3 +52,10 @@ gender_combo_dict = {
 }
 
 medals = ['gold', 'slategrey', 'chocolate']
+
+bg_colours = {
+    "femslash": ['papayawhip', 'mistyrose'],
+    "overall": ['aliceblue', "turquoise"],
+    "total": ['aliceblue'],
+    "annual": ['aliceblue']
+}
