@@ -94,14 +94,21 @@ def get_average_num(df:pd.DataFrame):
 
 
 # make list of unique values in column
-def get_unique_values_list(df:pd.DataFrame, column_name:str):
+def get_unique_values_list(input_item:pd.DataFrame|dict, column_name:str=None):
     """
     takes a dataframe and column name
 
     returns a list of all unique items in that column
     """
 
-    values_list = list(df[column_name].unique())
+    if type(input_item) == pd.DataFrame:
+        values_list = list(input_item[column_name].unique())
+    elif type(input_item) == dict:
+        values_list = []
+        for year in input_item:
+            year_srs = input_item[year].copy()
+            values_list.extend(list(year_srs.index))
+        values_list = sorted(set(values_list))
 
     return values_list
 
