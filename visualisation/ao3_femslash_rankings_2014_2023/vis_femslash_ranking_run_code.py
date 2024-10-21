@@ -25,7 +25,11 @@ from visualisation.ao3_femslash_rankings_2014_2023.vis_femslash_ranking_race_sta
     top_non_white_ships,
     average_non_white_ranking,
 )
-from visualisation.diagram_code.visualise_bars import visualise_non_white_counts, visualise_grouped_bars
+from visualisation.diagram_code.visualise_bars import (
+    visualise_non_white_counts, 
+    visualise_grouped_bars, 
+    visualise_stacked_bars
+)
 from visualisation.diagram_code.visualise_lines import visualise_line, visualise_multi_lines
 from visualisation.diagram_code.visualise_pies import visualise_pies, visualise_market_share_and_popularity
 from visualisation.diagram_code.visualise_tables import (
@@ -152,6 +156,17 @@ femslash_race_fig.write_image(
     height=1500, 
     scale=2
 )
+
+# race minorities (same info, second diagram)
+for year in femslash_race_percent:
+    year_df = femslash_race_percent[year].copy()
+    year_race_fig = visualise_stacked_bars(year_df, "minority_racial_groups", "femslash")
+    year_race_fig.write_image(
+        f"visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/sapphic_race_stats/racial_minorities_by_year/femslash_minority_racial_distr_{year}.png", 
+        width=1200, 
+        height=600, 
+        scale=2
+    )
 
 femslash_race_combo_percent = total_race_nos_by_year(femslash_ship_info_df, "race_combo")
 femslash_race_combo_fig = visualise_pies(femslash_race_combo_percent, "race_combos", "femslash")

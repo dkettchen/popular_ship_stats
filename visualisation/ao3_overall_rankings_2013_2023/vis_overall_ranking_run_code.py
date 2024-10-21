@@ -9,7 +9,7 @@ from visualisation.ao3_overall_rankings_2013_2023.vis_overall_ranking_general_st
     get_rpf
 )
 from visualisation.diagram_code.visualise_pies import visualise_pies
-from visualisation.diagram_code.visualise_bars import visualise_grouped_bars
+from visualisation.diagram_code.visualise_bars import visualise_grouped_bars, visualise_stacked_bars
 
 # get data & turn into big df ✅
 ship_joined_overall_df = make_joined_ranking_df("overall")
@@ -36,7 +36,7 @@ gen_vs_slash_pies.write_image(
     height=600, 
     scale=2
 )
-# how much gen vs slash (by gender combo)
+# how much gen vs slash (by gender combo) ✅
 gen_vs_slash_by_gender_combo = get_by_gender_combo(overall_ship_info_df, "fic_type")
 gen_by_combo_fig = visualise_grouped_bars(gen_vs_slash_by_gender_combo, "gen", "overall")
 gen_by_combo_fig.write_image(
@@ -140,6 +140,15 @@ race_percent_pies.write_image(
     scale=2
 )
 # race minorities (same info, second diagram)
+for year in race_percent_total:
+    year_df = race_percent_total[year].copy()
+    year_race_fig = visualise_stacked_bars(year_df, "minority_racial_groups", "overall")
+    year_race_fig.write_image(
+        f"visualisation/ao3_overall_rankings_2013_2023/ao3_overall_rankings_charts/racial_minorities_by_year/overall_minority_racial_distr_{year}.png", 
+        width=1200, 
+        height=600, 
+        scale=2
+    )
 
 # race combo totals ✅
 race_combo_total = get_counts(overall_ship_info_df, "race_combo", "ship")

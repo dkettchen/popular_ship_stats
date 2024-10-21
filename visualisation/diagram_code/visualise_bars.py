@@ -6,6 +6,7 @@ import plotly.express as px
 from visualisation.vis_utils.diagram_utils.make_subplots_by_year import make_subplots_by_year
 from visualisation.vis_utils.diagram_utils.make_max_count import make_max_count
 from visualisation.vis_utils.df_utils.make_dfs import sort_df
+from visualisation.vis_utils.make_colour_lookup import make_colour_lookup_racial_groups
 
 
 def visualise_non_white_counts(input_df:pd.DataFrame, ranking:str):
@@ -80,6 +81,8 @@ def visualise_stacked_bars(input_df:pd.DataFrame, data_case:str, ranking:str):
 
         iterable_1 = input_df.index
         iterable_2 = lbls.racial_group_umbrellas
+
+        colour_lookup = make_colour_lookup_racial_groups()
     elif data_case in ["gender_combos", "minority_gender_combos"]:
         if data_case == "gender_combos":
             title = f"Ship gender combinations{suffix}"
@@ -130,15 +133,29 @@ def visualise_stacked_bars(input_df:pd.DataFrame, data_case:str, ranking:str):
                 # instance is umbrella group
                 # item is specific group
 
-                if item in iterable_2[instance]:
+                if item in iterable_2[instance] or type(input_df) == pd.Series or ranking == "femslash":
                     if instance == "north, west, middle and eastern europe":
                         stack_label = "romani & european indigenous"
                     else:
                         stack_label = instance
 
                     x = [stack_label]
-                    y = input_df.loc[item]
-                    text = item
+                    if item == "Māori Ind (Multi)":
+                        text = "Māori Ind <br>(Multi)"
+                    else: text = item
+                    marker_color = colour_lookup[item]
+
+                    # setting y
+                    if type(input_df) == pd.Series:
+                        if item in iterable_2[instance]:
+                            value = input_df.loc[item]
+                            y = [value]
+                        else:
+                            y = [0]
+                    elif ranking == "femslash" and item not in iterable_2[instance]:
+                        y = [0]
+                    else: y = input_df.loc[item]
+
                 else: continue # if the group is not in the umbrella group, we check the next one
             elif data_case in ["gender_combos", "minority_gender_combos"]:
                 # item is umbrella type
