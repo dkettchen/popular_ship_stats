@@ -456,10 +456,11 @@ def visualise_simple_bar(input_item:pd.DataFrame|pd.Series, data_case:str, ranki
 
 
 # could refactor this with non white counts?
-def visualise_grouped_bars(input_item:pd.DataFrame, ranking:str):
+def visualise_grouped_bars(input_item:pd.DataFrame, data_case:str, ranking:str):
     """
     visualises (currently implemented:)
-    - gender combos (ranking="overall")
+    - gender combos (data_case="gender_combos", ranking="overall")
+    - minority gender combos (data_case="minority_gender_combos", ranking="overall")
 
     as a grouped bar chart
     """
@@ -481,12 +482,22 @@ def visualise_grouped_bars(input_item:pd.DataFrame, ranking:str):
     temp_df = sort_df(temp_df, years[-1]) # sorting values by latest year
 
     fig = go.Figure()
+    suffix = lbls.suffixes[ranking]
+
+    if data_case == "gender_combos":
+        title = f"Ship gender combinations by year{suffix}"
+        text_size = 8
+    elif data_case == "minority_gender_combos":
+        title = f"Ship gender combinations excluding M/M and M/F bars by year{suffix}"
+        temp_df = temp_df.transpose()
+        temp_df.pop("M / M")
+        temp_df.pop("M / F")
+        temp_df = temp_df.transpose()
+        text_size = 15
 
     bg_colour = "turquoise"
     text = temp_df.index
     labels = [str(year) for year in temp_df.columns]
-
-    suffix = lbls.suffixes[ranking]
 
     counter = 0
     for combo in temp_df.index:
@@ -498,7 +509,7 @@ def visualise_grouped_bars(input_item:pd.DataFrame, ranking:str):
                 x=labels,
                 y=values,
                 text=values,
-                textfont={"size": 8},
+                textfont={"size": text_size},
                 name=text[counter],
                 marker_color=colour
             )
@@ -508,7 +519,7 @@ def visualise_grouped_bars(input_item:pd.DataFrame, ranking:str):
 
     fig.update_layout(
         barmode='group', 
-        title=f"Gender combos by year{suffix}",
+        title=title,
         plot_bgcolor=bg_colour,
         barcornerradius=5
     )
