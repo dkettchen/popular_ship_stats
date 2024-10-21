@@ -79,7 +79,7 @@ def make_average_non_white_df(input_dict:dict): # util
 
     return new_df
 
-def visualise_multi_lines(input_item:pd.DataFrame|dict, ranking:str):
+def visualise_multi_lines(input_item:pd.DataFrame|dict, data_case:str, ranking:str):
     """
     visualise the output (ranking=(currently implemented:)"femslash") from 
     - total_interracial_ratio (line for interracial, ambig, & non-interracial pairings)
@@ -94,11 +94,9 @@ def visualise_multi_lines(input_item:pd.DataFrame|dict, ranking:str):
     if ranking == "femslash":
         bg_colour = colour_palettes.sapphic_table["body_2"]
 
-    if type(input_item) == pd.DataFrame: # if it's interracial ships case
+    if data_case == "interracial_ships": # if it's interracial ships case
         new_df = input_item.copy()
         years = new_df.columns
-
-        data_case = "interracial_ships"
 
         categories = lbls.interracial_categories
         labels = ["interracial ships", "ambiguous ships", "non-interracial ships"]
@@ -106,11 +104,9 @@ def visualise_multi_lines(input_item:pd.DataFrame|dict, ranking:str):
         title = f'Interracial ships by year{suffix}'
 
         mode = "lines+text+markers"
-    elif type(input_item) == dict: # if it's non-white ships case
+    elif data_case == "non_white_ships": # if it's non-white ships case
         years = list(input_item.keys())
         new_df = make_average_non_white_df(input_item)
-
-        data_case = "non_white_ships"
 
         labels = lbls.non_white_categories
         colours = colour_palettes.non_white_colours

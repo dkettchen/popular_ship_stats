@@ -210,7 +210,7 @@ interracial_fig.write_image(
     height=650, 
     scale=2
 )
-interracial_line = visualise_multi_lines(total_interracial, "femslash")
+interracial_line = visualise_multi_lines(total_interracial, "interracial_ships", "femslash")
 interracial_line.write_image(
     "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/sapphic_race_stats/femslash_interracial_lines_2014_2023.png", 
     width=700, 
@@ -255,7 +255,7 @@ top_non_white_fig.write_image(
 )
 
 average_non_white_rank = average_non_white_ranking(femslash_separated_dict)
-average_non_white_fig = visualise_multi_lines(average_non_white_rank, "femslash")
+average_non_white_fig = visualise_multi_lines(average_non_white_rank, "non_white_ships", "femslash")
 average_non_white_fig.write_image(
     "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/sapphic_race_stats/femslash_avg_non_white_2014_2023.png", 
     width=800, 
