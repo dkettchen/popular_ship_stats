@@ -79,6 +79,14 @@ gender_percent_pies.write_image(
     scale=2
 )
 # gender minorities (same info, second diagram)
+gender_percent_pies = visualise_grouped_bars(gender_percent_total, "minority_genders", "overall")
+gender_percent_pies.write_image(
+    "visualisation/ao3_overall_rankings_2013_2023/ao3_overall_rankings_charts/overall_minority_genders_2013_2023.png", 
+    width=1300, 
+    height=600, 
+    scale=2
+)
+
 
 # gender combos total ✅
 total_gender_combos = get_gender_combos(overall_ship_info_df)

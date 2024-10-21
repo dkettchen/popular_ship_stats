@@ -494,15 +494,28 @@ def visualise_grouped_bars(input_item:pd.DataFrame, data_case:str, ranking:str):
         temp_df.pop("M / F")
         temp_df = temp_df.transpose()
         text_size = 15
+    elif data_case == "minority_genders":
+        title = f"Genders excluding M and F by year{suffix}"
+        temp_df = temp_df.transpose()
+        temp_df.pop("M")
+        temp_df.pop("F")
+        temp_df = temp_df.transpose()
+        text_size = 15
 
-    bg_colour = "turquoise"
+    if data_case in ["gender_combos", "minority_gender_combos"]:
+        bg_colour = "turquoise"
+    elif data_case == "minority_genders":
+        bg_colour = "aliceblue"
     text = temp_df.index
     labels = [str(year) for year in temp_df.columns]
 
     counter = 0
-    for combo in temp_df.index:
-        values = temp_df.loc[combo]
-        colour = colour_palettes.gender_combo_dict[combo]
+    for index_label in temp_df.index:
+        values = temp_df.loc[index_label]
+        if data_case in ["gender_combos", "minority_gender_combos"]:
+            colour = colour_palettes.gender_combo_dict[index_label]
+        elif data_case == "minority_genders":
+            colour = colour_palettes.gender_colours[index_label]
 
         fig.add_trace(
             go.Bar(
