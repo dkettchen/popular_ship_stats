@@ -50,6 +50,14 @@ rpf_fig.write_image(
 )
 # how much rpf vs fic (by gender combo)
 rpf_by_gender_combo = get_by_gender_combo(overall_ship_info_df, "rpf_or_fic")
+rpf_by_combo_fig = visualise_grouped_bars(rpf_by_gender_combo, "rpf", "overall")
+rpf_by_combo_fig.write_image(
+    "visualisation/ao3_overall_rankings_2013_2023/ao3_overall_rankings_charts/overall_rpf_by_gender_combo_2013_2023.png", 
+    width=1300, 
+    height=600, 
+    scale=2
+)
+
 
 # fandom market share by numbers
 # fandom market share by rank popularity
@@ -78,7 +86,7 @@ gender_percent_pies.write_image(
     height=600, 
     scale=2
 )
-# gender minorities (same info, second diagram)
+# gender minorities (same info, second diagram) ✅
 gender_percent_pies = visualise_grouped_bars(gender_percent_total, "minority_genders", "overall")
 gender_percent_pies.write_image(
     "visualisation/ao3_overall_rankings_2013_2023/ao3_overall_rankings_charts/overall_minority_genders_2013_2023.png", 

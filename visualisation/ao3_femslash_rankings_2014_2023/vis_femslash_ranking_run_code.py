@@ -34,6 +34,9 @@ from visualisation.diagram_code.visualise_tables import (
     visualise_top_non_white_ships,
     visualise_hottest_chars
 )
+from visualisation.ao3_overall_rankings_2013_2023.vis_overall_ranking_general_stat_code import (
+    get_by_gender_combo
+)
 
 # get data & turn into big df
 ship_joined_femslash_df = make_joined_ranking_df("femslash")
@@ -85,6 +88,15 @@ rpf_fig.write_image(
     height=650, 
     scale=2
 )
+rpf_by_gender_combo = get_by_gender_combo(femslash_ship_info_df, "rpf_or_fic")
+rpf_by_combo_fig = visualise_grouped_bars(rpf_by_gender_combo, "rpf", "femslash")
+rpf_by_combo_fig.write_image(
+    "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/femslash_rpf_by_gender_combo_2014_2023.png", 
+    width=1200, 
+    height=600, 
+    scale=2
+)
+
 
 top_5_ships_dict = top_5_ships(femslash_ship_info_df)
 top_5_ships_fig = visualise_top_5(top_5_ships_dict, "pairings", "femslash")
