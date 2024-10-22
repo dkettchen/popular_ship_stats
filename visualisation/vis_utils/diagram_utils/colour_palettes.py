@@ -59,3 +59,13 @@ bg_colours = {
     "total": ['aliceblue'],
     "annual": ['aliceblue']
 }
+
+
+racial_group_umbrella_colours = { # racial group umbrella groups
+    "romani and european indigenous": "lightseagreen",
+    "black (incl afro-latin)": "mediumpurple",
+    "south europe and (rest of) latin": "hotpink",
+    "middle-east and north-africa": "darkorange",
+    "(rest of) asia": "olive",
+    "american & polynesian indigenous": "darkred",
+}
