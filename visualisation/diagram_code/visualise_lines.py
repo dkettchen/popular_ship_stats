@@ -1,7 +1,11 @@
 import pandas as pd
 import plotly.graph_objects as go
+import plotly.express as px
 import visualisation.vis_utils.diagram_utils.labels as lbls
 import visualisation.vis_utils.diagram_utils.colour_palettes as colour_palettes
+from visualisation.vis_utils.df_utils.retrieve_numbers import get_unique_values_list
+from visualisation.vis_utils.make_colour_lookup import make_colour_lookup_racial_groups
+from visualisation.vis_utils.diagram_utils.calculate_trendline import calculate_trendline
 
 def visualise_line(input_item:dict|pd.Series, data_case:str, ranking:str):
     """
@@ -93,24 +97,72 @@ def visualise_multi_lines(input_item:pd.DataFrame|dict, data_case:str, ranking:s
     suffix = lbls.suffixes[ranking]
     if ranking == "femslash":
         bg_colour = colour_palettes.sapphic_table["body_2"]
+    else:
+        bg_colour = "white"
 
-    if data_case == "interracial_ships": # if it's interracial ships case
+    # making years
+    if type(input_item) == dict:
+        years = list(input_item.keys())
+    elif type(input_item) == pd.DataFrame:
         new_df = input_item.copy()
         years = new_df.columns
 
+    x = years
+    if data_case == "interracial_ships":
         categories = lbls.interracial_categories
         labels = ["interracial ships", "ambiguous ships", "non-interracial ships"]
         colours = colour_palettes.oranges
         title = f'Interracial ships by year{suffix}'
 
         mode = "lines+text+markers"
-    elif data_case == "non_white_ships": # if it's non-white ships case
-        years = list(input_item.keys())
+    elif data_case == "non_white_ships":
         new_df = make_average_non_white_df(input_item)
 
         labels = lbls.non_white_categories
         colours = colour_palettes.non_white_colours
         title =  f'Average rank by race-combo type by year{suffix}'
+
+        mode = "lines+markers"
+    elif data_case == "minority_racial_groups":
+        label_list = get_unique_values_list(input_item)
+        new_df = pd.DataFrame(index=label_list) # making an index of all racial groups present
+        x = [str(year) for year in years]
+
+        # adding all years' values to df
+        for year in years:
+            year_srs = input_item[year].copy()
+            new_df[year] = year_srs
+        
+        new_df = new_df.transpose()
+        for group in ["White","White (Multi)","E Asian","E Asian (Multi)","Unknown","Ambig","N.H."]:
+            if group in list(new_df.columns):
+                new_df.pop(group)
+        new_df = new_df.transpose()
+        new_df = new_df.fillna(0)
+
+        # let's make a df that has the categories added up rather than the specifics separate!
+        category_df = pd.DataFrame()
+        for umbrella in lbls.racial_group_umbrellas:
+            if umbrella == "other":
+                continue
+            umbrella_df = pd.DataFrame()
+            for item in lbls.racial_group_umbrellas[umbrella]:
+                if item in ["White","White (Multi)","E Asian","E Asian (Multi)"]:
+                    continue
+                if item in new_df.index:
+                    umbrella_df[item] = new_df.loc[item]
+            umbrella_df = umbrella_df.transpose()
+            umbrella_srs = umbrella_df.agg("sum")
+            category_df[umbrella] = umbrella_srs
+
+        category_df = category_df.transpose()
+        category_df = category_df.dropna(how="all")
+        category_df = category_df.fillna(0)
+        new_df = category_df
+
+        labels = list(category_df.index)
+        colours = colour_palettes.racial_group_umbrella_colours
+        title =  f"Minority racial groups by year{suffix}"
 
         mode = "lines+markers"
 
@@ -121,17 +173,24 @@ def visualise_multi_lines(input_item:pd.DataFrame|dict, data_case:str, ranking:s
             y = new_df.loc[label][:-1]
         elif data_case == "interracial_ships":
             y = new_df.loc[categories[counter]] # also text
+        elif data_case == "minority_racial_groups":
+            y = new_df.loc[label]
+
+        # determining this trace's colour
+        if data_case == "minority_racial_groups":
+                colour = colours[label]
+        else: colour = colours[counter]
 
         if counter == 0: # starting figure on first label
             fig = go.Figure(
                 data=go.Scatter(
-                    x=years, 
+                    x=x, 
                     y=y,
                     text=y,
                     textposition="top center",
                     mode=mode,
-                    line={"color": colours[counter]},
-                    name=label
+                    line={"color": colour},
+                    name=label,
                 ),
                 layout={
                     "title": title,
@@ -143,13 +202,13 @@ def visualise_multi_lines(input_item:pd.DataFrame|dict, data_case:str, ranking:s
             )
         elif counter > 0: # adding traces for each subsequent label
             fig.add_trace(go.Scatter(
-                x=years, 
+                x=x, 
                 y=y,
                 text=y,
                 textposition="top center",
                 mode=mode,
-                line={"color": colours[counter]},
-                name=label
+                line={"color": colour},
+                name=label,
             ))
 
         if data_case == "non_white_ships": # adding the average line for each label
@@ -160,6 +219,18 @@ def visualise_multi_lines(input_item:pd.DataFrame|dict, data_case:str, ranking:s
                 line={"color": colours[counter]},
                 opacity=0.5,
                 name=label + " (average)"
+            ))
+        elif data_case == "minority_racial_groups":
+            
+            trendline_y = calculate_trendline(list(range(1, len(years)+1)), list(y))
+
+            fig.add_trace(go.Scatter(
+                x=x, 
+                y=trendline_y,
+                mode="lines",
+                line={"color": colour},
+                opacity=0.5,
+                name=label + " (trendline)",
             ))
 
         counter += 1

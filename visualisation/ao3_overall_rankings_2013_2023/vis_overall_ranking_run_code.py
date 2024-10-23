@@ -10,6 +10,7 @@ from visualisation.ao3_overall_rankings_2013_2023.vis_overall_ranking_general_st
 )
 from visualisation.diagram_code.visualise_pies import visualise_pies
 from visualisation.diagram_code.visualise_bars import visualise_grouped_bars, visualise_stacked_bars
+from visualisation.diagram_code.visualise_lines import visualise_multi_lines
 
 # get data & turn into big df ✅
 ship_joined_overall_df = make_joined_ranking_df("overall")
@@ -149,6 +150,16 @@ for year in race_percent_total:
         height=600, 
         scale=2
     )
+race_minority_lines = visualise_multi_lines(race_percent_total, "minority_racial_groups", "overall")
+race_minority_lines.write_image(
+    "visualisation/ao3_overall_rankings_2013_2023/ao3_overall_rankings_charts/overall_minority_racial_distr_2013_2023.png", 
+    width=800, 
+    height=600, 
+    scale=2
+)
+# TODO I would love to add some trend lines to this in the visualise_multi_lines func but alas, 
+# only px seems to have that function built in smh -> figure out a manual way when brain works better
+# TODO run this for the femslash version too
 
 # race combo totals ✅
 race_combo_total = get_counts(overall_ship_info_df, "race_combo", "ship")

@@ -1,8 +1,6 @@
 from math import sqrt
 from numpy import cov
 
-# TODO test these
-
 def calculate_standard_deviation(numbers:list, population:bool=True): # tested
     """
     takes a list of numbers
@@ -110,7 +108,7 @@ def calculate_y_intercept(x_axis_values:list, y_axis_values:list, slope:float): 
     return y_intercept
 
 
-def calculate_trendline(x_axis_values:list, y_axis_values:list):
+def calculate_trendline(x_axis_values:list, y_axis_values:list): # tested
     """
     takes x and y axis' values 
 
@@ -137,33 +135,3 @@ def calculate_trendline(x_axis_values:list, y_axis_values:list):
         trendline_y_axis_values.append(new_value)
 
     return trendline_y_axis_values
-
-    # TODO: current issues to fix:
-
-        # in black folks' line's case (most extreme decrease), 
-        # the decrease of the actual number is 1 or less each time, so 
-        # the trend line should also decrease by 1 or less for each year, rIGHT???
-        # but the "slope" is currently -4.72 -> should likely be closer to -1 or -0.smth
-        # which bit is incorrect that causes this??
-
-        # I tried changing x deviation to 1 -> from ca 3 that the function spits out and it 
-        # literally didn't change the result??? how??
-
-        # these are all the formulas I found online, I think they should be right??
-        # r value also looks right (should be between 1 & -1 and is at -0.9 -> seems right!)
-
-        # -> which of the other bits is messing us up? what went wrong here??
-
-        # latin trendline looks right, but all the others seem very off
-
-        # and the vis function won't let me put them on another axis than the main lines while also
-        # keeping the main lines visible ToT
-
-        # tldr: for black line, I'd assume the values would go from ca 5 to ca 0, 
-        # as it is pretty straight forward of a distribution, yet for some reason they currently go from like 
-        # 23 to -18, which is just utterly too extreme for what we're working with???
-
-        # for rest of asia line I'd assume it'd go from ca 4 to ca 3
-        # for MENA & indig, I'd assume it'd stay firmly within the 0-1 range
-
-        # maybe it's worth doing TDD about at this point :l
