@@ -20,7 +20,7 @@ def calculate_standard_deviation(numbers:list, population:bool=True): # tested
         length = len(numbers) - 1
 
     # take mean of all numbers
-    average = round(((sum(numbers)) / len(numbers)), 2)
+    average = calculate_mean(numbers)
 
     # calculate distance from mean of each number
     deviations = []
@@ -29,12 +29,26 @@ def calculate_standard_deviation(numbers:list, population:bool=True): # tested
         deviations.append(distance)
 
     # take mean of all deviations
-    variance = round(((sum(deviations)) / length),2)
+    variance = calculate_mean(deviations, length)
 
     # standard deviation
     standard_deviation = round(sqrt(variance), 2)
 
     return standard_deviation
+
+def calculate_mean(numbers:list, length:int=None): # tested
+    """
+    calculates the mean average of the numbers list using the length of the list by default 
+    or the length provided if any, and rounds it to two decimal places
+    """
+    if len(numbers) == 0:
+        return None
+
+    if not length:
+        length = len(numbers)
+
+    average = round((sum(numbers) / length), 2)
+    return average
 
 def calculate_trendline(x_axis_values:list, y_axis_values:list):
     """
@@ -49,8 +63,8 @@ def calculate_trendline(x_axis_values:list, y_axis_values:list):
     y_deviation = calculate_standard_deviation(y_axis_values, population=False)
     print(y_deviation)
 
-    x_mean = sum(x_axis_values) / len(x_axis_values)
-    y_mean = sum(y_axis_values) / len(y_axis_values)
+    x_mean = calculate_mean(x_axis_values)
+    y_mean = calculate_mean(y_axis_values)
 
     covariance = cov(x_axis_values, y_axis_values)[0,1]
     product_of_deviation = x_deviation * y_deviation
