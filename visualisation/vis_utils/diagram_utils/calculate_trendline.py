@@ -93,7 +93,7 @@ def calculate_slope(x_axis_values:list, y_axis_values:list): # tested
 
     return m
 
-def calculate_y_intercept(x_axis_values:list, y_axis_values:list, slope:float):
+def calculate_y_intercept(x_axis_values:list, y_axis_values:list, slope:float): # tested
     """
     calculates y intercept for passed-in values, returns y intercept number
     """
@@ -118,6 +118,9 @@ def calculate_trendline(x_axis_values:list, y_axis_values:list):
 
     returns a list of new y values to use for the trendline on the graph
     """
+    if len(x_axis_values) == 0 or len(y_axis_values) == 0:
+        return None
+
     # slope
     a = calculate_slope(x_axis_values, y_axis_values)
 
@@ -125,12 +128,13 @@ def calculate_trendline(x_axis_values:list, y_axis_values:list):
     b = calculate_y_intercept(x_axis_values, y_axis_values, a)
 
     # linear trendline
-    # y_axis_values = a * x_axis_values + b # how tf do we use this in our thing???
-    trendline_y_axis_values = [round((a * x + b), 2) for x in x_axis_values]
-
-
-    # I want to implement that if a final number is below 0, it is instead added as 0 
-    # -> because we cannot have negative numbers of characters represented in this case!
+    # y_axis_values = a * x_axis_values + b
+    trendline_y_axis_values = []
+    for x in x_axis_values:
+        new_value = round((a * x + b), 2)
+        if new_value < 0: # we can't ever get less than 0 characters
+            new_value = 0
+        trendline_y_axis_values.append(new_value)
 
     return trendline_y_axis_values
 

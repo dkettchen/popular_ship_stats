@@ -267,3 +267,58 @@ class TestYIntercept:
         assert result == 1.33
 
 
+class TestTrendline:
+    def test_returns_list_of_floats(self):
+        input_1 = [1,2,3,4]
+        input_2 = [1,2,3,4]
+        result = calculate_trendline(input_1, input_2)
+        assert type(result) == list
+        for item in result:
+            assert type(item) == float
+
+    def test_does_not_mutate_input(self):
+        input_1 = [1,2,3,4]
+        input_2 = [5,6,7,8]
+        calculate_trendline(input_1, input_2)
+        assert input_1 == [1,2,3,4]
+        assert input_2 == [5,6,7,8]
+
+    def test_returns_none_for_empty_list(self):
+        result = calculate_trendline([], [])
+        assert result == None
+
+    def test_returns_list_with_same_values_for_perfectly_horizontal_trend(self):
+        input_1 = [1, 2, 3, 4]
+        input_2 = [2, 2, 2, 2]
+        result = calculate_trendline(input_1, input_2)
+        for number in result:
+            assert number == result[0]
+
+    def test_returns_list_with_only_positive_numbers(self):
+        input_1 = [1, 2, 3, 4]
+        input_2 = [0, 0, 0, 1]
+        result = calculate_trendline(input_1, input_2)
+        for number in result:
+            assert number >= 0
+
+    def test_returns_list_with_ascending_or_descending_values(self):
+        input_1 = [1, 2, 3, 4]
+        input_2 = [2, 5, 3, 1]
+        result_1 = calculate_trendline(input_1, input_2)
+        assert result_1 == sorted(result_1, reverse=True)
+
+        input_3 = [1, 2, 3, 4]
+        input_4 = [1, 4, 2, 7]
+        result_2 = calculate_trendline(input_3, input_4)
+        assert result_2 == sorted(result_2)
+
+    def test_returns_list_with_expected_values_for_given_input(self):
+        input_1 = [1, 2, 3.5, 4, 6, 7, 8, 9]
+        input_2 = [8, 7, 7, 5.5, 5, 3.5, 2.5, 2.5]
+        result_1 = calculate_trendline(input_1, input_2)
+        assert result_1 == [8.05, 7.33, 6.25, 5.89, 4.44, 3.72, 3, 2.27]
+
+        input_3 = [1, 2, 3, 4]
+        input_4 = [0, 4, 2, 7]
+        result_2 = calculate_trendline(input_3, input_4)
+        assert result_2 == [0.4, 2.3, 4.2, 6.1]
