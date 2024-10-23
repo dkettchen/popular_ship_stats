@@ -149,6 +149,8 @@ def visualise_multi_lines(input_item:pd.DataFrame|dict, data_case:str, ranking:s
             for item in lbls.racial_group_umbrellas[umbrella]:
                 if item in ["White","White (Multi)","E Asian","E Asian (Multi)"]:
                     continue
+                elif umbrella == 'north, west, middle and eastern europe':
+                    umbrella = "romani and european indigenous"
                 if item in new_df.index:
                     umbrella_df[item] = new_df.loc[item]
             umbrella_df = umbrella_df.transpose()
