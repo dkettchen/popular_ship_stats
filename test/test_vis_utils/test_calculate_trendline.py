@@ -1,6 +1,7 @@
 from visualisation.vis_utils.diagram_utils.calculate_trendline import (
     calculate_standard_deviation, 
     calculate_mean,
+    calculate_covariance,
     calculate_trendline, 
 )
 
@@ -116,6 +117,41 @@ class TestMean:
         input = [1,2,3,4]
         result = calculate_mean(input, 5)
         assert result == 2
+
+class TestCovariance:
+    def test_returns_float(self):
+        input_1 = [1,2,3,4]
+        input_2 = [1,2,3,4]
+        result = calculate_covariance(input_1, input_2)
+        assert type(result) == float
+
+    def test_does_not_mutate_input(self):
+        input_1 = [1,2,3,4]
+        input_2 = [5,6,7,8]
+        calculate_covariance(input_1, input_2)
+        assert input_1 == [1,2,3,4]
+        assert input_2 == [5,6,7,8]
+
+    def test_returns_none_for_empty_list(self):
+        result = calculate_covariance([], [])
+        assert result == None
+
+    def test_returns_correct_covariance(self):
+        # from examples off the internet
+        input_1_1 = [1692, 1978, 1884, 2151, 2519]
+        input_1_2 = [68, 102, 110, 112, 154]
+        result_1 = calculate_covariance(input_1_1, input_1_2)
+        assert result_1 == 9107.30
+
+        input_2_1 = [1.2, 1.8, 2.2, 1.5]
+        input_2_2 = [3.1, 4.2, 5.0, 4.2]
+        result_2 = calculate_covariance(input_2_1, input_2_2)
+        assert result_2 == 0.31
+
+        input_3_1 = [2.1, 2.5, 4.0, 3.6]
+        input_3_2 = [8, 12, 14, 10]
+        result_3 = calculate_covariance(input_3_1, input_3_2)
+        assert result_3 == 1.53
 
 
 # test trendline

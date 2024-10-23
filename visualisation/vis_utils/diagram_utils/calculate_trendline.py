@@ -50,6 +50,18 @@ def calculate_mean(numbers:list, length:int=None): # tested
     average = round((sum(numbers) / length), 2)
     return average
 
+def calculate_covariance(numbers_1:list, numbers_2:list):
+    """
+    calculates covariance of two input lists and returns relevant number rounded to two decimal places
+    """
+    # apparently covariance is only about whether it's positive or negative??? 
+    # to indicate whether the two numbers move in same direction or inversely??
+    if len(numbers_1) == 0 or len(numbers_2) == 0:
+        return None
+    
+    covariance = round(float(cov(numbers_1, numbers_2)[0,1]), 2)
+    return covariance
+
 def calculate_trendline(x_axis_values:list, y_axis_values:list):
     """
     takes x and y axis' values 
@@ -58,15 +70,13 @@ def calculate_trendline(x_axis_values:list, y_axis_values:list):
 
     returns a list of new y values to use for the trendline on the graph
     """
-
     x_deviation = calculate_standard_deviation(x_axis_values, population=False)
     y_deviation = calculate_standard_deviation(y_axis_values, population=False)
-    print(y_deviation)
 
     x_mean = calculate_mean(x_axis_values)
     y_mean = calculate_mean(y_axis_values)
 
-    covariance = cov(x_axis_values, y_axis_values)[0,1]
+    covariance = calculate_covariance(x_axis_values, y_axis_values)
     product_of_deviation = x_deviation * y_deviation
 
     # pearson's ratio
