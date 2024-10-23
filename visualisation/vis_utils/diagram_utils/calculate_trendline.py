@@ -50,7 +50,7 @@ def calculate_mean(numbers:list, length:int=None): # tested
     average = round((sum(numbers) / length), 2)
     return average
 
-def calculate_covariance(numbers_1:list, numbers_2:list):
+def calculate_covariance(numbers_1:list, numbers_2:list): # tested
     """
     calculates covariance of two input lists and returns relevant number rounded to two decimal places
     """
@@ -62,6 +62,38 @@ def calculate_covariance(numbers_1:list, numbers_2:list):
     covariance = round(float(cov(numbers_1, numbers_2)[0,1]), 2)
     return covariance
 
+def calculate_slope(x_axis_values:list, y_axis_values:list): # tested
+    """
+    calculates slope number for trendline of x and y axis input
+
+    returns slope number
+    """
+    if len(x_axis_values) == 0 or len(y_axis_values) == 0:
+        return None
+
+    n = len(x_axis_values)
+
+    sum_of_values_product = 0
+    for index in range(n):
+        sum_of_values_product += x_axis_values[index] * y_axis_values[index]
+
+    a = n * sum_of_values_product # n * (sum of (x value * corresponding y value))
+
+    b = sum(x_axis_values) * sum(y_axis_values) # (sum of x values) * (sum of y values)
+
+    sum_of_squared_x_axis_values = 0
+    for value in x_axis_values:
+        sum_of_squared_x_axis_values += value * value
+
+    c = n * sum_of_squared_x_axis_values # n * (sum of (x value * x value))
+
+    d = sum(x_axis_values) * sum(x_axis_values)
+
+    m = (a - b) / (c - d)
+
+    return m
+
+
 def calculate_trendline(x_axis_values:list, y_axis_values:list):
     """
     takes x and y axis' values 
@@ -70,27 +102,20 @@ def calculate_trendline(x_axis_values:list, y_axis_values:list):
 
     returns a list of new y values to use for the trendline on the graph
     """
-    x_deviation = calculate_standard_deviation(x_axis_values, population=False)
-    y_deviation = calculate_standard_deviation(y_axis_values, population=False)
+    # slope
+    a = calculate_slope(x_axis_values, y_axis_values)
 
     x_mean = calculate_mean(x_axis_values)
     y_mean = calculate_mean(y_axis_values)
 
-    covariance = calculate_covariance(x_axis_values, y_axis_values)
-    product_of_deviation = x_deviation * y_deviation
-
-    # pearson's ratio
-    r = covariance / product_of_deviation
-
-    # slope
-    a = y_deviation * x_deviation * r
     # y-intercept
     b = y_mean - a * x_mean
 
     # linear trendline
     # y_axis_values = a * x_axis_values + b # how tf do we use this in our thing???
-    trendline_y_values = [round((a * x + b), 2) for x in x_axis_values]
-    print(trendline_y_values)
+    trendline_y_axis_values = [round((a * x + b), 2) for x in x_axis_values]
+
+    return trendline_y_axis_values
 
     # TODO: current issues to fix:
 
@@ -121,5 +146,3 @@ def calculate_trendline(x_axis_values:list, y_axis_values:list):
         # for MENA & indig, I'd assume it'd stay firmly within the 0-1 range
 
         # maybe it's worth doing TDD about at this point :l
-
-    return trendline_y_values
