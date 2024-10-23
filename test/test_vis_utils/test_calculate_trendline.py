@@ -3,6 +3,7 @@ from visualisation.vis_utils.diagram_utils.calculate_trendline import (
     calculate_mean,
     calculate_covariance,
     calculate_slope,
+    calculate_y_intercept,
     calculate_trendline, 
 )
 
@@ -207,6 +208,62 @@ class TestSlope:
         result = calculate_slope(input_1, input_2)
         assert result == 1.75
 
+class TestYIntercept:
+    def test_returns_float(self):
+        input_1 = [1,2,3,4]
+        input_2 = [1,2,3,4]
+        result = calculate_y_intercept(input_1, input_2, 1)
+        assert type(result) == float
+
+    def test_does_not_mutate_input(self):
+        input_1 = [1,2,3,4]
+        input_2 = [5,6,7,8]
+        calculate_y_intercept(input_1, input_2, 1)
+        assert input_1 == [1,2,3,4]
+        assert input_2 == [5,6,7,8]
+
+    def test_returns_none_for_empty_list(self):
+        result = calculate_y_intercept([], [], 1)
+        assert result == None
+
+    def test_returns_slope_within_range_it_should_be(self):
+        # using a calculator I found online
+
+        # example data I found online
+        input_1_1 = [1, 2, 3.5, 4, 6, 7, 8, 9]
+        input_1_2 = [8, 7, 7, 5.5, 5, 3.5, 2.5, 2.5]
+        slope_1 = calculate_slope(input_1_1,input_1_2)
+        result_1 = calculate_y_intercept(input_1_1, input_1_2, slope_1)
+        assert result_1 < 8.783 + 0.3741
+        assert result_1 > 8.783 - 0.3741
+
+        input_2_1 = [2,5,6,8,2,0]
+        input_2_2 = [0,1,2,3,4,5]
+        slope_2 = calculate_slope(input_2_1,input_2_2)
+        result_2 = calculate_y_intercept(input_2_1, input_2_2, slope_2)
+        assert result_2 < 3.227 + 1.401
+        assert result_2 > 3.227 - 1.401
+
+        input_3_1 = [0,1,2,3,4]
+        input_3_2 = [1,0,0,0,0]
+        slope_3 = calculate_slope(input_3_1,input_3_2)
+        result_3 = calculate_y_intercept(input_3_1, input_3_2, slope_3)
+        assert result_3 < 0.6000 + 0.2828
+        assert result_3 > 0.6000 - 0.2828
+
+        input_4_1 = [1,2,3,4]
+        input_4_2 = [0,4,2,7]
+        slope_4 = calculate_slope(input_4_1,input_4_2)
+        result_4 = calculate_y_intercept(input_4_1, input_4_2, slope_4)
+        assert result_4 < -1.500 + 2.554
+        assert result_4 > -1.500 - 2.554
+
+    def test_returns_expected_slope_number(self):
+        #example I found online
+        input_1 = [1, 2, 3]
+        input_2 = [3,5,6.5]
+        slope = calculate_slope(input_1,input_2)
+        result = calculate_y_intercept(input_1, input_2, slope)
+        assert result == 1.33
 
 
-# y intercept refers to where on y axis the line passes through!

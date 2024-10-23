@@ -93,6 +93,22 @@ def calculate_slope(x_axis_values:list, y_axis_values:list): # tested
 
     return m
 
+def calculate_y_intercept(x_axis_values:list, y_axis_values:list, slope:float):
+    """
+    calculates y intercept for passed-in values, returns y intercept number
+    """
+    # y intercept refers to where on y axis the line passes through!
+
+    if len(x_axis_values) == 0 or len(y_axis_values) == 0:
+        return None
+
+    x_mean = calculate_mean(x_axis_values)
+    y_mean = calculate_mean(y_axis_values)
+
+    y_intercept = y_mean - slope * x_mean
+
+    return y_intercept
+
 
 def calculate_trendline(x_axis_values:list, y_axis_values:list):
     """
@@ -105,15 +121,16 @@ def calculate_trendline(x_axis_values:list, y_axis_values:list):
     # slope
     a = calculate_slope(x_axis_values, y_axis_values)
 
-    x_mean = calculate_mean(x_axis_values)
-    y_mean = calculate_mean(y_axis_values)
-
     # y-intercept
-    b = y_mean - a * x_mean
+    b = calculate_y_intercept(x_axis_values, y_axis_values, a)
 
     # linear trendline
     # y_axis_values = a * x_axis_values + b # how tf do we use this in our thing???
     trendline_y_axis_values = [round((a * x + b), 2) for x in x_axis_values]
+
+
+    # I want to implement that if a final number is below 0, it is instead added as 0 
+    # -> because we cannot have negative numbers of characters represented in this case!
 
     return trendline_y_axis_values
 
