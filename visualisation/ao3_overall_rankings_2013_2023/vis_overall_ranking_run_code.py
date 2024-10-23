@@ -140,7 +140,7 @@ race_percent_pies.write_image(
     height=600, 
     scale=2
 )
-# race minorities (same info, second diagram)
+# race minorities (same info, second diagram) ✅
 for year in race_percent_total:
     year_df = race_percent_total[year].copy()
     year_race_fig = visualise_stacked_bars(year_df, "minority_racial_groups", "overall")
@@ -153,12 +153,10 @@ for year in race_percent_total:
 race_minority_lines = visualise_multi_lines(race_percent_total, "minority_racial_groups", "overall")
 race_minority_lines.write_image(
     "visualisation/ao3_overall_rankings_2013_2023/ao3_overall_rankings_charts/overall_minority_racial_distr_2013_2023.png", 
-    width=800, 
+    width=1000, 
     height=600, 
     scale=2
 )
-# TODO I would love to add some trend lines to this in the visualise_multi_lines func but alas, 
-# only px seems to have that function built in smh -> figure out a manual way when brain works better
 # TODO run this for the femslash version too
 
 # race combo totals ✅
