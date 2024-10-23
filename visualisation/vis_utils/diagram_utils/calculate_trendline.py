@@ -3,12 +3,15 @@ from numpy import cov
 
 # TODO test these
 
-def calculate_standard_deviation(numbers:list, population:bool=True):
+def calculate_standard_deviation(numbers:list, population:bool=True): # tested
     """
     takes a list of numbers
 
     returns their standard deviation number
     """
+    if len(numbers) == 0:
+        return None
+
     # if numbers is not entire population, but only a sample
     # we divide by len(numbers) - 1 instead of len(numbers)
     if population:
@@ -17,7 +20,7 @@ def calculate_standard_deviation(numbers:list, population:bool=True):
         length = len(numbers) - 1
 
     # take mean of all numbers
-    average = (sum(numbers)) / length
+    average = round(((sum(numbers)) / len(numbers)), 2)
 
     # calculate distance from mean of each number
     deviations = []
@@ -26,10 +29,10 @@ def calculate_standard_deviation(numbers:list, population:bool=True):
         deviations.append(distance)
 
     # take mean of all deviations
-    variance = (sum(deviations)) / length
+    variance = round(((sum(deviations)) / length),2)
 
     # standard deviation
-    standard_deviation = sqrt(variance)
+    standard_deviation = round(sqrt(variance), 2)
 
     return standard_deviation
 
