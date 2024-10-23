@@ -169,7 +169,7 @@ for year in femslash_race_percent:
     )
 race_minority_lines = visualise_multi_lines(femslash_race_percent, "minority_racial_groups", "femslash")
 race_minority_lines.write_image(
-    "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/sapphic_race_stats/femslash_racial_distr_2014_2023.png", 
+    "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/sapphic_race_stats/femslash_minority_racial_distr_2014_2023.png", 
     width=1000, 
     height=600, 
     scale=2
