@@ -23,6 +23,7 @@ from visualisation.input_data_code.make_fandom_data import (
     fandoms_popularity_by_year,
     top_5_fandoms_by_year,
 )
+from visualisation.input_data_code.make_hottest_chars import hottest_char
 from visualisation.diagram_code.visualise_pies import (
     visualise_pies, 
     visualise_market_share_and_popularity
@@ -37,7 +38,8 @@ from visualisation.diagram_code.visualise_lines import (
 )
 from visualisation.diagram_code.visualise_tables import (
     visualise_top_non_white_ships, 
-    visualise_top_5
+    visualise_top_5,
+    visualise_hottest_chars
 )
 
 
@@ -96,11 +98,7 @@ rpf_by_combo_fig.write_image(
 )
 
 
-# fandom market share by numbers
-# fandom market share by rank popularity
-# fandom market share by works no?
-# top 5 fandoms
-
+# fandom market share by numbers ✅
 market_share_dict = fandom_market_share_by_year(overall_ship_info_df) 
 market_share_fig = visualise_market_share_and_popularity(market_share_dict, colour_lookup_dict, "overall")
 market_share_fig.write_image(
@@ -110,6 +108,7 @@ market_share_fig.write_image(
     scale=2
 )
 
+# fandom market share by rank popularity ✅
 popularity_dict = fandoms_popularity_by_year(overall_ship_info_df) 
 popularity_fig = visualise_market_share_and_popularity(popularity_dict, colour_lookup_dict, "overall")
 popularity_fig.write_image(
@@ -119,6 +118,9 @@ popularity_fig.write_image(
     scale=2
 )
 
+# fandom market share by works no?
+
+# top 5 fandoms ✅
 top_5_fandoms_dict = top_5_fandoms_by_year(market_share_dict, popularity_dict) 
 top_5_fandoms_fig = visualise_top_5(top_5_fandoms_dict, "fandoms", "overall")
 top_5_fandoms_fig.write_image(
@@ -128,14 +130,16 @@ top_5_fandoms_fig.write_image(
     scale=2
 )
 
-
-
 # top 10 ships (total)
 # top 10 ships (by gender combo)
 # all time top 5 ships by no of appearances in top 10
 # all time top 5 ships by longest streak in top 10
 
 # hottest characters
+hottest_chars = hottest_char(overall_character_info_df)
+    # possibly another chart abt how many chars were in how many ships over the years
+visualise_hottest_chars(hottest_chars, "overall") # writes its own files
+
 
 # racial distr by char gender
 # racial distr by gender combo
@@ -260,7 +264,7 @@ multi_involved_line.write_image(
     scale=2
 )
 
-# interracial ships
+# interracial ships ✅
 interracial_total = total_interracial_ratio(race_combo_total)
 interracial_fig = visualise_pies(interracial_total, "interracial_ships", "overall")
 interracial_fig.write_image(
@@ -277,7 +281,7 @@ interracial_line.write_image(
     scale=2
 )
 
-# total racial groups
+# total racial groups ✅
 no_of_racial_groups = total_racial_groups(race_percent_total)
 total_group_fig = visualise_line(no_of_racial_groups, "total_racial_groups", "overall")
 total_group_fig.write_image(
@@ -287,8 +291,8 @@ total_group_fig.write_image(
     scale=2
 )
 
-# non-white categories:
-# total nos each year
+# non-white categories: ✅
+# total nos each year ✅
 overall_prepped_dict = prep_df_for_non_white_ship_comp(overall_ship_info_df)
 non_white_counts = count_non_white_ships(overall_prepped_dict)
 non_white_count_fig = visualise_non_white_counts(non_white_counts, "overall")
@@ -299,7 +303,7 @@ non_white_count_fig.write_image(
     scale=2
 )
 
-# top 3 ships for each category that year
+# top 3 ships for each category that year ✅
 overall_separated_dict = separate_out_non_white_ships_info(overall_prepped_dict)
 top_non_white = top_non_white_ships(overall_separated_dict)
 top_non_white_fig = visualise_top_non_white_ships(top_non_white, "overall")
@@ -310,7 +314,7 @@ top_non_white_fig.write_image(
     scale=2
 )
 
-# average ranking by category
+# average ranking by category ✅
 average_non_white_rank = average_non_white_ranking(overall_separated_dict)
 average_non_white_fig = visualise_multi_lines(average_non_white_rank, "non_white_ships", "overall")
 average_non_white_fig.write_image(

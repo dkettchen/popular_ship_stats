@@ -207,6 +207,11 @@ def visualise_hottest_chars(input_dict:dict, ranking:str):
         column_width = [1.9,0.7,0.5,0.3,3]
         width = 1350
         height = 350
+    elif ranking == "overall":
+        colours = colour_palettes.blue_table
+        column_width = [1.43,0.4,0.32,0.1,2.75]
+        width = 1650
+        height = 500
 
     line_colour = colours["lines"] # colour of lines
     header_fill_colour = colours["header"] # colour of header row
@@ -245,6 +250,8 @@ def visualise_hottest_chars(input_dict:dict, ranking:str):
 
         if ranking == "femslash":
             filepath = f"visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/hottest_sapphics_by_year/hottest_femslash_characters_{year}_2014_2023.png"
+        elif ranking == "overall":
+            filepath = f"visualisation/ao3_overall_rankings_2013_2023/ao3_overall_rankings_charts/overall_hottest_chars/hottest_overall_characters_{year}_2014_2023.png"
 
         fig.write_image(
             filepath,

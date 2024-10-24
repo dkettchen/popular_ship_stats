@@ -7,7 +7,6 @@ from visualisation.ao3_femslash_rankings_2014_2023.vis_femslash_ranking_general_
     count_appearances,
     count_streaks,
     longest_running_top_5_ships,
-    hottest_char,
 )
 from visualisation.input_data_code.make_general_data import (
     get_by_gender_combo,
@@ -29,6 +28,7 @@ from visualisation.input_data_code.make_fandom_data import (
     fandoms_popularity_by_year,
     top_5_fandoms_by_year,
 )
+from visualisation.input_data_code.make_hottest_chars import hottest_char
 from visualisation.diagram_code.visualise_bars import (
     visualise_non_white_counts, 
     visualise_grouped_bars, 
