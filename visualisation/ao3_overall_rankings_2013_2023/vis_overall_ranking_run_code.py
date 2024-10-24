@@ -172,11 +172,8 @@ race_combo_pies.write_image(
     scale=2
 )
 
-# multi racial characters totals
+# multi racial characters totals ✅
 multi_total = total_multi_nos_by_year(race_percent_total, "race")
-# multi racial involved ships totals
-multi_involved_total = total_multi_nos_by_year(race_combo_total, "race_combo")
-
 multi_fig = visualise_pies(multi_total, "multi_chars", "overall")
 multi_fig.write_image(
     "visualisation/ao3_overall_rankings_2013_2023/ao3_overall_rankings_charts/overall_multi_characters_2013_2023.png", 
@@ -187,6 +184,23 @@ multi_fig.write_image(
 multi_line = visualise_line(multi_total, "multi_chars", "overall")
 multi_line.write_image(
     "visualisation/ao3_overall_rankings_2013_2023/ao3_overall_rankings_charts/overall_multi_characters_line_2013_2023.png", 
+    width=700, 
+    height=600, 
+    scale=2
+)
+
+# multi racial involved ships totals ✅
+multi_involved_total = total_multi_nos_by_year(race_combo_total, "race_combo")
+multi_involved_fig = visualise_pies(multi_involved_total, "multi_char_ships", "overall")
+multi_involved_fig.write_image(
+    "visualisation/ao3_overall_rankings_2013_2023/ao3_overall_rankings_charts/overall_multi_involved_ships_2013_2023.png", 
+    width=1300, 
+    height=600, 
+    scale=2
+)
+multi_involved_line = visualise_line(multi_involved_total, "multi_char_ships", "overall")
+multi_involved_line.write_image(
+    "visualisation/ao3_overall_rankings_2013_2023/ao3_overall_rankings_charts/overall_multi_involved_ships_line_2013_2023.png", 
     width=700, 
     height=600, 
     scale=2
