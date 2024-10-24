@@ -60,3 +60,20 @@ def total_interracial_ratio(race_combo_percent:dict):
 
     new_df = pd.DataFrame(data=temp_dict, index=lbls.interracial_categories)
     return new_df
+
+
+# how many racial groups each year
+def total_racial_groups(race_percent:dict):
+    """
+    takes output dict from total_race_nos_by_year ("race" version)
+
+    returns a series with the total no of racial groups represented each year
+    """
+    temp_dict = {}
+    for year in race_percent:
+        df = race_percent[year].copy().reset_index()
+        total = df["count"].count()
+        temp_dict[year] = total
+    new_srs = pd.Series(data=temp_dict)
+    return new_srs
+

@@ -13,7 +13,8 @@ from visualisation.diagram_code.visualise_bars import visualise_grouped_bars, vi
 from visualisation.diagram_code.visualise_lines import visualise_multi_lines, visualise_line
 from visualisation.input_data_code.make_race_data import (
     total_multi_nos_by_year, 
-    total_interracial_ratio
+    total_interracial_ratio,
+    total_racial_groups,
 )
 
 # get data & turn into big df ✅
@@ -224,6 +225,14 @@ interracial_line.write_image(
 )
 
 # total racial groups
+no_of_racial_groups = total_racial_groups(race_percent_total)
+total_group_fig = visualise_line(no_of_racial_groups, "total_racial_groups", "overall")
+total_group_fig.write_image(
+    "visualisation/ao3_overall_rankings_2013_2023/ao3_overall_rankings_charts/overall_total_racial_groups_2013_2023.png", 
+    width=700, 
+    height=600, 
+    scale=2
+)
 
 # non-white categories:
     # total nos each year
