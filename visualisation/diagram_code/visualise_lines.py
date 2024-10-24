@@ -113,7 +113,9 @@ def visualise_multi_lines(input_item:pd.DataFrame|dict, data_case:str, ranking:s
 
     suffix = lbls.suffixes[ranking]
     if ranking == "femslash":
-        bg_colour = colour_palettes.sapphic_table["body_2"]
+        bg_colour = colour_palettes.bg_colours["femslash"][0]
+    elif ranking == "overall":
+        bg_colour = colour_palettes.bg_colours["overall"][0]
     else:
         bg_colour = "white"
 
@@ -239,7 +241,7 @@ def visualise_multi_lines(input_item:pd.DataFrame|dict, data_case:str, ranking:s
                 opacity=0.5,
                 name=label + " (average)"
             ))
-        elif data_case == "minority_racial_groups":
+        elif data_case in ["minority_racial_groups", "interracial_ships"]:
             
             trendline_y = calculate_trendline(list(range(1, len(years)+1)), list(y))
 

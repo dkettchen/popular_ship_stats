@@ -206,9 +206,22 @@ multi_involved_line.write_image(
     scale=2
 )
 
-
 # interracial ships
 interracial_total = total_interracial_ratio(race_combo_total)
+interracial_fig = visualise_pies(interracial_total, "interracial_ships", "overall")
+interracial_fig.write_image(
+    "visualisation/ao3_overall_rankings_2013_2023/ao3_overall_rankings_charts/overall_interracial_ships_2013_2023.png", 
+    width=1300, 
+    height=600,
+    scale=2
+)
+interracial_line = visualise_multi_lines(interracial_total, "interracial_ships", "overall")
+interracial_line.write_image(
+    "visualisation/ao3_overall_rankings_2013_2023/ao3_overall_rankings_charts/overall_interracial_ships_line_2013_2023.png", 
+    width=700, 
+    height=600, 
+    scale=2
+)
 
 # total racial groups
 
