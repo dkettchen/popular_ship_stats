@@ -3,9 +3,6 @@ from visualisation.vis_utils.join_member_info import join_character_info_to_df
 from visualisation.vis_utils.make_colour_lookup import make_colour_lookup
 from visualisation.input_data_code.make_joined_ranking_df import make_joined_ranking_df
 from visualisation.ao3_femslash_rankings_2014_2023.vis_femslash_ranking_general_stat_code import (
-    fandom_market_share_by_year,
-    fandoms_popularity_by_year,
-    top_5_fandoms_by_year,
     top_5_ships,
     count_appearances,
     count_streaks,
@@ -26,6 +23,11 @@ from visualisation.input_data_code.make_race_data import (
     separate_out_non_white_ships_info,
     top_non_white_ships,
     average_non_white_ranking,
+)
+from visualisation.input_data_code.make_fandom_data import (
+    fandom_market_share_by_year,
+    fandoms_popularity_by_year,
+    top_5_fandoms_by_year,
 )
 from visualisation.diagram_code.visualise_bars import (
     visualise_non_white_counts, 

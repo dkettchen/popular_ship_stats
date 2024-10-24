@@ -26,6 +26,8 @@ def visualise_top_5(input_dict:dict, data_case:str, ranking:str):
     
     if ranking == "femslash":
         colours = colour_palettes.sapphic_table
+    elif ranking == "overall":
+        colours = colour_palettes.blue_table
 
     if data_case == "fandoms":
         no_of_columns = None

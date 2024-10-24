@@ -18,13 +18,27 @@ from visualisation.input_data_code.make_race_data import (
     top_non_white_ships,
     average_non_white_ranking,
 )
-from visualisation.diagram_code.visualise_pies import visualise_pies
+from visualisation.input_data_code.make_fandom_data import (
+    fandom_market_share_by_year,
+    fandoms_popularity_by_year,
+    top_5_fandoms_by_year,
+)
+from visualisation.diagram_code.visualise_pies import (
+    visualise_pies, 
+    visualise_market_share_and_popularity
+)
 from visualisation.diagram_code.visualise_bars import (
     visualise_grouped_bars, 
     visualise_non_white_counts
 )
-from visualisation.diagram_code.visualise_lines import visualise_multi_lines, visualise_line
-from visualisation.diagram_code.visualise_tables import visualise_top_non_white_ships
+from visualisation.diagram_code.visualise_lines import (
+    visualise_multi_lines, 
+    visualise_line
+)
+from visualisation.diagram_code.visualise_tables import (
+    visualise_top_non_white_ships, 
+    visualise_top_5
+)
 
 
 # get data & turn into big df ✅
@@ -86,6 +100,35 @@ rpf_by_combo_fig.write_image(
 # fandom market share by rank popularity
 # fandom market share by works no?
 # top 5 fandoms
+
+market_share_dict = fandom_market_share_by_year(overall_ship_info_df) 
+market_share_fig = visualise_market_share_and_popularity(market_share_dict, colour_lookup_dict, "overall")
+market_share_fig.write_image(
+    "visualisation/ao3_overall_rankings_2013_2023/ao3_overall_rankings_charts/overall_fandom_market_share_2013_2023.png",
+    width=2800, 
+    height=1300, 
+    scale=2
+)
+
+popularity_dict = fandoms_popularity_by_year(overall_ship_info_df) 
+popularity_fig = visualise_market_share_and_popularity(popularity_dict, colour_lookup_dict, "overall")
+popularity_fig.write_image(
+    "visualisation/ao3_overall_rankings_2013_2023/ao3_overall_rankings_charts/overall_fandom_popularity_2013_2023.png",
+    width=2800, 
+    height=1300, 
+    scale=2
+)
+
+top_5_fandoms_dict = top_5_fandoms_by_year(market_share_dict, popularity_dict) 
+top_5_fandoms_fig = visualise_top_5(top_5_fandoms_dict, "fandoms", "overall")
+top_5_fandoms_fig.write_image(
+    "visualisation/ao3_overall_rankings_2013_2023/ao3_overall_rankings_charts/overall_top_fandoms_2013_2023.png",
+    width=2000, 
+    height=500, 
+    scale=2
+)
+
+
 
 # top 10 ships (total)
 # top 10 ships (by gender combo)
