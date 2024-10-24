@@ -10,7 +10,11 @@ from visualisation.ao3_overall_rankings_2013_2023.vis_overall_ranking_general_st
 )
 from visualisation.diagram_code.visualise_pies import visualise_pies
 from visualisation.diagram_code.visualise_bars import visualise_grouped_bars, visualise_stacked_bars
-from visualisation.diagram_code.visualise_lines import visualise_multi_lines
+from visualisation.diagram_code.visualise_lines import visualise_multi_lines, visualise_line
+from visualisation.ao3_femslash_rankings_2014_2023.vis_femslash_ranking_race_stat_code import (
+    total_multi_nos_by_year, 
+    total_interracial_ratio
+)
 
 # get data & turn into big df ✅
 ship_joined_overall_df = make_joined_ranking_df("overall")
@@ -141,15 +145,15 @@ race_percent_pies.write_image(
     scale=2
 )
 # race minorities (same info, second diagram) ✅
-for year in race_percent_total:
-    year_df = race_percent_total[year].copy()
-    year_race_fig = visualise_stacked_bars(year_df, "minority_racial_groups", "overall")
-    year_race_fig.write_image(
-        f"visualisation/ao3_overall_rankings_2013_2023/ao3_overall_rankings_charts/racial_minorities_by_year/overall_minority_racial_distr_{year}.png", 
-        width=1200, 
-        height=600, 
-        scale=2
-    )
+# for year in race_percent_total:
+#     year_df = race_percent_total[year].copy()
+#     year_race_fig = visualise_stacked_bars(year_df, "minority_racial_groups", "overall")
+#     year_race_fig.write_image(
+#         f"visualisation/ao3_overall_rankings_2013_2023/ao3_overall_rankings_charts/racial_minorities_by_year/overall_minority_racial_distr_{year}.png", 
+#         width=1200, 
+#         height=600, 
+#         scale=2
+#     )
 race_minority_lines = visualise_multi_lines(race_percent_total, "minority_racial_groups", "overall")
 race_minority_lines.write_image(
     "visualisation/ao3_overall_rankings_2013_2023/ao3_overall_rankings_charts/overall_minority_racial_distr_2013_2023.png", 
@@ -157,7 +161,6 @@ race_minority_lines.write_image(
     height=600, 
     scale=2
 )
-# TODO run this for the femslash version too
 
 # race combo totals ✅
 race_combo_total = get_counts(overall_ship_info_df, "race_combo", "ship")
@@ -168,12 +171,30 @@ race_combo_pies.write_image(
     height=600, 
     scale=2
 )
-# race combo minorities (same info, second diagram)
 
 # multi racial characters totals
+multi_total = total_multi_nos_by_year(race_percent_total, "race")
 # multi racial involved ships totals
+multi_involved_total = total_multi_nos_by_year(race_combo_total, "race_combo")
+
+multi_fig = visualise_pies(multi_total, "multi_chars", "overall")
+multi_fig.write_image(
+    "visualisation/ao3_overall_rankings_2013_2023/ao3_overall_rankings_charts/overall_multi_characters_2013_2023.png", 
+    width=1300, 
+    height=600, 
+    scale=2
+)
+multi_line = visualise_line(multi_total, "multi_chars", "overall")
+multi_line.write_image(
+    "visualisation/ao3_overall_rankings_2013_2023/ao3_overall_rankings_charts/overall_multi_characters_line_2013_2023.png", 
+    width=700, 
+    height=600, 
+    scale=2
+)
+
 
 # interracial ships
+interracial_total = total_interracial_ratio(race_combo_total)
 
 # total racial groups
 

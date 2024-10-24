@@ -158,15 +158,15 @@ femslash_race_fig.write_image(
 )
 
 # race minorities (same info, second diagram)
-for year in femslash_race_percent:
-    year_df = femslash_race_percent[year].copy()
-    year_race_fig = visualise_stacked_bars(year_df, "minority_racial_groups", "femslash")
-    year_race_fig.write_image(
-        f"visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/sapphic_race_stats/racial_minorities_by_year/femslash_minority_racial_distr_{year}.png", 
-        width=1200, 
-        height=600, 
-        scale=2
-    )
+# for year in femslash_race_percent:
+#     year_df = femslash_race_percent[year].copy()
+#     year_race_fig = visualise_stacked_bars(year_df, "minority_racial_groups", "femslash")
+#     year_race_fig.write_image(
+#         f"visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/sapphic_race_stats/racial_minorities_by_year/femslash_minority_racial_distr_{year}.png", 
+#         width=1200, 
+#         height=600, 
+#         scale=2
+#     )
 race_minority_lines = visualise_multi_lines(femslash_race_percent, "minority_racial_groups", "femslash")
 race_minority_lines.write_image(
     "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/sapphic_race_stats/femslash_minority_racial_distr_2014_2023.png", 

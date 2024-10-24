@@ -21,22 +21,28 @@ def visualise_line(input_item:dict|pd.Series, data_case:str, ranking:str):
     ranking = ranking.lower()
 
     suffix = lbls.suffixes[ranking]
+
+    # setting colours
     if ranking == "femslash":
-        bg_colour = colour_palettes.sapphic_table["body_2"]
+        bg_colour = colour_palettes.bg_colours["femslash"][0]
+    elif ranking == "overall":
+        bg_colour = colour_palettes.bg_colours["overall"][0]
+    colour = colour_palettes.oranges[0]
 
     if data_case == "multi_chars":
-        x = input_item.columns
+        x = [str(column) for column in input_item.columns]
         y = input_item.loc["multi_chars"]
         title = f'Multiracial characters by year{suffix}'
     elif data_case == "total_racial_groups":
-        x = input_item.index
+        x = [str(index) for index in input_item.index]
         y = input_item.values
         title = f'Number of racial groups over the years{suffix}'
     elif data_case == "multi_char_ships":
-        x = input_item.columns
+        x = [str(column) for column in input_item.columns]
         y = input_item.loc["with_multi_chars"]
         title = f"Ships with multiracial characters by year{suffix}"
 
+    # making figure
     fig = go.Figure(
         data=go.Scatter(
             x=x, 
@@ -44,16 +50,27 @@ def visualise_line(input_item:dict|pd.Series, data_case:str, ranking:str):
             text=y,
             textposition="top center",
             mode="lines+text+markers",
-            line={"color": colour_palettes.oranges[0]}
+            line={"color": colour}
         ),
         layout={
             "title": title,
             "plot_bgcolor": bg_colour,
             "yaxis_rangemode": "tozero",
             "yaxis_tickmode": "linear",
-            "xaxis_tickmode": "linear"
+            "xaxis_tickmode": "linear",
+            "showlegend": False
         }
     )
+
+    # adding trendline
+    trendline_y = calculate_trendline(list(range(1, len(x)+1)), list(y))
+    fig.add_trace(go.Scatter(
+        x=x, 
+        y=trendline_y,
+        mode="lines",
+        line={"color": colour},
+        opacity=0.5,
+    ))
 
     return fig
 
