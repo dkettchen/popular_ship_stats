@@ -124,7 +124,7 @@ longest_running_fig.write_image(
     scale=2
 )
 
-hottest_wlw = hottest_char(femslash_character_info_df)
+hottest_wlw = hottest_char(femslash_character_info_df, "femslash")
     # possibly another chart abt how many chars were in how many ships over the years
 visualise_hottest_chars(hottest_wlw, "femslash") # writes its own files
 

@@ -209,8 +209,8 @@ def visualise_hottest_chars(input_dict:dict, ranking:str):
         height = 350
     elif ranking == "overall":
         colours = colour_palettes.blue_table
-        column_width = [1.43,0.4,0.32,0.1,2.75]
-        width = 1650
+        column_width = [1.43,0.4,0.32,0.1,0.1,2.7,0.2]
+        width = 1750
         height = 500
 
     line_colour = colours["lines"] # colour of lines

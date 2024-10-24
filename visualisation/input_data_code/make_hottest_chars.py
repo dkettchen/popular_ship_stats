@@ -5,10 +5,11 @@ from visualisation.vis_utils.df_utils.retrieve_numbers import (
 )
 from visualisation.vis_utils.df_utils.make_dfs import sort_df, get_year_df
 import pandas as pd
+from visualisation.input_data_code.make_file_dfs import make_ships_df
 
 # no 1 hottest character each year (in most ships)
     # & their highest-ranked ship
-def hottest_char_ranking(character_info_df:pd.DataFrame):
+def hottest_char_ranking(character_info_df:pd.DataFrame, ranking:str):
     """
     takes dataframe that (at least) contains "year", "full_name", "ship", "rank_no", 
     "fandom", "race", "rpf_or_fic" columns
@@ -18,9 +19,17 @@ def hottest_char_ranking(character_info_df:pd.DataFrame):
     the dataframes contain the numbers of ships each character that year was in,
     ordered from most to least, and which their highest-ranked ship was
     """
+    if ranking == "femslash":
+        get_list = ["year", "full_name", "ship", "rank_no", "fandom", "race", "rpf_or_fic"]
+    else:
+        get_list = ["year", "full_name", "ship", "rank_no", "fandom", "race", "gender", "rpf_or_fic"]
+
     new_df = character_info_df.copy().get(
-        ["year", "full_name", "ship", "rank_no", "fandom", "race", "rpf_or_fic"]
+        get_list
     )
+
+    if ranking != "femslash": # don't need this for femslash
+        ships_df = make_ships_df()
 
     # group by years
     year_dict = {}
@@ -30,9 +39,10 @@ def hottest_char_ranking(character_info_df:pd.DataFrame):
         year_df = year_df.dropna()
 
         # group by characters
+        group_list = get_list[:2] + get_list[4:]
         # count
         hottest_df = get_label_counts(
-            year_df, ["year", "full_name", "fandom", "race", "rpf_or_fic"], "ship"
+            year_df, group_list, "ship"
         )
         hottest_df = sort_df(hottest_df, "count")
         hottest_df = hottest_df.reset_index()
@@ -45,9 +55,22 @@ def hottest_char_ranking(character_info_df:pd.DataFrame):
                 year_df["full_name"] == character
             ).sort_values(by="rank_no").head(1)
 
-            highest_ships_by_char[character] = list(char_df["ship"])[0]
+            highest_ship = list(char_df["ship"])[0]
+            # I wanna attach the gender combo for non-femslash rankings!
+            if ranking != "femslash":
+                gender_combo = ships_df["gender_combo"].where(
+                    (ships_df["slash_ship"] == highest_ship) | (ships_df["gen_ship"] == highest_ship)
+                ).dropna()
+                gender_combo = list(gender_combo)[0]
+            else: gender_combo = ""
+
+            highest_ships_by_char[character] = [highest_ship, gender_combo]
         
-        hottest_df["highest_ship"] = [highest_ships_by_char[name] for name in hottest_df["full_name"]]
+        hottest_df["highest_ship"] = [highest_ships_by_char[name][0] for name in hottest_df["full_name"]]
+        if ranking != "femslash":
+            hottest_df["highest_gender_combo"] = [
+                highest_ships_by_char[name][1] for name in hottest_df["full_name"]
+            ]
         hottest_df.pop("rank_no")
 
         year_dict[int(year)] = hottest_df
@@ -55,7 +78,7 @@ def hottest_char_ranking(character_info_df:pd.DataFrame):
     return year_dict
 
 # need to separate out chars we wanna visualise as a lot are tied & it's by year not fandom
-def hottest_char(character_info_df:pd.DataFrame):
+def hottest_char(character_info_df:pd.DataFrame, ranking:str):
     """
     takes dataframe that (at least) contains "year", "full_name", "ship", "rank_no", 
     "fandom", "race", "rpf_or_fic" columns
@@ -74,7 +97,7 @@ def hottest_char(character_info_df:pd.DataFrame):
     of ships (3+ only) and the names of all characters who tied for that number of ships that year
     """
 
-    hottest_dict = hottest_char_ranking(character_info_df)
+    hottest_dict = hottest_char_ranking(character_info_df, ranking)
 
     hottest_data = {}
     for year in hottest_dict:

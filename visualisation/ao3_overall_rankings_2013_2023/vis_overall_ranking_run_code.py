@@ -136,7 +136,7 @@ top_5_fandoms_fig.write_image(
 # all time top 5 ships by longest streak in top 10
 
 # hottest characters
-hottest_chars = hottest_char(overall_character_info_df)
+hottest_chars = hottest_char(overall_character_info_df, "overall")
     # possibly another chart abt how many chars were in how many ships over the years
 visualise_hottest_chars(hottest_chars, "overall") # writes its own files
 
