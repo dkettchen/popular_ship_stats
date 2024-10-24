@@ -126,7 +126,8 @@ White involved, east asian involved and non-white ships hovered around the half-
 
 F.e. in 2020, there was only one ship represented which happened to rank 47th, singlehandedly making for the highest average of its category over the entire period.
 
-When looking at the average of all years' averages, white ivolved ships ranked higher than all other categories, with east asian involved ships in second, non-white ships in third and non-white or ea ships firmly in fourth by quite a margin.
+When looking at the average of all years' averages, white- and east asian-involved ships on average rank slightly above the halfway point, with east asian-involved ones ranking slightly higher than white ones.
+Both other categories rank lower, with non-white and non-east asian ships ranking the lowest out of all the categories.
 
 This means that not only are there less ships per category in this same order, they are also lower ranked on average.
 

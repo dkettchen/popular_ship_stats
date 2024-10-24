@@ -115,7 +115,7 @@ This chart shows the number of ships with at least one white person, with at lea
 
 ![alt text](ao3_all_data_charts/racial_groups_diagrams/all_ao3_ranked_ships_non_white_ships_2013_2023.png)
 
-I call the last one of those "The Big Oof" as there were only 22 ships (out of the 600 total) that didn't contain any white or east asian people.
+I call the last one of those "The Big Oof" as there were only 17 ships (out of the 600 total) that didn't contain any white or east asian people.
 
 This is the ratio of interracial, non-interracial and ambiguous ships:
 

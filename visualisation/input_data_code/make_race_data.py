@@ -99,7 +99,7 @@ def prep_df_for_non_white_ship_comp(ship_info_df:pd.DataFrame):
 
         year_df["contains_white_person"] = year_df["race_combo"].str.contains("White|Eu Ind")
             # I want to catch anna and elsa cause they're not a "non-white/non-ea" pairing, that's silly
-        year_df["contains_e_asian_person"] = year_df["race_combo"].str.contains("^E Asian", regex=True)
+        year_df["contains_e_asian_person"] = year_df["race_combo"].str.contains("^E Asian| E Asian", regex=True)
             # making sure this isn't catching SE Asians by accident
         year_df["contains_ambig_person"] = year_df["race_combo"].str.contains("Ambig")
         year_df["contains_non_human"] = year_df["race_combo"].str.contains("N.H.")
