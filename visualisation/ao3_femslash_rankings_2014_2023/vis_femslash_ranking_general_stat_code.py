@@ -97,31 +97,6 @@ def top_5_fandoms_by_year(market_share:dict, popularity:dict):
     return top_5_dict
 
 
-# how much rpf vs not
-def rpf_vs_fic(ship_info_df:pd.DataFrame):
-    """
-    takes a dataframe that contains (at least) "year", "ship", and "rpf_or_fic" columns
-
-    returns a dictionary with year keys and dataframe values, of the counted 
-    amount of rpf or fictional ships in that year ("year" and "no_of_ships" columns)
-    """
-    new_df = ship_info_df.copy().get(["year", "ship", "rpf_or_fic"])
-
-    year_dict = {}
-    unique_year_list = get_unique_values_list(new_df, "year")
-    for year in unique_year_list:
-        year_df = get_year_df(new_df, year)
-        year_df = get_label_counts(year_df, "rpf_or_fic", "ship")
-        year_df = year_df.rename(
-            columns={"count": "no_of_ships"}
-        )
-
-        year_df["year"] = year
-        year_dict[int(year)] = year_df
-
-    return year_dict
-
-
 # top 5 ships & their demo each year
 def top_5_ships(ship_info_df:pd.DataFrame):
     """
@@ -320,26 +295,4 @@ def hottest_char(character_info_df:pd.DataFrame):
         }
 
     return hottest_data
-
-
-# character gender percentages (what gender weirds were in the femslash ranking)
-def gender_stats(character_info_df:pd.DataFrame):
-    """
-    takes dataframe that (at least) contains "year" and "gender" columns
-
-    returns a dict with year keys and dataframe values
-
-    the dataframes contain the numbers of characters of each gender tag represented that year
-    """
-    new_df = character_info_df.copy().get(["year", "gender"])
-
-    year_dict = {}
-    unique_year_list = get_unique_values_list(new_df, "year")
-    for year in unique_year_list:
-        year_df = get_year_df(new_df, year)
-        year_df = year_df.dropna()
-        counted_df = get_label_counts(year_df, "gender", "year")
-        year_dict[int(year)] = sort_df(counted_df, "count")
-
-    return year_dict
 
