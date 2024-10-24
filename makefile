@@ -50,3 +50,7 @@ make-ao3-femslash-charts:
 # runs "ao3_overall_rankings_2013_2023"'s vis file to (re)make diagrams
 make-ao3-overall-charts:
 	python visualisation/ao3_overall_rankings_2013_2023/vis_overall_ranking_run_code.py
+
+# runs all vis files
+make-ao3-charts:
+	make make-ao3-all-data-charts make-ao3-femslash-charts make-ao3-overall-charts
