@@ -125,10 +125,7 @@ def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str):
             labels = year_series.index
             if data_case == "race":
                 colours = [colour_palette[label] for label in labels]
-            if ranking == "femslash":
-                values = [value[0] for value in year_series.values]
-            elif ranking == "overall":
-                values = year_series.values
+            values = year_series.values
         elif data_case == "gender_combos":
             labels = year_series.index
             colours = [colour_palettes.gender_combo_dict[combo] for combo in labels]

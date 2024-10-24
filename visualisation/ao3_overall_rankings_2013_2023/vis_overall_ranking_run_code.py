@@ -2,20 +2,12 @@ from visualisation.input_data_code.make_joined_ranking_df import make_joined_ran
 from visualisation.vis_utils.remove_member_columns import remove_members_from_df
 from visualisation.vis_utils.join_member_info import join_character_info_to_df
 from visualisation.vis_utils.make_colour_lookup import make_colour_lookup
-from visualisation.ao3_overall_rankings_2013_2023.vis_overall_ranking_general_stat_code import (
+from visualisation.input_data_code.make_general_data import (
     get_counts,
     get_gender_combos,
     get_by_gender_combo,
     get_rpf
 )
-from visualisation.diagram_code.visualise_pies import visualise_pies
-from visualisation.diagram_code.visualise_bars import (
-    visualise_grouped_bars, 
-    visualise_stacked_bars, 
-    visualise_non_white_counts
-)
-from visualisation.diagram_code.visualise_lines import visualise_multi_lines, visualise_line
-from visualisation.diagram_code.visualise_tables import visualise_top_non_white_ships
 from visualisation.input_data_code.make_race_data import (
     total_multi_nos_by_year, 
     total_interracial_ratio,
@@ -26,6 +18,14 @@ from visualisation.input_data_code.make_race_data import (
     top_non_white_ships,
     average_non_white_ranking,
 )
+from visualisation.diagram_code.visualise_pies import visualise_pies
+from visualisation.diagram_code.visualise_bars import (
+    visualise_grouped_bars, 
+    visualise_non_white_counts
+)
+from visualisation.diagram_code.visualise_lines import visualise_multi_lines, visualise_line
+from visualisation.diagram_code.visualise_tables import visualise_top_non_white_ships
+
 
 # get data & turn into big df ✅
 ship_joined_overall_df = make_joined_ranking_df("overall")
@@ -245,10 +245,7 @@ total_group_fig.write_image(
 )
 
 # non-white categories:
-    # total nos each year
-    # top 3 ships for each category that year
-    # average ranking by category
-
+# total nos each year
 overall_prepped_dict = prep_df_for_non_white_ship_comp(overall_ship_info_df)
 non_white_counts = count_non_white_ships(overall_prepped_dict)
 non_white_count_fig = visualise_non_white_counts(non_white_counts, "overall")
@@ -259,6 +256,7 @@ non_white_count_fig.write_image(
     scale=2
 )
 
+# top 3 ships for each category that year
 overall_separated_dict = separate_out_non_white_ships_info(overall_prepped_dict)
 top_non_white = top_non_white_ships(overall_separated_dict)
 top_non_white_fig = visualise_top_non_white_ships(top_non_white, "overall")
@@ -269,6 +267,7 @@ top_non_white_fig.write_image(
     scale=2
 )
 
+# average ranking by category
 average_non_white_rank = average_non_white_ranking(overall_separated_dict)
 average_non_white_fig = visualise_multi_lines(average_non_white_rank, "non_white_ships", "overall")
 average_non_white_fig.write_image(

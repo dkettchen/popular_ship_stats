@@ -14,24 +14,9 @@ from visualisation.ao3_femslash_rankings_2014_2023.vis_femslash_ranking_general_
     hottest_char,
     gender_stats,
 )
-from visualisation.ao3_femslash_rankings_2014_2023.vis_femslash_ranking_race_stat_code import (
-    total_race_nos_by_year,
-)
-from visualisation.diagram_code.visualise_bars import (
-    visualise_non_white_counts, 
-    visualise_grouped_bars, 
-    visualise_stacked_bars
-)
-from visualisation.diagram_code.visualise_lines import visualise_line, visualise_multi_lines
-from visualisation.diagram_code.visualise_pies import visualise_pies, visualise_market_share_and_popularity
-from visualisation.diagram_code.visualise_tables import (
-    visualise_single_table, 
-    visualise_top_5, 
-    visualise_top_non_white_ships,
-    visualise_hottest_chars
-)
-from visualisation.ao3_overall_rankings_2013_2023.vis_overall_ranking_general_stat_code import (
-    get_by_gender_combo
+from visualisation.input_data_code.make_general_data import (
+    get_by_gender_combo,
+    get_counts
 )
 from visualisation.input_data_code.make_race_data import (
     total_multi_nos_by_year, 
@@ -43,6 +28,19 @@ from visualisation.input_data_code.make_race_data import (
     top_non_white_ships,
     average_non_white_ranking,
 )
+from visualisation.diagram_code.visualise_bars import (
+    visualise_non_white_counts, 
+    visualise_grouped_bars, 
+)
+from visualisation.diagram_code.visualise_lines import visualise_line, visualise_multi_lines
+from visualisation.diagram_code.visualise_pies import visualise_pies, visualise_market_share_and_popularity
+from visualisation.diagram_code.visualise_tables import (
+    visualise_single_table, 
+    visualise_top_5, 
+    visualise_top_non_white_ships,
+    visualise_hottest_chars
+)
+
 
 # get data & turn into big df
 ship_joined_femslash_df = make_joined_ranking_df("femslash")
@@ -150,7 +148,7 @@ minority_gender_fig.write_image(
 
 ## race stats
 
-femslash_race_percent = total_race_nos_by_year(femslash_character_info_df, "race")
+femslash_race_percent = get_counts(femslash_character_info_df, "race", "full_name")
 femslash_race_fig = visualise_pies(femslash_race_percent, "race", "femslash")
 femslash_race_fig.write_image(
     "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/sapphic_race_stats/femslash_racial_groups_percent_2014_2023.png", 
@@ -177,7 +175,7 @@ race_minority_lines.write_image(
     scale=2
 )
 
-femslash_race_combo_percent = total_race_nos_by_year(femslash_ship_info_df, "race_combo")
+femslash_race_combo_percent = get_counts(femslash_ship_info_df, "race_combo", "ship")
 femslash_race_combo_fig = visualise_pies(femslash_race_combo_percent, "race_combos", "femslash")
 femslash_race_combo_fig.write_image(
     "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/sapphic_race_stats/femslash_racial_groups_combo_percent_2014_2023.png", 
