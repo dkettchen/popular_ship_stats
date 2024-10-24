@@ -9,12 +9,22 @@ from visualisation.ao3_overall_rankings_2013_2023.vis_overall_ranking_general_st
     get_rpf
 )
 from visualisation.diagram_code.visualise_pies import visualise_pies
-from visualisation.diagram_code.visualise_bars import visualise_grouped_bars, visualise_stacked_bars
+from visualisation.diagram_code.visualise_bars import (
+    visualise_grouped_bars, 
+    visualise_stacked_bars, 
+    visualise_non_white_counts
+)
 from visualisation.diagram_code.visualise_lines import visualise_multi_lines, visualise_line
+from visualisation.diagram_code.visualise_tables import visualise_top_non_white_ships
 from visualisation.input_data_code.make_race_data import (
     total_multi_nos_by_year, 
     total_interracial_ratio,
     total_racial_groups,
+    prep_df_for_non_white_ship_comp,
+    count_non_white_ships,
+    separate_out_non_white_ships_info,
+    top_non_white_ships,
+    average_non_white_ranking,
 )
 
 # get data & turn into big df ✅
@@ -239,3 +249,31 @@ total_group_fig.write_image(
     # top 3 ships for each category that year
     # average ranking by category
 
+overall_prepped_dict = prep_df_for_non_white_ship_comp(overall_ship_info_df)
+non_white_counts = count_non_white_ships(overall_prepped_dict)
+non_white_count_fig = visualise_non_white_counts(non_white_counts, "overall")
+non_white_count_fig.write_image(
+    "visualisation/ao3_overall_rankings_2013_2023/ao3_overall_rankings_charts/overall_non_white_counts_2013_2023.png", 
+    width=1000, 
+    height=400, 
+    scale=2
+)
+
+overall_separated_dict = separate_out_non_white_ships_info(overall_prepped_dict)
+top_non_white = top_non_white_ships(overall_separated_dict)
+top_non_white_fig = visualise_top_non_white_ships(top_non_white, "overall")
+top_non_white_fig.write_image(
+    "visualisation/ao3_overall_rankings_2013_2023/ao3_overall_rankings_charts/overall_top_non_white_2013_2023.png", 
+    width=3800, 
+    height=1800, 
+    scale=2
+)
+
+average_non_white_rank = average_non_white_ranking(overall_separated_dict)
+average_non_white_fig = visualise_multi_lines(average_non_white_rank, "non_white_ships", "overall")
+average_non_white_fig.write_image(
+    "visualisation/ao3_overall_rankings_2013_2023/ao3_overall_rankings_charts/overall_avg_non_white_2013_2023.png", 
+    width=800, 
+    height=500, 
+    scale=2
+)

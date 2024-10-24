@@ -260,10 +260,11 @@ def visualise_multi_lines(input_item:pd.DataFrame|dict, data_case:str, ranking:s
         fig.update_layout(
             yaxis_autorange = "reversed"
         )
-        fig.add_annotation(
-            x=2020, y=47,
-            text="Single ship that <br>ranked 47th that year",
-            showarrow=True,
-            arrowhead=1)
+        if ranking == "femslash":
+            fig.add_annotation(
+                x=2020, y=47,
+                text="Single ship that <br>ranked 47th that year",
+                showarrow=True,
+                arrowhead=1)
 
     return fig

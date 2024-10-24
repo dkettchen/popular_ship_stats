@@ -32,21 +32,6 @@ def total_race_nos_by_year(character_info_df:pd.DataFrame, column_name:str):
 
     return year_dict
 
-# how many racial groups each year
-def total_racial_groups(race_percent:dict):
-    """
-    takes output dict from total_race_nos_by_year ("race" version)
-
-    returns a series with the total no of racial groups represented each year
-    """
-    temp_dict = {}
-    for year in race_percent:
-        df = race_percent[year].copy().reset_index()
-        total = df["count"].count()
-        temp_dict[year] = total
-    new_srs = pd.Series(data=temp_dict)
-    return new_srs
-
 
 # prep info df with true/false values
 def prep_df_for_non_white_ship_comp(ship_info_df:pd.DataFrame):

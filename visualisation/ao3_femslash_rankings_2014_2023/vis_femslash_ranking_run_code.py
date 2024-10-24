@@ -16,11 +16,6 @@ from visualisation.ao3_femslash_rankings_2014_2023.vis_femslash_ranking_general_
 )
 from visualisation.ao3_femslash_rankings_2014_2023.vis_femslash_ranking_race_stat_code import (
     total_race_nos_by_year,
-    prep_df_for_non_white_ship_comp,
-    count_non_white_ships,
-    separate_out_non_white_ships_info,
-    top_non_white_ships,
-    average_non_white_ranking,
 )
 from visualisation.diagram_code.visualise_bars import (
     visualise_non_white_counts, 
@@ -42,6 +37,11 @@ from visualisation.input_data_code.make_race_data import (
     total_multi_nos_by_year, 
     total_interracial_ratio,
     total_racial_groups,
+    prep_df_for_non_white_ship_comp,
+    count_non_white_ships,
+    separate_out_non_white_ships_info,
+    top_non_white_ships,
+    average_non_white_ranking,
 )
 
 # get data & turn into big df

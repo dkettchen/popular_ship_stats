@@ -113,8 +113,12 @@ def visualise_top_non_white_ships(input_dict:dict, ranking:str):
     colours = colour_palettes.non_white_colours
     if ranking == "femslash":
         line_colour = colour_palettes.sapphic_table["lines"] # colour of lines
-        body_fill_colour = colour_palettes.sapphic_table["body_2"] # colour of remaining rows
+        #body_fill_colour = colour_palettes.sapphic_table["body_2"] # colour of remaining rows
         column_width = [0.35, 3.05, 1.1, 1.5]
+    elif ranking == "overall":
+        line_colour = colour_palettes.blue_table["lines"]
+        column_width = [0.35, 3.05, 1.1, 1.5]
+    body_fill_colour = colour_palettes.bg_colours[ranking][0]
 
     row_counter = 1
     col_counter = 1
