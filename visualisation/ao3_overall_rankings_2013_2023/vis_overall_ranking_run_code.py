@@ -11,7 +11,7 @@ from visualisation.ao3_overall_rankings_2013_2023.vis_overall_ranking_general_st
 from visualisation.diagram_code.visualise_pies import visualise_pies
 from visualisation.diagram_code.visualise_bars import visualise_grouped_bars, visualise_stacked_bars
 from visualisation.diagram_code.visualise_lines import visualise_multi_lines, visualise_line
-from visualisation.ao3_femslash_rankings_2014_2023.vis_femslash_ranking_race_stat_code import (
+from visualisation.input_data_code.make_race_data import (
     total_multi_nos_by_year, 
     total_interracial_ratio
 )
