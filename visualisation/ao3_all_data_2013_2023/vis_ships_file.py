@@ -9,8 +9,8 @@ def fandom_market_share_srs(ships_df:pd.DataFrame):
 
     returns a series with the fandoms that account for more than 1% of total ships
     """
-    ships_per_fandom = get_data_df(ships_df, data_case="ships_per_fandom_util")
-    total_ships = get_data_df(ships_df, data_case="total_ships")
+    ships_per_fandom = get_data_df(ships_df, data_case="ships_per_fandom_util", ranking="total")
+    total_ships = get_data_df(ships_df, data_case="total_ships", ranking="total")
 
     fandom_market_share = get_label_counts(ships_per_fandom, "fandom", "slash_ship")
     
@@ -32,7 +32,7 @@ def ship_per_fandom_by_type_df(ships_df:pd.DataFrame):
     returns a dataframe with various stats on ships of different types by fandom
     (total number per fandom, % of fandom's ships, etc)
     """
-    ships_per_fandom = get_data_df(ships_df, data_case="ships_per_fandom")
+    ships_per_fandom = get_data_df(ships_df, data_case="ships_per_fandom", ranking="total")
     ships_per_fandom_by_type = ships_per_fandom.copy().get(
         ["fandom", "total_ships", "gender_combo"]
     )
@@ -181,7 +181,7 @@ def non_white_ships_srs(total_race_combo_counts:pd.DataFrame):
     # this one's the big oof
     non_white_ships = total_race_combo_counts.copy()
     non_white_ships["contains_white_person"] = non_white_ships.index.str.contains("White|Eu Ind")
-    non_white_ships["contains_e_asian_person"] = non_white_ships.index.str.contains("E Asian")
+    non_white_ships["contains_e_asian_person"] = non_white_ships.index.str.contains("^E Asian", regex=True)
     non_white_ships["contains_ambig_person"] = non_white_ships.index.str.contains("Ambig")
     non_white_ships["contains_non_human"] = non_white_ships.index.str.contains("N.H.")
     non_white_ships["contains_unknown"] = non_white_ships.index.str.contains("Unknown")
