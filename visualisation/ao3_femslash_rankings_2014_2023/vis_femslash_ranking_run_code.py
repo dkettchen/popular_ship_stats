@@ -220,8 +220,8 @@ interracial_fig.write_image(
 interracial_line = visualise_multi_lines(total_interracial, "interracial_ships", "femslash")
 interracial_line.write_image(
     "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/sapphic_race_stats/femslash_interracial_lines_2014_2023.png", 
-    width=700, 
-    height=600, 
+    width=800, 
+    height=500, 
     scale=2
 )
 

@@ -276,8 +276,8 @@ interracial_fig.write_image(
 interracial_line = visualise_multi_lines(interracial_total, "interracial_ships", "overall")
 interracial_line.write_image(
     "visualisation/ao3_overall_rankings_2013_2023/ao3_overall_rankings_charts/overall_racial_charts/overall_interracial_ships_line_2013_2023.png", 
-    width=700, 
-    height=600, 
+    width=800, 
+    height=500, 
     scale=2
 )
 

@@ -126,7 +126,7 @@ def visualise_multi_lines(input_item:pd.DataFrame|dict, data_case:str, ranking:s
         new_df = input_item.copy()
         years = new_df.columns
 
-    x = years
+    x = [str(year) for year in years]
     if data_case == "interracial_ships":
         categories = lbls.interracial_categories
         labels = ["interracial ships", "ambiguous ships", "non-interracial ships"]
@@ -145,7 +145,6 @@ def visualise_multi_lines(input_item:pd.DataFrame|dict, data_case:str, ranking:s
     elif data_case == "minority_racial_groups":
         label_list = get_unique_values_list(input_item)
         new_df = pd.DataFrame(index=label_list) # making an index of all racial groups present
-        x = [str(year) for year in years]
 
         # adding all years' values to df
         for year in years:
@@ -222,11 +221,15 @@ def visualise_multi_lines(input_item:pd.DataFrame|dict, data_case:str, ranking:s
                 }
             )
         elif counter > 0: # adding traces for each subsequent label
+            if ranking == "overall" and label == "ambiguous ships":
+                text_position = "bottom center"
+            else: text_position = "top center"
+            
             fig.add_trace(go.Scatter(
                 x=x, 
                 y=y,
                 text=y,
-                textposition="top center",
+                textposition=text_position,
                 mode=mode,
                 line={"color": colour},
                 name=label,
@@ -262,9 +265,11 @@ def visualise_multi_lines(input_item:pd.DataFrame|dict, data_case:str, ranking:s
         )
         if ranking == "femslash":
             fig.add_annotation(
-                x=2020, y=47,
+                x=["2020"], y=47,
+                xshift=50, # idk why it wouldn't just work with x="2020" but oh well
                 text="Single ship that <br>ranked 47th that year",
                 showarrow=True,
-                arrowhead=1)
+                arrowhead=1
+            )
 
     return fig
