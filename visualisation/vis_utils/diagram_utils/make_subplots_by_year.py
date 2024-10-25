@@ -12,7 +12,10 @@ def make_subplots_by_year(num_of_years:int, num_of_columns:int=False):
     """
 
     if num_of_columns:
-        row = num_of_years
+        if num_of_years % 2 == 0:
+            row = int(num_of_years / num_of_columns)
+        else:
+            row = int(num_of_years / num_of_columns) + 1
         column = num_of_columns
         type_dict = {"type": "table"}
     else:

@@ -24,6 +24,12 @@ from visualisation.input_data_code.make_fandom_data import (
     top_5_fandoms_by_year,
 )
 from visualisation.input_data_code.make_hottest_chars import hottest_char
+from visualisation.input_data_code.make_top_ships import (
+    top_ships,
+    count_appearances,
+    count_streaks,
+    longest_running_top_ships,
+)
 from visualisation.diagram_code.visualise_pies import (
     visualise_pies, 
     visualise_market_share_and_popularity
@@ -39,7 +45,8 @@ from visualisation.diagram_code.visualise_lines import (
 from visualisation.diagram_code.visualise_tables import (
     visualise_top_non_white_ships, 
     visualise_top_5,
-    visualise_hottest_chars
+    visualise_hottest_chars,
+    visualise_single_table
 )
 
 
@@ -130,12 +137,36 @@ top_5_fandoms_fig.write_image(
     scale=2
 )
 
-# top 10 ships (total)
-# top 10 ships (by gender combo)
-# all time top 5 ships by no of appearances in top 10
-# all time top 5 ships by longest streak in top 10
 
-# hottest characters
+# top 10 ships (total) ✅
+top_10_ships_dict = top_ships(overall_ship_info_df, "overall")
+top_10_ships_fig = visualise_top_5(top_10_ships_dict, "pairings", "overall")
+    # either tables or race categories as a diagram
+top_10_ships_fig.write_image(
+    "visualisation/ao3_overall_rankings_2013_2023/ao3_overall_rankings_charts/top_overall_ships_2013_2023.png", 
+    width=2600, 
+    height=2000, 
+    scale=2
+)
+
+# top 10 ships (by gender combo) (for the straights pls)
+
+# all time top 5 ships by no of appearances in top 10 ✅
+# all time top 5 ships by longest streak in top 10 ✅ # they're the same again
+appearances_ranking = count_appearances(top_10_ships_dict, "overall")
+streak_ranking = count_streaks(top_10_ships_dict)
+longest_running_top_5 = longest_running_top_ships(appearances_ranking, streak_ranking, "overall") 
+longest_running_fig = visualise_single_table(longest_running_top_5, "overall")
+longest_running_fig.write_image(
+    "visualisation/ao3_overall_rankings_2013_2023/ao3_overall_rankings_charts/longest_running_overall_ships_2013_2023.png", 
+    width=950, 
+    height=450, 
+    scale=2
+)
+
+
+
+# hottest characters ✅
 hottest_chars = hottest_char(overall_character_info_df, "overall")
     # possibly another chart abt how many chars were in how many ships over the years
 visualise_hottest_chars(hottest_chars, "overall") # writes its own files

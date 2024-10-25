@@ -35,10 +35,16 @@ def visualise_top_5(input_dict:dict, data_case:str, ranking:str):
         max_count = make_max_count(num_of_years)
         column_width = [0.3,1,1]
     elif data_case == "pairings":
-        no_of_columns = 1
-        title = f"Top 5 ships by year{suffix}"
-        max_count = 1
-        column_width = [0.75,6.5,2.4,1.9]
+        no_of_columns = 2
+        max_count = 2
+        if ranking == "femslash":
+            title = f"Top 5 ships by year{suffix}"
+            rank_nos = ranks.top_10_list[:5]
+            column_width = [0.75,6.5,2.4,1.9]
+        else:
+            title = f"Top 10 ships by year{suffix}"
+            rank_nos = ranks.top_10_list
+            column_width = [0.75,10.4,2.2,1.7,2.7]
 
     fig = make_subplots_by_year(num_of_years, no_of_columns)
 
@@ -47,7 +53,9 @@ def visualise_top_5(input_dict:dict, data_case:str, ranking:str):
     body_fill_colour = colours["body"] # colour of remaining rows
 
     row_counter = 1
-    col_counter = 1
+    if ranking == "femslash":
+        col_counter = 2
+    else: col_counter = 1
 
     for year in input_dict:
         year_df = input_dict[year].copy()
@@ -58,7 +66,7 @@ def visualise_top_5(input_dict:dict, data_case:str, ranking:str):
             columns = [year, "most_ships", "most_popular"]
             values = [year_df.index, most_ships_fandoms, most_pop_fandoms]
         elif data_case == "pairings":
-            year_df["rank"] = ranks.top_10_list[:5]
+            year_df["rank"] = rank_nos
             new_column_order = list(year_df.columns[-1:]) + list(year_df.columns[:-1])
             year_df = year_df[new_column_order] # putting rank as first column
 
@@ -88,7 +96,7 @@ def visualise_top_5(input_dict:dict, data_case:str, ranking:str):
             row=row_counter, col=col_counter
         )
 
-        if col_counter == max_count: # this is always true for "pairings" case
+        if col_counter == max_count:
             col_counter = 1
             row_counter += 1
         else: col_counter += 1
@@ -277,6 +285,8 @@ def visualise_single_table(input_df:pd.DataFrame, ranking:str):
     ranking = ranking.lower()
     suffix = lbls.suffixes[ranking]
 
+    new_df = input_df.copy()
+
     if ranking == "femslash":
         colours = colour_palettes.sapphic_table
         column_width = [0.1, 0.95, 0.2]
@@ -285,19 +295,30 @@ def visualise_single_table(input_df:pd.DataFrame, ranking:str):
         num_of_years = 9
         values = [
             ranks.top_10_list[:5], 
-            input_df[input_df.columns[0]], 
-            [f"{value}/{num_of_years} years" for value in input_df[input_df.columns[1]]]
+            new_df[new_df.columns[0]], 
+            [f"{value}/{num_of_years} years" for value in new_df[new_df.columns[1]]]
         ]
     elif ranking == "total":
         colours = colour_palettes.blue_table
         column_width = [0.3,0.1,1.4,0.07]
         title = f"Hottest characters (in 3+ ships){suffix}"
-        headers = list(input_df.columns)
+        headers = list(new_df.columns)
         values = [
-            input_df["fandom"], 
-            input_df["rank"], 
-            input_df["names"], 
-            input_df["no"],
+            new_df["fandom"], 
+            new_df["rank"], 
+            new_df["names"], 
+            new_df["no"],
+        ]
+    else:
+        colours = colour_palettes.blue_table
+        column_width = [0.07, 1.1, 0.17]
+        title = f"Longest running top 10 ships{suffix}"
+        headers = ["rank", "ship", "streak"]
+        num_of_years = 10
+        values = [
+            ["1st","1st","1st","1st","1st","1st","7th","7th"] + ranks.top_10_list[8:],
+            new_df[new_df.columns[0]], 
+            [f"{value}/{num_of_years} years" for value in new_df[new_df.columns[1]]],
         ]
 
     line_colour = colours["lines"] # colour of lines

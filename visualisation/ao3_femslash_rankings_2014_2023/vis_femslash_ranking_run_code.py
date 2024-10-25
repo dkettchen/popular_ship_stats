@@ -2,12 +2,6 @@ from visualisation.vis_utils.remove_member_columns import remove_members_from_df
 from visualisation.vis_utils.join_member_info import join_character_info_to_df
 from visualisation.vis_utils.make_colour_lookup import make_colour_lookup
 from visualisation.input_data_code.make_joined_ranking_df import make_joined_ranking_df
-from visualisation.ao3_femslash_rankings_2014_2023.vis_femslash_ranking_general_stat_code import (
-    top_5_ships,
-    count_appearances,
-    count_streaks,
-    longest_running_top_5_ships,
-)
 from visualisation.input_data_code.make_general_data import (
     get_by_gender_combo,
     get_counts,
@@ -29,6 +23,12 @@ from visualisation.input_data_code.make_fandom_data import (
     top_5_fandoms_by_year,
 )
 from visualisation.input_data_code.make_hottest_chars import hottest_char
+from visualisation.input_data_code.make_top_ships import (
+    top_ships,
+    count_appearances,
+    count_streaks,
+    longest_running_top_ships,
+)
 from visualisation.diagram_code.visualise_bars import (
     visualise_non_white_counts, 
     visualise_grouped_bars, 
@@ -103,19 +103,19 @@ rpf_by_combo_fig.write_image(
 )
 
 
-top_5_ships_dict = top_5_ships(femslash_ship_info_df)
+top_5_ships_dict = top_ships(femslash_ship_info_df, "femslash")
 top_5_ships_fig = visualise_top_5(top_5_ships_dict, "pairings", "femslash")
     # either tables or race categories as a diagram
 top_5_ships_fig.write_image(
     "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/top_femslash_ships_2014_2023.png", 
-    width=875, 
-    height=1770, 
+    width=1750,
+    height=1100,
     scale=2
 )
 
-appearances_ranking = count_appearances(top_5_ships_dict)
+appearances_ranking = count_appearances(top_5_ships_dict, "femslash")
 streak_ranking = count_streaks(top_5_ships_dict)
-longest_running_top_5 = longest_running_top_5_ships(appearances_ranking, streak_ranking) 
+longest_running_top_5 = longest_running_top_ships(appearances_ranking, streak_ranking, "femslash") 
 longest_running_fig = visualise_single_table(longest_running_top_5, "femslash")
 longest_running_fig.write_image(
     "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/longest_running_femslash_ships_2014_2023.png", 
