@@ -322,7 +322,7 @@ def visualise_single_table(input_df:pd.DataFrame, ranking:str, data_case:str=Non
         new_df = new_df.head(100)
         title = f"Top 100 most popular ships of all time{suffix}"
         if ranking == "femslash":
-            column_width = [0.1,1.6,0.45,0.45,0.2]
+            column_width = [0.1,1.3,0.37,0.45,0.17]
             headers = ["rank", "ship", "fandom", "race combo", "rpf or fic"]
             values = [
                 [num for num in range(1, 101)],
