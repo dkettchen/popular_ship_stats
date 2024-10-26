@@ -8,6 +8,9 @@ from visualisation.vis_utils.diagram_utils.make_max_count import make_max_count
 import visualisation.vis_utils.diagram_utils.colour_palettes as colour_palettes
 import visualisation.vis_utils.diagram_utils.labels as lbls
 from visualisation.vis_utils.make_colour_lookup import make_colour_lookup_racial_groups
+from visualisation.vis_utils.df_utils.retrieve_numbers import get_label_counts, get_unique_values_list
+from visualisation.vis_utils.rename_gender_combos import rename_gender_combos
+from visualisation.vis_utils.sort_race_combos import sort_race_combos
 
 def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str):
     """
@@ -29,15 +32,28 @@ def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str):
     ranking = ranking.lower()
     suffix = lbls.suffixes[ranking]
 
-    # retrieving years
-    if data_case in ["multi_chars", "multi_char_ships", "interracial_ships"]: # dfs
-        years = input_item.columns
-    elif data_case in ["rpf", "gender", "race", "race_combos", "fic_type", "gender_combos"]: # dict
-        years = input_item.keys()
+    # making subplots
+    if data_case == "most_popular_ships":
+        if ranking != "femslash":
+            fig = make_subplots_by_year(3,3)
+            max_count = 3
+        else:
+            fig = make_subplots_by_year(2,2)
+            max_count = 2
+    else: # retrieving years
+        if data_case in ["multi_chars", "multi_char_ships", "interracial_ships", "most_popular_ships"]: # dfs
+            years = input_item.columns
+        elif data_case in ["rpf", "gender", "race", "race_combos", "fic_type", "gender_combos"]: # dict
+            years = input_item.keys()
 
-    num_of_years = len(years)
-    fig = make_subplots_by_year(num_of_years) # making appropriate amount of subplots
-    max_count = make_max_count(num_of_years)
+        num_of_years = len(years)
+        fig = make_subplots_by_year(num_of_years) # making appropriate amount of subplots
+        max_count = make_max_count(num_of_years)
+
+        if num_of_years == 9:
+            title_size = 10
+        else: title_size = 12
+        min_size = 12
 
     row_count = 1
     col_count = 1
@@ -45,121 +61,192 @@ def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str):
     text_info = 'percent'
     colours = None
     colourway = None
-    if num_of_years == 9:
-        title_size = 10
-    else: title_size = 12
-    min_size = 12
+
+    if data_case == "most_popular_ships": # special non-years case
+        title = f"Top 100 most popular ships of all time{suffix}"
+        for pie in ["gender_combo", "race_combo", "rpf_or_fic"]:
+            if ranking == "femslash" and pie == "gender_combo":
+                continue
+
+            data = input_item.copy()
+            if pie == "gender_combo": # renaming gender combos
+                data = rename_gender_combos(data, column=True)
+            elif pie == "race_combo": # renaming race combos
+                race_combo_list = get_unique_values_list(data, pie)
+                race_combo_rename_dict = sort_race_combos(race_combo_list)
+                renamed_values = []
+                for combo in data[pie]:
+                    if combo in race_combo_rename_dict.keys():
+                        renamed_values.append(race_combo_rename_dict[combo])
+                    else:
+                        renamed_values.append(combo)
+                data[pie] = renamed_values
+
+            data = get_label_counts(data, pie)
+
+            labels = list(data.index)
+            values = data["count"]
+            # assigning colours
+            if pie == "gender_combo":
+                colours = [colour_palettes.gender_combo_dict[combo] for combo in labels]
+                pie_title = "gender<br>combos"
+            elif pie == "race_combo":
+                racial_group_colour_dict = make_colour_lookup_racial_groups()
+                colours = []
+                for combo in labels:
+                    if combo in racial_group_colour_dict.keys():
+                        colours.append(racial_group_colour_dict[combo]) # same race pairings
+                    elif "White" in combo:
+                        colours.append(colour_palettes.non_white_colours[0]) # white involved
+                    elif combo[:7] == "E Asian" or " E Asian" in combo:
+                        colours.append(colour_palettes.non_white_colours[1]) # east asian involved
+                    elif "Ambig" in combo:
+                        colours.append("khaki") # ambig involved
+                    else:
+                        colours.append("blue") # idk
+                pie_title = "race<br>combo"
+            elif pie == "rpf_or_fic":
+                colours = ["deeppink", "darkred"]
+                pie_title = "rpf<br>or fic"
+            
+            fig.add_trace(go.Pie(
+                labels=labels, 
+                values=values,
+                hole=0.3, # determines hole size
+                title=pie_title, # text that goes in the middle of the hole
+                titlefont_size=18, # to format title text
+                marker_colors=colours,
+                automargin=False,
+                textposition="inside", 
+                textinfo="label",
+                marker_line=dict(color='white', width=1)
+            ), row_count, col_count)
+            
+            if col_count == max_count:
+                col_count = 1
+                row_count += 1
+            else:
+                col_count += 1
 
 
-    # most titles & colours & any static labels
-    if data_case in ["multi_chars", "multi_char_ships",]: 
-        colours = [colour_palettes.oranges[0], colour_palettes.oranges[2]]
-        if data_case == "multi_chars":
-            labels = ["multiracial characters", "non-multiracial characters"]
-            title = f"Multiracial characters by year{suffix}"
-        elif data_case == "multi_char_ships":
-            labels = ["with multiracial characters", "w/out multiracial characters"]
-            title = f"Ships with multiracial characters by year{suffix}"
-    elif data_case == "interracial_ships":
-        title = f"Interracial ships by year{suffix}"
-        colours = colour_palettes.oranges
-    elif data_case == "rpf":
-        labels = ["RPF", "fictional"]
-        title = f"Real Person Fic vs fictional ships by year{suffix}"
-        colours = ["deeppink", "darkred"]
-    elif data_case == "gender":
-        title = f"Genders by year{suffix}"
-    elif data_case in ["race", "race_combos"]:
-        if ranking == "femslash":
-            title_size = 25
-        min_size = 8
-        if data_case == "race":
-            title = f"Racial groups by year{suffix}"
-            text_info = "label+percent"
-            colour_palette = make_colour_lookup_racial_groups()
-        elif data_case == "race_combos":
-            title = f"Pairing race combinations by year{suffix}"
-            text_info = "label"
-            colourway = px.colors.qualitative.Pastel + px.colors.qualitative.Prism + \
-            px.colors.qualitative.Vivid + px.colors.qualitative.Bold
-    elif data_case == "fic_type":
-        title = f"General vs slash ships by year{suffix}"
-        colours = ["hotpink", "yellowgreen"]
-        labels = ["slash", "gen"]
-    elif data_case == "gender_combos":
-        title = f"Gender combos by year{suffix}"
-    else: print(input_item)
+        # adding title, uniform text, and colourway if any
+        fig.update_layout(
+            title=title, 
+            uniformtext_minsize=12,
+            uniformtext_mode="hide",
+            showlegend=False
+        )
 
-    for year in years:
-        # retrieving year data
-        if data_case == "gender":
-            year_df = input_item[year].copy().reset_index()
-            year_series = year_df["count"]
-        elif data_case == "race_combos":
-            year_series = input_item[year].copy()
-            rename_dict = sort_race_combos(year_series.index)
-            year_series = year_series.rename(index=rename_dict)
-            year_series = year_series.groupby(
-                year_series.index
-            ).aggregate("sum")
-            if type(year_series) == pd.DataFrame:
-                year_series = year_series.sort_values(
-                    by="count", ascending=False
-                )
-            else: year_series = year_series.sort_values(ascending=False)
-        else:    
-            year_series = input_item[year].copy()
-
-        # defaults to replace for certain cases
-        values = year_series.values
-        # replacing values where needed
-        if data_case == "interracial_ships":
-            labels = year_series.index
+    else: # any case with year plots
+        # most titles & colours & any static labels
+        if data_case in ["multi_chars", "multi_char_ships",]: 
+            colours = [colour_palettes.oranges[0], colour_palettes.oranges[2]]
+            if data_case == "multi_chars":
+                labels = ["multiracial characters", "non-multiracial characters"]
+                title = f"Multiracial characters by year{suffix}"
+            elif data_case == "multi_char_ships":
+                labels = ["with multiracial characters", "w/out multiracial characters"]
+                title = f"Ships with multiracial characters by year{suffix}"
+        elif data_case == "interracial_ships":
+            title = f"Interracial ships by year{suffix}"
+            colours = colour_palettes.oranges
         elif data_case == "rpf":
-            values = year_series["no_of_ships"]
+            labels = ["RPF", "fictional"]
+            title = f"Real Person Fic vs fictional ships by year{suffix}"
+            colours = ["deeppink", "darkred"]
         elif data_case == "gender":
-            labels = year_df["gender"]
-            values = year_series
-            colours = [colour_palettes.gender_colours[gender] for gender in labels]
+            title = f"Genders by year{suffix}"
         elif data_case in ["race", "race_combos"]:
-            labels = year_series.index
+            if ranking == "femslash":
+                title_size = 25
+            min_size = 8
             if data_case == "race":
-                colours = [colour_palette[label] for label in labels]
-            values = year_series.values
+                title = f"Racial groups by year{suffix}"
+                text_info = "label+percent"
+                colour_palette = make_colour_lookup_racial_groups()
+            elif data_case == "race_combos":
+                title = f"Pairing race combinations by year{suffix}"
+                text_info = "label"
+                colourway = px.colors.qualitative.Pastel + px.colors.qualitative.Prism + \
+                px.colors.qualitative.Vivid + px.colors.qualitative.Bold
+        elif data_case == "fic_type":
+            title = f"General vs slash ships by year{suffix}"
+            colours = ["hotpink", "yellowgreen"]
+            labels = ["slash", "gen"]
         elif data_case == "gender_combos":
-            labels = year_series.index
-            colours = [colour_palettes.gender_combo_dict[combo] for combo in labels]
+            title = f"Gender combos by year{suffix}"
+        else: print(input_item)
 
-        # adding pie
-        fig.add_trace(go.Pie(
-            labels=labels, 
-            values=values,
-            hole=0.3, # determines hole size
-            title=year, # text that goes in the middle of the hole
-            sort=False, # if you want to keep it in its original order rather than sorting by size
-            titlefont_size=title_size, # to format title text
-            marker_colors=colours,
-            automargin=False,
-            textposition="inside"
-        ), row_count, col_count)
+        for year in years:
+            # retrieving year data
+            if data_case == "gender":
+                year_df = input_item[year].copy().reset_index()
+                year_series = year_df["count"]
+            elif data_case == "race_combos":
+                year_series = input_item[year].copy()
+                rename_dict = sort_race_combos(year_series.index)
+                year_series = year_series.rename(index=rename_dict)
+                year_series = year_series.groupby(
+                    year_series.index
+                ).aggregate("sum")
+                if type(year_series) == pd.DataFrame:
+                    year_series = year_series.sort_values(
+                        by="count", ascending=False
+                    )
+                else: year_series = year_series.sort_values(ascending=False)
+            else:    
+                year_series = input_item[year].copy()
 
-        if col_count == max_count:
-            col_count = 1
-            row_count += 1
-        else:
-            col_count += 1
+            # defaults to replace for certain cases
+            values = year_series.values
+            # replacing values where needed
+            if data_case == "interracial_ships":
+                labels = year_series.index
+            elif data_case == "rpf":
+                values = year_series["no_of_ships"]
+            elif data_case == "gender":
+                labels = year_df["gender"]
+                values = year_series
+                colours = [colour_palettes.gender_colours[gender] for gender in labels]
+            elif data_case in ["race", "race_combos"]:
+                labels = year_series.index
+                if data_case == "race":
+                    colours = [colour_palette[label] for label in labels]
+                values = year_series.values
+            elif data_case == "gender_combos":
+                labels = year_series.index
+                colours = [colour_palettes.gender_combo_dict[combo] for combo in labels]
 
-    # adding text info
-    fig.update_traces(
-        textinfo=text_info,
-    )
-    # adding title, uniform text, and colourway if any
-    fig.update_layout(
-        title=title, 
-        uniformtext_minsize=min_size,
-        uniformtext_mode="hide",
-        colorway=colourway
-    )
+            # adding pie
+            fig.add_trace(go.Pie(
+                labels=labels, 
+                values=values,
+                hole=0.3, # determines hole size
+                title=year, # text that goes in the middle of the hole
+                sort=False, # if you want to keep it in its original order rather than sorting by size
+                titlefont_size=title_size, # to format title text
+                marker_colors=colours,
+                automargin=False,
+                textposition="inside"
+            ), row_count, col_count)
+
+            if col_count == max_count:
+                col_count = 1
+                row_count += 1
+            else:
+                col_count += 1
+
+        # adding text info
+        fig.update_traces(
+            textinfo=text_info,
+        )
+        # adding title, uniform text, and colourway if any
+        fig.update_layout(
+            title=title, 
+            uniformtext_minsize=min_size,
+            uniformtext_mode="hide",
+            colorway=colourway
+        )
 
     return fig
 

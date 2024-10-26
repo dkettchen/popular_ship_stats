@@ -175,7 +175,13 @@ most_popular_ships_fig.write_image(
     scale=2
 )
 # make some pie charts too! about gender distr, race distr, rpf & fic
-
+most_popular_demo_fig = visualise_pies(most_popular_ships_df, "most_popular_ships", "overall")
+most_popular_demo_fig.write_image(
+    "visualisation/ao3_overall_rankings_2013_2023/ao3_overall_rankings_charts/most_popular_overall_ships_demo_2013_2023.png", 
+    width=1500, 
+    height=600, 
+    scale=2
+)
 
 
 # # hottest characters ✅
