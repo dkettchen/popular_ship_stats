@@ -6,6 +6,8 @@ import pandas as pd
 import visualisation.vis_utils.diagram_utils.colour_palettes as colour_palettes
 import visualisation.vis_utils.diagram_utils.ranks as ranks
 import visualisation.vis_utils.diagram_utils.labels as lbls
+from visualisation.vis_utils.rename_gender_combos import rename_gender_combos
+from visualisation.vis_utils.make_colour_lookup import make_colour_lookup_racial_groups, make_colour_lookup
 
 def visualise_top_5(input_dict:dict, data_case:str, ranking:str):
     """
@@ -269,7 +271,7 @@ def visualise_hottest_chars(input_dict:dict, ranking:str):
         )
 
 # make single table
-def visualise_single_table(input_df:pd.DataFrame, ranking:str):
+def visualise_single_table(input_df:pd.DataFrame, ranking:str, data_case:str=None):
     """
     takes the output from 
     - longest_running_top_5_ships (ranking="femslash")
@@ -287,19 +289,8 @@ def visualise_single_table(input_df:pd.DataFrame, ranking:str):
 
     new_df = input_df.copy()
 
-    if ranking == "femslash":
-        colours = colour_palettes.sapphic_table
-        column_width = [0.1, 0.95, 0.2]
-        title = f"Longest running top 5 ships{suffix}"
-        headers = ["rank", "ship", "streak"]
-        num_of_years = 9
-        values = [
-            ranks.top_10_list[:5], 
-            new_df[new_df.columns[0]], 
-            [f"{value}/{num_of_years} years" for value in new_df[new_df.columns[1]]]
-        ]
-    elif ranking == "total":
-        colours = colour_palettes.blue_table
+    # setting column width, title, headers, values
+    if ranking == "total":
         column_width = [0.3,0.1,1.4,0.07]
         title = f"Hottest characters (in 3+ ships){suffix}"
         headers = list(new_df.columns)
@@ -309,22 +300,172 @@ def visualise_single_table(input_df:pd.DataFrame, ranking:str):
             new_df["names"], 
             new_df["no"],
         ]
-    else:
-        colours = colour_palettes.blue_table
-        column_width = [0.07, 1.1, 0.17]
-        title = f"Longest running top 10 ships{suffix}"
+    elif data_case == "longest_streak":
+        if ranking == "femslash":
+            column_width = [0.1, 0.95, 0.2]
+            top_number = 5
+            num_of_years = 9
+            rank_nos = ranks.top_10_list[:5]
+        elif ranking == "overall":
+            column_width = [0.07, 1.1, 0.17]
+            top_number = 10
+            num_of_years = 10
+            rank_nos = ["1st","1st","1st","1st","1st","1st","7th","7th"] + ranks.top_10_list[8:]
+        title = f"Longest running top {top_number} ships{suffix}"
         headers = ["rank", "ship", "streak"]
-        num_of_years = 10
         values = [
-            ["1st","1st","1st","1st","1st","1st","7th","7th"] + ranks.top_10_list[8:],
+            rank_nos,
             new_df[new_df.columns[0]], 
             [f"{value}/{num_of_years} years" for value in new_df[new_df.columns[1]]],
         ]
+    elif data_case == "most_popular_characters":
+        new_df = new_df.head(100)
+        title = f"Top 100 most popular ships of all time{suffix}"
+        if ranking == "femslash":
+            column_width = [0.1,1.6,0.45,0.45,0.2]
+            headers = ["rank", "ship", "fandom", "race combo", "rpf or fic"]
+            values = [
+                [num for num in range(1, 101)],
+                new_df["ship"], 
+                clean_fandoms(new_df["fandom"]),
+                new_df["race_combo"],
+                new_df["rpf_or_fic"],
+            ]
+        elif ranking == "overall":
+            column_width = [0.1,1.6,0.45,0.3,0.45,0.2]
+            headers = ["rank", "ship", "fandom", "gender combo", "race combo", "rpf or fic"]
+            values = [
+                [num for num in range(1, 101)],
+                new_df["ship"], 
+                clean_fandoms(new_df["fandom"]),
+                new_df["gender_combo"],
+                new_df["race_combo"],
+                new_df["rpf_or_fic"],
+            ]
+
+    # colours:
+        # setting base colour palette
+    if ranking == "femslash":
+        colours = colour_palettes.sapphic_table
+    else: colours = colour_palettes.blue_table
 
     line_colour = colours["lines"] # colour of lines
     header_fill_colour = colours["header"] # colour of header row
-    body_fill_colour = colours["body"] # colour of remaining rows
 
+    if data_case == "most_popular_characters": # setting custom colour coding for body & text!
+        if ranking != "femslash": # gender combo column
+            clean_gender_combos = rename_gender_combos(new_df, column=True)
+
+            gender_colours = [colour_palettes.gender_combo_dict[combo] for combo in clean_gender_combos["gender_combo"]]
+            gender_text_colours = ["white" if combo != "M / M | Other" else "black" for combo in clean_gender_combos["gender_combo"]]
+
+        racial_group_colour_dict = make_colour_lookup_racial_groups()
+        
+        race_colours = []
+        for combo in new_df["race_combo"]:
+            if combo in racial_group_colour_dict.keys():
+                race_colours.append(racial_group_colour_dict[combo]) # same race pairings
+            elif "White" in combo:
+                race_colours.append(colour_palettes.non_white_colours[0]) # white involved
+            elif combo[:7] == "E Asian" or " E Asian" in combo:
+                race_colours.append(colour_palettes.non_white_colours[1]) # east asian involved
+            elif "Ambig" in combo:
+                race_colours.append("khaki") # ambig involved
+            else:
+                race_colours.append(colours["body"])
+
+        rpf_colours = ["deeppink" if rpf_type == "RPF" else "darkred" for rpf_type in new_df["rpf_or_fic"]]
+        rpf_text_colours = ["black" if rpf_type == "RPF" else "white" for rpf_type in new_df["rpf_or_fic"]]
+
+        fandom_colour_dict = make_colour_lookup(new_df)
+
+        if ranking == "overall":
+            notable_fandoms = [ # 18 repeated fandoms in overall (27 non-repeating)
+                "Supernatural", 
+                "One Direction", 
+                "Bangtan Boys / BTS", 
+                "Marvel", 
+                "Harry Potter Universe",
+                "Sherlock", 
+                "Teen Wolf",
+                "Star Trek", 
+                "Star Wars",
+                "The 100",
+                "Once Upon a Time",
+                "DC",
+                "My Hero Academia | 僕のヒーローアカデミア",
+                "Youtube",
+                "Stargate",
+                "Haikyuu!! | ハイキュー!!",
+                "Attack on Titan | 進撃の巨人",
+                "Voltron"
+            ]
+        elif ranking == "femslash":
+            notable_fandoms = [ # 19 repeated fandoms in femslash (42 non-repeating)
+                "Marvel", 
+                "Harry Potter Universe",
+                "Teen Wolf",
+                "The 100",
+                "Once Upon a Time",
+                "DC",
+                "My Hero Academia | 僕のヒーローアカデミア",
+                "Attack on Titan | 進撃の巨人",
+                "RWBY",
+                "Buffy Universe",
+                "Homestuck",
+                "Steven Universe",
+                "Riverdale",
+                "Carmilla",
+                "Women's Soccer",
+                "Dragon Age",
+                "Doctor Who",
+                "Glee",
+                "Overwatch"
+            ]
+
+        fandom_colours = []
+        fandom_text_colours = []
+        for fandom in new_df["fandom"]:
+            if fandom in notable_fandoms:
+                fandom_colours.append(fandom_colour_dict[fandom])
+                if fandom not in [
+                    "Stargate", 
+                    "Star Trek", 
+                    "Glee", 
+                    "Homestuck", 
+                    "Attack on Titan | 進撃の巨人",
+                    "The 100",
+                    "Voltron"
+                ]:
+                    fandom_text_colours.append("white")
+                else: fandom_text_colours.append("black")
+            else:
+                fandom_colours.append(colours["body"])
+                fandom_text_colours.append("black")
+
+        body_fill_colour = []
+        text_colour = []
+        for header in headers:
+            if header == "gender combo":
+                body_fill_colour.append(gender_colours)
+                text_colour.append(gender_text_colours)
+            elif header == "race combo":
+                body_fill_colour.append(race_colours)
+                text_colour.append("black")
+            elif header == "rpf or fic":
+                body_fill_colour.append(rpf_colours)
+                text_colour.append(rpf_text_colours)
+            elif header == "fandom":
+                body_fill_colour.append(fandom_colours)
+                text_colour.append(fandom_text_colours)
+            else:
+                body_fill_colour.append(colours["body"])
+                text_colour.append("black")
+    else:
+        body_fill_colour = colours["body"] # colour of remaining rows
+        text_colour = "black"
+
+    # making figure
     fig = go.Figure(
         data=go.Table(
             header=dict(
@@ -332,12 +473,14 @@ def visualise_single_table(input_df:pd.DataFrame, ranking:str):
                 align='left', # aligns header row text
                 line_color=line_colour,
                 fill_color=header_fill_colour,
+                font_color="black"
             ),
             cells=dict(
                 values=values, # values ordered by column
                 align='left', # aligns body text
                 line_color=line_colour,
                 fill_color=body_fill_colour,
+                font_color=text_colour
             ),
             columnwidth=column_width, # sets column width ratios
         ),
