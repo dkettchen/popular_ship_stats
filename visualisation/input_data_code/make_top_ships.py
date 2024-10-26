@@ -1,8 +1,10 @@
 from visualisation.vis_utils.df_utils.retrieve_numbers import (
     get_label_counts, 
     get_unique_values_list,
+    sum_label_nums
 )
 from visualisation.vis_utils.df_utils.make_dfs import sort_df, get_year_df
+from visualisation.vis_utils.invert_rank import invert_rank
 from copy import deepcopy
 import pandas as pd
 import visualisation.vis_utils.diagram_utils.ranks as ranks
@@ -141,3 +143,27 @@ def longest_running_top_ships(appearances:pd.DataFrame, streaks:pd.DataFrame, ra
 
     return new_df
 
+
+def most_popular_ships(ship_info_df:pd.DataFrame, ranking:str):
+    """
+    makes a df with (& sorted by) the most popular ships of all times (weighted by rank each year)
+    """
+
+    if ranking == "femslash":
+        get_list = ["ship", "fandom", "race_combo", "rpf_or_fic"]
+    else:
+        get_list = ["ship", "fandom", "gender_combo", "race_combo", "rpf_or_fic"]
+
+    new_df = ship_info_df.copy().get(get_list + ["rank_no"])
+
+    new_df["rank_no"] = new_df["rank_no"].apply(invert_rank)
+
+    new_df = sum_label_nums(
+        new_df, 
+        get_list, 
+        "rank_no"
+    )
+    new_df = new_df.rename(columns={"sum": "rank_no"}).reset_index()
+    new_df = sort_df(new_df, "rank_no")
+
+    return new_df
