@@ -37,6 +37,12 @@ def make_subplots_by_year(num_of_years:int, num_of_columns:int=False, by_years:b
     spec_row = [type_dict for _ in range(column)]
     spec_list = [spec_row for _ in range(row)]
 
-    fig = make_subplots(rows=row, cols=column, specs=spec_list)
+    if num_of_columns and by_years:
+        fig = make_subplots(
+            rows=row, cols=column, specs=spec_list, 
+            horizontal_spacing=0.01, vertical_spacing=0.01
+        )
+    else: 
+        fig = make_subplots(rows=row, cols=column, specs=spec_list)
 
     return fig
