@@ -105,6 +105,7 @@ def visualise_multi_lines(input_item:pd.DataFrame|dict, data_case:str, ranking:s
     visualise the output (ranking=(currently implemented:)"femslash") from 
     - total_interracial_ratio (line for interracial, ambig, & non-interracial pairings)
     - average_non_white_ranking (actual values + average line per each category)
+    - average_by_label (actual values + average line per each category)
     
     as a line chart with multiple lines
     """
@@ -112,6 +113,7 @@ def visualise_multi_lines(input_item:pd.DataFrame|dict, data_case:str, ranking:s
     ranking = ranking.lower()
 
     suffix = lbls.suffixes[ranking]
+    # setting bg colour
     if ranking == "femslash":
         bg_colour = colour_palettes.bg_colours["femslash"][0]
     elif ranking == "overall":
@@ -125,7 +127,9 @@ def visualise_multi_lines(input_item:pd.DataFrame|dict, data_case:str, ranking:s
     elif type(input_item) == pd.DataFrame:
         new_df = input_item.copy()
         years = new_df.columns
-
+    if "total" in years:
+        years = [year for year in years if year != "total"]
+    
     x = [str(year) for year in years]
     if data_case == "interracial_ships":
         categories = lbls.interracial_categories
@@ -185,6 +189,18 @@ def visualise_multi_lines(input_item:pd.DataFrame|dict, data_case:str, ranking:s
         title =  f"Minority racial groups by year{suffix}"
 
         mode = "lines+markers"
+    elif data_case == "average_by_label":
+        labels = list(new_df.index)
+        if "M / M" in labels or "F / F" in labels:
+            colours = [colour_palettes.gender_combo_dict[combo] for combo in labels]
+            bg_colour = colour_palettes.bg_colours["overall"][1] # darker one
+            gender_or_combo = "gender combination"
+        elif "M" in labels or "F" in labels:
+            colours = [colour_palettes.gender_colours[gender] for gender in labels]
+            gender_or_combo = "gender"
+        title =  f'Average rank by {gender_or_combo} by year{suffix}'
+
+        mode = "lines+markers"
 
     counter = 0
     for label in labels:
@@ -193,7 +209,7 @@ def visualise_multi_lines(input_item:pd.DataFrame|dict, data_case:str, ranking:s
             y = new_df.loc[label][:-1]
         elif data_case == "interracial_ships":
             y = new_df.loc[categories[counter]] # also text
-        elif data_case == "minority_racial_groups":
+        elif data_case in ["minority_racial_groups", "average_by_label"]:
             y = new_df.loc[label]
 
         # determining this trace's colour
@@ -235,16 +251,20 @@ def visualise_multi_lines(input_item:pd.DataFrame|dict, data_case:str, ranking:s
                 name=label,
             ))
 
-        if data_case == "non_white_ships": # adding the average line for each label
+        if data_case in ["non_white_ships", "average_by_label"]: # adding average line
+            if data_case == "non_white_ships":
+                average_y = [new_df["average"].loc[label] for year in years]
+            else:
+                average_y = [new_df["total"].loc[label] for year in years]
             fig.add_trace(go.Scatter(
                 x=years, 
-                y=[new_df["average"].loc[label] for year in years],
+                y=average_y,
                 mode="lines",
                 line={"color": colours[counter]},
                 opacity=0.5,
                 name=label + " (average)"
             ))
-        elif data_case in ["minority_racial_groups", "interracial_ships"]:
+        elif data_case in ["minority_racial_groups", "interracial_ships"]: # adding trendlines
             
             trendline_y = calculate_trendline(list(range(1, len(years)+1)), list(y))
 
@@ -259,17 +279,22 @@ def visualise_multi_lines(input_item:pd.DataFrame|dict, data_case:str, ranking:s
 
         counter += 1
 
-    if data_case == "non_white_ships": # adding custom annotation for this case
+    if data_case in ["non_white_ships", "average_by_label"]: # reversing y order for ranks
         fig.update_layout(
             yaxis_autorange = "reversed"
         )
-        if ranking == "femslash":
-            fig.add_annotation(
-                x=["2020"], y=47,
-                xshift=50, # idk why it wouldn't just work with x="2020" but oh well
-                text="Single ship that <br>ranked 47th that year",
-                showarrow=True,
-                arrowhead=1
-            )
+    if data_case == "average_by_label" and gender_or_combo == "gender combination":
+        fig.update_xaxes(showgrid=True, gridcolor='mediumturquoise')
+        fig.update_yaxes(showgrid=True, gridcolor='mediumturquoise')
+    
+    # adding custom annotation for this case
+    if ranking == "femslash" and data_case == "non_white_ships":
+        fig.add_annotation(
+            x=["2020"], y=47,
+            xshift=50, # idk why it wouldn't just work with x="2020" but oh well
+            text="Single ship that <br>ranked 47th that year",
+            showarrow=True,
+            arrowhead=1
+        )
 
     return fig
