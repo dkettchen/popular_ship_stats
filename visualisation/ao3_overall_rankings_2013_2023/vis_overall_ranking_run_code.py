@@ -244,12 +244,25 @@ colour_lookup_dict = make_colour_lookup(overall_ship_info_df)
 # )
 
 
-# average rank by char gender 🔴
+# average rank by char gender ✅
 average_rank_by_gender = average_rank(overall_character_info_df, "gender")
-# average rank by ship gender combo 🔴
+average_rank_by_gender_fig = visualise_multi_lines(average_rank_by_gender, "average_by_label", "overall")
+average_rank_by_gender_fig.write_image(
+    "visualisation/ao3_overall_rankings_2013_2023/ao3_overall_rankings_charts/overall_gender_charts/overall_avg_rank_by_gender_2013_2023.png", 
+    width=800, 
+    height=600, 
+    scale=2
+)
+
+# average rank by ship gender combo ✅
 average_rank_by_gender_combo = average_rank(overall_ship_info_df, "gender_combo")
-
-
+average_rank_by_gender_combo_fig = visualise_multi_lines(average_rank_by_gender_combo, "average_by_label", "overall")
+average_rank_by_gender_combo_fig.write_image(
+    "visualisation/ao3_overall_rankings_2013_2023/ao3_overall_rankings_charts/overall_gender_charts/overall_avg_rank_by_gender_combo_2013_2023.png", 
+    width=800, 
+    height=600, 
+    scale=2
+)
 
 # ## race stuff
 
