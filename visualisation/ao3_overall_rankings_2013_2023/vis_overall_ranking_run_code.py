@@ -31,6 +31,7 @@ from visualisation.input_data_code.make_top_ships import (
     longest_running_top_ships,
     most_popular_ships,
 )
+from visualisation.input_data_code.make_by_gender_combo import make_by_gender_combo
 from visualisation.diagram_code.visualise_pies import (
     visualise_pies, 
     visualise_market_share_and_popularity
@@ -126,7 +127,7 @@ colour_lookup_dict = make_colour_lookup(overall_ship_info_df)
 #     scale=2
 # )
 
-# # fandom market share by works no?
+# # fandom market share by works no? 🔴
 
 # # top 5 fandoms ✅
 # top_5_fandoms_dict = top_5_fandoms_by_year(market_share_dict, popularity_dict) 
@@ -150,7 +151,8 @@ colour_lookup_dict = make_colour_lookup(overall_ship_info_df)
 #     scale=2
 # )
 
-# # top 10 ships (by gender combo) (for the straights pls)
+# top 10 ships (by gender combo) (for the straights pls) 🔴
+top_ships_by_gender_combo = make_by_gender_combo(overall_ship_info_df, "top_ships", "overall")
 
 # # all time top 5 ships by no of appearances in top 10 ✅
 # # all time top 5 ships by longest streak in top 10 ✅ # they're the same again
@@ -165,23 +167,23 @@ colour_lookup_dict = make_colour_lookup(overall_ship_info_df)
 #     scale=2
 # )
 
-# all time top 100 most popular ships by rank numbers
-most_popular_ships_df = most_popular_ships(overall_ship_info_df, "overall")
-most_popular_ships_fig = visualise_single_table(most_popular_ships_df, "overall", "most_popular_characters")
-most_popular_ships_fig.write_image(
-    "visualisation/ao3_overall_rankings_2013_2023/ao3_overall_rankings_charts/most_popular_overall_ships_2013_2023.png", 
-    width=1400, 
-    height=2270, 
-    scale=2
-)
-# make some pie charts too! about gender distr, race distr, rpf & fic
-most_popular_demo_fig = visualise_pies(most_popular_ships_df, "most_popular_ships", "overall")
-most_popular_demo_fig.write_image(
-    "visualisation/ao3_overall_rankings_2013_2023/ao3_overall_rankings_charts/most_popular_overall_ships_demo_2013_2023.png", 
-    width=1500, 
-    height=600, 
-    scale=2
-)
+# # all time top 100 most popular ships by rank numbers ✅
+# most_popular_ships_df = most_popular_ships(overall_ship_info_df, "overall")
+# most_popular_ships_fig = visualise_single_table(most_popular_ships_df, "overall", "most_popular_characters")
+# most_popular_ships_fig.write_image(
+#     "visualisation/ao3_overall_rankings_2013_2023/ao3_overall_rankings_charts/most_popular_overall_ships_2013_2023.png", 
+#     width=1400, 
+#     height=2270, 
+#     scale=2
+# )
+# # make some pie charts too! about gender distr, race distr, rpf & fic ✅
+# most_popular_demo_fig = visualise_pies(most_popular_ships_df, "most_popular_ships", "overall")
+# most_popular_demo_fig.write_image(
+#     "visualisation/ao3_overall_rankings_2013_2023/ao3_overall_rankings_charts/most_popular_overall_ships_demo_2013_2023.png", 
+#     width=1500, 
+#     height=600, 
+#     scale=2
+# )
 
 
 # # hottest characters ✅
@@ -190,8 +192,8 @@ most_popular_demo_fig.write_image(
 # visualise_hottest_chars(hottest_chars, "overall") # writes its own files
 
 
-# # racial distr by char gender
-# # racial distr by gender combo
+# # racial distr by char gender 🔴
+# # racial distr by gender combo 🔴
 
 
 # ## gender stuff
@@ -234,10 +236,10 @@ most_popular_demo_fig.write_image(
 # )
 
 
-# # average rank by char gender
-# # average rank by ship gender combo
+# # average rank by char gender 🔴
+# # average rank by ship gender combo 🔴
 
-# # top 3 ships by gender combo
+# # top 3 ships by gender combo 🔴
 
 
 # ## race stuff

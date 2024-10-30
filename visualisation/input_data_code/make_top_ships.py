@@ -10,7 +10,7 @@ import pandas as pd
 import visualisation.vis_utils.diagram_utils.ranks as ranks
 
 # top ships & their demo each year
-def top_ships(ship_info_df:pd.DataFrame, ranking:str):
+def top_ships(ship_info_df:pd.DataFrame, ranking:str, data_case:str=None):
     """
     takes a dataframe that contains (at least) "year", "ship", "fandom", "race_combo", and "rpf_or_fic" 
     columns and is sorted by ranks already
@@ -18,6 +18,9 @@ def top_ships(ship_info_df:pd.DataFrame, ranking:str):
     if the ranking is not femslash, it also needs to contain "gender_combo"
 
     if the ranking is femslash, it returns the top 5 ships, otherwise it returns the top 10
+
+    if data_case is provided (needs to be "mlm", "wlw", or "hets") it returns the top ranked ships of 
+    only that ship type
 
     returns a dictionary with year keys and dataframe values, of the top ships in that year
     """
@@ -37,6 +40,28 @@ def top_ships(ship_info_df:pd.DataFrame, ranking:str):
     unique_year_list = get_unique_values_list(new_df, "year")
     for year in unique_year_list:
         year_df = get_year_df(new_df, year)
+
+        if data_case == "mlm":
+            year_df = year_df.where(
+                (year_df["gender_combo"] == "M / M") | (
+                year_df["gender_combo"] == "M / M | Other") | (
+                year_df["gender_combo"] == "M | Other / M") | (
+                year_df["gender_combo"] == "M | Other / M / M")
+            )
+        elif data_case == "wlw":
+            year_df = year_df.where(
+                (year_df["gender_combo"] == "F / F") | (
+                year_df["gender_combo"] == "F / F | Other") | (
+                year_df["gender_combo"] == "F | Other / F") | (
+                year_df["gender_combo"] == "F | Other / F | Other")
+            )
+        elif data_case == "hets":
+            year_df = year_df.where(
+                (year_df["gender_combo"].str.contains("F")) & (
+                year_df["gender_combo"].str.contains("M")) & (
+                year_df["gender_combo"] != "M | F | Other")
+            )
+
         year_df = year_df.dropna().head(number)
         year_dict[int(year)] = year_df
     
