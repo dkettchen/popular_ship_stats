@@ -492,7 +492,7 @@ def visualise_single_table(input_df:pd.DataFrame, ranking:str, data_case:str=Non
 # make columns of table plots with years number of rows
 def visualise_column_tables(input_dict:dict, data_case:str, ranking:str):
     """
-    takes a dict
+    takes a dict with year keys
 
     returns multi-plot figure with columns of tables for each category and rows for each year
     visualising the top 3 ships of each category each year
@@ -504,11 +504,13 @@ def visualise_column_tables(input_dict:dict, data_case:str, ranking:str):
     ranking = ranking.lower()
     suffix = lbls.suffixes[ranking]
 
+    # setting column num, header colours, ship types, title, column width
     if data_case == "non_white_ships":
         num_of_columns = 4
         colours = colour_palettes.non_white_colours
         ship_types = lbls.non_white_categories
         title = f"Top 3 ships by race-combo type by year{suffix}"
+        column_width = [0.35, 3.05, 1.1, 1.5]
     elif data_case == "gender_combos":
         num_of_columns = 3
         colours = [
@@ -518,21 +520,17 @@ def visualise_column_tables(input_dict:dict, data_case:str, ranking:str):
         ]
         ship_types = ["mlm", "wlw", "hets"]
         title = f"Top 10 ships by gender-combo by year{suffix}"
+        column_width = [0.2, 3.9, 0.9, 1.1]
 
+    # making subplots
     num_of_years = len(input_dict.keys())
     fig = make_subplots_by_year(num_of_years, num_of_columns=num_of_columns, by_years=True)
     
+    # setting colours
     if ranking == "femslash":
         line_colour = colour_palettes.sapphic_table["lines"] # colour of lines
-        #body_fill_colour = colour_palettes.sapphic_table["body_2"] # colour of remaining rows
-        if data_case == "non_white_ships":
-            column_width = [0.35, 3.05, 1.1, 1.5]
     elif ranking == "overall":
         line_colour = colour_palettes.blue_table["lines"]
-        if data_case == "non_white_ships":
-            column_width = [0.35, 3.05, 1.1, 1.5]
-        elif data_case == "gender_combos":
-            column_width = [0.4, 3.5, 1.4, 1.4 ,0.7]
     body_fill_colour = colour_palettes.bg_colours[ranking][0]
 
     row_counter = 1
@@ -540,30 +538,32 @@ def visualise_column_tables(input_dict:dict, data_case:str, ranking:str):
     rank_strings = ranks.top_10_list
 
     for year in input_dict:
+        # making year item
         if data_case == "non_white_ships":
             year_item = input_dict[year].copy() # df
 
             year_item["fandom"] = clean_fandoms(year_item["fandom"]) # cleaning/shortening fandoms
             year_item.pop("year")
             year_item.pop("rank_no")
-
         elif data_case == "gender_combos":
             year_item = input_dict[year] # dict
-        # print(year_df) # ['year', 'ship', 'fandom', 'rank_no', 'race_combo', 'ship_type']
 
-        for ship_type in ship_types:
+        for ship_type in ship_types: # iterating through ship types
+            # making df per type
             if data_case == "non_white_ships":
                 type_df = year_item.where(
                     year_item["ship_type"] == ship_type
                 ).dropna()
 
                 type_df.pop("ship_type")
-            
             elif data_case == "gender_combos":
                 type_df = year_item[ship_type]
+                type_df["fandom"] = clean_fandoms(type_df["fandom"]) # cleaning/shortening fandoms
                 type_df.pop("year")
                 type_df.pop("gender_combo")
+                type_df.pop("rpf_or_fic")
 
+            # adding ranks
             length = len(type_df)
             type_df["rank"] = rank_strings[:length]
             new_column_order = list(type_df.columns[-1:]) + list(type_df.columns[:-1])
@@ -573,6 +573,7 @@ def visualise_column_tables(input_dict:dict, data_case:str, ranking:str):
                 columns={"ship":ship_type}
             )
 
+            # setting text & fill colour for headers
             if col_counter in [1,2] and data_case == "non_white_ships":
                 header_font = "black"
             else: header_font = "white"
@@ -606,6 +607,7 @@ def visualise_column_tables(input_dict:dict, data_case:str, ranking:str):
         row_counter += 1
         col_counter = 1
 
+    # adding title
     fig.update_layout(
         title=title
     )

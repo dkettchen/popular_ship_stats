@@ -156,8 +156,8 @@ top_ships_by_gender_combo = make_by_gender_combo(overall_ship_info_df, "top_ship
 top_ships_by_gender_combo_fig = visualise_column_tables(top_ships_by_gender_combo, "gender_combos", "overall")
 top_ships_by_gender_combo_fig.write_image(
     "visualisation/ao3_overall_rankings_2013_2023/ao3_overall_rankings_charts/top_overall_ships_by_gender_combo_2013_2023.png", 
-    width=3000, 
-    height=3000, 
+    width=3300, 
+    height=2850, 
     scale=2
 )
 
