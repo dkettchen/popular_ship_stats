@@ -119,7 +119,7 @@ def visualise_top_non_white_ships(input_dict:dict, ranking:str):
     ranking = ranking.lower()
 
     num_of_years = len(input_dict.keys())
-    fig = make_subplots_by_year(num_of_years, num_of_columns=4)
+    fig = make_subplots_by_year(num_of_years, num_of_columns=4, by_years=True)
     suffix = lbls.suffixes[ranking]
 
     colours = colour_palettes.non_white_colours
