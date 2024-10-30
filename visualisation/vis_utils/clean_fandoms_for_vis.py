@@ -29,7 +29,7 @@ def clean_fandoms(input_list_or_array):
         "Sailor Moon": "Sailor Moon",
         "The Untamed": "The Untamed",
         "Vocaloid": "Vocaloid",
-        "Miraculous": "Miraculous",
+        "Miraculous: Tales of Ladybug & Cat Noir": "Miraculous",
         "Gundam": "Gundam",
         "Hunger Games": "Hunger Games",
         "BTS": "BTS",
