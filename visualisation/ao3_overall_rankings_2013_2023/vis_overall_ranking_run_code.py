@@ -45,10 +45,10 @@ from visualisation.diagram_code.visualise_lines import (
     visualise_line
 )
 from visualisation.diagram_code.visualise_tables import (
-    visualise_top_non_white_ships, 
     visualise_top_5,
     visualise_hottest_chars,
-    visualise_single_table
+    visualise_single_table,
+    visualise_column_tables
 )
 
 
@@ -153,6 +153,14 @@ colour_lookup_dict = make_colour_lookup(overall_ship_info_df)
 
 # top 10 ships (by gender combo) (for the straights pls) 🔴
 top_ships_by_gender_combo = make_by_gender_combo(overall_ship_info_df, "top_ships", "overall")
+top_ships_by_gender_combo_fig = visualise_column_tables(top_ships_by_gender_combo, "gender_combos", "overall")
+top_ships_by_gender_combo_fig.write_image(
+    "visualisation/ao3_overall_rankings_2013_2023/ao3_overall_rankings_charts/top_overall_ships_by_gender_combo_2013_2023.png", 
+    width=3000, 
+    height=3000, 
+    scale=2
+)
+
 
 # # all time top 5 ships by no of appearances in top 10 ✅
 # # all time top 5 ships by longest streak in top 10 ✅ # they're the same again

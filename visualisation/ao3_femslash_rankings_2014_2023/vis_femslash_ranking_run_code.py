@@ -39,8 +39,8 @@ from visualisation.diagram_code.visualise_pies import visualise_pies, visualise_
 from visualisation.diagram_code.visualise_tables import (
     visualise_single_table, 
     visualise_top_5, 
-    visualise_top_non_white_ships,
-    visualise_hottest_chars
+    visualise_hottest_chars,
+    visualise_column_tables
 )
 
 
@@ -274,7 +274,7 @@ most_popular_demo_fig.write_image(
 
 # femslash_separated_dict = separate_out_non_white_ships_info(femslash_prepped_dict)
 # top_non_white = top_non_white_ships(femslash_separated_dict)
-# top_non_white_fig = visualise_top_non_white_ships(top_non_white, "femslash")
+# top_non_white_fig = visualise_column_tables(top_non_white, "non_white_ships", "femslash")
 # top_non_white_fig.write_image(
 #     "visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/sapphic_race_stats/femslash_top_non_white_2014_2023.png", 
 #     width=3800, 
