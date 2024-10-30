@@ -1,16 +1,15 @@
 import pandas as pd
 from visualisation.vis_utils.df_utils.retrieve_numbers import (
-    get_label_counts, 
     get_unique_values_list,
 )
-from visualisation.vis_utils.df_utils.make_dfs import sort_df, get_year_df
+from visualisation.vis_utils.df_utils.make_dfs import get_year_df
 from visualisation.vis_utils.rename_gender_combos import rename_gender_combos
 
 
-# possibly refactor to unite with average_non_white_ranking?
+# possibly add average_non_white_ranking functionality to this one?
 def average_rank(input_df:pd.DataFrame, column_name:str):
     """
-    takes dataframe
+    takes dataframe (must at least contain column_name, "year", and "rank_no" columns)
 
     returns average rank per: 
     - column_name="gender" (character df)
