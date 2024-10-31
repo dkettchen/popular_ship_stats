@@ -51,7 +51,7 @@ def get_rpf(input_df:pd.DataFrame):
     return year_dict
 
 
-def get_counts(input_df:pd.DataFrame, column_name:str, count_column:str):
+def get_counts(input_df:pd.DataFrame, column_name:str|list, count_column:str):
     """
     takes a ship_info_df
 
@@ -65,20 +65,8 @@ def get_counts(input_df:pd.DataFrame, column_name:str, count_column:str):
     unique_year_list = get_unique_values_list(new_df, "year")
     for year in unique_year_list:
         year_df = get_year_df(new_df, year)
-
-        if column_name == ["gender_combo", "race_combo"]: # renaming combos!
-            year_df = rename_gender_combos(year_df, column=True)
-            renaming_dict = sort_race_combos(year_df["race_combo"]) 
-            year_df["race_combo"] = [renaming_dict[combo] if combo in renaming_dict else combo for combo in year_df["race_combo"]]
-
         year_df = get_label_counts(year_df, column_name, count_column)
-        if column_name in [
-            ["gender", "race"],
-            ["gender_combo", "race_combo"]
-        ]:
-            year_df = sort_df(year_df) # sorting by multi index
-        else:
-            year_df = sort_df(year_df, "count") # sorting by values
+        year_df = sort_df(year_df, "count") # sorting by values
 
         year_dict[int(year)] = year_df["count"]
 
