@@ -5,6 +5,7 @@ from visualisation.vis_utils.df_utils.retrieve_numbers import (
 )
 from visualisation.vis_utils.df_utils.make_dfs import sort_df, get_year_df
 from visualisation.vis_utils.rename_gender_combos import rename_gender_combos
+from visualisation.vis_utils.sort_race_combos import sort_race_combos
 from visualisation.input_data_code.get_data_df import get_data_df
 
 def get_gender_combos(input_df:pd.DataFrame):
@@ -65,8 +66,19 @@ def get_counts(input_df:pd.DataFrame, column_name:str, count_column:str):
     for year in unique_year_list:
         year_df = get_year_df(new_df, year)
 
+        if column_name == ["gender_combo", "race_combo"]: # renaming combos!
+            year_df = rename_gender_combos(year_df, column=True)
+            renaming_dict = sort_race_combos(year_df["race_combo"]) 
+            year_df["race_combo"] = [renaming_dict[combo] if combo in renaming_dict else combo for combo in year_df["race_combo"]]
+
         year_df = get_label_counts(year_df, column_name, count_column)
-        year_df = sort_df(year_df, "count")
+        if column_name in [
+            ["gender", "race"],
+            ["gender_combo", "race_combo"]
+        ]:
+            year_df = sort_df(year_df) # sorting by multi index
+        else:
+            year_df = sort_df(year_df, "count") # sorting by values
 
         year_dict[int(year)] = year_df["count"]
 
