@@ -559,7 +559,7 @@ def visualise_grouped_bars(input_item:dict, data_case:str, ranking:str):
         text_size = 10
 
     # setting bg colour
-    if data_case in ["rpf", "gen"]:
+    if data_case in ["minority_gender_combos", "gender_combos", "rpf", "gen"]:
         bg_colour = colour_palettes.bg_colours[ranking][1]
     elif data_case == "minority_genders":
         bg_colour = colour_palettes.bg_colours[ranking][0]
@@ -577,7 +577,7 @@ def visualise_grouped_bars(input_item:dict, data_case:str, ranking:str):
     counter = 0
     for index_label in temp_df.index:
         values = temp_df.loc[index_label]
-        if data_case in ["rpf", "gen"]:
+        if data_case in ["minority_gender_combos", "gender_combos", "rpf", "gen"]:
             colour = colour_palettes.gender_combo_dict[index_label]
         elif data_case == "minority_genders":
             colour = colour_palettes.gender_colours[index_label]
