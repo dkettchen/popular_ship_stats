@@ -74,7 +74,7 @@ gen_vs_slash_total_dict = get_counts(annual_ship_info_df, "fic_type", "ship")
 gen_vs_slash_pies = visualise_pies(gen_vs_slash_total_dict, "fic_type", "annual")
 gen_vs_slash_pies.write_image(
     "visualisation/ao3_annual_rankings_2016_2023/ao3_annual_rankings_charts/annual_fic_type_2016_2023.png", 
-    width=1300, 
+    width=1000, 
     height=600, 
     scale=2
 )
@@ -93,7 +93,7 @@ rpf_total_dict = get_rpf(annual_ship_info_df)
 rpf_fig = visualise_pies(rpf_total_dict, "rpf", "annual")
 rpf_fig.write_image(
     "visualisation/ao3_annual_rankings_2016_2023/ao3_annual_rankings_charts/annual_rpf_2016_2023.png", 
-    width=1300, 
+    width=1000, 
     height=600, 
     scale=2
 )
@@ -113,7 +113,7 @@ market_share_dict = fandom_market_share_by_year(annual_ship_info_df)
 market_share_fig = visualise_market_share_and_popularity(market_share_dict, colour_lookup_dict, "annual")
 market_share_fig.write_image(
     "visualisation/ao3_annual_rankings_2016_2023/ao3_annual_rankings_charts/annual_fandom_market_share_2016_2023.png",
-    width=2800, 
+    width=2500, 
     height=1300, 
     scale=2
 )
@@ -123,7 +123,7 @@ popularity_dict = fandoms_popularity_by_year(annual_ship_info_df)
 popularity_fig = visualise_market_share_and_popularity(popularity_dict, colour_lookup_dict, "annual")
 popularity_fig.write_image(
     "visualisation/ao3_annual_rankings_2016_2023/ao3_annual_rankings_charts/annual_fandom_popularity_2016_2023.png",
-    width=2800, 
+    width=2500, 
     height=1300, 
     scale=2
 )
@@ -206,7 +206,7 @@ gender_percent_total = get_counts(annual_character_info_df, "gender", "full_name
 gender_percent_pies = visualise_pies(gender_percent_total, "gender", "annual")
 gender_percent_pies.write_image(
     "visualisation/ao3_annual_rankings_2016_2023/ao3_annual_rankings_charts/annual_gender_charts/annual_gender_distr_2016_2023.png", 
-    width=1300, 
+    width=1000, 
     height=600, 
     scale=2
 )
@@ -214,7 +214,7 @@ gender_percent_pies.write_image(
 gender_percent_pies = visualise_grouped_bars(gender_percent_total, "minority_genders", "annual")
 gender_percent_pies.write_image(
     "visualisation/ao3_annual_rankings_2016_2023/ao3_annual_rankings_charts/annual_gender_charts/annual_minority_genders_2016_2023.png", 
-    width=1300, 
+    width=1500, 
     height=600, 
     scale=2
 )
@@ -225,7 +225,7 @@ total_gender_combos = get_gender_combos(annual_ship_info_df)
 gender_combo_pies = visualise_grouped_bars(total_gender_combos, "gender_combos", "annual")
 gender_combo_pies.write_image(
     "visualisation/ao3_annual_rankings_2016_2023/ao3_annual_rankings_charts/annual_gender_charts/annual_gender_combos_2016_2023.png", 
-    width=1300, 
+    width=1700, 
     height=600, 
     scale=2
 )
@@ -266,7 +266,7 @@ race_percent_total = get_counts(annual_character_info_df, "race", "full_name")
 race_percent_pies = visualise_pies(race_percent_total, "race", "annual")
 race_percent_pies.write_image(
     "visualisation/ao3_annual_rankings_2016_2023/ao3_annual_rankings_charts/annual_racial_charts/annual_racial_distr_2016_2023.png", 
-    width=1300, 
+    width=1200, 
     height=600, 
     scale=2
 )
@@ -293,7 +293,7 @@ race_combo_total = get_counts(annual_ship_info_df, "race_combo", "ship")
 race_combo_pies = visualise_pies(race_combo_total, "race_combos", "annual")
 race_combo_pies.write_image(
     "visualisation/ao3_annual_rankings_2016_2023/ao3_annual_rankings_charts/annual_racial_charts/annual_racial_combos_2016_2023.png", 
-    width=1300, 
+    width=1200, 
     height=600, 
     scale=2
 )
@@ -303,7 +303,7 @@ multi_total = total_multi_nos_by_year(race_percent_total, "race")
 multi_fig = visualise_pies(multi_total, "multi_chars", "annual")
 multi_fig.write_image(
     "visualisation/ao3_annual_rankings_2016_2023/ao3_annual_rankings_charts/annual_racial_charts/annual_multi_characters_2016_2023.png", 
-    width=1300, 
+    width=1000, 
     height=600, 
     scale=2
 )
@@ -320,7 +320,7 @@ multi_involved_total = total_multi_nos_by_year(race_combo_total, "race_combo")
 multi_involved_fig = visualise_pies(multi_involved_total, "multi_char_ships", "annual")
 multi_involved_fig.write_image(
     "visualisation/ao3_annual_rankings_2016_2023/ao3_annual_rankings_charts/annual_racial_charts/annual_multi_involved_ships_2016_2023.png", 
-    width=1300, 
+    width=1000, 
     height=600, 
     scale=2
 )
@@ -337,7 +337,7 @@ interracial_total = total_interracial_ratio(race_combo_total)
 interracial_fig = visualise_pies(interracial_total, "interracial_ships", "annual")
 interracial_fig.write_image(
     "visualisation/ao3_annual_rankings_2016_2023/ao3_annual_rankings_charts/annual_racial_charts/annual_interracial_ships_2016_2023.png", 
-    width=1300, 
+    width=1000, 
     height=600,
     scale=2
 )
@@ -366,7 +366,7 @@ non_white_counts = count_non_white_ships(annual_prepped_dict)
 non_white_count_fig = visualise_non_white_counts(non_white_counts, "annual")
 non_white_count_fig.write_image(
     "visualisation/ao3_annual_rankings_2016_2023/ao3_annual_rankings_charts/annual_racial_charts/annual_non_white_counts_2016_2023.png", 
-    width=1000, 
+    width=900, 
     height=400, 
     scale=2
 )
