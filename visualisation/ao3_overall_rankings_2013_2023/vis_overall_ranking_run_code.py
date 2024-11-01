@@ -374,11 +374,11 @@ non_white_count_fig.write_image(
 # top 3 ships for each category that year ✅
 overall_separated_dict = separate_out_non_white_ships_info(overall_prepped_dict)
 top_non_white = top_non_white_ships(overall_separated_dict)
-top_non_white_fig = visualise_column_tables(top_non_white, "overall")
+top_non_white_fig = visualise_column_tables(top_non_white, "non_white_ships", "overall")
 top_non_white_fig.write_image(
     "visualisation/ao3_overall_rankings_2013_2023/ao3_overall_rankings_charts/overall_racial_charts/overall_top_non_white_2013_2023.png", 
-    width=3800, 
-    height=1800, 
+    width=3500, 
+    height=1500, 
     scale=2
 )
 
