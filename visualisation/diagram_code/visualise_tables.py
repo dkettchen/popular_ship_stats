@@ -249,12 +249,13 @@ def visualise_single_table(input_df:pd.DataFrame, ranking:str, data_case:str=Non
                 new_df["rpf_or_fic"],
             ]
         elif ranking in ["overall", "annual"]:
-            column_width = [0.1,1.6,0.45,0.3,0.45,0.2]
-            headers = ["rank", "ship", "fandom", "gender combo", "race combo", "rpf or fic"]
+            column_width = [0.1,1.8,0.4,0.2,0.25,0.4,0.2]
+            headers = ["rank", "ship", "fandom", "gen or slash", "gender combo", "race combo", "rpf or fic"]
             values = [
                 [num for num in range(1, 101)],
                 new_df["ship"], 
                 clean_fandoms(new_df["fandom"]),
+                new_df["fic_type"],
                 new_df["gender_combo"],
                 new_df["race_combo"],
                 new_df["rpf_or_fic"],
@@ -275,6 +276,8 @@ def visualise_single_table(input_df:pd.DataFrame, ranking:str, data_case:str=Non
 
             gender_colours = [colour_palettes.gender_combo_dict[combo] for combo in clean_gender_combos["gender_combo"]]
             gender_text_colours = ["white" if combo != "M / M | Other" else "black" for combo in clean_gender_combos["gender_combo"]]
+
+            fic_type_colours = ["hotpink" if fic_type == "slash" else "yellowgreen" for fic_type in new_df["fic_type"]]
 
         racial_group_colour_dict = make_colour_lookup_racial_groups()
         
@@ -339,6 +342,25 @@ def visualise_single_table(input_df:pd.DataFrame, ranking:str, data_case:str=Non
                 "Glee",
                 "Overwatch"
             ]
+        elif ranking == "annual":
+            notable_fandoms = [ # 16 repeated fandoms in annual (26 non-repeating)
+                "Harry Potter Universe",
+                "Marvel", 
+                "Bangtan Boys / BTS", 
+                "Supernatural",  
+                "Sherlock", 
+                "Star Wars",
+                "The 100",
+                "Once Upon a Time",
+                "DC",
+                "My Hero Academia | 僕のヒーローアカデミア",
+                "Youtube",
+                "Haikyuu!! | ハイキュー!!",
+                "Voltron",
+                "Good Omens",
+                "Stranger Things",
+                "Yuri!!! on ICE | ユーリ!!! on ICE" 
+            ]
         else: notable_fandoms = []
 
         fandom_colours = []
@@ -353,7 +375,8 @@ def visualise_single_table(input_df:pd.DataFrame, ranking:str, data_case:str=Non
                     "Homestuck", 
                     "Attack on Titan | 進撃の巨人",
                     "The 100",
-                    "Voltron"
+                    "Voltron",
+                    "Good Omens"
                 ]:
                     fandom_text_colours.append("white")
                 else: fandom_text_colours.append("black")
@@ -376,6 +399,9 @@ def visualise_single_table(input_df:pd.DataFrame, ranking:str, data_case:str=Non
             elif header == "fandom":
                 body_fill_colour.append(fandom_colours)
                 text_colour.append(fandom_text_colours)
+            elif header == "gen or slash":
+                body_fill_colour.append(fic_type_colours)
+                text_colour.append("black")
             else:
                 body_fill_colour.append(colours["body"])
                 text_colour.append("black")

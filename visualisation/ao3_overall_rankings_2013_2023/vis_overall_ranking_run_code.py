@@ -180,8 +180,8 @@ most_popular_ships_df = most_popular_ships(overall_ship_info_df, "overall")
 most_popular_ships_fig = visualise_single_table(most_popular_ships_df, "overall", "most_popular_characters")
 most_popular_ships_fig.write_image(
     "visualisation/ao3_overall_rankings_2013_2023/ao3_overall_rankings_charts/most_popular_overall_ships_2013_2023.png", 
-    width=1400, 
-    height=2270, 
+    width=1800, 
+    height=2400,  
     scale=2
 )
 # make some pie charts too! about gender distr, race distr, rpf & fic ✅

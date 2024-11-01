@@ -177,7 +177,7 @@ def most_popular_ships(ship_info_df:pd.DataFrame, ranking:str):
     if ranking == "femslash":
         get_list = ["ship", "fandom", "race_combo", "rpf_or_fic"]
     else:
-        get_list = ["ship", "fandom", "gender_combo", "race_combo", "rpf_or_fic"]
+        get_list = ["ship", "fandom", "fic_type", "gender_combo", "race_combo", "rpf_or_fic"]
 
     new_df = ship_info_df.copy().get(get_list + ["rank_no"])
 
