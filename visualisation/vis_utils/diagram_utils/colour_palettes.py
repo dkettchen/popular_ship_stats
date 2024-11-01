@@ -57,7 +57,7 @@ bg_colours = {
     "femslash": ['papayawhip', 'mistyrose'],
     "overall": ['aliceblue', "turquoise"],
     "total": ['aliceblue'],
-    "annual": ['aliceblue']
+    "annual": ['aliceblue', "turquoise"]
 }
 
 
