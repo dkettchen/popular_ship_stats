@@ -17,6 +17,10 @@ def make_colour_lookup(input_df:DataFrame): # for fandoms
         px.colors.qualitative.Bold + px.colors.qualitative.Bold + \
         px.colors.qualitative.Bold + px.colors.qualitative.Bold + \
         px.colors.qualitative.Bold + px.colors.qualitative.Bold + \
+        px.colors.qualitative.Bold + px.colors.qualitative.Bold + \
+        px.colors.qualitative.Bold + px.colors.qualitative.Bold + \
+        px.colors.qualitative.Bold + px.colors.qualitative.Bold + \
+        px.colors.qualitative.Bold + px.colors.qualitative.Bold + \
         px.colors.qualitative.Bold + px.colors.qualitative.Bold
     
     colour_counter = 0
