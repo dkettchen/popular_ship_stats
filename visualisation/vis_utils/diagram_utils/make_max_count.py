@@ -10,5 +10,7 @@ def make_max_count(num_of_years:int):
         max_count = 3
     elif num_of_years == 10:
         max_count = 5
+    elif num_of_years in [7,8]:
+        max_count = 4
 
     return max_count

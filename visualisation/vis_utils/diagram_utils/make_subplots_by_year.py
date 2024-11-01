@@ -32,6 +32,9 @@ def make_subplots_by_year(num_of_years:int, num_of_columns:int=False, by_years:b
         elif num_of_years == 10:
             row = 2
             column = 5
+        elif num_of_years in [7,8]:
+            row = 2
+            column = 4
         type_dict = {"type": "domain"}
 
     spec_row = [type_dict for _ in range(column)]
