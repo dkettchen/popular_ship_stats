@@ -1,18 +1,14 @@
 def edit_ranking_df_columns(input_df_dict:dict, ranking:str):
     """
-    takes output dict from make_yearly_df_dict
+    takes output dict from make_yearly_df_dict and a ranking string ("femslash"|"overall"|"annual")
 
-    returns a new dict with new dataframes, where (currently implemented:)
-    - if ranking="femslash":
-        the "new_works", "release_date", and "data_set" columns have been removed, 
-        a "year" column has been added, and in the 2014 set, the "change" column has been 
-        filled with "new" rather than None values
-    - if ranking="overall":
-        the "new_works", "release_date", and "data_set" columns have been removed, 
-        a "year" column has been added, and in the 2013 set, the "change" column has been 
-        filled with "new" rather than None values, and all ranks above 100 have been removed, 
-        and in the 2014 set, the "change" column has been filled with "old" values where there 
-        were None values ("new" values stay intact)
+    returns a new dict with new dataframes, where:
+    - the "new_works", "release_date", and "data_set" columns have been removed, 
+    a "year" column has been added, and in the first year of data per set the "change" column 
+    has been filled with "new" rather than None values
+    - additionally, if ranking="overall":
+        all ranks above 100 have been removed, and in the 2014 set, the "change" column 
+        has been filled with "old" values where there were None values ("new" values stay intact)
     """
 
     new_df_dict = {}
@@ -20,7 +16,7 @@ def edit_ranking_df_columns(input_df_dict:dict, ranking:str):
     for year in input_df_dict:
         new_df = input_df_dict[year].copy()
 
-        if ranking in ["femslash", "overall"]:
+        if ranking in ["femslash", "overall", "annual"]:
             # drop new works cause it's an overall ranking
             new_df.pop("new_works")
 
@@ -33,7 +29,8 @@ def edit_ranking_df_columns(input_df_dict:dict, ranking:str):
             new_df["year"] = year
 
         if (ranking == "femslash" and year == 2014) \
-        or (ranking == "overall" and year == 2013):
+        or (ranking == "overall" and year == 2013) \
+        or (ranking == "annual" and year == 2016):
             new_df["change"] = "new" # getting rid of none values
         
             if ranking == "overall":
