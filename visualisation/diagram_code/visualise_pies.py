@@ -56,7 +56,9 @@ def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str):
         min_size = 12
 
     row_count = 1
-    col_count = 1
+    if ranking == "annual":
+        col_count = 2 # skipping first one due to uneven number of years
+    else: col_count = 1
 
     text_info = 'percent'
     colours = None
@@ -268,7 +270,9 @@ def visualise_market_share_and_popularity(input_dict:dict, colour_lookup:dict, r
     max_count = make_max_count(num_of_years)
 
     row_count = 1
-    col_count = 1
+    if ranking == "annual":
+        col_count = 2 # skipping first one due to uneven number of years
+    else: col_count = 1
 
     if "no_of_ships" in input_dict[2023].columns:
         femslash_title = f"Fandoms (> 1 ship) by market share by year{suffix}"

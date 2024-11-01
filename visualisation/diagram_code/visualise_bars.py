@@ -3,8 +3,6 @@ import plotly.graph_objects as go
 import visualisation.vis_utils.diagram_utils.colour_palettes as colour_palettes
 import visualisation.vis_utils.diagram_utils.labels as lbls
 import plotly.express as px
-from visualisation.vis_utils.diagram_utils.make_subplots_by_year import make_subplots_by_year
-from visualisation.vis_utils.diagram_utils.make_max_count import make_max_count
 from visualisation.vis_utils.df_utils.make_dfs import sort_df
 from visualisation.vis_utils.make_colour_lookup import make_colour_lookup_racial_groups
 
