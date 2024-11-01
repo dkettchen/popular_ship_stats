@@ -23,10 +23,7 @@ def visualise_line(input_item:dict|pd.Series, data_case:str, ranking:str):
     suffix = lbls.suffixes[ranking]
 
     # setting colours
-    if ranking == "femslash":
-        bg_colour = colour_palettes.bg_colours["femslash"][0]
-    elif ranking == "overall":
-        bg_colour = colour_palettes.bg_colours["overall"][0]
+    bg_colour = colour_palettes.bg_colours[ranking][0]
     colour = colour_palettes.oranges[0]
 
     if data_case == "multi_chars":

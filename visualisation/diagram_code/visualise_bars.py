@@ -24,10 +24,7 @@ def visualise_non_white_counts(input_df:pd.DataFrame, ranking:str):
     counter = 0
 
     suffix = lbls.suffixes[ranking]
-    if ranking == "femslash":
-        bg_colour = colour_palettes.bg_colours["femslash"][0]
-    elif ranking == "overall":
-        bg_colour = colour_palettes.bg_colours["overall"][0]
+    bg_colour = colour_palettes.bg_colours[ranking][0]
 
     for column in input_df.columns:
         values = input_df[column]

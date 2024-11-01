@@ -56,7 +56,7 @@ def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str):
         min_size = 12
 
     row_count = 1
-    if ranking == "annual":
+    if ranking == "annual" and data_case != "most_popular_ships":
         col_count = 2 # skipping first one due to uneven number of years
     else: col_count = 1
 

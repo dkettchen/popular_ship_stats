@@ -28,7 +28,7 @@ def visualise_top_5(input_dict:dict, data_case:str, ranking:str):
     
     if ranking == "femslash":
         colours = colour_palettes.sapphic_table
-    elif ranking == "overall":
+    elif ranking in ["overall", "annual"]:
         colours = colour_palettes.blue_table
 
     if data_case == "fandoms":
@@ -55,7 +55,7 @@ def visualise_top_5(input_dict:dict, data_case:str, ranking:str):
     body_fill_colour = colours["body"] # colour of remaining rows
 
     row_counter = 1
-    if ranking in ["femslash"]:
+    if ranking in ["femslash", "annual"]:
         col_counter = 2
     else: col_counter = 1
 
@@ -127,7 +127,7 @@ def visualise_hottest_chars(input_dict:dict, ranking:str):
         column_width = [1.9,0.7,0.5,0.3,3]
         width = 1350
         height = 350
-    elif ranking == "overall":
+    elif ranking in ["overall","annual"]:
         colours = colour_palettes.blue_table
         column_width = [1.43,0.4,0.32,0.1,0.1,2.7,0.2]
         width = 1750
@@ -172,6 +172,9 @@ def visualise_hottest_chars(input_dict:dict, ranking:str):
             filepath = f"visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/hottest_sapphics_by_year/hottest_femslash_characters_{year}_2014_2023.png"
         elif ranking == "overall":
             filepath = f"visualisation/ao3_overall_rankings_2013_2023/ao3_overall_rankings_charts/overall_hottest_chars/hottest_overall_characters_{year}_2014_2023.png"
+        elif ranking == "annual":
+            filepath = f"visualisation/ao3_annual_rankings_2016_2023/ao3_annual_rankings_charts/annual_hottest_chars/hottest_annual_characters_{year}_2016_2023.png"
+
 
         fig.write_image(
             filepath,
@@ -216,11 +219,15 @@ def visualise_single_table(input_df:pd.DataFrame, ranking:str, data_case:str=Non
             top_number = 5
             num_of_years = 9
             rank_nos = ranks.top_10_list[:5]
-        elif ranking == "overall":
+        elif ranking in ["overall", "annual"]:
             column_width = [0.07, 1.1, 0.17]
             top_number = 10
             num_of_years = 10
-            rank_nos = ["1st","1st","1st","1st","1st","1st","7th","7th"] + ranks.top_10_list[8:]
+            if ranking == "overall":
+                rank_nos = ["1st","1st","1st","1st","1st","1st","7th","7th"] + ranks.top_10_list[8:]
+            elif ranking == "annual":
+                rank_nos = ["1st","1st","3rd", "3rd","5th","5th","7th","7th","7th","7th"]
+            else: rank_nos = ranks.top_10_list
         title = f"Longest running top {top_number} ships{suffix}"
         headers = ["rank", "ship", "streak"]
         values = [
@@ -241,7 +248,7 @@ def visualise_single_table(input_df:pd.DataFrame, ranking:str, data_case:str=Non
                 new_df["race_combo"],
                 new_df["rpf_or_fic"],
             ]
-        elif ranking == "overall":
+        elif ranking in ["overall", "annual"]:
             column_width = [0.1,1.6,0.45,0.3,0.45,0.2]
             headers = ["rank", "ship", "fandom", "gender combo", "race combo", "rpf or fic"]
             values = [
@@ -332,6 +339,7 @@ def visualise_single_table(input_df:pd.DataFrame, ranking:str, data_case:str=Non
                 "Glee",
                 "Overwatch"
             ]
+        else: notable_fandoms = []
 
         fandom_colours = []
         fandom_text_colours = []
@@ -439,7 +447,7 @@ def visualise_column_tables(input_dict:dict, data_case:str, ranking:str):
     # setting colours
     if ranking == "femslash":
         line_colour = colour_palettes.sapphic_table["lines"] # colour of lines
-    elif ranking == "overall":
+    elif ranking in ["overall", "annual"]:
         line_colour = colour_palettes.blue_table["lines"]
     body_fill_colour = colour_palettes.bg_colours[ranking][0]
 
