@@ -148,7 +148,7 @@ top_10_ships_fig = visualise_top_5(top_10_ships_dict, "pairings", "annual")
 top_10_ships_fig.write_image(
     "visualisation/ao3_annual_rankings_2016_2023/ao3_annual_rankings_charts/top_annual_ships_2016_2023.png", 
     width=2600, 
-    height=2000, 
+    height=1200, 
     scale=2
 )
 
@@ -188,7 +188,7 @@ most_popular_ships_fig.write_image(
 most_popular_demo_fig = visualise_pies(most_popular_ships_df, "most_popular_ships", "annual")
 most_popular_demo_fig.write_image(
     "visualisation/ao3_annual_rankings_2016_2023/ao3_annual_rankings_charts/most_popular_annual_ships_demo_2016_2023.png", 
-    width=1500, 
+    width=1600, 
     height=600, 
     scale=2
 )

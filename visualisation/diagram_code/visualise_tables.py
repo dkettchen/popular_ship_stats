@@ -46,7 +46,11 @@ def visualise_top_5(input_dict:dict, data_case:str, ranking:str):
         else:
             title = f"Top 10 ships by year{suffix}"
             rank_nos = ranks.top_10_list
-            column_width = [0.75,10.4,2.2,1.7,2.7]
+            if ranking == "overall":
+                column_width = [0.75,10.4,2.2,1.7,2.7]
+            elif ranking == "annual":
+                column_width = [0.75,9,2.2,1.7,2.7]
+
 
     fig = make_subplots_by_year(num_of_years, no_of_columns)
 
