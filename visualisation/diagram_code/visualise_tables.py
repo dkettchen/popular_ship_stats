@@ -133,9 +133,14 @@ def visualise_hottest_chars(input_dict:dict, ranking:str):
         height = 350
     elif ranking in ["overall","annual"]:
         colours = colour_palettes.blue_table
-        column_width = [1.43,0.4,0.32,0.1,0.1,2.7,0.2]
-        width = 1750
-        height = 500
+        if ranking == "overall":
+            column_width = [1.43,0.4,0.32,0.1,0.1,2.7,0.2]
+            width = 1750
+            height = 500
+        elif ranking == "annual":
+            column_width = [1.43,0.4,0.25,0.25,0.1,2.55,0.3]
+            width = 1900
+            height = 550
 
     line_colour = colours["lines"] # colour of lines
     header_fill_colour = colours["header"] # colour of header row
