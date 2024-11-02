@@ -136,7 +136,7 @@ top_5_fandoms_fig = visualise_top_5(top_5_fandoms_dict, "fandoms", "overall")
 top_5_fandoms_fig.write_image(
     "visualisation/ao3_overall_rankings_2013_2023/ao3_overall_rankings_charts/overall_top_fandoms_2013_2023.png",
     width=2000, 
-    height=500, 
+    height=550, 
     scale=2
 )
 
@@ -148,7 +148,7 @@ top_10_ships_fig = visualise_top_5(top_10_ships_dict, "pairings", "overall")
 top_10_ships_fig.write_image(
     "visualisation/ao3_overall_rankings_2013_2023/ao3_overall_rankings_charts/top_overall_ships_2013_2023.png", 
     width=2600, 
-    height=2000, 
+    height=1800, 
     scale=2
 )
 
@@ -158,7 +158,7 @@ top_ships_by_gender_combo_fig = visualise_column_tables(top_ships_by_gender_comb
 top_ships_by_gender_combo_fig.write_image(
     "visualisation/ao3_overall_rankings_2013_2023/ao3_overall_rankings_charts/top_overall_ships_by_gender_combo_2013_2023.png", 
     width=3300, 
-    height=2850, 
+    height=2900, 
     scale=2
 )
 
@@ -171,7 +171,7 @@ longest_running_fig = visualise_single_table(longest_running_top_5, "overall", "
 longest_running_fig.write_image(
     "visualisation/ao3_overall_rankings_2013_2023/ao3_overall_rankings_charts/longest_running_overall_ships_2013_2023.png", 
     width=950, 
-    height=450, 
+    height=500, 
     scale=2
 )
 
@@ -181,7 +181,7 @@ most_popular_ships_fig = visualise_single_table(most_popular_ships_df, "overall"
 most_popular_ships_fig.write_image(
     "visualisation/ao3_overall_rankings_2013_2023/ao3_overall_rankings_charts/most_popular_overall_ships_2013_2023.png", 
     width=1800, 
-    height=2400,  
+    height=2800,  
     scale=2
 )
 # make some pie charts too! about gender distr, race distr, rpf & fic ✅

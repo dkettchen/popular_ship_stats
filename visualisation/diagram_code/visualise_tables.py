@@ -59,7 +59,7 @@ def visualise_top_5(input_dict:dict, data_case:str, ranking:str):
     body_fill_colour = colours["body"] # colour of remaining rows
 
     row_counter = 1
-    if ranking in ["femslash", "annual"]:
+    if (ranking == "femslash" and data_case != "fandoms") or ranking == "annual":
         col_counter = 2
     else: col_counter = 1
 
@@ -132,13 +132,13 @@ def visualise_hottest_chars(input_dict:dict, ranking:str):
         colours = colour_palettes.sapphic_table
         column_width = [1.9,0.7,0.5,0.3,3]
         width = 1350
-        height = 350
+        height = 400
     elif ranking in ["overall","annual"]:
         colours = colour_palettes.blue_table
         if ranking == "overall":
             column_width = [1.43,0.4,0.32,0.1,0.1,2.7,0.2]
             width = 1750
-            height = 500
+            height = 600
         elif ranking == "annual":
             column_width = [1.43,0.4,0.25,0.25,0.1,2.55,0.3]
             width = 1900
@@ -196,7 +196,7 @@ def visualise_hottest_chars(input_dict:dict, ranking:str):
             scale=2
         )
 
-# make single table
+# make single table (doc string out of date -> TODO)
 def visualise_single_table(input_df:pd.DataFrame, ranking:str, data_case:str=None):
     """
     takes the output from 
