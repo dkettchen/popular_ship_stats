@@ -158,7 +158,7 @@ top_ships_by_gender_combo_fig = visualise_column_tables(top_ships_by_gender_comb
 top_ships_by_gender_combo_fig.write_image(
     "visualisation/ao3_annual_rankings_2016_2023/ao3_annual_rankings_charts/top_annual_ships_by_gender_combo_2016_2023.png", 
     width=3300, 
-    height=2850, 
+    height=2200, 
     scale=2
 )
 

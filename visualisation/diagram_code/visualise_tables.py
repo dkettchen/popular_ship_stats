@@ -468,7 +468,10 @@ def visualise_column_tables(input_dict:dict, data_case:str, ranking:str):
         ]
         ship_types = ["mlm", "wlw", "hets"]
         title = f"Top 10 ships by gender-combo by year{suffix}"
-        column_width = [0.2, 3.9, 0.9, 1.1]
+        if ranking == "overall":
+            column_width = [0.2, 3.9, 0.9, 1.1]
+        elif ranking == "annual":
+            column_width = [0.2, 3.5, 0.9, 1.1]
 
     # making subplots
     num_of_years = len(input_dict.keys())
