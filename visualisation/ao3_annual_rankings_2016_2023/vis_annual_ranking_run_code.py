@@ -148,7 +148,7 @@ top_10_ships_fig = visualise_top_5(top_10_ships_dict, "pairings", "annual")
 top_10_ships_fig.write_image(
     "visualisation/ao3_annual_rankings_2016_2023/ao3_annual_rankings_charts/top_annual_ships_2016_2023.png", 
     width=2600, 
-    height=1200, 
+    height=1300, 
     scale=2
 )
 
