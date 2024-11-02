@@ -90,12 +90,14 @@ def visualise_top_5(input_dict:dict, data_case:str, ranking:str):
                     align='left', # aligns header row text
                     line_color=line_colour,
                     fill_color=header_fill_colour,
+                    height=25
                 ),
                 cells=dict(
                     values=values, # values ordered by column
                     align='left', # aligns body text
                     line_color=line_colour,
                     fill_color=body_fill_colour,
+                    height=25
                 ),
                 columnwidth=column_width # sets column width ratios
             ),
@@ -140,7 +142,7 @@ def visualise_hottest_chars(input_dict:dict, ranking:str):
         elif ranking == "annual":
             column_width = [1.43,0.4,0.25,0.25,0.1,2.55,0.3]
             width = 1900
-            height = 550
+            height = 650
 
     line_colour = colours["lines"] # colour of lines
     header_fill_colour = colours["header"] # colour of header row
@@ -163,12 +165,14 @@ def visualise_hottest_chars(input_dict:dict, ranking:str):
                     align='left', # aligns header row text
                     line_color=line_colour,
                     fill_color=header_fill_colour,
+                    height=25
                 ),
                 cells=dict(
                     values=values, # values ordered by column
                     align='left', # aligns body text
                     line_color=line_colour,
                     fill_color=body_fill_colour,
+                    height=25
                 ),
                 columnwidth=column_width # sets column width ratios
             ),
@@ -426,14 +430,16 @@ def visualise_single_table(input_df:pd.DataFrame, ranking:str, data_case:str=Non
                 align='left', # aligns header row text
                 line_color=line_colour,
                 fill_color=header_fill_colour,
-                font_color="black"
+                font_color="black",
+                height=25
             ),
             cells=dict(
                 values=values, # values ordered by column
                 align='left', # aligns body text
                 line_color=line_colour,
                 fill_color=body_fill_colour,
-                font_color=text_colour
+                font_color=text_colour,
+                height=25
             ),
             columnwidth=column_width, # sets column width ratios
         ),
@@ -546,12 +552,14 @@ def visualise_column_tables(input_dict:dict, data_case:str, ranking:str):
                         line_color=line_colour,
                         fill_color=header_fill_colour,
                         font_color=header_font,
+                        height=25
                     ),
                     cells=dict(
                         values=values, # values ordered by column
                         align='left', # aligns body text
                         line_color=line_colour,
                         fill_color=body_fill_colour,
+                        height=25
                     ),
                     columnwidth=column_width # sets column width ratios
                 ),
