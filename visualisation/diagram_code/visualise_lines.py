@@ -111,12 +111,7 @@ def visualise_multi_lines(input_item:pd.DataFrame|dict, data_case:str, ranking:s
 
     suffix = lbls.suffixes[ranking]
     # setting bg colour
-    if ranking == "femslash":
-        bg_colour = colour_palettes.bg_colours["femslash"][0]
-    elif ranking == "overall":
-        bg_colour = colour_palettes.bg_colours["overall"][0]
-    else:
-        bg_colour = "white"
+    bg_colour = colour_palettes.bg_colours[ranking][0]
 
     # making years
     if type(input_item) == dict:
@@ -190,7 +185,7 @@ def visualise_multi_lines(input_item:pd.DataFrame|dict, data_case:str, ranking:s
         labels = list(new_df.index)
         if "M / M" in labels or "F / F" in labels:
             colours = [colour_palettes.gender_combo_dict[combo] for combo in labels]
-            bg_colour = colour_palettes.bg_colours["overall"][1] # darker one
+            bg_colour = colour_palettes.bg_colours[ranking][1] # darker one
             gender_or_combo = "gender combination"
         elif "M" in labels or "F" in labels:
             colours = [colour_palettes.gender_colours[gender] for gender in labels]
