@@ -282,11 +282,58 @@ def visualise_multi_lines(input_item:pd.DataFrame|dict, data_case:str, ranking:s
     # adding custom annotation for this case
     if ranking == "femslash" and data_case == "non_white_ships":
         fig.add_annotation(
-            x=["2020"], y=47,
-            xshift=50, # idk why it wouldn't just work with x="2020" but oh well
+            x=5, y=47,
             text="Single ship that <br>ranked 47th that year",
             showarrow=True,
             arrowhead=1
         )
+    elif ranking == "annual" and data_case == "minority_racial_groups":
+        # 2023 mena spike is caused by genshin
+            #Alhaitham x Kaveh, Cyno x Tighnari, Alhaitham & Kaveh -> 3 ships (well two technically)
+        # 2023 rest of asia spike is caused by kinnporsche -> also 3 ships
+        fig.add_annotation(
+            x=6, y=7,
+            axref="x",
+            ayref="y",
+            ax=5,
+            ay=8,
+            text="3 new SEA ships from Thai<br>BL drama KinnPorsche (2022)",
+            showarrow=True,
+            arrowhead=1
+        )
+        fig.add_annotation(
+            x=6, y=6,
+            axref="x",
+            ayref="y",
+            ax=4.6,
+            ay=6.8,
+            text="Alhaitam(x2), Kaveh(x2), Cyno,<br>& Tighnari from Genshin Impact",
+            showarrow=True,
+            arrowhead=1
+        )
+    elif ranking == "overall" and data_case == "minority_racial_groups":
+        # 2013 mena char is Nasir from Spartacus
+        # 2023 indig char is Edward Teach | Blackbeard from Our Flag Means Death (Taika Waititi)
+        fig.add_annotation(
+            x=9, y=1, # x needs to be an index if we don't have numeric axis
+            axref="x",
+            ayref="y",
+            ax=7.8,
+            ay=1.8,
+            text="Taika Waititi as<br>Blackbeard from<br>Our Flag Means Death",
+            showarrow=True,
+            arrowhead=1
+        )
+        fig.add_annotation(
+            x=0, y=1,
+            axref="x",
+            ayref="y",
+            ax=0.75,
+            ay=1.5,
+            text="Nasir from<br>Spartacus",
+            showarrow=True,
+            arrowhead=1
+        )
+
 
     return fig
