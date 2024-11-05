@@ -53,17 +53,6 @@ from visualisation.diagram_code.visualise_tables import (
 )
 # our many imports!
 
-
-# TODO: 
-# - refactor femslash version we copied for now ✅
-# - take any data functions out of the loop where possible ✅
-# - add implementation for overall ✅ & annual ✅ rankings too
-#   - custom heights for each ✅
-#   - adding items not visualised in femslash ✅
-#   - make sure only funcs used by that ranking are run before loops ✅
-# - fix filepaths of existing diagrams before running this 
-# bc I wanna see that it doesn't mess anything up
-
 def run_ao3_2013_2023_vis(input_rankings:list):
     """
     runs ao3 2013-2023 visualisation for all rankings in the input list
@@ -71,12 +60,17 @@ def run_ao3_2013_2023_vis(input_rankings:list):
     (currently implemented: "femslash")
 
     produces png files in the relevant folders
+
+    also prints logs about its progress 
+    (ie which ranking it's on, what portion of the code it's working on)
     """
 
     # iterating over all rankings
     for ranking in input_rankings:
+        print(f"Starting on {ranking} ranking")
 
         # setting up file path naming conventions
+        print(f"Making filepaths")
 
         # year ranges
         if ranking == "overall":
@@ -93,7 +87,7 @@ def run_ao3_2013_2023_vis(input_rankings:list):
         # chart's individual title goes inbetween
         suffix = f"_{year_range}.png"
 
-
+        print(f"Making input data")
         # input df prep: 
 
         ship_joined_df = make_joined_ranking_df(ranking)
@@ -111,6 +105,7 @@ def run_ao3_2013_2023_vis(input_rankings:list):
         # making a dict to collect figure info for file writing later
         stuff_to_visualise = {}
 
+        print(f"Making general data")
         ## general & intersectional stuff
 
         general_stuff = [
@@ -299,11 +294,12 @@ def run_ao3_2013_2023_vis(input_rankings:list):
                 "height": height,
             }
         
+        print(f"Writing files for Hottest {ranking} Characters")
         # the characters in the most (3+) ships each year
         hottest_characters = hottest_char(character_info_df, ranking)
         visualise_hottest_chars(hottest_characters, ranking) # writes its own files
 
-
+        print(f"Making gender data")
         ## gender stats (keeping categories separate for ease of finding, rather than 1 big loop)
 
         gender_stuff = [
@@ -402,7 +398,7 @@ def run_ao3_2013_2023_vis(input_rankings:list):
                 "height": height,
             }
 
-
+        print(f"Making race data")
         ## race stats
 
         race_stuff = [
@@ -629,7 +625,7 @@ def run_ao3_2013_2023_vis(input_rankings:list):
                 "height": height,
             }
 
-
+        print(f"Writing remaining {ranking} files")
         # writing files
         for item in stuff_to_visualise:
             figure_info = stuff_to_visualise[item]
@@ -640,3 +636,7 @@ def run_ao3_2013_2023_vis(input_rankings:list):
                 height = figure_info["height"], 
                 scale=2
             )
+        print(f"Completed {ranking} ranking")
+
+if __name__ == "__main__": # run all rankings!
+    run_ao3_2013_2023_vis(["femslash", "overall", "annual"])
