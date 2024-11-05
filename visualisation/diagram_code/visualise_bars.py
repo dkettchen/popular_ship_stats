@@ -9,8 +9,8 @@ from visualisation.vis_utils.make_colour_lookup import make_colour_lookup_racial
 
 def visualise_non_white_counts(input_df:pd.DataFrame, ranking:str):
     """
-    visualises the output from count_non_white_ships (ranking=(currently implemented:)"femslash") 
-    as a grouped bar chart
+    visualises the counts of ships with and without white and east asian characters
+    as a colour-coded, grouped bar chart
     """
     #making input case insensitive
     ranking = ranking.lower()
@@ -52,10 +52,13 @@ def visualise_non_white_counts(input_df:pd.DataFrame, ranking:str):
 # stacked bars
 def visualise_stacked_bars(input_item:pd.DataFrame, data_case:str, ranking:str):
     """
-    visualises output (ranking=(currently implemented:)"total") from 
-    - all_characters_racial_groups_df (data_case="minority_racial_groups")
-    - total_gender_combo_percent_df (data_case="gender_combos")
-    - total_gender_combo_percent_df (data_case="minority_gender_combos")
+    visualises 
+    - racial group counts excluding white, east asian, non-human, racially ambiguous 
+    and unknown characters (data_case="minority_racial_groups", ranking="total")
+    - gender combination counts grouped by mlm, wlw, non-same-sex, & ambiguous pairings
+    (data_case="gender_combos", ranking="total")
+    - gender combination counts excluding M/M, F/F, and M/F 
+    (data_case="minority_gender_combos", ranking="total")
 
     as grouped bar charts with 3 bars in each group
     """
@@ -223,9 +226,11 @@ def visualise_stacked_bars(input_item:pd.DataFrame, data_case:str, ranking:str):
 # grouped bars
 def visualise_3_grouped_bars(input_item:pd.DataFrame|pd.Series, data_case:str, ranking:str):
     """
-    visualises output (ranking=(currently implemented:)"total") from 
-    - total_gender_combos_srs (data_case="no_half_only")
-    - highest_of_this_type_df (data_case="top_fandoms")
+    visualises
+    - numbers of fandoms with no, only or over half of ships of each gender combo type 
+    (data_case="no_half_only", ranking="total")
+    - top 3 fandoms for ships of each gender combo type, with medal colours (gold, silver, bronze)
+    (data_case="top_fandoms", ranking="total")
 
     as grouped bar charts with 3 bars in each group
     """
@@ -349,11 +354,13 @@ def visualise_3_grouped_bars(input_item:pd.DataFrame|pd.Series, data_case:str, r
 # non stacked, non grouped bars
 def visualise_simple_bar(input_item:pd.DataFrame|pd.Series, data_case:str, ranking:str):
     """
-    visualises output (ranking=(currently implemented:)"total") from 
-    - highest_racial_diversity_df (data_case="racial_diversity")
-    - average_gender_combo_srs (data_case="average_ship_combo")
-    - non_white_ships_srs (data_case="non_white_ships")
-    - all_characters_gender_df (data_case="minority_genders")
+    visualises 
+    - top fandoms for most racial groups represented (data_case="racial_diversity", ranking="total")
+    - average amount of ships of each gender combo type in a fandom 
+    (data_case="average_ship_combo", ranking="total")
+    - ships with and without white and east asian characters 
+    (data_case="non_white_ships", ranking="total")
+    - characters' genders excluding "F" and "M" (data_case="minority_genders", ranking="total")
     
     as simple bar charts (not stacked or grouped)
     """
@@ -477,12 +484,12 @@ def visualise_simple_bar(input_item:pd.DataFrame|pd.Series, data_case:str, ranki
 # could refactor this with non white counts?
 def visualise_grouped_bars(input_item:dict, data_case:str, ranking:str):
     """
-    visualises (currently implemented:)
-    - gender combos (data_case="gender_combos", ranking="overall")
-    - minority gender combos (data_case="minority_gender_combos", ranking="overall")
-    - minority genders (data_case="minority_genders", ranking="overall"|"femslash")
-    - RPF by gender combo (data_case="rpf", ranking="overall"|"femslash")
-    - gen ships by gender combo (data_case="gen", ranking="overall")
+    visualises
+    - gender combos (data_case="gender_combos", ranking="overall"|"annual")
+    - minority gender combos (data_case="minority_gender_combos", ranking="overall"|"annual")
+    - minority genders (data_case="minority_genders", ranking="overall"|"femslash"|"annual")
+    - RPF by gender combo (data_case="rpf", ranking="overall"|"femslash"|"annual")
+    - general ships by gender combo (data_case="gen", ranking="overall"|"annual")
 
     as a grouped bar chart
     """

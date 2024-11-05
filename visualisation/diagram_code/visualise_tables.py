@@ -9,13 +9,15 @@ import visualisation.vis_utils.diagram_utils.labels as lbls
 from visualisation.vis_utils.rename_gender_combos import rename_gender_combos
 from visualisation.vis_utils.make_colour_lookup import make_colour_lookup_racial_groups, make_colour_lookup
 
-def visualise_top_5(input_dict:dict, data_case:str, ranking:str):
+def visualise_top_5(input_dict:dict, data_case:str, ranking:str): #TODO: fix naming cause can be 10
     """
-    takes the output (ranking=(currently implemented:)"femslash") from 
-    - top_5_ships (data_case="pairings"), 
-    - top_5_fandoms_by_year (data_case="fandoms")
+    visualises
+    - top pairings each year (data_case="pairings", ranking="femslash"|"overall"|"annual")
+        - if the ranking is femslash, it will be the top 5, otherwise it'll be the top 10
+    - top 5 fandoms by ship number and popularity each year 
+    (data_case="fandoms", ranking="femslash"|"overall"|"annual")
 
-    returns a multi-plot figure visualising the data contained in table format
+    as a multi-plot figure of tables
 
     the table will be in sapphic/lesbian flag colours if ranking is "femslash"
     """
@@ -50,7 +52,6 @@ def visualise_top_5(input_dict:dict, data_case:str, ranking:str):
                 column_width = [0.75,10.4,2.2,1.7,2.7]
             elif ranking == "annual":
                 column_width = [0.75,9,2.2,1.7,2.7]
-
 
     fig = make_subplots_by_year(num_of_years, no_of_columns)
 
@@ -117,10 +118,10 @@ def visualise_top_5(input_dict:dict, data_case:str, ranking:str):
 
 def visualise_hottest_chars(input_dict:dict, ranking:str):
     """
-    takes the output (ranking=(currently implemented:)"femslash") from hottest_char
+    takes the output from hottest_char
 
     creates png files visualising the data contained in table format 
-    for each year (ie a file per each year)
+    for each year (ie a file per each year) in a subfolder named as {ranking}_hottest_chars
 
     the table will be in sapphic/lesbian flag colours if ranking is "femslash"
     """
@@ -188,7 +189,6 @@ def visualise_hottest_chars(input_dict:dict, ranking:str):
         elif ranking == "annual":
             filepath = f"visualisation/ao3_annual_rankings_2016_2023/ao3_annual_rankings_charts/annual_hottest_chars/hottest_annual_characters_{year}_2016_2023.png"
 
-
         fig.write_image(
             filepath,
             width=width, 
@@ -196,14 +196,19 @@ def visualise_hottest_chars(input_dict:dict, ranking:str):
             scale=2
         )
 
-# make single table (doc string out of date -> TODO)
+# make single table
 def visualise_single_table(input_df:pd.DataFrame, ranking:str, data_case:str=None):
     """
-    takes the output from 
-    - longest_running_top_5_ships (ranking="femslash")
-    - make_hottest_char_df (ranking="total")
+    visualises
+    - hottest characters (ranking="total")
+    - longest running ships (data_case=longest_streak, ranking="femslash"|"overall"|"annual")
+        - in annual they're separated by streak & appearances as their numbers differ
+        - in femslash it's the top 5, otherwise it's the top 10
+    - top 100 most popular characters of all time (weighted by ranks) with colour coding 
+    for various demo info, fandoms, etc
+    (data_case=most_popular_characters, ranking="femslash"|"overall"|"annual")
 
-    returns a single table visualising the data contained
+    as a single table
 
     the table will be in sapphic/lesbian flag colours if ranking is "femslash"
 
@@ -464,13 +469,13 @@ def visualise_single_table(input_df:pd.DataFrame, ranking:str, data_case:str=Non
 # make columns of table plots with years number of rows
 def visualise_column_tables(input_dict:dict, data_case:str, ranking:str):
     """
-    takes a dict with year keys
+    visualises
+    - top 3 ships with and without white and east asian characters each year 
+    (data_case="non_white_ships", ranking="femslash"|"overall"|"annual")
+    - top 10 ships by gender combo each year 
+    (data_case="gender_combos", ranking="overall"|"annual")
 
-    returns multi-plot figure with columns of tables for each category and rows for each year
-    visualising the top 3 ships of each category each year
-
-    - data_case="non_white_ships", ranking="femslash"|"overall"
-    - data_case="gender_combos", ranking="overall"
+    as a multi-plot figure with columns of tables for each category and rows for each year
     """
     #making input case insensitive
     ranking = ranking.lower()

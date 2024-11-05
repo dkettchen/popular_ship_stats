@@ -9,10 +9,13 @@ from visualisation.vis_utils.diagram_utils.calculate_trendline import calculate_
 
 def visualise_line(input_item:dict|pd.Series, data_case:str, ranking:str):
     """
-    visualise the output (ranking=(currently implemented:)"femslash") from 
-    - total_multi_nos_by_year ("race" (data_case="multi_chars") 
-    & "race_combo" (data_case="multi_char_ships") version), 
-    - total_racial_groups (data_case="total_racial_groups")
+    visualises
+    - number of multiracial characters per year 
+    (data_case="multi_chars", ranking="femslash"|"overall"|"annual") 
+    - number of ships involving multiracial characters per year 
+    (data_case="multi_char_ships", ranking="femslash"|"overall"|"annual")
+    - number of racial groups represented per year 
+    (data_case="total_racial_groups", ranking="femslash"|"overall"|"annual")
     
     as single line charts
     """
@@ -99,11 +102,19 @@ def make_average_non_white_df(input_dict:dict): # util
 
 def visualise_multi_lines(input_item:pd.DataFrame|dict, data_case:str, ranking:str):
     """
-    visualise the output (ranking=(currently implemented:)"femslash") from 
-    - total_interracial_ratio (line for interracial, ambig, & non-interracial pairings)
-    - average_non_white_ranking (actual values + average line per each category)
-    - average_by_label (actual values + average line per each category)
-    
+    visualises
+    - the number of interracial, non interracial and ambiguous ships 
+    (data_case="interracial_ships", ranking="femslash"|"overall"|"annual")
+    - the average rank of ships with and without white and east asian characters, 
+    including an average line for each category 
+    (data_case="non_white_ships", ranking="femslash"|"overall"|"annual")
+    - the number of characters of racial group categories other than white, east asian, 
+    non-human, racially ambiguous or unknown each year, including trendlines for each category
+    (data_case="minority_racial_groups", ranking="femslash"|"overall"|"annual")
+    - the average ranking of ships of each gender or gender combo label each year, 
+    including an average line for each label
+    (data_case="average_by_label", ranking="overall"|"annual")
+
     as a line chart with multiple lines
     """
     #making input case insensitive

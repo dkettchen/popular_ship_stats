@@ -15,15 +15,19 @@ from visualisation.vis_utils.sort_race_combos import sort_race_combos
 def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str):
     """
     visualise 
-    - data_case="multi_chars", ranking="femslash"
-    - data_case="multi_char_ships", ranking="femslash"
-    - data_case="interracial_ships", ranking="femslash"
-    - data_case="rpf", ranking="femslash"|"overall"
-    - data_case="gender", ranking="femslash"|"overall"
-    - data_case="race", ranking="femslash"|"overall"
-    - data_case="race_combos", ranking="femslash"|"overall"
-    - data_case="fic_type", ranking="overall"
-    - data_case="gender_combos", ranking="overall"
+    - numbers of relevant data case per year:
+        - data_case="multi_chars", ranking="femslash"|"overall"|"annual"
+        - data_case="multi_char_ships", ranking="femslash"|"overall"|"annual"
+        - data_case="interracial_ships", ranking="femslash"|"overall"|"annual"
+        - data_case="rpf", ranking="femslash"|"overall"|"annual"
+        - data_case="gender", ranking="femslash"|"overall"|"annual"
+        - data_case="race", ranking="femslash"|"overall"|"annual"
+        - data_case="race_combos", ranking="femslash"|"overall"|"annual"
+        - data_case="fic_type", ranking="overall"|"annual"
+        - data_case="gender_combos", ranking="overall"|"annual"
+
+    - demographic data about the top 100 most popular ships of all time 
+    (data_case="most_popular_ships", ranking="femslash"|"overall"|"annual")
     
     as pie charts
     """
@@ -255,11 +259,13 @@ def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str):
 # leaving this one separate due to different sizing & more complicated colouring process
 def visualise_market_share_and_popularity(input_dict:dict, colour_lookup:dict, ranking:str):
     """
-    visualise the output (ranking=(currently implemented:)"femslash") from
-    - fandom_market_share_by_year 
-    - fandoms_popularity_by_year 
-    
+    visualise the most popular fandoms each year by number of ships 
+    (must contain column "no_of_ships" in every year's dataframe) or weighted by ranks 
+    (must contain column "rank_sum" in every year's dataframe value)
     as pie charts
+
+    fandom colour lookup dictionary can be made using make_colour_lookup helper from 
+    visualisation/vis_utils/make_colour_lookup.py
     """
     #making input case insensitive
     ranking = ranking.lower()
@@ -322,13 +328,14 @@ def visualise_market_share_and_popularity(input_dict:dict, colour_lookup:dict, r
 
 def visualise_single_pie(input_item:pd.DataFrame|pd.Series, data_case:str, ranking:str):
     """
-    visualise the output (ranking=(currently implemented:)"total") from 
-    - all_characters_gender_df (data_case="gender")
-    - all_characters_racial_groups_df (data_case="racial_groups")
-    - plural_vs_monoracial_fandoms_df (data_case="racial_diversity")
-    - fandom_market_share_srs (data_case="market_share")
-    - interracial_srs (data_case="interracial_ships")
-    - rpf_fic_df (data_case="rpf")
+    visualises
+    - characters' gender distribution (data_case="gender", ranking="total")
+    - racial groups (data_case="racial_groups", ranking="total")
+    - fandoms with only one or multiple racial groups (data_case="racial_diversity", ranking="total")
+    - fandoms with most ships (data_case="market_share", ranking="total")
+    - number of interracial, non-interracial and ambiguous pairings 
+    (data_case="interracial_ships", ranking="total")
+    - number of RPF and fictional ships (data_case="rpf", ranking="total")
     
     as a single pie chart
     """
