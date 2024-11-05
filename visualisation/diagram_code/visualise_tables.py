@@ -182,7 +182,7 @@ def visualise_hottest_chars(input_dict:dict, ranking:str):
         )
 
         if ranking == "femslash":
-            filepath = f"visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/hottest_sapphics_by_year/hottest_femslash_characters_{year}_2014_2023.png"
+            filepath = f"visualisation/ao3_femslash_rankings_2014_2023/ao3_femslash_rankings_charts/femslash_hottest_chars/hottest_femslash_characters_{year}_2014_2023.png"
         elif ranking == "overall":
             filepath = f"visualisation/ao3_overall_rankings_2013_2023/ao3_overall_rankings_charts/overall_hottest_chars/hottest_overall_characters_{year}_2014_2023.png"
         elif ranking == "annual":
