@@ -230,7 +230,7 @@ def run_ao3_2013_2023_vis(input_rankings:list):
                     width=950
                     height=500
                 elif ranking == "annual":
-                    width=950
+                    width=1800
                     height=500
             # all time top 100 most popular ships by summed, weighted rank numbers
             elif subject == "top_100_most_popular_ships":

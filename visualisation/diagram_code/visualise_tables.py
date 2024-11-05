@@ -227,27 +227,40 @@ def visualise_single_table(input_df:pd.DataFrame, ranking:str, data_case:str=Non
             new_df["no"],
         ]
     elif data_case == "longest_streak":
-        if ranking == "femslash":
-            column_width = [0.1, 0.95, 0.2]
-            top_number = 5
-            num_of_years = 9
-            rank_nos = ranks.top_10_list[:5]
-        elif ranking in ["overall", "annual"]:
-            column_width = [0.07, 1.1, 0.17]
-            top_number = 10
-            num_of_years = 10
-            if ranking == "overall":
+        if ranking in ["femslash", "overall"]: # both streak & appearances are the same numbers
+            if ranking == "femslash":
+                column_width = [0.1, 0.95, 0.2]
+                top_number = 5
+                num_of_years = 9
+                rank_nos = ranks.top_10_list[:5]
+            elif ranking == "overall":
                 rank_nos = ["1st","1st","1st","1st","1st","1st","7th","7th"] + ranks.top_10_list[8:]
-            elif ranking == "annual":
-                rank_nos = ["1st","1st","3rd", "3rd","5th","5th","7th","7th","7th","7th"]
-            else: rank_nos = ranks.top_10_list
+                column_width = [0.07, 1.1, 0.17]
+                top_number = 10
+                num_of_years = 10
+            headers = ["rank", "ship", "streak"]
+            values = [
+                rank_nos,
+                new_df[new_df.columns[2]], 
+                [f"{value}/{num_of_years} years" for value in new_df[new_df.columns[3]]],
+            ]
+        elif ranking == "annual": # numbers are different!
+            rank_nos_1 = ["1st","1st","3rd","3rd","5th","5th","7th","7th","7th","7th"]
+            rank_nos_2 = ["1st","2nd","2nd","4th","4th","4th","7th","7th","7th","7th"]
+            column_width = [0.1,1.3,0.2,0.1,1.3,0.2]
+            top_number = 10
+            num_of_years = 7
+            headers = ["rank", "ship (by most appearances)", "appearances", "rank", "ship (by longest streak)", "streak"]
+            values = [
+                rank_nos_1,
+                new_df[new_df.columns[0]], 
+                [f"{value}/{num_of_years} years" for value in new_df[new_df.columns[1]]],
+                rank_nos_2,
+                new_df[new_df.columns[2]], 
+                [f"{value}/{num_of_years} years" for value in new_df[new_df.columns[3]]],
+            ]
+
         title = f"Longest running top {top_number} ships{suffix}"
-        headers = ["rank", "ship", "streak"]
-        values = [
-            rank_nos,
-            new_df[new_df.columns[0]], 
-            [f"{value}/{num_of_years} years" for value in new_df[new_df.columns[1]]],
-        ]
     elif data_case == "most_popular_characters":
         new_df = new_df.head(100)
         title = f"Top 100 most popular ships of all time{suffix}"
