@@ -271,9 +271,9 @@ def visualise_multi_lines(input_item:pd.DataFrame|dict, data_case:str, ranking:s
 
         counter += 1
 
-    if data_case in ["non_white_ships", "average_by_label"]: # reversing y order for ranks
+    if data_case in ["non_white_ships", "average_by_label"]: # setting 0-100 range for ranks
         fig.update_layout(
-            yaxis_autorange = "reversed"
+            yaxis_range=[100, 1]
         )
     if data_case == "average_by_label" and gender_or_combo == "gender combination":
         fig.update_xaxes(showgrid=True, gridcolor='mediumturquoise')
