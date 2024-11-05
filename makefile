@@ -45,17 +45,17 @@ make-ao3-all-data-charts:
 
 # runs "ao3_femslash_rankings_2014_2023"'s vis file to (re)make diagrams
 make-ao3-femslash-charts:
-	python visualisation/ao3_femslash_rankings_2014_2023/vis_femslash_ranking_run_code.py
+	python visualisation/ao3_femslash_rankings_2014_2023/run_ao3_femslash_code.py
 
 # runs "ao3_overall_rankings_2013_2023"'s vis file to (re)make diagrams
 make-ao3-overall-charts:
-	python visualisation/ao3_overall_rankings_2013_2023/vis_overall_ranking_run_code.py
+	python visualisation/ao3_overall_rankings_2013_2023/run_ao3_overall_code.py
 
 # runs "ao3_annual_rankings_2016_2023"'s vis file to (re)make diagrams
 make-ao3-annual-charts:
-	python visualisation/ao3_annual_rankings_2016_2023/vis_annual_ranking_run_code.py
+	python visualisation/ao3_annual_rankings_2016_2023/run_ao3_annual_code.py
 
 
-# runs all vis files
+# runs ao3 vis for femslash, overall and annual rankings
 make-ao3-charts:
-	make make-ao3-all-data-charts make-ao3-femslash-charts make-ao3-overall-charts make-ao3_annual_rankings_2016_2023
+	python visualisation/run_visualisation.py
