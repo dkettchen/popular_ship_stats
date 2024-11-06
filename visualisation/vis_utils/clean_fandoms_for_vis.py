@@ -47,25 +47,19 @@ def clean_fandoms(input_list_or_array):
     }
 
     for fandom in list(input_list_or_array):
-        if " | " in fandom:
+        if " | " in fandom: # remove translation first
             new_fandom = remove_translation(fandom)
-            new_fandom = iterate_cases_and_replace(
-                new_fandom, 
-                list(lookup_dict.keys()), 
-                list(lookup_dict.values())
-            )
-        elif "Universe" in fandom and fandom != "Steven Universe":
+        elif "Universe" in fandom and fandom != "Steven Universe": # remove universe
             new_fandom = fandom[:-9]
-            new_fandom = iterate_cases_and_replace(
-                new_fandom, 
-                list(lookup_dict.keys()), 
-                list(lookup_dict.values())
-            )
-        else: new_fandom = iterate_cases_and_replace(
-            fandom, 
+        else: new_fandom = fandom
+
+        # then we replace relevant fandoms with short forms
+        new_fandom = iterate_cases_and_replace(
+            new_fandom, 
             list(lookup_dict.keys()), 
             list(lookup_dict.values())
         )
+        
         fandoms.append(new_fandom)
 
     return fandoms
