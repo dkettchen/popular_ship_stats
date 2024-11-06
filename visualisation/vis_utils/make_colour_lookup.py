@@ -12,99 +12,109 @@ def make_colour_lookup(input_df:DataFrame): # for fandoms
 
     all_fandoms = sorted(list(input_df["fandom"].unique()))
 
+    # making base colours
+    colours = []
+    for _ in range(18):
+        colours += px.colors.qualitative.Bold
+
+    # making colour lookup
     colour_lookup = {}
-    colours = px.colors.qualitative.Bold + px.colors.qualitative.Bold + \
-        px.colors.qualitative.Bold + px.colors.qualitative.Bold + \
-        px.colors.qualitative.Bold + px.colors.qualitative.Bold + \
-        px.colors.qualitative.Bold + px.colors.qualitative.Bold + \
-        px.colors.qualitative.Bold + px.colors.qualitative.Bold + \
-        px.colors.qualitative.Bold + px.colors.qualitative.Bold + \
-        px.colors.qualitative.Bold + px.colors.qualitative.Bold + \
-        px.colors.qualitative.Bold + px.colors.qualitative.Bold + \
-        px.colors.qualitative.Bold + px.colors.qualitative.Bold
-    
+
+    # assigning base colours
     colour_counter = 0
     for fandom in all_fandoms:
         colour_lookup[fandom] = colours[colour_counter]
         colour_counter += 1
-    colour_lookup["Marvel"] = "crimson"
-    colour_lookup["DC"] = "dodgerblue"
-    colour_lookup["Harry Potter Universe"] = "green"
-    colour_lookup["Homestuck"] = "orange"
-    colour_lookup["Genshin Impact | 原神"] = "gold"
-    colour_lookup["Steven Universe"] = "deeppink"
-    colour_lookup["Once Upon a Time"] = "steelblue"
-    colour_lookup["Avatar: The last Airbender Universe"] = "tomato"
-    colour_lookup["Teen Wolf"] = "darkslateblue"
-    colour_lookup["Buffy Universe"] = "goldenrod"
-    colour_lookup["RWBY"] = "darkred"
-    colour_lookup["Vampire Diaries Universe"] = "darkmagenta"
-    colour_lookup["Stranger Things"] = "red"
-    colour_lookup["Amphibia"] = "lightgreen"
-    colour_lookup["Women's Soccer"] = "black"
-    colour_lookup["Doctor Who"] = "blue"
-    colour_lookup["Frozen"] = "paleturquoise"
-    colour_lookup["Carmilla"] = "red"
-    colour_lookup["Bangtan Boys / BTS"] = "violet"
-    colour_lookup["Star Trek"] = "skyblue"
-    colour_lookup["My Hero Academia | 僕のヒーローアカデミア"] = "seagreen"
-    colour_lookup["Supernatural"] = "chocolate"
-    colour_lookup["Haikyuu!! | ハイキュー!!"] = "darkorange"
-    colour_lookup["Star Wars"] = "black"
-    colour_lookup["Youtube"] = "red"
-    colour_lookup["One Direction"] = "mediumorchid"
-    colour_lookup["Good Omens"] = "lemonchiffon"
-    colour_lookup["Voltron"] = "darkturquoise"
-    colour_lookup["Dragon Age"] = "cadetblue"
-    colour_lookup["Yuri!!! on ICE | ユーリ!!! on ICE"] = "mediumblue"
-    colour_lookup["Sherlock"] = "midnightblue"
-    colour_lookup["Stargate"] = "deepskyblue"
-    colour_lookup["Free!"] = "aqua"
-    colour_lookup["Merlin"] = "firebrick"
-    colour_lookup["Lord of the Rings Universe"] = "olivedrab"
-    colour_lookup["The 100"] = "darkkhaki"
-    colour_lookup["Glee"] = "yellow"
-    colour_lookup["Adam Lambert"] = "silver"
-    colour_lookup["A Song of Ice and Fire / Game of Thrones Universe"] = "dimgrey"
-    colour_lookup["Miraculous: Tales of Ladybug & Cat Noir | Miraculous: Les Aventures de Ladybug et Chat Noir"] = "orangered"
-    colour_lookup["Grandmaster of Demonic Cultivation / The Untamed | 魔道祖师 / 陈情令"] = "aliceblue"
-    colour_lookup[""] = ""
-
+    
+    # assigning specific fandom colours
+    specified_fandoms_lookup = {
+        "Marvel":"crimson",
+        "DC":"dodgerblue",
+        "Harry Potter Universe":"green",
+        "Homestuck":"orange",
+        "Genshin Impact | 原神":"gold",
+        "Steven Universe":"deeppink",
+        "Once Upon a Time":"steelblue",
+        "Avatar: The last Airbender Universe":"tomato",
+        "Teen Wolf":"darkslateblue",
+        "Buffy Universe":"goldenrod",
+        "RWBY":"darkred",
+        "Vampire Diaries Universe":"darkmagenta",
+        "Stranger Things":"red",
+        "Amphibia":"lightgreen",
+        "Women's Soccer":"black",
+        "Doctor Who":"blue",
+        "Frozen":"paleturquoise",
+        "Carmilla":"red",
+        "Bangtan Boys / BTS":"violet",
+        "Star Trek":"skyblue",
+        "My Hero Academia | 僕のヒーローアカデミア":"seagreen",
+        "Supernatural":"chocolate",
+        "Haikyuu!! | ハイキュー!!":"darkorange",
+        "Star Wars":"black",
+        "Youtube":"red",
+        "One Direction":"mediumorchid",
+        "Good Omens":"lemonchiffon",
+        "Voltron":"darkturquoise",
+        "Dragon Age":"cadetblue",
+        "Yuri!!! on ICE | ユーリ!!! on ICE":"mediumblue",
+        "Sherlock":"midnightblue",
+        "Stargate":"deepskyblue",
+        "Free!":"aqua",
+        "Merlin":"firebrick",
+        "Lord of the Rings Universe":"olivedrab",
+        "The 100":"darkkhaki",
+        "Glee":"yellow",
+        "Adam Lambert":"silver",
+        "A Song of Ice and Fire / Game of Thrones Universe":"dimgrey",
+        "Miraculous: Tales of Ladybug & Cat Noir | Miraculous: Les Aventures de Ladybug et Chat Noir":"orangered",
+        "Grandmaster of Demonic Cultivation / The Untamed | 魔道祖师 / 陈情令":"aliceblue",
+    }
+    for fandom in specified_fandoms_lookup:
+        colour_lookup[fandom] = specified_fandoms_lookup[fandom]
 
     return colour_lookup
 
 def make_colour_lookup_racial_groups():
+    """
+    returns a dictionary with keys of all racial groups from the characters file 
+    (output from make_characters_df) and colour values assigned to each
+    """
     character_df = make_characters_df()
     all_racial_groups = sorted(get_unique_values_list(character_df, "race"))
-
-    base_colours = px.colors.qualitative.Pastel + px.colors.qualitative.Prism + \
-    px.colors.qualitative.Vivid + px.colors.qualitative.Bold
 
     look_up = {}
 
     # making certain groups specific colours
-    look_up["White"] = "deepskyblue"
-    look_up["White (Multi)"] = "lightseagreen"
-    look_up["E Asian"] = "yellowgreen"
-    look_up["E Asian (Multi)"] = "mediumseagreen"
-    look_up["Latin"] = "hotpink"
-    look_up["Latin (Multi)"] = "pink"
-    look_up["Af Lat"] = "mediumvioletred"
-    look_up["Māori Ind"] = "firebrick"
-    look_up["Māori Ind (Multi)"] = "darkred"
-    look_up["Black"] = "rebeccapurple"
-    look_up["Black (Multi)"] = "mediumpurple"
-    look_up["MENA"] = "darkorange"
-    look_up["MENA (Multi)"] = "orange"
-    look_up["Ambig"] = "gold"
-    look_up["N.H."] = "orangered"
-    look_up["SE Asian"] = "darkolivegreen"
-    look_up["SE Asian (Multi)"] = "olive"
-    look_up["S Asian"] = "seagreen"
-    look_up["S Asian (Multi)"] = "olivedrab"
-    look_up["Central As"] = "darkgreen"
-    look_up["Unknown"] = "slategrey"
+    specific_groups_lookup = {
+        "White":"deepskyblue",
+        "White (Multi)":"lightseagreen",
+        "E Asian":"yellowgreen",
+        "E Asian (Multi)":"mediumseagreen",
+        "Latin":"hotpink",
+        "Latin (Multi)":"pink",
+        "Af Lat":"mediumvioletred",
+        "Māori Ind":"firebrick",
+        "Māori Ind (Multi)":"darkred",
+        "Black":"rebeccapurple",
+        "Black (Multi)":"mediumpurple",
+        "MENA":"darkorange",
+        "MENA (Multi)":"orange",
+        "Ambig":"gold",
+        "N.H.":"orangered",
+        "SE Asian":"darkolivegreen",
+        "SE Asian (Multi)":"olive",
+        "S Asian":"seagreen",
+        "S Asian (Multi)":"olivedrab",
+        "Central As":"darkgreen",
+        "Unknown":"slategrey",
+    }
+    for group in specific_groups_lookup:
+        look_up[group] = specific_groups_lookup[group]
 
+    # make remaining groups base colours
+    base_colours = px.colors.qualitative.Pastel + px.colors.qualitative.Prism + \
+    px.colors.qualitative.Vivid + px.colors.qualitative.Bold
     counter = 0
     for item in all_racial_groups:
         if item not in look_up.keys():
