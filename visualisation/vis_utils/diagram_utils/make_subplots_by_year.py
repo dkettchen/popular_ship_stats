@@ -7,11 +7,13 @@ def make_subplots_by_year(num_of_years:int, num_of_columns:int=False, by_years:b
     (currently implemented:)
     - 3x3 grid for 9 years (type: domain)
     - 2x5 grid for 10 years (type: domain)
+    - 2x4 grid for 7 & 8 years (type: domain)
     - if num_of_columns provided: 
         if by_years is True:
         - num_of_years x num_of_columns grid (type: table)
         otherwise:
         - num_of_years/num_of_columns (rounded up) x num_of_columns grid (type: table)
+        - either way the spacing between plots will be reduced to 0.01
     """
 
     if num_of_columns and not by_years: # if we want to distribute the years across custom column num
