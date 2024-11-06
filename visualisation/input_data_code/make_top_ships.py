@@ -145,8 +145,10 @@ def longest_running_top_ships(appearances:pd.DataFrame, streaks:pd.DataFrame, ra
     """
     takes the output of count_appearances and count_streaks
 
-    returns a dataframe with the top 5 ships for most appearances and longest streak, 
+    returns a dataframe with the top ships for most appearances and longest streak, 
     including their respective numbers
+
+    if the ranking is femslash it returns the top 5, otherwise it'll be the top 10
     """
     if ranking == "femslash":
         number = 5
