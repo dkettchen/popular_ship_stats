@@ -281,7 +281,7 @@ def run_ao3_2013_2023_vis(input_rankings:list):
                     figure = visualise_column_tables(top_ships_by_gender_combo, "gender_combos", ranking)
                     if ranking == "overall":
                         width=3300
-                        height=2900
+                        height=3300
                     elif ranking == "annual":
                         width=3300
                         height=2500
