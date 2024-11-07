@@ -58,7 +58,7 @@ This is the RPF to non-RPF ratio for each year.
 
 ![alt text](ao3_femslash_rankings_charts/femslash_rpf_2014_2023.png)
 
-The femslash ranking has a lower rate of RPF (<5%) than our [overall figure](../ao3_all_data_2013_2023/ao3_all_data_charts/all_ao3_ranked_ships_rpf_vs_fic_2013_2023.png) showed (13%), likely indicating a significantly higher number of RPF ships in the general ranking/among M/M ships. 
+The femslash ranking has a lower rate of RPF (<5%) than our [total figure](../ao3_all_data_2013_2023/ao3_all_data_charts/all_ao3_ranked_ships_rpf_vs_fic_2013_2023.png) showed (13%), likely indicating a significantly higher number of RPF ships in the general ranking/among M/M ships. 
 
 The femslash RPF ships in question were two music related ships (Red Velvet and Fifth Harmony), two drag queen ships and four Women's Soccer ones. 
 ![alt text](ao3_femslash_rankings_charts/femslash_rpf_by_gender_combo_2014_2023.png)
@@ -141,7 +141,7 @@ This is the number of ships involving at least one white character, involving at
 
 ![alt text](ao3_femslash_rankings_charts/femslash_race_stats/femslash_non_white_distr_2014_2023.png)
 
-The ratios are similarly dreadful as in the overall analysis, but east asian involved ships have pretty steadily grown in number over the years.
+The ratios are similarly dreadful as in the total analysis, but east asian involved ships have pretty steadily grown in number over the years.
 
 This figure shows the average rank that each category had each year.
 
