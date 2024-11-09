@@ -59,3 +59,7 @@ make-ao3-annual-charts:
 # runs ao3 vis for femslash, overall and annual rankings
 make-ao3-charts:
 	python visualisation/run_visualisation.py
+
+# make fandoms table with additional fandom data
+run-fandoms-table:
+	python src/additional_data_fandoms/make_fandoms_table.py
