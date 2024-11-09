@@ -58,9 +58,9 @@ fandom_instances = { # putting outside of functions to access in multiple!
             ("Black Panther: Wakanda Forever", 2022),
 
             # MCU phase 5 (only until 2023 bc that's out data range for now)
-            ("Ant-Man and the Wasp: Quantumania", 2023)
-            ("Guardians of the Galaxy Vol. 3", 2023)
-            ("The Marvels", 2023)
+            ("Ant-Man and the Wasp: Quantumania", 2023),
+            ("Guardians of the Galaxy Vol. 3", 2023),
+            ("The Marvels", 2023),
         ],
         "shows" : [
             # ABC shows
@@ -141,12 +141,12 @@ fandom_instances = { # putting outside of functions to access in multiple!
             ("Aquaman and the Lost Kingdom",2023),
         ],
         "shows" : [
-            ("Arrow",2012,2020)
-            ("The Flash",2014,2023)
-            ("Supergirl",2015,2021)
-            ("Legends of Tomorrow",2016,2022)
-            ("Black Lightning",2018,2021)
-            ("Batwoman",2019,2022)
+            ("Arrow",2012,2020),
+            ("The Flash",2014,2023),
+            ("Supergirl",2015,2021),
+            ("Legends of Tomorrow",2016,2022),
+            ("Black Lightning",2018,2021),
+            ("Batwoman",2019,2022),
         ],
         # add animations & comics later too?
         "other_stuff" : [
@@ -260,9 +260,9 @@ def add_instances(input_list):
 
 def add_remaining_dates(input_list): #TODO
 
-    pass
+    return input_list
 
 def add_media_types(input_list): #TODO
 
-    pass
+    return input_list
 
