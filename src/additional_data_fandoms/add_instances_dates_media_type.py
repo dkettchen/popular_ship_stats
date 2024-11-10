@@ -1,6 +1,10 @@
 from visualisation.input_data_code.make_file_dfs import make_characters_df
 from copy import deepcopy
 
+# TODO: (here)
+# genre!!
+# author too where applicable
+
 fandom_instances = { # putting outside of functions to access in multiple!
     "Harry Potter Universe" : [
         # separating by franchises/media types not individual movies
@@ -175,9 +179,17 @@ fandom_instances = { # putting outside of functions to access in multiple!
             ("Rebels",2014,2018), # animated series
         ],
     },
+    "Figure Skating": [
+        'Boyang Jin', # chinese
+        'Yuzuru Hanyu', # japanese
+    ],
+    "Hockey": [
+        'Jonathan Toews', # canadian
+        'Patrick Kane', # american
+    ],
 }
 
-def add_instances(input_list):
+def add_instances_and_dates(input_list):
     """
     takes a list of dicts with at least a "fandom" key
 
@@ -197,7 +209,7 @@ def add_instances(input_list):
 
         if fandom == "Youtube": # bc they're from diff countries etc
             char_df = make_characters_df()
-            youtube_df = char_df.where(char_df["fandom"] == "Youtube").dropna()
+            youtube_df = char_df.where(char_df["fandom"] == "Youtube").dropna(how="all")
             youtuber_list = sorted(list(youtube_df["full_name"]))
 
             for youtuber in youtuber_list:
@@ -251,6 +263,12 @@ def add_instances(input_list):
                     
                     new_list.append(new_dict)
 
+        elif fandom in ["Figure Skating","Hockey"]: # RPF where ppl are from diff countries
+            for real_human in instance_list:
+                new_dict = deepcopy(fandom_dict)
+                new_dict["instance"] = real_human
+                new_list.append(new_dict)
+
         # check what other stuff may need instances!
 
         else: # if no instances need to be added, we add unchanged dict
@@ -258,9 +276,6 @@ def add_instances(input_list):
 
     return new_list
 
-def add_remaining_dates(input_list): #TODO
-
-    return input_list
 
 def add_media_types(input_list): #TODO
 
