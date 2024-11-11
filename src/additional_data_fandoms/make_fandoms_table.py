@@ -14,10 +14,7 @@ final_fandoms_list = add_countries_of_origin_and_languages(with_media_types)
 # need to make a list of lists, not list of dicts!
 key_list = [
     "fandom",
-    #"instance",
     "media_type",
-    #"start_date",
-    #"end_date",
     "country_of_origin",
     "original_language"
 ]
