@@ -124,7 +124,6 @@ british_fandoms = [
     "Harry Potter Universe",
     "Heartstopper",
     "Lord of the Rings Universe",
-    "One Direction",
     "Sherlock",
     "Holby City", # british
     "James Bond Universe", # british
@@ -231,7 +230,7 @@ other_fandoms = {
         # but under square enix which is japanese?? & has branches across several continents so uh
     "Les Misérables": "France / UK / USA", # technically french??? but the movie wasn't??? movie is us-uk
     "Carol": "UK / USA", # UK and US, original story is american, we'll go with that I guess
-
+    "One Direction": "Ireland / UK", # NIALL IS IRISH APPARENTLY
 }
 
 real_human_americans = [
@@ -318,6 +317,7 @@ def add_countries_of_origin_and_languages(input_list):
         ] \
         or fandom in ["Life Is Strange", "All For The Game"] \
         or "USA" in fandom_dict["country_of_origin"] \
+        or "UK" in fandom_dict["country_of_origin"] \
         or fandom_dict["instance"] in ["Alexis 'Alex' Maldonado | Quackity"]:
             fandom_dict["original_language"] = "English"
         elif fandom_dict["country_of_origin"] == "China":
