@@ -21,10 +21,7 @@ def make_unique_fandom_list():
         # make a dict w relevant keys
         new_dict = {
             "fandom": fandom,
-            "instance": None, 
             "media_type": None,
-            "start_date": None,
-            "end_date": None,
             "country_of_origin": None,
             "original_language": None,
         }
