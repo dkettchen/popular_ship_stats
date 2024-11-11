@@ -1,23 +1,7 @@
 from visualisation.input_data_code.make_file_dfs import make_characters_df
 from copy import deepcopy
 
-# TODO: (here)
-# genre!!
-# author too where applicable
-
-# TODO (fixing things in labels)
-    # "Chilling Adventures of Sabrina" : [ # THIS IS FUCKING ARCHIE COMICS COMBINE WITH RIVERDALE AAAHHH
-        #     # animated show
-        #     # live action show??
-        # here's source for looking up https://en.wikipedia.org/wiki/Sabrina_Spellman
-        # ],
-        # "Riverdale",
-    # danganronpa should be one word no???
-    # torchwood add to dr who
-    # word of honor title needs addition
-
-
-fandom_instances = { # putting outside of functions to access in multiple!
+fandom_instances = {
     "Harry Potter Universe" : [
         # separating by franchises/media types not individual movies
             # cause main media is pre-2013 and fantastic beasts is barely in the ranking
@@ -792,18 +776,3 @@ def add_instances_and_dates(input_list):
             new_list.append(fandom_dict)
 
     return new_list
-
-
-movies = []
-animated_movies = []
-TV_shows = []
-animated_shows = []
-musicals = []
-comic_books = []
-books = []
-# get rpf categories from file when we did that before!
-
-def add_media_types(input_list): #TODO
-
-    return input_list
-

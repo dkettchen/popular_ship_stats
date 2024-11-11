@@ -1,5 +1,5 @@
 from prep_unique_fandoms import make_unique_fandom_list
-from add_instances_dates_media_type import add_instances_and_dates, add_media_types
+from add_media_types import add_media_types
 from add_countries_and_languages import add_countries_of_origin_and_languages
 from src.util_functions.write_csv_file import make_csv_file
 from prep_for_csv import list_of_dicts_to_list_of_lists
