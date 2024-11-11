@@ -7,17 +7,17 @@ from prep_for_csv import list_of_dicts_to_list_of_lists
 # run maker code
 fandoms_list = make_unique_fandom_list()
 
-with_instances = add_instances_and_dates(fandoms_list)
-with_media_types = add_media_types(with_instances)
+# with_instances = add_instances_and_dates(fandoms_list)
+with_media_types = add_media_types(fandoms_list)
 final_fandoms_list = add_countries_of_origin_and_languages(with_media_types)
 
 # need to make a list of lists, not list of dicts!
 key_list = [
     "fandom",
-    "instance",
+    #"instance",
     "media_type",
-    "start_date",
-    "end_date",
+    #"start_date",
+    #"end_date",
     "country_of_origin",
     "original_language"
 ]

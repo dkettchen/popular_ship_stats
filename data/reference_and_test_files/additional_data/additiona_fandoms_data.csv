@@ -1,434 +1,211 @@
-fandom,instance,media_type,start_date,end_date,country_of_origin,original_language
-5 Seconds of Summer,None,None,2011,current,Australia,English
-9-1-1,None,None,2018,2018,USA,English
-A Song of Ice and Fire / Game of Thrones Universe,A Song of Ice and Fire (books),None,1996,current,USA,English
-A Song of Ice and Fire / Game of Thrones Universe,Game of Thrones,None,2011,2019,USA,English
-A Song of Ice and Fire / Game of Thrones Universe,House of the Dragon,None,2022,current,USA,English
-Adam Lambert,None,None,2009,current,USA,English
-Addam's Family Universe,Wednesday,None,2022,current,USA,English
-Adventure Time,None,None,2010,2010,USA,English
-All For The Game,None,None,2013,2013,Unknown,English
-American Horror Story,None,None,2011,2011,USA,English
-Amphibia,None,None,2019,2019,USA,English
-Arcane,None,None,2021,2021,France / USA,English
-Attack on Titan | 進撃の巨人,manga,None,2009,2021,Japan,Japanese
-Attack on Titan | 進撃の巨人,anime,None,2013,2023,Japan,Japanese
-Avatar: The last Airbender Universe,Avatar: The last Airbender,None,2005,2008,USA,English
-Avatar: The last Airbender Universe,The Legend of Korra,None,2012,2014,USA,English
-BLUELOCK | ブルーロック,manga,None,2018,current,Japan,Japanese
-BLUELOCK | ブルーロック,anime,None,2022,current,Japan,Japanese
-Bangtan Boys / BTS,None,None,2010,current,South Korea,Korean
-Battlestar Galactica,None,None,2004,2004,USA,English
-Be More Chill,book,None,2004,2004,USA,English
-Be More Chill,musical,None,2015,current,USA,English
-Bridgerton,books,None,2000,2006,USA,English
-Bridgerton,show,None,2020,current,USA,English
-Buffy Universe,Buffy the Vampire Slayer,None,1997,2003,USA,English
-Buffy Universe,Angel,None,1999,2004,USA,English
-Bungou Stray Dogs | 文豪ストレイドッグス,manga,None,2012,current,Japan,Japanese
-Bungou Stray Dogs | 文豪ストレイドッグス,anime,None,2016,current,Japan,Japanese
-Call of Duty,None,None,2003,2003,USA,English
-Carmilla,book,None,1872,1872,Canada,English
-Carmilla,web series,None,2014,2016,Canada,English
-Carol,The Price of Salt,None,1952,1952,UK / USA,English
-Carol,Carol,None,2015,2015,UK / USA,English
-Carry On,None,None,2015,2015,USA,English
-Castle,None,None,2009,2009,USA,English
-Check Please!,None,None,2013,2013,USA,English
-Chilling Adventures of Sabrina,None,None,None,None,USA,English
-Criminal Minds,None,None,2005,2005,USA,English
-Critical Role,None,None,2015,2015,USA,English
-DC,Man of Steel,None,2013,2013,USA,English
-DC,Batman v Superman: Dawn of Justice,None,2016,2016,USA,English
-DC,Suicide Squad,None,2016,2016,USA,English
-DC,Wonder Woman,None,2017,2017,USA,English
-DC,Justice League,None,2017,2017,USA,English
-DC,Aquaman,None,2018,2018,USA,English
-DC,Shazam!,None,2019,2019,USA,English
-DC,Joker,None,2019,2019,USA,English
-DC,Birds of Prey,None,2020,2020,USA,English
-DC,Wonder Woman 1984,None,2020,2020,USA,English
-DC,The Suicide Squad,None,2021,2021,USA,English
-DC,The Batman,None,2022,2022,USA,English
-DC,Batgirl,None,2022,2022,USA,English
-DC,Black Adam,None,2022,2022,USA,English
-DC,Shazam! Fury of the Gods,None,2023,2023,USA,English
-DC,The Flash,None,2023,2023,USA,English
-DC,Blue Beetle,None,2023,2023,USA,English
-DC,Aquaman and the Lost Kingdom,None,2023,2023,USA,English
-DC,Arrow,None,2012,2020,USA,English
-DC,The Flash,None,2014,2023,USA,English
-DC,Supergirl,None,2015,2021,USA,English
-DC,Legends of Tomorrow,None,2016,2022,USA,English
-DC,Black Lightning,None,2018,2021,USA,English
-DC,Batwoman,None,2019,2022,USA,English
-DC,Detective Comics (overall),None,1937,current,USA,English
-DC,DC movies (overall),None,1951,current,USA,English
-DC,DCEU (overall),None,2013,current,USA,English
-DC,The Lego Batman Movie,None,2017,2017,USA,English
-DC,The Dark Knight trilogy (Nolan movies),None,2005,2012,USA,English
-Dangan Ronpa,Danganronpa: Trigger Happy Havoc,None,2010,2010,Japan,Japanese
-Dangan Ronpa,Danganronpa 2: Goodbye Despair,None,2012,2012,Japan,Japanese
-Dangan Ronpa,Danganronpa V3: Killing Harmony,None,2017,2017,Japan,Japanese
-Descendants,None,None,2015,2015,USA,English
-Detroit: Become Human,None,None,2018,2018,France / USA,English
-Doctor Who,`Doctor Who (original series, Doctors 1-7)`,None,1963,1989,UK,English
-Doctor Who,`Doctor Who (movie, 8th Doctor)`,None,1996,1996,UK,English
-Doctor Who,Ninth Doctor,None,2005,2005,UK,English
-Doctor Who,Tenth Doctor,None,2005,2010,UK,English
-Doctor Who,Eleventh Doctor,None,2010,2013,UK,English
-Doctor Who,Twelfth Doctor,None,2014,2017,UK,English
-Doctor Who,Thirteenth Doctor,None,2018,2022,UK,English
-Doctor Who,Fourteenth Doctor,None,2023,2023,UK,English
-Doctor Who,Fifteenth Doctor,None,2023,current,UK,English
-Doctor Who,Torchwood,None,2006,2011,UK,English
-Drag,RuPaul's Drag Race (US),None,2009,current,USA,English
-Drag,RuPaul's Drag Race UK,None,2019,current,USA,English
-Dragon Age,Dragon Age: Origins,None,2009,2009,Canada,English
-Dragon Age,Dragon Age II,None,2011,2011,Canada,English
-Dragon Age,Dragon Age: Inquisition,None,2014,2014,Canada,English
-Due South,None,None,1994,1994,Canada,English
-EXO,None,None,2012,current,South Korea,Korean
-Emmerdale,None,None,1972,1972,UK,English
-Faking It,US version,None,2014,2016,USA,English
-Fall Out Boy,None,None,2001,current,USA,English
-Fifth Harmony,None,None,2012,2018,USA,English
-Figure Skating,Boyang Jin,None,None,None,China,Chinese
-Figure Skating,Yuzuru Hanyu,None,None,None,Japan,Japanese
-Final Fantasy | ファイナルファンタジー,Final Fantasy,None,1987,1987,Japan,Japanese
-Final Fantasy | ファイナルファンタジー,Final Fantasy II,None,1988,1988,Japan,Japanese
-Final Fantasy | ファイナルファンタジー,Final Fantasy III,None,1990,1990,Japan,Japanese
-Final Fantasy | ファイナルファンタジー,Final Fantasy IV,None,1991,1991,Japan,Japanese
-Final Fantasy | ファイナルファンタジー,Final Fantasy V,None,1992,1992,Japan,Japanese
-Final Fantasy | ファイナルファンタジー,Final Fantasy VI,None,1994,1994,Japan,Japanese
-Final Fantasy | ファイナルファンタジー,Final Fantasy VII,None,1997,1997,Japan,Japanese
-Final Fantasy | ファイナルファンタジー,Crisis Core: Final Fantasy VII,None,2007,2007,Japan,Japanese
-Final Fantasy | ファイナルファンタジー,Final Fantasy VII (remake series),None,2020,current,Japan,Japanese
-Final Fantasy | ファイナルファンタジー,Final Fantasy VIII,None,1999,1999,Japan,Japanese
-Final Fantasy | ファイナルファンタジー,Final Fantasy IX,None,2000,2000,Japan,Japanese
-Final Fantasy | ファイナルファンタジー,Final Fantasy X,None,2001,2001,Japan,Japanese
-Final Fantasy | ファイナルファンタジー,Final Fantasy X-2,None,2003,2003,Japan,Japanese
-Final Fantasy | ファイナルファンタジー,Final Fantasy XI: Online,None,2002,2002,Japan,Japanese
-Final Fantasy | ファイナルファンタジー,Final Fantasy XII,None,2006,2006,Japan,Japanese
-Final Fantasy | ファイナルファンタジー,Final Fantasy XIII,None,2009,2009,Japan,Japanese
-Final Fantasy | ファイナルファンタジー,Final Fantasy XIV,None,2013,current,Japan,Japanese
-Final Fantasy | ファイナルファンタジー,Final Fantasy XV,None,2016,2016,Japan,Japanese
-Final Fantasy | ファイナルファンタジー,Final Fantasy XVI,None,2023,2023,Japan,Japanese
-Fire Emblem | ファイアーエムブレム,Fire Emblem: Three Houses,None,2019,2019,Japan,Japanese
-Free!,High Speed! | ハイ☆スピード!,None,2013,2014,Japan,Japanese
-Free!,anime,None,2013,2018,Japan,Japanese
-Frozen,None,None,2013,2013,USA,English
-Fullmetal Alchemist | 鋼の錬金術師,manga,None,2001,2010,Japan,Japanese
-Fullmetal Alchemist | 鋼の錬金術師,Fullmetal Alchemist: Brotherhood,None,2009,2010,Japan,Japanese
-Generation Kill,None,None,2008,2008,USA,English
-Genshin Impact | 原神,None,None,2020,2020,China,Chinese
-Ghostbusters,None,None,1984,1984,USA,English
-Girl Meets World,None,None,2014,2014,USA,English
-Glee,None,None,2009,2009,USA,English
-Good Omens,`Good Omens: The Nice and Accurate Prophecies of Agnes Nutter, Witch`,None,1990,1990,UK,English
-Good Omens,Good Omens,None,2019,current,UK,English
-Grandmaster of Demonic Cultivation / The Untamed | 魔道祖师 / 陈情令,Grandmaster of Demonic Cultivation | 魔道祖师,None,2015,2016,China,Chinese
-Grandmaster of Demonic Cultivation / The Untamed | 魔道祖师 / 陈情令,The Untamed | 陈情令,None,2019,2019,China,Chinese
-Gravity Falls,None,None,2012,2012,USA,English
-Grey's Anatomy,None,None,2005,2005,USA,English
-Haikyuu!! | ハイキュー!!,manga,None,2012,2020,Japan,Japanese
-Haikyuu!! | ハイキュー!!,anime (incl movies),None,2014,2024,Japan,Japanese
-Hamilton,None,None,2015,2015,USA,English
-Hannibal,None,None,2013,2013,USA,English
-Harry Potter Universe,Harry Potter (books),None,1997,2007,UK,English
-Harry Potter Universe,Harry Potter (movies),None,2001,2011,UK,English
-Harry Potter Universe,Fantastic Beasts (movies),None,2016,2022,UK,English
-Harry Potter Universe,Harry Potter and the Cursed Child (stage play),None,2016,current,UK,English
-Harry Potter Universe,Hogwarts Legacy (game),None,2023,2023,UK,English
-Hatsune Miku / Vocaloid | 初音ミク / ボーカロイド,None,None,2007,current,Japan,Japanese
-Hawaii Five-0,None,None,2010,2010,USA,English
-Hazbin Hotel,None,None,2019,2019,USA,English
-Heartstopper,graphic novel,None,2016,2016,UK,English
-Heartstopper,show,None,2022,current,UK,English
-Heaven Official's Blessing | 天官赐福,Heaven Official's Blessing | 天官赐福 (books),None,2017,2019,China,Chinese
-Heaven Official's Blessing | 天官赐福,Heaven Official's Blessing | 天官赐福 (donghua),None,2020,2024,China,Chinese
-Hetalia | ヘタリア,manga,None,2003,current,Japan,Japanese
-Hetalia | ヘタリア,anime,None,2009,2021,Japan,Japanese
-Highlander,None,None,1986,1986,UK / USA,English
-Hockey,Jonathan Toews,None,None,None,Canada,English
-Hockey,Patrick Kane,None,None,None,USA,English
-Holby City,None,None,1999,1999,UK,English
-Homestuck,None,None,2009,2009,USA,English
-House M.D.,None,None,2004,2004,USA,English
-Hunger Games / Panem Universe,Panem trilogy,None,2008,2010,USA,English
-Hunger Games / Panem Universe,The Hunger Games (movies),None,2012,2015,USA,English
-IT,IT,None,1986,1986,USA,English
-IT,IT (movies),None,2017,2019,USA,English
-Inception,None,None,2010,2010,USA,English
-James Bond Universe,James Bond (book series),None,1953,1966,UK,English
-James Bond Universe,James Bond (movies),None,1962,2021,UK,English
-JoJo's Bizarre Adventure | ジョジョの奇妙な冒険,manga,None,1987,current,Japan,Japanese
-JoJo's Bizarre Adventure | ジョジョの奇妙な冒険,anime,None,2012,current,Japan,Japanese
-Journey to the West Universe,LEGO Monkie Kid,None,2020,2024,China,Chinese
-Jujutsu Kaisen | 呪術廻戦,manga,None,2018,2024,Japan,Japanese
-Jujutsu Kaisen | 呪術廻戦,anime,None,2020,2023,Japan,Japanese
-Julie and The Phantoms,None,None,2020,2020,USA,English
-KAT-TUN,None,None,2001,current,Japan,Japanese
-Kill la Kill | キルラキル,None,None,2013,2013,Japan,Japanese
-Killing Eve,None,None,2018,2018,UK,English
-Kim Possible,None,None,2002,2002,USA,English
-Kingdom Hearts,None,None,2002,2002,Japan / USA,English
-Kingsman,comics,None,2012,2023,UK,English
-Kingsman,movies,None,2014,2021,UK,English
-KinnPorsche | คินน์พอร์ช เดอะ ซีรีส์,None,None,2022,2022,Thailand,Thai
-Law & Order,None,None,1990,1990,USA,English
-Legend of the Seeker,The Sword of Truth,None,1994,2020,USA,English
-Legend of the Seeker,Legend of the Seeker,None,2008,2010,USA,English
-Les Misérables,book,None,1862,1862,France / UK / USA,English
-Les Misérables,musical,None,1980,current,France / UK / USA,English
-Les Misérables,movie,None,2012,2012,France / UK / USA,English
-Life Is Strange,None,None,2015,2015,France / Japan,English
-Life on Mars,None,None,2006,2006,UK,English
-Little Witch Academia | リトルウィッチアカデミア,None,None,2013,2013,Japan,Japanese
-Lizzie Bennet Diaries,None,None,2012,2012,USA,English
-Lockwood & Co.,None,None,2023,2023,UK,English
-Lord of the Rings Universe,Lord of the Rings (book series),None,1954,1955,UK,English
-Lord of the Rings Universe,Lord of the Rings (movie trilogy),None,2001,2003,UK,English
-Lord of the Rings Universe,The Hobbit (book),None,1937,1937,UK,English
-Lord of the Rings Universe,The Hobbit (movie trilogy),None,2012,2014,UK,English
-Lost Girl,None,None,2010,2010,Canada,English
-Love Live! | ラブライブ!,None,None,2010,2010,Japan,Japanese
-Lucifer,None,None,2016,2016,USA,English
-MIRROR,None,None,2018,current,China,Chinese (Cantonese)
-Maleficent,None,None,2014,2014,USA,English
-Marvel,Iron Man,None,2008,2008,USA,English
-Marvel,The Incredible Hulk,None,2008,2008,USA,English
-Marvel,Iron Man 2,None,2010,2010,USA,English
-Marvel,Thor,None,2011,2011,USA,English
-Marvel,Captain America: The First Avenger,None,2011,2011,USA,English
-Marvel,The Avengers,None,2012,2012,USA,English
-Marvel,Iron Man 3,None,2013,2013,USA,English
-Marvel,Thor: The Dark World,None,2013,2013,USA,English
-Marvel,Captain America: The Winter Soldier,None,2014,2014,USA,English
-Marvel,Guardians of the Galaxy,None,2014,2014,USA,English
-Marvel,Avengers: Age of Ultron,None,2015,2015,USA,English
-Marvel,Ant-Man,None,2015,2015,USA,English
-Marvel,Captain America: Civil War,None,2016,2016,USA,English
-Marvel,Doctor Strange,None,2016,2016,USA,English
-Marvel,Guardians of the Galaxy Vol. 2,None,2017,2017,USA,English
-Marvel,Spider-Man: Homecoming,None,2017,2017,USA,English
-Marvel,Thor: Ragnarok,None,2017,2017,USA,English
-Marvel,Black Panther,None,2018,2018,USA,English
-Marvel,Avengers: Infinity War,None,2018,2018,USA,English
-Marvel,Ant-Man and the Wasp,None,2018,2018,USA,English
-Marvel,Captain Marvel,None,2019,2019,USA,English
-Marvel,Avengers: Endgame,None,2019,2019,USA,English
-Marvel,Spider-Man: Far From Home,None,2019,2019,USA,English
-Marvel,Black Widow,None,2021,2021,USA,English
-Marvel,Shang-Chi and the Legend of the Ten Rings,None,2021,2021,USA,English
-Marvel,Eternals,None,2021,2021,USA,English
-Marvel,Spider-Man: No Way Home,None,2021,2021,USA,English
-Marvel,Doctor Strange in the Multiverse of Madness,None,2022,2022,USA,English
-Marvel,Thor: Love and Thunder,None,2022,2022,USA,English
-Marvel,Black Panther: Wakanda Forever,None,2022,2022,USA,English
-Marvel,Ant-Man and the Wasp: Quantumania,None,2023,2023,USA,English
-Marvel,Guardians of the Galaxy Vol. 3,None,2023,2023,USA,English
-Marvel,The Marvels,None,2023,2023,USA,English
-Marvel,Agents of S.H.I.E.L.D.,None,2013,2020,USA,English
-Marvel,Agent Carter,None,2015,2016,USA,English
-Marvel,Inhumans,None,2017,2017,USA,English
-Marvel,Daredevil,None,2015,2018,USA,English
-Marvel,Jessica Jones,None,2015,2019,USA,English
-Marvel,Luke Cage,None,2016,2018,USA,English
-Marvel,Iron Fist,None,2017,2018,USA,English
-Marvel,The Defenders,None,2017,2017,USA,English
-Marvel,The Punisher,None,2017,2019,USA,English
-Marvel,Runaways,None,2017,2019,USA,English
-Marvel,Cloak & Dagger,None,2018,2019,USA,English
-Marvel,WandaVision,None,2021,2021,USA,English
-Marvel,The Falcon and the Winter Soldier,None,2021,2021,USA,English
-Marvel,Loki,None,2021,2023,USA,English
-Marvel,What If...?,None,2021,2023,USA,English
-Marvel,Hawkeye,None,2021,2021,USA,English
-Marvel,Moon Knight,None,2022,2022,USA,English
-Marvel,Ms. Marvel,None,2022,2022,USA,English
-Marvel,She-Hulk: Attorney at Law,None,2022,2022,USA,English
-Marvel,Secret Invasion,None,2023,2023,USA,English
-Marvel,Young Avengers (Kieron Gillen & Jamie McKelvie),None,2013,2014,USA,English
-Marvel,Loki: Agent Of Asgard (Al Ewing & Lee Garbett),None,2014,2015,USA,English
-Marvel,Hawkeye (Matt Fraction & David Aja),None,2012,2015,USA,English
-Marvel,Marvel Snap,None,2022,2022,USA,English
-Marvel,MCU (overall),None,2008,current,USA,English
-Marvel,Marvel Comics (overall),None,1961,current,USA,English
-Marvel,X-Men (original trilogy),None,2000,2006,USA,English
-Marvel,Wolverine trilogy,None,2009,2017,USA,English
-Marvel,X-Men (prequel movies),None,2011,2019,USA,English
-Marvel,Deadpool movies,None,2016,2024,USA,English
-Marvel,The New Mutants,None,2020,2020,USA,English
-Marvel,Spider-Man: Into the Spiderverse,None,2018,2018,USA,English
-Marvel,Spider-Man: Across the Spiderverse,None,2023,2023,USA,English
-Mass Effect,None,None,2007,2007,Canada,English
-Merlin,None,None,2008,2008,UK,English
-Miraculous: Tales of Ladybug & Cat Noir | Miraculous: Les Aventures de Ladybug et Chat Noir,None,None,2015,2015,France,French
-Mobile Suit Gundam Wing | 新機動戦記ガンダム W,None,None,1995,1995,Japan,Japanese
-Motherland,None,None,2016,2016,UK,English
-My Chemical Romance,None,None,2001,current,USA,English
-My Hero Academia | 僕のヒーローアカデミア,manga,None,2014,2024,Japan,Japanese
-My Hero Academia | 僕のヒーローアカデミア,anime,None,2016,current,Japan,Japanese
-NCIS,None,None,2003,2003,USA,English
-NCT,None,None,2016,current,South Korea,Korean
-Naruto,manga,None,1999,2014,Japan,Japanese
-Naruto,anime,None,2002,2017,Japan,Japanese
-New Gods | 新神榜,None,None,2021,2021,China,Chinese
-Omniscient Reader | 전지적 독자 시점,web novel,None,2018,2020,South Korea,Korean
-Once Upon a Time,None,None,2011,2011,USA,English
-One Direction,None,None,2010,2016,Ireland / UK,English
-One Piece | ワンピース,manga,None,1997,current,Japan,Japanese
-One Piece | ワンピース,anime,None,1999,current,Japan,Japanese
-One Piece | ワンピース,live action series,None,2023,current,Japan,Japanese
-One-Punch Man | ワンパンマン,manga,None,2009,current,Japan,Japanese
-One-Punch Man | ワンパンマン,anime,None,2015,current,Japan,Japanese
-Orange is the New Black,Orange Is the New Black: My Year in a Women's Prison,None,2010,2010,USA,English
-Orange is the New Black,Orange is the New Black,None,2013,2019,USA,English
-Orphan Black,None,None,2013,2013,Canada,English
-Our Flag Means Death,None,None,2022,2022,USA,English
-Overwatch,None,None,2016,2016,USA,English
-Pacific Rim,None,None,2013,2013,USA,English
-Panic! at the Disco,None,None,2004,2023,USA,English
-Percy Jackson,Percy Jackson & the Olympians,None,2005,2009,USA,English
-Percy Jackson,Percy Jackson (movies),None,2010,2013,USA,English
-Person of Interest,None,None,2011,2011,USA,English
-Persona,Persona 5,None,2016,2016,Japan,Japanese
-Persona,Persona 4,None,2008,2008,Japan,Japanese
-Pitch Perfect,None,None,2012,2012,USA,English
-Power Rangers,None,None,1993,1993,Japan / USA,English
-Pretty Guardian Sailor Moon | 美少女戦士セーラームーン,manga,None,1991,1997,Japan,Japanese
-Pretty Guardian Sailor Moon | 美少女戦士セーラームーン,anime,None,1992,1997,Japan,Japanese
-Puella Magi Madoka Magica | 魔法少女まどか☆マギカ,None,None,2011,2011,Japan,Japanese
-Queer as Folk,US version (original),None,2000,2005,USA,English
-Queer as Folk,UK version,None,1999,2000,USA,English
-Queer as Folk,US version (reboot),None,2022,2022,USA,English
-RWBY,None,None,2012,2012,USA,English
-Raven Cycle,None,None,2012,2012,USA,English
-Red Velvet,None,None,2014,current,South Korea,Korean
-Riverdale,None,None,None,None,USA,English
-Rizzoli & Isles,None,None,2010,2010,USA,English
-Rookie Blue,None,None,2010,2010,Canada,English
-Roswell New Mexico,None,None,2019,2019,USA,English
-SK8 the Infinity | SK∞ エスケーエイト,None,None,2021,2021,Japan,Japanese
-SKAM,None,None,2015,2015,Norway,Norwegian
-Sanders Sides,None,None,2016,2016,USA,English
-Schitt's Creek,None,None,2015,2015,USA,English
-Seraph of the End | 終わりのセラフ,manga,None,2012,current,Japan,Japanese
-Seraph of the End | 終わりのセラフ,anime,None,2015,2015,Japan,Japanese
-Shadow and Bone,None,None,2021,2021,USA,English
-Shadowhunters | Mortal Instruments,Shadowhunters: The Mortal Instruments,None,2016,2019,USA,English
-Shadowhunters | Mortal Instruments,The Mortal Instruments (book series),None,2007,2014,USA,English
-Shadowhunters | Mortal Instruments,The Mortal Instruments: City of Bones,None,2013,2013,USA,English
-Shameless,UK version,None,2004,2013,USA,English
-Shameless,US version,None,2011,2021,USA,English
-She-Ra and the Princesses of Power,None,None,2018,2018,USA,English
-Sherlock,None,None,2010,2010,UK,English
-Six of Crows,None,None,2015,2015,USA,English
-Skins,None,None,2007,2007,UK,English
-South Park,None,None,1997,1997,USA,English
-Spartacus,None,None,2010,2010,USA,English
-Star Trek,Star Trek: The Original Series,None,1965,1969,USA,English
-Star Trek,Star Trek: Deep Space Nine,None,1993,1999,USA,English
-Star Trek,Star Trek: Voyager,None,1995,2001,USA,English
-Star Trek,Star Trek: The Next Generation,None,1987,1994,USA,English
-Star Trek,Star Trek: Enterprise,None,2001,2005,USA,English
-Star Trek,Star Trek (Original movies),None,1979,1982,USA,English
-Star Trek,Star Trek (J.J. Abrams movies),None,2009,2016,USA,English
-Star Trek,Star Trek: Picard,None,2020,2023,USA,English
-Star Trek,Star Trek: Discovery,None,2017,2024,USA,English
-Star Wars,m,None,o,o,USA,English
-Star Wars,s,None,h,h,USA,English
-Stargate,Stargate SG-1,None,1997,2007,USA,English
-Stargate,Stargate Atlantis,None,2004,2009,USA,English
-Starsky & Hutch,None,None,1975,1975,USA,English
-Station 19,None,None,2018,2018,USA,English
-Steven Universe,None,None,2013,2013,USA,English
-Stranger Things,None,None,2019,2019,USA,English
-Stray Kids,None,None,2017,current,South Korea,Korean
-Suits,None,None,2011,2011,USA,English
-Super-Vocal | 声入人心,None,None,2018,2018,China,Chinese
-Supernatural,None,None,2005,2005,USA,English
-TOMORROW X TOGETHER / TXT,None,None,2019,current,South Korea,Korean
-Teen Wolf,None,None,2011,2011,USA,English
-Teenage Mutant Ninja Turtles,Rise of the Teenage Mutant Ninja Turtles,None,2018,2020,USA,English
-Teenage Mutant Ninja Turtles,Rise of the Teenage Mutant Ninja Turtles (movie),None,2022,2022,USA,English
-Teenage Mutant Ninja Turtles,Teenage Mutant Ninja Turtles (overall),None,1984,current,USA,English
-The 100,None,None,2014,2014,USA,English
-The 100 / The Walking Dead - crossover fanon,None,None,None,None,USA,English
-The Big Bang Theory,None,None,2007,2007,USA,English
-The Closer,None,None,2005,2005,USA,English
-The Devil Wears Prada,None,None,2006,2006,USA,English
-The Good Wife,None,None,2009,2009,USA,English
-The Haunting of Bly Manor,None,None,2020,2020,USA,English
-The Last of Us,game,None,2013,2013,USA,English
-The Last of Us,show,None,2023,2023,USA,English
-The Locked Tomb / Gideon the Ninth,None,None,2019,2019,New Zealand,English
-The Magnus Archives,None,None,2016,2016,UK,English
-The Man From U.N.C.L.E.,None,None,2015,2015,USA,English
-The Old Guard,graphic novel,None,2017,2021,USA,English
-The Old Guard,movies,None,2020,2023,USA,English
-The Owl House,None,None,2020,2020,USA,English
-The Professionals,None,None,1977,1977,UK,English
-The Rookie,None,None,2018,2018,USA,English
-The Sandman,comic,None,1989,1996,UK,English
-The Sandman,show,None,2022,current,UK,English
-The Sentinel,None,None,2006,2006,USA,English
-The Walking Dead,None,None,2010,2010,USA,English
-The Wilds,None,None,2020,2020,USA,English
-The Witcher | Wiedźmin,The Witcher (TV),None,2019,current,Poland,Polish
-The Witcher | Wiedźmin,The Witcher | Wiedźmin (book series),None,1986,2013,Poland,Polish
-The Witcher | Wiedźmin,The Witcher (game series),None,2007,2015,Poland,Polish
-The X-Files,None,None,1993,1993,USA,English
-Tokyo Ghoul | 東京喰種,manga,None,2011,2014,Japan,Japanese
-Tokyo Ghoul | 東京喰種,anime,None,2014,2014,Japan,Japanese
-Tokyo Revengers | 東京卍リベンジャーズ,manga,None,2017,2022,Japan,Japanese
-Tokyo Revengers | 東京卍リベンジャーズ,anime,None,2021,current,Japan,Japanese
-Top Gun,None,None,1986,1986,USA,English
-Torchwood,None,None,None,None,UK,English
-Trigun Universe | トライガン,Trigun (manga),None,1995,1996,Japan,Japanese
-Trigun Universe | トライガン,Trigun (original anime),None,1998,1998,Japan,Japanese
-Trigun Universe | トライガン,Trigun Stampede,None,2023,2023,Japan,Japanese
-Twenty One Pilots,None,None,2009,current,USA,English
-Twilight,books,None,2005,2008,USA,English
-Twilight,movies,None,2008,2012,USA,English
-Undertale,None,None,2015,2015,USA,English
-Vampire Diaries Universe,The Vampire Diaries,None,2009,2017,USA,English
-Vampire Diaries Universe,Legacies,None,2018,2022,USA,English
-Vampire Diaries Universe,The Originals,None,2013,2018,USA,English
-Victorious,None,None,2010,2010,USA,English
-Voltron,None,None,2016,2016,USA,English
-Warehouse 13,None,None,2009,2009,USA,English
-Warrior Nun,None,None,2020,2020,USA,English
-Welcome to Night Vale,None,None,2012,2012,USA,English
-Wentworth,None,None,2013,2013,Australia,English
-White Collar,None,None,2009,2009,USA,English
-Women's Soccer,None,None,None,None,USA,English
-Word of Honor | 山河令,Faraway Wanderers | 天涯客,None,2010,2010,China,Chinese
-Word of Honor | 山河令,Word of Honor | 山河令,None,2021,2021,China,Chinese
-Wynonna Earp,None,None,2016,2016,Canada / USA,English
-Xena,None,None,1995,1995,USA,English
-Young Royals,None,None,2021,2021,Sweden,Swedish
-Youtube,Alexander | Technoblade,None,None,None,USA,English
-Youtube,Alexis 'Alex' Maldonado | Quackity,None,None,None,Mexico,English
-Youtube,Charles | Grian,None,None,None,UK,English
-Youtube,Clay | Dream,None,None,None,USA,English
-Youtube,Dan Howell | danisnotonfire,None,None,None,UK,English
-Youtube,Darryl Noveschosch | BadBoyHalo,None,None,None,USA,English
-Youtube,Gavin Free,None,None,None,UK,English
-Youtube,George Davidson | GeorgeNotFound,None,None,None,UK,English
-Youtube,Karl Jacobs,None,None,None,USA,English
-Youtube,`Kristin Watson, née Rosales`,None,None,None,USA,English
-Youtube,Mark Fischbach | Markiplier,None,None,None,USA,English
-Youtube,Michael Jones,None,None,None,USA,English
-Youtube,Nicholas Armstrong | Sapnap,None,None,None,USA,English
-Youtube,Phil Lester | AmazingPhil,None,None,None,UK,English
-Youtube,Phil Watson | Philza,None,None,None,UK,English
-Youtube,Ranboo,None,None,None,USA,English
-Youtube,Ryan | GoodTimesWithScar,None,None,None,USA,English
-Youtube,Sean McLoughlin | Jacksepticeye,None,None,None,Ireland,English
-Youtube,Thomas Michael Simons | TommyInnit,None,None,None,UK,English
-Youtube,Toby Smith | Tubbo,None,None,None,UK,English
-Youtube,William Patrick Spencer Gold | Wilbur Soot,None,None,None,UK,English
-Youtube,Zak Ahmed | Skeppy,None,None,None,USA,English
-Yuri!!! on ICE | ユーリ!!! on ICE,None,None,2016,2016,Japan,Japanese
+fandom,media_type,country_of_origin,original_language
+5 Seconds of Summer,None,Australia,English
+9-1-1,None,USA,English
+A Song of Ice and Fire / Game of Thrones Universe,None,USA,English
+Adam Lambert,None,USA,English
+Addam's Family Universe,None,USA,English
+Adventure Time,None,USA,English
+All For The Game,None,Unknown,English
+American Horror Story,None,USA,English
+Amphibia,None,USA,English
+Arcane,None,France / USA,English
+Attack on Titan | 進撃の巨人,None,Japan,Japanese
+Avatar: The last Airbender Universe,None,USA,English
+BLUELOCK | ブルーロック,None,Japan,Japanese
+Bangtan Boys / BTS,None,South Korea,Korean
+Battlestar Galactica,None,USA,English
+Be More Chill,None,USA,English
+Bridgerton,None,USA,English
+Buffy Universe,None,USA,English
+Bungou Stray Dogs | 文豪ストレイドッグス,None,Japan,Japanese
+Call of Duty,None,USA,English
+Carmilla,None,Canada,English
+Carol,None,UK / USA,English
+Carry On,None,USA,English
+Castle,None,USA,English
+Check Please!,None,USA,English
+Chilling Adventures of Sabrina,None,USA,English
+Criminal Minds,None,USA,English
+Critical Role,None,USA,English
+DC,None,USA,English
+Dangan Ronpa,None,Japan,Japanese
+Descendants,None,USA,English
+Detroit: Become Human,None,France / USA,English
+Doctor Who,None,UK,English
+Drag,None,USA,English
+Dragon Age,None,Canada,English
+Due South,None,Canada,English
+EXO,None,South Korea,Korean
+Emmerdale,None,UK,English
+Faking It,None,USA,English
+Fall Out Boy,None,USA,English
+Fifth Harmony,None,USA,English
+Figure Skating,None,China / Japan,English
+Final Fantasy | ファイナルファンタジー,None,Japan,Japanese
+Fire Emblem | ファイアーエムブレム,None,Japan,Japanese
+Free!,None,Japan,Japanese
+Frozen,None,USA,English
+Fullmetal Alchemist | 鋼の錬金術師,None,Japan,Japanese
+Generation Kill,None,USA,English
+Genshin Impact | 原神,None,China,Chinese
+Ghostbusters,None,USA,English
+Girl Meets World,None,USA,English
+Glee,None,USA,English
+Good Omens,None,UK,English
+Grandmaster of Demonic Cultivation / The Untamed | 魔道祖师 / 陈情令,None,China,Chinese
+Gravity Falls,None,USA,English
+Grey's Anatomy,None,USA,English
+Haikyuu!! | ハイキュー!!,None,Japan,Japanese
+Hamilton,None,USA,English
+Hannibal,None,USA,English
+Harry Potter Universe,None,UK,English
+Hatsune Miku / Vocaloid | 初音ミク / ボーカロイド,None,Japan,Japanese
+Hawaii Five-0,None,USA,English
+Hazbin Hotel,None,USA,English
+Heartstopper,None,UK,English
+Heaven Official's Blessing | 天官赐福,None,China,Chinese
+Hetalia | ヘタリア,None,Japan,Japanese
+Highlander,None,UK / USA,English
+Hockey,None,Canada / USA,English
+Holby City,None,UK,English
+Homestuck,None,USA,English
+House M.D.,None,USA,English
+Hunger Games / Panem Universe,None,USA,English
+IT,None,USA,English
+Inception,None,USA,English
+James Bond Universe,None,UK,English
+JoJo's Bizarre Adventure | ジョジョの奇妙な冒険,None,Japan,Japanese
+Journey to the West Universe,None,China,Chinese
+Jujutsu Kaisen | 呪術廻戦,None,Japan,Japanese
+Julie and The Phantoms,None,USA,English
+KAT-TUN,None,Japan,Japanese
+Kill la Kill | キルラキル,None,Japan,Japanese
+Killing Eve,None,UK,English
+Kim Possible,None,USA,English
+Kingdom Hearts,None,Japan / USA,English
+Kingsman,None,UK,English
+KinnPorsche | คินน์พอร์ช เดอะ ซีรีส์,None,Thailand,Thai
+Law & Order,None,USA,English
+Legend of the Seeker,None,USA,English
+Les Misérables,None,France / UK / USA,English
+Life Is Strange,None,France / Japan,English
+Life on Mars,None,UK,English
+Little Witch Academia | リトルウィッチアカデミア,None,Japan,Japanese
+Lizzie Bennet Diaries,None,USA,English
+Lockwood & Co.,None,UK,English
+Lord of the Rings Universe,None,UK,English
+Lost Girl,None,Canada,English
+Love Live! | ラブライブ!,None,Japan,Japanese
+Lucifer,None,USA,English
+MIRROR,None,China,Chinese (Cantonese)
+Maleficent,None,USA,English
+Marvel,None,USA,English
+Mass Effect,None,Canada,English
+Merlin,None,UK,English
+Miraculous: Tales of Ladybug & Cat Noir | Miraculous: Les Aventures de Ladybug et Chat Noir,None,France,French
+Mobile Suit Gundam Wing | 新機動戦記ガンダム W,None,Japan,Japanese
+Motherland,None,UK,English
+My Chemical Romance,None,USA,English
+My Hero Academia | 僕のヒーローアカデミア,None,Japan,Japanese
+NCIS,None,USA,English
+NCT,None,South Korea,Korean
+Naruto,None,Japan,Japanese
+New Gods | 新神榜,None,China,Chinese
+Omniscient Reader | 전지적 독자 시점,None,South Korea,Korean
+Once Upon a Time,None,USA,English
+One Direction,None,Ireland / UK,English
+One Piece | ワンピース,None,Japan,Japanese
+One-Punch Man | ワンパンマン,None,Japan,Japanese
+Orange is the New Black,None,USA,English
+Orphan Black,None,Canada,English
+Our Flag Means Death,None,USA,English
+Overwatch,None,USA,English
+Pacific Rim,None,USA,English
+Panic! at the Disco,None,USA,English
+Percy Jackson,None,USA,English
+Person of Interest,None,USA,English
+Persona,None,Japan,Japanese
+Pitch Perfect,None,USA,English
+Power Rangers,None,Japan / USA,English
+Pretty Guardian Sailor Moon | 美少女戦士セーラームーン,None,Japan,Japanese
+Puella Magi Madoka Magica | 魔法少女まどか☆マギカ,None,Japan,Japanese
+Queer as Folk,None,USA,English
+RWBY,None,USA,English
+Raven Cycle,None,USA,English
+Red Velvet,None,South Korea,Korean
+Riverdale,None,USA,English
+Rizzoli & Isles,None,USA,English
+Rookie Blue,None,Canada,English
+Roswell New Mexico,None,USA,English
+SK8 the Infinity | SK∞ エスケーエイト,None,Japan,Japanese
+SKAM,None,Norway,Norwegian
+Sanders Sides,None,USA,English
+Schitt's Creek,None,USA,English
+Seraph of the End | 終わりのセラフ,None,Japan,Japanese
+Shadow and Bone,None,USA,English
+Shadowhunters | Mortal Instruments,None,USA,English
+Shameless,None,USA,English
+She-Ra and the Princesses of Power,None,USA,English
+Sherlock,None,UK,English
+Six of Crows,None,USA,English
+Skins,None,UK,English
+South Park,None,USA,English
+Spartacus,None,USA,English
+Star Trek,None,USA,English
+Star Wars,None,USA,English
+Stargate,None,USA,English
+Starsky & Hutch,None,USA,English
+Station 19,None,USA,English
+Steven Universe,None,USA,English
+Stranger Things,None,USA,English
+Stray Kids,None,South Korea,Korean
+Suits,None,USA,English
+Super-Vocal | 声入人心,None,China,Chinese
+Supernatural,None,USA,English
+TOMORROW X TOGETHER / TXT,None,South Korea,Korean
+Teen Wolf,None,USA,English
+Teenage Mutant Ninja Turtles,None,USA,English
+The 100,None,USA,English
+The 100 / The Walking Dead - crossover fanon,None,USA,English
+The Big Bang Theory,None,USA,English
+The Closer,None,USA,English
+The Devil Wears Prada,None,USA,English
+The Good Wife,None,USA,English
+The Haunting of Bly Manor,None,USA,English
+The Last of Us,None,USA,English
+The Locked Tomb / Gideon the Ninth,None,New Zealand,English
+The Magnus Archives,None,UK,English
+The Man From U.N.C.L.E.,None,USA,English
+The Old Guard,None,USA,English
+The Owl House,None,USA,English
+The Professionals,None,UK,English
+The Rookie,None,USA,English
+The Sandman,None,UK,English
+The Sentinel,None,USA,English
+The Walking Dead,None,USA,English
+The Wilds,None,USA,English
+The Witcher | Wiedźmin,None,Poland,Polish
+The X-Files,None,USA,English
+Tokyo Ghoul | 東京喰種,None,Japan,Japanese
+Tokyo Revengers | 東京卍リベンジャーズ,None,Japan,Japanese
+Top Gun,None,USA,English
+Torchwood,None,UK,English
+Trigun Universe | トライガン,None,Japan,Japanese
+Twenty One Pilots,None,USA,English
+Twilight,None,USA,English
+Undertale,None,USA,English
+Vampire Diaries Universe,None,USA,English
+Victorious,None,USA,English
+Voltron,None,USA,English
+Warehouse 13,None,USA,English
+Warrior Nun,None,USA,English
+Welcome to Night Vale,None,USA,English
+Wentworth,None,Australia,English
+White Collar,None,USA,English
+Women's Soccer,None,USA,English
+Word of Honor | 山河令,None,China,Chinese
+Wynonna Earp,None,Canada / USA,English
+Xena,None,USA,English
+Young Royals,None,Sweden,Swedish
+Youtube,None,Ireland / Mexico / UK / USA,English
+Yuri!!! on ICE | ユーリ!!! on ICE,None,Japan,Japanese

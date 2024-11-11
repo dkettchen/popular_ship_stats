@@ -219,7 +219,8 @@ other_fandoms = {
         # this is some rando tumblr user's novel series, 
         # doesn't even have a wikipedia article, 
         # and author moves around a lot, no info on where she's from smh
-
+}
+multi_nationals = {
     "Power Rangers": "Japan / USA", 
     "Wynonna Earp": "Canada / USA", 
     "Kingdom Hearts": "Japan / USA", 
@@ -231,41 +232,46 @@ other_fandoms = {
     "Les Misérables": "France / UK / USA", # technically french??? but the movie wasn't??? movie is us-uk
     "Carol": "UK / USA", # UK and US, original story is american, we'll go with that I guess
     "One Direction": "Ireland / UK", # NIALL IS IRISH APPARENTLY
+    "Youtube": "Ireland / Mexico / UK / USA", # I'm uniting all the cases
+        # maybe we can have a separate file for which percent of these fucks is from where
+        # as we only have one person from ireland & one from mexico in there & I got the info now
+    "Hockey": "Canada / USA",
+    "Figure Skating": "China / Japan"
 }
 
-real_human_americans = [
-    'Patrick Kane', # american
-    'Alexander | Technoblade',
-    'Clay | Dream', # american
-    'Darryl Noveschosch | BadBoyHalo', # american
-    'Karl Jacobs', # american
-    'Kristin Watson, née Rosales', # american
-    'Mark Fischbach | Markiplier', # american
-    'Michael Jones', # american
-    'Nicholas Armstrong | Sapnap', # american
-    'Ranboo', # american
-    'Ryan | GoodTimesWithScar', # american
-    'Zak Ahmed | Skeppy', # american
-]
-real_human_brits = [
-    'Charles | Grian', # UK
-    'Dan Howell | danisnotonfire', # UK
-    'Gavin Free', # UK
-    'George Davidson | GeorgeNotFound', # UK
-    'Phil Lester | AmazingPhil', # UK
-    'Phil Watson | Philza', # UK
-    'Thomas Michael Simons | TommyInnit', # UK
-    'Toby Smith | Tubbo', # UK
-    'William Patrick Spencer Gold | Wilbur Soot', # UK
-]
-other_real_humans = {
-    # sean will go here cause he irish
-    'Boyang Jin': "China", # chinese
-    'Yuzuru Hanyu': "Japan", # japanese
-    'Jonathan Toews': "Canada", # canadian
-    'Sean McLoughlin | Jacksepticeye': "Ireland", # irish
-    "Alexis 'Alex' Maldonado | Quackity": "Mexico", # mexican
-}
+# real_human_americans = [
+#     'Patrick Kane', # american
+#     'Alexander | Technoblade',
+#     'Clay | Dream', # american
+#     'Darryl Noveschosch | BadBoyHalo', # american
+#     'Karl Jacobs', # american
+#     'Kristin Watson, née Rosales', # american
+#     'Mark Fischbach | Markiplier', # american
+#     'Michael Jones', # american
+#     'Nicholas Armstrong | Sapnap', # american
+#     'Ranboo', # american
+#     'Ryan | GoodTimesWithScar', # american
+#     'Zak Ahmed | Skeppy', # american
+# ]
+# real_human_brits = [
+#     'Charles | Grian', # UK
+#     'Dan Howell | danisnotonfire', # UK
+#     'Gavin Free', # UK
+#     'George Davidson | GeorgeNotFound', # UK
+#     'Phil Lester | AmazingPhil', # UK
+#     'Phil Watson | Philza', # UK
+#     'Thomas Michael Simons | TommyInnit', # UK
+#     'Toby Smith | Tubbo', # UK
+#     'William Patrick Spencer Gold | Wilbur Soot', # UK
+# ]
+# other_real_humans = {
+#     # sean will go here cause he irish
+#     'Boyang Jin': "China", # chinese
+#     'Yuzuru Hanyu': "Japan", # japanese
+#     'Jonathan Toews': "Canada", # canadian
+#     'Sean McLoughlin | Jacksepticeye': "Ireland", # irish
+#     "Alexis 'Alex' Maldonado | Quackity": "Mexico", # mexican
+# }
 
 def add_countries_of_origin_and_languages(input_list):
 
@@ -285,9 +291,9 @@ def add_countries_of_origin_and_languages(input_list):
     for fandom_dict in fandom_list:
         fandom = fandom_dict["fandom"]
 
-        if fandom in american_fandoms or fandom_dict["instance"] in real_human_americans:
+        if fandom in american_fandoms:
             fandom_dict["country_of_origin"] = "USA"
-        elif fandom in british_fandoms or fandom_dict["instance"] in real_human_brits:
+        elif fandom in british_fandoms:
             fandom_dict["country_of_origin"] = "UK"
         elif fandom in japanese_fandoms:
             fandom_dict["country_of_origin"] = "Japan"
@@ -303,8 +309,8 @@ def add_countries_of_origin_and_languages(input_list):
             fandom_dict["country_of_origin"] = "Canada"
         elif fandom in other_fandoms:
             fandom_dict["country_of_origin"] = other_fandoms[fandom]
-        elif fandom_dict["instance"] in other_real_humans:
-            fandom_dict["country_of_origin"] = other_real_humans[fandom_dict["instance"]]
+        elif fandom in multi_nationals:
+            fandom_dict["country_of_origin"] = multi_nationals[fandom]
         else: print(f"'{fandom}',") # if we haven't assigned a country
 
         if fandom_dict["country_of_origin"] in [ # english speaking countries
@@ -315,10 +321,12 @@ def add_countries_of_origin_and_languages(input_list):
             "New Zealand", 
             "Ireland"
         ] \
-        or fandom in ["Life Is Strange", "All For The Game"] \
+        or fandom in ["Life Is Strange", "All For The Game", "Figure Skating"] \
         or "USA" in fandom_dict["country_of_origin"] \
-        or "UK" in fandom_dict["country_of_origin"] \
-        or fandom_dict["instance"] in ["Alexis 'Alex' Maldonado | Quackity"]:
+        or "UK" in fandom_dict["country_of_origin"]:
+            # fandoms made elsewhere but published in english 
+            # or that are international hence operate on english (like sports)
+            # or that collaborated with an english speaking country and published in english
             fandom_dict["original_language"] = "English"
         elif fandom_dict["country_of_origin"] == "China":
             if fandom == "MIRROR":
