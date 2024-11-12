@@ -740,6 +740,139 @@
         "title_prefix": null,
         "title_suffix": null
     },
+    "Archie Comics Universe - Betty Cooper": {
+        "given_name": "Betty",
+        "middle_name": null,
+        "maiden_name": null,
+        "surname": "Cooper",
+        "alias": null,
+        "nickname": null,
+        "name_order": "W",
+        "full_name": "Betty Cooper",
+        "fandom": "Archie Comics Universe",
+        "op_versions": [
+            "Betty Cooper"
+        ],
+        "gender": "F",
+        "race": "White",
+        "rpf_or_fic": "fictional",
+        "title_prefix": null,
+        "title_suffix": null
+    },
+    "Archie Comics Universe - Cheryl Blossom": {
+        "given_name": "Cheryl",
+        "middle_name": null,
+        "maiden_name": null,
+        "surname": "Blossom",
+        "alias": null,
+        "nickname": null,
+        "name_order": "W",
+        "full_name": "Cheryl Blossom",
+        "fandom": "Archie Comics Universe",
+        "op_versions": [
+            "Cheryl Blossom"
+        ],
+        "gender": "F",
+        "race": "White",
+        "rpf_or_fic": "fictional",
+        "title_prefix": null,
+        "title_suffix": null
+    },
+    "Archie Comics Universe - Jughead Jones": {
+        "given_name": "Jughead",
+        "middle_name": null,
+        "maiden_name": null,
+        "surname": "Jones",
+        "alias": null,
+        "nickname": null,
+        "name_order": "W",
+        "full_name": "Jughead Jones",
+        "fandom": "Archie Comics Universe",
+        "op_versions": [
+            "Jughead Jones"
+        ],
+        "gender": "M",
+        "race": "White",
+        "rpf_or_fic": "fictional",
+        "title_prefix": null,
+        "title_suffix": null
+    },
+    "Archie Comics Universe - Mary Wardwell | Madam Satan / Lilith": {
+        "given_name": "Mary",
+        "middle_name": null,
+        "maiden_name": null,
+        "surname": "Wardwell",
+        "alias": "Madam Satan / Lilith",
+        "nickname": null,
+        "name_order": null,
+        "full_name": "Mary Wardwell | Madam Satan / Lilith",
+        "fandom": "Archie Comics Universe",
+        "op_versions": [
+            "Mary Wardwell | Madam Satan | Lilith"
+        ],
+        "gender": "F",
+        "race": "White",
+        "rpf_or_fic": "fictional",
+        "title_prefix": null,
+        "title_suffix": null
+    },
+    "Archie Comics Universe - Toni Topaz": {
+        "given_name": "Toni",
+        "middle_name": null,
+        "maiden_name": null,
+        "surname": "Topaz",
+        "alias": null,
+        "nickname": null,
+        "name_order": "W",
+        "full_name": "Toni Topaz",
+        "fandom": "Archie Comics Universe",
+        "op_versions": [
+            "Toni Topaz"
+        ],
+        "gender": "F",
+        "race": "Black (Multi)",
+        "rpf_or_fic": "fictional",
+        "title_prefix": null,
+        "title_suffix": null
+    },
+    "Archie Comics Universe - Veronica Lodge": {
+        "given_name": "Veronica",
+        "middle_name": null,
+        "maiden_name": null,
+        "surname": "Lodge",
+        "alias": null,
+        "nickname": null,
+        "name_order": "W",
+        "full_name": "Veronica Lodge",
+        "fandom": "Archie Comics Universe",
+        "op_versions": [
+            "Veronica Lodge"
+        ],
+        "gender": "F",
+        "race": "Latin",
+        "rpf_or_fic": "fictional",
+        "title_prefix": null,
+        "title_suffix": null
+    },
+    "Archie Comics Universe - Zelda Spellman": {
+        "given_name": "Zelda",
+        "middle_name": null,
+        "maiden_name": null,
+        "surname": "Spellman",
+        "alias": null,
+        "nickname": null,
+        "name_order": "W",
+        "full_name": "Zelda Spellman",
+        "fandom": "Archie Comics Universe",
+        "op_versions": [
+            "Zelda Spellman"
+        ],
+        "gender": "F",
+        "race": "White",
+        "rpf_or_fic": "fictional",
+        "title_prefix": null,
+        "title_suffix": null
+    },
     "Attack on Titan | \u9032\u6483\u306e\u5de8\u4eba - Annie Leonhart": {
         "given_name": "Annie",
         "middle_name": null,
@@ -1883,44 +2016,6 @@
         "title_prefix": null,
         "title_suffix": null
     },
-    "Chilling Adventures of Sabrina - Mary Wardwell | Madam Satan / Lilith": {
-        "given_name": "Mary",
-        "middle_name": null,
-        "maiden_name": null,
-        "surname": "Wardwell",
-        "alias": "Madam Satan / Lilith",
-        "nickname": null,
-        "name_order": null,
-        "full_name": "Mary Wardwell | Madam Satan / Lilith",
-        "fandom": "Chilling Adventures of Sabrina",
-        "op_versions": [
-            "Mary Wardwell | Madam Satan | Lilith"
-        ],
-        "gender": "F",
-        "race": "White",
-        "rpf_or_fic": "fictional",
-        "title_prefix": null,
-        "title_suffix": null
-    },
-    "Chilling Adventures of Sabrina - Zelda Spellman": {
-        "given_name": "Zelda",
-        "middle_name": null,
-        "maiden_name": null,
-        "surname": "Spellman",
-        "alias": null,
-        "nickname": null,
-        "name_order": "W",
-        "full_name": "Zelda Spellman",
-        "fandom": "Chilling Adventures of Sabrina",
-        "op_versions": [
-            "Zelda Spellman"
-        ],
-        "gender": "F",
-        "race": "White",
-        "rpf_or_fic": "fictional",
-        "title_prefix": null,
-        "title_suffix": null
-    },
     "Criminal Minds - Aaron Hotchner": {
         "given_name": "Aaron",
         "middle_name": null,
@@ -2588,7 +2683,7 @@
         "title_prefix": null,
         "title_suffix": null
     },
-    "Dangan Ronpa - Hinata Hajime": {
+    "Danganronpa - Hinata Hajime": {
         "given_name": "Hajime",
         "middle_name": null,
         "maiden_name": null,
@@ -2597,7 +2692,7 @@
         "nickname": null,
         "name_order": "E",
         "full_name": "Hinata Hajime",
-        "fandom": "Dangan Ronpa",
+        "fandom": "Danganronpa",
         "op_versions": [
             "Hinata Hajime"
         ],
@@ -2607,7 +2702,7 @@
         "title_prefix": null,
         "title_suffix": null
     },
-    "Dangan Ronpa - Komaeda Nagito": {
+    "Danganronpa - Komaeda Nagito": {
         "given_name": "Nagito",
         "middle_name": null,
         "maiden_name": null,
@@ -2616,7 +2711,7 @@
         "nickname": null,
         "name_order": "E",
         "full_name": "Komaeda Nagito",
-        "fandom": "Dangan Ronpa",
+        "fandom": "Danganronpa",
         "op_versions": [
             "Komaeda Nagito"
         ],
@@ -2626,7 +2721,7 @@
         "title_prefix": null,
         "title_suffix": null
     },
-    "Dangan Ronpa - Oma Kokichi": {
+    "Danganronpa - Oma Kokichi": {
         "given_name": "Kokichi",
         "middle_name": null,
         "maiden_name": null,
@@ -2635,7 +2730,7 @@
         "nickname": null,
         "name_order": "E",
         "full_name": "Oma Kokichi",
-        "fandom": "Dangan Ronpa",
+        "fandom": "Danganronpa",
         "op_versions": [
             "Oma Kokichi"
         ],
@@ -2645,7 +2740,7 @@
         "title_prefix": null,
         "title_suffix": null
     },
-    "Dangan Ronpa - Saihara Shuichi": {
+    "Danganronpa - Saihara Shuichi": {
         "given_name": "Shuichi",
         "middle_name": null,
         "maiden_name": null,
@@ -2654,7 +2749,7 @@
         "nickname": null,
         "name_order": "E",
         "full_name": "Saihara Shuichi",
-        "fandom": "Dangan Ronpa",
+        "fandom": "Danganronpa",
         "op_versions": [
             "Saihara Shuichi"
         ],
@@ -2778,7 +2873,7 @@
         "title_prefix": null,
         "title_suffix": null
     },
-    "Doctor Who - Alex Kingston": {
+    "Doctor Who Universe - Alex Kingston": {
         "given_name": "Alex",
         "middle_name": null,
         "maiden_name": null,
@@ -2787,7 +2882,7 @@
         "nickname": null,
         "name_order": "W",
         "full_name": "Alex Kingston",
-        "fandom": "Doctor Who",
+        "fandom": "Doctor Who Universe",
         "op_versions": [
             "Alex Kingston"
         ],
@@ -2797,7 +2892,7 @@
         "title_prefix": null,
         "title_suffix": null
     },
-    "Doctor Who - Amy Pond": {
+    "Doctor Who Universe - Amy Pond": {
         "given_name": "Amy",
         "middle_name": null,
         "maiden_name": null,
@@ -2806,7 +2901,7 @@
         "nickname": null,
         "name_order": "W",
         "full_name": "Amy Pond",
-        "fandom": "Doctor Who",
+        "fandom": "Doctor Who Universe",
         "op_versions": [
             "Amy Pond"
         ],
@@ -2816,7 +2911,7 @@
         "title_prefix": null,
         "title_suffix": null
     },
-    "Doctor Who - Clara Oswin Oswald": {
+    "Doctor Who Universe - Clara Oswin Oswald": {
         "given_name": "Clara",
         "middle_name": "Oswin",
         "maiden_name": null,
@@ -2825,7 +2920,7 @@
         "nickname": null,
         "name_order": "W",
         "full_name": "Clara Oswin Oswald",
-        "fandom": "Doctor Who",
+        "fandom": "Doctor Who Universe",
         "op_versions": [
             "Clara Oswin Oswald"
         ],
@@ -2835,7 +2930,45 @@
         "title_prefix": null,
         "title_suffix": null
     },
-    "Doctor Who - Jenny Flint": {
+    "Doctor Who Universe - Ianto Jones": {
+        "given_name": "Ianto",
+        "middle_name": null,
+        "maiden_name": null,
+        "surname": "Jones",
+        "alias": null,
+        "nickname": null,
+        "name_order": "W",
+        "full_name": "Ianto Jones",
+        "fandom": "Doctor Who Universe",
+        "op_versions": [
+            "Ianto Jones"
+        ],
+        "gender": "M",
+        "race": "White",
+        "rpf_or_fic": "fictional",
+        "title_prefix": null,
+        "title_suffix": null
+    },
+    "Doctor Who Universe - Jack Harkness": {
+        "given_name": "Jack",
+        "middle_name": null,
+        "maiden_name": null,
+        "surname": "Harkness",
+        "alias": null,
+        "nickname": null,
+        "name_order": "W",
+        "full_name": "Jack Harkness",
+        "fandom": "Doctor Who Universe",
+        "op_versions": [
+            "Jack Harkness"
+        ],
+        "gender": "M",
+        "race": "White",
+        "rpf_or_fic": "fictional",
+        "title_prefix": null,
+        "title_suffix": null
+    },
+    "Doctor Who Universe - Jenny Flint": {
         "given_name": "Jenny",
         "middle_name": null,
         "maiden_name": null,
@@ -2844,7 +2977,7 @@
         "nickname": null,
         "name_order": "W",
         "full_name": "Jenny Flint",
-        "fandom": "Doctor Who",
+        "fandom": "Doctor Who Universe",
         "op_versions": [
             "Jenny Flint"
         ],
@@ -2854,7 +2987,7 @@
         "title_prefix": null,
         "title_suffix": null
     },
-    "Doctor Who - Madame Vastra": {
+    "Doctor Who Universe - Madame Vastra": {
         "given_name": null,
         "middle_name": null,
         "maiden_name": null,
@@ -2863,7 +2996,7 @@
         "nickname": null,
         "name_order": null,
         "full_name": "Madame Vastra",
-        "fandom": "Doctor Who",
+        "fandom": "Doctor Who Universe",
         "op_versions": [
             "Madame Vastra"
         ],
@@ -2873,7 +3006,7 @@
         "title_prefix": "Madame",
         "title_suffix": null
     },
-    "Doctor Who - Matt Smith": {
+    "Doctor Who Universe - Matt Smith": {
         "given_name": "Matt",
         "middle_name": null,
         "maiden_name": null,
@@ -2882,7 +3015,7 @@
         "nickname": null,
         "name_order": "W",
         "full_name": "Matt Smith",
-        "fandom": "Doctor Who",
+        "fandom": "Doctor Who Universe",
         "op_versions": [
             "Matt Smith"
         ],
@@ -2892,7 +3025,7 @@
         "title_prefix": null,
         "title_suffix": null
     },
-    "Doctor Who - River Song": {
+    "Doctor Who Universe - River Song": {
         "given_name": "River",
         "middle_name": null,
         "maiden_name": null,
@@ -2901,7 +3034,7 @@
         "nickname": null,
         "name_order": "W",
         "full_name": "River Song",
-        "fandom": "Doctor Who",
+        "fandom": "Doctor Who Universe",
         "op_versions": [
             "River Song"
         ],
@@ -2911,7 +3044,7 @@
         "title_prefix": null,
         "title_suffix": null
     },
-    "Doctor Who - Rory Williams": {
+    "Doctor Who Universe - Rory Williams": {
         "given_name": "Rory",
         "middle_name": null,
         "maiden_name": null,
@@ -2920,7 +3053,7 @@
         "nickname": null,
         "name_order": "W",
         "full_name": "Rory Williams",
-        "fandom": "Doctor Who",
+        "fandom": "Doctor Who Universe",
         "op_versions": [
             "Rory Williams"
         ],
@@ -2930,7 +3063,7 @@
         "title_prefix": null,
         "title_suffix": null
     },
-    "Doctor Who - Rose Tyler": {
+    "Doctor Who Universe - Rose Tyler": {
         "given_name": "Rose",
         "middle_name": null,
         "maiden_name": null,
@@ -2939,7 +3072,7 @@
         "nickname": null,
         "name_order": "W",
         "full_name": "Rose Tyler",
-        "fandom": "Doctor Who",
+        "fandom": "Doctor Who Universe",
         "op_versions": [
             "Rose Tyler"
         ],
@@ -2949,7 +3082,7 @@
         "title_prefix": null,
         "title_suffix": null
     },
-    "Doctor Who - The Doctor": {
+    "Doctor Who Universe - The Doctor": {
         "given_name": null,
         "middle_name": null,
         "maiden_name": null,
@@ -2958,7 +3091,7 @@
         "nickname": null,
         "name_order": null,
         "full_name": "The Doctor",
-        "fandom": "Doctor Who",
+        "fandom": "Doctor Who Universe",
         "op_versions": [
             "The Doctor"
         ],
@@ -2968,7 +3101,7 @@
         "title_prefix": "The",
         "title_suffix": null
     },
-    "Doctor Who - The Eleventh Doctor": {
+    "Doctor Who Universe - The Eleventh Doctor": {
         "given_name": null,
         "middle_name": null,
         "maiden_name": null,
@@ -2977,7 +3110,7 @@
         "nickname": null,
         "name_order": null,
         "full_name": "The Eleventh Doctor",
-        "fandom": "Doctor Who",
+        "fandom": "Doctor Who Universe",
         "op_versions": [
             "Eleventh Doctor"
         ],
@@ -2987,7 +3120,7 @@
         "title_prefix": "The Eleventh",
         "title_suffix": null
     },
-    "Doctor Who - The Ninth Doctor": {
+    "Doctor Who Universe - The Ninth Doctor": {
         "given_name": null,
         "middle_name": null,
         "maiden_name": null,
@@ -2996,7 +3129,7 @@
         "nickname": null,
         "name_order": null,
         "full_name": "The Ninth Doctor",
-        "fandom": "Doctor Who",
+        "fandom": "Doctor Who Universe",
         "op_versions": [
             "Ninth Doctor"
         ],
@@ -3006,7 +3139,7 @@
         "title_prefix": "The Ninth",
         "title_suffix": null
     },
-    "Doctor Who - The Tenth Doctor": {
+    "Doctor Who Universe - The Tenth Doctor": {
         "given_name": null,
         "middle_name": null,
         "maiden_name": null,
@@ -3015,7 +3148,7 @@
         "nickname": null,
         "name_order": null,
         "full_name": "The Tenth Doctor",
-        "fandom": "Doctor Who",
+        "fandom": "Doctor Who Universe",
         "op_versions": [
             "Tenth Doctor",
             "Tenth Doctor (duplicate)"
@@ -3026,7 +3159,7 @@
         "title_prefix": "The Tenth",
         "title_suffix": null
     },
-    "Doctor Who - The Thirteenth Doctor": {
+    "Doctor Who Universe - The Thirteenth Doctor": {
         "given_name": null,
         "middle_name": null,
         "maiden_name": null,
@@ -3035,7 +3168,7 @@
         "nickname": null,
         "name_order": null,
         "full_name": "The Thirteenth Doctor",
-        "fandom": "Doctor Who",
+        "fandom": "Doctor Who Universe",
         "op_versions": [
             "Thirteenth Doctor"
         ],
@@ -3045,7 +3178,7 @@
         "title_prefix": "The Thirteenth",
         "title_suffix": null
     },
-    "Doctor Who - The Twelfth Doctor": {
+    "Doctor Who Universe - The Twelfth Doctor": {
         "given_name": null,
         "middle_name": null,
         "maiden_name": null,
@@ -3054,7 +3187,7 @@
         "nickname": null,
         "name_order": null,
         "full_name": "The Twelfth Doctor",
-        "fandom": "Doctor Who",
+        "fandom": "Doctor Who Universe",
         "op_versions": [
             "Twelfth Doctor"
         ],
@@ -3064,7 +3197,7 @@
         "title_prefix": "The Twelfth",
         "title_suffix": null
     },
-    "Doctor Who - Yasmin Khan": {
+    "Doctor Who Universe - Yasmin Khan": {
         "given_name": "Yasmin",
         "middle_name": null,
         "maiden_name": null,
@@ -3073,7 +3206,7 @@
         "nickname": null,
         "name_order": "W",
         "full_name": "Yasmin Khan",
-        "fandom": "Doctor Who",
+        "fandom": "Doctor Who Universe",
         "op_versions": [
             "Yasmin Khan"
         ],
@@ -3747,6 +3880,44 @@
         "gender": "M",
         "race": "Black (Multi)",
         "rpf_or_fic": "RPF",
+        "title_prefix": null,
+        "title_suffix": null
+    },
+    "Faraway Wanderers / Word of Honor | \u5929\u6daf\u5ba2 / \u5c71\u6cb3\u4ee4 - Wen Kexing": {
+        "given_name": "Kexing",
+        "middle_name": null,
+        "maiden_name": null,
+        "surname": "Wen",
+        "alias": null,
+        "nickname": null,
+        "name_order": "E",
+        "full_name": "Wen Kexing",
+        "fandom": "Faraway Wanderers / Word of Honor | \u5929\u6daf\u5ba2 / \u5c71\u6cb3\u4ee4",
+        "op_versions": [
+            "Wen Kexing"
+        ],
+        "gender": "M",
+        "race": "E Asian",
+        "rpf_or_fic": "fictional",
+        "title_prefix": null,
+        "title_suffix": null
+    },
+    "Faraway Wanderers / Word of Honor | \u5929\u6daf\u5ba2 / \u5c71\u6cb3\u4ee4 - Zhou Zishu": {
+        "given_name": "Zishu",
+        "middle_name": null,
+        "maiden_name": null,
+        "surname": "Zhou",
+        "alias": null,
+        "nickname": null,
+        "name_order": "E",
+        "full_name": "Zhou Zishu",
+        "fandom": "Faraway Wanderers / Word of Honor | \u5929\u6daf\u5ba2 / \u5c71\u6cb3\u4ee4",
+        "op_versions": [
+            "Zhou Zishu"
+        ],
+        "gender": "M",
+        "race": "E Asian",
+        "rpf_or_fic": "fictional",
         "title_prefix": null,
         "title_suffix": null
     },
@@ -7326,7 +7497,7 @@
         "title_prefix": null,
         "title_suffix": null
     },
-    "KAT-TUN - Akanishi Jin": {
+    "KAT-TUN | \u30ab\u30c8\u30a5\u30fc\u30f3 - Akanishi Jin": {
         "given_name": "Jin",
         "middle_name": null,
         "maiden_name": null,
@@ -7335,7 +7506,7 @@
         "nickname": null,
         "name_order": "E",
         "full_name": "Akanishi Jin",
-        "fandom": "KAT-TUN",
+        "fandom": "KAT-TUN | \u30ab\u30c8\u30a5\u30fc\u30f3",
         "op_versions": [
             "Akanishi Jin"
         ],
@@ -7345,7 +7516,7 @@
         "title_prefix": null,
         "title_suffix": null
     },
-    "KAT-TUN - Kamenashi Kazuya": {
+    "KAT-TUN | \u30ab\u30c8\u30a5\u30fc\u30f3 - Kamenashi Kazuya": {
         "given_name": "Kazuya",
         "middle_name": null,
         "maiden_name": null,
@@ -7354,7 +7525,7 @@
         "nickname": null,
         "name_order": "E",
         "full_name": "Kamenashi Kazuya",
-        "fandom": "KAT-TUN",
+        "fandom": "KAT-TUN | \u30ab\u30c8\u30a5\u30fc\u30f3",
         "op_versions": [
             "Kamenashi Kazuya"
         ],
@@ -9655,6 +9826,82 @@
         "title_prefix": null,
         "title_suffix": null
     },
+    "Mortal Instruments - Alec Lightwood": {
+        "given_name": "Alec",
+        "middle_name": null,
+        "maiden_name": null,
+        "surname": "Lightwood",
+        "alias": null,
+        "nickname": null,
+        "name_order": "W",
+        "full_name": "Alec Lightwood",
+        "fandom": "Mortal Instruments",
+        "op_versions": [
+            "Alec Lightwood"
+        ],
+        "gender": "M",
+        "race": "White",
+        "rpf_or_fic": "fictional",
+        "title_prefix": null,
+        "title_suffix": null
+    },
+    "Mortal Instruments - Clary Fray": {
+        "given_name": "Clary",
+        "middle_name": null,
+        "maiden_name": null,
+        "surname": "Fray",
+        "alias": null,
+        "nickname": null,
+        "name_order": "W",
+        "full_name": "Clary Fray",
+        "fandom": "Mortal Instruments",
+        "op_versions": [
+            "Clary Fray"
+        ],
+        "gender": "F",
+        "race": "White",
+        "rpf_or_fic": "fictional",
+        "title_prefix": null,
+        "title_suffix": null
+    },
+    "Mortal Instruments - Isabelle Lightwood": {
+        "given_name": "Isabelle",
+        "middle_name": null,
+        "maiden_name": null,
+        "surname": "Lightwood",
+        "alias": null,
+        "nickname": null,
+        "name_order": "W",
+        "full_name": "Isabelle Lightwood",
+        "fandom": "Mortal Instruments",
+        "op_versions": [
+            "Isabelle Lightwood"
+        ],
+        "gender": "F",
+        "race": "Ambig",
+        "rpf_or_fic": "fictional",
+        "title_prefix": null,
+        "title_suffix": null
+    },
+    "Mortal Instruments - Magnus Bane": {
+        "given_name": "Magnus",
+        "middle_name": null,
+        "maiden_name": null,
+        "surname": "Bane",
+        "alias": null,
+        "nickname": null,
+        "name_order": "W",
+        "full_name": "Magnus Bane",
+        "fandom": "Mortal Instruments",
+        "op_versions": [
+            "Magnus Bane"
+        ],
+        "gender": "M",
+        "race": "E Asian",
+        "rpf_or_fic": "fictional",
+        "title_prefix": null,
+        "title_suffix": null
+    },
     "Motherland - Raelle Collar": {
         "given_name": "Raelle",
         "middle_name": null,
@@ -11371,7 +11618,7 @@
         "title_prefix": null,
         "title_suffix": null
     },
-    "Persona - Amamiya Ren | Player Character": {
+    "Persona - Amamiya Ren | Joker | Player Character": {
         "given_name": "Ren",
         "middle_name": null,
         "maiden_name": null,
@@ -11379,7 +11626,7 @@
         "alias": "Player Character",
         "nickname": null,
         "name_order": "E",
-        "full_name": "Amamiya Ren | Player Character",
+        "full_name": "Amamiya Ren | Joker | Player Character",
         "fandom": "Persona",
         "op_versions": [
             "Persona 5 Protagonist"
@@ -11388,7 +11635,7 @@
         "race": "E Asian",
         "rpf_or_fic": "fictional",
         "title_prefix": null,
-        "title_suffix": null
+        "title_suffix": "| Joker"
     },
     "Persona - Satonaka Chie": {
         "given_name": "Chie",
@@ -11789,101 +12036,6 @@
         "gender": "F",
         "race": "E Asian",
         "rpf_or_fic": "RPF",
-        "title_prefix": null,
-        "title_suffix": null
-    },
-    "Riverdale - Betty Cooper": {
-        "given_name": "Betty",
-        "middle_name": null,
-        "maiden_name": null,
-        "surname": "Cooper",
-        "alias": null,
-        "nickname": null,
-        "name_order": "W",
-        "full_name": "Betty Cooper",
-        "fandom": "Riverdale",
-        "op_versions": [
-            "Betty Cooper"
-        ],
-        "gender": "F",
-        "race": "White",
-        "rpf_or_fic": "fictional",
-        "title_prefix": null,
-        "title_suffix": null
-    },
-    "Riverdale - Cheryl Blossom": {
-        "given_name": "Cheryl",
-        "middle_name": null,
-        "maiden_name": null,
-        "surname": "Blossom",
-        "alias": null,
-        "nickname": null,
-        "name_order": "W",
-        "full_name": "Cheryl Blossom",
-        "fandom": "Riverdale",
-        "op_versions": [
-            "Cheryl Blossom"
-        ],
-        "gender": "F",
-        "race": "White",
-        "rpf_or_fic": "fictional",
-        "title_prefix": null,
-        "title_suffix": null
-    },
-    "Riverdale - Jughead Jones": {
-        "given_name": "Jughead",
-        "middle_name": null,
-        "maiden_name": null,
-        "surname": "Jones",
-        "alias": null,
-        "nickname": null,
-        "name_order": "W",
-        "full_name": "Jughead Jones",
-        "fandom": "Riverdale",
-        "op_versions": [
-            "Jughead Jones"
-        ],
-        "gender": "M",
-        "race": "White",
-        "rpf_or_fic": "fictional",
-        "title_prefix": null,
-        "title_suffix": null
-    },
-    "Riverdale - Toni Topaz": {
-        "given_name": "Toni",
-        "middle_name": null,
-        "maiden_name": null,
-        "surname": "Topaz",
-        "alias": null,
-        "nickname": null,
-        "name_order": "W",
-        "full_name": "Toni Topaz",
-        "fandom": "Riverdale",
-        "op_versions": [
-            "Toni Topaz"
-        ],
-        "gender": "F",
-        "race": "Black (Multi)",
-        "rpf_or_fic": "fictional",
-        "title_prefix": null,
-        "title_suffix": null
-    },
-    "Riverdale - Veronica Lodge": {
-        "given_name": "Veronica",
-        "middle_name": null,
-        "maiden_name": null,
-        "surname": "Lodge",
-        "alias": null,
-        "nickname": null,
-        "name_order": "W",
-        "full_name": "Veronica Lodge",
-        "fandom": "Riverdale",
-        "op_versions": [
-            "Veronica Lodge"
-        ],
-        "gender": "F",
-        "race": "Latin",
-        "rpf_or_fic": "fictional",
         "title_prefix": null,
         "title_suffix": null
     },
@@ -12301,82 +12453,6 @@
         ],
         "gender": "F",
         "race": "E Asian (Multi)",
-        "rpf_or_fic": "fictional",
-        "title_prefix": null,
-        "title_suffix": null
-    },
-    "Shadowhunters | Mortal Instruments - Alec Lightwood": {
-        "given_name": "Alec",
-        "middle_name": null,
-        "maiden_name": null,
-        "surname": "Lightwood",
-        "alias": null,
-        "nickname": null,
-        "name_order": "W",
-        "full_name": "Alec Lightwood",
-        "fandom": "Shadowhunters | Mortal Instruments",
-        "op_versions": [
-            "Alec Lightwood"
-        ],
-        "gender": "M",
-        "race": "White",
-        "rpf_or_fic": "fictional",
-        "title_prefix": null,
-        "title_suffix": null
-    },
-    "Shadowhunters | Mortal Instruments - Clary Fray": {
-        "given_name": "Clary",
-        "middle_name": null,
-        "maiden_name": null,
-        "surname": "Fray",
-        "alias": null,
-        "nickname": null,
-        "name_order": "W",
-        "full_name": "Clary Fray",
-        "fandom": "Shadowhunters | Mortal Instruments",
-        "op_versions": [
-            "Clary Fray"
-        ],
-        "gender": "F",
-        "race": "White",
-        "rpf_or_fic": "fictional",
-        "title_prefix": null,
-        "title_suffix": null
-    },
-    "Shadowhunters | Mortal Instruments - Isabelle Lightwood": {
-        "given_name": "Isabelle",
-        "middle_name": null,
-        "maiden_name": null,
-        "surname": "Lightwood",
-        "alias": null,
-        "nickname": null,
-        "name_order": "W",
-        "full_name": "Isabelle Lightwood",
-        "fandom": "Shadowhunters | Mortal Instruments",
-        "op_versions": [
-            "Isabelle Lightwood"
-        ],
-        "gender": "F",
-        "race": "Ambig",
-        "rpf_or_fic": "fictional",
-        "title_prefix": null,
-        "title_suffix": null
-    },
-    "Shadowhunters | Mortal Instruments - Magnus Bane": {
-        "given_name": "Magnus",
-        "middle_name": null,
-        "maiden_name": null,
-        "surname": "Bane",
-        "alias": null,
-        "nickname": null,
-        "name_order": "W",
-        "full_name": "Magnus Bane",
-        "fandom": "Shadowhunters | Mortal Instruments",
-        "op_versions": [
-            "Magnus Bane"
-        ],
-        "gender": "M",
-        "race": "E Asian",
         "rpf_or_fic": "fictional",
         "title_prefix": null,
         "title_suffix": null
@@ -16118,44 +16194,6 @@
         "title_prefix": null,
         "title_suffix": null
     },
-    "Torchwood - Ianto Jones": {
-        "given_name": "Ianto",
-        "middle_name": null,
-        "maiden_name": null,
-        "surname": "Jones",
-        "alias": null,
-        "nickname": null,
-        "name_order": "W",
-        "full_name": "Ianto Jones",
-        "fandom": "Torchwood",
-        "op_versions": [
-            "Ianto Jones"
-        ],
-        "gender": "M",
-        "race": "White",
-        "rpf_or_fic": "fictional",
-        "title_prefix": null,
-        "title_suffix": null
-    },
-    "Torchwood - Jack Harkness": {
-        "given_name": "Jack",
-        "middle_name": null,
-        "maiden_name": null,
-        "surname": "Harkness",
-        "alias": null,
-        "nickname": null,
-        "name_order": "W",
-        "full_name": "Jack Harkness",
-        "fandom": "Torchwood",
-        "op_versions": [
-            "Jack Harkness"
-        ],
-        "gender": "M",
-        "race": "White",
-        "rpf_or_fic": "fictional",
-        "title_prefix": null,
-        "title_suffix": null
-    },
     "Trigun Universe | \u30c8\u30e9\u30a4\u30ac\u30f3 - Nicholas D. Wolfwood": {
         "given_name": "Nicholas",
         "middle_name": "D.",
@@ -16877,44 +16915,6 @@
         "gender": "F",
         "race": "White",
         "rpf_or_fic": "RPF",
-        "title_prefix": null,
-        "title_suffix": null
-    },
-    "Word of Honor | \u5c71\u6cb3\u4ee4 - Wen Kexing": {
-        "given_name": "Kexing",
-        "middle_name": null,
-        "maiden_name": null,
-        "surname": "Wen",
-        "alias": null,
-        "nickname": null,
-        "name_order": "E",
-        "full_name": "Wen Kexing",
-        "fandom": "Word of Honor | \u5c71\u6cb3\u4ee4",
-        "op_versions": [
-            "Wen Kexing"
-        ],
-        "gender": "M",
-        "race": "E Asian",
-        "rpf_or_fic": "fictional",
-        "title_prefix": null,
-        "title_suffix": null
-    },
-    "Word of Honor | \u5c71\u6cb3\u4ee4 - Zhou Zishu": {
-        "given_name": "Zishu",
-        "middle_name": null,
-        "maiden_name": null,
-        "surname": "Zhou",
-        "alias": null,
-        "nickname": null,
-        "name_order": "E",
-        "full_name": "Zhou Zishu",
-        "fandom": "Word of Honor | \u5c71\u6cb3\u4ee4",
-        "op_versions": [
-            "Zhou Zishu"
-        ],
-        "gender": "M",
-        "race": "E Asian",
-        "rpf_or_fic": "fictional",
         "title_prefix": null,
         "title_suffix": null
     },

@@ -38,6 +38,13 @@ Caitlyn,None,None,None,None,None,None,None,None,Caitlyn,Arcane,F,Asian (Multi),f
 Jayce,None,None,None,None,None,None,None,None,Jayce,Arcane,M,Ambig,fictional
 Vi,None,None,None,None,None,None,None,None,Vi,Arcane,F,White,fictional
 Viktor,None,None,None,None,None,None,None,None,Viktor,Arcane,M,White,fictional
+Betty,None,None,Cooper,None,None,None,None,W,Betty Cooper,Archie Comics Universe,F,White,fictional
+Cheryl,None,None,Blossom,None,None,None,None,W,Cheryl Blossom,Archie Comics Universe,F,White,fictional
+Jughead,None,None,Jones,None,None,None,None,W,Jughead Jones,Archie Comics Universe,M,White,fictional
+Mary,None,None,Wardwell,Madam Satan / Lilith,None,None,None,None,Mary Wardwell | Madam Satan / Lilith,Archie Comics Universe,F,White,fictional
+Toni,None,None,Topaz,None,None,None,None,W,Toni Topaz,Archie Comics Universe,F,Black (Multi),fictional
+Veronica,None,None,Lodge,None,None,None,None,W,Veronica Lodge,Archie Comics Universe,F,Latin,fictional
+Zelda,None,None,Spellman,None,None,None,None,W,Zelda Spellman,Archie Comics Universe,F,White,fictional
 Annie,None,None,Leonhart,None,None,None,None,W,Annie Leonhart,Attack on Titan | 進撃の巨人,F,White,fictional
 Eren,None,None,Yeager,None,None,None,None,W,Eren Yeager,Attack on Titan | 進撃の巨人,M,White,fictional
 Erwin,None,None,Smith,None,None,None,None,W,Erwin Smith,Attack on Titan | 進撃の巨人,M,White,fictional
@@ -98,8 +105,6 @@ Kate,None,None,Beckett,None,None,None,None,W,Kate Beckett,Castle,F,White,fiction
 Richard,None,None,Castle,None,None,None,None,W,Richard Castle,Castle,M,White,fictional
 Eric,None,None,Bittle,None,None,None,None,W,Eric Bittle,Check Please!,M,White,fictional
 Jack,None,None,Zimmermann,None,None,None,None,W,Jack Zimmermann,Check Please!,M,White,fictional
-Mary,None,None,Wardwell,Madam Satan / Lilith,None,None,None,None,Mary Wardwell | Madam Satan / Lilith,Chilling Adventures of Sabrina,F,White,fictional
-Zelda,None,None,Spellman,None,None,None,None,W,Zelda Spellman,Chilling Adventures of Sabrina,F,White,fictional
 Aaron,None,None,Hotchner,None,None,None,None,W,Aaron Hotchner,Criminal Minds,M,White,fictional
 Derek,None,None,Morgan,None,None,None,None,W,Derek Morgan,Criminal Minds,M,Black,fictional
 Emily,None,None,Prentiss,None,None,None,None,W,Emily Prentiss,Criminal Minds,F,White,fictional
@@ -135,32 +140,34 @@ Pamela,None,None,Isley,Poison Ivy,None,None,None,W,Pamela Isley | Poison Ivy,DC,
 Samantha,None,None,Arias,Reign,Sam,None,None,W,Samantha 'Sam' Arias | Reign,DC,F,Latin,fictional
 Sara,None,None,Lance,White Canary,None,None,None,W,Sara Lance | White Canary,DC,F,White,fictional
 Tim,None,None,Drake,Robin/Red Robin,None,None,None,W,Tim Drake | Robin/Red Robin,DC,M,White,fictional
-Hajime,None,None,Hinata,None,None,None,None,E,Hinata Hajime,Dangan Ronpa,M,E Asian,fictional
-Nagito,None,None,Komaeda,None,None,None,None,E,Komaeda Nagito,Dangan Ronpa,M,E Asian,fictional
-Kokichi,None,None,Oma,None,None,None,None,E,Oma Kokichi,Dangan Ronpa,M,E Asian,fictional
-Shuichi,None,None,Saihara,None,None,None,None,E,Saihara Shuichi,Dangan Ronpa,M,E Asian,fictional
+Hajime,None,None,Hinata,None,None,None,None,E,Hinata Hajime,Danganronpa,M,E Asian,fictional
+Nagito,None,None,Komaeda,None,None,None,None,E,Komaeda Nagito,Danganronpa,M,E Asian,fictional
+Kokichi,None,None,Oma,None,None,None,None,E,Oma Kokichi,Danganronpa,M,E Asian,fictional
+Shuichi,None,None,Saihara,None,None,None,None,E,Saihara Shuichi,Danganronpa,M,E Asian,fictional
 Evie,None,None,None,None,None,None,None,None,Evie,Descendants,F,Latin,fictional
 Mal,None,None,None,None,None,None,None,None,Mal,Descendants,F,White,fictional
 Connor (RK800),None,None,None,None,None,None,None,None,Connor (RK800),Detroit: Become Human,M,White,fictional
 Connor (RK900),None,None,None,None,None,None,None,None,Connor (RK900),Detroit: Become Human,M,White,fictional
 Gavin,None,None,Reed,None,None,None,None,W,Gavin Reed,Detroit: Become Human,M,White,fictional
 Hank,None,None,Anderson,None,None,None,None,W,Hank Anderson,Detroit: Become Human,M,White,fictional
-Alex,None,None,Kingston,None,None,None,None,W,Alex Kingston,Doctor Who,F,White,RPF
-Amy,None,None,Pond,None,None,None,None,W,Amy Pond,Doctor Who,F,White,fictional
-Clara,Oswin,None,Oswald,None,None,None,None,W,Clara Oswin Oswald,Doctor Who,F,White,fictional
-Jenny,None,None,Flint,None,None,None,None,W,Jenny Flint,Doctor Who,F,White,fictional
-None,None,None,Vastra,None,None,Madame,None,None,Madame Vastra,Doctor Who,F,N.H.,fictional
-Matt,None,None,Smith,None,None,None,None,W,Matt Smith,Doctor Who,M,White,RPF
-River,None,None,Song,None,None,None,None,W,River Song,Doctor Who,F,White,fictional
-Rory,None,None,Williams,None,None,None,None,W,Rory Williams,Doctor Who,M,White,fictional
-Rose,None,None,Tyler,None,None,None,None,W,Rose Tyler,Doctor Who,F,White,fictional
-None,None,None,None,Doctor,None,The,None,None,The Doctor,Doctor Who,M,White,fictional
-None,None,None,None,Doctor,None,The Eleventh,None,None,The Eleventh Doctor,Doctor Who,M,White,fictional
-None,None,None,None,Doctor,None,The Ninth,None,None,The Ninth Doctor,Doctor Who,M,White,fictional
-None,None,None,None,Doctor,None,The Tenth,None,None,The Tenth Doctor,Doctor Who,M,White,fictional
-None,None,None,None,Doctor,None,The Thirteenth,None,None,The Thirteenth Doctor,Doctor Who,F,White,fictional
-None,None,None,None,Doctor,None,The Twelfth,None,None,The Twelfth Doctor,Doctor Who,M,White,fictional
-Yasmin,None,None,Khan,None,None,None,None,W,Yasmin Khan,Doctor Who,F,S Asian,fictional
+Alex,None,None,Kingston,None,None,None,None,W,Alex Kingston,Doctor Who Universe,F,White,RPF
+Amy,None,None,Pond,None,None,None,None,W,Amy Pond,Doctor Who Universe,F,White,fictional
+Clara,Oswin,None,Oswald,None,None,None,None,W,Clara Oswin Oswald,Doctor Who Universe,F,White,fictional
+Ianto,None,None,Jones,None,None,None,None,W,Ianto Jones,Doctor Who Universe,M,White,fictional
+Jack,None,None,Harkness,None,None,None,None,W,Jack Harkness,Doctor Who Universe,M,White,fictional
+Jenny,None,None,Flint,None,None,None,None,W,Jenny Flint,Doctor Who Universe,F,White,fictional
+None,None,None,Vastra,None,None,Madame,None,None,Madame Vastra,Doctor Who Universe,F,N.H.,fictional
+Matt,None,None,Smith,None,None,None,None,W,Matt Smith,Doctor Who Universe,M,White,RPF
+River,None,None,Song,None,None,None,None,W,River Song,Doctor Who Universe,F,White,fictional
+Rory,None,None,Williams,None,None,None,None,W,Rory Williams,Doctor Who Universe,M,White,fictional
+Rose,None,None,Tyler,None,None,None,None,W,Rose Tyler,Doctor Who Universe,F,White,fictional
+None,None,None,None,Doctor,None,The,None,None,The Doctor,Doctor Who Universe,M,White,fictional
+None,None,None,None,Doctor,None,The Eleventh,None,None,The Eleventh Doctor,Doctor Who Universe,M,White,fictional
+None,None,None,None,Doctor,None,The Ninth,None,None,The Ninth Doctor,Doctor Who Universe,M,White,fictional
+None,None,None,None,Doctor,None,The Tenth,None,None,The Tenth Doctor,Doctor Who Universe,M,White,fictional
+None,None,None,None,Doctor,None,The Thirteenth,None,None,The Thirteenth Doctor,Doctor Who Universe,F,White,fictional
+None,None,None,None,Doctor,None,The Twelfth,None,None,The Twelfth Doctor,Doctor Who Universe,M,White,fictional
+Yasmin,None,None,Khan,None,None,None,None,W,Yasmin Khan,Doctor Who Universe,F,S Asian,fictional
 Brooke,Lynn,None,Hytes,None,None,None,None,W,Brooke Lynn Hytes,Drag,M | F | Other,White,RPF
 Katya,None,None,Zamolodchikova,None,None,None,None,W,Katya Zamolodchikova,Drag,M | F | Other,White,RPF
 Trixie,None,None,Mattel,None,None,None,None,W,Trixie Mattel,Drag,M | F | Other,Am Ind,RPF
@@ -196,6 +203,8 @@ Amy,None,None,Raudenfeld,None,None,None,None,W,Amy Raudenfeld,Faking It,F,White,
 Karma,None,None,Ashcroft,None,None,None,None,W,Karma Ashcroft,Faking It,F,White,fictional
 Patrick,None,None,Stump,None,None,None,None,W,Patrick Stump,Fall Out Boy,M,White,RPF
 Pete,None,None,Wentz,None,None,None,None,W,Pete Wentz,Fall Out Boy,M,Black (Multi),RPF
+Kexing,None,None,Wen,None,None,None,None,E,Wen Kexing,Faraway Wanderers / Word of Honor | 天涯客 / 山河令,M,E Asian,fictional
+Zishu,None,None,Zhou,None,None,None,None,E,Zhou Zishu,Faraway Wanderers / Word of Honor | 天涯客 / 山河令,M,E Asian,fictional
 Camila,None,None,Cabello,None,None,None,None,W,Camila Cabello,Fifth Harmony,F,Latin,RPF
 Lauren,None,None,Jauregui,None,None,None,None,W,Lauren Jauregui,Fifth Harmony,F,Latin,RPF
 Jin,None,None,Boyang,None,None,None,None,E,Boyang Jin,Figure Skating,M,E Asian,RPF
@@ -384,8 +393,8 @@ Alex,None,None,Mercer,None,None,None,None,W,Alex Mercer,Julie and The Phantoms,M
 Julie,None,None,Molina,None,None,None,None,W,Julie Molina,Julie and The Phantoms,F,Latin,fictional
 Luke,None,None,Patterson,None,None,None,None,W,Luke Patterson,Julie and The Phantoms,M,White,fictional
 Willie,None,None,None,None,None,None,None,None,Willie,Julie and The Phantoms,M,Am Ind / E Asian (Multi),fictional
-Jin,None,None,Akanishi,None,None,None,None,E,Akanishi Jin,KAT-TUN,M,E Asian,RPF
-Kazuya,None,None,Kamenashi,None,None,None,None,E,Kamenashi Kazuya,KAT-TUN,M,E Asian,RPF
+Jin,None,None,Akanishi,None,None,None,None,E,Akanishi Jin,KAT-TUN | カトゥーン,M,E Asian,RPF
+Kazuya,None,None,Kamenashi,None,None,None,None,E,Kamenashi Kazuya,KAT-TUN | カトゥーン,M,E Asian,RPF
 Satsuki,None,None,Kiryuuin,None,None,None,None,E,Kiryuuin Satsuki,Kill la Kill | キルラキル,F,E Asian,fictional
 Ryuuko,None,None,Matoi,None,None,None,None,E,Matoi Ryuuko,Kill la Kill | キルラキル,F,E Asian,fictional
 Eve,None,None,Polastri,None,None,None,None,W,Eve Polastri,Killing Eve,F,E Asian,fictional
@@ -506,6 +515,10 @@ Marinette,None,None,Dupain-Cheng,Ladybug,None,None,None,W,Marinette Dupain-Cheng
 Rose,None,None,Lavillant,Princess Fragrance,None,None,None,W,Rose Lavillant | Princess Fragrance,Miraculous: Tales of Ladybug & Cat Noir | Miraculous: Les Aventures de Ladybug et Chat Noir,F,White,fictional
 Duo,None,None,Maxwell,None,None,None,None,W,Duo Maxwell,Mobile Suit Gundam Wing | 新機動戦記ガンダム W,M,White,fictional
 Heero,None,None,Yuy,None,None,None,None,W,Heero Yuy,Mobile Suit Gundam Wing | 新機動戦記ガンダム W,M,White,fictional
+Alec,None,None,Lightwood,None,None,None,None,W,Alec Lightwood,Mortal Instruments,M,White,fictional
+Clary,None,None,Fray,None,None,None,None,W,Clary Fray,Mortal Instruments,F,White,fictional
+Isabelle,None,None,Lightwood,None,None,None,None,W,Isabelle Lightwood,Mortal Instruments,F,Ambig,fictional
+Magnus,None,None,Bane,None,None,None,None,W,Magnus Bane,Mortal Instruments,M,E Asian,fictional
 Raelle,None,None,Collar,None,None,None,None,W,Raelle Collar,Motherland,F,White,fictional
 Scylla,None,None,Ramshorn,None,None,None,None,W,Scylla Ramshorn,Motherland,F,White,fictional
 Frank,None,None,Iero,None,None,None,None,None,Frank Iero,My Chemical Romance,M,White,RPF
@@ -596,7 +609,7 @@ Samantha,None,None,Groves,Root,None,None,None,W,Samantha Groves | Root,Person of
 Sameen,None,None,Shaw,None,None,None,None,W,Sameen Shaw,Person of Interest,F,MENA (Multi),fictional
 Goro,None,None,Akechi,None,None,None,None,E,Akechi Goro,Persona,M,E Asian,fictional
 Yukiko,None,None,Amagi,None,None,None,None,E,Amagi Yukiko,Persona,F,E Asian,fictional
-Ren,None,None,Amamiya,Player Character,None,None,None,E,Amamiya Ren | Player Character,Persona,M,E Asian,fictional
+Ren,None,None,Amamiya,Player Character,None,None,| Joker,E,Amamiya Ren | Joker | Player Character,Persona,M,E Asian,fictional
 Chie,None,None,Satonaka,None,None,None,None,E,Satonaka Chie,Persona,F,E Asian,fictional
 Beca,None,None,Mitchell,None,None,None,None,W,Beca Mitchell,Pitch Perfect,F,White,fictional
 Chloe,None,None,Beale,None,None,None,None,None,Chloe Beale,Pitch Perfect,F,White,fictional
@@ -618,11 +631,6 @@ Adam,None,None,Parrish,None,None,None,None,W,Adam Parrish,Raven Cycle,M,White,fi
 Ronan,None,None,Lynch,None,None,None,None,W,Ronan Lynch,Raven Cycle,M,White,fictional
 Joohyun,None,None,Bae,Irene,None,None,None,E,Bae Joohyun | Irene,Red Velvet,F,E Asian,RPF
 Seulgi,None,None,Kang,Seulgi,None,None,None,E,Kang Seulgi | Seulgi,Red Velvet,F,E Asian,RPF
-Betty,None,None,Cooper,None,None,None,None,W,Betty Cooper,Riverdale,F,White,fictional
-Cheryl,None,None,Blossom,None,None,None,None,W,Cheryl Blossom,Riverdale,F,White,fictional
-Jughead,None,None,Jones,None,None,None,None,W,Jughead Jones,Riverdale,M,White,fictional
-Toni,None,None,Topaz,None,None,None,None,W,Toni Topaz,Riverdale,F,Black (Multi),fictional
-Veronica,None,None,Lodge,None,None,None,None,W,Veronica Lodge,Riverdale,F,Latin,fictional
 Jane,None,None,Rizzoli,None,None,None,None,W,Jane Rizzoli,Rizzoli & Isles,F,White,fictional
 Maura,None,None,Isles,None,None,None,None,W,Maura Isles,Rizzoli & Isles,F,White,fictional
 Gail,None,None,Peck,None,None,None,None,W,Gail Peck,Rookie Blue,F,White,fictional
@@ -645,10 +653,6 @@ Mikaela,None,None,Hyakuya,None,None,None,None,E,Hyakuya Mikaela,Seraph of the En
 Yuuichirou,None,None,Hyakuya,None,None,None,None,E,Hyakuya Yuuichirou,Seraph of the End | 終わりのセラフ,M,E Asian,fictional
 Aleksander,None,None,Morozova,The Darkling,None,None,None,W,Aleksander Morozova | The Darkling,Shadow and Bone,M,White,fictional
 Alina,None,None,Starkov,None,None,None,None,W,Alina Starkov,Shadow and Bone,F,E Asian (Multi),fictional
-Alec,None,None,Lightwood,None,None,None,None,W,Alec Lightwood,Shadowhunters | Mortal Instruments,M,White,fictional
-Clary,None,None,Fray,None,None,None,None,W,Clary Fray,Shadowhunters | Mortal Instruments,F,White,fictional
-Isabelle,None,None,Lightwood,None,None,None,None,W,Isabelle Lightwood,Shadowhunters | Mortal Instruments,F,Ambig,fictional
-Magnus,None,None,Bane,None,None,None,None,W,Magnus Bane,Shadowhunters | Mortal Instruments,M,E Asian,fictional
 Ian,None,None,Gallagher,None,None,None,None,W,Ian Gallagher,Shameless,M,White,fictional
 Mickey,None,None,Milkovich,None,None,None,None,W,Mickey Milkovich,Shameless,M,White,fictional
 Adora,None,None,None,None,None,None,None,None,Adora,She-Ra and the Princesses of Power,F,White,fictional
@@ -845,8 +849,6 @@ Bradley,None,None,Bradshaw,None,Rooster,None,None,W,Bradley 'Rooster' Bradshaw,T
 Jake,None,None,Seresin,None,Hangman,None,None,W,Jake 'Hangman' Seresin,Top Gun,M,White,fictional
 Pete,None,None,Mitchell,None,Maverick,None,None,W,Pete 'Maverick' Mitchell,Top Gun,M,White,fictional
 Tom,None,None,Kazansky,None,Iceman,None,None,W,Tom 'Iceman' Kazansky,Top Gun,M,White,fictional
-Ianto,None,None,Jones,None,None,None,None,W,Ianto Jones,Torchwood,M,White,fictional
-Jack,None,None,Harkness,None,None,None,None,W,Jack Harkness,Torchwood,M,White,fictional
 Nicholas,D.,None,Wolfwood,None,None,None,None,W,Nicholas D. Wolfwood,Trigun Universe | トライガン,M,Ambig,fictional
 Vash,None,None,None,None,None,None,the Stampede,None,Vash the Stampede,Trigun Universe | トライガン,M,Ambig,fictional
 Josh,None,None,Dun,None,None,None,None,W,Josh Dun,Twenty One Pilots,M,White,RPF
@@ -885,8 +887,6 @@ Christen,None,None,Press,None,None,None,None,W,Christen Press,Women's Soccer,F,B
 Hope,None,None,Solo,None,None,None,None,W,Hope Solo,Women's Soccer,F,White,RPF
 Kelley,None,None,O'Hara,None,None,None,None,W,Kelley O'Hara,Women's Soccer,F,White,RPF
 Tobin,None,None,Heath,None,None,None,None,W,Tobin Heath,Women's Soccer,F,White,RPF
-Kexing,None,None,Wen,None,None,None,None,E,Wen Kexing,Word of Honor | 山河令,M,E Asian,fictional
-Zishu,None,None,Zhou,None,None,None,None,E,Zhou Zishu,Word of Honor | 山河令,M,E Asian,fictional
 Nicole,None,None,Haught,None,None,None,None,W,Nicole Haught,Wynonna Earp,F,White,fictional
 Waverly,None,None,Earp,None,None,None,None,W,Waverly Earp,Wynonna Earp,F,White,fictional
 Gabrielle,None,None,None,None,None,None,None,None,Gabrielle,Xena,F,White,fictional

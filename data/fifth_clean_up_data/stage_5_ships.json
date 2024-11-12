@@ -732,6 +732,122 @@
             "White"
         ]
     },
+    "Betty Cooper x Jughead Jones": {
+        "slash_ship": "Betty Cooper x Jughead Jones",
+        "gen_ship": "Betty Cooper & Jughead Jones",
+        "members_no": 2,
+        "fandom": "Archie Comics Universe",
+        "rpf_or_fic": "fictional",
+        "members_list": [
+            {
+                "member_key": "Archie Comics Universe - Betty Cooper",
+                "member_gender": "F",
+                "member_race": "White",
+                "member_name": "Betty Cooper"
+            },
+            {
+                "member_key": "Archie Comics Universe - Jughead Jones",
+                "member_gender": "M",
+                "member_race": "White",
+                "member_name": "Jughead Jones"
+            }
+        ],
+        "gender_combo": [
+            "F",
+            "M"
+        ],
+        "race_combo": [
+            "White",
+            "White"
+        ]
+    },
+    "Betty Cooper x Veronica Lodge": {
+        "slash_ship": "Betty Cooper x Veronica Lodge",
+        "gen_ship": "Betty Cooper & Veronica Lodge",
+        "members_no": 2,
+        "fandom": "Archie Comics Universe",
+        "rpf_or_fic": "fictional",
+        "members_list": [
+            {
+                "member_key": "Archie Comics Universe - Betty Cooper",
+                "member_gender": "F",
+                "member_race": "White",
+                "member_name": "Betty Cooper"
+            },
+            {
+                "member_key": "Archie Comics Universe - Veronica Lodge",
+                "member_gender": "F",
+                "member_race": "Latin",
+                "member_name": "Veronica Lodge"
+            }
+        ],
+        "gender_combo": [
+            "F",
+            "F"
+        ],
+        "race_combo": [
+            "White",
+            "Latin"
+        ]
+    },
+    "Cheryl Blossom x Toni Topaz": {
+        "slash_ship": "Cheryl Blossom x Toni Topaz",
+        "gen_ship": "Cheryl Blossom & Toni Topaz",
+        "members_no": 2,
+        "fandom": "Archie Comics Universe",
+        "rpf_or_fic": "fictional",
+        "members_list": [
+            {
+                "member_key": "Archie Comics Universe - Cheryl Blossom",
+                "member_gender": "F",
+                "member_race": "White",
+                "member_name": "Cheryl Blossom"
+            },
+            {
+                "member_key": "Archie Comics Universe - Toni Topaz",
+                "member_gender": "F",
+                "member_race": "Black (Multi)",
+                "member_name": "Toni Topaz"
+            }
+        ],
+        "gender_combo": [
+            "F",
+            "F"
+        ],
+        "race_combo": [
+            "White",
+            "Black (Multi)"
+        ]
+    },
+    "Mary Wardwell | Madam Satan / Lilith x Zelda Spellman": {
+        "slash_ship": "Mary Wardwell | Madam Satan / Lilith x Zelda Spellman",
+        "gen_ship": "Mary Wardwell | Madam Satan / Lilith & Zelda Spellman",
+        "members_no": 2,
+        "fandom": "Archie Comics Universe",
+        "rpf_or_fic": "fictional",
+        "members_list": [
+            {
+                "member_key": "Archie Comics Universe - Mary Wardwell | Madam Satan / Lilith",
+                "member_gender": "F",
+                "member_race": "White",
+                "member_name": "Mary Wardwell | Madam Satan / Lilith"
+            },
+            {
+                "member_key": "Archie Comics Universe - Zelda Spellman",
+                "member_gender": "F",
+                "member_race": "White",
+                "member_name": "Zelda Spellman"
+            }
+        ],
+        "gender_combo": [
+            "F",
+            "F"
+        ],
+        "race_combo": [
+            "White",
+            "White"
+        ]
+    },
     "Annie Leonhart x Mikasa Ackerman": {
         "slash_ship": "Annie Leonhart x Mikasa Ackerman",
         "gen_ship": "Annie Leonhart & Mikasa Ackerman",
@@ -2045,35 +2161,6 @@
             "White"
         ]
     },
-    "Mary Wardwell | Madam Satan / Lilith x Zelda Spellman": {
-        "slash_ship": "Mary Wardwell | Madam Satan / Lilith x Zelda Spellman",
-        "gen_ship": "Mary Wardwell | Madam Satan / Lilith & Zelda Spellman",
-        "members_no": 2,
-        "fandom": "Chilling Adventures of Sabrina",
-        "rpf_or_fic": "fictional",
-        "members_list": [
-            {
-                "member_key": "Chilling Adventures of Sabrina - Mary Wardwell | Madam Satan / Lilith",
-                "member_gender": "F",
-                "member_race": "White",
-                "member_name": "Mary Wardwell | Madam Satan / Lilith"
-            },
-            {
-                "member_key": "Chilling Adventures of Sabrina - Zelda Spellman",
-                "member_gender": "F",
-                "member_race": "White",
-                "member_name": "Zelda Spellman"
-            }
-        ],
-        "gender_combo": [
-            "F",
-            "F"
-        ],
-        "race_combo": [
-            "White",
-            "White"
-        ]
-    },
     "Aaron Hotchner x Spencer Reid": {
         "slash_ship": "Aaron Hotchner x Spencer Reid",
         "gen_ship": "Aaron Hotchner & Spencer Reid",
@@ -2803,17 +2890,17 @@
         "slash_ship": "Hinata Hajime x Komaeda Nagito",
         "gen_ship": "Hinata Hajime & Komaeda Nagito",
         "members_no": 2,
-        "fandom": "Dangan Ronpa",
+        "fandom": "Danganronpa",
         "rpf_or_fic": "fictional",
         "members_list": [
             {
-                "member_key": "Dangan Ronpa - Hinata Hajime",
+                "member_key": "Danganronpa - Hinata Hajime",
                 "member_gender": "M",
                 "member_race": "E Asian",
                 "member_name": "Hinata Hajime"
             },
             {
-                "member_key": "Dangan Ronpa - Komaeda Nagito",
+                "member_key": "Danganronpa - Komaeda Nagito",
                 "member_gender": "M",
                 "member_race": "E Asian",
                 "member_name": "Komaeda Nagito"
@@ -2832,17 +2919,17 @@
         "slash_ship": "Oma Kokichi x Saihara Shuichi",
         "gen_ship": "Oma Kokichi & Saihara Shuichi",
         "members_no": 2,
-        "fandom": "Dangan Ronpa",
+        "fandom": "Danganronpa",
         "rpf_or_fic": "fictional",
         "members_list": [
             {
-                "member_key": "Dangan Ronpa - Oma Kokichi",
+                "member_key": "Danganronpa - Oma Kokichi",
                 "member_gender": "M",
                 "member_race": "E Asian",
                 "member_name": "Oma Kokichi"
             },
             {
-                "member_key": "Dangan Ronpa - Saihara Shuichi",
+                "member_key": "Danganronpa - Saihara Shuichi",
                 "member_gender": "M",
                 "member_race": "E Asian",
                 "member_name": "Saihara Shuichi"
@@ -2948,17 +3035,17 @@
         "slash_ship": "Alex Kingston x Matt Smith",
         "gen_ship": "Alex Kingston & Matt Smith",
         "members_no": 2,
-        "fandom": "Doctor Who",
+        "fandom": "Doctor Who Universe",
         "rpf_or_fic": "RPF",
         "members_list": [
             {
-                "member_key": "Doctor Who - Alex Kingston",
+                "member_key": "Doctor Who Universe - Alex Kingston",
                 "member_gender": "F",
                 "member_race": "White",
                 "member_name": "Alex Kingston"
             },
             {
-                "member_key": "Doctor Who - Matt Smith",
+                "member_key": "Doctor Who Universe - Matt Smith",
                 "member_gender": "M",
                 "member_race": "White",
                 "member_name": "Matt Smith"
@@ -2977,17 +3064,17 @@
         "slash_ship": "Amy Pond x Rory Williams",
         "gen_ship": "Amy Pond & Rory Williams",
         "members_no": 2,
-        "fandom": "Doctor Who",
+        "fandom": "Doctor Who Universe",
         "rpf_or_fic": "fictional",
         "members_list": [
             {
-                "member_key": "Doctor Who - Amy Pond",
+                "member_key": "Doctor Who Universe - Amy Pond",
                 "member_gender": "F",
                 "member_race": "White",
                 "member_name": "Amy Pond"
             },
             {
-                "member_key": "Doctor Who - Rory Williams",
+                "member_key": "Doctor Who Universe - Rory Williams",
                 "member_gender": "M",
                 "member_race": "White",
                 "member_name": "Rory Williams"
@@ -3006,17 +3093,17 @@
         "slash_ship": "Clara Oswin Oswald x The Twelfth Doctor",
         "gen_ship": "Clara Oswin Oswald & The Twelfth Doctor",
         "members_no": 2,
-        "fandom": "Doctor Who",
+        "fandom": "Doctor Who Universe",
         "rpf_or_fic": "fictional",
         "members_list": [
             {
-                "member_key": "Doctor Who - Clara Oswin Oswald",
+                "member_key": "Doctor Who Universe - Clara Oswin Oswald",
                 "member_gender": "F",
                 "member_race": "White",
                 "member_name": "Clara Oswin Oswald"
             },
             {
-                "member_key": "Doctor Who - The Twelfth Doctor",
+                "member_key": "Doctor Who Universe - The Twelfth Doctor",
                 "member_gender": "M",
                 "member_race": "White",
                 "member_name": "The Twelfth Doctor"
@@ -3031,21 +3118,50 @@
             "White"
         ]
     },
+    "Ianto Jones x Jack Harkness": {
+        "slash_ship": "Ianto Jones x Jack Harkness",
+        "gen_ship": "Ianto Jones & Jack Harkness",
+        "members_no": 2,
+        "fandom": "Doctor Who Universe",
+        "rpf_or_fic": "fictional",
+        "members_list": [
+            {
+                "member_key": "Doctor Who Universe - Ianto Jones",
+                "member_gender": "M",
+                "member_race": "White",
+                "member_name": "Ianto Jones"
+            },
+            {
+                "member_key": "Doctor Who Universe - Jack Harkness",
+                "member_gender": "M",
+                "member_race": "White",
+                "member_name": "Jack Harkness"
+            }
+        ],
+        "gender_combo": [
+            "M",
+            "M"
+        ],
+        "race_combo": [
+            "White",
+            "White"
+        ]
+    },
     "Jenny Flint x Madame Vastra": {
         "slash_ship": "Jenny Flint x Madame Vastra",
         "gen_ship": "Jenny Flint & Madame Vastra",
         "members_no": 2,
-        "fandom": "Doctor Who",
+        "fandom": "Doctor Who Universe",
         "rpf_or_fic": "fictional",
         "members_list": [
             {
-                "member_key": "Doctor Who - Jenny Flint",
+                "member_key": "Doctor Who Universe - Jenny Flint",
                 "member_gender": "F",
                 "member_race": "White",
                 "member_name": "Jenny Flint"
             },
             {
-                "member_key": "Doctor Who - Madame Vastra",
+                "member_key": "Doctor Who Universe - Madame Vastra",
                 "member_gender": "F",
                 "member_race": "N.H.",
                 "member_name": "Madame Vastra"
@@ -3064,17 +3180,17 @@
         "slash_ship": "River Song x The Doctor",
         "gen_ship": "River Song & The Doctor",
         "members_no": 2,
-        "fandom": "Doctor Who",
+        "fandom": "Doctor Who Universe",
         "rpf_or_fic": "fictional",
         "members_list": [
             {
-                "member_key": "Doctor Who - River Song",
+                "member_key": "Doctor Who Universe - River Song",
                 "member_gender": "F",
                 "member_race": "White",
                 "member_name": "River Song"
             },
             {
-                "member_key": "Doctor Who - The Doctor",
+                "member_key": "Doctor Who Universe - The Doctor",
                 "member_gender": "M",
                 "member_race": "White",
                 "member_name": "The Doctor"
@@ -3093,17 +3209,17 @@
         "slash_ship": "River Song x The Eleventh Doctor",
         "gen_ship": "River Song & The Eleventh Doctor",
         "members_no": 2,
-        "fandom": "Doctor Who",
+        "fandom": "Doctor Who Universe",
         "rpf_or_fic": "fictional",
         "members_list": [
             {
-                "member_key": "Doctor Who - River Song",
+                "member_key": "Doctor Who Universe - River Song",
                 "member_gender": "F",
                 "member_race": "White",
                 "member_name": "River Song"
             },
             {
-                "member_key": "Doctor Who - The Eleventh Doctor",
+                "member_key": "Doctor Who Universe - The Eleventh Doctor",
                 "member_gender": "M",
                 "member_race": "White",
                 "member_name": "The Eleventh Doctor"
@@ -3122,17 +3238,17 @@
         "slash_ship": "Rose Tyler x The Ninth Doctor",
         "gen_ship": "Rose Tyler & The Ninth Doctor",
         "members_no": 2,
-        "fandom": "Doctor Who",
+        "fandom": "Doctor Who Universe",
         "rpf_or_fic": "fictional",
         "members_list": [
             {
-                "member_key": "Doctor Who - Rose Tyler",
+                "member_key": "Doctor Who Universe - Rose Tyler",
                 "member_gender": "F",
                 "member_race": "White",
                 "member_name": "Rose Tyler"
             },
             {
-                "member_key": "Doctor Who - The Ninth Doctor",
+                "member_key": "Doctor Who Universe - The Ninth Doctor",
                 "member_gender": "M",
                 "member_race": "White",
                 "member_name": "The Ninth Doctor"
@@ -3151,17 +3267,17 @@
         "slash_ship": "Rose Tyler x The Tenth Doctor",
         "gen_ship": "Rose Tyler & The Tenth Doctor",
         "members_no": 2,
-        "fandom": "Doctor Who",
+        "fandom": "Doctor Who Universe",
         "rpf_or_fic": "fictional",
         "members_list": [
             {
-                "member_key": "Doctor Who - Rose Tyler",
+                "member_key": "Doctor Who Universe - Rose Tyler",
                 "member_gender": "F",
                 "member_race": "White",
                 "member_name": "Rose Tyler"
             },
             {
-                "member_key": "Doctor Who - The Tenth Doctor",
+                "member_key": "Doctor Who Universe - The Tenth Doctor",
                 "member_gender": "M",
                 "member_race": "White",
                 "member_name": "The Tenth Doctor"
@@ -3180,17 +3296,17 @@
         "slash_ship": "The Thirteenth Doctor x Yasmin Khan",
         "gen_ship": "The Thirteenth Doctor & Yasmin Khan",
         "members_no": 2,
-        "fandom": "Doctor Who",
+        "fandom": "Doctor Who Universe",
         "rpf_or_fic": "fictional",
         "members_list": [
             {
-                "member_key": "Doctor Who - The Thirteenth Doctor",
+                "member_key": "Doctor Who Universe - The Thirteenth Doctor",
                 "member_gender": "F",
                 "member_race": "White",
                 "member_name": "The Thirteenth Doctor"
             },
             {
-                "member_key": "Doctor Who - Yasmin Khan",
+                "member_key": "Doctor Who Universe - Yasmin Khan",
                 "member_gender": "F",
                 "member_race": "S Asian",
                 "member_name": "Yasmin Khan"
@@ -3783,6 +3899,35 @@
         "race_combo": [
             "White",
             "Black (Multi)"
+        ]
+    },
+    "Wen Kexing x Zhou Zishu": {
+        "slash_ship": "Wen Kexing x Zhou Zishu",
+        "gen_ship": "Wen Kexing & Zhou Zishu",
+        "members_no": 2,
+        "fandom": "Faraway Wanderers / Word of Honor | \u5929\u6daf\u5ba2 / \u5c71\u6cb3\u4ee4",
+        "rpf_or_fic": "fictional",
+        "members_list": [
+            {
+                "member_key": "Faraway Wanderers / Word of Honor | \u5929\u6daf\u5ba2 / \u5c71\u6cb3\u4ee4 - Wen Kexing",
+                "member_gender": "M",
+                "member_race": "E Asian",
+                "member_name": "Wen Kexing"
+            },
+            {
+                "member_key": "Faraway Wanderers / Word of Honor | \u5929\u6daf\u5ba2 / \u5c71\u6cb3\u4ee4 - Zhou Zishu",
+                "member_gender": "M",
+                "member_race": "E Asian",
+                "member_name": "Zhou Zishu"
+            }
+        ],
+        "gender_combo": [
+            "M",
+            "M"
+        ],
+        "race_combo": [
+            "E Asian",
+            "E Asian"
         ]
     },
     "Camila Cabello x Lauren Jauregui": {
@@ -7240,17 +7385,17 @@
         "slash_ship": "Akanishi Jin x Kamenashi Kazuya",
         "gen_ship": "Akanishi Jin & Kamenashi Kazuya",
         "members_no": 2,
-        "fandom": "KAT-TUN",
+        "fandom": "KAT-TUN | \u30ab\u30c8\u30a5\u30fc\u30f3",
         "rpf_or_fic": "RPF",
         "members_list": [
             {
-                "member_key": "KAT-TUN - Akanishi Jin",
+                "member_key": "KAT-TUN | \u30ab\u30c8\u30a5\u30fc\u30f3 - Akanishi Jin",
                 "member_gender": "M",
                 "member_race": "E Asian",
                 "member_name": "Akanishi Jin"
             },
             {
-                "member_key": "KAT-TUN - Kamenashi Kazuya",
+                "member_key": "KAT-TUN | \u30ab\u30c8\u30a5\u30fc\u30f3 - Kamenashi Kazuya",
                 "member_gender": "M",
                 "member_race": "E Asian",
                 "member_name": "Kamenashi Kazuya"
@@ -9556,6 +9701,64 @@
             "White"
         ]
     },
+    "Alec Lightwood x Magnus Bane": {
+        "slash_ship": "Alec Lightwood x Magnus Bane",
+        "gen_ship": "Alec Lightwood & Magnus Bane",
+        "members_no": 2,
+        "fandom": "Mortal Instruments",
+        "rpf_or_fic": "fictional",
+        "members_list": [
+            {
+                "member_key": "Mortal Instruments - Alec Lightwood",
+                "member_gender": "M",
+                "member_race": "White",
+                "member_name": "Alec Lightwood"
+            },
+            {
+                "member_key": "Mortal Instruments - Magnus Bane",
+                "member_gender": "M",
+                "member_race": "E Asian",
+                "member_name": "Magnus Bane"
+            }
+        ],
+        "gender_combo": [
+            "M",
+            "M"
+        ],
+        "race_combo": [
+            "White",
+            "E Asian"
+        ]
+    },
+    "Clary Fray x Isabelle Lightwood": {
+        "slash_ship": "Clary Fray x Isabelle Lightwood",
+        "gen_ship": "Clary Fray & Isabelle Lightwood",
+        "members_no": 2,
+        "fandom": "Mortal Instruments",
+        "rpf_or_fic": "fictional",
+        "members_list": [
+            {
+                "member_key": "Mortal Instruments - Clary Fray",
+                "member_gender": "F",
+                "member_race": "White",
+                "member_name": "Clary Fray"
+            },
+            {
+                "member_key": "Mortal Instruments - Isabelle Lightwood",
+                "member_gender": "F",
+                "member_race": "Ambig",
+                "member_name": "Isabelle Lightwood"
+            }
+        ],
+        "gender_combo": [
+            "F",
+            "F"
+        ],
+        "race_combo": [
+            "White",
+            "Ambig"
+        ]
+    },
     "Raelle Collar x Scylla Ramshorn": {
         "slash_ship": "Raelle Collar x Scylla Ramshorn",
         "gen_ship": "Raelle Collar & Scylla Ramshorn",
@@ -11296,9 +11499,9 @@
             "MENA (Multi)"
         ]
     },
-    "Akechi Goro x Amamiya Ren | Player Character": {
-        "slash_ship": "Akechi Goro x Amamiya Ren | Player Character",
-        "gen_ship": "Akechi Goro & Amamiya Ren | Player Character",
+    "Akechi Goro x Amamiya Ren | Joker | Player Character": {
+        "slash_ship": "Akechi Goro x Amamiya Ren | Joker | Player Character",
+        "gen_ship": "Akechi Goro & Amamiya Ren | Joker | Player Character",
         "members_no": 2,
         "fandom": "Persona",
         "rpf_or_fic": "fictional",
@@ -11310,10 +11513,10 @@
                 "member_name": "Akechi Goro"
             },
             {
-                "member_key": "Persona - Amamiya Ren | Player Character",
+                "member_key": "Persona - Amamiya Ren | Joker | Player Character",
                 "member_gender": "M",
                 "member_race": "E Asian",
-                "member_name": "Amamiya Ren | Player Character"
+                "member_name": "Amamiya Ren | Joker | Player Character"
             }
         ],
         "gender_combo": [
@@ -11673,93 +11876,6 @@
             "E Asian"
         ]
     },
-    "Betty Cooper x Jughead Jones": {
-        "slash_ship": "Betty Cooper x Jughead Jones",
-        "gen_ship": "Betty Cooper & Jughead Jones",
-        "members_no": 2,
-        "fandom": "Riverdale",
-        "rpf_or_fic": "fictional",
-        "members_list": [
-            {
-                "member_key": "Riverdale - Betty Cooper",
-                "member_gender": "F",
-                "member_race": "White",
-                "member_name": "Betty Cooper"
-            },
-            {
-                "member_key": "Riverdale - Jughead Jones",
-                "member_gender": "M",
-                "member_race": "White",
-                "member_name": "Jughead Jones"
-            }
-        ],
-        "gender_combo": [
-            "F",
-            "M"
-        ],
-        "race_combo": [
-            "White",
-            "White"
-        ]
-    },
-    "Betty Cooper x Veronica Lodge": {
-        "slash_ship": "Betty Cooper x Veronica Lodge",
-        "gen_ship": "Betty Cooper & Veronica Lodge",
-        "members_no": 2,
-        "fandom": "Riverdale",
-        "rpf_or_fic": "fictional",
-        "members_list": [
-            {
-                "member_key": "Riverdale - Betty Cooper",
-                "member_gender": "F",
-                "member_race": "White",
-                "member_name": "Betty Cooper"
-            },
-            {
-                "member_key": "Riverdale - Veronica Lodge",
-                "member_gender": "F",
-                "member_race": "Latin",
-                "member_name": "Veronica Lodge"
-            }
-        ],
-        "gender_combo": [
-            "F",
-            "F"
-        ],
-        "race_combo": [
-            "White",
-            "Latin"
-        ]
-    },
-    "Cheryl Blossom x Toni Topaz": {
-        "slash_ship": "Cheryl Blossom x Toni Topaz",
-        "gen_ship": "Cheryl Blossom & Toni Topaz",
-        "members_no": 2,
-        "fandom": "Riverdale",
-        "rpf_or_fic": "fictional",
-        "members_list": [
-            {
-                "member_key": "Riverdale - Cheryl Blossom",
-                "member_gender": "F",
-                "member_race": "White",
-                "member_name": "Cheryl Blossom"
-            },
-            {
-                "member_key": "Riverdale - Toni Topaz",
-                "member_gender": "F",
-                "member_race": "Black (Multi)",
-                "member_name": "Toni Topaz"
-            }
-        ],
-        "gender_combo": [
-            "F",
-            "F"
-        ],
-        "race_combo": [
-            "White",
-            "Black (Multi)"
-        ]
-    },
     "Jane Rizzoli x Maura Isles": {
         "slash_ship": "Jane Rizzoli x Maura Isles",
         "gen_ship": "Jane Rizzoli & Maura Isles",
@@ -12077,64 +12193,6 @@
         "race_combo": [
             "White",
             "E Asian (Multi)"
-        ]
-    },
-    "Alec Lightwood x Magnus Bane": {
-        "slash_ship": "Alec Lightwood x Magnus Bane",
-        "gen_ship": "Alec Lightwood & Magnus Bane",
-        "members_no": 2,
-        "fandom": "Shadowhunters | Mortal Instruments",
-        "rpf_or_fic": "fictional",
-        "members_list": [
-            {
-                "member_key": "Shadowhunters | Mortal Instruments - Alec Lightwood",
-                "member_gender": "M",
-                "member_race": "White",
-                "member_name": "Alec Lightwood"
-            },
-            {
-                "member_key": "Shadowhunters | Mortal Instruments - Magnus Bane",
-                "member_gender": "M",
-                "member_race": "E Asian",
-                "member_name": "Magnus Bane"
-            }
-        ],
-        "gender_combo": [
-            "M",
-            "M"
-        ],
-        "race_combo": [
-            "White",
-            "E Asian"
-        ]
-    },
-    "Clary Fray x Isabelle Lightwood": {
-        "slash_ship": "Clary Fray x Isabelle Lightwood",
-        "gen_ship": "Clary Fray & Isabelle Lightwood",
-        "members_no": 2,
-        "fandom": "Shadowhunters | Mortal Instruments",
-        "rpf_or_fic": "fictional",
-        "members_list": [
-            {
-                "member_key": "Shadowhunters | Mortal Instruments - Clary Fray",
-                "member_gender": "F",
-                "member_race": "White",
-                "member_name": "Clary Fray"
-            },
-            {
-                "member_key": "Shadowhunters | Mortal Instruments - Isabelle Lightwood",
-                "member_gender": "F",
-                "member_race": "Ambig",
-                "member_name": "Isabelle Lightwood"
-            }
-        ],
-        "gender_combo": [
-            "F",
-            "F"
-        ],
-        "race_combo": [
-            "White",
-            "Ambig"
         ]
     },
     "Ian Gallagher x Mickey Milkovich": {
@@ -15836,35 +15894,6 @@
             "White"
         ]
     },
-    "Ianto Jones x Jack Harkness": {
-        "slash_ship": "Ianto Jones x Jack Harkness",
-        "gen_ship": "Ianto Jones & Jack Harkness",
-        "members_no": 2,
-        "fandom": "Torchwood",
-        "rpf_or_fic": "fictional",
-        "members_list": [
-            {
-                "member_key": "Torchwood - Ianto Jones",
-                "member_gender": "M",
-                "member_race": "White",
-                "member_name": "Ianto Jones"
-            },
-            {
-                "member_key": "Torchwood - Jack Harkness",
-                "member_gender": "M",
-                "member_race": "White",
-                "member_name": "Jack Harkness"
-            }
-        ],
-        "gender_combo": [
-            "M",
-            "M"
-        ],
-        "race_combo": [
-            "White",
-            "White"
-        ]
-    },
     "Nicholas D. Wolfwood x Vash the Stampede": {
         "slash_ship": "Nicholas D. Wolfwood x Vash the Stampede",
         "gen_ship": "Nicholas D. Wolfwood & Vash the Stampede",
@@ -16538,35 +16567,6 @@
         "race_combo": [
             "White",
             "White"
-        ]
-    },
-    "Wen Kexing x Zhou Zishu": {
-        "slash_ship": "Wen Kexing x Zhou Zishu",
-        "gen_ship": "Wen Kexing & Zhou Zishu",
-        "members_no": 2,
-        "fandom": "Word of Honor | \u5c71\u6cb3\u4ee4",
-        "rpf_or_fic": "fictional",
-        "members_list": [
-            {
-                "member_key": "Word of Honor | \u5c71\u6cb3\u4ee4 - Wen Kexing",
-                "member_gender": "M",
-                "member_race": "E Asian",
-                "member_name": "Wen Kexing"
-            },
-            {
-                "member_key": "Word of Honor | \u5c71\u6cb3\u4ee4 - Zhou Zishu",
-                "member_gender": "M",
-                "member_race": "E Asian",
-                "member_name": "Zhou Zishu"
-            }
-        ],
-        "gender_combo": [
-            "M",
-            "M"
-        ],
-        "race_combo": [
-            "E Asian",
-            "E Asian"
         ]
     },
     "Nicole Haught x Waverly Earp": {
