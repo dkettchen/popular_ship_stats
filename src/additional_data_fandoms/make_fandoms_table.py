@@ -16,6 +16,7 @@ key_list = [
     "fandom",
     "media_type",
     "country_of_origin",
+    "continent",
     "original_language"
 ]
 prepped_list = list_of_dicts_to_list_of_lists(final_fandoms_list, key_list)

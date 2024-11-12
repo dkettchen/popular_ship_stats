@@ -23,6 +23,7 @@ def make_unique_fandom_list():
             "fandom": fandom,
             "media_type": None,
             "country_of_origin": None,
+            "continent": None,
             "original_language": None,
         }
         # add to list
