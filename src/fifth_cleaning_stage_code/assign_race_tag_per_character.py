@@ -240,7 +240,7 @@ def assign_race_tag(data_dict):
                     race_tag = "White (Multi)" 
                     # easier than going back through all previous mentions
                 if "Player Character" in input_character_dict["full_name"]:
-                    if input_character_dict["full_name"] == "Amamiya Ren | Player Character":
+                    if input_character_dict["full_name"] == "Amamiya Ren | Joker | Player Character":
                         race_tag = "Asian"
                     elif input_character_dict["full_name"] == "Byleth Eisner | Player Character":
                         race_tag = "MENA"
@@ -282,7 +282,7 @@ def retag_for_specificity(data_dict):
         "Bangtan Boys / BTS",
         "EXO",
         "Grandmaster of Demonic Cultivation / The Untamed | 魔道祖师 / 陈情令",
-        "KAT-TUN", # japanese boy group
+        "KAT-TUN | カトゥーン", # japanese boy group
         "MIRROR", # hong kong "cantopop" boy group
         "NCT",
         "Red Velvet",
@@ -292,7 +292,7 @@ def retag_for_specificity(data_dict):
         "Attack on Titan | 進撃の巨人", # mikasa is half-white
         "BLUELOCK | ブルーロック",
         "Bungou Stray Dogs | 文豪ストレイドッグス",
-        "Dangan Ronpa",
+        "Danganronpa",
         "Final Fantasy | ファイナルファンタジー",
         "Fire Emblem | ファイアーエムブレム",
         "Free!",
@@ -324,7 +324,7 @@ def retag_for_specificity(data_dict):
         "Tokyo Ghoul | 東京喰種",
         "Tokyo Revengers | 東京卍リベンジャーズ",
         "Trigun Universe | トライガン",
-        "Word of Honor | 山河令",
+        "Faraway Wanderers / Word of Honor | 天涯客 / 山河令",
         "Yuri!!! on ICE | ユーリ!!! on ICE",
     ]
 
