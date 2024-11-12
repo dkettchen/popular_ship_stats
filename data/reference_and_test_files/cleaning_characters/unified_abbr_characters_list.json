@@ -97,7 +97,7 @@
             "rpf_or_fic": "RPF"
         }
     },
-    "Doctor Who": {
+    "Doctor Who Universe": {
         "Alex Kingston": {
             "full_name": "Alex Kingston",
             "op_versions": [
@@ -111,6 +111,119 @@
                 "Matt Smith"
             ],
             "rpf_or_fic": "RPF"
+        },
+        "Amy Pond": {
+            "full_name": "Amy Pond",
+            "op_versions": [
+                "Amy Pond"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "Clara Oswin Oswald": {
+            "full_name": "Clara Oswin Oswald",
+            "op_versions": [
+                "Clara Oswin Oswald"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "The Eleventh Doctor": {
+            "full_name": "The Eleventh Doctor",
+            "op_versions": [
+                "Eleventh Doctor"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "Ianto Jones": {
+            "full_name": "Ianto Jones",
+            "op_versions": [
+                "Ianto Jones"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "Jack Harkness": {
+            "full_name": "Jack Harkness",
+            "op_versions": [
+                "Jack Harkness"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "Jenny Flint": {
+            "full_name": "Jenny Flint",
+            "op_versions": [
+                "Jenny Flint"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "Madame Vastra": {
+            "full_name": "Madame Vastra",
+            "op_versions": [
+                "Madame Vastra"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "The Ninth Doctor": {
+            "full_name": "The Ninth Doctor",
+            "op_versions": [
+                "Ninth Doctor"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "River Song": {
+            "full_name": "River Song",
+            "op_versions": [
+                "River Song"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "Rory Williams": {
+            "full_name": "Rory Williams",
+            "op_versions": [
+                "Rory Williams"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "Rose Tyler": {
+            "full_name": "Rose Tyler",
+            "op_versions": [
+                "Rose Tyler"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "The Tenth Doctor": {
+            "full_name": "The Tenth Doctor",
+            "op_versions": [
+                "Tenth Doctor",
+                "Tenth Doctor (duplicate)"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "The Doctor": {
+            "full_name": "The Doctor",
+            "op_versions": [
+                "The Doctor"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "The Thirteenth Doctor": {
+            "full_name": "The Thirteenth Doctor",
+            "op_versions": [
+                "Thirteenth Doctor"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "The Twelfth Doctor": {
+            "full_name": "The Twelfth Doctor",
+            "op_versions": [
+                "Twelfth Doctor"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "Yasmin Khan": {
+            "full_name": "Yasmin Khan",
+            "op_versions": [
+                "Yasmin Khan"
+            ],
+            "rpf_or_fic": "fictional"
         }
     },
     "Drag": {
@@ -2046,121 +2159,6 @@
             "full_name": "Connor (RK900)",
             "op_versions": [
                 "Upgraded Connor | RK900"
-            ],
-            "rpf_or_fic": "fictional"
-        }
-    },
-    "Doctor Who Universe": {
-        "Amy Pond": {
-            "full_name": "Amy Pond",
-            "op_versions": [
-                "Amy Pond"
-            ],
-            "rpf_or_fic": "fictional"
-        },
-        "Clara Oswin Oswald": {
-            "full_name": "Clara Oswin Oswald",
-            "op_versions": [
-                "Clara Oswin Oswald"
-            ],
-            "rpf_or_fic": "fictional"
-        },
-        "The Eleventh Doctor": {
-            "full_name": "The Eleventh Doctor",
-            "op_versions": [
-                "Eleventh Doctor"
-            ],
-            "rpf_or_fic": "fictional"
-        },
-        "Ianto Jones": {
-            "full_name": "Ianto Jones",
-            "op_versions": [
-                "Ianto Jones"
-            ],
-            "rpf_or_fic": "fictional"
-        },
-        "Jack Harkness": {
-            "full_name": "Jack Harkness",
-            "op_versions": [
-                "Jack Harkness"
-            ],
-            "rpf_or_fic": "fictional"
-        },
-        "Jenny Flint": {
-            "full_name": "Jenny Flint",
-            "op_versions": [
-                "Jenny Flint"
-            ],
-            "rpf_or_fic": "fictional"
-        },
-        "Madame Vastra": {
-            "full_name": "Madame Vastra",
-            "op_versions": [
-                "Madame Vastra"
-            ],
-            "rpf_or_fic": "fictional"
-        },
-        "The Ninth Doctor": {
-            "full_name": "The Ninth Doctor",
-            "op_versions": [
-                "Ninth Doctor"
-            ],
-            "rpf_or_fic": "fictional"
-        },
-        "River Song": {
-            "full_name": "River Song",
-            "op_versions": [
-                "River Song"
-            ],
-            "rpf_or_fic": "fictional"
-        },
-        "Rory Williams": {
-            "full_name": "Rory Williams",
-            "op_versions": [
-                "Rory Williams"
-            ],
-            "rpf_or_fic": "fictional"
-        },
-        "Rose Tyler": {
-            "full_name": "Rose Tyler",
-            "op_versions": [
-                "Rose Tyler"
-            ],
-            "rpf_or_fic": "fictional"
-        },
-        "The Tenth Doctor": {
-            "full_name": "The Tenth Doctor",
-            "op_versions": [
-                "Tenth Doctor",
-                "Tenth Doctor (duplicate)"
-            ],
-            "rpf_or_fic": "fictional"
-        },
-        "The Doctor": {
-            "full_name": "The Doctor",
-            "op_versions": [
-                "The Doctor"
-            ],
-            "rpf_or_fic": "fictional"
-        },
-        "The Thirteenth Doctor": {
-            "full_name": "The Thirteenth Doctor",
-            "op_versions": [
-                "Thirteenth Doctor"
-            ],
-            "rpf_or_fic": "fictional"
-        },
-        "The Twelfth Doctor": {
-            "full_name": "The Twelfth Doctor",
-            "op_versions": [
-                "Twelfth Doctor"
-            ],
-            "rpf_or_fic": "fictional"
-        },
-        "Yasmin Khan": {
-            "full_name": "Yasmin Khan",
-            "op_versions": [
-                "Yasmin Khan"
             ],
             "rpf_or_fic": "fictional"
         }

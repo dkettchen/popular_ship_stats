@@ -130,8 +130,8 @@ def format_unified_labels(data_dict):
         else: new_rpf_fandom = rpf_fandom # it stays as is
         
         
-        if new_rpf_fandom == "Lord of the Rings":
-            new_rpf_fandom = "Lord of the Rings Universe"
+        if new_rpf_fandom in ["Lord of the Rings", "Doctor Who"]:
+            new_rpf_fandom += " Universe"
 
         if new_rpf_fandom in list(new_dict["RPF"].keys()): # if we already got the fandom
             new_dict["RPF"][new_rpf_fandom]["OP Versions"].add(rpf_fandom) # we add to it

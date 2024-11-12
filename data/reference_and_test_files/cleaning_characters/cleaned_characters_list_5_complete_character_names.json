@@ -216,7 +216,7 @@
                     ]
                 }
             },
-            "Doctor Who": {
+            "Doctor Who Universe": {
                 "Alex Kingston": {
                     "given_name": "Alex",
                     "middle_name": null,
@@ -228,7 +228,7 @@
                     "title (suffix)": null,
                     "name_order": "W",
                     "full_name": "Alex Kingston",
-                    "fandom": "Doctor Who",
+                    "fandom": "Doctor Who Universe",
                     "op_versions": [
                         "Alex Kingston"
                     ]
@@ -244,7 +244,7 @@
                     "title (suffix)": null,
                     "name_order": "W",
                     "full_name": "Matt Smith",
-                    "fandom": "Doctor Who",
+                    "fandom": "Doctor Who Universe",
                     "op_versions": [
                         "Matt Smith"
                     ]
