@@ -2,7 +2,7 @@ fandom,media_type,country_of_origin,continent,original_language
 5 Seconds of Summer,['Music RPF'],Australia,Oceania,English
 9-1-1,['TV (live action)'],USA,America,English
 A Song of Ice and Fire / Game of Thrones Universe,`['Book', 'TV (live action)']`,USA,America,English
-Adam Lambert,['Music RPF'],USA,America,English
+Adam Lambert,`['Music RPF', 'Unscripted TV RPF']`,USA,America,English
 Addam's Family Universe,['TV (live action)'],USA,America,English
 Adventure Time,['TV (animated)'],USA,America,English
 All For The Game,['Book'],Unknown,Unknown,English
@@ -27,7 +27,7 @@ Castle,['TV (live action)'],USA,America,English
 Check Please!,['Comic book'],USA,America,English
 Criminal Minds,['TV (live action)'],USA,America,English
 Critical Role,['Audio (narrative)'],USA,America,English
-DC,`['Comic book', 'Movie (live action)', 'TV (animated)', 'TV (live action)', 'Video Game']`,USA,America,English
+DC,`['Comic book', 'Movie (live action)', 'TV (animated)', 'TV (live action)']`,USA,America,English
 Danganronpa,['Video Game'],Japan,Asia,Japanese
 Descendants,['Movie (live action)'],USA,America,English
 Detroit: Become Human,['Video Game'],France / USA,America / Europe,English
@@ -100,7 +100,7 @@ Love Live! | ラブライブ!,['TV (animated)'],Japan,Asia,Japanese
 Lucifer,['TV (live action)'],USA,America,English
 MIRROR,['Music RPF'],China,Asia,Chinese (Cantonese)
 Maleficent,['Movie (live action)'],USA,America,English
-Marvel,`['Comic book', 'Movie (live action)', 'TV (animated)', 'TV (live action)', 'Video Game']`,USA,America,English
+Marvel,`['Comic book', 'Movie (live action)', 'TV (animated)', 'TV (live action)']`,USA,America,English
 Mass Effect,['Video Game'],Canada,America,English
 Merlin,`['Actor RPF', 'TV (live action)']`,UK,Europe,English
 Miraculous: Tales of Ladybug & Cat Noir | Miraculous: Les Aventures de Ladybug et Chat Noir,['TV (animated)'],France,Europe,French
@@ -118,7 +118,7 @@ Once Upon a Time,['TV (live action)'],USA,America,English
 One Direction,['Music RPF'],Ireland / UK,Europe,English
 One Piece | ワンピース,`['Comic book', 'TV (animated)', 'TV (live action)']`,Japan,Asia,Japanese
 One-Punch Man | ワンパンマン,`['Comic book', 'TV (animated)']`,Japan,Asia,Japanese
-Orange is the New Black,`['Book', 'TV (live action)']`,USA,America,English
+Orange is the New Black,['TV (live action)'],USA,America,English
 Orphan Black,['TV (live action)'],Canada,America,English
 Our Flag Means Death,['TV (live action)'],USA,America,English
 Overwatch,['Video Game'],USA,America,English
@@ -160,7 +160,7 @@ Steven Universe,['TV (animated)'],USA,America,English
 Stranger Things,['TV (live action)'],USA,America,English
 Stray Kids,['Music RPF'],South Korea,Asia,Korean
 Suits,['TV (live action)'],USA,America,English
-Super-Vocal | 声入人心,`['Music RPF', 'TV (live action)']`,China,Asia,Chinese
+Super-Vocal | 声入人心,`['Music RPF', 'Unscripted TV RPF']`,China,Asia,Chinese
 Supernatural,`['Actor RPF', 'TV (live action)']`,USA,America,English
 TOMORROW X TOGETHER / TXT,['Music RPF'],South Korea,Asia,Korean
 Teen Wolf,['TV (live action)'],USA,America,English

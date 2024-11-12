@@ -65,7 +65,6 @@ media_types_lookup = {
         "Station 19", # live action show
         "Stranger Things", # live action show
         "Suits", # live action show
-        "Super-Vocal | 声入人心", # live action show (singing competition)
         "Supernatural", # live action show
         "Teen Wolf", # live action show
         "The 100", # live action show
@@ -108,6 +107,7 @@ media_types_lookup = {
         "Criminal Minds", # live action show
         "The 100 / The Walking Dead - crossover fanon", # it's two live action shows so we're counting it
         "Addam's Family Universe", # live action show (only wednesday so far)
+        "Orange is the New Black", # book & live action show (ain't noone read that book)
     ],
     "LA_movie": [
         "Top Gun", # live action movies
@@ -166,7 +166,6 @@ media_types_lookup = {
         "Legend of the Seeker", # books & live action show
         "Bridgerton", # books & live action show
         "Faraway Wanderers / Word of Honor | 天涯客 / 山河令", # book & live action show
-        "Orange is the New Black", # book & live action show
         "Carmilla", # book & live action show
         "Good Omens", # book & live action show
         "Grandmaster of Demonic Cultivation / The Untamed | 魔道祖师 / 陈情令", # book & live action show
@@ -250,7 +249,7 @@ media_types_lookup = {
     "book_LA_movie_LA_show_animated_movie": [ # there were some old animated movies weren't there?
         "Lord of the Rings Universe",
     ],
-    "comic_LA_movie_LA_show_animated_show_game": [
+    "comic_LA_movie_LA_show_animated_show": [
         "DC",
         "Marvel",
     ],
@@ -306,6 +305,8 @@ def add_media_types(input_list):
         if fandom in rpf_fandoms: # add rpf from file when we did that before!
             rpf_type = rpf_fandoms[fandom]["Type"]
             media_types_list.append(rpf_type)
+            if fandom in ["Adam Lambert", "Super-Vocal | 声入人心"]:
+                media_types_list.append("Unscripted TV RPF") # cause it's also singing competition rpf
 
         if len(media_types_list) == 0:
             print(f'"{fandom}",')
