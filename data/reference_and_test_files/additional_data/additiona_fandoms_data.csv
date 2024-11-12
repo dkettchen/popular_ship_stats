@@ -3,7 +3,7 @@ fandom,media_type,country_of_origin,continent,original_language
 9-1-1,['TV (live action)'],USA,America,English
 A Song of Ice and Fire / Game of Thrones Universe,`['Book', 'TV (live action)']`,USA,America,English
 Adam Lambert,['Music RPF'],USA,America,English
-Addam's Family Universe,`['Movie (live action)', 'TV (live action)']`,USA,America,English
+Addam's Family Universe,['TV (live action)'],USA,America,English
 Adventure Time,['TV (animated)'],USA,America,English
 All For The Game,['Book'],Unknown,Unknown,English
 American Horror Story,['TV (live action)'],USA,America,English
@@ -15,7 +15,7 @@ Avatar: The last Airbender Universe,['TV (animated)'],USA,America,English
 BLUELOCK | ブルーロック,`['Comic book', 'TV (animated)']`,Japan,Asia,Japanese
 Bangtan Boys / BTS,['Music RPF'],South Korea,Asia,Korean
 Battlestar Galactica,['TV (live action)'],USA,America,English
-Be More Chill,`['Audio (music)', 'Book', 'Theatre (musical)']`,USA,America,English
+Be More Chill,`['Book', 'Theatre (musical)']`,USA,America,English
 Bridgerton,`['Book', 'TV (live action)']`,USA,America,English
 Buffy Universe,['TV (live action)'],USA,America,English
 Bungou Stray Dogs | 文豪ストレイドッグス,`['Comic book', 'TV (animated)']`,Japan,Asia,Japanese
@@ -57,7 +57,7 @@ Grandmaster of Demonic Cultivation / The Untamed | 魔道祖师 / 陈情令,`['A
 Gravity Falls,['TV (animated)'],USA,America,English
 Grey's Anatomy,['TV (live action)'],USA,America,English
 Haikyuu!! | ハイキュー!!,`['Comic book', 'TV (animated)']`,Japan,Asia,Japanese
-Hamilton,`['Audio (music)', 'Theatre (musical)']`,USA,America,English
+Hamilton,['Theatre (musical)'],USA,America,English
 Hannibal,['TV (live action)'],USA,America,English
 Harry Potter Universe,`['Book', 'Movie (live action)', 'Theatre (play)', 'Video Game']`,UK,Europe,English
 Hatsune Miku / Vocaloid | 初音ミク / ボーカロイド,['Audio (music)'],Japan,Asia,Japanese
@@ -88,7 +88,7 @@ Kingsman,`['Comic book', 'Movie (live action)']`,UK,Europe,English
 KinnPorsche | คินน์พอร์ช เดอะ ซีรีส์,['TV (live action)'],Thailand,Asia,Thai
 Law & Order,['TV (live action)'],USA,America,English
 Legend of the Seeker,`['Book', 'TV (live action)']`,USA,America,English
-Les Misérables,`['Audio (music)', 'Book', 'Movie (live action)', 'Theatre (musical)']`,France / UK / USA,America / Europe,English
+Les Misérables,`['Book', 'Movie (live action)', 'Theatre (musical)']`,France / UK / USA,America / Europe,English
 Life Is Strange,['Video Game'],France / Japan,Asia / Europe,English
 Life on Mars,['TV (live action)'],UK,Europe,English
 Little Witch Academia | リトルウィッチアカデミア,`['Comic book', 'Movie (animated)', 'TV (animated)']`,Japan,Asia,Japanese

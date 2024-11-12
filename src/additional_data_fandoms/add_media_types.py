@@ -107,6 +107,7 @@ media_types_lookup = {
         "Castle", # live action show
         "Criminal Minds", # live action show
         "The 100 / The Walking Dead - crossover fanon", # it's two live action shows so we're counting it
+        "Addam's Family Universe", # live action show (only wednesday so far)
     ],
     "LA_movie": [
         "Top Gun", # live action movies
@@ -183,7 +184,7 @@ media_types_lookup = {
         "Heaven Official's Blessing | 天官赐福", # books & animated show
     ],
     "book_musical": [
-        "Be More Chill", # book & musical
+        "Be More Chill", # book & musical (although tag only refers to musical)
     ],
 
     "comic_animated_show": [
@@ -222,7 +223,7 @@ media_types_lookup = {
     ],
     "LA_show_LA_movie": [
         "Star Trek",
-        "Addam's Family Universe", # live action show / movie
+
     ],
 
     # 3 types
@@ -295,8 +296,11 @@ def add_media_types(input_list):
 
         for key in media_types_lookup: # going through all categories
             for mt in media_types: # going through all media types
+                
                 if mt in key and fandom in media_types_lookup[key]: 
                 # if the key contains the media type and the fandom is in that key's category
+                    if mt == "music" and "musical" in key: # making sure music doesn't catch in musical
+                        continue
                     media_types_list.append(media_types[mt]) # we add the media type to this fandom's list
 
         if fandom in rpf_fandoms: # add rpf from file when we did that before!
