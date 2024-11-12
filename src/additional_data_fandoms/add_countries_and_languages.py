@@ -1,6 +1,7 @@
 from copy import deepcopy
 
 american_fandoms = [
+    "Archie Comics Universe",
     "Addam's Family Universe",
     "Adventure Time",
     "American Horror Story",
@@ -9,7 +10,6 @@ american_fandoms = [
     "Buffy Universe",
     "Call of Duty",
     "Castle",
-    "Chilling Adventures of Sabrina",
     "Criminal Minds",
     "Critical Role",
     "DC",
@@ -33,7 +33,6 @@ american_fandoms = [
     "Once Upon a Time",
     "Orange is the New Black",
     "Pitch Perfect",
-    "Riverdale",
     "Roswell New Mexico",
     "Sanders Sides",
     "Schitt's Creek",
@@ -86,7 +85,7 @@ american_fandoms = [
     "Raven Cycle", # american 
     "Rizzoli & Isles", # american 
     "Shadow and Bone", # american 
-    "Shadowhunters | Mortal Instruments", # american 
+    "Mortal Instruments", # american 
     "Shameless", # us version
     "Six of Crows", # american (author is israeli american but it's published in america)
     "Spartacus", # american 
@@ -118,8 +117,7 @@ american_fandoms = [
     "Women's Soccer", # RPF they're all US players
 ]
 british_fandoms = [
-    "Doctor Who",
-    "Torchwood", # shouldn't this be doctor who universe???? FIX THAT
+    "Doctor Who Universe",
     "Emmerdale",
     "Harry Potter Universe",
     "Heartstopper",
@@ -156,7 +154,7 @@ japanese_fandoms = [
     "Attack on Titan | 進撃の巨人",
     "BLUELOCK | ブルーロック",
     "Bungou Stray Dogs | 文豪ストレイドッグス",
-    "Dangan Ronpa",
+    "Danganronpa",
     "Final Fantasy | ファイナルファンタジー",
     "Fire Emblem | ファイアーエムブレム",
     "Free!",
@@ -183,7 +181,7 @@ japanese_fandoms = [
     "Yuri!!! on ICE | ユーリ!!! on ICE",
     "Persona",
     "Naruto",
-    "KAT-TUN", # カトゥーン japanese boy band! (add the dang kana)
+    'KAT-TUN | カトゥーン', 
 ]
 korean_fandoms = [
     "Bangtan Boys / BTS",
@@ -199,7 +197,7 @@ chinese_fandoms = [
     "Grandmaster of Demonic Cultivation / The Untamed | 魔道祖师 / 陈情令",
     "Heaven Official's Blessing | 天官赐福",
     "New Gods | 新神榜",
-    "Word of Honor | 山河令",
+    "Faraway Wanderers / Word of Honor | 天涯客 / 山河令",
     "Journey to the West Universe",
     "Super-Vocal | 声入人心", # chinese (I'm guessing mandarin??? it just says chinese and I can't tell)
     "MIRROR", # hong kong cantopop! we got cantonese rep!!!!

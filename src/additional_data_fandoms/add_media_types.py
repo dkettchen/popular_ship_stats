@@ -31,10 +31,11 @@ media_types_lookup = {
         "Journey to the West Universe", # the lego thingy is a animated movie
     ],
     "LA_show": [
+        "Archie Comics Universe",
         "Shameless",
         "Queer as Folk",
         "Vampire Diaries Universe",
-        "Doctor Who",
+        "Doctor Who Universe",
         "Stargate",
         "Buffy Universe",
         "Wentworth", # live action show
@@ -123,7 +124,7 @@ media_types_lookup = {
     "game": [
         "Persona",
         "Final Fantasy | ファイナルファンタジー",
-        "Dangan Ronpa",
+        "Danganronpa",
         "Dragon Age",
         "Undertale", # game
         "Overwatch", # game
@@ -163,7 +164,7 @@ media_types_lookup = {
     "book_LA_show": [
         "Legend of the Seeker", # books & live action show
         "Bridgerton", # books & live action show
-        "Word of Honor | 山河令", # book & live action show
+        "Faraway Wanderers / Word of Honor | 天涯客 / 山河令", # book & live action show
         "Orange is the New Black", # book & live action show
         "Carmilla", # book & live action show
         "Good Omens", # book & live action show
@@ -238,7 +239,7 @@ media_types_lookup = {
         "The Witcher | Wiedźmin",
     ],
     "book_LA_movie_LA_show": [
-        "Shadowhunters | Mortal Instruments",
+        "Mortal Instruments",
     ],
     "LA_movie_LA_show_animated_show": [
         "Star Wars",
@@ -257,9 +258,6 @@ media_types_lookup = {
     ],
 
 }
-    #"Chilling Adventures of Sabrina",
-    #"Riverdale",
-    #"Torchwood",
 
     # rpf
 media_types = {

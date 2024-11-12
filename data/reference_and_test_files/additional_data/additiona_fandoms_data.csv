@@ -9,6 +9,7 @@ All For The Game,['Book'],Unknown,English
 American Horror Story,['TV (live action)'],USA,English
 Amphibia,['TV (animated)'],USA,English
 Arcane,['TV (animated)'],France / USA,English
+Archie Comics Universe,['TV (live action)'],USA,English
 Attack on Titan | 進撃の巨人,`['Comic book', 'TV (animated)']`,Japan,Japanese
 Avatar: The last Airbender Universe,['TV (animated)'],USA,English
 BLUELOCK | ブルーロック,`['Comic book', 'TV (animated)']`,Japan,Japanese
@@ -24,14 +25,13 @@ Carol,`['Book', 'Movie (live action)']`,UK / USA,English
 Carry On,['Book'],USA,English
 Castle,['TV (live action)'],USA,English
 Check Please!,['Comic book'],USA,English
-Chilling Adventures of Sabrina,[],USA,English
 Criminal Minds,['TV (live action)'],USA,English
 Critical Role,['Audio (narrative)'],USA,English
 DC,`['Comic book', 'Movie (live action)', 'TV (animated)', 'TV (live action)', 'Video Game']`,USA,English
-Dangan Ronpa,['Video Game'],Japan,Japanese
+Danganronpa,['Video Game'],Japan,Japanese
 Descendants,['Movie (live action)'],USA,English
 Detroit: Become Human,['Video Game'],France / USA,English
-Doctor Who,`['Actor RPF', 'TV (live action)']`,UK,English
+Doctor Who Universe,`['Actor RPF', 'TV (live action)']`,UK,English
 Drag,['Unscripted TV RPF'],USA,English
 Dragon Age,['Video Game'],Canada,English
 Due South,['TV (live action)'],Canada,English
@@ -39,6 +39,7 @@ EXO,['Music RPF'],South Korea,Korean
 Emmerdale,['TV (live action)'],UK,English
 Faking It,['TV (live action)'],USA,English
 Fall Out Boy,['Music RPF'],USA,English
+Faraway Wanderers / Word of Honor | 天涯客 / 山河令,`['Book', 'TV (live action)']`,China,Chinese
 Fifth Harmony,['Music RPF'],USA,English
 Figure Skating,['Sports RPF'],China / Japan,English
 Final Fantasy | ファイナルファンタジー,['Video Game'],Japan,Japanese
@@ -78,7 +79,7 @@ JoJo's Bizarre Adventure | ジョジョの奇妙な冒険,`['Comic book', 'TV (a
 Journey to the West Universe,['Movie (animated)'],China,Chinese
 Jujutsu Kaisen | 呪術廻戦,`['Comic book', 'TV (animated)']`,Japan,Japanese
 Julie and The Phantoms,['TV (live action)'],USA,English
-KAT-TUN,['Music RPF'],Japan,Japanese
+KAT-TUN | カトゥーン,['Actor RPF'],Japan,Japanese
 Kill la Kill | キルラキル,['TV (animated)'],Japan,Japanese
 Killing Eve,['TV (live action)'],UK,English
 Kim Possible,['TV (animated)'],USA,English
@@ -104,6 +105,7 @@ Mass Effect,['Video Game'],Canada,English
 Merlin,`['Actor RPF', 'TV (live action)']`,UK,English
 Miraculous: Tales of Ladybug & Cat Noir | Miraculous: Les Aventures de Ladybug et Chat Noir,['TV (animated)'],France,French
 Mobile Suit Gundam Wing | 新機動戦記ガンダム W,['TV (animated)'],Japan,Japanese
+Mortal Instruments,`['Book', 'Movie (live action)', 'TV (live action)']`,USA,English
 Motherland,['TV (live action)'],UK,English
 My Chemical Romance,['Music RPF'],USA,English
 My Hero Academia | 僕のヒーローアカデミア,`['Comic book', 'TV (animated)']`,Japan,Japanese
@@ -133,7 +135,6 @@ Queer as Folk,['TV (live action)'],USA,English
 RWBY,['TV (animated)'],USA,English
 Raven Cycle,['Book'],USA,English
 Red Velvet,['Music RPF'],South Korea,Korean
-Riverdale,[],USA,English
 Rizzoli & Isles,['TV (live action)'],USA,English
 Rookie Blue,['TV (live action)'],Canada,English
 Roswell New Mexico,['TV (live action)'],USA,English
@@ -143,7 +144,6 @@ Sanders Sides,['TV (live action)'],USA,English
 Schitt's Creek,['TV (live action)'],USA,English
 Seraph of the End | 終わりのセラフ,`['Comic book', 'TV (animated)']`,Japan,Japanese
 Shadow and Bone,['TV (live action)'],USA,English
-Shadowhunters | Mortal Instruments,`['Book', 'Movie (live action)', 'TV (live action)']`,USA,English
 Shameless,['TV (live action)'],USA,English
 She-Ra and the Princesses of Power,['TV (animated)'],USA,English
 Sherlock,['TV (live action)'],UK,English
@@ -189,7 +189,6 @@ The X-Files,['TV (live action)'],USA,English
 Tokyo Ghoul | 東京喰種,`['Comic book', 'TV (animated)']`,Japan,Japanese
 Tokyo Revengers | 東京卍リベンジャーズ,`['Comic book', 'TV (animated)']`,Japan,Japanese
 Top Gun,['Movie (live action)'],USA,English
-Torchwood,[],UK,English
 Trigun Universe | トライガン,`['Comic book', 'TV (animated)']`,Japan,Japanese
 Twenty One Pilots,['Music RPF'],USA,English
 Twilight,`['Book', 'Movie (live action)']`,USA,English
@@ -203,7 +202,6 @@ Welcome to Night Vale,['Audio (narrative)'],USA,English
 Wentworth,['TV (live action)'],Australia,English
 White Collar,['TV (live action)'],USA,English
 Women's Soccer,['Sports RPF'],USA,English
-Word of Honor | 山河令,`['Book', 'TV (live action)']`,China,Chinese
 Wynonna Earp,['TV (live action)'],Canada / USA,English
 Xena,['TV (live action)'],USA,English
 Young Royals,['TV (live action)'],Sweden,Swedish
