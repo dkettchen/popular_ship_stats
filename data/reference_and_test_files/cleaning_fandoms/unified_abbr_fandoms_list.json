@@ -10,7 +10,6 @@
         "Bangtan Boys | BTS"
     ],
     "Doctor Who": [
-        "Doctor Who (2005)",
         "Doctor Who RPF"
     ],
     "Drag": [
@@ -37,7 +36,7 @@
     "Hockey": [
         "Hockey RPF"
     ],
-    "KAT-TUN": [
+    "KAT-TUN | \u30ab\u30c8\u30a5\u30fc\u30f3": [
         "KAT-TUN (Band)"
     ],
     "Lord of the Rings Universe": [
@@ -131,6 +130,10 @@
     "Arcane": [
         "Arcane: League of Legends (Cartoon 2021)"
     ],
+    "Archie Comics Universe": [
+        "Chilling Adventures of Sabrina (TV 2018)",
+        "Riverdale (TV 2017)"
+    ],
     "Attack on Titan | \u9032\u6483\u306e\u5de8\u4eba": [
         "Shingeki no Kyojin | Attack on Titan"
     ],
@@ -176,9 +179,6 @@
     "Check Please!": [
         "Check Please! (Webcomic)"
     ],
-    "Chilling Adventures of Sabrina": [
-        "Chilling Adventures of Sabrina (TV 2018)"
-    ],
     "Criminal Minds": [
         "Criminal Minds",
         "Criminal Minds (US TV)"
@@ -197,7 +197,7 @@
         "Supergirl (TV 2015)",
         "The Flash (TV 2014)"
     ],
-    "Dangan Ronpa": [
+    "Danganronpa": [
         "New Dangan Ronpa V3: Everyone's New Semester of Killing",
         "Super Dangan Ronpa 2"
     ],
@@ -206,6 +206,10 @@
     ],
     "Detroit: Become Human": [
         "Detroit: Become Human (Video Game)"
+    ],
+    "Doctor Who Universe": [
+        "Doctor Who (2005)",
+        "Torchwood"
     ],
     "Dragon Age": [
         "Dragon Age - All Media Types",
@@ -221,6 +225,9 @@
     ],
     "Faking It": [
         "Faking It (TV 2014)"
+    ],
+    "Faraway Wanderers / Word of Honor | \u5929\u6daf\u5ba2 / \u5c71\u6cb3\u4ee4": [
+        "\u5c71\u6cb3\u4ee4 | Word of Honor (TV 2021)"
     ],
     "Final Fantasy | \u30d5\u30a1\u30a4\u30ca\u30eb\u30d5\u30a1\u30f3\u30bf\u30b8\u30fc": [
         "Final Fantasy XIII",
@@ -418,6 +425,10 @@
     "Mobile Suit Gundam Wing | \u65b0\u6a5f\u52d5\u6226\u8a18\u30ac\u30f3\u30c0\u30e0 W": [
         "Gundam Wing"
     ],
+    "Mortal Instruments": [
+        "Mortal Instruments Series - Cassandra Clare",
+        "Shadowhunters (TV)"
+    ],
     "Motherland": [
         "Motherland: Fort Salem (TV)"
     ],
@@ -494,9 +505,6 @@
     "Raven Cycle": [
         "Raven Cycle - Maggie Stiefvater"
     ],
-    "Riverdale": [
-        "Riverdale (TV 2017)"
-    ],
     "Rizzoli & Isles": [
         "Rizzoli & Isles"
     ],
@@ -524,10 +532,6 @@
     ],
     "Shadow and Bone": [
         "Shadow and Bone (TV)"
-    ],
-    "Shadowhunters | Mortal Instruments": [
-        "Mortal Instruments Series - Cassandra Clare",
-        "Shadowhunters (TV)"
     ],
     "Shameless": [
         "Shameless (US)"
@@ -654,9 +658,6 @@
     "Top Gun": [
         "Top Gun (Movies)"
     ],
-    "Torchwood": [
-        "Torchwood"
-    ],
     "Trigun Universe | \u30c8\u30e9\u30a4\u30ac\u30f3": [
         "Trigun Stampede (Anime 2023)"
     ],
@@ -689,9 +690,6 @@
     ],
     "White Collar": [
         "White Collar"
-    ],
-    "Word of Honor | \u5c71\u6cb3\u4ee4": [
-        "\u5c71\u6cb3\u4ee4 | Word of Honor (TV 2021)"
     ],
     "Wynonna Earp": [
         "Wynonna Earp (TV)"

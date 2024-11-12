@@ -79,9 +79,9 @@
                 "Hockey RPF"
             ]
         },
-        "KAT-TUN": {
-            "Fandom": "KAT-TUN",
-            "Type": "Music RPF",
+        "KAT-TUN | \u30ab\u30c8\u30a5\u30fc\u30f3": {
+            "Fandom": "KAT-TUN | \u30ab\u30c8\u30a5\u30fc\u30f3",
+            "Type": "Actor RPF",
             "OP Versions": [
                 "KAT-TUN (Band)"
             ]
@@ -267,6 +267,14 @@
                 "Arcane: League of Legends (Cartoon 2021)"
             ]
         },
+        "Archie Comics Universe": {
+            "Fandom": "Archie Comics Universe",
+            "Author Name": null,
+            "OP Versions": [
+                "Chilling Adventures of Sabrina (TV 2018)",
+                "Riverdale (TV 2017)"
+            ]
+        },
         "Attack on Titan | \u9032\u6483\u306e\u5de8\u4eba": {
             "Fandom": "Attack on Titan | \u9032\u6483\u306e\u5de8\u4eba",
             "Author Name": null,
@@ -368,13 +376,6 @@
                 "Check Please! (Webcomic)"
             ]
         },
-        "Chilling Adventures of Sabrina": {
-            "Fandom": "Chilling Adventures of Sabrina",
-            "Author Name": null,
-            "OP Versions": [
-                "Chilling Adventures of Sabrina (TV 2018)"
-            ]
-        },
         "Criminal Minds": {
             "Fandom": "Criminal Minds",
             "Author Name": null,
@@ -405,8 +406,8 @@
                 "The Flash (TV 2014)"
             ]
         },
-        "Dangan Ronpa": {
-            "Fandom": "Dangan Ronpa",
+        "Danganronpa": {
+            "Fandom": "Danganronpa",
             "Author Name": null,
             "OP Versions": [
                 "New Dangan Ronpa V3: Everyone's New Semester of Killing",
@@ -427,11 +428,12 @@
                 "Detroit: Become Human (Video Game)"
             ]
         },
-        "Doctor Who": {
-            "Fandom": "Doctor Who",
+        "Doctor Who Universe": {
+            "Fandom": "Doctor Who Universe",
             "Author Name": null,
             "OP Versions": [
-                "Doctor Who (2005)"
+                "Doctor Who (2005)",
+                "Torchwood"
             ]
         },
         "Dragon Age": {
@@ -463,6 +465,13 @@
             "Author Name": null,
             "OP Versions": [
                 "Faking It (TV 2014)"
+            ]
+        },
+        "Faraway Wanderers / Word of Honor | \u5929\u6daf\u5ba2 / \u5c71\u6cb3\u4ee4": {
+            "Fandom": "Faraway Wanderers / Word of Honor | \u5929\u6daf\u5ba2 / \u5c71\u6cb3\u4ee4",
+            "Author Name": null,
+            "OP Versions": [
+                "\u5c71\u6cb3\u4ee4 | Word of Honor (TV 2021)"
             ]
         },
         "Final Fantasy | \u30d5\u30a1\u30a4\u30ca\u30eb\u30d5\u30a1\u30f3\u30bf\u30b8\u30fc": {
@@ -916,6 +925,14 @@
                 "Gundam Wing"
             ]
         },
+        "Mortal Instruments": {
+            "Fandom": "Mortal Instruments",
+            "Author Name": "Cassandra Clare",
+            "OP Versions": [
+                "Mortal Instruments Series - Cassandra Clare",
+                "Shadowhunters (TV)"
+            ]
+        },
         "Motherland": {
             "Fandom": "Motherland",
             "Author Name": null,
@@ -1088,13 +1105,6 @@
                 "Raven Cycle - Maggie Stiefvater"
             ]
         },
-        "Riverdale": {
-            "Fandom": "Riverdale",
-            "Author Name": null,
-            "OP Versions": [
-                "Riverdale (TV 2017)"
-            ]
-        },
         "Rizzoli & Isles": {
             "Fandom": "Rizzoli & Isles",
             "Author Name": null,
@@ -1157,14 +1167,6 @@
             "Author Name": null,
             "OP Versions": [
                 "Shadow and Bone (TV)"
-            ]
-        },
-        "Shadowhunters | Mortal Instruments": {
-            "Fandom": "Shadowhunters | Mortal Instruments",
-            "Author Name": "Cassandra Clare",
-            "OP Versions": [
-                "Mortal Instruments Series - Cassandra Clare",
-                "Shadowhunters (TV)"
             ]
         },
         "Shameless": {
@@ -1464,13 +1466,6 @@
                 "Top Gun (Movies)"
             ]
         },
-        "Torchwood": {
-            "Fandom": "Torchwood",
-            "Author Name": null,
-            "OP Versions": [
-                "Torchwood"
-            ]
-        },
         "Trigun Universe | \u30c8\u30e9\u30a4\u30ac\u30f3": {
             "Fandom": "Trigun Universe | \u30c8\u30e9\u30a4\u30ac\u30f3",
             "Author Name": null,
@@ -1546,13 +1541,6 @@
             "Author Name": null,
             "OP Versions": [
                 "White Collar"
-            ]
-        },
-        "Word of Honor | \u5c71\u6cb3\u4ee4": {
-            "Fandom": "Word of Honor | \u5c71\u6cb3\u4ee4",
-            "Author Name": null,
-            "OP Versions": [
-                "\u5c71\u6cb3\u4ee4 | Word of Honor (TV 2021)"
             ]
         },
         "Wynonna Earp": {

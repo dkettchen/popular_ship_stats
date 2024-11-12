@@ -377,7 +377,6 @@ def complete_character_names(data_dict):
             "Scaramouche" : "The Balladeer", # alias
             "Yae Miko": "Guuji", # alias
         },
-
     }
     add_first_last_W = { 
         "Youtube": {
@@ -590,6 +589,9 @@ def complete_character_names(data_dict):
                 "name_order": "W"
             }
         },
+        "Persona": {
+            "Amamiya Ren | Player Character": "| Joker"
+        }
 
     }
 
@@ -693,6 +695,8 @@ def complete_character_names(data_dict):
                         new_char_value["alias"] = new_char_value["surname"]
                     elif character == "Elizabeth Burke":
                         new_char_value["maiden_name"] = other_name_parts[fandom][character]
+                    elif character == "Amamiya Ren | Player Character":
+                        new_char_value["title (suffix)"] = other_name_parts[fandom][character]
                     elif character in [ # adding multiple name parts
                         "TommyInnit",
                         "Wilbur Soot",

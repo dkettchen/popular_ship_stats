@@ -98,6 +98,8 @@ def format_unified_labels(data_dict):
             new_rpf_fandom = "Women's Soccer"
         elif "drag" in rpf_fandom.lower():
             new_rpf_fandom = "Drag"
+        elif "KAT-TUN" in rpf_fandom:
+            new_rpf_fandom = "カトゥーン | KAT-TUN"
         elif "(Band)" in rpf_fandom:
             new_rpf_fandom = rpf_fandom[:-7]
         elif "Adam Lambert" in rpf_fandom or "American Idol" in rpf_fandom:
@@ -126,6 +128,7 @@ def format_unified_labels(data_dict):
         elif "|" in rpf_fandom:
             new_rpf_fandom = sub(r"\|", "/", rpf_fandom)
         else: new_rpf_fandom = rpf_fandom # it stays as is
+        
         
         if new_rpf_fandom == "Lord of the Rings":
             new_rpf_fandom = "Lord of the Rings Universe"
@@ -316,7 +319,7 @@ def format_unified_labels(data_dict):
         elif "Naruto" in key:
             fandom = "Naruto"
         elif "Dangan Ronpa" in key:
-            fandom = "Dangan Ronpa"
+            fandom = "Danganronpa"
         elif "Persona" in key:
             fandom = "Persona"
         elif "Star Wars" in key or key == "Rogue One":
@@ -332,7 +335,7 @@ def format_unified_labels(data_dict):
             "Mortal Instruments",
             "Shadowhunters",
         ]:
-            fandom = "Mortal Instruments | Shadowhunters"
+            fandom = "Mortal Instruments"
         elif "Witcher" in key:
             fandom = "Wiedźmin | The Witcher"
         elif key == "Avatar":
@@ -412,6 +415,18 @@ def format_unified_labels(data_dict):
             "Buffy the Vampire Slayer"
         ]:
             fandom = "Buffy Universe"
+        elif key in [
+            "Riverdale",
+            "Chilling Adventures of Sabrina",
+        ]:
+            fandom = "Archie Comics Universe"
+        elif key in [
+            "Doctor Who",
+            "Torchwood",
+        ]:
+            fandom = "Doctor Who Universe"
+        elif "Word of Honor" in key:
+            fandom = "天涯客 / 山河令 | Faraway Wanderers / Word of Honor"
         else: 
             fandom = non_gathered_dict[key]["Fandom"]
 

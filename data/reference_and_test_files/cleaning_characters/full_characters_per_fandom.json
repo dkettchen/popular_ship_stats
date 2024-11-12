@@ -57,7 +57,7 @@
             "Jonathan Toews",
             "Patrick Kane"
         ],
-        "KAT-TUN": [
+        "KAT-TUN | \u30ab\u30c8\u30a5\u30fc\u30f3": [
             "Akanishi Jin",
             "Kamenashi Kazuya"
         ],
@@ -217,6 +217,15 @@
             "Vi (League of Legends)",
             "Viktor (League of Legends)"
         ],
+        "Archie Comics Universe": [
+            "Betty Cooper",
+            "Cheryl Blossom",
+            "Jughead Jones",
+            "Mary Wardwell | Madam Satan | Lilith",
+            "Toni Topaz",
+            "Veronica Lodge",
+            "Zelda Spellman"
+        ],
         "Attack on Titan | \u9032\u6483\u306e\u5de8\u4eba": [
             "Annie Leonhart",
             "Eren Yeager",
@@ -300,10 +309,6 @@
             "Eric Bittle",
             "Jack Zimmermann"
         ],
-        "Chilling Adventures of Sabrina": [
-            "Mary Wardwell | Madam Satan | Lilith",
-            "Zelda Spellman"
-        ],
         "Criminal Minds": [
             "Aaron Hotchner",
             "Derek Morgan",
@@ -347,7 +352,7 @@
             "Sara Lance",
             "Tim Drake"
         ],
-        "Dangan Ronpa": [
+        "Danganronpa": [
             "Hinata Hajime",
             "Komaeda Nagito",
             "Oma Kokichi",
@@ -363,10 +368,12 @@
             "Hank Anderson",
             "Upgraded Connor | RK900"
         ],
-        "Doctor Who": [
+        "Doctor Who Universe": [
             "Amy Pond",
             "Clara Oswin Oswald",
             "Eleventh Doctor",
+            "Ianto Jones",
+            "Jack Harkness",
             "Jenny Flint",
             "Madame Vastra",
             "Ninth Doctor",
@@ -414,6 +421,10 @@
         "Faking It": [
             "Amy Raudenfeld",
             "Karma Ashcroft"
+        ],
+        "Faraway Wanderers / Word of Honor | \u5929\u6daf\u5ba2 / \u5c71\u6cb3\u4ee4": [
+            "Wen Kexing",
+            "Zhou Zishu"
         ],
         "Final Fantasy | \u30d5\u30a1\u30a4\u30ca\u30eb\u30d5\u30a1\u30f3\u30bf\u30b8\u30fc": [
             "Lightning",
@@ -843,6 +854,12 @@
             "Duo Maxwell",
             "Heero Yuy"
         ],
+        "Mortal Instruments": [
+            "Alec Lightwood",
+            "Clary Fray",
+            "Isabelle Lightwood",
+            "Magnus Bane"
+        ],
         "Motherland": [
             "Raelle Collar",
             "Scylla Ramshorn"
@@ -994,13 +1011,6 @@
             "Adam Parrish",
             "Ronan Lynch"
         ],
-        "Riverdale": [
-            "Betty Cooper",
-            "Cheryl Blossom",
-            "Jughead Jones",
-            "Toni Topaz",
-            "Veronica Lodge"
-        ],
         "Rizzoli & Isles": [
             "Jane Rizzoli",
             "Maura Isles"
@@ -1040,12 +1050,6 @@
         "Shadow and Bone": [
             "Alina Starkov",
             "The Darkling | Aleksander Morozova"
-        ],
-        "Shadowhunters | Mortal Instruments": [
-            "Alec Lightwood",
-            "Clary Fray",
-            "Isabelle Lightwood",
-            "Magnus Bane"
         ],
         "Shameless": [
             "Ian Gallagher",
@@ -1326,10 +1330,6 @@
             "Pete 'Maverick' Mitchell",
             "Tom 'Iceman' Kazansky"
         ],
-        "Torchwood": [
-            "Ianto Jones",
-            "Jack Harkness"
-        ],
         "Trigun Universe | \u30c8\u30e9\u30a4\u30ac\u30f3": [
             "Nicholas D. Wolfwood",
             "Vash the Stampede"
@@ -1382,10 +1382,6 @@
             "Elizabeth Burke",
             "Neal Caffrey",
             "Peter Burke"
-        ],
-        "Word of Honor | \u5c71\u6cb3\u4ee4": [
-            "Wen Kexing",
-            "Zhou Zishu"
         ],
         "Wynonna Earp": [
             "Nicole Haught",

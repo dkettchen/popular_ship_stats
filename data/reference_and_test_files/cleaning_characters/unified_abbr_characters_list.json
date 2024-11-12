@@ -111,105 +111,6 @@
                 "Matt Smith"
             ],
             "rpf_or_fic": "RPF"
-        },
-        "Amy Pond": {
-            "full_name": "Amy Pond",
-            "op_versions": [
-                "Amy Pond"
-            ],
-            "rpf_or_fic": "fictional"
-        },
-        "Clara Oswin Oswald": {
-            "full_name": "Clara Oswin Oswald",
-            "op_versions": [
-                "Clara Oswin Oswald"
-            ],
-            "rpf_or_fic": "fictional"
-        },
-        "The Eleventh Doctor": {
-            "full_name": "The Eleventh Doctor",
-            "op_versions": [
-                "Eleventh Doctor"
-            ],
-            "rpf_or_fic": "fictional"
-        },
-        "Jenny Flint": {
-            "full_name": "Jenny Flint",
-            "op_versions": [
-                "Jenny Flint"
-            ],
-            "rpf_or_fic": "fictional"
-        },
-        "Madame Vastra": {
-            "full_name": "Madame Vastra",
-            "op_versions": [
-                "Madame Vastra"
-            ],
-            "rpf_or_fic": "fictional"
-        },
-        "The Ninth Doctor": {
-            "full_name": "The Ninth Doctor",
-            "op_versions": [
-                "Ninth Doctor"
-            ],
-            "rpf_or_fic": "fictional"
-        },
-        "River Song": {
-            "full_name": "River Song",
-            "op_versions": [
-                "River Song"
-            ],
-            "rpf_or_fic": "fictional"
-        },
-        "Rory Williams": {
-            "full_name": "Rory Williams",
-            "op_versions": [
-                "Rory Williams"
-            ],
-            "rpf_or_fic": "fictional"
-        },
-        "Rose Tyler": {
-            "full_name": "Rose Tyler",
-            "op_versions": [
-                "Rose Tyler"
-            ],
-            "rpf_or_fic": "fictional"
-        },
-        "The Tenth Doctor": {
-            "full_name": "The Tenth Doctor",
-            "op_versions": [
-                "Tenth Doctor",
-                "Tenth Doctor (duplicate)"
-            ],
-            "rpf_or_fic": "fictional"
-        },
-        "The Doctor": {
-            "full_name": "The Doctor",
-            "op_versions": [
-                "The Doctor"
-            ],
-            "rpf_or_fic": "fictional"
-        },
-        "The Thirteenth Doctor": {
-            "full_name": "The Thirteenth Doctor",
-            "op_versions": [
-                "Thirteenth Doctor"
-            ],
-            "rpf_or_fic": "fictional"
-        },
-        "The Twelfth Doctor": {
-            "full_name": "The Twelfth Doctor",
-            "op_versions": [
-                "Twelfth Doctor"
-            ],
-            "rpf_or_fic": "fictional"
-        },
-        "Yasmin Khan": {
-            "full_name": "Yasmin Khan",
-            "op_versions": [
-                "Yasmin Khan"
-            ],
-            "rpf_or_fic": "fictional"
         }
     },
     "Drag": {
@@ -381,7 +282,7 @@
             "rpf_or_fic": "RPF"
         }
     },
-    "KAT-TUN": {
+    "KAT-TUN | \u30ab\u30c8\u30a5\u30fc\u30f3": {
         "Akanishi Jin": {
             "full_name": "Akanishi Jin",
             "op_versions": [
@@ -1368,6 +1269,57 @@
             "rpf_or_fic": "fictional"
         }
     },
+    "Archie Comics Universe": {
+        "Betty Cooper": {
+            "full_name": "Betty Cooper",
+            "op_versions": [
+                "Betty Cooper"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "Cheryl Blossom": {
+            "full_name": "Cheryl Blossom",
+            "op_versions": [
+                "Cheryl Blossom"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "Jughead Jones": {
+            "full_name": "Jughead Jones",
+            "op_versions": [
+                "Jughead Jones"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "Mary Wardwell | Madam Satan / Lilith": {
+            "full_name": "Mary Wardwell | Madam Satan / Lilith",
+            "op_versions": [
+                "Mary Wardwell | Madam Satan | Lilith"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "Toni Topaz": {
+            "full_name": "Toni Topaz",
+            "op_versions": [
+                "Toni Topaz"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "Veronica Lodge": {
+            "full_name": "Veronica Lodge",
+            "op_versions": [
+                "Veronica Lodge"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "Zelda Spellman": {
+            "full_name": "Zelda Spellman",
+            "op_versions": [
+                "Zelda Spellman"
+            ],
+            "rpf_or_fic": "fictional"
+        }
+    },
     "Attack on Titan | \u9032\u6483\u306e\u5de8\u4eba": {
         "Annie Leonhart": {
             "full_name": "Annie Leonhart",
@@ -1769,22 +1721,6 @@
             "rpf_or_fic": "fictional"
         }
     },
-    "Chilling Adventures of Sabrina": {
-        "Mary Wardwell | Madam Satan / Lilith": {
-            "full_name": "Mary Wardwell | Madam Satan / Lilith",
-            "op_versions": [
-                "Mary Wardwell | Madam Satan | Lilith"
-            ],
-            "rpf_or_fic": "fictional"
-        },
-        "Zelda Spellman": {
-            "full_name": "Zelda Spellman",
-            "op_versions": [
-                "Zelda Spellman"
-            ],
-            "rpf_or_fic": "fictional"
-        }
-    },
     "Criminal Minds": {
         "Aaron Hotchner": {
             "full_name": "Aaron Hotchner",
@@ -2038,7 +1974,7 @@
             "rpf_or_fic": "fictional"
         }
     },
-    "Dangan Ronpa": {
+    "Danganronpa": {
         "Hinata Hajime": {
             "full_name": "Hinata Hajime",
             "op_versions": [
@@ -2110,6 +2046,121 @@
             "full_name": "Connor (RK900)",
             "op_versions": [
                 "Upgraded Connor | RK900"
+            ],
+            "rpf_or_fic": "fictional"
+        }
+    },
+    "Doctor Who Universe": {
+        "Amy Pond": {
+            "full_name": "Amy Pond",
+            "op_versions": [
+                "Amy Pond"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "Clara Oswin Oswald": {
+            "full_name": "Clara Oswin Oswald",
+            "op_versions": [
+                "Clara Oswin Oswald"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "The Eleventh Doctor": {
+            "full_name": "The Eleventh Doctor",
+            "op_versions": [
+                "Eleventh Doctor"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "Ianto Jones": {
+            "full_name": "Ianto Jones",
+            "op_versions": [
+                "Ianto Jones"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "Jack Harkness": {
+            "full_name": "Jack Harkness",
+            "op_versions": [
+                "Jack Harkness"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "Jenny Flint": {
+            "full_name": "Jenny Flint",
+            "op_versions": [
+                "Jenny Flint"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "Madame Vastra": {
+            "full_name": "Madame Vastra",
+            "op_versions": [
+                "Madame Vastra"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "The Ninth Doctor": {
+            "full_name": "The Ninth Doctor",
+            "op_versions": [
+                "Ninth Doctor"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "River Song": {
+            "full_name": "River Song",
+            "op_versions": [
+                "River Song"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "Rory Williams": {
+            "full_name": "Rory Williams",
+            "op_versions": [
+                "Rory Williams"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "Rose Tyler": {
+            "full_name": "Rose Tyler",
+            "op_versions": [
+                "Rose Tyler"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "The Tenth Doctor": {
+            "full_name": "The Tenth Doctor",
+            "op_versions": [
+                "Tenth Doctor",
+                "Tenth Doctor (duplicate)"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "The Doctor": {
+            "full_name": "The Doctor",
+            "op_versions": [
+                "The Doctor"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "The Thirteenth Doctor": {
+            "full_name": "The Thirteenth Doctor",
+            "op_versions": [
+                "Thirteenth Doctor"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "The Twelfth Doctor": {
+            "full_name": "The Twelfth Doctor",
+            "op_versions": [
+                "Twelfth Doctor"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "Yasmin Khan": {
+            "full_name": "Yasmin Khan",
+            "op_versions": [
+                "Yasmin Khan"
             ],
             "rpf_or_fic": "fictional"
         }
@@ -2295,6 +2346,22 @@
             "full_name": "Karma Ashcroft",
             "op_versions": [
                 "Karma Ashcroft"
+            ],
+            "rpf_or_fic": "fictional"
+        }
+    },
+    "Faraway Wanderers / Word of Honor | \u5929\u6daf\u5ba2 / \u5c71\u6cb3\u4ee4": {
+        "Wen Kexing": {
+            "full_name": "Wen Kexing",
+            "op_versions": [
+                "Wen Kexing"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "Zhou Zishu": {
+            "full_name": "Zhou Zishu",
+            "op_versions": [
+                "Zhou Zishu"
             ],
             "rpf_or_fic": "fictional"
         }
@@ -4377,6 +4444,36 @@
             "rpf_or_fic": "fictional"
         }
     },
+    "Mortal Instruments": {
+        "Alec Lightwood": {
+            "full_name": "Alec Lightwood",
+            "op_versions": [
+                "Alec Lightwood"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "Clary Fray": {
+            "full_name": "Clary Fray",
+            "op_versions": [
+                "Clary Fray"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "Isabelle Lightwood": {
+            "full_name": "Isabelle Lightwood",
+            "op_versions": [
+                "Isabelle Lightwood"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "Magnus Bane": {
+            "full_name": "Magnus Bane",
+            "op_versions": [
+                "Magnus Bane"
+            ],
+            "rpf_or_fic": "fictional"
+        }
+    },
     "Motherland": {
         "Raelle Collar": {
             "full_name": "Raelle Collar",
@@ -4946,8 +5043,8 @@
             ],
             "rpf_or_fic": "fictional"
         },
-        "Amamiya Ren | Player Character": {
-            "full_name": "Amamiya Ren | Player Character",
+        "Amamiya Ren | Joker | Player Character": {
+            "full_name": "Amamiya Ren | Joker | Player Character",
             "op_versions": [
                 "Persona 5 Protagonist"
             ],
@@ -5100,43 +5197,6 @@
             "full_name": "Ronan Lynch",
             "op_versions": [
                 "Ronan Lynch"
-            ],
-            "rpf_or_fic": "fictional"
-        }
-    },
-    "Riverdale": {
-        "Betty Cooper": {
-            "full_name": "Betty Cooper",
-            "op_versions": [
-                "Betty Cooper"
-            ],
-            "rpf_or_fic": "fictional"
-        },
-        "Cheryl Blossom": {
-            "full_name": "Cheryl Blossom",
-            "op_versions": [
-                "Cheryl Blossom"
-            ],
-            "rpf_or_fic": "fictional"
-        },
-        "Jughead Jones": {
-            "full_name": "Jughead Jones",
-            "op_versions": [
-                "Jughead Jones"
-            ],
-            "rpf_or_fic": "fictional"
-        },
-        "Toni Topaz": {
-            "full_name": "Toni Topaz",
-            "op_versions": [
-                "Toni Topaz"
-            ],
-            "rpf_or_fic": "fictional"
-        },
-        "Veronica Lodge": {
-            "full_name": "Veronica Lodge",
-            "op_versions": [
-                "Veronica Lodge"
             ],
             "rpf_or_fic": "fictional"
         }
@@ -5309,36 +5369,6 @@
             "full_name": "Aleksander Morozova | The Darkling",
             "op_versions": [
                 "The Darkling | Aleksander Morozova"
-            ],
-            "rpf_or_fic": "fictional"
-        }
-    },
-    "Shadowhunters | Mortal Instruments": {
-        "Alec Lightwood": {
-            "full_name": "Alec Lightwood",
-            "op_versions": [
-                "Alec Lightwood"
-            ],
-            "rpf_or_fic": "fictional"
-        },
-        "Clary Fray": {
-            "full_name": "Clary Fray",
-            "op_versions": [
-                "Clary Fray"
-            ],
-            "rpf_or_fic": "fictional"
-        },
-        "Isabelle Lightwood": {
-            "full_name": "Isabelle Lightwood",
-            "op_versions": [
-                "Isabelle Lightwood"
-            ],
-            "rpf_or_fic": "fictional"
-        },
-        "Magnus Bane": {
-            "full_name": "Magnus Bane",
-            "op_versions": [
-                "Magnus Bane"
             ],
             "rpf_or_fic": "fictional"
         }
@@ -6573,22 +6603,6 @@
             "rpf_or_fic": "fictional"
         }
     },
-    "Torchwood": {
-        "Ianto Jones": {
-            "full_name": "Ianto Jones",
-            "op_versions": [
-                "Ianto Jones"
-            ],
-            "rpf_or_fic": "fictional"
-        },
-        "Jack Harkness": {
-            "full_name": "Jack Harkness",
-            "op_versions": [
-                "Jack Harkness"
-            ],
-            "rpf_or_fic": "fictional"
-        }
-    },
     "Trigun Universe | \u30c8\u30e9\u30a4\u30ac\u30f3": {
         "Nicholas D. Wolfwood": {
             "full_name": "Nicholas D. Wolfwood",
@@ -6812,22 +6826,6 @@
             "full_name": "Peter Burke",
             "op_versions": [
                 "Peter Burke"
-            ],
-            "rpf_or_fic": "fictional"
-        }
-    },
-    "Word of Honor | \u5c71\u6cb3\u4ee4": {
-        "Wen Kexing": {
-            "full_name": "Wen Kexing",
-            "op_versions": [
-                "Wen Kexing"
-            ],
-            "rpf_or_fic": "fictional"
-        },
-        "Zhou Zishu": {
-            "full_name": "Zhou Zishu",
-            "op_versions": [
-                "Zhou Zishu"
             ],
             "rpf_or_fic": "fictional"
         }
