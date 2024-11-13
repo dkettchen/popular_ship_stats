@@ -236,6 +236,55 @@ Work in progress!
 
 
 
+## Additional data:
+
+### Geography:
+
+- Countries were assigned based on where the fandom's (main) pieces of media, its author, or the real life humans being RPF shipped are from. 
+
+- If there is an original version with later english/american adaptation, and no specification on which version is meant, the original version is counted, notably if the original's country of origin is under- or not yet represented.
+
+    > Ex. The Witcher's original book version is by a Polish author and was written in Polish, so The Witcher franchise' country of origin is Poland, even though the games and live action show are not.
+
+- If only a specific version is listed, only that version's country will be counted.
+
+    > Ex. RuPaul's Drag Race has various versions, including the american original and the UK version, but only american queens made the ranking, so it is counted as american.
+
+- If multiple countries collaborated on the piece of media, or the RPF fandom is made up of people from multiple countries, the fandom will be counted as belonging to all countries involved, regardless of how much or little they contributed.
+
+    > Ex. One Direction has one irish member, so they count as Ireland / UK.
+
+    > Ex. Power Rangers was a collaboration between America and Japan, so it is counted as Japan / USA.
+
+- Languages are assigned based on countries of origin, even if the translation is more popular, unless the media in question is originally made/published in another language.
+
+    > Ex. Final Fantasy enjoys international fame due to being translated into many other languages, but is counted as Japanese.
+
+    > Ex. A french studio under a japanese company made Life is Strange, but the game was released in English, so its language is English.
+
+- For continents, I did not bother differentiating between North, Middle, and South America, as only the US, Canada, and Mexico are represented to begin with, and the latter is only represented by a single youtuber (ie not even a whole fandom).
+
+- The [world_population_by_countries.csv](data/reference_and_test_files/additional_data/world_population_by_countries.csv) file's info is taken from [wikipedia's list](https://en.wikipedia.org/wiki/List_of_countries_and_dependencies_by_population). It only contains countries with populations over 1 million.
+
+### Media Types:
+
+- If a fandom has multiple media types, I counted as many as felt relevant, focusing on the most popular or those listed in this set.
+
+    > Ex. BBC's Sherlock is obviously based on Sherlock Holmes by Sir Arthur Conan Doyle, but as only the show has been tagged across the entire data set, I am only counting it as "TV (live action)"
+
+    > Ex. A lot of anime also have animated movies that either function as part of the show's canon (like Haikyuu) or independantly of it (like One Piece), but I did not bother counting these fandoms as "Movie (animated)", I only counted the show (and comic its based on where applicable). I also counted the One Piece live action netflix show, as I know it's the cause of the recent surge in popularity of that fandom (-> Our singular One Piece ship only made the annual ranking in 2023, the year the live action show was released. One Piece ships also made the tumblr ranking that year.), hence relevant to this data set.
+
+- If it was not easily discernible which media types were meant (ie same character names across adaptations), I tried to scew as widely as possible.
+
+    > Ex. I'm decently sure that the people writing Les Mis fanfic are seldomly only basing it on the french Victor Hugo original from the 19th century, presumably favouring the musical adaptation and 2012 movie among other english adaptations, but the characters have the same names in all instances, so I am including the original book as a media type as well.
+
+- I grouped RPF by their own categories, including multiple where relevant or in addition to their fandom's existing media types.
+
+    > Ex. Musicians who are shipped in association with a singing competition like American Idol or Super Vocal count as both "Music RPF" and "Unscripted TV RPF".
+
+    > Ex. Live action shows like Supernatural or Merlin, whose actors are also RPF shipped, will be tagged as both "Actor RPF" and "TV (live action)".
+ 
+
 ## N.B.: 
 
 There may remain inaccuracies in the data as it's a shitton of characters and while I looked up most of them & combed their wikis for relevant info I'm just one guy (same as OP is just one person) and I may have overlooked some details in any info I added/relabelled/completed.
