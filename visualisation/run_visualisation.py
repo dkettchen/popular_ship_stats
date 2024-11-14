@@ -53,9 +53,9 @@ from visualisation.diagram_code.visualise_tables import (
 )
 # our many imports!
 
-def run_ao3_2013_2023_vis(input_rankings:list):
+def run_ao3_main_vis(input_rankings:list, end_date:int):
     """
-    runs ao3 2013-2023 visualisation for all rankings in the input list
+    runs ao3 2013-{end_date} visualisation for all rankings in the input list
 
     (currently implemented: "femslash")
 
@@ -74,11 +74,11 @@ def run_ao3_2013_2023_vis(input_rankings:list):
 
         # year ranges
         if ranking == "overall":
-            year_range = "2013_2023"
+            year_range = f"2013_{end_date}"
         elif ranking == "femslash":
-            year_range = "2014_2023"
+            year_range = f"2014_{end_date}"
         elif ranking == "annual":
-            year_range = "2016_2023"
+            year_range = f"2016_{end_date}"
         
         # file naming blocks
         ranking_name = f"ao3_{ranking}_rankings"
@@ -639,4 +639,4 @@ def run_ao3_2013_2023_vis(input_rankings:list):
         print(f"Completed {ranking} ranking")
 
 if __name__ == "__main__": # run all rankings!
-    run_ao3_2013_2023_vis(["femslash", "overall", "annual"])
+    run_ao3_main_vis(["femslash", "overall", "annual"], 2023)
