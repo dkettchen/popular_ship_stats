@@ -18,12 +18,15 @@ def make_yearly_df_dict(ranking:str, end_date:int):
     """
     returns a dictionary with year keys and dataframe values
 
-    each dataframe is the corresponding year's (currently implemented:) 
-    ao3 ranking data as read from the data/fifth_clean_up_data/ folder
+    The years will go up to the end date, starting at relevant ranking's first year of tracking,
+    skipping 2018 due to no data, and ending in the year given. The end date must not precede 2019.
 
-    - for femslash ranking: ranking="femslash"
-    - for overall ranking: ranking="overall"
-    - for annual ranking: ranking="annual"
+    Each dataframe is the corresponding year's data as read from the relevant ranking file
+
+    (currently implemented:)
+    ao3 ranking data (from data/fifth_clean_up_data/ folder)
+    ranking="femslash"|"overall"|"annual"
+    end_date=2019|2020|2021|2022|2023|2024 (2024 data not added yet)
     """
     # adding years until 2017 (when it skipped 2018)
     if ranking == "femslash":
