@@ -90,7 +90,7 @@ def run_ao3_main_vis(input_rankings:list, end_date:int):
         print(f"Making input data")
         # input df prep: 
 
-        ship_joined_df = make_joined_ranking_df(ranking)
+        ship_joined_df = make_joined_ranking_df(ranking, end_date)
 
         # make useable dfs
         ship_info_df = remove_members_from_df(ship_joined_df)

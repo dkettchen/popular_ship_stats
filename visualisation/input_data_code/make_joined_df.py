@@ -6,13 +6,13 @@ from visualisation.vis_utils.join_member_info import join_character_info_to_df
 import pandas as pd
 
 
-def make_joined_ranking_df(ranking:str):
+def make_joined_ranking_df(ranking:str, end_date:int=2023):
     """
     returns a ship-joined dataframe of the input ranking's data 
     to be used to create ship & character info dfs
     """
     # get data
-    df_dict = make_yearly_df_dict(ranking)
+    df_dict = make_yearly_df_dict(ranking, end_date)
 
     # fix columns
     edited_df_dict = edit_ranking_df_columns(df_dict, ranking)
