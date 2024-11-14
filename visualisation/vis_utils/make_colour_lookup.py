@@ -69,6 +69,12 @@ def make_colour_lookup(input_df:DataFrame): # for fandoms
         "A Song of Ice and Fire / Game of Thrones Universe":"dimgrey",
         "Miraculous: Tales of Ladybug & Cat Noir | Miraculous: Les Aventures de Ladybug et Chat Noir":"orangered",
         "Grandmaster of Demonic Cultivation / The Untamed | 魔道祖师 / 陈情令":"aliceblue",
+        "Hamilton": "orange",
+        "Undertale": "cornflowerblue",
+        "The Owl House": "rosybrown",
+        "Overwatch": "gold",
+        "Attack on Titan | 進撃の巨人": "chocolate",
+        "SK8 the Infinity | SK∞ エスケーエイト": "blueviolet",
     }
     for fandom in specified_fandoms_lookup:
         colour_lookup[fandom] = specified_fandoms_lookup[fandom]
