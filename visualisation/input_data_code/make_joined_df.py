@@ -21,11 +21,12 @@ def make_joined_ranking_df(ranking:str):
 
     return ship_joined_df
 
-def make_fandom_joined_df(ship_joined_df:pd.DataFrame, data_case:str):
+def make_fandom_joined_df(ship_joined_df:pd.DataFrame, data_case:str=None):
     """
     takes the output of make_joined_ranking_df
 
-    removes members if data_case="ships", joins member info if data_case="characters"
+    removes members if data_case="ships", joins member info if data_case="characters" 
+    (data_case is optional)
 
     then joins data from additional fandom data & world population data files
 
