@@ -1,4 +1,4 @@
-from visualisation.input_data_code.make_joined_ranking_df import make_joined_ranking_df
+from visualisation.input_data_code.make_joined_df import make_joined_ranking_df
 from visualisation.vis_utils.remove_member_columns import remove_members_from_df
 from visualisation.vis_utils.join_member_info import join_character_info_to_df
 from visualisation.vis_utils.make_colour_lookup import make_colour_lookup
