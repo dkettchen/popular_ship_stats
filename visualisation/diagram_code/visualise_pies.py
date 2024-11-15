@@ -25,6 +25,9 @@ def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str):
         - data_case="race_combos", ranking="femslash"|"overall"|"annual"
         - data_case="fic_type", ranking="overall"|"annual"
         - data_case="gender_combos", ranking="overall"|"annual"
+        - data_case="ships_by_country", ranking="femslash"|"overall"|"annual"
+        - data_case="ships_by_continent", ranking="femslash"|"overall"|"annual"
+        - data_case="ships_by_language", ranking="femslash"|"overall"|"annual"
 
     - demographic data about the top 100 most popular ships of all time 
     (data_case="most_popular_ships", ranking="femslash"|"overall"|"annual")
@@ -45,9 +48,24 @@ def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str):
             fig = make_subplots_by_year(2,2)
             max_count = 2
     else: # retrieving years
-        if data_case in ["multi_chars", "multi_char_ships", "interracial_ships", "most_popular_ships"]: # dfs
+        if data_case in [
+            "multi_chars", 
+            "multi_char_ships", 
+            "interracial_ships", 
+            "most_popular_ships"
+        ]: # dfs
             years = input_item.columns
-        elif data_case in ["rpf", "gender", "race", "race_combos", "fic_type", "gender_combos"]: # dict
+        elif data_case in [
+            "rpf", 
+            "gender", 
+            "race", 
+            "race_combos", 
+            "fic_type", 
+            "gender_combos",
+            "ships_by_country", 
+            "ships_by_continent",
+            "ships_by_language"
+        ]: # dict
             years = input_item.keys()
 
         num_of_years = len(years)
@@ -181,6 +199,16 @@ def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str):
             labels = ["slash", "gen"]
         elif data_case == "gender_combos":
             title = f"Gender combos by year{suffix}"
+        elif data_case in ["ships_by_country", "ships_by_continent","ships_by_language"]:
+            if data_case == "ships_by_country": 
+                by_what = "country"
+            elif data_case == "ships_by_continent":
+                by_what = "continent"
+            elif data_case == "ships_by_language":
+                by_what = "language"
+            title = f"Number of ships by {by_what}{suffix}"
+            text_info = "label"
+            min_size = 8
         else: print(input_item)
 
         for year in years:
@@ -206,7 +234,12 @@ def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str):
             # defaults to replace for certain cases
             values = year_series.values
             # replacing values where needed
-            if data_case == "interracial_ships":
+            if data_case in [
+                "interracial_ships",
+                "ships_by_country",
+                "ships_by_continent",
+                "ships_by_language"
+            ]:
                 labels = year_series.index
             elif data_case == "rpf":
                 values = year_series["no_of_ships"]
