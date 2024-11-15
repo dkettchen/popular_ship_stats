@@ -37,6 +37,7 @@ def make_fandom_joined_df(ship_joined_df:pd.DataFrame, data_case:str=None):
         base_df = remove_members_from_df(ship_joined_df)
     elif data_case == "characters":
         base_df = join_character_info_to_df(ship_joined_df)
+    else: base_df = ship_joined_df.copy()
 
     with_fandoms_df = join_additional_data(base_df, "fandom")
     with_fandoms_and_pop_df = join_additional_data(with_fandoms_df, "population")

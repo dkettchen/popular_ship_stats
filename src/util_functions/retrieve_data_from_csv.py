@@ -19,6 +19,8 @@ def read_data_from_csv(filepath: str):
     for row in data_list:
         new_row = []
         for item in row:
+            if len(item) == 0:
+                continue
             if item[0] == "[": # if it's supposed to be a list
                 split_item = split(r",\s", item) #splitting at commas
                 split_item[0] = split_item[0][1:] #removing opening [
@@ -57,9 +59,6 @@ def read_data_from_csv(filepath: str):
             new_row.append(new_item)
         output_list.append(new_row)
     return output_list
-
-
-
 
 if __name__ == "__main__":
     read_data_from_csv("data/first_clean_up_data/ao3_2016/raw_ao3_2016_data.csv")

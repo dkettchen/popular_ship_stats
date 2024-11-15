@@ -283,6 +283,10 @@ with open(filepath, "r") as fandom_file:
     # it may be worth checking all that only have specific versions listed in the set (ie specific FF games)
 
 def add_media_types(input_list): 
+    """
+    adds a concatenated string containing all relevant media types associated with the fandom to 
+    each fandom dict in the list
+    """
 
     rpf_fandoms = loaded_fandoms["RPF"]
     new_list = []
@@ -312,7 +316,13 @@ def add_media_types(input_list):
             print(f'"{fandom}",')
         
         new_dict = deepcopy(fandom_dict)
-        new_dict["media_type"] = sorted(media_types_list)
+
+        media_types_list = sorted(media_types_list)
+        media_types_str = media_types_list[0]
+        for item in media_types_list[1:]:
+            media_types_str += f" / {item}"
+
+        new_dict["media_type"] = media_types_str
 
         new_list.append(new_dict)
 
