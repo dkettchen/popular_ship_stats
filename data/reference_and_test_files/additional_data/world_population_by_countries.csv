@@ -2,7 +2,7 @@
 -,World,8119000000,100%,1 Jul 2024,UN projection,
 1,China,1409670000,17.3%,31 Dec 2023,Official estimate,Asia
 2,India,1404910000,17.3%,1 Jul 2024,Official projection,Asia
-3,United States,335893238,4.1%,1 Jan 2024,Official projection,North America
+3,USA,335893238,4.1%,1 Jan 2024,Official projection,North America
 4,Indonesia,282477584,3.5%,31 Jun 2024,National annual projection,Asia
 5,Pakistan,241499431,3.0%,1 Mar 2023,2023 census result,Asia
 6,Nigeria,223800000,2.7%,1 Jul 2023,Official projection,Africa
@@ -20,7 +20,7 @@
 18,Turkey,85372377,1.0%,31 Dec 2023,Official estimate,Europe/Asia
 19,Germany,84708010,1.0%,30 Jun 2024,National quarterly estimate,Europe
 20,France,68534000,0.8%,1 Oct 2024,Monthly national estimate,Europe
-21,United Kingdom,68265209,0.8%,1 Jul 2023,Official estimate,Europe
+21,UK,68265209,0.8%,1 Jul 2023,Official estimate,Europe
 22,Thailand,65969270,0.8%,1 Sep 2024,Monthly national estimate,Asia
 23,South Africa,63015904,0.8%,30 Jul 2024,Official estimate,Africa
 24,Tanzania,61741120,0.8%,23 Aug 2022,2022 census result,Africa
@@ -160,3 +160,4 @@
 154,Mauritius,1259509,0.02%,1 Jul 2024,National estimate,Africa
 155,Eswatini,1235549,0.02%,1 Jul 2024,Official projection,Africa
 156,Djibouti,1001454,0.01%,1 Jul 2022,National projection,Africa
+-,Unknown,-,-,-,-,-
