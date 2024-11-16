@@ -12,7 +12,7 @@ from visualisation.vis_utils.df_utils.retrieve_numbers import get_label_counts, 
 from visualisation.vis_utils.rename_gender_combos import rename_gender_combos
 from visualisation.vis_utils.sort_race_combos import sort_race_combos
 
-def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str):
+def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str, sub_case:str=None):
     """
     visualise 
     - numbers of relevant data case per year:
@@ -28,6 +28,8 @@ def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str):
         - data_case="ships_by_country", ranking="femslash"|"overall"|"annual"
         - data_case="ships_by_continent", ranking="femslash"|"overall"|"annual"
         - data_case="ships_by_language", ranking="femslash"|"overall"|"annual"
+        - data_case="gender_by_country", ranking="femslash"|"overall"|"annual"
+        - data_case="race_by_country", ranking="femslash"|"overall"|"annual"
 
     - demographic data about the top 100 most popular ships of all time 
     (data_case="most_popular_ships", ranking="femslash"|"overall"|"annual")
@@ -64,11 +66,16 @@ def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str):
             "gender_combos",
             "ships_by_country", 
             "ships_by_continent",
-            "ships_by_language"
+            "ships_by_language",
+            "gender_by_country",
+            "race_by_country",
         ]: # dict
             years = input_item.keys()
 
-        num_of_years = len(years)
+        if data_case in ["gender_by_country","race_by_country",] and ranking == "annual":
+            num_of_years = 7
+        else: num_of_years = len(years)
+
         fig = make_subplots_by_year(num_of_years) # making appropriate amount of subplots
         max_count = make_max_count(num_of_years)
 
@@ -209,6 +216,14 @@ def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str):
             title = f"Number of ships by {by_what}{suffix}"
             text_info = "label"
             min_size = 8
+        elif data_case in ["gender_by_country","race_by_country"]:
+            # sub case is country in question
+            if data_case == "gender_by_country":
+                title = f"Gender distribution ({sub_case}){suffix}"
+            elif data_case == "race_by_country":
+                title = f"Racial distribution ({sub_case}){suffix}"
+                colour_palette = make_colour_lookup_racial_groups()
+            text_info = "label"
         else: print(input_item)
 
         for year in years:
@@ -238,7 +253,9 @@ def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str):
                 "interracial_ships",
                 "ships_by_country",
                 "ships_by_continent",
-                "ships_by_language"
+                "ships_by_language",
+                "gender_by_country",
+                "race_by_country",
             ]:
                 labels = year_series.index
                 if data_case == "ships_by_country":
@@ -247,6 +264,10 @@ def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str):
                     colours = [colour_palettes.continent_colours[continent] for continent in labels]
                 elif data_case == "ships_by_language":
                     colours = [colour_palettes.language_colours[language] for language in labels]
+                elif data_case == "gender_by_country":
+                    colours = [colour_palettes.gender_colours[gender] for gender in labels]
+                elif data_case == "race_by_country":
+                    colours = [colour_palette[label] for label in labels]
             elif data_case == "rpf":
                 values = year_series["no_of_ships"]
             elif data_case == "gender":
@@ -257,7 +278,6 @@ def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str):
                 labels = year_series.index
                 if data_case == "race":
                     colours = [colour_palette[label] for label in labels]
-                values = year_series.values
             elif data_case == "gender_combos":
                 labels = year_series.index
                 colours = [colour_palettes.gender_combo_dict[combo] for combo in labels]

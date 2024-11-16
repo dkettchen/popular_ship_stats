@@ -5,6 +5,8 @@ import visualisation.vis_utils.diagram_utils.labels as lbls
 import plotly.express as px
 from visualisation.vis_utils.df_utils.make_dfs import sort_df
 from visualisation.vis_utils.make_colour_lookup import make_colour_lookup_racial_groups
+from visualisation.vis_utils.rename_gender_combos import rename_gender_combos
+from visualisation.vis_utils.df_utils.retrieve_numbers import sum_label_nums
 
 
 def visualise_non_white_counts(input_df:pd.DataFrame, ranking:str):
@@ -482,7 +484,7 @@ def visualise_simple_bar(input_item:pd.DataFrame|pd.Series, data_case:str, ranki
 
 
 # could refactor this with non white counts?
-def visualise_grouped_bars(input_item:dict, data_case:str, ranking:str):
+def visualise_grouped_bars(input_item:dict, data_case:str, ranking:str, sub_case:str=None):
     """
     visualises
     - gender combos (data_case="gender_combos", ranking="overall"|"annual")
@@ -526,6 +528,11 @@ def visualise_grouped_bars(input_item:dict, data_case:str, ranking:str):
             temp_df[year] = item.loc[[index_name]].set_index("gender_combo")
         else:
             temp_df[year] = input_item[year]
+
+    # making sure all index labels are unified
+    if data_case == "gender_combos":
+        temp_df = rename_gender_combos(temp_df)
+        temp_df = sum_label_nums(temp_df, "index")
     
     temp_df = sort_df(temp_df, years[-1]) # sorting values by latest year
 
@@ -533,7 +540,10 @@ def visualise_grouped_bars(input_item:dict, data_case:str, ranking:str):
 
     # setting title & text size, and removing excluded rows
     if data_case == "gender_combos":
-        title = f"Ship gender combinations by year{suffix}"
+        if sub_case: 
+            title = f"Ship gender combinations by year ({sub_case}){suffix}"
+        else: 
+            title = f"Ship gender combinations by year{suffix}"
         text_size = 8
     elif data_case == "minority_gender_combos":
         title = f"Ship gender combinations excluding M/M and M/F bars by year{suffix}"
