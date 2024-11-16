@@ -38,34 +38,24 @@ for ranking in [
         fandom_joined_char_df = make_fandom_joined_df(ship_joined_df, "characters")
         fandom_joined_ship_df = make_fandom_joined_df(ship_joined_df, "ships")
 
-        # no of ships per country
-        #TODO: 
-        # - refactor to loop over 3 scenarios
-        # - add standard colours for all values in question
-        ships_by_country = get_counts(fandom_joined_ship_df, "country_of_origin", "ship")
-        ships_by_country_pies = visualise_pies(ships_by_country, "ships_by_country", ranking)
-        ships_by_country_pies.write_image(
-                f"{folder}/{ranking}_additional_stats/{ranking}_ships_by_country.png",
-                width = width,
-                height = height, 
-                scale=2
-            )
-        ships_by_continent = get_counts(fandom_joined_ship_df, "continent", "ship")
-        ships_by_continent_pies = visualise_pies(ships_by_continent, "ships_by_continent", ranking)
-        ships_by_continent_pies.write_image(
-                f"{folder}/{ranking}_additional_stats/{ranking}_ships_by_continent.png",
-                width = width,
-                height = height, 
-                scale=2
-            )
-        ships_by_language = get_counts(fandom_joined_ship_df, "original_language", "ship")
-        ships_by_language_pies = visualise_pies(ships_by_language, "ships_by_language", ranking)
-        ships_by_language_pies.write_image(
-                f"{folder}/{ranking}_additional_stats/{ranking}_ships_by_language.png",
-                width = width,
-                height = height, 
-                scale=2
-            )
+        # no of ships per country/continent/language
+        for case in ["country", "continent", "language"]:
+            if case == "country":
+                column = "country_of_origin"
+            elif case == "continent":
+                column = "continent"
+            elif case == "language":
+                column = "original_language"
+        
+            ships_by_data = get_counts(fandom_joined_ship_df, column, "ship")
+            ships_by_pies = visualise_pies(ships_by_data, f"ships_by_{case}", ranking)
+            ships_by_pies.write_image(
+                    f"{folder}/{ranking}_additional_stats/{ranking}_ships_by_{case}.png",
+                    width = width,
+                    height = height, 
+                    scale=2
+                )
+
 
     else: # total just needs total ships/characters
         ship_df = make_ships_df()
