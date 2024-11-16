@@ -4,15 +4,15 @@ from visualisation.input_data_code.make_joined_df import (
 )
 from visualisation.input_data_code.make_file_dfs import make_ships_df, make_characters_df
 from visualisation.input_data_code.make_general_data import get_counts, get_by_gender_combo
-from visualisation.diagram_code.visualise_pies import visualise_pies
+from visualisation.diagram_code.visualise_pies import visualise_pies, visualise_demo_pies
 from visualisation.diagram_code.visualise_bars import visualise_grouped_bars
 
 # make total version (ships/char list x fandom data)
 
 # make yearly version (for each ranking) (ship/char joined ranking x fandom data)
 for ranking in [
-    #"total",
-    "femslash", "overall", "annual"
+    "total",
+    #"femslash", "overall", "annual"
 ]:
     
     if ranking == "femslash":
@@ -129,8 +129,29 @@ for ranking in [
         ship_df = make_ships_df()
         char_df = make_characters_df()
 
+        #TODO: make it so multinational rpf is tagged individually when joining 
+        # (to offset youtube share per relevant countries)
         fandom_joined_char_df = make_fandom_joined_df(char_df)
         fandom_joined_ship_df = make_fandom_joined_df(ship_df)
+
+        for country in ["USA", "UK", "Canada", "Japan", "China", "South Korea"]:
+            only_this_country_ships = fandom_joined_ship_df.copy().where(
+                (fandom_joined_ship_df["country_of_origin"] == country) | (
+                fandom_joined_ship_df["country_of_origin"].str.contains(country))
+            ).dropna(how="all")
+
+            only_this_country_chars = fandom_joined_char_df.copy().where(
+                (fandom_joined_char_df["country_of_origin"] == country) | (
+                fandom_joined_char_df["country_of_origin"].str.contains(country))
+            ).dropna(how="all")
+
+            country_pies = visualise_demo_pies(only_this_country_chars, only_this_country_ships)
+            country_pies.write_image(
+                f"visualisation/ao3_all_data_2013_2023/ao3_all_data_charts/additional_diagrams/total_overview_({country}).png",
+                width = 2000,
+                height = 1000, 
+                scale=2
+            )
 
     
 

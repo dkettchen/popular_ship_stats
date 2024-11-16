@@ -7,10 +7,13 @@ from visualisation.vis_utils.diagram_utils.make_subplots_by_year import make_sub
 from visualisation.vis_utils.diagram_utils.make_max_count import make_max_count
 import visualisation.vis_utils.diagram_utils.colour_palettes as colour_palettes
 import visualisation.vis_utils.diagram_utils.labels as lbls
-from visualisation.vis_utils.make_colour_lookup import make_colour_lookup_racial_groups
+from visualisation.vis_utils.make_colour_lookup import make_colour_lookup_racial_groups, make_colour_lookup
 from visualisation.vis_utils.df_utils.retrieve_numbers import get_label_counts, get_unique_values_list
 from visualisation.vis_utils.rename_gender_combos import rename_gender_combos
 from visualisation.vis_utils.sort_race_combos import sort_race_combos
+from plotly.subplots import make_subplots
+from visualisation.input_data_code.get_data_df import get_data_df
+from visualisation.ao3_all_data_2013_2023.vis_ships_file import interracial_srs, fandom_market_share_srs
 
 def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str, sub_case:str=None):
     """
@@ -510,3 +513,141 @@ def visualise_single_pie(input_item:pd.DataFrame|pd.Series, data_case:str, ranki
         pass
 
     return pie
+
+
+def multiracial_total_helper(input_df, column_name):
+    """
+    makes a df of multiracial vs non-multiracial characters (column_name="race")/
+    multi-involved ships (column_name="race_combo") in df (not by year like other func)
+    """
+    temp_dict = {}
+    
+    df = input_df.copy().reset_index()
+
+    total = df["count"].sum()
+    multi = df.where(
+        df[column_name].str.contains("(Multi)", regex=False) # regex false suppressed the warning!
+    )["count"].sum()
+    non_multi = total - multi
+
+    if column_name == "race":
+        index_list = ["multi_chars", "non-multi_chars"]
+    elif column_name == "race_combo":
+        index_list = ["with_multi_chars", "without_multi_chars"]
+
+    temp_dict["count"] = [multi, non_multi]
+
+    new_df = pd.DataFrame(data=temp_dict, index=index_list)
+    return new_df
+
+#TODO: write doc string
+def visualise_demo_pies(char_df:pd.DataFrame, ship_df:pd.DataFrame):
+    # takes a total df of relevant sub group (pre-made)
+    # creates a multiplot pie chart 
+    # visualising:
+    # - gender distr
+    # - gender combos
+    # - race distr
+    # - interracial ships
+    # - rpf vs no rpf ships
+    # - multiracial chars
+    # - biggest fandoms
+
+    # make multi plot fig
+    row = 2
+    column = 4
+    type_dict = {"type": "domain"}
+
+    spec_row = [type_dict for _ in range(column)]
+    spec_list = [spec_row for _ in range(row)]
+
+    fig = make_subplots(rows=row, cols=column, specs=spec_list)
+
+    # extract data sets from input dfs
+    gender_distr = get_data_df(char_df, "total_genders", "total")
+    gender_combos = get_data_df(ship_df, "total_gender_combos", "total")
+    race_distr = get_data_df(char_df, "total_racial_groups", "total")
+    race_combo = get_data_df(ship_df, "total_race_combos", "total")
+    multiracial_chars = multiracial_total_helper(race_distr, "race")
+    interracial_ships = interracial_srs(race_combo)
+    rpf_ships = get_data_df(ship_df, "rpf", "total")
+    fandom_market_share = fandom_market_share_srs(ship_df)
+
+    # add traces
+    col_count = 1
+    row_count = 1
+
+    for subject in [
+        "gender",
+        "gender_combo",
+        "race",
+        "race_combo",
+        "multiracial",
+        "interracial",
+        "rpf",
+        "fandoms",
+    ]:
+        if subject in ["race", "race_combo"]:
+            colour_palette = make_colour_lookup_racial_groups()
+        elif subject == "fandoms":
+            base_colour_palette = make_colour_lookup(ship_df)
+            clean_keys = clean_fandoms(list(base_colour_palette.keys()))
+            colour_palette = {}
+            for index in range(len(clean_keys)):
+                colour_palette[clean_keys[index]] = base_colour_palette[list(base_colour_palette.keys())[index]]
+        
+        if subject == "gender":
+            data = gender_distr
+            colours = [colour_palettes.gender_colours[gender] for gender in data.index]
+        elif subject == "gender_combo":
+            data = gender_combos
+            colours = [colour_palettes.gender_combo_dict[combo] for combo in data.index]
+        elif subject == "race":
+            data = race_distr
+            colours = [colour_palette[label] for label in data.index]
+        elif subject == "race_combo":
+            data = race_combo
+            #colours = [colour_palette[combo] for combo in data.index] # how do colours for this one?
+        elif subject == "multiracial":
+            data = multiracial_chars
+            colours = colour_palettes.oranges
+        elif subject == "interracial":
+            data = interracial_ships
+            colours = colour_palettes.oranges
+        elif subject == "rpf":
+            data = rpf_ships
+            colours = ["deeppink", "darkred"]
+        elif subject == "fandoms":
+            data = fandom_market_share
+            colours = [colour_palette[label] for label in data.index]
+        
+        #print(data.shape, subject)
+        if type(data) == pd.Series:
+            values = data.values
+        else:
+            values = data["count"]
+
+        fig.add_trace(go.Pie(
+            labels=data.index, 
+            values=values,
+            hole=0.3, # determines hole size
+            title=subject, # text that goes in the middle of the hole
+            sort=False, # if you want to keep it in its original order rather than sorting by size
+            titlefont_size=10, # to format title text
+            marker_colors=colours,
+            automargin=False,
+            textposition="inside",
+            textinfo='value+label'
+        ), row_count, col_count)
+
+        if col_count == column:
+            col_count = 1
+            row_count += 1
+        else:
+            col_count += 1
+    
+    fig.update_layout(
+        showlegend=False
+    )
+
+    return fig
