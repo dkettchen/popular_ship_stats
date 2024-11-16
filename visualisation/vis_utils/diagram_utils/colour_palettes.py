@@ -4,7 +4,6 @@ sapphic_table = { # full sapphic tables
     "body": 'mistyrose', # colour of remaining rows
     "body_2": 'papayawhip', # to go with non_white header colours
 }
-
 blue_table = {
     "lines": 'slategrey', # colour of lines
     "header": 'skyblue', # colour of header row
@@ -14,7 +13,6 @@ blue_table = {
 non_white_colours = ["skyblue", "lightseagreen", "teal", "darkslategrey"]
 
 oranges = ["orangered", "gold", "orange"]
-
 violets = ["deeppink", "violet", "darkorchid"]
 
 gender_colours = {
@@ -26,14 +24,12 @@ gender_colours = {
     "Ambig": "green",
     "M": "cornflowerblue",
 }
-
 gender_combo_colours = {
     "mlm": ["azure", "turquoise", "steelblue"],
     "wlw": ["red", "orange", "tomato"],
     "non-same-sex": ["silver", "grey", "gainsboro", "black"],
     "ambiguous": ["darkolivegreen", "limegreen", "mediumseagreen", "olive"],
 }
-
 gender_combo_dict = {
     "M / M | Other": "azure", 
     "M | Other / M / M": "turquoise", 
@@ -60,7 +56,6 @@ bg_colours = {
     "annual": ['aliceblue', "turquoise"]
 }
 
-
 racial_group_umbrella_colours = { # racial group umbrella groups
     "romani and european indigenous": "lightseagreen",
     "black (incl afro-latin)": "mediumpurple",
@@ -68,4 +63,40 @@ racial_group_umbrella_colours = { # racial group umbrella groups
     "middle-east and north-africa": "darkorange",
     "(rest of) asia": "olive",
     "american & polynesian indigenous": "darkred",
+}
+
+country_colours = {
+    "Canada":"darkorange",
+    "USA":"crimson", # red for danger lmao 
+    "UK":"royalblue", 
+    "France":"darkblue", 
+    "Norway":"indigo", 
+    "Sweden":"mediumslateblue", 
+    "Poland":"cornflowerblue", 
+    "China":"mediumseagreen",
+    "Japan":"olivedrab", 
+    "South Korea":"yellowgreen", 
+    "Thailand":"green", 
+    "Australia":"gold", 
+    "New Zealand":"darkgoldenrod",
+    "Unknown":"silver"
+}
+continent_colours = {
+    "America":"orangered",
+    "Europe":"dodgerblue",
+    "Asia":"green",
+    "Oceania":"goldenrod",
+    "Unknown":"silver"
+}
+language_colours = {
+    "English":"royalblue",
+    "Chinese":"mediumseagreen",
+    "Chinese (Cantonese)":"seagreen",
+    "Korean":"yellowgreen", 
+    "Japanese":"olivedrab",
+    "French":"darkblue", 
+    "Polish":"cornflowerblue",
+    "Swedish":"mediumslateblue", 
+    "Norwegian":"indigo", 
+    "Thai":"green", 
 }

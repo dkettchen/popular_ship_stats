@@ -39,10 +39,13 @@ for ranking in [
         fandom_joined_ship_df = make_fandom_joined_df(ship_joined_df, "ships")
 
         # no of ships per country
-        ships_per_country = get_counts(fandom_joined_ship_df, "country_of_origin", "ship")
-        ships_per_country_pies = visualise_pies(ships_per_country, "ships_by_country", ranking)
-        ships_per_country_pies.write_image(
-                f"{folder}/{ranking}_additional_stats/{ranking}_ships_per_country.png",
+        #TODO: 
+        # - refactor to loop over 3 scenarios
+        # - add standard colours for all values in question
+        ships_by_country = get_counts(fandom_joined_ship_df, "country_of_origin", "ship")
+        ships_by_country_pies = visualise_pies(ships_by_country, "ships_by_country", ranking)
+        ships_by_country_pies.write_image(
+                f"{folder}/{ranking}_additional_stats/{ranking}_ships_by_country.png",
                 width = width,
                 height = height, 
                 scale=2
@@ -50,7 +53,7 @@ for ranking in [
         ships_by_continent = get_counts(fandom_joined_ship_df, "continent", "ship")
         ships_by_continent_pies = visualise_pies(ships_by_continent, "ships_by_continent", ranking)
         ships_by_continent_pies.write_image(
-                f"{folder}/{ranking}_additional_stats/{ranking}_ships_per_continent.png",
+                f"{folder}/{ranking}_additional_stats/{ranking}_ships_by_continent.png",
                 width = width,
                 height = height, 
                 scale=2
@@ -58,7 +61,7 @@ for ranking in [
         ships_by_language = get_counts(fandom_joined_ship_df, "original_language", "ship")
         ships_by_language_pies = visualise_pies(ships_by_language, "ships_by_language", ranking)
         ships_by_language_pies.write_image(
-                f"{folder}/{ranking}_additional_stats/{ranking}_ships_per_language.png",
+                f"{folder}/{ranking}_additional_stats/{ranking}_ships_by_language.png",
                 width = width,
                 height = height, 
                 scale=2

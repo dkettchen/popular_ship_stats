@@ -241,6 +241,12 @@ def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str):
                 "ships_by_language"
             ]:
                 labels = year_series.index
+                if data_case == "ships_by_country":
+                    colours = [colour_palettes.country_colours[country] for country in labels]
+                elif data_case == "ships_by_continent":
+                    colours = [colour_palettes.continent_colours[continent] for continent in labels]
+                elif data_case == "ships_by_language":
+                    colours = [colour_palettes.language_colours[language] for language in labels]
             elif data_case == "rpf":
                 values = year_series["no_of_ships"]
             elif data_case == "gender":
