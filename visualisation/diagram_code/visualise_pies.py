@@ -72,8 +72,13 @@ def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str, sub
         ]: # dict
             years = input_item.keys()
 
-        if data_case in ["gender_by_country","race_by_country",] and ranking == "annual":
-            num_of_years = 7
+        if data_case in ["gender_by_country","race_by_country",]:
+            if ranking == "annual":
+                num_of_years = 7
+            elif ranking == "femslash":
+                num_of_years = 9
+            elif ranking == "overall":
+                num_of_years = 10
         else: num_of_years = len(years)
 
         fig = make_subplots_by_year(num_of_years) # making appropriate amount of subplots
@@ -223,7 +228,7 @@ def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str, sub
             elif data_case == "race_by_country":
                 title = f"Racial distribution ({sub_case}){suffix}"
                 colour_palette = make_colour_lookup_racial_groups()
-            text_info = "label"
+            text_info = "value"
         else: print(input_item)
 
         for year in years:
