@@ -1,5 +1,8 @@
 from visualisation.input_data_code.make_file_dfs import make_characters_df
 from src.util_functions.write_csv_file import make_csv_file
+import pandas as pd
+from visualisation.vis_utils.read_csv_to_df import df_from_csv
+import visualisation.vis_utils.diagram_utils.labels as lbls # to get continents
 
 real_human_americans = [
     'Patrick Kane', # american
@@ -63,19 +66,48 @@ def make_youtuber_countries():
         else: print(youtuber)
     
     # prep for csv
-    prepped_list = [["full_name", "country_of_origin"]]
+    prepped_list = [["full_name", "country_of_origin", "continent"]]
     for youtuber in country_dict:
-        prepped_list.append([youtuber, country_dict[youtuber]])
+        country_of_origin = country_dict[youtuber]
+        if country_of_origin in lbls.continents["America"]:
+            continent = "America"
+        if country_of_origin in lbls.continents["Europe"]:
+            continent = "Europe"
+
+        prepped_list.append([youtuber, country_of_origin, continent])
 
     # write to csv file
     csv_fandom_filepath = "data/reference_and_test_files/additional_data/additional_youtuber_data.csv"
     make_csv_file(prepped_list, csv_fandom_filepath)
 
-#def replace_youtuber_countries(input_df:pd.DataFrame, data_case:str):
+def replace_youtuber_countries(input_df:pd.DataFrame, data_case:str):
+    
     # retrieve make youtuber countries' output
+    filepath = "data/reference_and_test_files/additional_data/additional_youtuber_data.csv"
+    youtuber_countries = df_from_csv(filepath)
+    
+    new_df = input_df.copy()
+
     # replace youtuber countries w respective ones
+    if data_case == "char_df":
         # individual if char df
-        # pairing combo if ships df
+        for youtuber in youtuber_countries["full_name"]:
+            new_df["country_of_origin"] = new_df['country_of_origin'].mask(
+                new_df["full_name"] == youtuber, 
+                other=youtuber_countries.set_index("full_name").loc[youtuber, "country_of_origin"]
+            )
+            new_df["continent"] = new_df['continent'].mask(
+                new_df["full_name"] == youtuber, 
+                other=youtuber_countries.set_index("full_name").loc[youtuber, "continent"]
+            )
+        print(new_df.where(new_df["fandom"] == "Youtube").dropna(how="all").get(
+            ["full_name","country_of_origin", "continent"]
+        ))
+    # elif data_case == "ships_df":
+    #     # pairing combo if ships df
+    #     pass
+
+    return new_df
 
 if __name__ == "__main__":
     make_youtuber_countries()
