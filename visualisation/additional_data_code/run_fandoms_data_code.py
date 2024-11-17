@@ -131,8 +131,8 @@ for ranking in [
 
         #TODO: make it so multinational rpf is tagged individually when joining 
         # (to offset youtube share per relevant countries)
-        fandom_joined_char_df = make_fandom_joined_df(char_df)
-        fandom_joined_ship_df = make_fandom_joined_df(ship_df)
+        fandom_joined_char_df = make_fandom_joined_df(char_df, "total_characters")
+        fandom_joined_ship_df = make_fandom_joined_df(ship_df, "total_ships")
 
         for country in ["USA", "UK", "Canada", "Japan", "China", "South Korea"]:
             only_this_country_ships = fandom_joined_ship_df.copy().where(
