@@ -615,14 +615,21 @@ def visualise_demo_pies(char_df:pd.DataFrame, ship_df:pd.DataFrame):
             data = fandom_market_share
             colours = [colour_palette[label] for label in data.index]
         
-        #print(data.shape, subject)
+        # setting values
         if type(data) == pd.Series:
             values = data.values
         else:
             values = data["count"]
 
+        # setting labels
+        if subject == "multiracial":
+            labels = ["multiracial", "non-multiracial"]
+        elif subject == "interracial":
+            labels = ["non-interracial", "interracial", "ambiguous"]
+        else: labels = data.index
+
         fig.add_trace(go.Pie(
-            labels=data.index, 
+            labels=labels, 
             values=values,
             hole=0.3, # determines hole size
             title=subject, # text that goes in the middle of the hole
