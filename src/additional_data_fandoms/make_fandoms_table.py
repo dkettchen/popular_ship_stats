@@ -22,5 +22,5 @@ key_list = [
 prepped_list = list_of_dicts_to_list_of_lists(final_fandoms_list, key_list)
 
 # write to csv file
-csv_fandom_filepath = "data/reference_and_test_files/additional_data/additiona_fandoms_data.csv"
+csv_fandom_filepath = "data/reference_and_test_files/additional_data/additional_fandoms_data.csv"
 make_csv_file(prepped_list, csv_fandom_filepath)
