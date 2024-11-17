@@ -540,19 +540,13 @@ def multiracial_total_helper(input_df, column_name):
     new_df = pd.DataFrame(data=temp_dict, index=index_list)
     return new_df
 
-#TODO: write doc string
 def visualise_demo_pies(char_df:pd.DataFrame, ship_df:pd.DataFrame):
-    # takes a total df of relevant sub group (pre-made)
-    # creates a multiplot pie chart 
-    # visualising:
-    # - gender distr
-    # - gender combos
-    # - race distr
-    # - interracial ships
-    # - rpf vs no rpf ships
-    # - multiracial chars
-    # - biggest fandoms
+    """
+    takes total character & ship dfs
 
+    creates a multiplot pie chart visualising the following subjects:
+    gender, gender_combo, race, race_combo, multiracial, interracial, rpf, fandoms
+    """
     # make multi plot fig
     row = 2
     column = 4
