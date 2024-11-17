@@ -43,7 +43,8 @@ def clean_fandoms(input_list_or_array):
         "Lord of the Rings": "LotR",
         "Avatar": "ATLA",
         "Teenage Mutant Ninja Turtles": "TMNT",
-        "American Horror Story": "AHS"
+        "American Horror Story": "AHS",
+        "Word of Honor": "Word of Honor",
     }
 
     for fandom in list(input_list_or_array):
