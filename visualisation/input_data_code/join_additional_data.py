@@ -23,7 +23,7 @@ def join_additional_data(input_item:pd.DataFrame|dict, which_data:str, ranking:s
     if which_data in ["fandom", "population"]: # additional data
         # setting filepaths, index, join_on, columns
         if which_data == "fandom":
-            filepath = "data/reference_and_test_files/additional_data/additiona_fandoms_data.csv"
+            filepath = "data/reference_and_test_files/additional_data/additional_fandoms_data.csv"
             index = "fandom"
             join_on = "fandom"
             columns = ["fandom","media_type","country_of_origin","continent","original_language"]
