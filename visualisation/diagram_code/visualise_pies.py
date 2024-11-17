@@ -571,6 +571,21 @@ def visualise_demo_pies(char_df:pd.DataFrame, ship_df:pd.DataFrame):
     col_count = 1
     row_count = 1
 
+    # adding title with country instance
+
+    # retrieving countries from one of the input dfs
+    all_countries = list(set(ship_df["country_of_origin"])) 
+    if len(all_countries) == 1: # if there is only one country anyway
+        country = all_countries[0]
+    else: # if there are multi nationals
+        for unique_country in all_countries:
+            if "/" not in unique_country: # if it is a single country listed
+                country = unique_country # we use that country
+                break
+
+    suffix = lbls.suffixes["total"]
+    title = f"Overview stats ({country}){suffix}"
+
     for subject in [
         "gender",
         "gender_combo",
@@ -628,17 +643,24 @@ def visualise_demo_pies(char_df:pd.DataFrame, ship_df:pd.DataFrame):
             labels = ["non-interracial", "interracial", "ambiguous"]
         else: labels = data.index
 
+        # setting text labels to be inside or auto
+        if (country == "USA" and subject in ["gender_combo", "race", "race_combo"]) \
+        or country == "South Korea"\
+        or (country == "UK" and subject == "multiracial"):
+            text_pos = "inside" # hiding labels that would go outside
+        else: text_pos = "auto"
+
         fig.add_trace(go.Pie(
             labels=labels, 
             values=values,
             hole=0.3, # determines hole size
             title=subject, # text that goes in the middle of the hole
             sort=False, # if you want to keep it in its original order rather than sorting by size
-            titlefont_size=10, # to format title text
+            titlefont_size=12, # to format title text
             marker_colors=colours,
             automargin=False,
-            textposition="inside",
-            textinfo='value+label'
+            textposition=text_pos,
+            textinfo='label'
         ), row_count, col_count)
 
         if col_count == column:
@@ -648,25 +670,13 @@ def visualise_demo_pies(char_df:pd.DataFrame, ship_df:pd.DataFrame):
             col_count += 1
     
 
-    # adding title with country instance
-
-    # retrieving countries from one of the input dfs
-    all_countries = list(set(ship_df["country_of_origin"])) 
-    if len(all_countries) == 1: # if there is only one country anyway
-        country = all_countries[0]
-    else: # if there are multi nationals
-        for unique_country in all_countries:
-            if "/" not in unique_country: # if it is a single country listed
-                country = unique_country # we use that country
-                break
-
-    suffix = lbls.suffixes["total"]
-    title = f"Overview stats ({country}){suffix}"
 
     # updating layout with no legend & yes title
     fig.update_layout(
         showlegend=False,
-        title=title
+        title=title,
+        uniformtext_minsize=10,
+        uniformtext_mode="hide"
     )
 
     return fig
