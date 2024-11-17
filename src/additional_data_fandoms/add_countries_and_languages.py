@@ -237,40 +237,6 @@ multi_nationals = {
     "Figure Skating": "China / Japan"
 }
 
-# real_human_americans = [
-#     'Patrick Kane', # american
-#     'Alexander | Technoblade',
-#     'Clay | Dream', # american
-#     'Darryl Noveschosch | BadBoyHalo', # american
-#     'Karl Jacobs', # american
-#     'Kristin Watson, née Rosales', # american
-#     'Mark Fischbach | Markiplier', # american
-#     'Michael Jones', # american
-#     'Nicholas Armstrong | Sapnap', # american
-#     'Ranboo', # american
-#     'Ryan | GoodTimesWithScar', # american
-#     'Zak Ahmed | Skeppy', # american
-# ]
-# real_human_brits = [
-#     'Charles | Grian', # UK
-#     'Dan Howell | danisnotonfire', # UK
-#     'Gavin Free', # UK
-#     'George Davidson | GeorgeNotFound', # UK
-#     'Phil Lester | AmazingPhil', # UK
-#     'Phil Watson | Philza', # UK
-#     'Thomas Michael Simons | TommyInnit', # UK
-#     'Toby Smith | Tubbo', # UK
-#     'William Patrick Spencer Gold | Wilbur Soot', # UK
-# ]
-# other_real_humans = {
-#     # sean will go here cause he irish
-#     'Boyang Jin': "China", # chinese
-#     'Yuzuru Hanyu': "Japan", # japanese
-#     'Jonathan Toews': "Canada", # canadian
-#     'Sean McLoughlin | Jacksepticeye': "Ireland", # irish
-#     "Alexis 'Alex' Maldonado | Quackity": "Mexico", # mexican
-# }
-
 # continents
 european_countries = ["UK", "Ireland", "France", "Norway", "Sweden", "Poland", "Ireland / UK"]
 american_countries = ["USA", "Canada", "Canada / USA", "Mexico"]
