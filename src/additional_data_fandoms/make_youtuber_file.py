@@ -100,12 +100,53 @@ def replace_youtuber_countries(input_df:pd.DataFrame, data_case:str):
                 new_df["full_name"] == youtuber, 
                 other=youtuber_countries.set_index("full_name").loc[youtuber, "continent"]
             )
-        print(new_df.where(new_df["fandom"] == "Youtube").dropna(how="all").get(
-            ["full_name","country_of_origin", "continent"]
-        ))
-    # elif data_case == "ships_df":
-    #     # pairing combo if ships df
-    #     pass
+        
+    elif data_case == "ships_df":
+        # pairing combo if ships df
+        if "slash_ship" in new_df.columns:
+            ship_name = "slash_ship"
+        else: ship_name = "ship"
+        
+        # find relevant ships
+        all_youtuber_ships = sorted(list(set(
+            new_df.where(new_df["fandom"] == "Youtube").dropna(how="all")[ship_name]
+        )))
+
+        # who is in those ships
+        for ship in all_youtuber_ships:
+            ship_countries = set()
+            ship_continents = set()
+
+            # add their countries & continents to a set resp
+            for youtuber in youtuber_countries["full_name"]:
+                if youtuber in ship:
+                    ship_countries.add(
+                        youtuber_countries.set_index("full_name").loc[youtuber, "country_of_origin"]
+                    )
+                    ship_continents.add(
+                        youtuber_countries.set_index("full_name").loc[youtuber, "continent"]
+                    )
+
+            # sort & concat them
+            ship_countries = sorted(list(ship_countries))
+            ship_country_str = ship_countries[0]
+            for item in ship_countries[1:]:
+                ship_country_str += f" / {item}"
+
+            ship_continents = sorted(list(ship_continents))    
+            ship_continent_str = ship_continents[0]
+            for item in ship_continents[1:]:
+                ship_continent_str += f" / {item}"
+
+            # replace w those
+            new_df["country_of_origin"] = new_df['country_of_origin'].mask(
+                new_df[ship_name] == ship, 
+                other=ship_country_str
+            )
+            new_df["continent"] = new_df['continent'].mask(
+                new_df[ship_name] == ship, 
+                other=ship_continent_str
+            )
 
     return new_df
 
