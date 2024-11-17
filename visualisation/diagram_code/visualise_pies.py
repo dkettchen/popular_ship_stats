@@ -640,8 +640,26 @@ def visualise_demo_pies(char_df:pd.DataFrame, ship_df:pd.DataFrame):
         else:
             col_count += 1
     
+
+    # adding title with country instance
+
+    # retrieving countries from one of the input dfs
+    all_countries = list(set(ship_df["country_of_origin"])) 
+    if len(all_countries) == 1: # if there is only one country anyway
+        country = all_countries[0]
+    else: # if there are multi nationals
+        for unique_country in all_countries:
+            if "/" not in unique_country: # if it is a single country listed
+                country = unique_country # we use that country
+                break
+
+    suffix = lbls.suffixes["total"]
+    title = f"Overview stats ({country}){suffix}"
+
+    # updating layout with no legend & yes title
     fig.update_layout(
-        showlegend=False
+        showlegend=False,
+        title=title
     )
 
     return fig
