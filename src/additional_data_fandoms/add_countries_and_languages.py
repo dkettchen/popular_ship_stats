@@ -1,4 +1,5 @@
 from copy import deepcopy
+import visualisation.vis_utils.diagram_utils.labels as lbls # to get continents
 
 american_fandoms = [
     "Archie Comics Universe",
@@ -237,15 +238,6 @@ multi_nationals = {
     "Figure Skating": "China / Japan"
 }
 
-# continents
-european_countries = ["UK", "Ireland", "France", "Norway", "Sweden", "Poland", "Ireland / UK"]
-american_countries = ["USA", "Canada", "Canada / USA", "Mexico"]
-asian_countries = ["China", "Japan", "South Korea", "Thailand", "China / Japan"]
-oceanian_countries = ["Australia", "New Zealand"]
-transatlantic = ["UK / USA", "France / UK / USA", "France / USA", "Ireland / Mexico / UK / USA"]
-eurasian = ["France / Japan"]
-transpacific = ["Japan / USA"]
-
 country_languages = { # minus english & chinese
     "South Korea": "Korean",
     "Japan": "Japanese",
@@ -294,23 +286,14 @@ def add_countries_of_origin_and_languages(input_list):
         else: print(f"'{fandom}',") # if we haven't assigned a country
 
         # adding continent
-        if fandom_dict["country_of_origin"] in european_countries:
-            fandom_dict["continent"] = "Europe"
-        elif fandom_dict["country_of_origin"] in american_countries:
-            fandom_dict["continent"] = "America"
-        elif fandom_dict["country_of_origin"] in asian_countries:
-            fandom_dict["continent"] = "Asia"
-        elif fandom_dict["country_of_origin"] in oceanian_countries:
-            fandom_dict["continent"] = "Oceania"
-        elif fandom_dict["country_of_origin"] in eurasian:
-            fandom_dict["continent"] = "Asia / Europe"
-        elif fandom_dict["country_of_origin"] in transatlantic:
-            fandom_dict["continent"] = "America / Europe"
-        elif fandom_dict["country_of_origin"] in transpacific:
-            fandom_dict["continent"] = "America / Asia"
-        elif fandom_dict["country_of_origin"] == "Unknown":
+        for cont in lbls.continents:
+            if fandom_dict["country_of_origin"] in lbls.continents[cont]:
+                fandom_dict["continent"] = cont
+        
+        if fandom_dict["country_of_origin"] == "Unknown":
             fandom_dict["continent"] = "Unknown"
-        else: print(f"'{fandom_dict['country_of_origin']}': ,") # if we haven't assigned a continent
+        elif not fandom_dict["continent"]: 
+            print(f"'{fandom_dict['country_of_origin']}': ,") # if we haven't assigned a continent
 
         # adding language
         if fandom_dict["country_of_origin"] in [ # english speaking countries
