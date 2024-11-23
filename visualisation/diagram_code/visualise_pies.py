@@ -403,6 +403,9 @@ def visualise_single_pie(input_item:pd.DataFrame|pd.Series, data_case:str, ranki
     - number of interracial, non-interracial and ambiguous pairings 
     (data_case="interracial_ships", ranking="total")
     - number of RPF and fictional ships (data_case="rpf", ranking="total")
+    - ships by country, language or continent 
+    (data_case="ships_by_country"|"ships_by_language"|"ships_by_continent", 
+    ranking="total")
     
     as a single pie chart
     """
@@ -429,7 +432,9 @@ def visualise_single_pie(input_item:pd.DataFrame|pd.Series, data_case:str, ranki
     labels = input_item.index
 
     # values
-    if data_case in ["gender", "racial_diversity", "racial_groups", "rpf"]:
+    if data_case in [
+        "gender", "racial_diversity", "racial_groups", "rpf",
+    ] or "ships_by" in data_case:
         values = input_item["count"]
     elif data_case in ["market_share", "interracial_ships"]:
         values = input_item.values
@@ -441,7 +446,7 @@ def visualise_single_pie(input_item:pd.DataFrame|pd.Series, data_case:str, ranki
     # text position
     if data_case in ["gender", "interracial_ships"]:
         text_position = "outside"
-    elif data_case in ["rpf", "racial_groups"]:
+    elif data_case in ["rpf", "racial_groups"] or "ships_by" in data_case:
         text_position = "inside"
 
     # auto margin
@@ -474,8 +479,20 @@ def visualise_single_pie(input_item:pd.DataFrame|pd.Series, data_case:str, ranki
         colours = px.colors.qualitative.Prism
         title = f"Interracial vs other ships{suffix}"
     elif data_case == "racial_groups":
+        min_size = 10
         # could colour code this one still/apply a buildin colour thing that looks better than default
         title = f"Characters' racial groups distribution{suffix}"
+    elif "ships_by" in data_case:
+        min_size = 10
+        sub_case = data_case[9:]
+        title = f"Ships by {sub_case}{suffix}"
+        # colours (combo ones currently not colour coded properly just using default)
+        if data_case == "ships_by_country":
+            colours = [colour_palettes.country_colours[country] if "/" not in country else None for country in labels]
+        elif data_case == "ships_by_continent":
+            colours = [colour_palettes.continent_colours[continent] if "/" not in continent else None for continent in labels]
+        elif data_case == "ships_by_language":
+            colours = [colour_palettes.language_colours[language] for language in labels]
 
     # making base figure
     pie = go.Figure(
@@ -502,13 +519,14 @@ def visualise_single_pie(input_item:pd.DataFrame|pd.Series, data_case:str, ranki
         pie.update_layout(showlegend=show_legend)
     if data_case == "gender":
         pie.update_traces(sort=False)
-    if data_case == "racial_groups":
-        pie.update_traces(insidetextorientation="horizontal")
+    if data_case == "racial_groups" or "ships_by" in data_case:
+        if data_case == "racial_groups":
+            pie.update_traces(insidetextorientation="horizontal")
         pie.update_layout(
-            uniformtext_minsize=10, 
+            uniformtext_minsize=min_size, 
             uniformtext_mode='hide'
         )
-    else:
+    if data_case != "racial_groups":
         pie.update_traces(marker_colors=colours)
         pass
 

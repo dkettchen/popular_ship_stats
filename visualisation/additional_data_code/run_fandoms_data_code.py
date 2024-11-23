@@ -3,9 +3,12 @@ from visualisation.input_data_code.make_joined_df import (
     make_fandom_joined_df
 )
 from visualisation.input_data_code.make_file_dfs import make_ships_df, make_characters_df
-from visualisation.input_data_code.make_general_data import get_counts, get_by_gender_combo
-from visualisation.diagram_code.visualise_pies import visualise_pies, visualise_demo_pies
+from visualisation.input_data_code.make_general_data import get_counts
+from visualisation.diagram_code.visualise_pies import visualise_pies, visualise_demo_pies, visualise_single_pie
 from visualisation.diagram_code.visualise_bars import visualise_grouped_bars
+from visualisation.vis_utils.df_utils.retrieve_numbers import get_label_counts
+from visualisation.vis_utils.df_utils.make_dfs import sort_df
+
 
 # make total version (ships/char list x fandom data)
 
@@ -21,6 +24,8 @@ for ranking in [
         folder = "visualisation/ao3_overall_rankings_2013_2023/ao3_overall_rankings_charts"
     elif ranking == "annual":
         folder = "visualisation/ao3_annual_rankings_2016_2023/ao3_annual_rankings_charts"
+    elif ranking == "total":
+        folder = "visualisation/ao3_all_data_2013_2023/ao3_all_data_charts"
 
     if ranking == "femslash":
         width = 700 
@@ -129,10 +134,39 @@ for ranking in [
         ship_df = make_ships_df()
         char_df = make_characters_df()
 
-        #TODO: make it so multinational rpf is tagged individually when joining 
-        # (to offset youtube share per relevant countries)
+        #TODO: 
+        # - make it so multinational rpf is tagged individually when joining ✅
+        # - write doc string on demo pie func in visualise_pies ✅
+        # - add titles to each country's graph ✅
+        # - clean up labels, notably on interracial graph cause it looks messy ✅
+        # maybe also increase size
+        # - also add minimum uniform size cause they're a mess ✅
+        # - figure out how to shorten or remove (and denote in another way) 
+        # heaven official's blessing in china's & e asian/e asian multi in japan's
+        # - do we wanna add "ambiguous" as a category to track in multiracial chars?, 
+        # cause obv some of the ambig chars could be multiracial like idk kaeya et al
+        # - make a graph per each stat for all countries (ie side by side on same stat to directly compare)
         fandom_joined_char_df = make_fandom_joined_df(char_df, "total_characters")
         fandom_joined_ship_df = make_fandom_joined_df(ship_df, "total_ships")
+
+                # no of ships per country/continent/language
+        for case in ["country", "continent", "language"]:
+            if case == "country":
+                column = "country_of_origin"
+            elif case == "continent":
+                column = "continent"
+            elif case == "language":
+                column = "original_language"
+        
+            ships_by_data = get_label_counts(fandom_joined_ship_df, column, "slash_ship")
+            ships_by_data = sort_df(ships_by_data, "count") # sorting by values
+            ships_by_pies = visualise_single_pie(ships_by_data, f"ships_by_{case}", ranking)
+            ships_by_pies.write_image(
+                f"{folder}/additional_diagrams/{ranking}_ships_by_{case}.png",
+                width = 700,
+                height = 700, 
+                scale=2
+            )
 
         for country in ["USA", "UK", "Canada", "Japan", "China", "South Korea"]:
             only_this_country_ships = fandom_joined_ship_df.copy().where(
@@ -147,7 +181,7 @@ for ranking in [
 
             country_pies = visualise_demo_pies(only_this_country_chars, only_this_country_ships)
             country_pies.write_image(
-                f"visualisation/ao3_all_data_2013_2023/ao3_all_data_charts/additional_diagrams/total_overview_({country}).png",
+                f"{folder}/additional_diagrams/{ranking}_overview_({country}).png",
                 width = 2000,
                 height = 1000, 
                 scale=2
