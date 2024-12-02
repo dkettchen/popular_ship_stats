@@ -76,10 +76,10 @@ gender_combo_umbrellas = { # gender combo umbrella groups
 
 continents = {
     "Europe":["UK", "Ireland", "France", "Norway", "Sweden", "Poland", "Ireland / UK"],
-    "America":["USA", "Canada", "Canada / USA", "Mexico"],
+    "North America":["USA", "Canada", "Canada / USA", "Mexico"],
     "Asia":["China", "Japan", "South Korea", "Thailand", "China / Japan"],
     "Oceania":["Australia", "New Zealand"],
-    "America / Europe":["UK / USA", "France / UK / USA", "France / USA", "Ireland / Mexico / UK / USA"],
+    "North America / Europe":["UK / USA", "France / UK / USA", "France / USA", "Ireland / Mexico / UK / USA"],
     "Asia / Europe":["France / Japan"],
-    "America / Asia":["Japan / USA"],
+    "North America / Asia":["Japan / USA"],
 }
