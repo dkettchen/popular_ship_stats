@@ -9,7 +9,7 @@ from copy import deepcopy
     # - also fix relevant indexes in functions here accordingly ✅
     # - need to also add continents to em ✅
 
-# - add countries to multi national rpf other than the youtubers too
+# - add countries to multi national rpf other than the youtubers too ✅
 
 # - we can test these functions o.o
 
