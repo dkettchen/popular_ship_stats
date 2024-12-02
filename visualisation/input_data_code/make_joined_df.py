@@ -4,7 +4,7 @@ from visualisation.input_data_code.join_additional_data import join_additional_d
 from visualisation.vis_utils.remove_member_columns import remove_members_from_df
 from visualisation.vis_utils.join_member_info import join_character_info_to_df
 import pandas as pd
-from src.additional_data_fandoms.make_youtuber_file import replace_rpf_countries
+from src.additional_data_fandoms.make_rpf_file import replace_rpf_countries
 
 
 def make_joined_ranking_df(ranking:str, end_date:int=2023):

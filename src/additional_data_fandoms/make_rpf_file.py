@@ -43,7 +43,7 @@ def make_rpf_countries():
     (because they cause problems otherwise)
 
     prints full names and country of origin to data/reference_and_test_files/
-    additional_data/additional_humans_data.csv
+    additional_data/additional_rpf_data.csv
     """
     # read from char file
     char_df = make_characters_df()
@@ -81,13 +81,13 @@ def make_rpf_countries():
         prepped_list.append([human, country_of_origin, continent])
 
     # write to csv file
-    csv_fandom_filepath = "data/reference_and_test_files/additional_data/additional_humans_data.csv"
+    csv_fandom_filepath = "data/reference_and_test_files/additional_data/additional_rpf_data.csv"
     make_csv_file(prepped_list, csv_fandom_filepath)
 
 def replace_rpf_countries(input_df:pd.DataFrame, data_case:str):
     
     # retrieve make human countries' output
-    filepath = "data/reference_and_test_files/additional_data/additional_humans_data.csv"
+    filepath = "data/reference_and_test_files/additional_data/additional_rpf_data.csv"
     humans_countries = df_from_csv(filepath)
     
     new_df = input_df.copy()
