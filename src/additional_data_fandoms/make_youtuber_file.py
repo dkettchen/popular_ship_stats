@@ -30,7 +30,6 @@ real_human_brits = [
     'William Patrick Spencer Gold | Wilbur Soot', # UK
 ]
 other_real_humans = {
-    # sean will go here cause he irish
     'Boyang Jin': "China", # chinese
     'Yuzuru Hanyu': "Japan", # japanese
     'Jonathan Toews': "Canada", # canadian
@@ -38,67 +37,72 @@ other_real_humans = {
     "Alexis 'Alex' Maldonado | Quackity": "Mexico", # mexican
 }
 
-def make_youtuber_countries():
+def make_rpf_countries():
     """
-    adds countries of origin to youtubers (because they are numerous enough to cause problems otherwise)
+    adds countries of origin to real humans from multi-national fandoms 
+    (because they cause problems otherwise)
 
     prints full names and country of origin to data/reference_and_test_files/
-    additional_data/additional_youtuber_data.csv
+    additional_data/additional_humans_data.csv
     """
     # read from char file
     char_df = make_characters_df()
 
-    # get only youtubers
-    youtuber_df = char_df.where(
-        char_df["fandom"] == "Youtube"
+    # get only relevant humans
+    human_df = char_df.where(
+        (char_df["fandom"] == "Youtube") | (
+        char_df["fandom"] == "Figure Skating") | (
+        char_df["fandom"] == "Hockey")
     ).dropna(how="all")
-    all_youtubers = list(youtuber_df["full_name"])
+    all_humans = list(human_df["full_name"])
 
     country_dict = {}
     # add countries to them
-    for youtuber in all_youtubers:
-        if youtuber in real_human_americans:
-            country_dict[youtuber] = "USA"
-        elif youtuber in real_human_brits:
-            country_dict[youtuber] = "UK"
-        elif youtuber in other_real_humans:
-            country_dict[youtuber] = other_real_humans[youtuber]
-        else: print(youtuber)
+    for human in all_humans:
+        if human in real_human_americans:
+            country_dict[human] = "USA"
+        elif human in real_human_brits:
+            country_dict[human] = "UK"
+        elif human in other_real_humans:
+            country_dict[human] = other_real_humans[human]
+        else: print(human)
     
     # prep for csv
     prepped_list = [["full_name", "country_of_origin", "continent"]]
-    for youtuber in country_dict:
-        country_of_origin = country_dict[youtuber]
-        if country_of_origin in lbls.continents["America"]:
-            continent = "America"
+    for human in country_dict:
+        country_of_origin = country_dict[human]
+        if country_of_origin in lbls.continents["North America"]:
+            continent = "North America"
         if country_of_origin in lbls.continents["Europe"]:
             continent = "Europe"
+        if country_of_origin in lbls.continents["Asia"]:
+            continent = "Asia"
 
-        prepped_list.append([youtuber, country_of_origin, continent])
+        prepped_list.append([human, country_of_origin, continent])
 
     # write to csv file
-    csv_fandom_filepath = "data/reference_and_test_files/additional_data/additional_youtuber_data.csv"
+    csv_fandom_filepath = "data/reference_and_test_files/additional_data/additional_humans_data.csv"
     make_csv_file(prepped_list, csv_fandom_filepath)
 
-def replace_youtuber_countries(input_df:pd.DataFrame, data_case:str):
+def replace_rpf_countries(input_df:pd.DataFrame, data_case:str):
     
-    # retrieve make youtuber countries' output
-    filepath = "data/reference_and_test_files/additional_data/additional_youtuber_data.csv"
-    youtuber_countries = df_from_csv(filepath)
+    # retrieve make human countries' output
+    filepath = "data/reference_and_test_files/additional_data/additional_humans_data.csv"
+    humans_countries = df_from_csv(filepath)
     
     new_df = input_df.copy()
 
-    # replace youtuber countries w respective ones
+    # replace human countries w respective ones
     if data_case == "char_df":
         # individual if char df
-        for youtuber in youtuber_countries["full_name"]:
+        for human in humans_countries["full_name"]:
             new_df["country_of_origin"] = new_df['country_of_origin'].mask(
-                new_df["full_name"] == youtuber, 
-                other=youtuber_countries.set_index("full_name").loc[youtuber, "country_of_origin"]
+                new_df["full_name"] == human, 
+                other=humans_countries.set_index("full_name").loc[human, "country_of_origin"]
             )
             new_df["continent"] = new_df['continent'].mask(
-                new_df["full_name"] == youtuber, 
-                other=youtuber_countries.set_index("full_name").loc[youtuber, "continent"]
+                new_df["full_name"] == human, 
+                other=humans_countries.set_index("full_name").loc[human, "continent"]
             )
         
     elif data_case == "ships_df":
@@ -108,28 +112,33 @@ def replace_youtuber_countries(input_df:pd.DataFrame, data_case:str):
         else: ship_name = "ship"
         
         # find relevant ships
-        all_youtuber_ships = sorted(list(set(
-            new_df.where(new_df["fandom"] == "Youtube").dropna(how="all")[ship_name]
+        all_humans_ships = sorted(list(set(
+            new_df.where(
+                (new_df["fandom"] == "Youtube") | (
+                new_df["fandom"] == "Figure Skating") | (
+                new_df["fandom"] == "Hockey")
+            ).dropna(how="all")[ship_name]
         )))
 
         # who is in those ships
-        for ship in all_youtuber_ships:
+        for ship in all_humans_ships:
             ship_countries = set()
             ship_continents = set()
 
             # add their countries & continents to a set resp
-            for youtuber in youtuber_countries["full_name"]:
-                if youtuber in ship:
+            for human in humans_countries["full_name"]:
+                if human in ship:
                     ship_countries.add(
-                        youtuber_countries.set_index("full_name").loc[youtuber, "country_of_origin"]
+                        humans_countries.set_index("full_name").loc[human, "country_of_origin"]
                     )
                     ship_continents.add(
-                        youtuber_countries.set_index("full_name").loc[youtuber, "continent"]
+                        humans_countries.set_index("full_name").loc[human, "continent"]
                     )
 
             # sort & concat them
             ship_countries = sorted(list(ship_countries))
-            ship_country_str = ship_countries[0]
+            ship_country_str = ship_countries[0] # adding first one
+            # if there are multiple:
             for item in ship_countries[1:]:
                 ship_country_str += f" / {item}"
 
@@ -151,4 +160,4 @@ def replace_youtuber_countries(input_df:pd.DataFrame, data_case:str):
     return new_df
 
 if __name__ == "__main__":
-    make_youtuber_countries()
+    make_rpf_countries()

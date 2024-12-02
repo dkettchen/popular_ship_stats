@@ -4,7 +4,7 @@ from visualisation.input_data_code.join_additional_data import join_additional_d
 from visualisation.vis_utils.remove_member_columns import remove_members_from_df
 from visualisation.vis_utils.join_member_info import join_character_info_to_df
 import pandas as pd
-from src.additional_data_fandoms.make_youtuber_file import replace_youtuber_countries
+from src.additional_data_fandoms.make_youtuber_file import replace_rpf_countries
 
 
 def make_joined_ranking_df(ranking:str, end_date:int=2023):
@@ -44,9 +44,9 @@ def make_fandom_joined_df(ship_joined_df:pd.DataFrame, data_case:str=None):
     with_fandoms_and_pop_df = join_additional_data(with_fandoms_df, "population")
 
     if data_case in ["ships", "total_ships"]:
-        with_fandoms_and_pop_df = replace_youtuber_countries(with_fandoms_and_pop_df, "ships_df")
+        with_fandoms_and_pop_df = replace_rpf_countries(with_fandoms_and_pop_df, "ships_df")
     elif data_case in ["characters", "total_characters"]:
-        with_fandoms_and_pop_df = replace_youtuber_countries(with_fandoms_and_pop_df, "char_df")
+        with_fandoms_and_pop_df = replace_rpf_countries(with_fandoms_and_pop_df, "char_df")
 
     return with_fandoms_and_pop_df
 
