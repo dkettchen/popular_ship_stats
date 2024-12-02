@@ -4,10 +4,10 @@ from copy import deepcopy
 
 # get data from countries population file & prep for visualisation
 #TODO: 
-# - add missing data to population file
-    # - add small countries' population data to file!
-    # - also fix relevant indexes in functions here accordingly
-    # - need to also add continents to em
+# - add missing data to population file ✅
+    # - add small countries' population data to file! ✅
+    # - also fix relevant indexes in functions here accordingly ✅
+    # - need to also add continents to em ✅
 
 # - add countries to multi national rpf other than the youtubers too
 
@@ -161,6 +161,6 @@ def get_continent_df(data_df:pd.DataFrame, continent:str):
 if __name__ == "__main__":
     pop_df = make_population_df()
     country_pop_df = get_pop_sizes(pop_df[:124], "countries") # excluding countries smaller than those included
-    continent_pop_df = get_pop_sizes(pop_df[:161], "continents") # excluding "unknown" row
+    continent_pop_df = get_pop_sizes(pop_df[:-1], "continents") # excluding "unknown" row
     only_english_speakers = get_some_countries(pop_df, ["USA", "Canada", "UK", "Ireland", "Australia", "New Zealand", "World"])
-    only_africa = get_continent_df(pop_df[:161], "Africa")
+    only_africa = get_continent_df(pop_df[:-1], "Africa")
