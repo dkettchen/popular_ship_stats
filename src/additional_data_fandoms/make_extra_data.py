@@ -65,6 +65,7 @@ def get_pop_sizes(input_df:pd.DataFrame, data_case:str):
         world_pop = new_df["Population"][0]
         named_countries_pop_sum = country_df["Population"].agg("sum")
         remaining_countries_pop = world_pop - named_countries_pop_sum
+        print(world_pop, named_countries_pop_sum, remaining_countries_pop)
 
         country_df = pd.concat([ # appending "rest" value
             country_df,
@@ -74,6 +75,10 @@ def get_pop_sizes(input_df:pd.DataFrame, data_case:str):
             )
         ])
     elif data_case == "continents":
+        # removing any non-continents:
+        country_df = country_df.mask(country_df["Continent"] == "-").dropna(how="all")
+
+        # summing by continent & sorting
         country_df = country_df.groupby("Continent").agg("sum")
         country_df = country_df.reset_index().get(
             ["Continent", "Population"]
@@ -88,6 +93,9 @@ def get_pop_sizes(input_df:pd.DataFrame, data_case:str):
         # remainder = world_pop - summed_continents
         # print(remainder) # 187,598,066 ok this is a big enough number to matter, (bc bigger than oceania)
         #                  # let's find extra data rip
+            # even with extra countries there's still 170,739,877 left??? 
+            # meaning most of this remainder isn't actually accounted for????
+            # probably due to incorrect numbers & different collection times idk hm
 
     return country_df
 
@@ -160,7 +168,7 @@ def get_continent_df(data_df:pd.DataFrame, continent:str):
 
 if __name__ == "__main__":
     pop_df = make_population_df()
-    country_pop_df = get_pop_sizes(pop_df[:124], "countries") # excluding countries smaller than those included
+    country_pop_df = get_pop_sizes(pop_df[:124], "remainder") # excluding countries smaller than those included
     continent_pop_df = get_pop_sizes(pop_df[:-1], "continents") # excluding "unknown" row
     only_english_speakers = get_some_countries(pop_df, ["USA", "Canada", "UK", "Ireland", "Australia", "New Zealand", "World"])
     only_africa = get_continent_df(pop_df[:-1], "Africa")
