@@ -37,7 +37,7 @@ total_genders_fig = visualise_single_pie(total_gender_percentages, "gender", "to
 total_genders_fig.write_image(
     "visualisation/ao3_all_data_2013_2023/ao3_all_data_charts/gender_diagrams/all_ao3_characters_gender_distr_2013_2023.png", 
     width=800, 
-    height=400, 
+    height=600, 
     scale=2
 )
 
@@ -75,7 +75,7 @@ plural_vs_monoracial_fig = visualise_single_pie(plural_vs_monoracial_fandoms, "r
 plural_vs_monoracial_fig.write_image(
     "visualisation/ao3_all_data_2013_2023/ao3_all_data_charts/racial_groups_diagrams/all_ao3_fandoms_with_one_v_multi_groups_2013_2023.png", 
     width=800, 
-    height=400, 
+    height=600, 
     scale=2
 )
 
@@ -164,8 +164,8 @@ interracial_ships_counts = interracial_srs(total_race_combo_counts)
 interracial_fig = visualise_single_pie(interracial_ships_counts, "interracial_ships", "total")
 interracial_fig.write_image(
     "visualisation/ao3_all_data_2013_2023/ao3_all_data_charts/racial_groups_diagrams/all_ao3_ranked_ships_interracial_percent_2013_2023.png", 
-    width=800, 
-    height=400, 
+    width=600, 
+    height=600, 
     scale=2
 )
 
@@ -183,7 +183,7 @@ rpf_fig = visualise_single_pie(rpf_vs_fic_df, "rpf", "total")
 rpf_fig.write_image(
     "visualisation/ao3_all_data_2013_2023/ao3_all_data_charts/all_ao3_ranked_ships_rpf_vs_fic_2013_2023.png", 
     width=600, 
-    height=400, 
+    height=600, 
     scale=2
 )
 

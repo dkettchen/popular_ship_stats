@@ -2,6 +2,7 @@ import plotly.express as px
 from pandas import DataFrame
 from visualisation.input_data_code.make_file_dfs import make_characters_df
 from visualisation.vis_utils.df_utils.retrieve_numbers import get_unique_values_list
+from visualisation.vis_utils.diagram_utils.colour_palettes import oranges
 
 def make_colour_lookup(input_df:DataFrame): # for fandoms
     """
@@ -128,3 +129,29 @@ def make_colour_lookup_racial_groups():
             counter += 1
 
     return look_up
+
+def make_colour_lookup_inter_and_multi():
+    """
+    creates a dict of the colours for our interracial and multiracial (chars & involved ships) 
+    diagrams
+
+    interracial/multiracial/with_multiracial is orangered,
+    ambiguous is gold,
+    non-interracial/non-multiracial/without_multiracial is orange
+    """
+
+    return {
+        "interracial": oranges[0],
+        "ambiguous": oranges[1],
+        "non-interracial": oranges[2],
+
+        "multiracial": oranges[0],
+        "ambiguous": oranges[1],
+        "non-multiracial": oranges[2],
+
+        "with_multiracial": oranges[0],
+        "ambiguous": oranges[1],
+        "without_multiracial": oranges[2],
+    }
+
+

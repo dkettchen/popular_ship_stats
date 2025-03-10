@@ -7,13 +7,23 @@ from visualisation.vis_utils.diagram_utils.make_subplots_by_year import make_sub
 from visualisation.vis_utils.diagram_utils.make_max_count import make_max_count
 import visualisation.vis_utils.diagram_utils.colour_palettes as colour_palettes
 import visualisation.vis_utils.diagram_utils.labels as lbls
-from visualisation.vis_utils.make_colour_lookup import make_colour_lookup_racial_groups, make_colour_lookup
+from visualisation.vis_utils.make_colour_lookup import (
+    make_colour_lookup_racial_groups, 
+    make_colour_lookup, 
+    make_colour_lookup_inter_and_multi
+)
 from visualisation.vis_utils.df_utils.retrieve_numbers import get_label_counts, get_unique_values_list
 from visualisation.vis_utils.rename_gender_combos import rename_gender_combos
 from visualisation.vis_utils.sort_race_combos import sort_race_combos
 from plotly.subplots import make_subplots
 from visualisation.input_data_code.get_data_df import get_data_df
 from visualisation.ao3_all_data_2013_2023.vis_ships_file import interracial_srs, fandom_market_share_srs
+
+# TODO
+    # fix interracial & multiracial pies for rankings ✅
+    # fix interracial pie for total ✅
+    # fix racial group pie for total
+    # fix interracial & multiracial pies for country specific ones
 
 def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str, sub_case:str=None):
     """
@@ -178,17 +188,14 @@ def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str, sub
 
     else: # any case with year plots
         # most titles & colours & any static labels
-        if data_case in ["multi_chars", "multi_char_ships",]: 
-            colours = [colour_palettes.oranges[0], colour_palettes.oranges[2]]
-            if data_case == "multi_chars":
-                labels = ["multiracial characters", "non-multiracial characters"]
+        if data_case in ["interracial_ships", "multi_chars", "multi_char_ships",]: 
+            if data_case == "interracial_ships":
+                title = f"Interracial ships by year{suffix}"
+            elif data_case == "multi_chars":
                 title = f"Multiracial characters by year{suffix}"
             elif data_case == "multi_char_ships":
-                labels = ["with multiracial characters", "w/out multiracial characters"]
                 title = f"Ships with multiracial characters by year{suffix}"
-        elif data_case == "interracial_ships":
-            title = f"Interracial ships by year{suffix}"
-            colours = colour_palettes.oranges
+            colour_palette = make_colour_lookup_inter_and_multi()
         elif data_case == "rpf":
             labels = ["RPF", "fictional"]
             title = f"Real Person Fic vs fictional ships by year{suffix}"
@@ -258,7 +265,6 @@ def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str, sub
             values = year_series.values
             # replacing values where needed
             if data_case in [
-                "interracial_ships",
                 "ships_by_country",
                 "ships_by_continent",
                 "ships_by_language",
@@ -276,6 +282,12 @@ def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str, sub
                     colours = [colour_palettes.gender_colours[gender] for gender in labels]
                 elif data_case == "race_by_country":
                     colours = [colour_palette[label] for label in labels]
+            elif data_case in ["interracial_ships", "multi_chars", "multi_char_ships",]:
+                if "multi" in data_case:
+                    labels = [label[:-6] + "racial" for label in year_series.index]
+                else:
+                    labels = [label[:-6] for label in year_series.index]
+                colours = [colour_palette[label] for label in labels]
             elif data_case == "rpf":
                 values = year_series["no_of_ships"]
             elif data_case == "gender":
@@ -290,13 +302,17 @@ def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str, sub
                 labels = year_series.index
                 colours = [colour_palettes.gender_combo_dict[combo] for combo in labels]
 
+            if data_case in ["interracial_ships", "multi_chars", "multi_char_ships",]:
+                sorting = True
+            else: sorting = False
+
             # adding pie
             fig.add_trace(go.Pie(
                 labels=labels, 
                 values=values,
                 hole=0.3, # determines hole size
                 title=year, # text that goes in the middle of the hole
-                sort=False, # if you want to keep it in its original order rather than sorting by size
+                sort=sorting, # if you want to keep it in its original order rather than sorting by size
                 titlefont_size=title_size, # to format title text
                 marker_colors=colours,
                 automargin=False,
@@ -444,9 +460,9 @@ def visualise_single_pie(input_item:pd.DataFrame|pd.Series, data_case:str, ranki
         text_info += "+percent"
     
     # text position
-    if data_case in ["gender", "interracial_ships"]:
+    if data_case in ["gender",]:
         text_position = "outside"
-    elif data_case in ["rpf", "racial_groups"] or "ships_by" in data_case:
+    elif data_case in ["rpf", "racial_groups", "interracial_ships"] or "ships_by" in data_case:
         text_position = "inside"
 
     # auto margin
@@ -476,12 +492,15 @@ def visualise_single_pie(input_item:pd.DataFrame|pd.Series, data_case:str, ranki
         title = f"Fandoms accounting for more than 1% of ships{suffix}"
     elif data_case == "interracial_ships":
         labels = ["non-interracial", "interracial", "ambiguous"]
-        colours = px.colors.qualitative.Prism
+        colour_palette = make_colour_lookup_inter_and_multi()
+        colours = [colour_palette[label] for label in labels]
         title = f"Interracial vs other ships{suffix}"
     elif data_case == "racial_groups":
         min_size = 10
         # could colour code this one still/apply a buildin colour thing that looks better than default
         title = f"Characters' racial groups distribution{suffix}"
+        colour_palette = make_colour_lookup_racial_groups()
+        colours = [colour_palette[label] for label in labels]
     elif "ships_by" in data_case:
         min_size = 10
         sub_case = data_case[9:]
@@ -526,9 +545,7 @@ def visualise_single_pie(input_item:pd.DataFrame|pd.Series, data_case:str, ranki
             uniformtext_minsize=min_size, 
             uniformtext_mode='hide'
         )
-    if data_case != "racial_groups":
-        pie.update_traces(marker_colors=colours)
-        pass
+    pie.update_traces(marker_colors=colours)
 
     return pie
 
@@ -637,10 +654,10 @@ def visualise_demo_pies(char_df:pd.DataFrame, ship_df:pd.DataFrame):
             #colours = [colour_palette[combo] for combo in data.index] # how do colours for this one?
         elif subject == "multiracial":
             data = multiracial_chars
-            colours = colour_palettes.oranges
+            colours = make_colour_lookup_inter_and_multi()
         elif subject == "interracial":
             data = interracial_ships
-            colours = colour_palettes.oranges
+            colours = make_colour_lookup_inter_and_multi()
         elif subject == "rpf":
             data = rpf_ships
             colours = ["deeppink", "darkred"]
