@@ -19,12 +19,6 @@ from plotly.subplots import make_subplots
 from visualisation.input_data_code.get_data_df import get_data_df
 from visualisation.ao3_all_data_2013_2023.vis_ships_file import interracial_srs, fandom_market_share_srs
 
-# TODO
-    # fix interracial & multiracial pies for rankings ✅
-    # fix interracial pie for total ✅
-    # fix racial group pie for total
-    # fix interracial & multiracial pies for country specific ones
-
 def visualise_pies(input_item:pd.DataFrame|dict, data_case:str, ranking:str, sub_case:str=None):
     """
     visualise 
@@ -654,10 +648,10 @@ def visualise_demo_pies(char_df:pd.DataFrame, ship_df:pd.DataFrame):
             #colours = [colour_palette[combo] for combo in data.index] # how do colours for this one?
         elif subject == "multiracial":
             data = multiracial_chars
-            colours = make_colour_lookup_inter_and_multi()
+            colour_palette = make_colour_lookup_inter_and_multi()
         elif subject == "interracial":
             data = interracial_ships
-            colours = make_colour_lookup_inter_and_multi()
+            colour_palette = make_colour_lookup_inter_and_multi()
         elif subject == "rpf":
             data = rpf_ships
             colours = ["deeppink", "darkred"]
@@ -672,10 +666,12 @@ def visualise_demo_pies(char_df:pd.DataFrame, ship_df:pd.DataFrame):
             values = data["count"]
 
         # setting labels
-        if subject == "multiracial":
-            labels = ["multiracial", "non-multiracial"]
-        elif subject == "interracial":
-            labels = ["non-interracial", "interracial", "ambiguous"]
+        if subject in ["multiracial", "interracial"]:
+            if subject == "multiracial":
+                labels = ["multiracial", "non-multiracial"]
+            elif subject == "interracial":
+                labels = ["non-interracial", "interracial", "ambiguous"]
+            colours = [colour_palette[label] for label in labels]
         else: labels = data.index
 
         # setting text labels to be inside or auto
@@ -690,7 +686,7 @@ def visualise_demo_pies(char_df:pd.DataFrame, ship_df:pd.DataFrame):
             values=values,
             hole=0.3, # determines hole size
             title=subject, # text that goes in the middle of the hole
-            sort=False, # if you want to keep it in its original order rather than sorting by size
+            #sort=False, # if you want to keep it in its original order rather than sorting by size
             titlefont_size=12, # to format title text
             marker_colors=colours,
             automargin=False,

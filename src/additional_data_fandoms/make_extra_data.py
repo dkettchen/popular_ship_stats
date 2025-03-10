@@ -105,14 +105,14 @@ def get_some_countries(input_df:pd.DataFrame, input_list:list):
     and a list of locations (countries and/or total, ie "World" or continent) 
     that should have corresponding rows in the output df
 
-    returns a new df that only contains those countries' rows & the total "World" row 
+    returns a new df that only contains those countries' rows
     ordered by population size
     """
     # adjusting input
     new_df = input_df.copy().set_index("Location")
     new_list = deepcopy(input_list)
 
-    # collecting relevant country rows & total pop
+    # collecting relevant country rows
     country_dict = {}
     for country in new_list:
         country_dict[country] = new_df.loc[country]

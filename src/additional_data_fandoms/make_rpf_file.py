@@ -90,6 +90,13 @@ def replace_rpf_countries(input_df:pd.DataFrame, data_case:str):
     filepath = "data/reference_and_test_files/additional_data/additional_rpf_data.csv"
     humans_countries = df_from_csv(filepath)
     
+    # matching up with fandom data which doesn't specify north america 
+    # bc there is no south american fandoms for now
+    humans_countries["continent"] = humans_countries["continent"].mask(
+        humans_countries["continent"] == "North America",
+        other="America"
+    )
+    
     new_df = input_df.copy()
 
     # replace human countries w respective ones

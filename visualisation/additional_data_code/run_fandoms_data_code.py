@@ -129,7 +129,6 @@ for ranking in [
             #     scale=2
             # )
 
-
     else: # total just needs total ships/characters
         ship_df = make_ships_df()
         char_df = make_characters_df()

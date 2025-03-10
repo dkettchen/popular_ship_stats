@@ -63,3 +63,7 @@ make-ao3-charts:
 # make fandoms table with additional fandom data
 run-fandoms-table:
 	python src/additional_data_fandoms/make_fandoms_table.py
+
+# runs ao3 vis for geo data additional data
+make-ao3-additional-charts:
+	python visualisation/additional_data_code/run_fandoms_data_code.py
