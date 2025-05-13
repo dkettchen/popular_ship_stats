@@ -283,7 +283,82 @@ Work in progress!
     > Ex. Musicians who are shipped in association with a singing competition like American Idol or Super Vocal count as both "Music RPF" and "Unscripted TV RPF".
 
     > Ex. Live action shows like Supernatural or Merlin, whose actors are also RPF shipped, will be tagged as both "Actor RPF" and "TV (live action)".
- 
+
+### Canon, family, and orientation data:
+
+- Any questionable/debatable status will be tagged as what seems most reasonable but with a "*" to acknowledge its non-definitive nature (more details below).
+
+#### Canon pairings
+
+- To be considered a canon pairing, the pairing must've have done at the very least one of the following in canon media:
+    - confess (romantic) love/attraction to the other person
+    - engage in romantic/sexual physical interactions such as kissing
+    - be in an official relationship
+    - be listed as love interests on their wiki (if there is a list of love interests)
+
+- Merely flirting, vague expressions of affection, confirmations in non-canon media, and a variety of queerbaiting, no matter how egregious, are not enough to be counted
+
+    > Ex. Hajime and Nagito, and Kokichi and Shuichi from Danganranpa seem to be like *this close* to being canon, including all of them but Hajime being canon mlm, but neither pairing goes far enough in canon media to be counted, despite egregious flirting, bait, and numerous pieces of evidence that could've counted in non-canon media. I have tagged both pairing as "No*".
+
+- If they engaged in actions that would qualify but for reasons that do not indicate genuine attraction, those will not be counted
+
+    > Ex. Fake dating or marriage for other motives, like Toni and Fangs marrying to get custody of their weird baby from their co-parent
+
+    > Ex. Kissing for non-romantic reasons, like the Doctor kissing Rose to absorb Tardis energy or whatever to save her life
+
+- If the action was one-sided, it will be tagged as "One-sided" instead of "Yes", as it is canonically one-sided.
+
+    > Ex. Oswald Cobblepott canonically has a one-sided crush on Edward Nigma in Gotham.
+
+#### Incest
+
+- Blood-related pairings will be tagged as "Yes" for incest.
+
+    > Why did Wincest rank so highly WHY
+
+- Step or adoptive relations will be tagged as such ("step"/"adopted"), because that is still incest, albeit not blood-related.
+
+    > Ex. Thor and Loki are adopted siblings/not blood-related but they are still brothers for all intents and purposes.
+
+- If people are technically related by non-blood relations, but they're not directly connected, they will be tagged as "No*"
+
+    > Ex. Kara Danvers' bio-aunt and adoptive sister are not blood- or directly related to each other, as they are on opposite sides of Kara's family, therefore merely related *via* Kara. They are not on par with directly related step/adoptive incest pairings like step parent/child or adoptive siblings.
+
+- If a pairing was not related in the original work but was declared questionably related in another adaptation in an obvious attempt to erase a canon-queer relationship, they will be tagged as "No*"
+
+    > Ex. Faraway Wanderers, as a danmei novel, has a mlm main pairing. In the TV adaptation Word of Honor they are not explicitly gay/together and later "revealed" to be each other's "junior/senior brother" despite not sharing parentage as far as I can tell from the TV show's wiki (I have not watched this show, I do not know the full details of how the show tried to justify this reveal). I am not counting that nonsense as incest as they are not related in the original danmei novel.
+
+#### Orientation
+
+- I am only tracking orientation as far as it is portrayed or specified in media
+
+    > Ex. Someone of unspecified label who only ever had opposite-sex partners in media could well be bisexual, but I will have written "str8" in the data file, as only their hetero attraction is canonically confirmed
+
+- If someone specified a label but has had love interests that do not align with that, the explicit label takes priority
+
+    > Ex. Willow had male love interests but later explicitly came out as a lesbian, hence is tagged as "gay"
+
+- If someone has listed love interests but their reciprocity is put in question, they will be counted but marked with a "*"
+
+    > Ex. Princess Bubblegum has Finn and Mr Cream Puff listed as love interests, but she never explicitly reciprocated Finn's crush, and Mr Cream Puff happened when she was quite young and was arranged by another character for scheming purposes. Her only other love interest is Marceline, the only one she actually explicitly reciprocated and did stuff with. I have tagged her as "bi*" as her male love interests are questionable.
+
+- If they usually have one type of orientation only but there's like one minor alternate version of the character that conflicts with it, they will also be tagged with the "*"
+
+    > Ex. There's like one alternate universe in DC where Lex Luthor is gay and dates a big green man, but regular Lex seems to only ever have dated women, hence he is tagged as "str8*"
+
+- If there are no known love interests or partners, they will be tagged as "unspecified"
+
+    > Ex. The kpop industry doesn't want its idols to date or come out as queer, hence the various kpop idols in our rankings don't have any publicly known partners or confirmed identity labels. They are "unspecified".
+
+- I am not bothering with a distinction between pan and bi, as we have like a single(1) character with a canonical unaligned nb partner, out of our total two(2) unaligned characters. Anyone who dates both men and women will be tagged as bi for simplicity's sake.
+
+- Some characters may be able to be argued to be ace/aro or closeted gays in spite of having been in (any/hetero) relationships. Unless there is significant canon-support for this, I will disregard it, as the point of this exercise is less about determining the characters' actual labels and more about merely comparing what info on their potential orientation is canon vs what types of pairings they're put in by fans
+
+    > Ex. Sansa Stark suffers through several arranged marriages, none of which she seems to enjoy particularly much, so she may well be ace, aro and/or gay, but we have no means of knowing that from what canon tells us, therefore she is still counted as canon-conflicting with being in a femslash ship, as she has not had any canon female lovers.
+
+- If a character is explicitly fully unable to feel attraction (as opposed to folks on the wider ace/aro spectrum who may still have an orientation & romantic/sexual relationships), that will also qualify as a conflict with any slash ship they're in
+
+    > Ex. Luffy is canonically established as not feeling any romantic or sexual attraction via being immune to Boa Hancock's devil fruit power, so if and when he is added to our data pool via tumblr's rankings (which I know contain Zoro x Luffy among other ships that didn't make the AO3 rankings) his lack of attraction will be counted as conflicting for any ship he's in
 
 ## N.B.: 
 
