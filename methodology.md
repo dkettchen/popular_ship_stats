@@ -194,6 +194,11 @@ Work in progress!
 
 - If the character has never been portrayed in visual media and is not clearly implied or established to be of a specific group, their race will be tagged as "Unknown".
 
+- If the character was alluded to being a certain highly underrepresented identity/label that is not established in the actual piece of media, casting, or *explicitly* confirmed by the creator (notably when there are plenty of actual canon [same or similar minority] characters in the piece of media in question), I will not count it.
+
+    > Ex. Perfuma's character designer apparently said in a post that she was designed to be read as transgender, and Nate Stevenson liked a tweet once that called her a trans lesbian, but neither of these explicitly confirm her as canonically *being* trans, nor does the actual show or casting (she's voiced by a cis woman - the T-based first puberty needed to *look* trans (as per character design) also changes your voice, so voice plays a major role in any character audiovisually "reading" as a trans woman) establish it in any way. <br>
+    -> I do not consider Perfuma to be trans for "Are there (binary/medically) trans characters in the data set?" analysis purposes as the only way to even find this out is via a niche reference on a wiki (not the actual show or casting), while other trans characters in the represented fandoms *are* actually explicitly, in-show-established, and even cast as trans, but those didn't make the ranking.
+
 ## Ships:
 
 ### Ship labels
@@ -316,7 +321,7 @@ Work in progress!
 
     > Why did Wincest rank so highly WHY
 
-- Step or adoptive relations will be tagged as such ("step"/"adopted"), because that is still incest, albeit not blood-related.
+- Other kinds of relations will be tagged as such ("step"/"adopted"/"foster"/"in-law"), because that is still incest, albeit not blood-related.
 
     > Ex. Thor and Loki are adopted siblings/not blood-related but they are still brothers for all intents and purposes.
 
@@ -327,6 +332,8 @@ Work in progress!
 - If a pairing was not related in the original work but was declared questionably related in another adaptation in an obvious attempt to erase a canon-queer relationship, they will be tagged as "No*"
 
     > Ex. Faraway Wanderers, as a danmei novel, has a mlm main pairing. In the TV adaptation Word of Honor they are not explicitly gay/together and later "revealed" to be each other's "junior/senior brother" despite not sharing parentage as far as I can tell from the TV show's wiki (I have not watched this show, I do not know the full details of how the show tried to justify this reveal). I am not counting that nonsense as incest as they are not related in the original danmei novel.
+
+    > Ex. Sailor Neptune and Sailor Uranus are girlfriends in the japanese original, but the english dub decided to declare them cousins instead in order to hide the gayness. I am not counting that.
 
 #### Orientation
 
