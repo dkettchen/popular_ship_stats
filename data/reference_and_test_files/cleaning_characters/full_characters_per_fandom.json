@@ -521,10 +521,12 @@
             "Mabel Pines",
             "Pacifica Northwest"
         ],
-        "Grey's Anatomy": [
+        "Grey's Anatomy Universe": [
             "Addison Montgomery",
             "Arizona Robbins",
             "Calliope 'Callie' Torres",
+            "Carina DeLuca",
+            "Maya Bishop",
             "Meredith Grey"
         ],
         "Haikyuu!! | \u30cf\u30a4\u30ad\u30e5\u30fc!!": [
@@ -1047,9 +1049,11 @@
             "Hyakuya Mikaela",
             "Hyakuya Yuuichirou"
         ],
-        "Shadow and Bone": [
+        "Shadow and Bone Universe": [
             "Alina Starkov",
-            "The Darkling | Aleksander Morozova"
+            "Jesper Fahey",
+            "The Darkling | Aleksander Morozova",
+            "Wylan Van Eck"
         ],
         "Shameless": [
             "Ian Gallagher",
@@ -1076,10 +1080,6 @@
             "Mycroft Holmes",
             "Sebastian Moran",
             "Sherlock Holmes"
-        ],
-        "Six of Crows": [
-            "Jesper Fahey",
-            "Wylan Van Eck"
         ],
         "Skins": [
             "Emily Fitch",
@@ -1137,10 +1137,6 @@
         "Starsky & Hutch": [
             "David Starsky",
             "Ken Hutchinson"
-        ],
-        "Station 19": [
-            "Carina DeLuca",
-            "Maya Bishop"
         ],
         "Steven Universe": [
             "Amethyst",

@@ -572,11 +572,12 @@
                 "Gravity Falls"
             ]
         },
-        "Grey's Anatomy": {
-            "Fandom": "Grey's Anatomy",
+        "Grey's Anatomy Universe": {
+            "Fandom": "Grey's Anatomy Universe",
             "Author Name": null,
             "OP Versions": [
-                "Grey's Anatomy"
+                "Grey's Anatomy",
+                "Station 19 (TV)"
             ]
         },
         "Haikyuu!! | \u30cf\u30a4\u30ad\u30e5\u30fc!!": {
@@ -1162,11 +1163,12 @@
                 "Owari no Seraph | Seraph of the End"
             ]
         },
-        "Shadow and Bone": {
-            "Fandom": "Shadow and Bone",
-            "Author Name": null,
+        "Shadow and Bone Universe": {
+            "Fandom": "Shadow and Bone Universe",
+            "Author Name": "Leigh Bardugo",
             "OP Versions": [
-                "Shadow and Bone (TV)"
+                "Shadow and Bone (TV)",
+                "Six of Crows Series - Leigh Bardugo"
             ]
         },
         "Shameless": {
@@ -1188,13 +1190,6 @@
             "Author Name": null,
             "OP Versions": [
                 "Sherlock (TV)"
-            ]
-        },
-        "Six of Crows": {
-            "Fandom": "Six of Crows",
-            "Author Name": "Leigh Bardugo",
-            "OP Versions": [
-                "Six of Crows Series - Leigh Bardugo"
             ]
         },
         "Skins": {
@@ -1250,13 +1245,6 @@
             "Author Name": null,
             "OP Versions": [
                 "Starsky & Hutch"
-            ]
-        },
-        "Station 19": {
-            "Fandom": "Station 19",
-            "Author Name": null,
-            "OP Versions": [
-                "Station 19 (TV)"
             ]
         },
         "Steven Universe": {

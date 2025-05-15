@@ -44,8 +44,8 @@
             "Lauren Jauregui"
         ],
         "Figure Skating": [
-            "Boyang Jin",
-            "Yuzuru Hanyu"
+            "Hanyu Yuzuru",
+            "Jin Boyang"
         ],
         "Grandmaster of Demonic Cultivation / The Untamed | \u9b54\u9053\u7956\u5e08 / \u9648\u60c5\u4ee4": [
             "Wang Yi Bo",
@@ -502,10 +502,12 @@
             "Mabel Pines",
             "Pacifica Northwest"
         ],
-        "Grey's Anatomy": [
+        "Grey's Anatomy Universe": [
             "Addison Montgomery",
             "Arizona Robbins",
             "Calliope 'Callie' Torres",
+            "Carina DeLuca",
+            "Maya Bishop",
             "Meredith Grey"
         ],
         "Haikyuu!! | \u30cf\u30a4\u30ad\u30e5\u30fc!!": [
@@ -736,7 +738,7 @@
             "Frodo Baggins",
             "F\u00edli",
             "K\u00edli",
-            "Sam Gamgee",
+            "Samwise Gamgee",
             "Thorin Oakenshield"
         ],
         "Lost Girl": [
@@ -844,7 +846,7 @@
             "Shinsou Hitoshi",
             "Takami Keigo | Hawks",
             "Todoroki Shouto",
-            "Touya Todoroki | Dabi",
+            "Todoroki Touya | Dabi",
             "Uraraka Ochako",
             "Y/N | Reader",
             "Yagi Toshinori | All Might",
@@ -1009,9 +1011,11 @@
             "Hyakuya Mikaela",
             "Hyakuya Yuuichirou"
         ],
-        "Shadow and Bone": [
+        "Shadow and Bone Universe": [
             "Aleksander Morozova | The Darkling",
-            "Alina Starkov"
+            "Alina Starkov",
+            "Jesper Fahey",
+            "Wylan Van Eck"
         ],
         "Shameless": [
             "Ian Gallagher",
@@ -1031,16 +1035,11 @@
             "Irene Adler",
             "James 'Jim' Moriarty",
             "John Watson",
-            "Lestrade",
             "Mary Morstan",
             "Molly Hooper",
             "Mycroft Holmes",
             "Sebastian Moran",
             "Sherlock Holmes"
-        ],
-        "Six of Crows": [
-            "Jesper Fahey",
-            "Wylan Van Eck"
         ],
         "Skins": [
             "Emily Fitch",
@@ -1096,10 +1095,6 @@
         "Starsky & Hutch": [
             "David Starsky",
             "Ken Hutchinson"
-        ],
-        "Station 19": [
-            "Carina DeLuca",
-            "Maya Bishop"
         ],
         "Steven Universe": [
             "Amethyst",
@@ -1266,8 +1261,8 @@
             "Fox Mulder"
         ],
         "Tokyo Ghoul | \u6771\u4eac\u55b0\u7a2e": [
-            "Nagachika Hideyoshi",
-            "Sasaki Haise"
+            "Kaneki Ken | Haise Sasaki",
+            "Nagachika Hideyoshi"
         ],
         "Tokyo Revengers | \u6771\u4eac\u534d\u30ea\u30d9\u30f3\u30b8\u30e3\u30fc\u30ba": [
             "Hanagaki 'Takemitchy' Takemichi",

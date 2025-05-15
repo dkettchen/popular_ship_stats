@@ -3959,24 +3959,24 @@
             "Latin"
         ]
     },
-    "Boyang Jin x Yuzuru Hanyu": {
-        "slash_ship": "Boyang Jin x Yuzuru Hanyu",
-        "gen_ship": "Boyang Jin & Yuzuru Hanyu",
+    "Hanyu Yuzuru x Jin Boyang": {
+        "slash_ship": "Hanyu Yuzuru x Jin Boyang",
+        "gen_ship": "Hanyu Yuzuru & Jin Boyang",
         "members_no": 2,
         "fandom": "Figure Skating",
         "rpf_or_fic": "RPF",
         "members_list": [
             {
-                "member_key": "Figure Skating - Boyang Jin",
+                "member_key": "Figure Skating - Hanyu Yuzuru",
                 "member_gender": "M",
-                "member_race": "E Asian",
-                "member_name": "Boyang Jin"
+                "member_race": "Asian",
+                "member_name": "Hanyu Yuzuru"
             },
             {
-                "member_key": "Figure Skating - Yuzuru Hanyu",
+                "member_key": "Figure Skating - Jin Boyang",
                 "member_gender": "M",
-                "member_race": "E Asian",
-                "member_name": "Yuzuru Hanyu"
+                "member_race": "Asian",
+                "member_name": "Jin Boyang"
             }
         ],
         "gender_combo": [
@@ -3984,8 +3984,8 @@
             "M"
         ],
         "race_combo": [
-            "E Asian",
-            "E Asian"
+            "Asian",
+            "Asian"
         ]
     },
     "Lightning x Oerba-Yun Fang": {
@@ -5210,17 +5210,17 @@
         "slash_ship": "Addison Montgomery x Meredith Grey",
         "gen_ship": "Addison Montgomery & Meredith Grey",
         "members_no": 2,
-        "fandom": "Grey's Anatomy",
+        "fandom": "Grey's Anatomy Universe",
         "rpf_or_fic": "fictional",
         "members_list": [
             {
-                "member_key": "Grey's Anatomy - Addison Montgomery",
+                "member_key": "Grey's Anatomy Universe - Addison Montgomery",
                 "member_gender": "F",
                 "member_race": "White",
                 "member_name": "Addison Montgomery"
             },
             {
-                "member_key": "Grey's Anatomy - Meredith Grey",
+                "member_key": "Grey's Anatomy Universe - Meredith Grey",
                 "member_gender": "F",
                 "member_race": "White",
                 "member_name": "Meredith Grey"
@@ -5239,17 +5239,17 @@
         "slash_ship": "Arizona Robbins x Calliope 'Callie' Torres",
         "gen_ship": "Arizona Robbins & Calliope 'Callie' Torres",
         "members_no": 2,
-        "fandom": "Grey's Anatomy",
+        "fandom": "Grey's Anatomy Universe",
         "rpf_or_fic": "fictional",
         "members_list": [
             {
-                "member_key": "Grey's Anatomy - Arizona Robbins",
+                "member_key": "Grey's Anatomy Universe - Arizona Robbins",
                 "member_gender": "F",
                 "member_race": "White",
                 "member_name": "Arizona Robbins"
             },
             {
-                "member_key": "Grey's Anatomy - Calliope 'Callie' Torres",
+                "member_key": "Grey's Anatomy Universe - Calliope 'Callie' Torres",
                 "member_gender": "F",
                 "member_race": "Latin",
                 "member_name": "Calliope 'Callie' Torres"
@@ -5262,6 +5262,35 @@
         "race_combo": [
             "White",
             "Latin"
+        ]
+    },
+    "Carina DeLuca x Maya Bishop": {
+        "slash_ship": "Carina DeLuca x Maya Bishop",
+        "gen_ship": "Carina DeLuca & Maya Bishop",
+        "members_no": 2,
+        "fandom": "Grey's Anatomy Universe",
+        "rpf_or_fic": "fictional",
+        "members_list": [
+            {
+                "member_key": "Grey's Anatomy Universe - Carina DeLuca",
+                "member_gender": "F",
+                "member_race": "White",
+                "member_name": "Carina DeLuca"
+            },
+            {
+                "member_key": "Grey's Anatomy Universe - Maya Bishop",
+                "member_gender": "F",
+                "member_race": "White",
+                "member_name": "Maya Bishop"
+            }
+        ],
+        "gender_combo": [
+            "F",
+            "F"
+        ],
+        "race_combo": [
+            "White",
+            "White"
         ]
     },
     "Akaashi Keiji x Bokuto Koutarou": {
@@ -8106,9 +8135,9 @@
             "White"
         ]
     },
-    "Frodo Baggins x Sam Gamgee": {
-        "slash_ship": "Frodo Baggins x Sam Gamgee",
-        "gen_ship": "Frodo Baggins & Sam Gamgee",
+    "Frodo Baggins x Samwise Gamgee": {
+        "slash_ship": "Frodo Baggins x Samwise Gamgee",
+        "gen_ship": "Frodo Baggins & Samwise Gamgee",
         "members_no": 2,
         "fandom": "Lord of the Rings Universe",
         "rpf_or_fic": "fictional",
@@ -8120,10 +8149,10 @@
                 "member_name": "Frodo Baggins"
             },
             {
-                "member_key": "Lord of the Rings Universe - Sam Gamgee",
+                "member_key": "Lord of the Rings Universe - Samwise Gamgee",
                 "member_gender": "M",
                 "member_race": "White",
-                "member_name": "Sam Gamgee"
+                "member_name": "Samwise Gamgee"
             }
         ],
         "gender_combo": [
@@ -10194,9 +10223,9 @@
             "E Asian"
         ]
     },
-    "Takami Keigo | Hawks x Touya Todoroki | Dabi": {
-        "slash_ship": "Takami Keigo | Hawks x Touya Todoroki | Dabi",
-        "gen_ship": "Takami Keigo | Hawks & Touya Todoroki | Dabi",
+    "Takami Keigo | Hawks x Todoroki Touya | Dabi": {
+        "slash_ship": "Takami Keigo | Hawks x Todoroki Touya | Dabi",
+        "gen_ship": "Takami Keigo | Hawks & Todoroki Touya | Dabi",
         "members_no": 2,
         "fandom": "My Hero Academia | \u50d5\u306e\u30d2\u30fc\u30ed\u30fc\u30a2\u30ab\u30c7\u30df\u30a2",
         "rpf_or_fic": "fictional",
@@ -10208,10 +10237,10 @@
                 "member_name": "Takami Keigo | Hawks"
             },
             {
-                "member_key": "My Hero Academia | \u50d5\u306e\u30d2\u30fc\u30ed\u30fc\u30a2\u30ab\u30c7\u30df\u30a2 - Touya Todoroki | Dabi",
+                "member_key": "My Hero Academia | \u50d5\u306e\u30d2\u30fc\u30ed\u30fc\u30a2\u30ab\u30c7\u30df\u30a2 - Todoroki Touya | Dabi",
                 "member_gender": "M",
                 "member_race": "E Asian",
-                "member_name": "Touya Todoroki | Dabi"
+                "member_name": "Todoroki Touya | Dabi"
             }
         ],
         "gender_combo": [
@@ -12170,17 +12199,17 @@
         "slash_ship": "Aleksander Morozova | The Darkling x Alina Starkov",
         "gen_ship": "Aleksander Morozova | The Darkling & Alina Starkov",
         "members_no": 2,
-        "fandom": "Shadow and Bone",
+        "fandom": "Shadow and Bone Universe",
         "rpf_or_fic": "fictional",
         "members_list": [
             {
-                "member_key": "Shadow and Bone - Aleksander Morozova | The Darkling",
+                "member_key": "Shadow and Bone Universe - Aleksander Morozova | The Darkling",
                 "member_gender": "M",
                 "member_race": "White",
                 "member_name": "Aleksander Morozova | The Darkling"
             },
             {
-                "member_key": "Shadow and Bone - Alina Starkov",
+                "member_key": "Shadow and Bone Universe - Alina Starkov",
                 "member_gender": "F",
                 "member_race": "E Asian (Multi)",
                 "member_name": "Alina Starkov"
@@ -12193,6 +12222,35 @@
         "race_combo": [
             "White",
             "E Asian (Multi)"
+        ]
+    },
+    "Jesper Fahey x Wylan Van Eck": {
+        "slash_ship": "Jesper Fahey x Wylan Van Eck",
+        "gen_ship": "Jesper Fahey & Wylan Van Eck",
+        "members_no": 2,
+        "fandom": "Shadow and Bone Universe",
+        "rpf_or_fic": "fictional",
+        "members_list": [
+            {
+                "member_key": "Shadow and Bone Universe - Jesper Fahey",
+                "member_gender": "M",
+                "member_race": "Black",
+                "member_name": "Jesper Fahey"
+            },
+            {
+                "member_key": "Shadow and Bone Universe - Wylan Van Eck",
+                "member_gender": "M",
+                "member_race": "White",
+                "member_name": "Wylan Van Eck"
+            }
+        ],
+        "gender_combo": [
+            "M",
+            "M"
+        ],
+        "race_combo": [
+            "Black",
+            "White"
         ]
     },
     "Ian Gallagher x Mickey Milkovich": {
@@ -12485,35 +12543,6 @@
             "White"
         ]
     },
-    "Lestrade x Mycroft Holmes": {
-        "slash_ship": "Lestrade x Mycroft Holmes",
-        "gen_ship": "Lestrade & Mycroft Holmes",
-        "members_no": 2,
-        "fandom": "Sherlock",
-        "rpf_or_fic": "fictional",
-        "members_list": [
-            {
-                "member_key": "Sherlock - Lestrade",
-                "member_gender": "M",
-                "member_race": "White",
-                "member_name": "Lestrade"
-            },
-            {
-                "member_key": "Sherlock - Mycroft Holmes",
-                "member_gender": "M",
-                "member_race": "White",
-                "member_name": "Mycroft Holmes"
-            }
-        ],
-        "gender_combo": [
-            "M",
-            "M"
-        ],
-        "race_combo": [
-            "White",
-            "White"
-        ]
-    },
     "Molly Hooper x Sherlock Holmes": {
         "slash_ship": "Molly Hooper x Sherlock Holmes",
         "gen_ship": "Molly Hooper & Sherlock Holmes",
@@ -12540,35 +12569,6 @@
         ],
         "race_combo": [
             "White",
-            "White"
-        ]
-    },
-    "Jesper Fahey x Wylan Van Eck": {
-        "slash_ship": "Jesper Fahey x Wylan Van Eck",
-        "gen_ship": "Jesper Fahey & Wylan Van Eck",
-        "members_no": 2,
-        "fandom": "Six of Crows",
-        "rpf_or_fic": "fictional",
-        "members_list": [
-            {
-                "member_key": "Six of Crows - Jesper Fahey",
-                "member_gender": "M",
-                "member_race": "Black",
-                "member_name": "Jesper Fahey"
-            },
-            {
-                "member_key": "Six of Crows - Wylan Van Eck",
-                "member_gender": "M",
-                "member_race": "White",
-                "member_name": "Wylan Van Eck"
-            }
-        ],
-        "gender_combo": [
-            "M",
-            "M"
-        ],
-        "race_combo": [
-            "Black",
             "White"
         ]
     },
@@ -13320,35 +13320,6 @@
         "gender_combo": [
             "M",
             "M"
-        ],
-        "race_combo": [
-            "White",
-            "White"
-        ]
-    },
-    "Carina DeLuca x Maya Bishop": {
-        "slash_ship": "Carina DeLuca x Maya Bishop",
-        "gen_ship": "Carina DeLuca & Maya Bishop",
-        "members_no": 2,
-        "fandom": "Station 19",
-        "rpf_or_fic": "fictional",
-        "members_list": [
-            {
-                "member_key": "Station 19 - Carina DeLuca",
-                "member_gender": "F",
-                "member_race": "White",
-                "member_name": "Carina DeLuca"
-            },
-            {
-                "member_key": "Station 19 - Maya Bishop",
-                "member_gender": "F",
-                "member_race": "White",
-                "member_name": "Maya Bishop"
-            }
-        ],
-        "gender_combo": [
-            "F",
-            "F"
         ],
         "race_combo": [
             "White",
@@ -15778,24 +15749,24 @@
             "White"
         ]
     },
-    "Nagachika Hideyoshi x Sasaki Haise": {
-        "slash_ship": "Nagachika Hideyoshi x Sasaki Haise",
-        "gen_ship": "Nagachika Hideyoshi & Sasaki Haise",
+    "Ken Kaneki | Haise Sasaki x Nagachika Hideyoshi": {
+        "slash_ship": "Ken Kaneki | Haise Sasaki x Nagachika Hideyoshi",
+        "gen_ship": "Ken Kaneki | Haise Sasaki & Nagachika Hideyoshi",
         "members_no": 2,
         "fandom": "Tokyo Ghoul | \u6771\u4eac\u55b0\u7a2e",
         "rpf_or_fic": "fictional",
         "members_list": [
             {
+                "member_key": "Tokyo Ghoul | \u6771\u4eac\u55b0\u7a2e - Ken Kaneki | Haise Sasaki",
+                "member_gender": "M",
+                "member_race": "E Asian",
+                "member_name": "Ken Kaneki | Haise Sasaki"
+            },
+            {
                 "member_key": "Tokyo Ghoul | \u6771\u4eac\u55b0\u7a2e - Nagachika Hideyoshi",
                 "member_gender": "M",
                 "member_race": "E Asian",
                 "member_name": "Nagachika Hideyoshi"
-            },
-            {
-                "member_key": "Tokyo Ghoul | \u6771\u4eac\u55b0\u7a2e - Sasaki Haise",
-                "member_gender": "M",
-                "member_race": "E Asian",
-                "member_name": "Sasaki Haise"
             }
         ],
         "gender_combo": [

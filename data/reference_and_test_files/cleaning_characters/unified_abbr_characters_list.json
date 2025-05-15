@@ -319,15 +319,15 @@
         }
     },
     "Figure Skating": {
-        "Boyang Jin": {
-            "full_name": "Boyang Jin",
+        "Jin Boyang": {
+            "full_name": "Jin Boyang",
             "op_versions": [
                 "Boyang Jin"
             ],
             "rpf_or_fic": "RPF"
         },
-        "Yuzuru Hanyu": {
-            "full_name": "Yuzuru Hanyu",
+        "Hanyu Yuzuru": {
+            "full_name": "Hanyu Yuzuru",
             "op_versions": [
                 "Yuzuru Hanyu"
             ],
@@ -454,8 +454,8 @@
             ],
             "rpf_or_fic": "fictional"
         },
-        "Sam Gamgee": {
-            "full_name": "Sam Gamgee",
+        "Samwise Gamgee": {
+            "full_name": "Samwise Gamgee",
             "op_versions": [
                 "Sam Gamgee"
             ],
@@ -2831,7 +2831,7 @@
             "rpf_or_fic": "fictional"
         }
     },
-    "Grey's Anatomy": {
+    "Grey's Anatomy Universe": {
         "Addison Montgomery": {
             "full_name": "Addison Montgomery",
             "op_versions": [
@@ -2850,6 +2850,20 @@
             "full_name": "Calliope 'Callie' Torres",
             "op_versions": [
                 "Calliope 'Callie' Torres"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "Carina DeLuca": {
+            "full_name": "Carina DeLuca",
+            "op_versions": [
+                "Carina DeLuca"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "Maya Bishop": {
+            "full_name": "Maya Bishop",
+            "op_versions": [
+                "Maya Bishop"
             ],
             "rpf_or_fic": "fictional"
         },
@@ -4510,8 +4524,8 @@
             ],
             "rpf_or_fic": "fictional"
         },
-        "Touya Todoroki | Dabi": {
-            "full_name": "Touya Todoroki | Dabi",
+        "Todoroki Touya | Dabi": {
+            "full_name": "Todoroki Touya | Dabi",
             "op_versions": [
                 "Dabi",
                 "Dabi | Todoroki Touya"
@@ -5355,7 +5369,7 @@
             "rpf_or_fic": "fictional"
         }
     },
-    "Shadow and Bone": {
+    "Shadow and Bone Universe": {
         "Alina Starkov": {
             "full_name": "Alina Starkov",
             "op_versions": [
@@ -5363,10 +5377,24 @@
             ],
             "rpf_or_fic": "fictional"
         },
+        "Jesper Fahey": {
+            "full_name": "Jesper Fahey",
+            "op_versions": [
+                "Jesper Fahey"
+            ],
+            "rpf_or_fic": "fictional"
+        },
         "Aleksander Morozova | The Darkling": {
             "full_name": "Aleksander Morozova | The Darkling",
             "op_versions": [
                 "The Darkling | Aleksander Morozova"
+            ],
+            "rpf_or_fic": "fictional"
+        },
+        "Wylan Van Eck": {
+            "full_name": "Wylan Van Eck",
+            "op_versions": [
+                "Wylan Van Eck"
             ],
             "rpf_or_fic": "fictional"
         }
@@ -5435,7 +5463,8 @@
         "Greg Lestrade": {
             "full_name": "Greg Lestrade",
             "op_versions": [
-                "Greg Lestrade"
+                "Greg Lestrade",
+                "Lestrade"
             ],
             "rpf_or_fic": "fictional"
         },
@@ -5465,13 +5494,6 @@
             "full_name": "John Watson",
             "op_versions": [
                 "John Watson"
-            ],
-            "rpf_or_fic": "fictional"
-        },
-        "Lestrade": {
-            "full_name": "Lestrade",
-            "op_versions": [
-                "Lestrade"
             ],
             "rpf_or_fic": "fictional"
         },
@@ -5507,22 +5529,6 @@
             "full_name": "Sherlock Holmes",
             "op_versions": [
                 "Sherlock Holmes"
-            ],
-            "rpf_or_fic": "fictional"
-        }
-    },
-    "Six of Crows": {
-        "Jesper Fahey": {
-            "full_name": "Jesper Fahey",
-            "op_versions": [
-                "Jesper Fahey"
-            ],
-            "rpf_or_fic": "fictional"
-        },
-        "Wylan Van Eck": {
-            "full_name": "Wylan Van Eck",
-            "op_versions": [
-                "Wylan Van Eck"
             ],
             "rpf_or_fic": "fictional"
         }
@@ -5767,22 +5773,6 @@
             "full_name": "Kenneth 'Ken' Hutchinson",
             "op_versions": [
                 "Ken Hutchinson"
-            ],
-            "rpf_or_fic": "fictional"
-        }
-    },
-    "Station 19": {
-        "Carina DeLuca": {
-            "full_name": "Carina DeLuca",
-            "op_versions": [
-                "Carina DeLuca"
-            ],
-            "rpf_or_fic": "fictional"
-        },
-        "Maya Bishop": {
-            "full_name": "Maya Bishop",
-            "op_versions": [
-                "Maya Bishop"
             ],
             "rpf_or_fic": "fictional"
         }
@@ -6547,8 +6537,8 @@
             ],
             "rpf_or_fic": "fictional"
         },
-        "Sasaki Haise": {
-            "full_name": "Sasaki Haise",
+        "Ken Kaneki | Haise Sasaki": {
+            "full_name": "Ken Kaneki | Haise Sasaki",
             "op_versions": [
                 "Sasaki Haise"
             ],

@@ -207,8 +207,8 @@ Kexing,None,None,Wen,None,None,None,None,E,Wen Kexing,Faraway Wanderers / Word o
 Zishu,None,None,Zhou,None,None,None,None,E,Zhou Zishu,Faraway Wanderers / Word of Honor | 天涯客 / 山河令,M,E Asian,fictional
 Camila,None,None,Cabello,None,None,None,None,W,Camila Cabello,Fifth Harmony,F,Latin,RPF
 Lauren,None,None,Jauregui,None,None,None,None,W,Lauren Jauregui,Fifth Harmony,F,Latin,RPF
-Jin,None,None,Boyang,None,None,None,None,E,Boyang Jin,Figure Skating,M,E Asian,RPF
-Hanyu,None,None,Yuzuru,None,None,None,None,E,Yuzuru Hanyu,Figure Skating,M,E Asian,RPF
+Yuzuru,None,None,Hanyu,None,None,None,None,E,Hanyu Yuzuru,Figure Skating,M,Asian,RPF
+Boyang,None,None,Jin,None,None,None,None,E,Jin Boyang,Figure Skating,M,Asian,RPF
 None,None,None,None,Lightning,None,None,None,None,Lightning,Final Fantasy | ファイナルファンタジー,F,White,fictional
 Noctis,Lucis,None,Caelum,None,None,None,None,W,Noctis Lucis Caelum,Final Fantasy | ファイナルファンタジー,M,E Asian,fictional
 Fang,None,None,Oerba-Yun,None,None,None,None,E,Oerba-Yun Fang,Final Fantasy | ファイナルファンタジー,F,E Asian,fictional
@@ -278,10 +278,12 @@ Bill,None,None,Cipher,None,None,None,None,W,Bill Cipher,Gravity Falls,M,N.H.,fic
 Dipper,None,None,Pines,None,None,None,None,W,Dipper Pines,Gravity Falls,M,White,fictional
 Mabel,None,None,Pines,None,None,None,None,W,Mabel Pines,Gravity Falls,F,White,fictional
 Pacifica,None,None,Northwest,None,None,None,None,W,Pacifica Northwest,Gravity Falls,F,White,fictional
-Addison,None,None,Montgomery,None,None,None,None,W,Addison Montgomery,Grey's Anatomy,F,White,fictional
-Arizona,None,None,Robbins,None,None,None,None,W,Arizona Robbins,Grey's Anatomy,F,White,fictional
-Calliope,None,None,Torres,None,Callie,None,None,W,Calliope 'Callie' Torres,Grey's Anatomy,F,Latin,fictional
-Meredith,None,None,Grey,None,None,None,None,W,Meredith Grey,Grey's Anatomy,F,White,fictional
+Addison,None,None,Montgomery,None,None,None,None,W,Addison Montgomery,Grey's Anatomy Universe,F,White,fictional
+Arizona,None,None,Robbins,None,None,None,None,W,Arizona Robbins,Grey's Anatomy Universe,F,White,fictional
+Calliope,None,None,Torres,None,Callie,None,None,W,Calliope 'Callie' Torres,Grey's Anatomy Universe,F,Latin,fictional
+Carina,None,None,DeLuca,None,None,None,None,W,Carina DeLuca,Grey's Anatomy Universe,F,White,fictional
+Maya,None,None,Bishop,None,None,None,None,W,Maya Bishop,Grey's Anatomy Universe,F,White,fictional
+Meredith,None,None,Grey,None,None,None,None,W,Meredith Grey,Grey's Anatomy Universe,F,White,fictional
 Keiji,None,None,Akaashi,None,None,None,None,E,Akaashi Keiji,Haikyuu!! | ハイキュー!!,M,E Asian,fictional
 Koutarou,None,None,Bokuto,None,None,None,None,E,Bokuto Koutarou,Haikyuu!! | ハイキュー!!,M,E Asian,fictional
 Shouyou,None,None,Hinata,None,None,None,None,E,Hinata Shouyou,Haikyuu!! | ハイキュー!!,M,E Asian,fictional
@@ -441,7 +443,7 @@ Bilbo,None,None,Baggins,None,None,None,None,W,Bilbo Baggins,Lord of the Rings Un
 Frodo,None,None,Baggins,None,None,None,None,W,Frodo Baggins,Lord of the Rings Universe,M,White,fictional
 Fíli,None,None,None,None,None,None,None,None,Fíli,Lord of the Rings Universe,M,White,fictional
 Kíli,None,None,None,None,None,None,None,None,Kíli,Lord of the Rings Universe,M,White,fictional
-Sam,None,None,Gamgee,None,None,None,None,W,Sam Gamgee,Lord of the Rings Universe,M,White,fictional
+Samwise,None,None,Gamgee,None,None,None,None,W,Samwise Gamgee,Lord of the Rings Universe,M,White,fictional
 Sean,None,None,Bean,None,None,None,None,W,Sean Bean,Lord of the Rings Universe,M,White,RPF
 Thorin,None,None,Oakenshield,None,None,None,None,W,Thorin Oakenshield,Lord of the Rings Universe,M,White,fictional
 Viggo,None,None,Mortensen,None,None,None,None,W,Viggo Mortensen,Lord of the Rings Universe,M,White,RPF
@@ -533,7 +535,7 @@ Izuku,None,None,Midoriya,Deku,None,None,None,E,Midoriya Izuku | Deku,My Hero Aca
 Hitoshi,None,None,Shinsou,None,None,None,None,E,Shinsou Hitoshi,My Hero Academia | 僕のヒーローアカデミア,M,E Asian,fictional
 Keigo,None,None,Takami,Hawks,None,None,None,E,Takami Keigo | Hawks,My Hero Academia | 僕のヒーローアカデミア,M,E Asian,fictional
 Shouto,None,None,Todoroki,Shoto,None,None,None,E,Todoroki Shouto | Shoto,My Hero Academia | 僕のヒーローアカデミア,M,E Asian,fictional
-Touya,None,None,Todoroki,Dabi,None,None,None,W,Touya Todoroki | Dabi,My Hero Academia | 僕のヒーローアカデミア,M,E Asian,fictional
+Touya,None,None,Todoroki,Dabi,None,None,None,E,Todoroki Touya | Dabi,My Hero Academia | 僕のヒーローアカデミア,M,E Asian,fictional
 Ochako,None,None,Uraraka,Uravity,None,None,None,E,Uraraka Ochako | Uravity,My Hero Academia | 僕のヒーローアカデミア,F,E Asian,fictional
 Y/N,None,None,None,Reader,None,None,None,None,Y/N | Reader,My Hero Academia | 僕のヒーローアカデミア,Ambig,Ambig,fictional
 Toshinori,None,None,Yagi,All Might,None,None,None,E,Yagi Toshinori | All Might,My Hero Academia | 僕のヒーローアカデミア,M,E Asian,fictional
@@ -651,8 +653,10 @@ David,None,None,Rose,None,None,None,None,W,David Rose,Schitt's Creek,M,White,fic
 Patrick,None,None,Brewer,None,None,None,None,W,Patrick Brewer,Schitt's Creek,M,White,fictional
 Mikaela,None,None,Hyakuya,None,None,None,None,E,Hyakuya Mikaela,Seraph of the End | 終わりのセラフ,M,E Asian,fictional
 Yuuichirou,None,None,Hyakuya,None,None,None,None,E,Hyakuya Yuuichirou,Seraph of the End | 終わりのセラフ,M,E Asian,fictional
-Aleksander,None,None,Morozova,The Darkling,None,None,None,W,Aleksander Morozova | The Darkling,Shadow and Bone,M,White,fictional
-Alina,None,None,Starkov,None,None,None,None,W,Alina Starkov,Shadow and Bone,F,E Asian (Multi),fictional
+Aleksander,None,None,Morozova,The Darkling,None,None,None,W,Aleksander Morozova | The Darkling,Shadow and Bone Universe,M,White,fictional
+Alina,None,None,Starkov,None,None,None,None,W,Alina Starkov,Shadow and Bone Universe,F,E Asian (Multi),fictional
+Jesper,None,None,Fahey,None,None,None,None,W,Jesper Fahey,Shadow and Bone Universe,M,Black,fictional
+Wylan,None,None,Van Eck,None,None,None,None,W,Wylan Van Eck,Shadow and Bone Universe,M,White,fictional
 Ian,None,None,Gallagher,None,None,None,None,W,Ian Gallagher,Shameless,M,White,fictional
 Mickey,None,None,Milkovich,None,None,None,None,W,Mickey Milkovich,Shameless,M,White,fictional
 Adora,None,None,None,None,None,None,None,None,Adora,She-Ra and the Princesses of Power,F,White,fictional
@@ -666,14 +670,11 @@ Harriet,None,None,Watson,None,Harry,None,None,W,Harriet 'Harry' Watson,Sherlock,
 Irene,None,None,Adler,None,None,None,None,W,Irene Adler,Sherlock,F,White,fictional
 James,None,None,Moriarty,None,Jim,None,None,W,James 'Jim' Moriarty,Sherlock,M,White,fictional
 John,None,None,Watson,None,None,None,None,W,John Watson,Sherlock,M,White,fictional
-None,None,None,Lestrade,None,None,None,None,None,Lestrade,Sherlock,M,White,fictional
 Mary,None,None,Morstan,None,None,None,None,W,Mary Morstan,Sherlock,F,White,fictional
 Molly,None,None,Hooper,None,None,None,None,W,Molly Hooper,Sherlock,F,White,fictional
 Mycroft,None,None,Holmes,None,None,None,None,W,Mycroft Holmes,Sherlock,M,White,fictional
 Sebastian,None,None,Moran,None,None,None,None,W,Sebastian Moran,Sherlock,M,White,fictional
 Sherlock,None,None,Holmes,None,None,None,None,W,Sherlock Holmes,Sherlock,M,White,fictional
-Jesper,None,None,Fahey,None,None,None,None,W,Jesper Fahey,Six of Crows,M,Black,fictional
-Wylan,None,None,Van Eck,None,None,None,None,W,Wylan Van Eck,Six of Crows,M,White,fictional
 Emily,None,None,Fitch,None,None,None,None,W,Emily Fitch,Skins,F,White,fictional
 Naomi,None,None,Campbell,None,None,None,None,W,Naomi Campbell,Skins,F,White,fictional
 Craig,None,None,Tucker,None,None,None,None,W,Craig Tucker,South Park,M,White,fictional
@@ -717,8 +718,6 @@ Rodney,None,None,McKay,None,None,None,None,W,Rodney McKay,Stargate,M,White,ficti
 Sam,None,None,Carter,None,None,None,None,W,Sam Carter,Stargate,F,White,fictional
 David,None,None,Starsky,None,None,None,None,W,David Starsky,Starsky & Hutch,M,White,fictional
 Kenneth,None,None,Hutchinson,None,Ken,None,None,W,Kenneth 'Ken' Hutchinson,Starsky & Hutch,M,White,fictional
-Carina,None,None,DeLuca,None,None,None,None,W,Carina DeLuca,Station 19,F,White,fictional
-Maya,None,None,Bishop,None,None,None,None,W,Maya Bishop,Station 19,F,White,fictional
 Amethyst,None,None,None,None,None,None,None,None,Amethyst,Steven Universe,F | Other,N.H.,fictional
 Garnet,None,None,None,None,None,None,None,None,Garnet,Steven Universe,F | Other,N.H.,fictional
 Jasper,None,None,None,None,None,None,None,None,Jasper,Steven Universe,F | Other,N.H.,fictional
@@ -841,8 +840,8 @@ Geralt,None,None,None,The Witcher,None,None,of Rivia,W,Geralt of Rivia | The Wit
 Jaskier,None,None,None,Dandelion,None,None,None,None,Jaskier | Dandelion,The Witcher | Wiedźmin,M,White,fictional
 Dana,None,None,Scully,None,None,None,None,W,Dana Scully,The X-Files,F,White,fictional
 Fox,None,None,Mulder,None,None,None,None,W,Fox Mulder,The X-Files,M,White,fictional
+Kaneki,None,None,Ken,Haise Sasaki,None,None,None,E,Ken Kaneki | Haise Sasaki,Tokyo Ghoul | 東京喰種,M,E Asian,fictional
 Hideyoshi,None,None,Nagachika,None,None,None,None,E,Nagachika Hideyoshi,Tokyo Ghoul | 東京喰種,M,E Asian,fictional
-Haise,None,None,Sasaki,None,None,None,None,E,Sasaki Haise,Tokyo Ghoul | 東京喰種,M,E Asian,fictional
 Takemichi,None,None,Hanagaki,None,Takemitchy,None,None,E,Hanagaki 'Takemitchy' Takemichi,Tokyo Revengers | 東京卍リベンジャーズ,M,E Asian,fictional
 Manjirou,None,None,Sano,None,Mikey,None,None,E,Sano 'Mikey' Manjirou,Tokyo Revengers | 東京卍リベンジャーズ,M,E Asian,fictional
 Bradley,None,None,Bradshaw,None,Rooster,None,None,W,Bradley 'Rooster' Bradshaw,Top Gun,M,White,fictional

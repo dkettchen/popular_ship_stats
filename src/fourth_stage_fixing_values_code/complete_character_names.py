@@ -144,7 +144,15 @@ def make_unique_characters(input_data):
                         character_value["full_name"] = 'Rose Quartz | Pink Diamond'
                         character_value["op_versions"].extend(char["op_versions"])
                 elif "My Hero Academia" in fandom and "Dabi" in char["full_name"]:
-                    unique_characters["fictional"][fandom]["Touya Todoroki | Dabi"] = char
+                    unique_characters["fictional"][fandom]["Todoroki Touya | Dabi"] = char
+                elif "Lord of the Rings" in fandom and "Gamgee" in char["full_name"]:
+                    unique_characters["fictional"][fandom]["Samwise Gamgee"] = char
+                    unique_characters["fictional"][fandom]["Samwise Gamgee"]["given_name"] = "Samwise"
+                elif "Tokyo Ghoul" in fandom and "Sasaki" in char["full_name"]:
+                    unique_characters["fictional"][fandom]["Kaneki Ken | Haise Sasaki"] = char
+                    unique_characters["fictional"][fandom]["Kaneki Ken | Haise Sasaki"]["given_name"] = "Kaneki"
+                    unique_characters["fictional"][fandom]["Kaneki Ken | Haise Sasaki"]["surname"] = "Ken"
+                    unique_characters["fictional"][fandom]["Kaneki Ken | Haise Sasaki"]["alias"] = "Haise Sasaki"
                 elif fandom == "Merlin" and char["full_name"] in ["Gwen", "Guinevere"]:
                     if "Guinevere 'Gwen' Pendragon" not in unique_characters["fictional"][fandom].keys():
                         unique_characters["fictional"][fandom]["Guinevere 'Gwen' Pendragon"] = char
@@ -155,15 +163,22 @@ def make_unique_characters(input_data):
                         char_value["full_name"] = "Guinevere 'Gwen' Pendragon"
                     else:
                         unique_characters["fictional"][fandom]["Guinevere 'Gwen' Pendragon"]["op_versions"].extend(char["op_versions"])
-                elif fandom == "Sherlock" and char["surname"] == "Moriarty":
-                    if "James 'Jim' Moriarty" not in unique_characters["fictional"][fandom].keys():
-                        unique_characters["fictional"][fandom]["James 'Jim' Moriarty"] = char
-                        if unique_characters["fictional"][fandom]["James 'Jim' Moriarty"]["nickname"]:
-                            unique_characters["fictional"][fandom]["James 'Jim' Moriarty"]["given_name"] = "James"
-                        elif unique_characters["fictional"][fandom]["James 'Jim' Moriarty"]["given_name"]:
-                            unique_characters["fictional"][fandom]["James 'Jim' Moriarty"]["nickname"] = "Jim"
-                    else:
-                        unique_characters["fictional"][fandom]["James 'Jim' Moriarty"]["op_versions"].extend(char["op_versions"])
+                elif fandom == "Sherlock" and char["surname"] in ["Lestrade", "Moriarty"]:
+                    if char["surname"] == "Lestrade":
+                        if "Greg Lestrade" not in unique_characters["fictional"][fandom].keys():
+                            unique_characters["fictional"][fandom]["Greg Lestrade"] = char
+                            unique_characters["fictional"][fandom]["Greg Lestrade"]["given_name"] = "Greg"
+                        else:
+                            unique_characters["fictional"][fandom]["Greg Lestrade"]["op_versions"].extend(char["op_versions"])
+                    elif char["surname"] == "Moriarty":
+                        if "James 'Jim' Moriarty" not in unique_characters["fictional"][fandom].keys():
+                            unique_characters["fictional"][fandom]["James 'Jim' Moriarty"] = char
+                            if unique_characters["fictional"][fandom]["James 'Jim' Moriarty"]["nickname"]:
+                                unique_characters["fictional"][fandom]["James 'Jim' Moriarty"]["given_name"] = "James"
+                            elif unique_characters["fictional"][fandom]["James 'Jim' Moriarty"]["given_name"]:
+                                unique_characters["fictional"][fandom]["James 'Jim' Moriarty"]["nickname"] = "Jim"
+                        else:
+                            unique_characters["fictional"][fandom]["James 'Jim' Moriarty"]["op_versions"].extend(char["op_versions"])
                 else:
                     unique_characters["fictional"][fandom][char["full_name"]] = char
             else:
@@ -228,12 +243,12 @@ def make_unique_characters(input_data):
                         character_value["alias"] = char["alias"]
                     character_value["full_name"] = 'Rose Quartz | Pink Diamond'
                 elif "My Hero Academia" in fandom and "Dabi" in char["full_name"]:
-                    character_value = unique_characters["fictional"][fandom]["Touya Todoroki | Dabi"]
+                    character_value = unique_characters["fictional"][fandom]["Todoroki Touya | Dabi"]
                     if char["surname"]:
                         character_value["surname"] = char["surname"]
                         character_value["given_name"] = char["given_name"]
                         character_value["name_order"] = char["name_order"]
-                    character_value["full_name"] = "Touya Todoroki | Dabi"
+                    character_value["full_name"] = "Todoroki Touya | Dabi"
                 else:
                     character_value = unique_characters["fictional"][fandom][char["full_name"]]
                 

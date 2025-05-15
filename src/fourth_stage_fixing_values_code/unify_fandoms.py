@@ -326,16 +326,14 @@ def format_unified_labels(data_dict):
             fandom = "Star Wars"
         elif "Stargate" in key:
             fandom = "Stargate"
-        elif key in [
-            "The Hobbit",
-            "The Lord of the Rings",
-        ]:
+        elif key in ["The Hobbit","The Lord of the Rings"]:
             fandom = "Lord of the Rings Universe"
-        elif key in [
-            "Mortal Instruments",
-            "Shadowhunters",
-        ]:
+        elif key in ["Mortal Instruments", "Shadowhunters"]:
             fandom = "Mortal Instruments"
+        elif key in ["Shadow and Bone", "Six of Crows"]:
+            fandom = "Shadow and Bone Universe"
+        elif key in ["Grey's Anatomy", "Station 19"]:
+            fandom = "Grey's Anatomy Universe"
         elif "Witcher" in key:
             fandom = "Wiedźmin | The Witcher"
         elif key == "Avatar":

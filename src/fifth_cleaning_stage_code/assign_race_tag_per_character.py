@@ -58,7 +58,7 @@ def assign_race_tag(data_dict):
         "Hyakuya Mikaela",
         "Hyakuya Yuuichirou",
         "Nagachika Hideyoshi",
-        "Sasaki Haise",
+        "Ken Kaneki | Haise Sasaki",
         "Baze Malbus", # chinese actor
         "Chirrut Îmwe", # actor is from hong-kong
         "Mark Fischbach | Markiplier",
@@ -459,6 +459,8 @@ def retag_for_specificity(data_dict):
             for character in new_dict[category][fandom]:
                 character_dict = new_dict[category][fandom][character]
                 race_tag = character_dict["race"] 
+                if not race_tag:
+                    print(race_tag, character_dict["full_name"])
                 
                 if race_tag == "Asian":
                     if character == "Otabek Altin":

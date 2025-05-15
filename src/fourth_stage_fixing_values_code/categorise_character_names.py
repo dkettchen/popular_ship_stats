@@ -301,8 +301,6 @@ def categorise_names(char_by_fandom_dict):
         ['Park', 'Jimin'],
         ['Byun', 'Baekhyun'],
         ['Park', 'Chanyeol'],
-        ['Boyang', 'Jin'],
-        ['Yuzuru', 'Hanyu'],
         ['Xiao', 'Zhan'],
         ['Akanishi', 'Jin'],
         ['Kamenashi', 'Kazuya'],
@@ -398,7 +396,6 @@ def categorise_names(char_by_fandom_dict):
         ['Zhèng', 'Yúnlóng'],
         ['Kira', 'Yukimura'],
         ['Nagachika', 'Hideyoshi'],
-        ['Sasaki', 'Haise'],
         ['Penelope', 'Park'], # is this one? ditto as above
         ['Wen', 'Kexing'],
         ['Zhou', 'Zishu'],
@@ -593,7 +590,12 @@ def categorise_names(char_by_fandom_dict):
                             surname = split_name[0]
                             given_name = split_name[1]
                             order = "W"
-                        elif split_name == ["Hanzo","Shimada"]:
+                        elif split_name in [
+                            ["Hanzo","Shimada"],
+                            ['Boyang', 'Jin'],
+                            ['Yuzuru', 'Hanyu'],
+                            ['Sasaki', 'Haise'], # Kaneki Ken's alias smh
+                        ]:
                             surname = split_name[1]
                             given_name = split_name[0]
                             order = "E"
@@ -718,7 +720,7 @@ def categorise_names(char_by_fandom_dict):
                         alias = split_name[0]
                         surname = split_name[1]
                         given_name = split_name[2]
-                        order = "W"
+                        order = "E"
                     elif split_name == ['Nicky', 'Nicolò', 'di Genova']: # assuming nick first last W
                         nickname = split_name[0]
                         given_name = split_name[1]

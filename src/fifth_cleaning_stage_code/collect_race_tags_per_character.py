@@ -128,7 +128,7 @@ def collect_race_tags():
         'Richard Castle', 
         'Ruby', 
         'Ryan Ross', 
-        'Sam Gamgee', 
+        'Samwise Gamgee', 
         'Sam Tyler', 
         'Sandor Clegane | The Hound', 
         'Sauli Koskinen', 
