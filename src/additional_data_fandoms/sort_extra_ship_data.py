@@ -7,8 +7,18 @@
 
 from visualisation.vis_utils.read_csv_to_df import df_from_csv
 from visualisation.input_data_code.make_file_dfs import make_characters_df, make_ships_df
+from src.util_functions.find_all_gen_only_ships import find_non_slash_ships
+from src.util_functions.assign_orientations import assign_orientations
 
 def parse_extra_ship_data():
+    """
+    uses data from (additional ship data, character & ship files)
+
+    - removes any ships that were only represented as a non-slash ship
+    - removes any multi-ships as there were no canon multi ships 
+    and this makes it easier to assign values to characters
+    """
+
     # read in file
     new_data_path = "data/reference_and_test_files/additional_data/additional_ship_data_filled_out.csv"
     new_data = df_from_csv(new_data_path).set_index("slash_ship")
@@ -22,40 +32,28 @@ def parse_extra_ship_data():
     # id, canon, incest, orientation
         # disregard ships with more than 2 characters pls -> join w char df already?
 
+    # find non-slash ships (as we don't care abt those for this bit)
+    # & remove em -> currently removes 22 gen-only ships
+    gen_only_ships = find_non_slash_ships()
+    joined_ship_df["gen_only"] = False
+    for ship in gen_only_ships:
+        joined_ship_df["gen_only"] = joined_ship_df["gen_only"].mask(
+            joined_ship_df["gen_ship"] == ship, other=True
+        )
+    joined_ship_df = joined_ship_df.where(
+        joined_ship_df["gen_only"] == False
+    ).dropna(how="all")
+    joined_ship_df.pop("gen_only") # can remove temp column again
+
     # we'll only look at 2-member ships as there were no canon multi-ships 
-    # and most of em are gen anyway (removes 8 ships)
+    # and most of em are gen anyway (removes 4 more ships)
     joined_ship_df = joined_ship_df.where(
         joined_ship_df["members_no"] == 2
     ).dropna(how="all")
-    
+    joined_ship_df.pop("members_no") # they're all 2 now
 
-    gen_only_ships = [
-        "Aizawa Shouta | Eraserhead & Midoriya Izuku | Deku",
-        "Alexander | Technoblade & Clay | Dream",
-        "Alexander | Technoblade & Phil Watson | Philza",
-        "Alexander | Technoblade & Phil Watson | Philza & Thomas Michael Simons | TommyInnit & William Patrick Spencer Gold | Wilbur Soot",
-        "Alexander | Technoblade & Thomas Michael Simons | TommyInnit",
-        "Alexander | Technoblade & William Patrick Spencer Gold | Wilbur Soot",
-        "Clay | Dream & George Davidson | GeorgeNotFound & Nicholas Armstrong | Sapnap",
-        "Clay | Dream & Nicholas Armstrong | Sapnap",
-        "Clay | Dream & Thomas Michael Simons | TommyInnit",
-        "Donatello & Leonardo",
-        "Donatello & Leonardo & Michelangelo & Raphael",
-        "Ellie & Joel",
-        "Midoriya Izuku | Deku & Yagi Toshinori | All Might",
-        "Phil Watson | Philza & Thomas Michael Simons | TommyInnit",
-        "Phil Watson | Philza & William Patrick Spencer Gold | Wilbur Soot",
-        "Ranboo & Thomas Michael Simons | TommyInnit",
-        "Ranboo & Thomas Michael Simons | TommyInnit & Toby Smith | Tubbo",
-        "Ranboo & Toby Smith | Tubbo",
-        "Regulus Black & Sirius Black",
-        "Robin Buckley & Steve Harrington",
-        "Thomas Michael Simons | TommyInnit & Toby Smith | Tubbo",
-        "Thomas Michael Simons | TommyInnit & William Patrick Spencer Gold | Wilbur Soot",
-    ]
-
-    # TODO assign orientations to characters
-
+    # assign orientations to characters
+    oriented_chars = assign_orientations(joined_ship_df, character_df)
 
     # canon should only be ["Yes", "No", "One-sided", "fanon"] (and the former 3 with *)
     # print(new_data["canon"].unique())
