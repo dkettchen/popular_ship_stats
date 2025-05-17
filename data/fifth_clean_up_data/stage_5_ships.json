@@ -3191,14 +3191,14 @@
             },
             {
                 "member_key": "Doctor Who Universe - The Doctor",
-                "member_gender": "M",
+                "member_gender": "Ambig",
                 "member_race": "White",
                 "member_name": "The Doctor"
             }
         ],
         "gender_combo": [
             "F",
-            "M"
+            "Ambig"
         ],
         "race_combo": [
             "White",

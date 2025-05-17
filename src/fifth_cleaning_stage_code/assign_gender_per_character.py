@@ -67,7 +67,6 @@ def assign_gender(data_dict):
         'The Ninth Doctor',
         'Rory Williams',
         'The Tenth Doctor',
-        'The Doctor',
         'The Twelfth Doctor',
         'Finn Hudson',
         'Peeta Mellark',
@@ -165,6 +164,7 @@ def assign_gender(data_dict):
         "Traveler | Player Character",
         "Shepard | Player Character",
         "Byleth Eisner | Player Character",
+        'The Doctor', # general doctor can be either gender -> should be ambig
     ]
     female_player_chars = [
         "Hawke (Female) | Player Character",
