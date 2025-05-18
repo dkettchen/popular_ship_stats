@@ -32,11 +32,6 @@ def conflicting_orientations(ship_df):
             split_orient = split("/", current_orientation)
             first_item = split_orient[0]
             second_item = split_orient[1]
-            # remove *
-            if first_item[-1] == "*":
-                first_item = first_item[:-1]
-            if second_item[-1] == "*":
-                second_item = second_item[:-1]
             # reassemble
             new_orient = first_item + " / " + second_item
             # assign

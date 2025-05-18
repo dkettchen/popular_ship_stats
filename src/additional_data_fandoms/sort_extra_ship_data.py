@@ -10,6 +10,7 @@ from visualisation.input_data_code.make_file_dfs import make_characters_df, make
 from src.util_functions.find_all_gen_only_ships import find_non_slash_ships
 from src.util_functions.assign_orientations import assign_orientations, cross_reference_with_gender
 from src.util_functions.conflicting_orientations import conflicting_orientations
+from src.util_functions.remove_asterix import clean_columns
 
 def parse_extra_ship_data():
     """
@@ -52,6 +53,9 @@ def parse_extra_ship_data():
     ).dropna(how="all")
     joined_ship_df.pop("members_no") # they're all 2 now
 
+    # remove all * from values
+    joined_ship_df = clean_columns(joined_ship_df)
+
     return joined_ship_df
 
 def assign_to_characters(joined_ship_df):
@@ -83,6 +87,7 @@ def assign_to_ships(joined_ship_df):
     conflicts_ship_df = conflicting_orientations(joined_ship_df)
 
     return conflicts_ship_df
+
 
 # TODO print new files?
 

@@ -88,8 +88,6 @@ def cross_reference_with_gender(char_df:pd.DataFrame):
         char_fandom = current_char_row["fandom"]
         char_gender = current_char_row["gender"]
         char_orientation = current_char_row["orientation"]
-        if char_orientation[-1] == "*":
-            char_orientation = char_orientation[:-1]
 
         if char_gender in ["F", "F | Other"]:
             if char_orientation in ["gay", "bi"] \
