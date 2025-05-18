@@ -416,6 +416,9 @@ def visualise_single_pie(input_item:pd.DataFrame|pd.Series, data_case:str, ranki
     - ships by country, language or continent 
     (data_case="ships_by_country"|"ships_by_language"|"ships_by_continent", 
     ranking="total")
+    - canon ships (data_case="canon", ranking="total")
+    - incest ships (data_case="incest", ranking="total")
+    - ship type's alignment with canon orientation (data_case="orientation_alignment", ranking="total")
     
     as a single pie chart
     """
@@ -446,11 +449,17 @@ def visualise_single_pie(input_item:pd.DataFrame|pd.Series, data_case:str, ranki
         "gender", "racial_diversity", "racial_groups", "rpf",
     ] or "ships_by" in data_case:
         values = input_item["count"]
-    elif data_case in ["market_share", "interracial_ships"]:
+    elif data_case in [
+        "market_share", "interracial_ships", 
+        "canon", "incest", "orientation_alignment"
+    ]:
         values = input_item.values
 
     # text info
-    if data_case in ["racial_diversity", "rpf", "interracial_ships"]:
+    if data_case in [
+        "racial_diversity", "rpf", "interracial_ships",
+        "canon", "incest", "orientation_alignment"
+    ]:
         text_info += "+percent"
     
     # text position
@@ -464,7 +473,10 @@ def visualise_single_pie(input_item:pd.DataFrame|pd.Series, data_case:str, ranki
         auto_margin = False
     
     # show legend
-    if data_case in ["racial_diversity", "rpf", "market_share", "interracial_ships"]:
+    if data_case in [
+        "racial_diversity", "rpf", "market_share", "interracial_ships",
+        "canon", "incest", "orientation_alignment"
+    ]:
         show_legend = False
 
     # colours, titles & single case edits
@@ -506,6 +518,20 @@ def visualise_single_pie(input_item:pd.DataFrame|pd.Series, data_case:str, ranki
             colours = [colour_palettes.continent_colours[continent] if "/" not in continent else None for continent in labels]
         elif data_case == "ships_by_language":
             colours = [colour_palettes.language_colours[language] for language in labels]
+
+    elif data_case in ["canon", "incest", "orientation_alignment"]:
+        if data_case == "canon":
+            title = f"Canon ships{suffix}"
+            colours = [colour_palettes.canon_colours[label] for label in labels]
+
+        elif data_case == "incest":
+            title = f"Incest ships{suffix}"
+            colours = [colour_palettes.incest_colours[label] for label in labels]
+        
+        elif data_case == "orientation_alignment":
+            title = f"Does characters' canon orientation align with ship type?{suffix}"
+            colours = [colour_palettes.orientation_alignment[label] for label in labels]
+
 
     # making base figure
     pie = go.Figure(

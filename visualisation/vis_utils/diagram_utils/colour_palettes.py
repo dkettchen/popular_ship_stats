@@ -100,3 +100,19 @@ language_colours = {
     "Norwegian":"indigo", 
     "Thai":"green", 
 }
+
+canon_colours = {
+    "Canon": "crimson",
+    "Not canon": "darkslategrey",
+    "Canon one-sided": "gold",
+}
+incest_colours = {    
+    "Blood-related":"firebrick",
+    "Not related":"olivedrab",
+    "Non-blood-related":"darkorange",
+}
+orientation_alignment = {
+    "canon_conflicted":"firebrick",
+    "canon_aligned":"olivedrab",
+    "canon_ambiguous":"darkorange",
+}

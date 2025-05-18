@@ -3,6 +3,8 @@ from src.additional_data_fandoms.sort_extra_ship_data import (
     assign_to_characters, 
     assign_to_ships
 )
+from visualisation.diagram_code.visualise_pies import visualise_single_pie
+from visualisation.diagram_code.visualise_bars import visualise_stacked_bars
 
 parsed_df = parse_extra_ship_data()
 # assigned_char_df = assign_to_characters(parsed_df)
@@ -28,16 +30,55 @@ def get_total_and_by_ship_type(input_df, column):
 
 # get canon numbers for total & ship types
 canon_df = get_total_and_by_ship_type(assigned_ship_df, "canon")
+# reclass fanon ship as no & rename
+new_df = canon_df.transpose()
+new_df["No"] = new_df["No"] + new_df["fanon"]
+canon_df = new_df.get(["No", "Yes", "One-sided"]).rename(columns={
+    "No": "Not canon",
+    "Yes": "Canon",
+    "One-sided": "Canon one-sided",
+}).transpose()
 
 # get incest numbers for total & ship types
 incest_df = get_total_and_by_ship_type(assigned_ship_df, "related")
+# combine non-blood-related ships into one column & rename
+new_df = incest_df.transpose()
+new_df["Non-blood-related"] = new_df["adoptive"] + new_df["foster"] + new_df["foster"] + new_df["in-law"] + new_df["step"]
+incest_df = new_df.get(["No", "Yes", "Non-blood-related"]).rename(columns={
+    "No" : "Not related",
+    "Yes": "Blood-related",
+}).transpose()
 
 # get canon alignment for total & ship types
 aligned_df = get_total_and_by_ship_type(assigned_ship_df, "canon_alignment")
 
-# make pie (for totals) & stacked bar charts (for by ship type)
-# incest one can be just for total
 
+# TODO make pie (for totals) & stacked bar charts (for by ship type)
+# (incest one can be just for total)
+for data_case in ["canon", "incest", "orientation_alignment"]:
+    folder = "visualisation/ao3_all_data_2013_2023/ao3_all_data_charts"
+
+    if data_case == "canon":
+        df = canon_df
+    elif data_case == "incest":
+        df = incest_df
+    elif data_case == "orientation_alignment":
+        df = aligned_df
+
+    # make totals pie
+    pie = visualise_single_pie(df["total"], data_case, "total")
+    pie.write_image(
+        f"{folder}/additional_diagrams/total_{data_case}.png",
+        width = 700,
+        height = 700, 
+        scale=2
+    )
+
+    # make stacked bar charts
+
+
+
+# TODO extract orientations info better
 
 # orientation
 # totals (str8 ppl, queer ppl, unspecified)
