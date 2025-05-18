@@ -75,7 +75,15 @@ for data_case in ["canon", "incest", "orientation_alignment"]:
     )
 
     # make stacked bar charts
-
+    non_total_df = df.copy()
+    non_total_df.pop("total")
+    bars = visualise_stacked_bars(non_total_df, data_case, "total")
+    bars.write_image(
+        f"{folder}/additional_diagrams/total_{data_case}_by_gender_combo.png",
+        width = 1000,
+        height = 700, 
+        scale=2
+    )
 
 
 # TODO extract orientations info better
