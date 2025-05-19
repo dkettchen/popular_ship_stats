@@ -65,5 +65,13 @@ run-fandoms-table:
 	python src/additional_data_fandoms/make_fandoms_table.py
 
 # runs ao3 vis for geo data additional data
-make-ao3-additional-charts:
+make-ao3-geo-charts:
 	python visualisation/additional_data_code/run_fandoms_data_code.py
+
+# runs ao3 vis for canon/incest/orientation data additional data
+make-a03-ship-charts:
+	python visualisation/additional_data_code/run_ships_data_code.py
+
+# run all additional data charts
+make-ao3-additional-charts:
+	make-ao3-geo-charts make-ao3-additional-charts
