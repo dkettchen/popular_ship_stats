@@ -361,11 +361,17 @@ Work in progress!
 
 - Some characters may be able to be argued to be ace/aro or closeted gays in spite of having been in (any/hetero) relationships. Unless there is significant canon-support for this, I will disregard it, as the point of this exercise is less about determining the characters' actual labels and more about merely comparing what info on their potential orientation is canon vs what types of pairings they're put in by fans
 
-    > Ex. Sansa Stark suffers through several arranged marriages, none of which she seems to enjoy particularly much, so she may well be ace, aro and/or gay, but we have no means of knowing that from what canon tells us, therefore she is still counted as canon-conflicting with being in a femslash ship, as she has not had any canon female lovers.
+    > Ex. Sansa Stark suffers through several arranged marriages, none of which she seems to enjoy particularly much, so she may well be ace, aro and/or gay, but we have no means of knowing that from what canon tells us, therefore she is still counted as str8 and canon-conflicting with being in a femslash ship, as she has not had any canon female lovers.
 
 - If a character is explicitly fully unable to feel attraction (as opposed to folks on the wider ace/aro spectrum who may still have an orientation & romantic/sexual relationships), that will also qualify as a conflict with any slash ship they're in
 
-    > Ex. Luffy is canonically established as not feeling any romantic or sexual attraction via being immune to Boa Hancock's devil fruit power, so if and when he is added to our data pool via tumblr's rankings (which I know contain Zoro x Luffy among other ships that didn't make the AO3 rankings) his lack of attraction will be counted as conflicting for any ship he's in
+    > Ex. Both Peridot and Yelena/White Widow are confirmed as ace-aro with specific reference to their lack of interest in relationships, so they are tagged as acearo and any slash ship containing them will be counted as conflicting with their canon lack of attraction.
+
+    > Ex. Luffy is canonically established as not feeling any romantic or sexual attraction via being immune to Boa Hancock's devil fruit power, so if and when he is added to our data pool via tumblr's rankings (which I know contain Zolu among other ships that didn't make the AO3 rankings) he will also be counted as acearo and thereby conflicting in a slash ship.
+
+- Any ace-aro spec character who does have an orientation will be counted as that orientation, not as their ace/aro status
+
+    > Ex. Jughead ends up in a romantic and later even sexual relationship with Betty, despite being ace in the comics and portrayed as ace-spec in the show, so he is counted as str8 not ace.
 
 ## N.B.: 
 
