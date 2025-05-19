@@ -89,7 +89,6 @@ def assign_to_ships(joined_ship_df):
     return conflicts_ship_df
 
 
-# TODO print new files?
 
 # canon should only be ["Yes", "No", "One-sided", "fanon"] (and the former 3 with *)
 # print(new_data["canon"].unique())

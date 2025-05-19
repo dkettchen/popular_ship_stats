@@ -54,9 +54,6 @@ def cross_reference_with_gender(char_df:pd.DataFrame):
     - canon_other_attracted
     - canon_acearo
     - unspecified_orientation
-    - canon_str8
-    - canon_bi
-    - canon_gay
     - canon_queer
     - canon_wlw
     - canon_mlm
@@ -72,64 +69,81 @@ def cross_reference_with_gender(char_df:pd.DataFrame):
         "canon_other_attracted",
         "canon_acearo",
         "unspecified_orientation",
-        "canon_str8",
-        "canon_bi",
-        "canon_gay",
         "canon_queer",
         "canon_wlw",
         "canon_mlm",
     ]:
         character_df[new_column] = False
 
-    for i in character_df.index:
-        current_char_row = character_df.loc[i].copy()
+    character_df["canon_woman_attracted"] = character_df["canon_woman_attracted"].mask(
+        (
+            ((character_df["gender"] == "F") | (
+                character_df["gender"] == "F | Other")) & (
+            (character_df["orientation"] == "gay") | (
+                character_df["orientation"] == "bi")) & (
+            (character_df["full_name"] != "Eda Clawthorne")) 
+            # Eda doesn't have female love interests
+        ) | (
+            ((character_df["gender"] == "M") | (
+                character_df["gender"] == "M | Other") | (
+                character_df["gender"] == "M | F | Other")) & (
+            (character_df["orientation"] == "str8") | (
+                character_df["orientation"] == "bi"))
+        ) | (
+            character_df["orientation"] == "woman_attracted"
+        ), 
+        other=True
+    )
+    character_df["canon_man_attracted"] = character_df["canon_man_attracted"].mask(
+        (
+            ((character_df["gender"] == "M") | (
+                character_df["gender"] == "M | Other") | (
+                character_df["gender"] == "M | F | Other")) & (
+            (character_df["orientation"] == "gay") | (
+                character_df["orientation"] == "bi"))
+        ) | (
+            ((character_df["gender"] == "F") | (
+                character_df["gender"] == "F | Other")) & (
+            (character_df["orientation"] == "str8") | (
+                character_df["orientation"] == "bi"))
+        ) | (
+            character_df["orientation"] == "man_attracted"
+        ),
+        other=True
+    )
+    character_df["canon_other_attracted"] = character_df["canon_other_attracted"].mask(
+        # canon nb attracted
+        (character_df["full_name"] == "Eda Clawthorne"),
+        other=True
+    )
+    character_df["unspecified_orientation"] = character_df["unspecified_orientation"].mask(
+        (character_df["orientation"] == "unspecified"),
+        other=True
+    )
+    character_df["canon_acearo"] = character_df["canon_acearo"].mask(
+        (character_df["orientation"] == "acearo"),
+        other=True
+    )
 
-        char_name = current_char_row["full_name"]
-        char_fandom = current_char_row["fandom"]
-        char_gender = current_char_row["gender"]
-        char_orientation = current_char_row["orientation"]
-
-        if char_gender in ["F", "F | Other"]:
-            if char_orientation in ["gay", "bi"] \
-            and not ("Eda" in char_name and "Owl" in char_fandom): 
-            # as Eda only has men & transmasc nb love interests
-                current_char_row["canon_woman_attracted"] = True
-                current_char_row["canon_wlw"] = True
-
-            if char_orientation in ["bi", "str8"]:
-                current_char_row["canon_man_attracted"] = True
-        
-            if "Eda" in char_name and "Owl" in char_fandom:
-                current_char_row["canon_other_attracted"] = True
-
-        if char_gender in ["M", "M | Other", "M | F | Other"]: # incl our cis-male drag queens
-            if char_orientation in ["gay", "bi"]:
-                current_char_row["canon_man_attracted"] = True
-                current_char_row["canon_mlm"] = True
-
-            if char_orientation in ["bi", "str8"]:
-                current_char_row["canon_woman_attracted"] = True
-        
-        # other cases
-        if char_orientation == "unspecified":
-            current_char_row["unspecified_orientation"] = True
-        elif char_orientation == "acearo":
-            current_char_row["canon_acearo"] = True
-        elif char_orientation == "woman_attracted":
-            current_char_row["canon_woman_attracted"] = True
-        
-        # queer, bi & str8 categories for ease of grouping later
-        if char_orientation in ["gay", "bi", "acearo"]:
-            current_char_row["canon_queer"] = True
-        if char_orientation == "bi":
-            current_char_row["canon_bi"] = True
-        elif char_orientation == "str8":
-            current_char_row["canon_str8"] = True
-
-        # making sure there's not unexpected orientation tags we would've missed
-        if char_orientation not in ["gay", "bi", "str8", "acearo", "woman_attracted", "unspecified", "fanon"]:
-            print(char_name, char_fandom, char_orientation)
-
-        character_df.loc[i] = current_char_row # need to reassign cause it doesn't edit in place
+    character_df["canon_mlm"] = character_df["canon_mlm"].mask(
+        ((character_df["gender"] == "M") | (
+            character_df["gender"] == "M | Other") | (
+            character_df["gender"] == "M | F | Other")) & (
+        character_df["canon_man_attracted"] == True),
+        other=True
+    )
+    character_df["canon_wlw"] = character_df["canon_wlw"].mask(
+        ((character_df["gender"] == "F") | (
+            character_df["gender"] == "F | Other")) & (
+        character_df["canon_woman_attracted"] == True),
+        other=True
+    )
+    character_df["canon_queer"] = character_df["canon_queer"].mask(
+        (character_df["canon_wlw"] == True) | (
+            character_df["canon_mlm"] == True) | (
+            character_df["canon_other_attracted"] == True) | (
+            character_df["canon_acearo"] == True) | (
+            character_df["gender"] == "Other")
+    )
 
     return character_df
