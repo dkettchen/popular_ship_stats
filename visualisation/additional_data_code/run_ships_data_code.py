@@ -52,9 +52,7 @@ incest_df = new_df.get(["No", "Yes", "Non-blood-related"]).rename(columns={
 # get canon alignment for total & ship types
 aligned_df = get_total_and_by_ship_type(assigned_ship_df, "canon_alignment")
 
-
-# TODO make pie (for totals) & stacked bar charts (for by ship type)
-# (incest one can be just for total)
+# pie & stacked bar charts for ship data
 for data_case in ["canon", "incest", "orientation_alignment"]:
     folder = "visualisation/ao3_all_data_2013_2023/ao3_all_data_charts"
 
@@ -92,3 +90,11 @@ for data_case in ["canon", "incest", "orientation_alignment"]:
 # totals (str8 ppl, queer ppl, unspecified)
 # totals by gender (str8 men, str8 women, mlm, wlw, other, unspecified men, unspecified women)
 # orientation by gender (str8, bi, gay, other, unspecified) by male/female
+
+
+# refactor/fix TODO:
+# - acearo should be counted as conflicted
+# - after we're done with these, refactor all your initial bits to 
+# later be able to run with 2024 & tumblr data
+    # I bet we can make all our parsing stuff WAY more efficient
+    # and I wanna find a solution for the multi-graph layouts

@@ -78,6 +78,8 @@ def conflicting_orientations(ship_df):
         ) | (
             (new_df["clean_orientation"].str.contains("gay")) & (
             new_df["het_ship"] == True) # gay ppl in straight ships
+        ) | (
+            new_df["clean_orientation"].str.contains("acearo") # any of our fully acearo characters
         ), 
         other="canon_conflicted"
     )
