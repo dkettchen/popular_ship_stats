@@ -8,19 +8,19 @@ def assign_orientations(joined_ship_df:pd.DataFrame, character_df:pd.DataFrame):
     returns a new character df with an added "orientation" column 
     and all characters only represented in gen or multi ships removed
     """
-    
+
     orientation_info = joined_ship_df.copy().get([
-        "slash_ship", "canon_orientation", "member_1", "member_2"
+        "slash_ship", "fandom", "canon_orientation", "member_1", "member_2"
     ]).set_index("slash_ship")
     characters = {}
     for ship in list(orientation_info.index):
         current_row = orientation_info.loc[ship]
 
         orientation_cell = current_row["canon_orientation"]
-        member_1 = split(" - ", current_row["member_1"])[1]
-        member_2 = split(" - ", current_row["member_2"])[1]
-
-        for member in [member_1, member_2]:
+        member_1_w_fandom = current_row["member_1"]
+        member_2_w_fandom = current_row["member_2"]
+        
+        for member in [member_1_w_fandom, member_2_w_fandom]:
             if member not in characters.keys():
                 characters[member] = set()
 
@@ -30,12 +30,14 @@ def assign_orientations(joined_ship_df:pd.DataFrame, character_df:pd.DataFrame):
 
         if orientation_cell != "unspecified":
             split_orientations = split("/", orientation_cell)
-            characters[member_1].add(split_orientations[0])
-            characters[member_2].add(split_orientations[1])
+            characters[member_1_w_fandom].add(split_orientations[0])
+            characters[member_2_w_fandom].add(split_orientations[1])
 
     new_df = character_df.copy()
 
-    new_df["orientation"] = new_df["full_name"].apply(
+    new_df["combo_name"] = new_df["fandom"] + " - " + new_df["full_name"]
+
+    new_df["orientation"] = new_df["combo_name"].apply(
         lambda x: list(characters[x])[0] if x in characters.keys() else "gen_or_multi_only"
     )
     
@@ -143,7 +145,9 @@ def cross_reference_with_gender(char_df:pd.DataFrame):
             character_df["canon_mlm"] == True) | (
             character_df["canon_other_attracted"] == True) | (
             character_df["canon_acearo"] == True) | (
-            character_df["gender"] == "Other")
+            character_df["gender"] == "Other") | (
+            character_df["orientation"] == "bi"), # ambiguously gendered bi characters
+        other=True
     )
 
     return character_df
