@@ -1,0 +1,101 @@
+Rank 	Change 	Relationship 	Fandom 	Works 	Type 	Race
+1 	+0 	Castiel/Dean Winchester 	Supernatural (TV 2005) 	105322 	M/M 	White 	White
+2 	+2 	Draco Malfoy/Harry Potter 	Harry Potter - J. K. Rowling 	64693 	M/M 	White 	White
+3 	-1 	Sherlock Holmes/John Watson 	Sherlock (TV) 	63810 	M/M 	White 	White
+4 	-1 	Derek Hale/Stiles Stilinski 	Teen Wolf (TV) 	63483 	M/M 	White 	White
+5 	+1 	Aziraphale/Crowley (Good Omens) 	Good Omens (TV) 	59647 	Other 	White 	White
+6 	-1 	James "Bucky" Barnes/Steve Rogers 	Captain America (Movies) 	58522 	M/M 	White 	White
+7 	+1 	Sirius Black/Remus Lupin 	Harry Potter - J. K. Rowling 	50356 	M/M 	White 	White
+8 	+2 	Bakugou Katsuki/Midoriya Izuku 	Boku no Hero Academia | My Hero Academia 	43102 	M/M 	Asian 	Asian
+9 	-2 	Steve Rogers/Tony Stark 	The Avengers (Marvel Movies) 	42116 	M/M 	White 	White
+10 	-1 	Harry Styles/Louis Tomlinson 	One Direction (Band) 	40111 	M/M 	White 	White
+11 	+1 	Lan Zhan | Lan Wangji/Wei Ying | Wei Wuxian 	Módào Zǔshī - Mòxiāng Tóngxiù 	37658 	M/M 	Asian 	Asian
+12 	-1 	Jeon Jungkook/Kim Taehyung | V 	Bangtan Boys | BTS 	37354 	M/M 	Asian 	Asian
+13 	+0 	Adrien Agreste | Chat Noir/Marinette Dupain-Cheng | Ladybug 	Miraculous Ladybug 	35111 	F/M 	White 	Asian
+14 	+12 	Dazai Osamu/Nakahara Chuuya (Bungou Stray Dogs) 	文豪ストレイドッグス | Bungou Stray Dogs 	32770 	M/M 	Asian 	Asian
+15 	-1 	Keith/Lance (Voltron) 	Voltron: Legendary Defender 	32765 	M/M 	Ambig 	Latino
+16 	-1 	Dean Winchester/Sam Winchester 	Supernatural (TV 2005) 	31022 	M/M 	White 	White
+17 	+0 	Bakugou Katsuki/Kirishima Eijirou 	Boku no Hero Academia | My Hero Academia 	30272 	M/M 	Asian 	Asian
+18 	-2 	Magnus Bane/Alec Lightwood 	Shadowhunters (TV) 	29458 	M/M 	Asian 	White
+19 	+6 	Hermione Granger/Draco Malfoy 	Harry Potter - J. K. Rowling 	29031 	F/M 	Ambig 	White
+20 	-1 	Peter Parker & Tony Stark 	Marvel Cinematic Universe 	28996 	Gen 	White 	White
+21 	-3 	Merlin/Arthur Pendragon (Merlin) 	Merlin (TV) 	28772 	M/M 	White 	White
+22 	+1 	Will Graham/Hannibal Lecter 	Hannibal (TV) 	28318 	M/M 	White 	White
+23 	-3 	Jeon Jungkook/Park Jimin 	Bangtan Boys | BTS 	28185 	M/M 	Asian 	Asian
+24 	-2 	Min Yoongi | Suga/Park Jimin 	Bangtan Boys | BTS 	27462 	M/M 	Asian 	Asian
+25 	-4 	Rey/Ben Solo | Kylo Ren 	Star Wars Sequel Trilogy 	26940 	F/M 	White 	White
+26 	+2 	James Potter/Lily Evans Potter 	Harry Potter - J. K. Rowling 	26767 	F/M 	White 	White
+27 	+8 	Steve Harrington/Eddie Munson 	Stranger Things (TV 2016) 	25409 	M/M 	White 	White
+28 	-4 	Katsuki Yuuri/Victor Nikiforov 	Yuri!!! on Ice (Anime) 	24741 	M/M 	Asian 	White
+29 	+13 	Evan "Buck" Buckley/Eddie Diaz (9-1-1 TV) 	9-1-1 (TV) 	24057 	M/M 	White 	Latino
+30 	-1 	Midoriya Izuku/Todoroki Shouto 	Boku no Hero Academia | My Hero Academia 	23150 	M/M 	Asian 	Asian
+31 	+2 	Aizawa Shouta | Eraserhead/Yamada Hizashi | Present Mic 	Boku no Hero Academia | My Hero Academia 	22622 	M/M 	Asian 	Asian
+32 	-2 	Kim Namjoon | RM/Kim Seokjin | Jin 	Bangtan Boys | BTS 	22484 	M/M 	Asian 	Asian
+33 	-6 	Clay | Dream/GeorgeNotFound (Video Blogging RPF) 	Video Blogging RPF 	21836 	M/M 	White 	White
+34 	-3 	Pepper Potts/Tony Stark 	Marvel Cinematic Universe 	21526 	F/M 	White 	White
+35 	+4 	Hermione Granger/Ron Weasley 	Harry Potter - J. K. Rowling 	20899 	F/M 	Ambig 	White
+36 	-4 	Wilbur Soot & TommyInnit 	Minecraft (Video Game) 	20717 	Gen 	White 	White
+37 	-1 	Kara Danvers/Lena Luthor 	Supergirl (TV 2015) 	20322 	F/F 	White 	White
+38 	-4 	Wilbur Soot & Technoblade & TommyInnit & Phil Watson | Philza 	Minecraft (Video Game) 	19940 	Gen 	White 	White
+39 	-2 	Iwaizumi Hajime/Oikawa Tooru 	Haikyuu!! 	19843 	M/M 	Asian 	Asian
+40 	-2 	Geralt z Rivii | Geralt of Rivia/Jaskier | Dandelion 	Wiedźmin | The Witcher - All Media Types 	19107 	M/M 	White 	White
+41= 	+0 	Hinata Shouyou/Kageyama Tobio 	Haikyuu!! 	18833 	M/M 	Asian 	Asian
+41= 	-1 	Sherlock Holmes & John Watson 	Sherlock (TV) 	18833 	Gen 	White 	White
+43 	+20 	Blackbeard | Edward Teach/Stede Bonnet 	Our Flag Means Death (TV) 	18083 	M/M 	Indig 	White
+44 	+3 	James T. Kirk/Spock 	Star Trek: Alternate Original Series (Movies) 	18008 	M/M 	White 	White
+45 	+5 	Bakugou Katsuki & Midoriya Izuku 	Boku no Hero Academia | My Hero Academia 	17971 	Gen 	Asian 	Asian
+46 	+5 	Harry Potter/Ginny Weasley 	Harry Potter - J. K. Rowling 	17444 	F/M 	White 	White
+47 	-4 	Levi Ackerman/Eren Yeager 	Shingeki no Kyojin | Attack on Titan 	17420 	M/M 	White 	White
+48 	+23 	Aziraphale & Crowley (Good Omens) 	Good Omens (TV) 	17386 	Gen 	White 	White
+49 	-4 	Jung Hoseok | J-Hope/Min Yoongi | Suga 	Bangtan Boys | BTS 	17026 	M/M 	Asian 	Asian
+50 	-1 	Akaashi Keiji/Bokuto Koutarou 	Haikyuu!! 	16942 	M/M 	Asian 	Asian
+51 	-7 	Blaine Anderson/Kurt Hummel 	Glee (TV 2009) 	16909 	M/M 	Asian 	White
+52 	-6 	Dan Howell/Phil Lester 	Phandom/The Fantastic Foursome (YouTube RPF) 	16746 	M/M 	White 	White
+53 	-5 	Erik Lehnsherr/Charles Xavier 	X-Men (Alternate Timeline Movies) 	16595 	M/M 	White 	White
+54 	-2 	Harry Potter/Severus Snape 	Harry Potter - J. K. Rowling 	16426 	M/M 	White 	White
+55 	+24 	Han Jisung | Han/Lee Minho | Lee Know 	Stray Kids (Band) 	16402 	M/M 	Asian 	Asian
+56 	-3 	Ian Gallagher/Mickey Milkovich 	Shameless (US) 	16004 	M/M 	White 	White
+57 	New 	Regulus Black/James Potter 	Harry Potter - J. K. Rowling 	15556 	M/M 	White 	White
+58 	New 	Getou Suguru/Gojo Satoru 	呪術廻戦 | Jujutsu Kaisen (Manga) 	15322 	M/M 	Asian 	Asian
+59 	+3 	Dean Winchester & Sam Winchester 	Supernatural (TV 2005) 	15046 	Gen 	White 	White
+60 	-6 	Eddie Kaspbrak/Richie Tozier 	IT (Movies – Muschietti) 	14996 	M/M 	White 	White
+61 	+8 	Uchiha Sasuke/Uzumaki Naruto 	Naruto (Anime & Manga) 	14840 	M/M 	Asian 	Asian
+62 	-6 	Evil Queen | Regina Mills/Emma Swan 	Once Upon a Time (TV) 	14808 	F/F 	Latino 	White
+63 	-6 	Toby Smith | Tubbo & TommyInnit 	Minecraft (Video Game) 	14752 	Gen 	White 	White
+64 	+8 	Tartaglia | Childe/Zhongli (Genshin Impact) 	原神 | Genshin Impact (Video Game) 	14702 	M/M 	White 	Asian
+65 	-7 	Armitage Hux/Ben Solo | Kylo Ren 	Star Wars Sequel Trilogy 	14559 	M/M 	White 	White
+66 	-11 	Keith/Shiro (Voltron) 	Voltron: Legendary Defender 	14535 	M/M 	Ambig 	Asian
+67 	-7 	Kim Taehyung | V/Park Jimin 	Bangtan Boys | BTS 	14493 	M/M 	Asian 	Asian
+68 	-7 	James "Bucky" Barnes/Reader 	Marvel Cinematic Universe 	14406 	Other 	White 	Ambig
+69 	-1 	Fox Mulder/Dana Scully 	The X-Files 	14215 	F/M 	White 	White
+70 	+18 	Annabeth Chase/Percy Jackson 	Percy Jackson and the Olympians - Rick Riordan 	14210 	F/M 	Ambig 	White
+71 	-4 	Jeon Jungkook/Min Yoongi | Suga 	Bangtan Boys | BTS 	14055 	M/M 	Asian 	Asian
+72 	-13 	Bellamy Blake/Clarke Griffin 	The 100 (TV) 	13863 	F/M 	Asian 	White
+73 	-8 	Loki/Thor (Marvel) 	Thor (Movies) 	13469 	M/M 	White 	White
+74 	-10 	Jensen Ackles/Jared Padalecki 	Supernatural (TV 2005) RPF 	13453 	M/M 	White 	White
+75 	-9 	Gabriel/Sam Winchester 	Supernatural (TV 2005) 	13406 	M/M 	White 	White
+76 	-6 	Rodney McKay/John Sheppard 	Stargate Atlantis 	13254 	M/M 	White 	White
+77 	-3 	Technoblade & TommyInnit (Video Blogging RPF) 	Minecraft (Video Game) 	13056 	Gen 	White 	White
+78 	+8 	Aizawa Shouta | Eraserhead & Midoriya Izuku 	Boku no Hero Academia | My Hero Academia 	12989 	Gen 	Asian 	Asian
+79 	-4 	Levi Ackerman/Erwin Smith 	Shingeki no Kyojin | Attack on Titan 	12968 	M/M 	White 	White
+80 	+12 	Harry Potter/Tom Riddle | Voldemort 	Harry Potter - J. K. Rowling 	12783 	M/M 	White 	White
+81 	+14 	Amity Blight/Luz Noceda 	The Owl House (Cartoon) 	12404 	F/F 	White 	Af Lat
+82 	New 	Nico di Angelo/Will Solace 	Percy Jackson and the Olympians - Rick Riordan 	12388 	M/M 	White 	White
+83 	+1 	Miya Atsumu/Sakusa Kiyoomi 	Haikyuu!! 	12358 	M/M 	Asian 	Asian
+84 	-7 	Jack Harkness/Ianto Jones 	Torchwood 	12280 	M/M 	White 	White
+85 	-7 	Frank Iero/Gerard Way 	My Chemical Romance 	12257 	M/M 	White 	White
+86 	-10 	Mycroft Holmes/Greg Lestrade 	Sherlock (TV) 	12253 	M/M 	White 	White
+87 	-14 	Clarke Griffin/Lexa 	The 100 (TV) 	12179 	F/F 	White 	White
+88 	New 	Alhaitham/Kaveh (Genshin Impact) 	原神 | Genshin Impact (Video Game) 	11947 	M/M 	MENA 	MENA
+89 	-9 	Loki/Tony Stark 	The Avengers (Marvel Movies) 	11793 	M/M 	White 	White
+90 	+4 	Bakugou Katsuki/Todoroki Shouto 	Boku no Hero Academia | My Hero Academia 	11691 	M/M 	Asian 	Asian
+91 	+7 	Dabi | Todoroki Touya/Takami Keigo | Hawks 	Boku no Hero Academia | My Hero Academia 	11685 	M/M 	Asian 	Asian
+92 	-11 	Enjolras/Grantaire (Les Misérables) 	Les Misérables - All Media Types 	11611 	M/M 	White 	White
+93 	New 	Roronoa Zoro/Sanji 	One Piece (Anime & Manga) 	11572 	M/M 	Asian 	White
+94 	-12 	James "Bucky" Barnes & Steve Rogers 	Marvel Cinematic Universe 	11540 	Gen 	White 	White
+95 	-12 	Castiel & Dean Winchester 	Supernatural (TV 2005) 	11487 	Gen 	White 	White
+96 	-6 	Bilbo Baggins/Thorin Oakenshield 	The Hobbit - All Media Types 	11479 	M/M 	White 	White
+97 	-12 	Steve McGarrett/Danny "Danno" Williams 	Hawaii Five-0 (2010) 	11462 	M/M 	White 	White
+98 	-2 	Adora/Catra (She-Ra) 	She-Ra and the Princesses of Power (2018) 	11366 	F/F 	White 	Latino
+99 	-12 	Clint Barton/Natasha Romanov 	The Avengers (Marvel Movies) 	11260 	F/M 	White 	White
+100 	New 	Neil Josten/Andrew Minyard 	All For The Game - Nora Sakavic 	11221 	M/M 	White 	White

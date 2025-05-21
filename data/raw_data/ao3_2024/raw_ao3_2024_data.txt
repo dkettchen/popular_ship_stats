@@ -1,0 +1,101 @@
+Rank 	Change 	Relationship 	Fandom 	Works Gained 	Total Works 	Type 	Race
+1 	+18 	Aziraphale/Crowley (Good Omens) 	Good Omens (TV) 	14770 	59648 	Other 	White 	White
+2 	+0 	Sirius Black/Remus Lupin 	Harry Potter - J. K. Rowling 	9610 	50357 	M/M 	White 	White
+3 	+1 	Dazai Osamu/Nakahara Chuuya (Bungou Stray Dogs) 	文豪ストレイドッグス | Bungou Stray Dogs 	8960 	32770 	M/M 	Asian 	Asian
+4 	New 	Astarion/Tav (Baldur's Gate) 	Baldur's Gate (Video Games) 	8776 	8776 	Other 	White 	Ambig
+5 	+43 	Getou Suguru/Gojo Satoru 	呪術廻戦 | Jujutsu Kaisen (Manga) 	7948 	15322 	M/M 	Asian 	Asian
+6 	New 	Alex Claremont-Diaz/Henry Fox-Mountchristen-Windsor 	Red White & Royal Blue - Casey McQuiston 	7087 	10094 	M/M 	Latino 	White
+7 	+24 	Evan "Buck" Buckley/Eddie Diaz (9-1-1 TV) 	9-1-1 (TV) 	6558 	24057 	M/M 	White 	Latino
+8 	-2 	Regulus Black/James Potter 	Harry Potter - J. K. Rowling 	6431 	15556 	M/M 	White 	White
+9 	+25 	Draco Malfoy/Harry Potter 	Harry Potter - J. K. Rowling 	5665 	64692 	M/M 	White 	White
+10 	-9 	Steve Harrington/Eddie Munson 	Stranger Things (TV 2016) 	5608 	25409 	M/M 	White 	White
+11 	New 	Neuvillette/Wriothesley (Genshin Impact) 	原神 | Genshin Impact (Video Game) 	5212 	5212 	M/M 	White 	White
+12 	-9 	Alhaitham/Kaveh (Genshin Impact) 	原神 | Genshin Impact (Video Game) 	5181 	11947 	M/M 	MENA 	MENA
+13 	-5 	Bakugou Katsuki/Midoriya Izuku 	Boku no Hero Academia | My Hero Academia 	4732 	43102 	M/M 	Asian 	Asian
+14 	Re-Entry 	Aziraphale & Crowley (Good Omens) 	Good Omens (TV) 	4722 	17386 	Gen 	White 	White
+15 	-1 	Han Jisung | Han/Lee Minho | Lee Know 	Stray Kids (Band) 	4668 	16402 	M/M 	Asian 	Asian
+16 	New 	Angel Dust/Husk (Hazbin Hotel) 	Hazbin Hotel (Cartoon) 	4650 	5384 	M/M 	N.H. 	N.H.
+17 	-12 	John "Soap" MacTavish/Simon "Ghost" Riley 	Call of Duty (Video Games) 	4592 	10860 	M/M 	White 	White
+18 	-11 	Blackbeard | Edward Teach/Stede Bonnet 	Our Flag Means Death (TV) 	4544 	18083 	M/M 	Indig 	White
+19 	New 	Charlie Magne | Morningstar/Vaggie 	Hazbin Hotel (Cartoon) 	4373 	6019 	F/F 	N.H. 	N.H.
+20 	-8 	Hermione Granger/Draco Malfoy 	Harry Potter - J. K. Rowling 	4242 	29032 	F/M 	Ambig 	White
+21 	+0 	James Potter/Lily Evans Potter 	Harry Potter - J. K. Rowling 	4039 	26767 	F/M 	White 	White
+22 	New 	Blade/Dan Heng (Honkai: Star Rail) 	崩坏：星穹铁道 | Honkai: Star Rail (Video Game) 	3949 	4668 	M/M 	Asian 	Asian
+23 	+44 	Roronoa Zoro/Sanji 	One Piece (Anime & Manga) 	3827 	11572 	M/M 	Asian 	White
+24 	New 	Alastor/Lucifer Magne | Morningstar 	Hazbin Hotel (Cartoon) 	3746 	3746 	M/M 	N.H. 	N.H.
+25 	+58 	Tim Bradford/Lucy Chen 	The Rookie (TV 2018) 	3166 	6526 	F/M 	White 	Asian
+26 	+0 	Lan Zhan | Lan Wangji/Wei Ying | Wei Wuxian 	魔道祖师 - 墨香铜臭 | Módào Zǔshī - Mòxiāng Tóngxiù 	3080 	37658 	M/M 	Asian 	Asian
+27 	Re-Entry 	Annabeth Chase/Percy Jackson 	Percy Jackson and the Olympians - Rick Riordan 	3072 	14210 	F/M 	Ambig 	White
+28 	New 	Evan "Buck" Buckley/Tommy Kinard 	9-1-1 (TV) 	2923 	2923 	M/M 	White 	White
+29 	New 	Aventurine/Dr. Ratio (Honkai: Star Rail) 	崩坏：星穹铁道 | Honkai: Star Rail (Video Game) 	2905 	2905 	M/M 	Roma 	Ambig
+30 	+13 	Dazai Osamu & Nakahara Chuuya (Bungou Stray Dogs) 	文豪ストレイドッグス | Bungou Stray Dogs 	2785 	8350 	Gen 	Asian 	Asian
+31 	New 	Gale/Tav (Baldur's Gate) 	Baldur's Gate (Video Games) 	2777 	2777 	Other 	White 	Ambig
+32 	+46 	Will Graham/Hannibal Lecter 	Hannibal (TV) 	2694 	28318 	M/M 	White 	White
+33 	+51 	Akutagawa Ryuunosuke/Nakajima Atsushi (Bungou Stray Dogs) 	文豪ストレイドッグス | Bungou Stray Dogs 	2667 	8653 	M/M 	Asian 	Asian
+34 	+1 	Barty Crouch Jr./Evan Rosier 	Harry Potter - J. K. Rowling 	2658 	5083 	M/M 	White 	Ambig
+35 	+15 	Hua Cheng/Xie Lian (Tian Guan Ci Fu) 	天官赐福 - 墨香铜臭 | Tiān Guān Cì Fú - Mòxiāng Tóngxiù 	2639 	10293 	M/M 	Asian 	Asian
+36 	-8 	Aizawa Shouta | Eraserhead/Yamada Hizashi | Present Mic 	Boku no Hero Academia | My Hero Academia 	2590 	22622 	M/M 	Asian 	Asian
+37 	New 	Colin Bridgerton/Penelope Featherington 	Bridgerton (TV) 	2579 	5034 	F/M 	White 	White
+38 	Re-Entry 	Castiel/Dean Winchester 	Supernatural (TV 2005) 	2562 	105322 	M/M 	White 	White
+39 	New 	Blitzo/Stolas Goetia 	Helluva Boss (Web Series) 	2523 	4632 	M/M 	N.H. 	N.H.
+40 	+0 	Nicholas "Nick" Nelson/Charles "Charlie" Spring 	Heartstopper (TV) 	2477 	6339 	M/M 	White 	White
+41 	-19 	Marlene McKinnon/Dorcas Meadowes 	Harry Potter - J. K. Rowling 	2440 	8647 	F/F 	White 	Black
+42 	New 	Blade/Dan Feng | Previous Imbibitor Lunae (Honkai: Star Rail) 	崩坏：星穹铁道 | Honkai: Star Rail (Video Game) 	2411 	2411 	M/M 	Asian 	Asian
+43 	-7 	Jeon Jungkook/Kim Taehyung | V 	Bangtan Boys | BTS 	2345 	37355 	M/M 	Asian 	Asian
+44 	New 	Gojo Satoru/Reader 	呪術廻戦 | Jujutsu Kaisen (Anime) 	2331 	5435 	Other 	Asian 	Ambig
+45 	New 	Astarion/Gale (Baldur's Gate) 	Baldur's Gate (Video Games) 	2298 	2298 	M/M 	White 	White
+46 	-14 	Bakugou Katsuki & Midoriya Izuku 	Boku no Hero Academia | My Hero Academia 	2293 	17971 	Gen 	Asian 	Asian
+47 	New 	Fushiguro Megumi/Itadori Yuuji 	呪術廻戦 | Jujutsu Kaisen (Manga) 	2292 	6658 	M/M 	Asian 	Asian
+48 	+11 	Simon "Ghost" Riley/Reader 	Call of Duty (Video Games) 	2290 	4106 	Other 	White 	Ambig
+49 	New 	Alastor/Vox (Hazbin Hotel) 	Hazbin Hotel (Cartoon) 	2274 	2274 	M/M 	N.H. 	N.H.
+50 	-9 	Kamishiro Rui/Tenma Tsukasa 	Project SEKAI COLORFUL STAGE! (Video Game) 	2272 	5260 	M/M 	Asian 	Asian
+51 	New 	Nico di Angelo/Will Solace 	Percy Jackson and the Olympians - Rick Riordan 	2203 	12388 	M/M 	White 	White
+52 	New 	Astarion (Baldur's Gate)/Reader 	Baldur's Gate (Video Games) 	2184 	2184 	Other 	White 	Ambig
+53 	Re-Entry 	Hermione Granger/Ron Weasley 	Harry Potter - J. K. Rowling 	2178 	20899 	F/M 	Ambig 	White
+54 	Re-Entry 	Peter Parker & Tony Stark 	Marvel Cinematic Universe 	2149 	28996 	Gen 	White 	White
+55 	-40 	Robin Buckley/Nancy Wheeler 	Stranger Things (TV 2016) 	2122 	8306 	F/F 	White 	White
+56 	New 	Astarion/The Dark Urge (Baldur's Gate) 	Baldur's Gate (Video Games) 	2095 	2095 	Other 	White 	Ambig
+57 	-34 	Tartaglia | Childe/Zhongli (Genshin Impact) 	原神 | Genshin Impact (Video Game) 	2040 	14702 	M/M 	White 	Asian
+58 	+8 	Regulus Black & Sirius Black 	Harry Potter - J. K. Rowling 	2038 	5855 	Gen 	White 	White
+59= 	-3 	Adrien Agreste | Chat Noir/Marinette Dupain-Cheng | Ladybug 	Miraculous Ladybug 	1990 	35112 	F/M 	White 	Asian
+59= 	-1 	Kim Dokja/Yoo Joonghyuk 	Omniscient Reader – Sing-Shong 	1990 	6370 	M/M 	Asian 	Asian
+61 	New 	Kim Hongjoong/Park Seonghwa 	ATEEZ (Band) 	1952 	7146 	M/M 	Asian 	Asian
+62 	New 	Charles Leclerc/Max Verstappen 	Formula 1 RPF 	1950 	3636 	M/M 	White 	White
+63 	Re-Entry 	Harry Potter/Tom Riddle | Voldemort 	Harry Potter - J. K. Rowling 	1917 	12783 	M/M 	White 	White
+64 	New 	Dick Grayson & Jason Todd 	Batman - All Media Types 	1822 	7765 	Gen 	Ambig 	White
+65 	Re-Entry 	Harry Potter/Ginny Weasley 	Harry Potter - J. K. Rowling 	1819 	17445 	F/M 	White 	White
+66 	+26 	Charles | Grian/Ryan | GoodTimesWithScar 	Hermitcraft SMP 	1807 	4099 	M/M 	White 	White
+67 	New 	Valentino/Vox (Hazbin Hotel) 	Hazbin Hotel (Cartoon) 	1805 	2329 	M/M 	N.H. 	N.H.
+68 	+19 	Uchiha Sasuke/Uzumaki Naruto 	Naruto (Anime & Manga) 	1799 	14840 	M/M 	Asian 	Asian
+69 	New 	Gojo Satoru/Itadori Yuuji 	呪術廻戦 | Jujutsu Kaisen (Manga) 	1782 	4236 	M/M 	Asian 	Asian
+70 	-33 	Aizawa Shouta | Eraserhead & Midoriya Izuku 	Boku no Hero Academia | My Hero Academia 	1779 	12989 	Gen 	Asian 	Asian
+71 	-44 	Donatello & Leonardo & Michelangelo & Raphael (TMNT) 	Rise of the Teenage Mutant Ninja Turtles (Cartoon 2018) 	1758 	5098 	Gen 	N.H. 	N.H.
+72 	-9 	James T. Kirk/Spock 	Star Trek: Alternate Original Series (Movies) 	1731 	18008 	M/M 	White 	White
+73 	New 	Link/Zelda (Legend of Zelda) 	The Legend of Zelda: Breath of the Wild/Tears of the Kingdom 	1726 	7390 	F/M 	White 	White
+74= 	Re-Entry 	Merlin/Arthur Pendragon (Merlin) 	Merlin (TV) 	1713 	28772 	M/M 	White 	White
+74= 	+22 	Tim Drake & Jason Todd 	Batman - All Media Types 	1713 	7180 	Gen 	White 	White
+76 	-58 	Amity Blight/Luz Noceda 	The Owl House (Cartoon) 	1701 	12404 	F/F 	White 	Af Lat
+77 	Re-Entry 	Jeon Jungkook/Park Jimin 	Bangtan Boys | BTS 	1666 	28186 	M/M 	Asian 	Asian
+78 	New 	Getou Suguru & Gojo Satoru 	呪術廻戦 | Jujutsu Kaisen (Manga) 	1654 	3067 	Gen 	Asian 	Asian
+79 	New 	Choi San/Jung Wooyoung (ATEEZ) 	ATEEZ (Band) 	1653 	5959 	M/M 	Asian 	Asian
+80 	New 	Fyodor Dostoyevsky/Nikolai Gogol (Bungou Stray Dogs) 	文豪ストレイドッグス | Bungou Stray Dogs 	1645 	3117 	M/M 	White 	White
+81 	Re-Entry 	Neil Josten/Andrew Minyard 	All For The Game - Nora Sakavic 	1640 	11221 	M/M 	White 	White
+82 	New 	Jason Todd & Bruce Wayne 	Batman - All Media Types 	1610 	7247 	Gen 	White 	White
+83 	New 	Sung Hanbin/Zhang Hao 	ZEROBASEONE | ZB1 (Korea Band) 	1601 	2641 	M/M 	Asian 	Asian
+84 	New 	Mitsurugi Reiji | Miles Edgeworth/Naruhodou Ryuuichi | Phoenix Wright 	逆転裁判 | Gyakuten Saiban | Ace Attorney 	1580 	9618 	M/M 	Asian 	Asian
+85 	New 	The Dark Urge/Enver Gortash 	Baldur's Gate (Video Games) 	1566 	1566 	Other 	Ambig 	White
+86 	-29 	Mikage Reo/Nagi Seishirou 	Blue Lock (Manga) 	1547 	3410 	M/M 	Asian 	Asian
+87 	-76 	Wednesday Addams/Enid Sinclair 	Wednesday (TV 2022) 	1545 	6329 	F/F 	Latino 	White
+88 	Re-Entry 	Loki/Mobius M. Mobius 	Loki (TV 2021) 	1532 	4897 	M/M 	White 	White
+89 	Re-Entry 	Akechi Goro/Persona 5 Protagonist 	Persona 5 	1512 	10208 	M/M 	Asian 	Asian
+90 	New 	Mitsui Hisashi/Miyagi Ryota 	Slam Dunk (Anime & Manga) 	1492 	2650 	M/M 	Asian 	Asian
+91 	-74 	Daemon Targaryen/Rhaenyra Targaryen 	House of the Dragon (TV) 	1489 	4962 	F/M 	White 	White
+92 	New 	Jeon Wonwoo/Kim Mingyu 	SEVENTEEN (Band) 	1477 	6250 	M/M 	Asian 	Asian
+93 	New 	Furina/Neuvillette (Genshin Impact) 	原神 | Genshin Impact (Video Game) 	1466 	1466 	F/M 	White 	White
+94 	-22 	Hwang Hyunjin/Lee Felix 	Stray Kids (Band) 	1459 	5465 	M/M 	Asian 	Asian
+95= 	New 	Dick Grayson & Bruce Wayne 	Batman - All Media Types 	1451 	6628 	Gen 	Ambig 	White
+95= 	New 	Rafael Lange | Cellbit/Roier 	QSMP | Quackity SMP 	1451 	1812 	M/M 	Latino 	Latino
+97 	-72 	Aemond "One-Eye" Targaryen/Lucerys Velaryon (Son of Rhaenyra) 	House of the Dragon (TV) 	1407 	4290 	M/M 	White 	White
+98 	-24 	Aoyagi Touya/Shinonome Akito 	Project SEKAI COLORFUL STAGE! (Video Game) 	1405 	3735 	M/M 	Asian 	Asian
+99 	New 	Ivan/Till (Alien Stage) 	Alien Stage (Web Series) 	1398 	1398 	M/M 	Ambig 	Ambig
+100 	-76 	Vash the Stampede/Nicholas D. Wolfwood 	Trigun (Anime & Manga 1995-2008) 	1377 	4377 	M/M 	Ambig 	Ambig
