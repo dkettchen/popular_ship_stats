@@ -123,13 +123,23 @@ totals_by_gender = orientation_totals.get([
     "acearo_men", "acearo_women",
 ])
 # orientation by gender (str8, bi, gay, other, unspecified) by male/female
-gender_orientations = orientation_totals.get([
-    "str8_men", "str8_women", 
-    "gay_men", "gay_women",
-    "bi_men", "bi_women",
-    "unspecified_men", "unspecified_women",
-    "acearo_men", "acearo_women",
-])
+gender_orientations = pd.DataFrame(
+    {"men": {
+        "str8": orientation_totals["str8_men"],
+        "gay": orientation_totals["gay_men"],
+        "bi": orientation_totals["bi_men"],
+        "acearo": orientation_totals["acearo_men"],
+        "unspecified": orientation_totals["unspecified_men"],
+    },
+    "women": {
+        "str8": orientation_totals["str8_women"],
+        "gay": orientation_totals["gay_women"],
+        "bi": orientation_totals["bi_women"],
+        "acearo": orientation_totals["acearo_women"],
+        "unspecified": orientation_totals["unspecified_women"],
+    }}
+)
+
 
 for data_case in [
     "orientation_totals", # pie
@@ -177,17 +187,17 @@ for data_case in [
             scale=2
         )
 
-    # elif data_case == "orientation_labels_by_gender":
-    #     df = gender_orientations
+    elif data_case == "orientation_labels_by_gender":
+        df = gender_orientations
 
-    #     # make totals pie
-    #     pie = visualise_stacked_bars(df, data_case, "total")
-    #     pie.write_image(
-    #         f"{folder}/additional_diagrams/total_{data_case}.png",
-    #         width = 1000,
-    #         height = 700, 
-    #         scale=2
-    #     )
+        # make totals pie
+        pie = visualise_stacked_bars(df, data_case, "total")
+        pie.write_image(
+            f"{folder}/additional_diagrams/total_{data_case}.png",
+            width = 1000,
+            height = 700, 
+            scale=2
+        )
 
 # print(assigned_char_df.columns)
 # print(orientation_totals)    

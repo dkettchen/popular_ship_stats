@@ -64,6 +64,7 @@ def visualise_stacked_bars(input_item:pd.DataFrame, data_case:str, ranking:str):
     - canon by ship type (data_case="canon", ranking="total")
     - incest by ship type (data_case="incest", ranking="total")
     - canon orientation alignment by ship type (data_case="orientation_alignment", ranking="total")
+    - men & women's orientations (data_case="orientation_labels_by_gender", ranking="total")
 
     as grouped bar charts with 3 bars in each group
     """
@@ -122,7 +123,7 @@ def visualise_stacked_bars(input_item:pd.DataFrame, data_case:str, ranking:str):
         het_count = 0
         ambig_count = 0
 
-    elif data_case in ["canon", "incest", "orientation_alignment"]:
+    elif data_case in ["canon", "incest", "orientation_alignment", ]:
         if data_case == "canon":
             title = f"Canon ships by gender combo{suffix}"
             colours = colour_palettes.canon_colours
@@ -132,6 +133,13 @@ def visualise_stacked_bars(input_item:pd.DataFrame, data_case:str, ranking:str):
         elif data_case == "orientation_alignment":
             title = f"Conflicts or aligns with canon orientation by gender combo{suffix}"
             colours = colour_palettes.orientation_alignment
+
+        iterable_1 = input_item.columns
+        iterable_2 = input_item.index
+    
+    elif data_case == "orientation_labels_by_gender":
+        title = f"Male and female characters' orientations{suffix}"
+        colours = colour_palettes.orientations
 
         iterable_1 = input_item.columns
         iterable_2 = input_item.index
@@ -147,7 +155,7 @@ def visualise_stacked_bars(input_item:pd.DataFrame, data_case:str, ranking:str):
         elif data_case in ["gender_combos", "minority_gender_combos"]:
             iterable_2 = list(reversed(iterable_1[item]))
 
-        elif data_case in ["canon", "incest", "orientation_alignment"]:
+        elif data_case in ["canon", "incest", "orientation_alignment", "orientation_labels_by_gender"]:
             total_num = input_item[item].sum()
 
         for instance in iterable_2:
@@ -213,15 +221,28 @@ def visualise_stacked_bars(input_item:pd.DataFrame, data_case:str, ranking:str):
 
                 marker_color = colour
 
-            elif data_case in ["canon", "incest", "orientation_alignment"]:
+            elif data_case in ["canon", "incest", "orientation_alignment", "orientation_labels_by_gender"]:
                 current_num = input_item.loc[instance, item]
-                x = [item[:-5]]
+                if data_case == "orientation_labels_by_gender":
+                    x = [item]
+                else:
+                    x = [item[:-5]]
+
+                if data_case == "orientation_labels_by_gender" and instance == "gay":
+                    if item == "men":
+                        marker_color = colours["mlm"]
+                    if item == "women":
+                        marker_color = colours["wlw"]
+                else:
+                    marker_color = colours[instance]
+
                 y = [current_num]
+
                 if data_case == "orientation_alignment":
                     text = instance[6:]
                 else: text = instance
+
                 text += f" ({int(round(current_num/total_num, 2) * 100)}%)"
-                marker_color = colours[instance]
 
             # add trace to figure
             stacked_bars.add_trace(
