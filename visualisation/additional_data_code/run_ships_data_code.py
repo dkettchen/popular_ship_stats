@@ -5,9 +5,11 @@ from src.additional_data_fandoms.sort_extra_ship_data import (
 )
 from visualisation.diagram_code.visualise_pies import visualise_single_pie
 from visualisation.diagram_code.visualise_bars import visualise_stacked_bars
+import pandas as pd
+
+folder = "visualisation/ao3_all_data_2013_2023/ao3_all_data_charts"
 
 parsed_df = parse_extra_ship_data()
-# assigned_char_df = assign_to_characters(parsed_df)
 assigned_ship_df = assign_to_ships(parsed_df)
 
 # replacing false values with none values for counting
@@ -54,7 +56,6 @@ aligned_df = get_total_and_by_ship_type(assigned_ship_df, "canon_alignment")
 
 # pie & stacked bar charts for ship data
 for data_case in ["canon", "incest", "orientation_alignment"]:
-    folder = "visualisation/ao3_all_data_2013_2023/ao3_all_data_charts"
 
     if data_case == "canon":
         df = canon_df
@@ -84,16 +85,114 @@ for data_case in ["canon", "incest", "orientation_alignment"]:
     )
 
 
-# TODO extract orientations info better
+assigned_char_df = assign_to_characters(parsed_df).replace({False:None})
+
+# extract numbers
+# orientation labels
+orientation_totals = assigned_char_df.groupby("orientation").count()["full_name"]
+# other categories
+for column in ["queer", "wlw", "mlm", "man_attracted", "woman_attracted", "other_attracted"]:
+    orientation_totals[column] = assigned_char_df[f"canon_{column}"].count()
+# orientations by male/female
+orientation_by_gender = assigned_char_df.groupby(
+    ["gender", "orientation"]
+).count()["full_name"].reset_index().rename(columns={"full_name" : "total"})
+for label in ["str8", "bi", "gay", "unspecified", "acearo"]:
+    orientation_totals[f"{label}_women"] = orientation_by_gender.where(
+        ((orientation_by_gender["gender"] == "F") | (orientation_by_gender["gender"] == "F | Other")) & (
+        orientation_by_gender["orientation"] == label)
+    ).dropna(how="all")["total"].sum()
+
+    orientation_totals[f"{label}_men"] = orientation_by_gender.where(
+        ((orientation_by_gender["gender"] == "M") | (
+            orientation_by_gender["gender"] == "M | Other") | (
+            orientation_by_gender["gender"] == "M | F | Other")) & (
+        orientation_by_gender["orientation"] == label)
+    ).dropna(how="all")["total"].sum()
 
 # orientation
 # totals (str8 ppl, queer ppl, unspecified)
+totals = orientation_totals.get(["str8", "queer", "unspecified"])
+# by attraction (woman, man, other attracted) (minus unspecified I guess)
+totals_by_attraction = orientation_totals.get(["woman_attracted", "man_attracted", "other_attracted"])
 # totals by gender (str8 men, str8 women, mlm, wlw, other, unspecified men, unspecified women)
+totals_by_gender = orientation_totals.get([
+    "str8_men", "str8_women", 
+    "mlm", "wlw", 
+    "unspecified_men", "unspecified_women",
+    "acearo_men", "acearo_women",
+])
 # orientation by gender (str8, bi, gay, other, unspecified) by male/female
+gender_orientations = orientation_totals.get([
+    "str8_men", "str8_women", 
+    "gay_men", "gay_women",
+    "bi_men", "bi_women",
+    "unspecified_men", "unspecified_women",
+    "acearo_men", "acearo_women",
+])
 
+for data_case in [
+    "orientation_totals", # pie
+    "orientation_by_attraction", # pie
+    "orientation_men", # pie
+    "orientation_women", # pie
+    "orientation_labels_by_gender" # stacked bars
+]:
+    # TODO make data cases in diagram thingies
+
+    if data_case in [
+        "orientation_totals",
+        "orientation_by_attraction",
+        "orientation_men",
+        "orientation_women",
+    ]:
+
+        if data_case == "orientation_totals":
+            df = totals
+        elif data_case == "orientation_by_attraction":
+            df = totals_by_attraction
+        elif data_case == "orientation_men":
+            df = totals_by_gender.get([
+                "str8_men", 
+                "mlm",
+                "unspecified_men", 
+                "acearo_men", 
+            ])
+        elif data_case == "orientation_women":
+            df = totals_by_gender.get([
+                "str8_women", 
+                "wlw",
+                "unspecified_women",
+                "acearo_women",
+            ])
+
+        df = df.where(df.values > 0).dropna(how="all")
+
+        # make totals pie
+        pie = visualise_single_pie(df, data_case, "total")
+        pie.write_image(
+            f"{folder}/additional_diagrams/total_{data_case}.png",
+            width = 700,
+            height = 700, 
+            scale=2
+        )
+
+    # elif data_case == "orientation_labels_by_gender":
+    #     df = gender_orientations
+
+    #     # make totals pie
+    #     pie = visualise_stacked_bars(df, data_case, "total")
+    #     pie.write_image(
+    #         f"{folder}/additional_diagrams/total_{data_case}.png",
+    #         width = 1000,
+    #         height = 700, 
+    #         scale=2
+    #     )
+
+# print(assigned_char_df.columns)
+# print(orientation_totals)    
 
 # refactor/fix TODO:
-# - acearo should be counted as conflicted
 # - after we're done with these, refactor all your initial bits to 
 # later be able to run with 2024 & tumblr data
     # I bet we can make all our parsing stuff WAY more efficient

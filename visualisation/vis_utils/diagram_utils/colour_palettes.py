@@ -116,3 +116,16 @@ orientation_alignment = {
     "canon_aligned":"olivedrab",
     "canon_ambiguous":"darkorange",
 }
+orientations = {
+    "str8": "black",
+    "queer": "hotpink",
+    "unspecified": "lightslategrey",
+    "gay": "hotpink",
+    "bi": "deeppink",
+    "wlw": "orange",
+    "mlm": "mediumturquoise",
+    "acearo": "darkorchid",
+    "woman_attracted": "orange",
+    "man_attracted": "mediumturquoise",
+    "other_attracted": "green",
+}

@@ -419,6 +419,9 @@ def visualise_single_pie(input_item:pd.DataFrame|pd.Series, data_case:str, ranki
     - canon ships (data_case="canon", ranking="total")
     - incest ships (data_case="incest", ranking="total")
     - ship type's alignment with canon orientation (data_case="orientation_alignment", ranking="total")
+    - total str8/queer/unspecified orientations (data_case="orientation_totals", ranking="total")
+    - attracted to men/women/other (data_case="orientation_by_attraction", ranking="total")
+    - orientations of male/female characters (data_case="orientation_men"|"orientation_women", ranking="total")
     
     as a single pie chart
     """
@@ -451,14 +454,18 @@ def visualise_single_pie(input_item:pd.DataFrame|pd.Series, data_case:str, ranki
         values = input_item["count"]
     elif data_case in [
         "market_share", "interracial_ships", 
-        "canon", "incest", "orientation_alignment"
+        "canon", "incest", "orientation_alignment",
+        "orientation_totals","orientation_by_attraction",
+        "orientation_men","orientation_women",
     ]:
         values = input_item.values
 
     # text info
     if data_case in [
         "racial_diversity", "rpf", "interracial_ships",
-        "canon", "incest", "orientation_alignment"
+        "canon", "incest", "orientation_alignment",
+        "orientation_totals","orientation_by_attraction",
+        "orientation_men","orientation_women",
     ]:
         text_info += "+percent"
     
@@ -475,7 +482,9 @@ def visualise_single_pie(input_item:pd.DataFrame|pd.Series, data_case:str, ranki
     # show legend
     if data_case in [
         "racial_diversity", "rpf", "market_share", "interracial_ships",
-        "canon", "incest", "orientation_alignment"
+        "canon", "incest", "orientation_alignment",
+        "orientation_totals","orientation_by_attraction",
+        "orientation_men","orientation_women",
     ]:
         show_legend = False
 
@@ -531,7 +540,23 @@ def visualise_single_pie(input_item:pd.DataFrame|pd.Series, data_case:str, ranki
         elif data_case == "orientation_alignment":
             title = f"Does characters' canon orientation align with ship type?{suffix}"
             colours = [colour_palettes.orientation_alignment[label] for label in labels]
-
+    
+    elif data_case in [
+        "orientation_totals","orientation_by_attraction",
+        "orientation_men","orientation_women",
+    ]:
+        if data_case == "orientation_totals":
+            title = f"Total straight, queer, and unspecified characters{suffix}"
+            colours = [colour_palettes.orientations[label] for label in labels]
+        elif data_case == "orientation_by_attraction":
+            title = f"Total characters attracted to male/female/other characters{suffix}"
+            colours = [colour_palettes.orientations[label] for label in labels]
+        elif data_case == "orientation_men":
+            title = f"Straight, queer, and unspecified male characters{suffix}"
+            colours = [colour_palettes.orientations[label[:-4]] if "men" in label else colour_palettes.orientations[label] for label in labels]
+        elif data_case == "orientation_women":
+            title = f"Straight, queer, and unspecified female characters{suffix}"
+            colours = [colour_palettes.orientations[label[:-6]] if "women" in label else colour_palettes.orientations[label] for label in labels]
 
     # making base figure
     pie = go.Figure(
@@ -556,7 +581,10 @@ def visualise_single_pie(input_item:pd.DataFrame|pd.Series, data_case:str, ranki
         pie.update_traces(automargin=auto_margin)
     if show_legend != None:
         pie.update_layout(showlegend=show_legend)
-    if data_case == "gender":
+    if data_case in [
+        "gender", "orientation_totals","orientation_by_attraction",
+        "orientation_men","orientation_women",
+    ]:
         pie.update_traces(sort=False)
     if data_case == "racial_groups" or "ships_by" in data_case:
         if data_case == "racial_groups":
