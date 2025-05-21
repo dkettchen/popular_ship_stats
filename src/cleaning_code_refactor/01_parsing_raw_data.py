@@ -1,6 +1,6 @@
 from src.cleaning_code_refactor_utils.find_paths import find_paths
 from src.cleaning_code_refactor_utils.read_txt import read_txt
-from src.cleaning_code_refactor_utils.split_values import split_data
+from src.cleaning_code_refactor_utils.split_values import split_data, split_data_2015_to_2019
 
 files = find_paths("data/raw_data")
 
@@ -24,27 +24,29 @@ for group in filepaths:
         ranking = filepath[36:-4]
         if "ranking" in ranking:
             ranking = ranking[:-8]
-        # if ranking == "data": # I labelled files bad rip
-        #     ranking = "annual"
+        if "2019_" in ranking:
+            ranking = ranking[5:]
 
         if year not in [2015, 2016, 2017, 2019]:
             split_list = split_data(read_data, year, ranking)
+        else:
+            split_list = split_data_2015_to_2019(read_data, year, ranking)
 
-    # old_list = split_raw_data_2013_2014_and_2020_to_2023(path)
+
     # new_list = separate_pairings(old_list)
     # file_path = "data/first_clean_up_data/" + path[14:-4] + ".csv"
     # final_list = escape_apostrophes(new_list)
     # make_csv_file(final_list, file_path)
 
 # for path in early_paths:
-#     old_list1 = split_raw_data_2013_2014_and_2020_to_2023(path)
+
 #     new_list1 = separate_pairings(old_list1)
 #     file_path1 = "data/first_clean_up_data/" + path[14:-4] + ".csv"
 #     final_list1 = escape_apostrophes(new_list1)
 #     make_csv_file(final_list1, file_path1)
 
 # for path in middle_paths:
-#     old_list_unseparated = split_raw_data_2015_to_2019(path)
+
 #     old_list2 = split_pairings_from_fandoms(old_list_unseparated)
 #     new_list2 = separate_pairings(old_list2)
 #     file_path2 = "data/first_clean_up_data/" + path[14:-4] + ".csv"
