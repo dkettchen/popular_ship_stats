@@ -69,7 +69,7 @@ make-ao3-geo-charts:
 	python visualisation/additional_data_code/run_fandoms_data_code.py
 
 # runs ao3 vis for canon/incest/orientation data additional data
-make-a03-ship-charts:
+make-ao3-ship-charts:
 	python visualisation/additional_data_code/run_ships_data_code.py
 
 # run all additional data charts
