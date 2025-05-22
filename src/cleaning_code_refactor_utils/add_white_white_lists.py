@@ -1,4 +1,4 @@
-def add_white_white_list(race_str:str|any):
+def add_white_white_list(race_str:str):
     """
     if the input string is "White", it returns ["White", "White"]
 

@@ -108,7 +108,10 @@ def parse_txt():
         }
         for column in missing_columns.keys():
             if column not in df.columns:
-                df[column] = missing_columns[column]
+                if type(missing_columns[column]) != list:
+                    df[column] = missing_columns[column]
+                else:
+                    df[column] = [missing_columns[column] for i in range(len(df))]
         
         if year not in df_dict.keys():
             df_dict[year] = {}
