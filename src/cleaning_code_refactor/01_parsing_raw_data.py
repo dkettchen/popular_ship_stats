@@ -1,6 +1,10 @@
 from src.cleaning_code_refactor_utils.find_paths import find_paths
 from src.cleaning_code_refactor_utils.read_txt import read_txt
-from src.cleaning_code_refactor_utils.split_values import split_data, split_data_2015_to_2019
+from src.cleaning_code_refactor_utils.split_values import (
+    split_data, 
+    split_data_2015_to_2019, 
+    split_pairings_from_fandoms
+)
 
 files = find_paths("data/raw_data")
 
@@ -27,10 +31,8 @@ for group in filepaths:
         if "2019_" in ranking:
             ranking = ranking[5:]
 
-        if year not in [2015, 2016, 2017, 2019]:
-            split_list = split_data(read_data, year, ranking)
-        else:
-            split_list = split_data_2015_to_2019(read_data, year, ranking)
+        split_list = split_data(read_data, year, ranking)
+
 
 
     # new_list = separate_pairings(old_list)

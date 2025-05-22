@@ -1,4 +1,4 @@
-from re import split
+from re import split, sub
 from json import load
 
 books = [
@@ -21,49 +21,53 @@ def split_data(data_list:list[str], year:int, ranking:str):
 
     each list item is another list with string values for each column item
     """
+    if year not in [2015, 2016, 2017, 2019]: 
+        counter = 0
+        new_list = []
 
-    counter = 0
-    new_list = []
+        for string in data_list:
+            # set separator
+            if year == 2013 and counter == 0: # 2013 single space separators
+                separator = r"\s"
+            elif year in [2013, 2014]: # 2013 rows & 2014 " - " separators
+                separator = r" - "
+            elif year >= 2020 and year <= 2022: # 2020-2022 3 space separators
+                separator = r"\s{3}"
+            elif year >= 2023: # since 2023 space-tab separators
+                separator = r" \t"
+            
+            # split
+            split_list = [item.strip() for item in split(separator, string[:-1])]
 
-    for string in data_list:
-        # set separator
-        if year == 2013 and counter == 0: # 2013 single space separators
-            separator = r"\s"
-        elif year in [2013, 2014]: # 2013 rows & 2014 " - " separators
-            separator = r" - "
-        elif year >= 2020 and year <= 2022: # 2020-2022 3 space separators
-            separator = r"\s{3}"
-        elif year >= 2023: # since 2023 space-tab separators
-            separator = r" \t"
-        
-        # split
-        split_list = [item.strip() for item in split(separator, string[:-1])]
+            if year in [2013, 2014]: # fixing stuff
+                # reappending books
+                if year == 2013 or (year == 2014 and ranking == "femslash"):
+                    book_index = 2
+                elif year == 2014 and ranking == "overall":
+                    book_index = 3
+                if split_list[book_index] in books:
+                    book = split_list[book_index] + " - " + split_list[book_index + 1]
+                    row_list = split_list[:book_index] + [book] + split_list[book_index + 2:]
+                    split_list = row_list
 
-        if year in [2013, 2014]: # fixing stuff
-            # reappending books
-            if year == 2013 or (year == 2014 and ranking == "femslash"):
-                book_index = 2
-            elif year == 2014 and ranking == "overall":
-                book_index = 3
-            if split_list[book_index] in books:
-                book = split_list[book_index] + " - " + split_list[book_index + 1]
-                row_list = split_list[:book_index] + [book] + split_list[book_index + 2:]
-                split_list = row_list
+                # replace 0 with None if there was no change
+                if len(split_list[0]) == 0:
+                    split_list[0] = "None"
+            
+            if year >= 2021 and counter != 0: # collecting 2 race values into one list value
+                race_combo = split_list[-2:]
+                split_list[-2] = race_combo
+                split_list = split_list[:-1]
 
-            # replace 0 with None if there was no change
-            if len(split_list[0]) == 0:
-                split_list[0] = "None"
-        
-        if year >= 2021 and counter != 0: # collecting 2 race values into one list value
-            race_combo = split_list[-2:]
-            split_list[-2] = race_combo
-            split_list = split_list[:-1]
+            new_list.append(split_list) # adding split rows
+            counter += 1
 
-        new_list.append(split_list) # adding split rows
-        counter += 1
+        if new_list[0][-1] == "":
+            new_list[0] = new_list[0][:-1]
 
-    if new_list[0][-1] == "":
-        new_list[0] = new_list[0][:-1]
+    else: # single space separator years
+        split_list = split_data_2015_to_2019(data_list, year, ranking)
+        new_list = split_pairings_from_fandoms(split_list)
 
     # testing it separated correctly
     columns = new_list[0]
@@ -75,6 +79,7 @@ def split_data(data_list:list[str], year:int, ranking:str):
 
     return new_list
 
+# helpers for single space separators years
 def split_data_2015_to_2019(data_list:list[str], year:int, ranking:str):
     """
     takes a list of strings of the read-in txt data, the year and ranking contained in the filepath
@@ -194,94 +199,81 @@ def split_data_2015_to_2019(data_list:list[str], year:int, ranking:str):
 
     return new_list
 
-
-def split_pairings_from_fandoms(data_list):
-    pass
-
-# TODO v refactor this one
-
-# a function to comb through the pairing-fandom values and split them apart appropriately
-    #I'm seeing a highly unfortunate scenario where we have to manually copy out all the fandoms 
-    # and put em in a variable to check against rip
-        # update: it was fine
-def split_pairings_from_fandoms(data_list):
+def split_pairings_from_fandoms(data_list:list[str]):
     """
-    takes output list of split_raw_data_2015_to_2019 and splits the pairing-fandom value into
-    a pairing & a fandom value 
+    splits pairings from their fandoms
 
-    returns a list that matches the split_raw_data_2013_2014_and_2020_to_2023 output format
+    returns new list with split values
     """
 
-    # make fandom list
-        #we made a function for it! so we can access the files we get out of that!
-    with open("data/reference_and_test_files/all_fandoms_list.json", "r") as json_file:
+    # reference file for fandoms
+    with open("data/reference_and_test_files/cleaning_fandoms/all_fandoms_list.json", "r") as json_file:
         fandom_dict = load(json_file)
 
     fandom_list = fandom_dict["all_fandoms"]
 
-    # make new list
-    separated_list = []
-    # append first row to new list
-    separated_list.append(data_list[0])
+    # append first row (columns)
+    columns = data_list[0]
+    separated_list = [columns]
 
     for i in range(len(data_list[1])):
-        if "Release Date" in data_list[0]: combo_index = 2
+        if "Release Date" in columns:
+            combo_index = 2
+            break
         elif " " in data_list[2][i]:
             combo_index = i
+            break
 
-    # for each row (except first)
+    # non-column rows
     for row in data_list[1:]:
-        # make new row list
-        new_row = []
+        # make new row, same values up to pairing/fandom item
+        new_row = row[:combo_index]
 
-        # append first x values until pairing/fandom value to new row list
-        new_row.extend(row[:combo_index])
-
-        # separate & append pairing & fandom value
         found_fandom = False
         value_to_be_separated = row[combo_index]
-            # iterate through fandom list
+
         for fandom in fandom_list:
-            # if fandom in value, split it at relevant spot
             if fandom in value_to_be_separated:
-                if fandom == "Thor (Movies)":
-                    split_values = split(r" Thor \(Movies\)", value_to_be_separated)
-                elif fandom == "Loki (TV 2021)":
-                    split_values = split(r" Loki \(TV 2021\)", value_to_be_separated)
-                elif fandom == "Venom (Movie 2018)":
-                    split_values = split(r" Venom \(Movie 2018\)", value_to_be_separated)
-                elif fandom == "Maleficent (2014)":
-                    split_values = split(r" Maleficent \(2014\)", value_to_be_separated)
-                elif fandom == "Kim Possible (Cartoon)":
-                    split_values = split(r" Kim Possible \(Cartoon\)", value_to_be_separated)
-                elif fandom == "James Bond (Craig movies)":
-                    split_values = split(r" James Bond \(Craig movies\)", value_to_be_separated)
-                elif fandom == "Adam Lambert (Musician)":
-                    split_values = split(r" Adam Lambert \(Musician\)", value_to_be_separated)
-                elif fandom == "Carol (2015)":
-                    split_values = split(r" Carol \(2015\)", value_to_be_separated)
-                else: split_values = split(r" " + fandom, value_to_be_separated)
+                # fandoms with same names as characters
+                if fandom in [
+                    "Thor (Movies)", 
+                    "Loki (TV 2021)",
+                    "Venom (Movie 2018)", 
+                    "Maleficent (2014)",
+                    "Kim Possible (Cartoon)",
+                    "James Bond (Craig movies)",
+                    "Adam Lambert (Musician)",
+                    "Carol (2015)",
+                ]:
+                    fandom_regex = sub("\(", "\\\(", fandom) # replace ( with escaped \(
+                    fandom_regex = sub("\)", "\\\)", fandom_regex)
+                    split_values = split(r" " + fandom_regex, value_to_be_separated)
+                else:
+                    split_values = split(r" " + fandom, value_to_be_separated)
+
+                # this should only be pairing now
                 white_space_index = len(split_values[0])
+                # pairing / white space / fandom
                 separated_values = [
                     value_to_be_separated[:white_space_index], 
                     value_to_be_separated[white_space_index + 1:]
-                    ]
-                # append correctly split values to new row list
-                new_row.extend(separated_values)
+                ]
+                # append to new row
+                new_row += separated_values
+
+                # fandom has been found
                 found_fandom = fandom
 
-            # otherwise print row so I can see which fandom is missing or misspellt & fix
-        if not found_fandom:
-            new_row.extend([" ", " "])
+                break
+            
+        if not found_fandom: # if not found, print
+            new_row += [" ", " "]
             print(value_to_be_separated)
-                #this means we'll have to check through ALL the relevant data sets until 
-                # we've got the full list smh
-                #-> get starting values from newer data sets & add & change as needed
 
-        # append remaining values to new row list
-        new_row.extend(row[combo_index + 1:])
+        # append remaining values to new row
+        new_row += row[combo_index + 1:]
 
-        # append new row list to new list
+        # append new row
         separated_list.append(new_row)
-
+    
     return separated_list
