@@ -1,5 +1,6 @@
 from re import split, sub
 from json import load
+from src.cleaning_code_refactor_utils.separate_pairings import separate_pairings
 
 books = [
     "Harry Potter", 
@@ -68,6 +69,10 @@ def split_data(data_list:list[str], year:int, ranking:str):
     else: # single space separator years
         split_list = split_data_2015_to_2019(data_list, year, ranking)
         new_list = split_pairings_from_fandoms(split_list)
+
+    separated_pairs = separate_pairings(new_list)
+    new_list = separated_pairs
+
 
     # testing it separated correctly
     columns = new_list[0]
