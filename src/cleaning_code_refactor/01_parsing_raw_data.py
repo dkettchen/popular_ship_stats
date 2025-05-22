@@ -2,6 +2,7 @@ from src.cleaning_code_refactor_utils.find_paths import find_paths
 from src.cleaning_code_refactor_utils.read_txt import read_txt
 from src.cleaning_code_refactor_utils.split_values import split_data
 import pandas as pd
+from src.cleaning_code_refactor_utils.escape_apostrophes import escape_apostrophes
 
 files = find_paths("data/raw_data")
 
@@ -27,10 +28,26 @@ for filepath in filepaths:
     # turn into df
     df = pd.DataFrame(split_list[1:], columns=split_list[0])
 
-    # escape apostrophes
+    # escape apostrophes (replace all apostrophes & quotes with ')
+    df["Fandom"] = df["Fandom"].apply(escape_apostrophes)
+    def iterate_and_escape(string_list:list[str]):
+        """
+        iterate over list of strings and run escape apostrophes on each string
+        """
+        new_list = []
+        for s in string_list:
+            new_s = escape_apostrophes(s)
+            new_list.append(new_s)
+        return new_list
+    for column in ["Relationship", "Pairing", "Pairing Tag", "Ship"]:
+        if column in df.columns:
+            df[column] = df[column].apply(iterate_and_escape)
+
+
+    
 
     # generate folders along with files
-    # print to csv files
+    # print to csv files with ` as escape char
 
 
 
