@@ -33,17 +33,14 @@ def separate_pairings(data_list):
 
         # append remaining values
         if type_index: # if there's a type column
-            # append type first
-            if "/" in pairing_item: # type item is smth other than "other" & "gen"
-                # add values between pairing & type column
-                new_row += row[pairing_index + 1 : type_index]
+            # add values between pairing & type column
+            new_row += row[pairing_index + 1 : type_index]
 
-                # split type item
-                type_list = split(r"\/", row[type_index])
+            # split type item
+            type_list = split(r"\/", row[type_index])
 
-                new_row.append(type_list)
-            else: # type item is "other" or "gen"
-                new_row += row[pairing_index + 1 : type_index + 1]
+            # append type list
+            new_row.append(type_list)
 
             # then rest
             new_row += row[type_index + 1:]
