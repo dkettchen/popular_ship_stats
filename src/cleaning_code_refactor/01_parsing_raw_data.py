@@ -3,6 +3,9 @@ from src.cleaning_code_refactor_utils.read_txt import read_txt
 from src.cleaning_code_refactor_utils.split_values import split_data
 import pandas as pd
 from src.cleaning_code_refactor_utils.escape_apostrophes import escape_apostrophes
+from src.cleaning_code_refactor_utils.remove_commas import remove_commas
+from src.cleaning_code_refactor_utils.remove_equals import remove_equals
+from src.cleaning_code_refactor_utils.separate_change_symbols import separate_change_symbol
 
 files = find_paths("data/raw_data")
 
@@ -22,11 +25,27 @@ for filepath in filepaths:
         year = 2019
         ranking = ranking[5:]
 
+    ## first stage cleaning
+
     # separate all values
     split_list = split_data(read_data, year, ranking)
 
     # turn into df
     df = pd.DataFrame(split_list[1:], columns=split_list[0])
+    
+    ## I moved renaming up here already for ease of column calling
+    # rename columns
+    renaming_dict = {
+        "#": "Rank",
+        "New": "Change",
+        "Pairing Tag": "Relationship",
+        "Pairing": "Relationship",
+        "Ship": "Relationship",
+        "Works": "Total Works",
+        "Total": "Total Works",
+        "Fics": "Total Works",
+    }
+    df = df.rename(columns=renaming_dict)
 
     # escape apostrophes (replace all apostrophes & quotes with ')
     df["Fandom"] = df["Fandom"].apply(escape_apostrophes)
@@ -39,18 +58,33 @@ for filepath in filepaths:
             new_s = escape_apostrophes(s)
             new_list.append(new_s)
         return new_list
-    for column in ["Relationship", "Pairing", "Pairing Tag", "Ship"]:
-        if column in df.columns:
-            df[column] = df[column].apply(iterate_and_escape)
+    df["Relationship"] = df["Relationship"].apply(iterate_and_escape)
+
+    ## second stage cleaning
+
+    # remove commas from works numbers
+    if year in [2015, 2016]:
+        for column in ["New Works", "Total Works"]:
+            if column in df.columns:
+                df[column] = df[column].apply(remove_commas)
+
+    # remove = from ranks
+    df["Rank"] = df["Rank"].apply(remove_equals)
+
+    # separate change symbols
+    if year != 2013 \
+    and not (year == 2014 and ranking == "femslash") \
+    and not (year == 2016 and ranking == "data"):
+        df["Change"] = df["Change"].apply(separate_change_symbol)
+
+    ## third stage cleaning
 
 
-    
+
+
+    # generate filepath
 
     # generate folders along with files
     # print to csv files with ` as escape char
 
 
-
-    # file_path = "data/first_clean_up_data/" + path[14:-4] + ".csv"
-    # final_list = escape_apostrophes(new_list)
-    # make_csv_file(final_list, file_path)
