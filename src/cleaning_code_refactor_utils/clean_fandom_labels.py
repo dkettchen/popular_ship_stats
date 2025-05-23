@@ -2,7 +2,7 @@ import pandas as pd
 from re import sub, split
 
 # add any new RPF fandoms to this
-RPF_FANDOMS = [
+RPF_FANDOMS = [ # these are original versions
     "Adam Lambert (Musician)",
     "Aespa (Band)",
     "American Idol RPF",
@@ -25,6 +25,7 @@ RPF_FANDOMS = [
     "One Direction (Band)",
     "Panic! at the Disco",
     "Phandom/The Fantastic Foursome (YouTube RPF)",
+    "QSMP | Quackity SMP",
     "Red Velvet (K-pop Band)",
     "Rooster Teeth/Achievement Hunter RPF",
     "Rooster Teeth/Achievement Hunter/Funhaus RPF",
@@ -52,7 +53,6 @@ def clean_rpf_fandoms(old_fandom:str):
 
     returns a unified label for it
     """
-
     replace_fandom = {
         # if key in fandom
         "Soccer": "Women's Soccer",
@@ -61,9 +61,13 @@ def clean_rpf_fandoms(old_fandom:str):
         "Phandom": "Youtube",
         "Rooster Teeth": "Youtube",
         "Video Blogging": "Youtube",
+        "Quackity": "Youtube",
         "craft": "Youtube",
         "The Untamed": "魔道祖师 / 陈情令 | Grandmaster of Demonic Cultivation / The Untamed",
         "Super-Vocal":'声入人心 | Super-Vocal',
+        # "ZB1": "ZEROBASEONE / ZB1",
+
+        # TODO zero base one is rpf
     }
     new_fandom = None
     for item in [ # if in fandom -> becomes new fandom
@@ -84,12 +88,14 @@ def clean_rpf_fandoms(old_fandom:str):
     if not new_fandom: # if it wasn't any of those ones
         if "(Band)" in old_fandom:
             new_fandom = old_fandom[:-7]
-        elif old_fandom[-4:] == "RPF":
+        elif "(Korea Band)" in old_fandom:
+            new_fandom = old_fandom[:-13]
+        elif old_fandom[-4:] == " RPF":
             new_fandom = old_fandom[:-4]
-        elif "|" in old_fandom:
-            new_fandom = sub(r"\|", 
-            "/", old_fandom)
         else: new_fandom = old_fandom
+
+        if "|" in old_fandom: # alt titles
+            new_fandom = sub(r"\|", "/", new_fandom)
 
     if new_fandom in ["Lord of the Rings", "Doctor Who"]:
         new_fandom += " Universe"
@@ -231,6 +237,9 @@ def clean_fic_fandoms(old_fandom:str):
         "LEGO Monkie Kid":"Journey to the West Universe",
         "KinnPorsche":"คินน์พอร์ช เดอะ ซีรีส์ | KinnPorsche",
         "Word of Honor" :"天涯客 / 山河令 | Faraway Wanderers / Word of Honor",
+        "Gyakuten Saiban": "逆転裁判 | Ace Attourney",
+        "Honkai": "崩坏：星穹铁道 | Honkai: Star Rail",
+        "Slam Dunk": "スラムダンク | SLAM DUNK",
     }
 
     stays_same = [ # if in fandom = new fandom
@@ -240,6 +249,7 @@ def clean_fic_fandoms(old_fandom:str):
         "Dragon Age",
         "Percy Jackson",
         "Teenage Mutant Ninja Turtles",
+        "Hamilton",
     ]
         
     for universe in renaming_list_dict:
@@ -277,6 +287,7 @@ def clean_fandoms(old_fandom:str):
     """
     cleans/unifies and flips translation of given fandom name, returns clean name
     """
+
     if old_fandom in RPF_FANDOMS:
         new_fandom = clean_rpf_fandoms(old_fandom)
     else: 

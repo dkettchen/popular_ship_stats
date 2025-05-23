@@ -25,20 +25,17 @@ def clean_names(parsed_dict:dict):
     fandom_df = pd.DataFrame(sorted(list(raw_fandoms_and_chars.keys())), columns=["Fandom"])
     fandom_df = find_RPF(fandom_df) # adding RPF bool column
 
-    # cleaning fandoms
+    # cleaning fandoms & sort alphabetically
     fandom_df["New Fandom"] = fandom_df["Fandom"].apply(clean_fandoms)
     fandom_df = fandom_df.rename(columns={
         "Fandom": "Old Fandom", 
         "New Fandom": "Fandom"
     }).sort_values("Fandom")
 
+    # print all fandoms to a list to look at em
     all_fandoms = list(fandom_df["Fandom"].unique())
     with open("data/reference_and_test_files/refactor_helper_files/fandoms.json", "w") as fandoms_json:
         dump(all_fandoms, fandoms_json, indent=4)
-
-
-    # later we still need to order the fandoms alphabetically
-
 
 
 

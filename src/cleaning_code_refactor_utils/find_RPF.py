@@ -20,6 +20,7 @@ def find_RPF(input_df:pd.DataFrame):
         fandom_df["Fandom"].str.contains("Fall Out Boy")) | (
         fandom_df["Fandom"].str.contains("Minecraft")) | (
         fandom_df["Fandom"].str.contains("Hermit")) | (
+        fandom_df["Fandom"].str.contains("Quackity")) | (
         fandom_df["Fandom"].str.contains("Super-Vocal")),
         other=False
     )
