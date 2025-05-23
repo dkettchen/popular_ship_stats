@@ -1,5 +1,8 @@
 from src.cleaning_code_refactor.stage_01_parsing_raw_data import parse_txt
+import pandas as pd
 from src.cleaning_code_refactor_utils.gather_chars_and_fandoms import gather_raw_chars_and_fandoms
+from src.cleaning_code_refactor_utils.find_RPF import find_RPF
+from src.cleaning_code_refactor_utils.clean_fandom_labels import clean_fandoms
 
 def clean_names(parsed_dict:dict):
     ## fourth stage cleaning 
@@ -18,7 +21,12 @@ def clean_names(parsed_dict:dict):
         # clean characters
 
     # extracting fandoms
-    fandoms_srs = sorted(list(raw_fandoms_and_chars.keys()))
+    fandom_df = pd.DataFrame(sorted(list(raw_fandoms_and_chars.keys())), columns=["Fandom"])
+    fandom_df = find_RPF(fandom_df) # adding RPF bool column
+
+    # cleaning fandoms
+    fandom_df["New Fandom"] = fandom_df["Fandom"].apply(clean_fandoms)
+    fandom_df = fandom_df.rename(columns={"Fandom": "Old Fandom", "New Fandom": "Fandom"})
 
 
 
