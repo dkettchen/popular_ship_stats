@@ -1,8 +1,7 @@
 import pandas as pd
 from re import sub, split
 
-# TODO turn the translations around already??
-
+# add any new RPF fandoms to this
 RPF_FANDOMS = [
     "Adam Lambert (Musician)",
     "Aespa (Band)",
@@ -47,7 +46,7 @@ RPF_FANDOMS = [
 ]
 
 # helpers for rpf & fic
-def clean_rpf_fandoms(old_fandom):
+def clean_rpf_fandoms(old_fandom:str):
     """
     takes an rpf fandom name
 
@@ -92,12 +91,14 @@ def clean_rpf_fandoms(old_fandom):
             "/", old_fandom)
         else: new_fandom = old_fandom
 
-    if new_fandom in ["Lord of the Rings", 
-    "Doctor Who"]:
+    if new_fandom in ["Lord of the Rings", "Doctor Who"]:
         new_fandom += " Universe"
 
+    if type(new_fandom) != str:
+        print(new_fandom)
+
     return new_fandom
-def clean_fic_fandoms(old_fandom):
+def clean_fic_fandoms(old_fandom:str):
     """
     takes an fictional fandom name
 
@@ -110,7 +111,7 @@ def clean_fic_fandoms(old_fandom):
         if 'Tiān Guān Cì Fú' in old_fandom:
             new_fandom = "天官赐福 | Heaven Official's Blessing"
         elif 'Módào Zǔshī' in old_fandom:
-            new_fandom = "魔道祖师 / 陈情令 | Grandmaster of Demonic Cultivation / The Untamed",
+            new_fandom = "魔道祖师 / 陈情令 | Grandmaster of Demonic Cultivation / The Untamed"
     elif "Omniscient Reader" in old_fandom: # no clue why it didn't catch these two
         new_fandom = "전지적 독자 시점 | Omniscient Reader"
     elif " - " in old_fandom and "All Media Types" not in old_fandom:
@@ -252,12 +253,33 @@ def clean_fic_fandoms(old_fandom):
         if item in new_fandom:
             new_fandom = item
 
+    if type(new_fandom) != str:
+        print(new_fandom)
+
     return new_fandom # we can also return author name if we want to
 
-def clean_fandoms(old_fandom):
+def flip_translations(old_fandom:str):
     """
-    cleans/unifies given fandom name, returns clean name
+    if given string contains a " | " denoting it is formatted as "(og language title) | (english title)", 
+    it switches the english title to go first & non-english title to go second 
+    (to avoid special characters messing with alphabetical order)
+    """
+
+    if "|" in old_fandom:
+        split_fandom = split(r" \| ", old_fandom)
+        new_fandom = split_fandom[1] + " | " + split_fandom[0]
+    else:
+        new_fandom = old_fandom
+
+    return new_fandom
+
+def clean_fandoms(old_fandom:str):
+    """
+    cleans/unifies and flips translation of given fandom name, returns clean name
     """
     if old_fandom in RPF_FANDOMS:
-        return clean_rpf_fandoms(old_fandom)
-    else: return clean_fic_fandoms(old_fandom)
+        new_fandom = clean_rpf_fandoms(old_fandom)
+    else: 
+        new_fandom = clean_fic_fandoms(old_fandom)
+
+    return flip_translations(new_fandom)
