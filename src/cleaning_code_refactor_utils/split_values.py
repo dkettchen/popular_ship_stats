@@ -210,9 +210,8 @@ def split_pairings_from_fandoms(data_list:list[str]):
 
     returns new list with split values
     """
-
-    # reference file for fandoms
-    with open("data/reference_and_test_files/cleaning_fandoms/all_fandoms_list.json", "r") as json_file:
+    fandom_filepath = "data/reference_and_test_files/refactor_helper_files/fandoms_list_2015_to_2019.json"
+    with open(fandom_filepath, "r") as json_file:
         fandom_dict = load(json_file)
 
     fandom_list = fandom_dict["all_fandoms"]
