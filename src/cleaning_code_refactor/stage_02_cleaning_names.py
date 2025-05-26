@@ -54,6 +54,9 @@ def clean_fandom_and_char_names(parsed_dict:dict):
     char_df = pd.DataFrame(char_names)
 
     # clean names
+    # TODO - just make a look up of the final versions, 
+    # this seems ineffective when we have a limited number of characters
+    # TODO - I also want to make info on when characters joined the ranking!
     name_columns = [
         "given_name",
         "middle_name",
