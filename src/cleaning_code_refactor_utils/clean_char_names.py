@@ -88,7 +88,7 @@ def separate_into_parts(old_name:str):
         ]:
             if conn in part:
                 temp_split = split(conn, part)
-                new_part = [temp_split[0], conn + temp_split[1]]
+                new_part = [temp_split[0], conn[1:] + temp_split[1]]
                 break
 
         if not new_part:
@@ -113,6 +113,7 @@ def clean_names(old_name:str, fandom:str):
     new_name = separate_into_parts(new_name)
     new_name = categorise_names(new_name, fandom)
     # TODO complete names
+        # TODO make lookup of all names bc it'll be easier (and easier to locate new names!)
     new_name["full_name"] = make_full_name(new_name, fandom)
 
     return new_name
