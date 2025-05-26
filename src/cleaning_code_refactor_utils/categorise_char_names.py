@@ -799,8 +799,7 @@ def categorise_names(split_name, fandom):
     if not given_name and not middle_name \
     and not maiden_name and not surname \
     and not alias and not nickname \
-    and not title_prefix and not title_suffix \
-    and not order:
+    and not title_prefix and not title_suffix:
         print(split_name)
 
     default_dict = {
