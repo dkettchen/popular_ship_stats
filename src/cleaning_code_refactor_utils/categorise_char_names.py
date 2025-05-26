@@ -713,10 +713,6 @@ def categorise_names(split_name, fandom):
     ]:
         nickname = split_name[2]
 
-    # removing quotes from nicknames
-    if nickname and nickname[0] == "'" and nickname[-1] == "'":
-        nickname = nickname[1:-1]
-
     ## middle name
     if split_name in first_middle_last_W or split_name in [
         ['Vanessa', 'Vanjie', 'Mateo'],
@@ -789,6 +785,15 @@ def categorise_names(split_name, fandom):
         maiden_name = split_name[1] 
     elif split_name == ['Kate', 'Sheffield', 'Kate', 'Sharma']:
         maiden_name = split_name[1] + "/" + split_name[3]
+
+    for name in [
+        given_name, middle_name, maiden_name,
+        surname, alias, nickname, 
+        title_prefix, title_suffix
+    ]:
+        # removing quotes from names
+        if name and name[0] == "'" and name[-1] == "'":
+            name = name[1:-1]
 
     # checking
     if not given_name and not middle_name \
