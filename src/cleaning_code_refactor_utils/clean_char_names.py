@@ -1,4 +1,5 @@
 from re import split
+from src.cleaning_code_refactor_utils.categorise_char_names import categorise_names
 
 def remove_brackets(old_name:str):
     """
@@ -103,11 +104,12 @@ def separate_into_parts(old_name:str):
 
     return new_name
 
-def clean_names(old_name:str):
+def clean_names(old_name:str, fandom:str):
     """
     removes brackets & splits name string into a list of name parts
     """
     new_name = remove_brackets(old_name)
     new_name = separate_into_parts(new_name)
+    new_name = categorise_names(new_name, fandom)
 
     return new_name

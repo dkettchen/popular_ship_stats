@@ -6,7 +6,7 @@ from src.cleaning_code_refactor_utils.clean_fandom_labels import clean_fandoms
 from src.cleaning_code_refactor_utils.clean_char_names import clean_names
 from json import dump
 
-def clean_names(parsed_dict:dict):
+def clean_fandom_and_char_names(parsed_dict:dict):
     ## fourth stage cleaning 
 
     # collecting all raw fandom & char names
@@ -54,7 +54,28 @@ def clean_names(parsed_dict:dict):
     char_df = pd.DataFrame(char_names)
 
     # clean names
-    char_df["New Name"] = char_df["Old Name"].apply(clean_names)
+    name_columns = [
+        "given_name",
+        "middle_name",
+        "maiden_name",
+        "surname",
+        "alias",
+        "nickname",
+        "title (prefix)",
+        "title (suffix)",
+        "name_order",
+    ]
+
+    for column in name_columns:
+        char_df[column] = None
+
+    for row in char_df.index:
+        current_row = char_df.loc[row]
+        new_name_parts = clean_names(current_row["Old Name"], current_row["Fandom"])
+        for column in name_columns:
+            char_df.loc[row, column] = new_name_parts[column]
+    
+    print(char_df.head())
 
 
 
@@ -65,7 +86,7 @@ def clean_names(parsed_dict:dict):
 
 if __name__ == "__main__":
     parsed_dict = parse_txt()
-    clean_names(parsed_dict)
+    clean_fandom_and_char_names(parsed_dict)
 
 
 
