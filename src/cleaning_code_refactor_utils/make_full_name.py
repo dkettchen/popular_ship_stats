@@ -12,7 +12,7 @@ def make_full_name(char_dict:dict, fandom:str):
     nickname = copy_dict["nickname"]
     title_prefix = copy_dict["title (prefix)"]
     title_suffix = copy_dict["title (suffix)"]
-    order = copy_dict["name_order"]
+    order = copy_dict["order"]
 
     full_name = ""
 

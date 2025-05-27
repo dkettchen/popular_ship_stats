@@ -1,6 +1,5 @@
 from re import split
 from src.cleaning_code_refactor_utils.categorise_char_names import categorise_names
-from src.cleaning_code_refactor_utils.make_full_name import make_full_name
 from data.reference_and_test_files.refactor_helper_files.old_character_names_lookup import OLD_CHARACTERS_LOOKUP
 from src.cleaning_code_refactor_utils.complete_char_names import unify_chars, complete_chars
 

@@ -1,3 +1,5 @@
+from src.cleaning_code_refactor_utils.make_full_name import make_full_name
+
 # various lengths
 player_characters = [
     ["Female","Hawke"],
@@ -86,6 +88,7 @@ single_first_names = [
     'Perfuma', 
     'Raphael', 
     'Rey', 
+    "Sanji",
     'Scorpia', 
     'Sera', 
     'Shego', 
@@ -469,7 +472,9 @@ given_name_0 = [
     ['Ben', 'Solo', 'Kylo', 'Ren'],
     ['Jonathan', "'Jon'", 'Sims', 'The Archivist'], 
     ['Geralt', 'z Rivii', 'Geralt', 'of Rivia'],
-    ['Mary', 'Wardwell', 'Madam', 'Satan', 'Lilith']
+    ['Mary', 'Wardwell', 'Madam', 'Satan', 'Lilith'],
+    ['Charlie', 'Magne', 'Morningstar'],
+    ['Charlie', 'Magne'],
 ]
 given_name_1 = [
     ['Princess', 'Bubblegum'],
@@ -656,7 +661,10 @@ def categorise_names(split_name, fandom):
         surname = "Amamiya"
     elif split_name == ['My Unit', 'Byleth']:
         surname = "Eisner"
-    
+    # overwrite bc it got caught before I suppose
+    if split_name in [['Charlie', 'Magne', 'Morningstar'], ['Charlie', 'Magne']]:
+        surname = split_name[1] + "/Morningstar"
+
     ## alias
     if split_name in alias_0 \
     or split_name in alias_first_last_W \
@@ -811,7 +819,9 @@ def categorise_names(split_name, fandom):
         "nickname": nickname,
         "title (prefix)": title_prefix,
         "title (suffix)": title_suffix,
-        "name_order": order,
+        "order": order,
     }
+
+    default_dict["full_name"] = make_full_name(default_dict, fandom)
 
     return default_dict

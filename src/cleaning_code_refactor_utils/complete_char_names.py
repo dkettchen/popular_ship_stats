@@ -1,5 +1,5 @@
 from copy import deepcopy
-from cleaning_code_refactor_utils.make_full_name import make_full_name
+from src.cleaning_code_refactor_utils.make_full_name import make_full_name
 
 def unify_chars(input_char:dict, fandom:str):
     """
@@ -94,6 +94,13 @@ def unify_chars(input_char:dict, fandom:str):
         elif char["surname"] == "Moriarty" and char["full_name"] != "James 'Jim' Moriarty":
             char["given_name"] = "James"
             char["nickname"] = "Jim"
+    elif "One Piece" in fandom:
+        if "Sanji" in char["full_name"] and char["full_name"] != "Sanji Vinsmoke":
+            char["surname"] = "Vinsmoke"
+    elif fandom == "Hazbin Hotel":
+        if "Charlie" in char["full_name"] and char["full_name"] != "Charlotte 'Charlie' Magne/Morningstar":
+            char["given_name"] = "Charlotte"
+            char["nickname"] = "Charlie"
 
     char["full_name"] = make_full_name(char, fandom)
 
