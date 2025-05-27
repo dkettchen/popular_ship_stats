@@ -1,5 +1,6 @@
 from copy import deepcopy
 from src.cleaning_code_refactor_utils.make_full_name import make_full_name
+from re import sub
 
 def unify_chars(input_char:dict, fandom:str):
     """
@@ -101,6 +102,23 @@ def unify_chars(input_char:dict, fandom:str):
         if "Charlie" in char["full_name"] and char["full_name"] != "Charlotte 'Charlie' Magne/Morningstar":
             char["given_name"] = "Charlotte"
             char["nickname"] = "Charlie"
+    elif "The Untamed" in fandom or "Heaven Official's Blessing" in fandom:
+        # replacing the special characters in romanised chinese names with regular ones
+        special_roman_letters = {
+            "ā":"a",
+            "ǎ":"a",
+            "á":"a",
+            "à":"a",
+            "é":"e",
+            "è":"e",
+            "í":"i",
+            "ī":"i",
+            "ú":"u",
+        }
+        for special_char in special_roman_letters:
+            for name in ["surname", "given_name", "alias"]:
+                if char[name]:
+                    char[name] = sub(special_char, special_roman_letters[special_char], char[name])
 
     char["full_name"] = make_full_name(char, fandom)
 

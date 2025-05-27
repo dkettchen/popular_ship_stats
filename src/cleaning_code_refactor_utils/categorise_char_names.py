@@ -436,7 +436,9 @@ sur_given_courtesy_E = [
     ['Jiāng', 'Chéng', 'Jiāng', 'Wǎnyín'], # sur given sur given, the latter is courtesy name E
     ['Lán', 'Huàn', 'Lán', 'Xīchén'], # ""
     ['Lán', 'Zhàn', 'Lán', 'Wàngjī'], # ""
+    ['Lan', 'Zhan', 'Lan', 'Wangji'],
     ['Wèi', 'Yīng', 'Wèi', 'Wúxiàn'], # ""
+    ['Wei', 'Ying', 'Wei', 'Wuxian'],
 ]
 
 # extra lists (number insensitive)
