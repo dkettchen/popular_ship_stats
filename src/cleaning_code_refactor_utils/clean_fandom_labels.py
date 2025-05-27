@@ -201,7 +201,11 @@ def clean_fic_fandoms(old_fandom:str):
             "Star Wars Episode VII",
             "Star Wars Sequel",
             "Rogue One",
-        ]
+        ],
+        "Hazbin Hotel Universe": [
+            "Hazbin Hotel",
+            "Helluva Boss"
+        ],
     }
     renaming_str_dict = { # if key in fandom -> new_fandom = value
         "Puella Magi Madoka Magica":"魔法少女まどか☆マギカ | Puella Magi Madoka Magica",
