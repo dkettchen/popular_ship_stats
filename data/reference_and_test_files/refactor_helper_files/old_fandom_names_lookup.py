@@ -49,6 +49,12 @@ OLD_FANDOMS_LOOKUP = { # "{old fandom}" : "{new fandom}"
     'Rooster Teeth/Achievement Hunter RPF': 'Youtube', 
     'Rooster Teeth/Achievement Hunter/Funhaus RPF': 'Youtube', 
     'Video Blogging RPF': 'Youtube', 
+    'ATEEZ (Band)': 'ATEEZ', 
+    'Formula 1 RPF': 'Formula 1',
+    'ZEROBASEONE | ZB1 (Korea Band)': 'ZEROBASEONE / ZB1',
+    'SEVENTEEN (Band)': 'SEVENTEEN',
+    'Aespa (Band)': 'Aespa',
+
     '9-1-1 (TV)': '9-1-1', 
     '9-1-1: Lone Star (TV 2020)': '9-1-1', 
     'A Song of Ice and Fire - George R. R. Martin': 'A Song of Ice and Fire / Game of Thrones Universe', 
@@ -298,5 +304,13 @@ OLD_FANDOMS_LOOKUP = { # "{old fandom}" : "{new fandom}"
     'Wynonna Earp (TV)': 'Wynonna Earp', 
     'Xena: Warrior Princess': 'Xena', 
     'Young Royals (TV 2021)': 'Young Royals', 
-    'Yuri!!! on Ice (Anime)': 'Yuri!!! on ICE | ユーリ!!! on ICE'
+    'Yuri!!! on Ice (Anime)': 'Yuri!!! on ICE | ユーリ!!! on ICE',
+    "Baldur's Gate (Video Games)": "Baldur's Gate",
+    '崩坏：星穹铁道 | Honkai: Star Rail (Video Game)': 'Honkai: Star Rail | 崩坏：星穹铁道',
+    'Helluva Boss (Web Series)': 'Helluva Boss',
+    'The Legend of Zelda: Breath of the Wild/Tears of the Kingdom': 'The Legend of Zelda',
+    'Red White & Royal Blue - Casey McQuiston': 'Red White & Royal Blue',
+    '逆転裁判 | Gyakuten Saiban | Ace Attorney': 'Ace Attourney | 逆転裁判',
+    'Slam Dunk (Anime & Manga)': 'SLAM DUNK | スラムダンク',
+    'Alien Stage (Web Series)': 'Alien Stage',
 }
