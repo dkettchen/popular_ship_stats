@@ -2,6 +2,7 @@ from re import split
 from src.cleaning_code_refactor_utils.categorise_char_names import categorise_names
 from src.cleaning_code_refactor_utils.make_full_name import make_full_name
 from data.reference_and_test_files.refactor_helper_files.old_character_names_lookup import OLD_CHARACTERS_LOOKUP
+from src.cleaning_code_refactor_utils.complete_char_names import unify_chars, complete_chars
 
 def remove_brackets(old_name:str):
     """
@@ -125,12 +126,8 @@ def clean_names(old_name:str, fandom:str):
         new_name = remove_brackets(old_name)
         new_name = separate_into_parts(new_name)
         new_name = categorise_names(new_name, fandom)
-        # TODO complete names
-            # TODO make lookup of all names bc it'll be easier (and easier to locate new names!)
-                # ie check lookup, if name not in lookup yet, run cleaning & print! (order tbd)
-                # maybe we auto-generate a new file whenever there's new characters? or append?? 
-                # or have a command to append once we're happy with our cleaning to avoid doubles?
-        new_name["full_name"] = make_full_name(new_name, fandom)
+        new_name = unify_chars(new_name, fandom)
+        new_name = complete_chars(new_name, fandom)
         
         print("This character is not in the lookup yet:", {f"{fandom} - {old_name}" : new_name["full_name"]})
 
