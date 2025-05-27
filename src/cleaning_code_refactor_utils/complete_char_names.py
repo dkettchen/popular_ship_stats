@@ -260,6 +260,19 @@ add_or_replace_sur = {
     "Critical Role": {
         "Yasha": "Nydoorin"
     },
+    "Baldur's Gate": {
+        "Astarion": "Ancunín",
+        "Gale": "Dekarios",
+    },
+    "Genshin Impact | 原神": {
+        "Furina" : "de Fontaine"
+    },
+    "Bridgerton": {
+        'Penelope, née Featherington': "Bridgerton"
+    },
+    "Youtube": {
+        'Rafael Lange | Cellbit': "Lange Severino"
+    }
 }
 add_nick = {
     "JoJo's Bizarre Adventure | ジョジョの奇妙な冒険": {
@@ -432,8 +445,16 @@ other_name_parts = {
     },
     "Persona": {
         "Amamiya Ren | Player Character": "| Joker"
+    },
+    "Harry Potter Universe": {
+        'Fleur, née Delacour': {
+            "middle_name": "Isabelle",
+            "surname": "Weasley",
+        }
+    },
+    "9-1-1": {
+        "'Tommy' Kinard": "Thomas"
     }
-
 }
 
 def complete_chars(input_char:dict, fandom:str):
@@ -537,7 +558,8 @@ def complete_chars(input_char:dict, fandom:str):
 
     elif fandom in other_name_parts \
     and character in other_name_parts[fandom]:
-        if character == "Technoblade":
+
+        if character in ["Technoblade", "'Tommy' Kinard"]:
             char["given_name"] = other_name_parts[fandom][character]
         elif character == "Jesse McCree":
             char["alias"] = char["surname"]
@@ -556,16 +578,19 @@ def complete_chars(input_char:dict, fandom:str):
             'Harry Watson',
             'Ken Hutchinson',
             "Billy Kaplan",
+            'Fleur, née Delacour',
         ]:
-            char["given_name"] = other_name_parts[fandom][character]["given_name"]
-            char["surname"] = other_name_parts[fandom][character]["surname"]
-            print(char["order"], "are these all W")
+            if "given_name" in other_name_parts[fandom][character]:
+                char["given_name"] = other_name_parts[fandom][character]["given_name"]
+            if "surname" in other_name_parts[fandom][character]:
+                char["surname"] = other_name_parts[fandom][character]["surname"]
             
             if character in [ # ppl with a middle name
                 "TommyInnit",
                 "Wilbur Soot",
                 "Lex Luthor",
                 'Abby Sciuto',
+                'Fleur, née Delacour',
             ]:
                 char["middle_name"] = other_name_parts[fandom][character]["middle_name"]
             if character in [ # ppl with a nickname

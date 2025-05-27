@@ -72,7 +72,8 @@ def separate_into_parts(old_name:str):
         "Venom Symbiote",
         "Lapis Lazuli", 
         "Iron Bull",
-        "Wilbur Soot"
+        "Wilbur Soot",
+        'The Dark Urge',
     ]
 
     for part in split_name:

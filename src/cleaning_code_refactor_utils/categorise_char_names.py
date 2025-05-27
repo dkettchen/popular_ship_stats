@@ -14,6 +14,8 @@ player_characters = [
     ['Traveler'], # genshin
     ['Persona 5 Protagonist'], # this man has a name & race & gender!!
     ['My Unit', 'Byleth'],
+    ["Tav"],
+    ['The Dark Urge'],
 ]
 
 # single names
@@ -141,6 +143,17 @@ single_first_names = [
     'Ruby',
     'Sapphire',
     'Sans',
+    "Astarion",
+    "Tav",
+    "Gale",
+    'Neuvillette',
+    'Wriothesley',
+    "Furina",
+    "Husk",
+    "Vox",
+    "Alastor",
+    "Valentino",
+    "Laudna",
 ]
 single_aliases = [
     'Dabi',
@@ -158,6 +171,8 @@ single_aliases = [
     "Iron Bull",
     "Wilbur Soot",
     'Skye', 
+    "The Dark Urge",
+    "Roier",
 ]
 single_nicknames = [
     'Spike',
@@ -282,6 +297,13 @@ E_order_folks = [ # these should all already be in the surname - given name orde
     ['Wen', 'Kexing'],
     ['Zhou', 'Zishu'],
     ['Katsuki', 'Yuuri'],
+    ["Toga","Himiko"],
+    ["Azusawa", "Kohane"],
+    ["Shiraishi", "An"],
+    ["Kugisaki", "Nobara"],
+    ["Zenin", "Maki"],
+    ["Itadori", "Yuuji"],
+    ["Fushiguro", "Megumi"],
 ]
 non_double_names = [
     ['Ryan', 'GoodTimesWithScar'],
@@ -305,6 +327,9 @@ non_double_names = [
     ["Hunter","The Golden Guard"],
     ["Quynh","Noriko"],
     ["Jim", "Moriarty"],
+    ["Fleur", "Delacour"],
+    ["Penelope", "Featherington"],
+    ["Tommy","Kinard"],
 ]
 given_suffix = [
     ['Ymir', 'of the 104th'],
@@ -349,6 +374,7 @@ first_last_alias_W = [
     ['Tom', 'Riddle', 'Voldemort'],
     ['Adrien', 'Agreste', 'Chat Noir'],
     ['Marinette', 'Dupain-Cheng', 'Ladybug'],
+    ['Rafael', 'Lange', 'Cellbit'],
 ]
 first_nick_last_W = [
     ['Evan', "'Buck'", 'Buckley'],
@@ -475,8 +501,11 @@ given_name_0 = [
     ['Jonathan', "'Jon'", 'Sims', 'The Archivist'], 
     ['Geralt', 'z Rivii', 'Geralt', 'of Rivia'],
     ['Mary', 'Wardwell', 'Madam', 'Satan', 'Lilith'],
+    ['Lucifer', 'Magne', 'Morningstar'],
     ['Charlie', 'Magne', 'Morningstar'],
     ['Charlie', 'Magne'],
+    ["Fleur", "Delacour"],
+    ["Penelope", "Featherington"],
 ]
 given_name_1 = [
     ['Princess', 'Bubblegum'],
@@ -510,6 +539,7 @@ sur_1 = [
     ['Anakin', 'Skywalker', 'Darth', 'Vader'],
     ['Ben', 'Solo', 'Kylo', 'Ren'],
     ['Mary', 'Wardwell', 'Madam', 'Satan', 'Lilith'],
+    ["Tommy","Kinard"],
 ]
 sur_2 = [
     ['Original', 'Percival', 'Graves'],
@@ -664,7 +694,7 @@ def categorise_names(split_name, fandom):
     elif split_name == ['My Unit', 'Byleth']:
         surname = "Eisner"
     # overwrite bc it got caught before I suppose
-    if split_name in [['Charlie', 'Magne', 'Morningstar'], ['Charlie', 'Magne']]:
+    if fandom == "Hazbin Hotel" and "Magne" in split_name:
         surname = split_name[1] + "/Morningstar"
 
     ## alias
@@ -703,7 +733,9 @@ def categorise_names(split_name, fandom):
     elif "Reader" in split_name[0] or "Reader" in split_name:
         alias = "Reader"
     if split_name in player_characters: 
-        alias = "Player Character"
+        if not alias:
+            alias = "Player Character"
+        else: alias += " | Player Character"
 
     ## nickname
     if (len(split_name) == 1 and split_name[0] in single_nicknames) \
@@ -712,6 +744,7 @@ def categorise_names(split_name, fandom):
     or split_name in [
         ["Jim", "Moriarty"],
         ['Nicky', 'Nicolò', 'di Genova'],
+        ["Tommy","Kinard"],
     ]:
         nickname = split_name[0]
     elif split_name in first_nick_last_W \
@@ -791,7 +824,9 @@ def categorise_names(split_name, fandom):
                 title_suffix = "(" + split_name[0] + ")"
 
     ## maiden name
-    if split_name in first_maiden_last_W:
+    if split_name in first_maiden_last_W or split_name in [
+        ["Fleur", "Delacour"], ["Penelope", "Featherington"]
+    ]:
         maiden_name = split_name[1] 
     elif split_name == ['Kate', 'Sheffield', 'Kate', 'Sharma']:
         maiden_name = split_name[1] + "/" + split_name[3]
