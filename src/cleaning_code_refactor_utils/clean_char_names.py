@@ -1,6 +1,7 @@
 from re import split
 from src.cleaning_code_refactor_utils.categorise_char_names import categorise_names
 from src.cleaning_code_refactor_utils.make_full_name import make_full_name
+from data.reference_and_test_files.refactor_helper_files.old_character_names_lookup import OLD_CHARACTERS_LOOKUP
 
 def remove_brackets(old_name:str):
     """
@@ -107,13 +108,30 @@ def separate_into_parts(old_name:str):
 
 def clean_names(old_name:str, fandom:str):
     """
-    removes brackets & splits name string into a list of name parts
+    takes old name & clean fandom
+
+    returns a dict with at least a full_name key
+
+    if it's a new character that isn't in the lookup yet, 
+    it also prints the full name (to add to the lookup) 
+    and returns the parsed name parts in the dict
     """
-    new_name = remove_brackets(old_name)
-    new_name = separate_into_parts(new_name)
-    new_name = categorise_names(new_name, fandom)
-    # TODO complete names
-        # TODO make lookup of all names bc it'll be easier (and easier to locate new names!)
-    new_name["full_name"] = make_full_name(new_name, fandom)
+    # check if character is already in our known characters lookup
+    if f"{fandom} - {old_name}" in OLD_CHARACTERS_LOOKUP:
+        new_name = {"full_name": OLD_CHARACTERS_LOOKUP[f"{fandom} - {old_name}"]}
+
+    # otherwise clean & print
+    else:
+        new_name = remove_brackets(old_name)
+        new_name = separate_into_parts(new_name)
+        new_name = categorise_names(new_name, fandom)
+        # TODO complete names
+            # TODO make lookup of all names bc it'll be easier (and easier to locate new names!)
+                # ie check lookup, if name not in lookup yet, run cleaning & print! (order tbd)
+                # maybe we auto-generate a new file whenever there's new characters? or append?? 
+                # or have a command to append once we're happy with our cleaning to avoid doubles?
+        new_name["full_name"] = make_full_name(new_name, fandom)
+        
+        print("This character is not in the lookup yet:", {f"{fandom} - {old_name}" : new_name["full_name"]})
 
     return new_name

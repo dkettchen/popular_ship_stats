@@ -1,5 +1,6 @@
 import pandas as pd
 from re import sub, split
+from data.reference_and_test_files.refactor_helper_files.old_fandom_names_lookup import OLD_FANDOMS_LOOKUP
 
 # add any new RPF fandoms to this
 RPF_FANDOMS = [ # these are original versions
@@ -287,10 +288,18 @@ def clean_fandoms(old_fandom:str):
     """
     cleans/unifies and flips translation of given fandom name, returns clean name
     """
+    # if it's a known old fandom, we get the clean version from the lookup
+    if old_fandom in OLD_FANDOMS_LOOKUP:
+        new_fandom = OLD_FANDOMS_LOOKUP[old_fandom]
+    
+    # otherwise we clean it & print it
+    else:
+        if old_fandom in RPF_FANDOMS:
+            new_fandom = clean_rpf_fandoms(old_fandom)
+        else: 
+            new_fandom = clean_fic_fandoms(old_fandom)
+        new_fandom = flip_translations(new_fandom)
 
-    if old_fandom in RPF_FANDOMS:
-        new_fandom = clean_rpf_fandoms(old_fandom)
-    else: 
-        new_fandom = clean_fic_fandoms(old_fandom)
+        print("This fandom is not in the lookup yet:", {old_fandom : new_fandom})
 
-    return flip_translations(new_fandom)
+    return new_fandom
