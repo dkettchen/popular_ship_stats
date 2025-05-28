@@ -104,7 +104,6 @@ def parse_txt():
             "New Works" : None,
             "Type" : ["F", "F"], # only missing in femslash (we'll fix the included genderqueers later)
             "Race" : [None, None],
-            "Release Date" : None
         }
         for column in missing_columns.keys():
             if column not in df.columns:
@@ -113,6 +112,9 @@ def parse_txt():
                 else:
                     df[column] = [missing_columns[column] for i in range(len(df))]
         
+        if "Release Date" in df.columns:
+            df.pop("Release Date") # not being used, only appeared in one year anyway
+
         df = df.where(df["Rank"] <= 100).dropna(how="all")
 
         if year not in df_dict.keys():

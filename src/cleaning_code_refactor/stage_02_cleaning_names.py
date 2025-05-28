@@ -10,8 +10,21 @@ def gather_chars_and_fandoms(data_dict:dict):
     """
     takes a nested dictionary from parsing stage
 
-    returns a dictionary containing all raw fandom names (as keys)
-    and the raw character names appearing with them (as list values)
+    returns a dictionary containing all new fandom names (as keys)
+    with 
+    - the year they first appeared in the ranking,
+    - all years they appeared in,
+    - their RPF status (True, False. or "both" (eg if both fictional characters 
+    and their actors are in the ranking)),
+    - their previous names,
+    - and a dict of their characters, 
+    which in turn contains 
+        - all new character names (as keys)
+        - their full name (same as key) ((we are forgoing their full name bits from 
+        previous code's version as they're not used after cleaning -> no need to save them)),
+        - the year they first appeared in the ranking,
+        - all years they appeared in,
+        - and their previous names
     """
 
     chars_and_fandoms = {}
@@ -45,6 +58,7 @@ def gather_chars_and_fandoms(data_dict:dict):
             if fandom not in chars_and_fandoms.keys():
                 chars_and_fandoms[fandom] = {
                     "year_joined": year, 
+                    "years_appeared": [year],
                     "rpf": rpf_bool, 
                     "raw_versions": [], 
                     "characters": {},
@@ -56,6 +70,9 @@ def gather_chars_and_fandoms(data_dict:dict):
             # if raw version of it is new, add it to list
             if old_fandom not in chars_and_fandoms[fandom]["raw_versions"]:
                 chars_and_fandoms[fandom]["raw_versions"].append(old_fandom)
+            # if this year's appearance has not been tracked yet
+            if year not in chars_and_fandoms[fandom]["years_appeared"]:
+                chars_and_fandoms[fandom]["years_appeared"].append(year)
 
         # put characters in relevant fandoms
         for row in year_rankings.index:
@@ -72,11 +89,15 @@ def gather_chars_and_fandoms(data_dict:dict):
                 if full_name not in chars_and_fandoms[current_fandom]["characters"].keys():
                     chars_and_fandoms[current_fandom]["characters"][full_name] = clean_char
                     chars_and_fandoms[current_fandom]["characters"][full_name]["year_joined"] = year
+                    chars_and_fandoms[current_fandom]["characters"][full_name]["years_appeared"] = [year]
                     chars_and_fandoms[current_fandom]["characters"][full_name]["raw_versions"] = []
 
                 # if old name has not been tracked yet
                 if char not in chars_and_fandoms[current_fandom]["characters"][full_name]["raw_versions"]:
                     chars_and_fandoms[current_fandom]["characters"][full_name]["raw_versions"].append(char)
+                # if this year's appearance has not been tracked yet
+                if year not in chars_and_fandoms[current_fandom]["characters"][full_name]["years_appeared"]:
+                    chars_and_fandoms[current_fandom]["characters"][full_name]["years_appeared"].append(year)
 
     # checking that all fandoms have characters in them
     for fandom in chars_and_fandoms:
@@ -84,6 +105,8 @@ def gather_chars_and_fandoms(data_dict:dict):
             print(fandom)
 
     return chars_and_fandoms
+
+# I guess our lookups function as old name - new name files
 
 if __name__ == "__main__":
     parsed_dict = parse_txt()
