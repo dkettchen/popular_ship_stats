@@ -1,21 +1,9 @@
-# go through years of rankings
-
-# combine that year's rankings 
-
-# extract all their fandoms
-    # clean em immediately & mark new ones with year joined
-# extract all characters, separate pairings, assign their fandoms
-    # clean names immediately & mark new ones with year joined
-
-
-
-
-
 import pandas as pd
 from src.cleaning_code_refactor.stage_01_parsing_raw_data import parse_txt
 from src.cleaning_code_refactor_utils.find_RPF import find_RPF
 from src.cleaning_code_refactor_utils.clean_fandom_labels import clean_fandoms
 from src.cleaning_code_refactor_utils.clean_char_names import clean_names
+from json import dump
 
 def gather_chars_and_fandoms(data_dict:dict):
     """
@@ -28,7 +16,8 @@ def gather_chars_and_fandoms(data_dict:dict):
     chars_and_fandoms = {}
     
     # iterating over all files
-    for year in data_dict:
+    years_in_order = sorted(list(data_dict.keys()))
+    for year in years_in_order:
 
         # retrieve all of that year's data
         all_rankings_list = []
@@ -49,7 +38,7 @@ def gather_chars_and_fandoms(data_dict:dict):
             # print(current_row)
             fandom = current_row["New Fandom"]
             old_fandom = current_row["Fandom"]
-            rpf_bool = current_row["RPF"]
+            rpf_bool = bool(current_row["RPF"]) # why not regular bool usually smh
 
             # if it's new, mark it with year joined & rpf status
             if fandom not in chars_and_fandoms.keys():
@@ -59,6 +48,9 @@ def gather_chars_and_fandoms(data_dict:dict):
                     "raw_versions": [], 
                     "characters": {},
                 }
+
+            if rpf_bool != chars_and_fandoms[fandom]["rpf"]:
+                chars_and_fandoms[fandom]["rpf"] = "both"
 
             # if raw version of it is new, add it to list
             if old_fandom not in chars_and_fandoms[fandom]["raw_versions"]:
@@ -96,4 +88,7 @@ def gather_chars_and_fandoms(data_dict:dict):
 
 if __name__ == "__main__":
     parsed_dict = parse_txt()
-    gather_chars_and_fandoms(parsed_dict)
+    gathered_dict = gather_chars_and_fandoms(parsed_dict)
+    filepath = "data/reference_and_test_files/refactor_helper_files/cleaned_fandoms_and_characters.json"
+    with open(filepath, "w") as json_file:
+        dump(gathered_dict, json_file, indent=4)

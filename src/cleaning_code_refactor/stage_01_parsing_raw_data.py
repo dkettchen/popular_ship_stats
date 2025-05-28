@@ -113,6 +113,8 @@ def parse_txt():
                 else:
                     df[column] = [missing_columns[column] for i in range(len(df))]
         
+        df = df.where(df["Rank"] <= 100).dropna(how="all")
+
         if year not in df_dict.keys():
             df_dict[year] = {}
         df_dict[year][ranking] = df
