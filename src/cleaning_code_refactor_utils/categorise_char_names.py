@@ -154,6 +154,12 @@ single_first_names = [
     "Alastor",
     "Valentino",
     "Laudna",
+    "Blitzo",
+    "Dan Heng",
+    "Link",
+    "Zelda",
+    "Ivan",
+    "Till",
 ]
 single_aliases = [
     'Dabi',
@@ -173,6 +179,8 @@ single_aliases = [
     'Skye', 
     "The Dark Urge",
     "Roier",
+    "Blade",
+    "Aventurine",
 ]
 single_nicknames = [
     'Spike',
@@ -304,6 +312,16 @@ E_order_folks = [ # these should all already be in the surname - given name orde
     ["Zenin", "Maki"],
     ["Itadori", "Yuuji"],
     ["Fushiguro", "Megumi"],
+    ['Mitsui','Hisashi'],
+    ['Miyagi','Ryota'],
+    ['Park','Seonghwa'],
+    ['Kim','Hongjoong'],
+    ['Choi','San'],
+    ['Jung','Wooyoung'],
+    ['Jeon','Wonwoo'],
+    ['Kim','Mingyu'],
+    ['Sung','Hanbin'],
+    ['Zhang','Hao'],
 ]
 non_double_names = [
     ['Ryan', 'GoodTimesWithScar'],
@@ -330,6 +348,7 @@ non_double_names = [
     ["Fleur", "Delacour"],
     ["Penelope", "Featherington"],
     ["Tommy","Kinard"],
+    ["Dr.", "Ratio"],
 ]
 given_suffix = [
     ['Ymir', 'of the 104th'],
@@ -367,6 +386,8 @@ surname_given_alias_E = [
     ['Do', 'Kyungsoo', 'D.O'],
     ['Kim', 'Jongin', 'Kai'],
     ['Nanjo', 'Kojiro', 'Joe'],
+    ['Kim', 'Minjeong', 'Winter'],
+    ['Yu', 'Jimin', 'Karina'],
 ]
 first_last_alias_W = [
     ['Phil', 'Watson', 'Philza'],
@@ -540,6 +561,7 @@ sur_1 = [
     ['Ben', 'Solo', 'Kylo', 'Ren'],
     ['Mary', 'Wardwell', 'Madam', 'Satan', 'Lilith'],
     ["Tommy","Kinard"],
+    ["Dr.", "Ratio"],
 ]
 sur_2 = [
     ['Original', 'Percival', 'Graves'],
@@ -642,6 +664,8 @@ def categorise_names(split_name, fandom):
         given_name = "Y/N"
     elif split_name == ['Persona 5 Protagonist']:
         given_name = "Ren"
+    elif split_name == ['Dan', 'Feng', 'Previous', 'Imbibitor', 'Lunae']:
+        given_name = "Dan Feng" # previous reincarnation of Dan HENG -> DIFFERENT GUY!!!
 
     ## surnames
     # surname 0
@@ -696,6 +720,18 @@ def categorise_names(split_name, fandom):
     # overwrite bc it got caught before I suppose
     if fandom == "Hazbin Hotel" and "Magne" in split_name:
         surname = split_name[1] + "/Morningstar"
+
+    if split_name in [
+        ['Mitsurugi', 'Reiji', 'Miles', 'Edgeworth'],
+        ['Naruhodou', 'Ryuuichi', 'Phoenix', 'Wright'],
+    ]:
+        given_name = split_name[1]
+        surname = split_name[0]
+        order = "E"
+        alias = split_name[2] + " " + split_name[3]
+
+
+
 
     ## alias
     if split_name in alias_0 \
@@ -772,6 +808,7 @@ def categorise_names(split_name, fandom):
         ['Princess', 'Bubblegum'],
         ["Madame", "Vastra"],
         ['Captain', 'Hook', 'Killian', 'Jones'],
+        ["Dr.", "Ratio"],
     ]:
         title_prefix = split_name[0]
     elif split_name == ['Rumpelstiltskin', 'Mr.', 'Gold']: 

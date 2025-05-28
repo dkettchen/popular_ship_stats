@@ -1,4 +1,5 @@
 from copy import deepcopy
+from re import sub
 
 def make_full_name(char_dict:dict, fandom:str):
 
@@ -67,6 +68,8 @@ def make_full_name(char_dict:dict, fandom:str):
             legal_name = f"{given_name} {surname}"
         if alias:
             full_name = f"{legal_name} | {alias} {given_name}"
+    elif "Ace Attourney" in fandom:
+        full_name = sub(r"\|", r"/", full_name)
 
     full_name = full_name.strip() # removing leading white space if any
 

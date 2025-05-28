@@ -74,6 +74,7 @@ def separate_into_parts(old_name:str):
         "Iron Bull",
         "Wilbur Soot",
         'The Dark Urge',
+        "Dan Heng", # can't figure out what name parts this is so just assuming double given name
     ]
 
     for part in split_name:

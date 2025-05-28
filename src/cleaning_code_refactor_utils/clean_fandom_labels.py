@@ -66,9 +66,7 @@ def clean_rpf_fandoms(old_fandom:str):
         "craft": "Youtube",
         "The Untamed": "魔道祖师 / 陈情令 | Grandmaster of Demonic Cultivation / The Untamed",
         "Super-Vocal":'声入人心 | Super-Vocal',
-        # "ZB1": "ZEROBASEONE / ZB1",
-
-        # TODO zero base one is rpf
+        "Aespa": "Aespa / æspa",
     }
     new_fandom = None
     for item in [ # if in fandom -> becomes new fandom

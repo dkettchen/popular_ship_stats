@@ -153,6 +153,19 @@ reuse_given_name = {
         "Moira O'Deorain" # Moira
         "Shimada Hanzo" # hanzo later too
     ],
+    "ATEEZ": [
+        "Park Seonghwa",
+        'Kim Hongjoong',
+        'Choi San',
+        'Jung Wooyoung',
+    ],
+    "SEVENTEEN": [
+        'Jeon Wonwoo',
+        'Kim Mingyu',
+    ],
+    "ZEROBASEONE / ZB1": [
+        'Sung Hanbin',
+    ]
 }
 add_alias = {
     "Youtube": {
@@ -272,7 +285,10 @@ add_or_replace_sur = {
     },
     "Youtube": {
         'Rafael Lange | Cellbit': "Lange Severino"
-    }
+    }, 
+    "Hazbin Hotel Universe": {
+        "Blitzo" : "Buckzo"
+    },
 }
 add_nick = {
     "JoJo's Bizarre Adventure | ジョジョの奇妙な冒険": {
@@ -382,7 +398,7 @@ other_name_parts = {
             "nickname": "Alex", 
             "surname": "Maldonado",
         },
-        "Technoblade": "Alexander", # add given name
+        "Technoblade": {"given_name":"Alexander"},
         "TommyInnit": {
             "given_name": "Thomas", 
             "middle_name": "Michael", 
@@ -418,8 +434,8 @@ other_name_parts = {
     "Overwatch": {
         "Jesse McCree" # use last name
     },
-    "White Collar": { # add maiden name
-        "Elizabeth Burke": "Mitchell"
+    "White Collar": { 
+        "Elizabeth Burke": {"maiden_name":"Mitchell"}
     },
     "NCIS": {
         'Abby Sciuto': {
@@ -444,7 +460,7 @@ other_name_parts = {
         }
     },
     "Persona": {
-        "Amamiya Ren | Player Character": "| Joker"
+        "Amamiya Ren | Player Character": {"title (suffix)":"| Joker"}
     },
     "Harry Potter Universe": {
         'Fleur, née Delacour': {
@@ -453,7 +469,30 @@ other_name_parts = {
         }
     },
     "9-1-1": {
-        "'Tommy' Kinard": "Thomas"
+        "'Tommy' Kinard": {"given_name":"Thomas"}
+    },
+    'Red White & Royal Blue':{
+        "Henry Fox-Mountchristen-Windsor": {
+            "middle_name" : "George Edward James",
+            "surname":"Fox-Mountchristen-Windsor/Hanover-Stuart-Fox",
+            "alias": "Prince of Wales",
+        },
+        'Alex Claremont-Diaz': {
+            "given_name": "Alexander",
+            "nickname": "Alex",
+            "middle_name" : "Gabriel",
+        },
+    },
+    'Honkai: Star Rail | 崩坏：星穹铁道':{
+        "Blade" : {
+            "given_name" : "Yingxing",
+        },
+        "Aventurine" : {
+            "given_name" : "Kakavasha",
+        },
+        "Dr. Ratio" : {
+            "given_name" : "Veritas",
+        },
     }
 }
 
@@ -558,53 +597,11 @@ def complete_chars(input_char:dict, fandom:str):
 
     elif fandom in other_name_parts \
     and character in other_name_parts[fandom]:
-
-        if character in ["Technoblade", "'Tommy' Kinard"]:
-            char["given_name"] = other_name_parts[fandom][character]
-        elif character == "Jesse McCree":
+        for name in ["given_name", "surname", "maiden_name", "alias", "middle_name", "nickname"]:
+            if name in other_name_parts[fandom][character]:
+                char[name] = other_name_parts[fandom][character][name]
+        if character == "Jesse McCree":
             char["alias"] = char["surname"]
-        elif character == "Elizabeth Burke":
-            char["maiden_name"] = other_name_parts[fandom][character]
-        elif character == "Amamiya Ren | Player Character":
-            char["title (suffix)"] = other_name_parts[fandom][character]
-
-        elif character in [ # adding multiple name parts
-            "TommyInnit",
-            "Wilbur Soot",
-            "Lex Luthor",
-            "Leo Fitz",
-            "Alexis | Quackity",
-            'Abby Sciuto',
-            'Harry Watson',
-            'Ken Hutchinson',
-            "Billy Kaplan",
-            'Fleur, née Delacour',
-        ]:
-            if "given_name" in other_name_parts[fandom][character]:
-                char["given_name"] = other_name_parts[fandom][character]["given_name"]
-            if "surname" in other_name_parts[fandom][character]:
-                char["surname"] = other_name_parts[fandom][character]["surname"]
-            
-            if character in [ # ppl with a middle name
-                "TommyInnit",
-                "Wilbur Soot",
-                "Lex Luthor",
-                'Abby Sciuto',
-                'Fleur, née Delacour',
-            ]:
-                char["middle_name"] = other_name_parts[fandom][character]["middle_name"]
-            if character in [ # ppl with a nickname
-                "Lex Luthor",
-                "Leo Fitz",
-                "Alexis | Quackity",
-                'Abby Sciuto',
-                'Harry Watson',
-                'Ken Hutchinson',
-                "Billy Kaplan",
-            ]:
-                char["nickname"] = other_name_parts[fandom][character]["nickname"]
-            if character in ["Billy Kaplan"]:
-                char["alias"] = other_name_parts[fandom][character]["alias"]
 
     # if fandom == "The 100" and char["given_name"] == "Alicia":
     #     char["fandom"] = "The Walking Dead"

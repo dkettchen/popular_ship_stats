@@ -53,7 +53,7 @@ OLD_FANDOMS_LOOKUP = { # "{old fandom}" : "{new fandom}"
     'Formula 1 RPF': 'Formula 1',
     'ZEROBASEONE | ZB1 (Korea Band)': 'ZEROBASEONE / ZB1',
     'SEVENTEEN (Band)': 'SEVENTEEN',
-    'Aespa (Band)': 'Aespa',
+    'Aespa (Band)': 'Aespa / æspa',
 
     '9-1-1 (TV)': '9-1-1', 
     '9-1-1: Lone Star (TV 2020)': '9-1-1', 
