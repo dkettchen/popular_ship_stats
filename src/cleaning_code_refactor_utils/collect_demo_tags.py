@@ -4,9 +4,22 @@ def collect_demo_tags(fandoms_and_chars_dict:dict, clean_rankings_dict:dict):
     """
     collects labels from most recent to oldest
 
-    TODO doc string
-    """
+    returns a dict similar to input fandoms & chars dict, but with added keys on each character:
+    - most_recent_gender_tag
+    - most_recent_race_tag
+    - most_recent_same_gender_tag
+    - most_recent_same_race_tag
+    - all_gender_tags
+    - all_race_tags
 
+    most recent tag collects the most recent tag associated with the character on any ship, 
+    along with the ship's number of members and the character's index in the ship list
+    
+    most recent same (x) tag collects the most recent tag where the whole ship was the same tag (ex ["M","M"])
+
+    all tags is a set of all the tags associated with the character, 
+    each also saved with ship length and index
+    """
 
     char_dict = deepcopy(fandoms_and_chars_dict)
 
@@ -57,7 +70,7 @@ def collect_demo_tags(fandoms_and_chars_dict:dict, clean_rankings_dict:dict):
                     and gender_tag in [['M', 'M'], ['F', 'F']]:  
                         char_dict[fandom]["characters"][char]["most_recent_same_gender_tag"] = gender_tag
                     if race_tag and not char_dict[fandom]["characters"][char]["most_recent_same_race_tag"] \
-                    and "/" not in race_tag:  
+                    and "/" not in race_tag and race_tag != "POC":  
                         char_dict[fandom]["characters"][char]["most_recent_same_race_tag"] = race_tag
                     
                     # add any tag + char's position in ship to all tags
