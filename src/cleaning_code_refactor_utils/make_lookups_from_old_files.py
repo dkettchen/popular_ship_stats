@@ -1,6 +1,7 @@
 from json import load
 from data.reference_and_test_files.refactor_helper_files.old_character_names_lookup import OLD_CHARACTERS_LOOKUP
 from data.reference_and_test_files.refactor_helper_files.old_fandom_names_lookup import OLD_FANDOMS_LOOKUP
+import pandas as pd
 
 data_folder = "data/reference_and_test_files/refactor_helper_files/old_files_for_ref"
 
@@ -42,6 +43,23 @@ for fandom in read_data:
             og_fandoms[og] = fandom
 print(og_fandoms) # print anything that isn't in the lookup yet
 
+
+## get demo data
+
+fandoms_filepath = f"{data_folder}/characters_list.csv"
+with open(fandoms_filepath, "r") as csv_file:
+    read_df = pd.read_csv(csv_file, escapechar="`")
+
+less_columns = read_df.get(['full_name', 'fandom', 'gender', 'race'])
+
+lookup_dict = {}
+for row in less_columns.index:
+    current_row = less_columns.loc[row]
+    fandom_char = f'{current_row["fandom"]} - {current_row["full_name"]}'
+    gender_race = f'{current_row["gender"]} - {current_row["race"]}'
+    lookup_dict[fandom_char] = gender_race
+
+print(lookup_dict) # print entire lookup
 
 
 
