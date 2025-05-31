@@ -62,6 +62,26 @@ for row in less_columns.index:
 print(lookup_dict) # print entire lookup
 
 
+## get orientation data
+
+fandoms_filepath = f"{data_folder}/orientation_list.csv"
+with open(fandoms_filepath, "r") as csv_file:
+    read_df = pd.read_csv(csv_file, escapechar="`")
+
+lookup_dict = {}
+orient_labels = sorted(list(read_df["orientation"].unique()))
+for label in orient_labels:
+    lookup_dict[label] = []
+
+for row in read_df.index:
+    current_row = read_df.loc[row]
+    fandom_char = f'{current_row["fandom"]} - {current_row["full_name"]}'
+    orientation = current_row["orientation"]
+    lookup_dict[orientation].append(fandom_char)
+
+print(lookup_dict) # print entire lookup
+
+
 
 
 

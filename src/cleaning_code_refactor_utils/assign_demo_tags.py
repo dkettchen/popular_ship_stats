@@ -1,7 +1,7 @@
 from copy import deepcopy
 from re import split
 from src.cleaning_code_refactor_utils.correct_demo_tags import correct_demo_tags
-from data.reference_and_test_files.refactor_helper_files.demo_data_lookup import GENDER_RACE
+from data.reference_and_test_files.refactor_helper_files.demo_data_lookup import GENDER_RACE, ORIENTATIONS
 
 # TODO put helpers into other files?
 
@@ -97,12 +97,14 @@ def assign_tag(char_dict:dict, gender_or_race):
 
 def assign_demo_tags(raw_tags_dict:dict):
     """
-    adds correct gender & race tag to each character in each fandom in the input dictionary
+    adds correct gender, race & orientation tag to each character in each fandom in the input dictionary
 
-    uses values from lookup if character is in there
+    uses values from lookups if character is in there
 
     otherwise, it figures out the character's tags and prints the result, 
     ready to be added to lookup (if correct)
+
+    it also removes the temporary keys from race/gender tag collection
     """
 
     char_dict = deepcopy(raw_tags_dict)
@@ -130,10 +132,29 @@ def assign_demo_tags(raw_tags_dict:dict):
                 demo_data = f"{gender_tag} - {race_tag}"
                 print({fandom_char: demo_data}, current_char)
 
+            # orientations are fully just lookup based, no tag collecting, bc I had to look it up manually
+            orient_tag = None
+            for orientation in ORIENTATIONS: # check lookup
+                if fandom_char in ORIENTATIONS[orientation]: # if char is in lookup
+                    orient_tag = orientation # assign orientation
+            if not orient_tag: # if the char isn't in the lookup yet
+                print(fandom_char, "- orientation??")
 
             current_char["gender_tag"] = gender_tag
             current_char["race_tag"] = race_tag
+            current_char["orientation_tag"] = orient_tag
 
-            char_dict[fandom]["characters"][char] = current_char
+            new_char = {}
+            for key in current_char:
+                if key not in [
+                    "most_recent_gender_tag",
+                    "most_recent_same_gender_tag",
+                    "all_race_tags",
+                    "most_recent_race_tag",
+                    "most_recent_same_race_tag",
+                ]:
+                    new_char[key] = current_char[key]
+
+            char_dict[fandom]["characters"][char] = new_char
 
     return char_dict

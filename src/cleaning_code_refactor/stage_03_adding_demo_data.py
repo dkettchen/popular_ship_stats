@@ -13,27 +13,19 @@ def gather_char_demo_data(clean_dict:dict):
 
     # go through rankings, collect data to fandoms' characters' entries
     raw_tags_added = collect_demo_tags(fandom_and_char_dict, clean_dict)
-    # assign latest tags
-    latest_tags_assigned = assign_demo_tags(raw_tags_added)
 
+    # determine gender, race & orientation tags
+    tags_assigned = assign_demo_tags(raw_tags_added)
+    
+    # TODO turns relevant values into df & print to csv??
 
-    # determine/correct final gender & race tags
-        # check new characters for genderqueers (I know one of the hazbin hotel ones should be tagged)
-        # double check new characters' race data & recategorise where applicable
-
-    # also do orientation data
-
-    # print any that aren't in lookup yet 
-        # UTIL make a lookup of names-fandom & their corresponding demo data
-            # make original version from existing data file we have
-
-    pass
+    return tags_assigned
 
 # compile ship demo data
     # sort pairings alphabetically & make A x B and A & B formats
         # mark currently gen-only ships
     # race & gender combos
-    # incest & canon status
+    # incest & canon status # TODO look up new ships & add chars' orientation data to lookup as well
     # make lookup
 
 # then add cleaned versions & correct order pairings to rankings dfs

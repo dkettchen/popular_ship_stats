@@ -100,3 +100,14 @@ if __name__ == "__main__":
     parsed_df = parse_extra_ship_data()
     assigned_char_df = assign_to_characters(parsed_df)
     assigned_ship_df = assign_to_ships(parsed_df)
+
+    minimal_columns = [
+        'full_name',
+        'fandom',
+        "gender",
+        'orientation',
+    ]
+    print(assigned_char_df.get(minimal_columns).head())
+    filepath = "data/reference_and_test_files/refactor_helper_files/old_files_for_ref/orientation_list.csv"
+    assigned_char_df.get(minimal_columns).to_csv(filepath, escapechar="`")
+    
