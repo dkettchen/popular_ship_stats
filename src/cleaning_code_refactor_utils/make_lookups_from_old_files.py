@@ -6,81 +6,177 @@ import pandas as pd
 data_folder = "data/reference_and_test_files/refactor_helper_files/old_files_for_ref"
 
 
-## get characters (with their fandoms)
+# ## get characters (with their fandoms)
 
-# read og json file we have
-char_names_filepath = f"{data_folder}/characters_full_names_and_old_versions.json"
-with open(char_names_filepath, "r") as json_file:
-    read_data = load(json_file)
-# keys are fandoms
-# fandoms contain clean names of characters
-# which contain "op_versions" key which is a list of all og names
+# # read og json file we have
+# char_names_filepath = f"{data_folder}/characters_full_names_and_old_versions.json"
+# with open(char_names_filepath, "r") as json_file:
+#     read_data = load(json_file)
+# # keys are fandoms
+# # fandoms contain clean names of characters
+# # which contain "op_versions" key which is a list of all og names
 
-# this currently only works for data structure from above file
-og_names = {}
-for fandom in read_data:
-    for char in read_data[fandom]:
-        op_versions = read_data[fandom][char]["op_versions"]
-        for og in op_versions:
-            fandom_og = f"{fandom} - {og}"
-            if fandom_og not in OLD_CHARACTERS_LOOKUP: # check against what we already have in lookup
-                og_names[fandom_og] = char
-print(og_names) # print anything that isn't in the lookup yet
-
-
-## get fandoms
-
-fandoms_filepath = f"{data_folder}/fandoms_clean_names_and_old_versions.json"
-with open(fandoms_filepath, "r") as json_file:
-    read_data = load(json_file)
-# structure is {fandom : [list of old versions]}
-
-# this currently only works for data structure from above file
-og_fandoms = {}
-for fandom in read_data:
-    for og in read_data[fandom]:
-        if og not in OLD_FANDOMS_LOOKUP:
-            og_fandoms[og] = fandom
-print(og_fandoms) # print anything that isn't in the lookup yet
+# # this currently only works for data structure from above file
+# og_names = {}
+# for fandom in read_data:
+#     for char in read_data[fandom]:
+#         op_versions = read_data[fandom][char]["op_versions"]
+#         for og in op_versions:
+#             fandom_og = f"{fandom} - {og}"
+#             if fandom_og not in OLD_CHARACTERS_LOOKUP: # check against what we already have in lookup
+#                 og_names[fandom_og] = char
+# print(og_names) # print anything that isn't in the lookup yet
 
 
-## get demo data
+# ## get fandoms
 
-fandoms_filepath = f"{data_folder}/characters_list.csv"
-with open(fandoms_filepath, "r") as csv_file:
-    read_df = pd.read_csv(csv_file, escapechar="`")
+# fandoms_filepath = f"{data_folder}/fandoms_clean_names_and_old_versions.json"
+# with open(fandoms_filepath, "r") as json_file:
+#     read_data = load(json_file)
+# # structure is {fandom : [list of old versions]}
 
-less_columns = read_df.get(['full_name', 'fandom', 'gender', 'race'])
+# # this currently only works for data structure from above file
+# og_fandoms = {}
+# for fandom in read_data:
+#     for og in read_data[fandom]:
+#         if og not in OLD_FANDOMS_LOOKUP:
+#             og_fandoms[og] = fandom
+# print(og_fandoms) # print anything that isn't in the lookup yet
 
-lookup_dict = {}
-for row in less_columns.index:
-    current_row = less_columns.loc[row]
-    fandom_char = f'{current_row["fandom"]} - {current_row["full_name"]}'
-    gender_race = f'{current_row["gender"]} - {current_row["race"]}'
-    lookup_dict[fandom_char] = gender_race
 
-print(lookup_dict) # print entire lookup
+# ## get demo data
+
+# fandoms_filepath = f"{data_folder}/characters_list.csv"
+# with open(fandoms_filepath, "r") as csv_file:
+#     read_df = pd.read_csv(csv_file, escapechar="`")
+
+# less_columns = read_df.get(['full_name', 'fandom', 'gender', 'race'])
+
+# lookup_dict = {}
+# for row in less_columns.index:
+#     current_row = less_columns.loc[row]
+#     fandom_char = f'{current_row["fandom"]} - {current_row["full_name"]}'
+#     gender_race = f'{current_row["gender"]} - {current_row["race"]}'
+#     lookup_dict[fandom_char] = gender_race
+
+# print(lookup_dict) # print entire lookup
+
+
+# ## get orientation data
+
+# fandoms_filepath = f"{data_folder}/orientation_list.csv"
+# with open(fandoms_filepath, "r") as csv_file:
+#     read_df = pd.read_csv(csv_file, escapechar="`")
+
+# lookup_dict = {}
+# orient_labels = sorted(list(read_df["orientation"].unique()))
+# for label in orient_labels:
+#     lookup_dict[label] = []
+
+# for row in read_df.index:
+#     current_row = read_df.loc[row]
+#     fandom_char = f'{current_row["fandom"]} - {current_row["full_name"]}'
+#     orientation = current_row["orientation"]
+#     lookup_dict[orientation].append(fandom_char)
+
+# print(lookup_dict) # print entire lookup
+
 
 
 ## get orientation data
 
-fandoms_filepath = f"{data_folder}/orientation_list.csv"
+fandoms_filepath = f"{data_folder}/ship_status_list.csv"
 with open(fandoms_filepath, "r") as csv_file:
     read_df = pd.read_csv(csv_file, escapechar="`")
 
-lookup_dict = {}
-orient_labels = sorted(list(read_df["orientation"].unique()))
-for label in orient_labels:
-    lookup_dict[label] = []
+canon_lookup = {}
+incest_lookup = {}
+canon_labels = sorted(list(read_df["canon"].unique()))
+incest_labels = sorted(list(read_df["related"].unique()))
+for label in canon_labels:
+    canon_lookup[label] = []
+for label in incest_labels:
+    incest_lookup[label] = []
+
 
 for row in read_df.index:
     current_row = read_df.loc[row]
-    fandom_char = f'{current_row["fandom"]} - {current_row["full_name"]}'
-    orientation = current_row["orientation"]
-    lookup_dict[orientation].append(fandom_char)
+    fandom_char = f'{current_row["fandom"]} - {current_row["slash_ship"]}'
+    canon_status = current_row["canon"]
+    canon_lookup[canon_status].append(fandom_char)
+    incest_status = current_row["related"]
+    incest_lookup[incest_status].append(fandom_char)
 
-print(lookup_dict) # print entire lookup
+print(canon_lookup) # print entire lookup
+print(incest_lookup)
 
+
+# helper
+def make_pairing_combo_lookup():
+    """
+    combines all male aligned, female aligned and other/ambig tags 
+    and prints/returns the different categories 
+    (mlm, wlw, het, other/women, other/men, other/other)
+    to use as a lookup
+    """
+
+    # make all possible combos
+    male_aligned_tags = [
+        "M", "M | Other", "M | F | Other",
+    ]
+    female_aligned_tags = [
+        "F", "F | Other", 
+    ]
+    other_tags = [
+        "Ambig", "Other",
+    ]
+
+    # same sex pairings
+    mlm_combos = []
+    for tag_1 in male_aligned_tags:
+        for tag_2 in male_aligned_tags:
+            mlm_combos.append(f"{tag_1} / {tag_2}")
+    wlw_combos = []
+    for tag_1 in female_aligned_tags:
+        for tag_2 in female_aligned_tags:
+            wlw_combos.append(f"{tag_1} / {tag_2}")
+    # het combos
+    het_combos = []
+    for tag_1 in male_aligned_tags:
+        for tag_2 in female_aligned_tags:
+            het_combos.append(f"{tag_1} / {tag_2}")
+    for tag_1 in female_aligned_tags:
+        for tag_2 in male_aligned_tags:
+            het_combos.append(f"{tag_1} / {tag_2}")
+    # any ambig or other involved ship combos
+    other_x_women = []
+    for tag_1 in other_tags:
+        for tag_2 in female_aligned_tags:
+            other_x_women.append(f"{tag_1} / {tag_2}")
+    for tag_1 in female_aligned_tags:
+        for tag_2 in other_tags:
+            other_x_women.append(f"{tag_1} / {tag_2}")
+    other_x_men = []
+    for tag_1 in other_tags:
+        for tag_2 in male_aligned_tags:
+            other_x_men.append(f"{tag_1} / {tag_2}")
+    for tag_1 in male_aligned_tags:
+        for tag_2 in other_tags:
+            other_x_men.append(f"{tag_1} / {tag_2}")
+    other_x_other = []
+    for tag_1 in other_tags:
+        for tag_2 in other_tags:
+            other_x_other.append(f"{tag_1} / {tag_2}")
+    print(mlm_combos, wlw_combos, het_combos, other_x_women, other_x_men, other_x_other)
+
+    return {
+        "mlm": mlm_combos,
+        "wlw": wlw_combos,
+        "het": het_combos,
+        "woman_attracted_other": other_x_women,
+        "man_attracted_other": other_x_men,
+        "other_x_other": other_x_other,
+    }
 
 
 
