@@ -7,6 +7,8 @@ import pandas as pd
 from data.reference_and_test_files.refactor_helper_files.demo_data_lookup import (
     ALL_PAIRING_COMBOS, DEMO_COMBOS, CANON_STATUS, INCEST_STATUS
 )
+from src.cleaning_code_refactor_utils.gathered_data_to_df import gathered_data_to_df
+from data.reference_and_test_files.refactor_helper_files.folder_lookup import TOTAL_DATA_FOLDER
 
 def gather_char_demo_data(clean_dict:dict):
     """
@@ -267,6 +269,15 @@ if __name__ == "__main__":
     gathered_demo_data = gather_char_demo_data(cleaned_ranking_dict)
     gathered_ship_data = gather_ship_demo_data(cleaned_ranking_dict, gathered_demo_data)
 
+    fandoms_df = gathered_data_to_df(gathered_demo_data, "fandoms")
+    chars_df = gathered_data_to_df(gathered_demo_data, "characters")
+    ships_df = gathered_data_to_df(gathered_ship_data, "ships")
+
+    fandoms_df.to_csv(f"{TOTAL_DATA_FOLDER}/fandom_data.csv")
+    chars_df.to_csv(f"{TOTAL_DATA_FOLDER}/character_data.csv")
+    ships_df.to_csv(f"{TOTAL_DATA_FOLDER}/ship_data.csv")
+
+    # did we not track year joined/appeared for ships???
 
     # for later:
 

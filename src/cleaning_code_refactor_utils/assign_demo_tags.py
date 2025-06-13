@@ -147,6 +147,7 @@ def assign_demo_tags(raw_tags_dict:dict):
             new_char = {}
             for key in current_char:
                 if key not in [
+                    "all_gender_tags",
                     "most_recent_gender_tag",
                     "most_recent_same_gender_tag",
                     "all_race_tags",
