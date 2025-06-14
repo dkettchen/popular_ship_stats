@@ -4,6 +4,7 @@ from src.cleaning_code_refactor_utils.find_RPF import find_RPF
 from src.cleaning_code_refactor_utils.clean_fandom_labels import clean_fandoms
 from src.cleaning_code_refactor_utils.clean_char_names import clean_names
 from json import dump
+from data.reference_and_test_files.refactor_helper_files.folder_lookup import LOOKUPS_ETC
 
 # get by year joined & clean fandoms & characters -> dict & json file
 def gather_chars_and_fandoms(data_dict:dict):
@@ -105,10 +106,9 @@ def gather_chars_and_fandoms(data_dict:dict):
             print(fandom)
 
     # save clean chars & fandoms to a file
-    if __name__ == "__main__":
-        filepath = "data/reference_and_test_files/refactor_helper_files/cleaned_fandoms_and_characters.json"
-        with open(filepath, "w") as json_file:
-            dump(chars_and_fandoms, json_file, indent=4)
+    filepath = f"{LOOKUPS_ETC}/cleaned_fandoms_and_characters.json"
+    with open(filepath, "w") as json_file:
+        dump(chars_and_fandoms, json_file, indent=4)
 
     return chars_and_fandoms
 
