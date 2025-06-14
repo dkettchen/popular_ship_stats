@@ -1,3 +1,19 @@
+from src.vis_code_refactor_utils.read_reference_files import read_reference_file
+from src.vis_code_refactor.stage_0_read_in_and_join_data import get_data_from_files
+
+# retrieve all reference files once at top of running file
+print("Reading in reference data...")
+reference_data = {}
+for case in ["fandoms", "characters", "ships"]:
+    reference_data[case] = read_reference_file(case)
+print("Reference files have been read.")
+
+# get rankings data, including joined versions 
+# (prints updates itself, you can change desired data range in stage_0 file)
+joined_data = get_data_from_files(reference_data)
+
+
+
 # TODO
 # - start on chart code
     # - I wanna be able to run charts for a given time range
