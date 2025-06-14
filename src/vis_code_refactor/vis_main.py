@@ -1,5 +1,6 @@
 from src.vis_code_refactor_utils.read_reference_files import read_reference_file
 from src.vis_code_refactor.stage_0_read_in_and_join_data import get_data_from_files
+from src.vis_code_refactor.stage_1_prep_data import prep_data
 
 # retrieve all reference files once at top of running file
 print("Reading in reference data...")
@@ -12,7 +13,11 @@ print("Reference files have been read.")
 # (prints updates itself, you can change desired data range in stage_0 file)
 joined_data = get_data_from_files(reference_data)
 
-
+total_gender_count = prep_data(reference_data["characters"], "gender_count")
+total_race_count = prep_data(reference_data["characters"], "race_count")
+total_orient_count = prep_data(reference_data["characters"], "orientation_count")
+# print(total_orient_count)
+print(reference_data["ships"].columns)
 
 # TODO
 # - start on chart code
