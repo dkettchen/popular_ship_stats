@@ -1,10 +1,9 @@
 from src.cleaning_code_refactor.stage_01_parsing_raw_data import parse_txt
-from src.cleaning_code_refactor.stage_02_cleaning_names import clean_rankings, gather_chars_and_fandoms
+from src.cleaning_code_refactor.stage_02_cleaning_names import clean_rankings
+from src.cleaning_code_refactor.stage_03_adding_demo_data import order_rankings
 from src.cleaning_code_refactor_utils.make_demo_reference import make_demo_reference
-from src.cleaning_code_refactor.stage_03_adding_demo_data import (
-    order_rankings, 
-    make_clean_rankings_csvs
-)
+from src.cleaning_code_refactor_utils.save_clean_rankings import make_clean_rankings_csvs
+from src.cleaning_code_refactor_utils.gather_chars_and_fandoms import gather_chars_and_fandoms
 
 """
 this file runs cleaning: 
@@ -40,3 +39,8 @@ make_demo_reference(cleaned_ranking_dict)
 final_rankings = order_rankings(cleaned_ranking_dict)
 # print ranking csv files incl folders
 make_clean_rankings_csvs(final_rankings)
+
+
+# TODO:
+# - separate up some of the main cleaning functions??
+# - move stuff to different folders & update all the filepathing (in lookup & imports)

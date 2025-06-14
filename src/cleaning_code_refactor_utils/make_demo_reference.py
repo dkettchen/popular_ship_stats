@@ -1,8 +1,5 @@
 from src.cleaning_code_refactor_utils.gathered_data_to_df import gathered_data_to_df
-from src.cleaning_code_refactor.stage_03_adding_demo_data import (
-    gather_char_demo_data, 
-    gather_ship_demo_data, 
-)
+from src.cleaning_code_refactor_utils.gather_demo_data import gather_char_demo_data, gather_ship_demo_data
 from data.reference_and_test_files.refactor_helper_files.folder_lookup import TOTAL_DATA_FOLDER
 
 def make_demo_reference(cleaned_ranking_dict:dict):
