@@ -8,5 +8,5 @@ def read_reference_file(which):
     which="fandoms"|"characters"|"ships"
     """
     filepath = f"{TOTAL_DATA_FOLDER}/{which[:-1]}_data.csv"
-    df = pd.read_csv(filepath)
+    df = pd.read_csv(filepath, index_col=0)
     return df
