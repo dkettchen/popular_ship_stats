@@ -153,16 +153,16 @@ def split_data_2015_to_2019(data_list:list[str], year:int, ranking:str):
     # make rows
 
     # making index numbers based on cases
+    index_1 = 1
     if ranking == "data":
         if year != 2016:
-            index_1 = 2
+            if year not in [2017,2019]:
+                index_1 = 2
             index_2 = 2
         else:
-            index_1 = 1
             index_2 = 1
         index_3 = -4
     else:
-        index_1 = 1
         index_2 = 2
         if ranking == "femslash":
             if year == 2015:

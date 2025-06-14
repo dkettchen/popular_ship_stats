@@ -48,6 +48,8 @@ def order_rankings(clean_rankings:dict):
             new_df.pop("Type") # now we no longer need "Gen" status as it is represented in the joining symbols
                 # and can be retrieved from reference file
 
+            new_df["Fandom_Relationship"] = new_df["Fandom"] + " - " + new_df["Relationship"]
+
             if ranking == "data":
                 new_dict[year]["annual"] = new_df
             else:
