@@ -8,7 +8,8 @@ from data.reference_and_test_files.refactor_helper_files.demo_data_lookup import
     ALL_PAIRING_COMBOS, DEMO_COMBOS, CANON_STATUS, INCEST_STATUS
 )
 from src.cleaning_code_refactor_utils.gathered_data_to_df import gathered_data_to_df
-from data.reference_and_test_files.refactor_helper_files.folder_lookup import TOTAL_DATA_FOLDER
+from data.reference_and_test_files.refactor_helper_files.folder_lookup import TOTAL_DATA_FOLDER, CLEAN_FOLDER
+import os
 
 def gather_char_demo_data(clean_dict:dict):
     """
@@ -260,6 +261,75 @@ def gather_ship_demo_data(clean_dict:dict, demo_data:dict):
     return ship_dict
 
 
+def order_rankings(clean_rankings:dict):
+    """
+    takes the cleaned name rankings dict
+
+    makes a new version where the ships have been turned from lists to alphabetically ordered
+    and " x " (for slash ships) or " & " (for gen ships) joined strings
+    and only the following columns are retained in each df:
+    'Rank', 'Change', 'Relationship', 'Fandom', 'Total Works', 'New Works'
+
+    other data will be able to joined on from our reference files
+    """
+    new_dict = {}
+
+    for year in clean_rankings:
+        new_dict[year] = {}
+        for ranking in clean_rankings[year]:
+            current_df = clean_rankings[year][ranking]
+            # get relevant columns only
+            new_df = current_df.copy().get([
+                "Rank", "Change", "Relationship", "Fandom", "Total Works", "New Works", "Type"
+            ])
+
+            # wrestling my type lists into submission smh
+            # turn lists to strings
+            new_df["Type"] = new_df["Type"].apply(str)
+            # turn ["Gen"] to just "Gen"
+            new_df["Type"] = new_df["Type"].mask(
+                new_df["Type"].str.contains("Gen"), other="Gen"
+            )
+            # make everything else "Slash"
+            new_df["Type"] = new_df["Type"].where(
+                new_df["Type"] == "Gen", other="Slash"
+            )
+
+            # making ship strings
+            # sort members
+            new_df["Relationship"] = new_df["Relationship"].apply(lambda x: sorted(x))
+            # join em based on gen/slash type
+            new_df.loc[new_df["Type"] == "Gen", "Relationship"] = new_df["Relationship"].apply(lambda x: " & ".join(x))
+            new_df.loc[new_df["Type"] != "Gen", "Relationship"] = new_df["Relationship"].apply(lambda x: " x ".join(x))
+            new_df.pop("Type") # now we no longer need "Gen" status as it is represented in the joining symbols
+                # and can be retrieved from reference file
+
+            if ranking == "data":
+                new_dict[year]["annual"] = new_df
+            else:
+                new_dict[year][ranking] = new_df
+
+    return new_dict
+
+def make_clean_rankings_csvs(final_rankings:dict):
+    """
+    prints finished clean AO3 rankings to csv files
+
+    creates sub folders for each year if they don't exist yet
+    """
+
+    for year in final_rankings:
+        FOLDER_PATH = f"{CLEAN_FOLDER}/AO3_{year}"
+        # make sub folder if it doesn't exist yet
+        if not os.path.exists(FOLDER_PATH):
+            os.mkdir(FOLDER_PATH)
+        # make a file for each ranking
+        for ranking in final_rankings[year]:
+            filepath = f"{FOLDER_PATH}/AO3_{year}_{ranking}.csv"
+            df = final_rankings[year][ranking]
+            df.to_csv(filepath, index=False)
+
+
 # then add cleaned versions & correct order pairings to rankings dfs
     # and get rid of old values
 
@@ -269,19 +339,16 @@ if __name__ == "__main__":
     gathered_demo_data = gather_char_demo_data(cleaned_ranking_dict)
     gathered_ship_data = gather_ship_demo_data(cleaned_ranking_dict, gathered_demo_data)
 
-    fandoms_df = gathered_data_to_df(gathered_demo_data, "fandoms")
-    chars_df = gathered_data_to_df(gathered_demo_data, "characters")
-    ships_df = gathered_data_to_df(gathered_ship_data, "ships")
+    for case in ["fandoms", "characters", "ships"]:
+        if case == "ships":
+            gathered_data = gathered_ship_data
+        else:
+            gathered_data = gathered_demo_data
+        df = gathered_data_to_df(gathered_data, case)
+        df.to_csv(f"{TOTAL_DATA_FOLDER}/{case[:-1]}_data.csv")
 
-    fandoms_df.to_csv(f"{TOTAL_DATA_FOLDER}/fandom_data.csv")
-    chars_df.to_csv(f"{TOTAL_DATA_FOLDER}/character_data.csv")
-    ships_df.to_csv(f"{TOTAL_DATA_FOLDER}/ship_data.csv")
+    final_rankings = order_rankings(cleaned_ranking_dict)
+    make_clean_rankings_csvs(final_rankings)
 
-    # did we not track year joined/appeared for ships???
+    # TODO did we not track year joined/appeared for ships???
 
-    # for later:
-
-    # generate filepath
-
-    # generate folders along with files
-    # print to csv files with ` as escape char

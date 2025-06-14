@@ -3,3 +3,5 @@
 # where our lists of fandoms, characters & ships with all their added year, demo, etc data live
 TOTAL_DATA_FOLDER = "data/refactor_cleaned_data"
 
+# where our cleaned ranking data files live
+CLEAN_FOLDER = "data/refactor_cleaned_data"

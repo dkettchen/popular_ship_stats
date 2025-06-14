@@ -100,7 +100,7 @@ def parse_txt():
 
         # add missing columns with empty or relevant values
         missing_columns = {
-            "Change" : [None, None],
+            "Change" : None,
             "New Works" : None,
             "Type" : ["F", "F"], # only missing in femslash (we'll fix the included genderqueers later)
             "Race" : [None, None],
