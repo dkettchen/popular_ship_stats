@@ -47,10 +47,18 @@ def gathered_data_to_df(gathered_dict:dict, data_case:str):
         "member_4",
 
     """
-
     # set columns
     if data_case == "fandoms":
-        columns = ["fandom", "rpf", "year_joined", "latest_year", "total_years"]
+        columns = [
+            "fandom", 
+            "rpf", 
+            "year_joined", 
+            "latest_year", 
+            "total_years", 
+            "country_of_origin", 
+            "continent", 
+            "language",
+        ]
     elif data_case == "characters":
         columns = [
             "index", 
@@ -61,7 +69,10 @@ def gathered_data_to_df(gathered_dict:dict, data_case:str):
             "total_years", 
             "gender", 
             "race", 
-            "orientation"
+            "orientation",
+            "country_of_origin", 
+            "continent", 
+            "language",
         ]
     elif data_case == "ships":
         columns = [
@@ -92,6 +103,9 @@ def gathered_data_to_df(gathered_dict:dict, data_case:str):
                 gathered_dict[fandom]["year_joined"],
                 sorted(gathered_dict[fandom]["years_appeared"])[-1],
                 len(gathered_dict[fandom]["years_appeared"]),
+                gathered_dict[fandom]["country_of_origin"],
+                gathered_dict[fandom]["continent"],
+                gathered_dict[fandom]["language"],
             ]
             all_rows.append(fandom_row)
         else:
@@ -112,6 +126,9 @@ def gathered_data_to_df(gathered_dict:dict, data_case:str):
                         char_data["gender_tag"],
                         char_data["race_tag"],
                         char_data["orientation_tag"],
+                        char_data["country_of_origin"],
+                        char_data["continent"],
+                        char_data["language"],
                     ]
                 elif data_case == "ships":
                     ship_data = gathered_dict[fandom][item]

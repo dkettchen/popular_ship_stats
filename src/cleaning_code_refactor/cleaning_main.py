@@ -33,6 +33,7 @@ gathered_dict = gather_chars_and_fandoms(parsed_dict)
 ## add demo data & print to reference files for fandoms, characters, ships
 make_demo_reference(cleaned_ranking_dict)
     # TODO did we not track year joined/appeared for ships???
+    # TODO WE DIDN'T ADD LOCATION & LANGUAGE DATA TO FANDOMS (& individual real human beings) YET!!!! I FORGOR
 
 ## print final cleaned rankings (that reference data can be joined onto)
 # order & join pairings to match their reference

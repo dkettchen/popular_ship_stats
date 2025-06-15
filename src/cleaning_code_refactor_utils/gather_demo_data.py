@@ -5,10 +5,14 @@ import pandas as pd
 from data.reference_and_test_files.refactor_helper_files.demo_data_lookup import (
     ALL_PAIRING_COMBOS, DEMO_COMBOS, CANON_STATUS, INCEST_STATUS
 )
+from src.cleaning_code_refactor_utils.assign_location_and_language import assign_location_data
 
 def gather_char_demo_data(clean_dict:dict):
     """
-    assigns the gender, race and orientation data of all characters, 
+    assigns the gender, race, and orientation data of all characters, 
+    location/language for fandoms and relevant real human beings 
+    that have multiple nationalities in their fandom
+    
     cleans and prints if any are not in the lookup yet
     """
 
@@ -22,10 +26,11 @@ def gather_char_demo_data(clean_dict:dict):
 
     # determine gender, race & orientation tags
     tags_assigned = assign_demo_tags(raw_tags_added)
-    
-    # TODO turns relevant values into df & print to csv??
 
-    return tags_assigned
+    # add location & language data based on fandom
+    location_assigned = assign_location_data(tags_assigned)
+
+    return location_assigned
 
 def gather_ship_demo_data(clean_dict:dict, demo_data:dict):
     """
