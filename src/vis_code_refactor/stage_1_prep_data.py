@@ -12,13 +12,16 @@ def prep_data(df, case):
     - case="{column_name}_percent" - returns rounded percentage of total 
     for each label in relevant column as a series
     - case="{male|female|minority_genders|minority_races|
-    white_involved|EA_involved|non_white|non_white_EA}_subset" - returns df with only relevant subset
+    white_involved|EA_involved|non_white|non_white_EA|
+    multiracial|interracial}_subset" - returns df with only relevant subset
         - (char data:) male/female include male/female-aligned characters; 
         - (char data:) minority_genders/_races exclude their respective two biggest 
         and any non-relevant groups (aka "M"&"F"; "White","E Asian","N.H.","Ambig","Unknown")
         - (ship data:) white_/EA_involved/non_white/_white_EA classes by 
         whether or not the ship has white and/or east asian (including (multi)) 
         members depending on requested case
+        - (char data:) multiracial characters only
+        - (ship data:) interracial pairings only
     """
     new_df = df.copy()
     total_len = len(new_df)
@@ -82,8 +85,17 @@ def prep_data(df, case):
                 sub_set = new_df.where(
                     (new_df[column].str.contains(tags[0])) | (new_df[column].str.contains(tags[1]))
                 ).dropna(how="all")
-        # subset of all multi characters?
-            # race tag must contain multi
+        elif grouping_case in ["multiracial", "interracial"]: # (multi = char data; inter = ship data)
+            if grouping_case == "multiracial":
+                column = "race"
+                tag = "multi"
+            else:
+                column = "race_combo"
+                tag = "\/"
+            sub_set = new_df.where(
+                new_df[column].str.contains(tag)
+            ).dropna(how="all")
+
         # subset of all interracial ships?
             # race_combo tag must contain a "/"
         # subset of all queer characters?

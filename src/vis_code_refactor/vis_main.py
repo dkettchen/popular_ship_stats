@@ -16,8 +16,9 @@ joined_data = get_data_from_files(reference_data)
 total_gender_count = prep_data(reference_data["characters"], "gender_count")
 total_race_count = prep_data(reference_data["characters"], "race_count")
 total_orient_count = prep_data(reference_data["characters"], "orientation_count")
+interracial_subset = prep_data(reference_data["ships"], "interracial_subset")
 # print(total_orient_count)
-print(reference_data["ships"].columns)
+print(interracial_subset.head().get(["race_combo"]))
 
 # TODO
 # - start on chart code

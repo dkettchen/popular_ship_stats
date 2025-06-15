@@ -22,6 +22,9 @@ def join_ranking_and_ref(ranking_df:pd.DataFrame, reference_dict:dict, case:str)
         'year_joined': 'fandom_year_joined',
         'latest_year': 'fandom_latest_year', 
         'total_years': 'fandom_total_years',
+        "country_of_origin": "fandom_country_of_origin",
+        "continent": "fandom_continent",
+        "language": "fandom_language",
     }
     new_df = ranking_df.join(reference_dict["fandoms"], on="Fandom").rename(columns=renaming_dict)
 
@@ -56,7 +59,8 @@ def join_ranking_and_ref(ranking_df:pd.DataFrame, reference_dict:dict, case:str)
             # join
             get_columns = [
                 'year_joined', 'latest_year', 'total_years', 
-                'gender', 'race', 'orientation'
+                'gender', 'race', 'orientation', 
+                "country_of_origin", "continent", "language",
             ]
             df = df.join(reference_dict["characters"].get(get_columns), on="Fandom_Name")
 
@@ -64,6 +68,9 @@ def join_ranking_and_ref(ranking_df:pd.DataFrame, reference_dict:dict, case:str)
                 'year_joined': 'char_year_joined',
                 'latest_year': 'char_latest_year', 
                 'total_years': 'char_total_years',
+                "country_of_origin": "char_country_of_origin",
+                "continent": "char_continent",
+                "language": "char_language",
             }
             df = df.rename(columns=char_renaming_dict)
 
