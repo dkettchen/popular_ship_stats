@@ -1,6 +1,6 @@
 from src.vis_code_refactor_utils.read_ranking_files import read_rankings
 from src.vis_code_refactor_utils.join_dfs import make_joined_data
-from src.vis_code_refactor_utils.collect_total_data import years_total_entries
+from src.vis_code_refactor_utils.collect_total_data import years_total_entries, rankings_total_entries
 
 def get_data_from_files(reference_dict:dict):
     """
@@ -8,7 +8,12 @@ def get_data_from_files(reference_dict:dict):
 
     returns a nested dict with various resulting data for each year/ranking
 
-    key nesting: year/[ranking/"total"]/["clean"/"characters"/"unique_characters"/"ships"]
+    key nesting: 
+        [year / "overall"/"annual"/"femslash"]
+          v
+        [ranking / "total"]
+          v
+        ["clean"/"characters"/"unique_characters"/"ships"]
 
     prints updates as it goes
 
@@ -31,8 +36,9 @@ def get_data_from_files(reference_dict:dict):
     print("Ship and character data has been added to rankings.")
 
     # add a "total" key for each year of all ships that made any ranking that year in "fandom_ship" format
-    print("Adding total key for each year...")
+    print("Adding total data for years & rankings...")
     year_data = years_total_entries(joined_data)
-    print("Ships that made any ranking in year have been added to respective year.")
+    ranking_data = rankings_total_entries(year_data)
+    print("Total ships that made it by year & by ranking have been added.")
 
-    return year_data
+    return ranking_data
