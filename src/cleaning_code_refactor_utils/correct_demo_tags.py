@@ -326,8 +326,7 @@ white_folks = [
     "Harleen Quinzel | Harley Quinn",
 ]
 other_folks = {
-    "Allura": "Ambig", # girl's a alien with brown skin, 
-                        # so not non-human skin tone but no specific human race
+    "Allura": "N.H.", # she's an alien
     "America Chavez | Ms. America": "Af Lat",
     "Octavia Blake": "SE Eu", # she's greek I haven't figured out how to label that yet
     "Theo Raeken": "Am Ind", # actor's mom is penobscot & he grew up on a reservation
@@ -355,7 +354,7 @@ other_folks = {
     "Josephine Montilyet": "Ambig", # no info on VA's background, 
                                     # so we're going with a character-visual idk
     "Adam": "Ambig", # VA is POC but no info on details
-    "Cecil Palmer": "Ambig", # I don't think there's a canon race & this is audio only 
+    "Cecil Palmer": "Unknown", # doesn't have a canon race
         # canon husband of carlos
         # full name is Cecil Gershwin Palmer
     "Byleth Eisner | Player Character": "MENA",
@@ -385,6 +384,7 @@ characters_to_retag = {
     "Leone Abbacchio": "Latin", #
     "Jasper": "N.H.", # these two were tagged as ambig rather than non human
     "Garnet": "N.H.", #
+    "Keith": "N.H. (Multi)", # he's half alien, and we dunno his human ethnicity so we'll call him NH multi
     "Nicholas 'Dick' Grayson | Robin/Nightwing": "Romani",
 }
 
