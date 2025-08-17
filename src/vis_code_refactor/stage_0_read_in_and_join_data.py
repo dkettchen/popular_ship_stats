@@ -38,7 +38,7 @@ def get_data_from_files(reference_dict:dict):
     # add a "total" key for each year of all ships that made any ranking that year in "fandom_ship" format
     print("Adding total data for years & rankings...")
     year_data = years_total_entries(joined_data)
-    ranking_data = rankings_total_entries(year_data)
+    ranking_data = rankings_total_entries(year_data, reference_dict)
     print("Total ships that made it by year & by ranking have been added.")
 
     return ranking_data
