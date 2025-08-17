@@ -67,6 +67,7 @@ def clean_rpf_fandoms(old_fandom:str):
         "The Untamed": "魔道祖师 / 陈情令 | Grandmaster of Demonic Cultivation / The Untamed",
         "Super-Vocal":'声入人心 | Super-Vocal',
         "Aespa": "Aespa / æspa",
+        "NCT (Band)": "Neo Culture Technology / NCT",
     }
     new_fandom = None
     for item in [ # if in fandom -> becomes new fandom

@@ -191,7 +191,7 @@ COUNTRIES = {
     "South Korea": [
         "Bangtan Boys / BTS",
         "EXO",
-        "NCT",
+        "Neo Culture Technology / NCT",
         "Omniscient Reader | 전지적 독자 시점",
         "Stray Kids",
         "TOMORROW X TOGETHER / TXT",

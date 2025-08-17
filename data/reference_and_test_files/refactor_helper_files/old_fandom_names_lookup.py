@@ -25,7 +25,7 @@ OLD_FANDOMS_LOOKUP = { # "{old fandom}" : "{new fandom}"
     'Merlin (TV)': 'Merlin', 
     'Merlin (TV) RPF': 'Merlin', 
     'My Chemical Romance': 'My Chemical Romance', 
-    'NCT (Band)': 'NCT', 
+    'NCT (Band)': 'Neo Culture Technology / NCT', 
     'One Direction (Band)': 'One Direction', 
     'Panic! at the Disco': 'Panic! at the Disco', 
     'Red Velvet (K-pop Band)': 'Red Velvet', 
