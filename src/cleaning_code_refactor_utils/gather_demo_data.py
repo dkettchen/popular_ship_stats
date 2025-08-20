@@ -3,7 +3,7 @@ from src.cleaning_code_refactor_utils.collect_demo_tags import collect_demo_tags
 from src.cleaning_code_refactor_utils.assign_demo_tags import assign_demo_tags
 import pandas as pd
 from data.reference_and_test_files.refactor_helper_files.demo_data_lookup import (
-    ALL_PAIRING_COMBOS, DEMO_COMBOS, CANON_STATUS, INCEST_STATUS
+    ALL_PAIRING_COMBOS, DEMO_COMBOS, CANON_STATUS, INCEST_STATUS, RPF_SHIPS
 )
 from src.cleaning_code_refactor_utils.assign_location_and_language import assign_location_data
 
@@ -85,7 +85,11 @@ def gather_ship_demo_data(clean_dict:dict, demo_data:dict):
                 "orientation combo": None,
                 "canon alignment": None,
                 "canon ship": None,
-                "incest ship": None
+                "incest ship": None,
+                "rpf": None,
+                "country_of_origin": None,
+                # "continent": None, # extension task if at all needed
+                "language": None,
             }
 
     # add demo data combos
@@ -258,5 +262,54 @@ def gather_ship_demo_data(clean_dict:dict, demo_data:dict):
                 ship_dict[fandom][ship]["canon ship"] = "gen ship"
                 ship_dict[fandom][ship]["incest ship"] = "gen ship"
 
+            # is it an RPF ship?
+            rpf = False
+            # RPF ships we know
+            if ship in RPF_SHIPS["True"] or demo_data[fandom]["rpf"] == True:
+                rpf = True
+            # RPF ships that haven't been added to the lookup yet
+            elif demo_data[fandom]["rpf"] == "both" and ship not in RPF_SHIPS["False"]:
+                print(f'"{ship}",', "rpf?")
+            # add to ship's data
+            ship_dict[fandom][ship]["rpf"] = rpf
+
+            # determine ship's country of origin
+            # check fandom's country first
+            prev_country = demo_data[fandom]["country_of_origin"]
+            diff_countries = False
+            all_countries = [] # to collect all countries if diff
+            if "/" not in prev_country: # fandom countries if they are not combo ones
+                all_countries.append(prev_country)
+            for char in ship_dict[fandom][ship]["members"]:
+                # check each char's country
+                country = demo_data[fandom]["characters"][char]["country_of_origin"]
+                # compare to previous country
+                if country != prev_country:
+                    # if different, mark as such & break the loop as one's enough
+                    diff_countries = True
+                    # collect country if not yet
+                    if country not in all_countries: 
+                        all_countries.append(country)
+                # replace with current country
+                prev_country = country
+             # use the country they all have in common / what the fandom is marked as
+            if not diff_countries or "/" not in demo_data[fandom]["country_of_origin"]:
+                ship_dict[fandom][ship]["country_of_origin"] = demo_data[fandom]["country_of_origin"]
+            # fandoms that have international members but these ones are same country
+            elif len(all_countries) == 1: 
+                ship_dict[fandom][ship]["country_of_origin"] = all_countries[0]
+            else: # combine the countries they got in alphabetical order
+                ship_dict[fandom][ship]["country_of_origin"] = " / ".join(sorted(all_countries))
+
+            ship_dict[fandom][ship]["language"] = demo_data[fandom]["language"]
+            
     return ship_dict
 
+
+# ref (for demo data's format) = {
+#     'year_joined': 2024, 'years_appeared': [2024], 'rpf': True, 'raw_versions': ['Aespa (Band)'], 
+#     'characters': {
+#         'Kim Minjeong | Winter': {'full_name': 'Kim Minjeong | Winter', 'year_joined': 2024, 'years_appeared': [2024], 'raw_versions': ['Kim Minjeong | Winter'], 'fandom': 'Aespa / æspa', 'gender_tag': 'F', 'race_tag': 'E Asian', 'orientation_tag': 'unspecified', 'country_of_origin': 'South Korea', 'continent': 'Asia', 'language': 'Korean'}, 
+#         'Yu Jimin | Karina': {'full_name': 'Yu Jimin | Karina', 'year_joined': 2024, 'years_appeared': [2024], 'raw_versions': ['Yu Jimin | Karina'], 'fandom': 'Aespa / æspa', 'gender_tag': 'F', 'race_tag': 'E Asian', 'orientation_tag': 'str8', 'country_of_origin': 'South Korea', 'continent': 'Asia', 'language': 'Korean'}
+#     }, 'country_of_origin': 'South Korea', 'continent': 'Asia', 'language': 'Korean'
+# }

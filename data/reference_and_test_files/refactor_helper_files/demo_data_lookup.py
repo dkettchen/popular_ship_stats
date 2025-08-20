@@ -3987,3 +3987,28 @@ INCEST_STATUS = {
     ]
 }
 
+RPF_SHIPS = {
+    "True": [
+        "Wang Yi Bo x Xiao Zhan | Sean Xiao",
+        "Jared Padalecki x Jensen Ackles",
+    ],
+    "False": [
+        "Castiel x Dean Winchester",
+        "Dean Winchester x Sam Winchester",
+        "Gabriel x Sam Winchester",
+        "Dean Winchester & Sam Winchester",
+        "Jessica Moore x Sam Winchester",
+        "Castiel x Sam Winchester",
+        "Lucifer x Sam Winchester",
+        "Anna Milton x Ruby",
+        "Castiel & Dean Winchester",
+        "Charlie Bradbury x Jo Harvelle",
+        "Charlie Bradbury x Dorothy Baum",
+        "Anna Milton x Jo Harvelle",
+        "Charlie Bradbury x Gilda",
+        "Dean Winchester x Y/N | Reader",
+        "Sam Winchester x Y/N | Reader",
+        "Lan Zhan | Lan Wangji x Wei Ying | Wei Wuxian",
+        "Jiang Cheng | Jiang Wanyin x Lan Huan | Lan Xichen",
+    ],
+}
