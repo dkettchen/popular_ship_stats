@@ -1,6 +1,6 @@
 from copy import deepcopy
 from data.reference_and_test_files.refactor_helper_files.location_lookup import (
-    COUNTRIES, MULTI_NATIONALS, RPF
+    COUNTRIES, MULTI_NATIONALS, RPF, CONTINENTS
 )
 from src.cleaning_code_refactor_utils.find_continent_and_lang import find_continent_and_language
 
@@ -88,12 +88,16 @@ def assign_location_data(fandoms_dict:dict):
 
         # add to dict
         new_dict[fandom]["country_of_origin"] = country_of_origin
-        new_dict[fandom]["continent"] = cont_lang[0]
+
+        # to prevent mismatches via rpf internationals rip
+        for continent in CONTINENTS: 
+            if country_of_origin in CONTINENTS[continent]:
+                new_dict[fandom]["continent"] = continent
+                break
+
         new_dict[fandom]["language"] = cont_lang[1]
 
         # adding data to characters
-
-
 
     return new_dict
 
