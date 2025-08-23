@@ -30,8 +30,8 @@ def join_ranking_and_ref(ranking_df:pd.DataFrame, reference_dict:dict, case:str)
 
     if case == "ships":
         get_columns = [
-            'gender_combo', 'race_combo', 'orientation_combo', 'gen_ship', 
-            'canon', 'canon_alignment', 'incest', 'member_no'
+            'rpf', 'gender_combo', 'race_combo', 'orientation_combo', 'gen_ship', 
+            'canon', 'canon_alignment', 'incest', "country_of_origin", "language", 'member_no'
         ]
         name = "Relationship"
     elif case == "characters":
